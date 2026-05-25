@@ -1,0 +1,5 @@
+# Alogator preview — block all indexing until production launch
+# When ready for production, replace with allow rules and add Sitemap.
+
+User-agent: *
+Disallow: /

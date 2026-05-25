@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stránka neexistuje — Alogator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --signal:#E66748;
+  --signal-dark:#D4573A;
+  --signal-soft:#FDE8E0;
+  --graphite:#1A1D1E;
+  --graphite-700:#3F4445;
+  --graphite-500:#6B7174;
+  --graphite-200:#D9D9D6;
+  --porcelain:#F9F3ED;
+  --porcelain-200:#F0E8DD;
+  --yellow:#F5D547;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--porcelain);
+  color: var(--graphite);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+.wrap { max-width: 640px; text-align: center; }
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--signal);
+  margin-bottom: 24px;
+}
+.eyebrow::before { content: "• "; }
+h1 {
+  font-family: 'Geist', sans-serif;
+  font-size: clamp(48px, 8vw, 96px);
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+h1 em {
+  font-style: italic;
+  color: var(--signal);
+  font-weight: 600;
+}
+p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--graphite-700);
+  margin-bottom: 40px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-family: 'Geist', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1.5px solid transparent;
+}
+.btn-primary {
+  background: var(--graphite);
+  color: var(--porcelain);
+}
+.btn-primary:hover { background: var(--signal); }
+.btn-secondary {
+  background: transparent;
+  color: var(--graphite);
+  border-color: var(--graphite-200);
+}
+.btn-secondary:hover { border-color: var(--graphite); }
+.code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--graphite-500);
+  margin-top: 48px;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">CHYBA 404</div>
+  <h1>Stránka <em>neexistuje</em>.</h1>
+  <p>Adresa, ktorú hľadáš, na Alogatore nemá obsah. Možno bola presunutá alebo ešte nebola vytvorená.</p>
+  <div class="actions">
+    <a href="/" class="btn btn-primary">← Späť na domov</a>
+    <a href="/cennik" class="btn btn-secondary">Cenník</a>
+  </div>
+  <div class="code">alogator.sk · 404</div>
+</div>
+</body>
+</html>

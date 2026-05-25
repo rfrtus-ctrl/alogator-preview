@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Marek N. — Elektrikár · 8 r. · Slovensko · Alogator</title>
+<meta name="description" content="Marek N. — Elektrikár s 8-ročnou praxou. VDE certifikát, DE/EN/HU. Bilfinger, Siemens. PRO člen. Dostupný od 23.5.2026.">
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --signal:#E66748;--signal-dark:#D4573A;--signal-soft:#FDE8E0;
+  --graphite:#1A1D1E;--graphite-700:#3F4445;--graphite-500:#6B7174;--graphite-200:#D9D9D6;
+  --porcelain:#F9F3ED;--porcelain-200:#F0E8DD;--porcelain-300:#E8DFD1;
+  --yellow:#F5D547;--green:#3F7D5F;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Inter',sans-serif;background:var(--porcelain);color:var(--graphite);
+  font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;
+}
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+.eyebrow{
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;
+  letter-spacing:0.15em;text-transform:uppercase;color:var(--signal);
+}
+.eyebrow::before{content:'• '}
+h1,h2,h3,h4{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.025em;line-height:1.1;color:var(--graphite)}
+em{font-style:italic;color:var(--signal);font-weight:500}
+
+/* Flags */
+.flag{width:18px;height:13px;border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 0 1px rgba(26,29,30,.08)}
+.flag-sk{background:linear-gradient(to bottom,#fff 33%,#0B4EA2 33% 66%,#EE1620 66%)}
+.flag-cz{background:linear-gradient(135deg,#fff 50%,#D7141A 50%);position:relative}
+.flag-cz::before{content:'';position:absolute;left:0;top:0;bottom:0;width:50%;background:#11457E;clip-path:polygon(0 0,100% 50%,0 100%)}
+.flag-de{background:linear-gradient(to bottom,#000 33%,#dd0000 33% 66%,#ffce00 66%)}
+.flag-at{background:linear-gradient(to bottom,#ED2939 50%,#fff 50%)}
+.flag-hu{background:linear-gradient(to bottom,#CD2A3E 33%,#fff 33% 66%,#436F4D 66%)}
+
+/* ============ NAVBAR ============ */
+.navbar{background:var(--graphite);color:var(--porcelain);padding:18px 0}
+.nav-inner{display:flex;justify-content:space-between;align-items:center}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--porcelain)}
+.nav-logo-mark{
+  width:32px;height:32px;background:var(--signal);border-radius:9px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Geist',sans-serif;font-weight:500;font-size:16px;
+}
+.nav-logo-name{font-family:'Geist',sans-serif;font-weight:500;font-size:20px}
+.nav-links{display:flex;gap:32px}
+.nav-links a{color:rgba(249,243,237,.85);text-decoration:none;font-size:14px}
+.nav-links a.active{color:var(--porcelain);font-weight:500}
+.nav-actions{display:flex;gap:10px;align-items:center}
+.nav-btn{
+  background:transparent;border:1px solid rgba(249,243,237,.2);color:var(--porcelain);
+  padding:8px 18px;border-radius:999px;font-size:13.5px;cursor:pointer;
+}
+.nav-btn.primary{background:var(--signal);border-color:var(--signal)}
+
+/* ============ BREADCRUMB ============ */
+.breadcrumb{
+  padding:18px 0 8px;background:var(--porcelain);
+  font-size:12.5px;color:var(--graphite-500);font-family:'JetBrains Mono',monospace;
+}
+.breadcrumb a{color:var(--graphite-500);text-decoration:none}
+.breadcrumb a:hover{color:var(--signal)}
+.breadcrumb .sep{margin:0 8px;color:var(--graphite-200)}
+
+/* ============ HEADER ============ */
+.prof-header{padding:32px 0 48px;background:var(--porcelain)}
+.prof-header-grid{
+  display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:flex-start;
+}
+.prof-main{display:flex;gap:24px;align-items:flex-start}
+.prof-avatar{
+  width:120px;height:120px;border-radius:24px;
+  background:var(--signal);color:var(--porcelain);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Geist',sans-serif;font-weight:500;font-size:48px;
+  flex-shrink:0;position:relative;
+}
+.prof-avatar-status{
+  position:absolute;bottom:-4px;right:-4px;
+  width:24px;height:24px;border-radius:50%;
+  background:var(--green);border:3px solid var(--porcelain);
+}
+.prof-info{flex:1;min-width:0}
+.prof-name-row{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.prof-name{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:36px;
+  letter-spacing:-0.02em;color:var(--graphite);line-height:1.1;
+}
+.prof-name.locked::after{
+  content:'';width:20px;height:24px;display:inline-block;margin-left:8px;vertical-align:middle;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236B7174' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='11' width='18' height='11' rx='2'/><path d='M7 11V7a5 5 0 0110 0v4'/></svg>") no-repeat center;
+  background-size:contain;
+}
+.prof-rating{
+  display:inline-flex;align-items:center;gap:5px;
+  background:rgba(63,125,95,.12);color:var(--green);
+  padding:5px 11px;border-radius:999px;
+  font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;
+}
+.prof-rating .star{color:var(--yellow);font-size:13px}
+.prof-prof{font-size:18px;color:var(--graphite-700);margin-bottom:14px}
+.prof-prof strong{color:var(--graphite);font-weight:500}
+.prof-meta-row{
+  display:flex;flex-wrap:wrap;gap:20px;font-size:13.5px;color:var(--graphite-700);
+  padding-top:16px;border-top:1px solid var(--porcelain-300);
+}
+.prof-meta-item{display:inline-flex;align-items:center;gap:7px}
+.prof-meta-item strong{color:var(--graphite);font-weight:500}
+
+/* Rate card (right side) */
+.rate-card{
+  background:var(--graphite);color:var(--porcelain);
+  border-radius:24px;padding:32px;position:sticky;top:24px;
+}
+.rate-card-label{
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;
+  letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.6);
+}
+.rate-card-label::before{content:'• ';color:var(--signal)}
+.rate-row{display:flex;align-items:baseline;gap:6px;margin:10px 0}
+.rate-prefix{font-family:'Inter',sans-serif;font-size:15px;color:rgba(249,243,237,.6)}
+.rate-prefix::after{content:':';margin-right:3px}
+.rate-num{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:48px;
+  letter-spacing:-0.025em;color:var(--porcelain);line-height:1;
+}
+.rate-unit{font-size:14px;color:rgba(249,243,237,.6)}
+.rate-note{
+  font-size:12.5px;color:rgba(249,243,237,.6);margin-bottom:24px;
+}
+.rate-avail{
+  display:flex;align-items:center;gap:8px;
+  background:rgba(63,125,95,.18);
+  padding:10px 14px;border-radius:12px;
+  margin-bottom:24px;font-size:13px;
+}
+.rate-avail .dot{width:8px;height:8px;border-radius:50%;background:#7CC95C;flex-shrink:0}
+.rate-cta{
+  background:var(--signal);color:var(--porcelain);border:0;
+  width:100%;padding:14px;border-radius:999px;
+  font-family:'Inter',sans-serif;font-size:14px;font-weight:500;cursor:pointer;
+  margin-bottom:10px;
+}
+.rate-cta:hover{background:var(--signal-dark)}
+.rate-cta-secondary{
+  background:transparent;color:var(--porcelain);
+  border:1px solid rgba(249,243,237,.25);
+  width:100%;padding:13px;border-radius:999px;
+  font-family:'Inter',sans-serif;font-size:13.5px;font-weight:500;cursor:pointer;
+}
+.rate-lock-note{
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;color:rgba(249,243,237,.5);
+  text-align:center;margin-top:14px;line-height:1.5;
+}
+
+/* ============ TABS ============ */
+.tabs-sec{padding:24px 0 0;background:var(--porcelain);border-top:1px solid var(--porcelain-300)}
+.tabs-row{display:flex;gap:24px;font-family:'Inter',sans-serif;font-size:14px}
+.tab{
+  padding:14px 0;color:var(--graphite-500);cursor:pointer;
+  position:relative;font-weight:500;
+}
+.tab.active{color:var(--graphite)}
+.tab.active::after{
+  content:'';position:absolute;bottom:-1px;left:0;right:0;
+  height:2px;background:var(--signal);
+}
+.tab-count{
+  background:var(--porcelain-200);color:var(--graphite-500);
+  padding:1px 8px;border-radius:999px;
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;margin-left:6px;
+}
+
+/* ============ MAIN CONTENT ============ */
+.prof-content{padding:48px 0 64px;background:var(--porcelain)}
+.prof-content-grid{display:grid;grid-template-columns:2fr 1fr;gap:48px;align-items:flex-start}
+
+/* Section card */
+.sec-card{
+  background:var(--porcelain);border:1px solid var(--porcelain-300);
+  border-radius:24px;padding:32px;margin-bottom:18px;
+}
+.sec-card h2{font-size:22px;letter-spacing:-0.02em;margin-bottom:18px}
+.sec-card h2 em{font-style:italic;color:var(--signal)}
+.sec-card .label{
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;
+  letter-spacing:0.15em;text-transform:uppercase;color:var(--signal);
+}
+.sec-card .label::before{content:'• '}
+
+/* Video prezentacia */
+.video-block{
+  background:linear-gradient(135deg,var(--graphite) 0%,var(--graphite-700) 100%);
+  border-radius:18px;padding:0;position:relative;overflow:hidden;
+  aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;
+  cursor:pointer;
+}
+.video-block::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 50% 50%,rgba(230,103,72,.15),transparent 70%);
+}
+.video-play{
+  width:80px;height:80px;border-radius:50%;
+  background:var(--signal);color:var(--porcelain);
+  display:flex;align-items:center;justify-content:center;
+  font-size:32px;z-index:1;position:relative;
+  transition:transform .15s;
+}
+.video-block:hover .video-play{transform:scale(1.1)}
+.video-meta{
+  position:absolute;bottom:16px;left:16px;
+  font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(249,243,237,.7);
+}
+
+/* About */
+.about-text{font-size:15px;line-height:1.65;color:var(--graphite-700)}
+.about-text p{margin-bottom:14px}
+.about-text strong{color:var(--graphite);font-weight:500}
+
+/* Certifikáty grid */
+.certs-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.cert-item{
+  background:var(--porcelain-200);border:1px solid var(--porcelain-300);
+  border-radius:14px;padding:16px;
+  display:flex;gap:14px;align-items:flex-start;
+}
+.cert-icon{
+  width:42px;height:42px;border-radius:11px;
+  background:var(--signal-soft);color:var(--signal);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;font-size:20px;
+}
+.cert-name{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:14px;
+  color:var(--graphite);letter-spacing:-0.01em;
+}
+.cert-issued{font-size:11.5px;color:var(--graphite-500);margin-top:2px}
+.cert-expiry{
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;
+  color:var(--graphite-500);margin-top:5px;
+}
+.cert-expiry.expiring{color:var(--signal-dark)}
+
+/* Skúsenosti — timeline */
+.exp-list{display:flex;flex-direction:column;gap:0}
+.exp-item{
+  display:grid;grid-template-columns:96px 1fr;gap:20px;
+  padding:18px 0;border-bottom:1px solid var(--porcelain-300);
+}
+.exp-item:last-child{border-bottom:0}
+.exp-date{
+  font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--graphite-500);
+  letter-spacing:0.02em;line-height:1.5;
+}
+.exp-content h4{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:16px;
+  letter-spacing:-0.015em;color:var(--graphite);
+}
+.exp-company{
+  font-size:13px;color:var(--graphite-700);margin-top:3px;
+  display:inline-flex;align-items:center;gap:6px;
+}
+.exp-desc{font-size:13.5px;color:var(--graphite-700);margin-top:8px;line-height:1.55}
+.exp-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.exp-tag{
+  background:var(--porcelain-200);border:1px solid var(--porcelain-300);
+  color:var(--graphite-700);font-size:10.5px;font-weight:500;
+  padding:3px 9px;border-radius:999px;
+}
+
+/* Reviews */
+.review-item{
+  background:var(--porcelain-200);border-radius:14px;padding:18px;
+  margin-bottom:12px;
+}
+.review-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
+.review-name{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:14px;color:var(--graphite);
+}
+.review-name.locked::after{
+  content:' 🔒';font-size:11px;opacity:.5;
+}
+.review-meta{font-size:11.5px;color:var(--graphite-500);margin-top:2px}
+.review-stars{color:var(--yellow);font-size:14px;letter-spacing:1px}
+.review-text{font-size:13.5px;color:var(--graphite-700);line-height:1.6;font-style:italic}
+.review-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.review-tag{
+  background:var(--porcelain);border:1px solid var(--porcelain-300);
+  color:var(--graphite-700);font-size:10.5px;font-weight:500;
+  padding:2px 8px;border-radius:999px;
+}
+
+/* Kalendár — týždne */
+.cal-mini{
+  background:var(--graphite);color:var(--porcelain);
+  border-radius:18px;padding:24px;
+}
+.cal-mini-head{
+  display:flex;justify-content:space-between;align-items:center;
+  padding-bottom:14px;margin-bottom:18px;
+  border-bottom:1px solid rgba(249,243,237,.1);
+}
+.cal-mini-title{
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;
+  letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.6);
+}
+.cal-mini-month{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:14px;color:var(--porcelain);
+}
+.cal-mini-weeks{display:flex;flex-direction:column;gap:10px}
+.cal-mini-week{
+  display:grid;grid-template-columns:60px 1fr;gap:14px;align-items:center;
+}
+.cal-mini-wnum{
+  font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(249,243,237,.6);
+}
+.cal-mini-days{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+.cal-mini-day{
+  height:32px;border-radius:6px;background:rgba(249,243,237,.06);
+  display:flex;align-items:center;justify-content:center;
+  font-size:10px;color:rgba(249,243,237,.5);
+}
+.cal-mini-day.busy{background:var(--signal);color:var(--porcelain)}
+.cal-mini-day.free{background:rgba(124,201,92,.25);color:#a5dc8a}
+.cal-mini-legend{
+  display:flex;gap:14px;margin-top:18px;padding-top:14px;
+  border-top:1px solid rgba(249,243,237,.1);
+  font-size:10.5px;color:rgba(249,243,237,.6);
+}
+.cal-mini-legend span{display:inline-flex;align-items:center;gap:5px}
+.cal-mini-legend .led{width:8px;height:8px;border-radius:50%}
+.cal-mini-legend .led.b{background:var(--signal)}
+.cal-mini-legend .led.f{background:#7CC95C}
+
+/* Languages */
+.langs-list{display:flex;flex-direction:column;gap:14px}
+.lang-row{display:flex;align-items:center;gap:14px}
+.lang-flag{width:28px;height:20px;border-radius:3px;flex-shrink:0;box-shadow:0 0 0 1px rgba(26,29,30,.08)}
+.lang-name{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:14px;
+  color:var(--graphite);min-width:80px;
+}
+.lang-level{
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  color:var(--signal);font-weight:600;
+}
+.lang-bar{
+  flex:1;height:6px;background:var(--porcelain-200);border-radius:999px;overflow:hidden;
+}
+.lang-bar-fill{height:100%;background:var(--signal);border-radius:999px}
+
+/* Pictograms summary card */
+.summary-card{
+  background:var(--porcelain-200);border-radius:18px;padding:24px;
+  display:flex;flex-direction:column;gap:14px;
+}
+.summary-row{display:flex;align-items:center;gap:14px}
+.summary-icon{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--signal-soft);color:var(--signal);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.summary-icon.pro{background:var(--yellow);color:var(--graphite)}
+.summary-icon svg{width:18px;height:18px}
+.summary-content{flex:1;min-width:0}
+.summary-label{
+  font-family:'JetBrains Mono',monospace;font-size:10px;
+  letter-spacing:0.12em;text-transform:uppercase;color:var(--graphite-500);
+  margin-bottom:2px;
+}
+.summary-val{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:14px;
+  color:var(--graphite);
+}
+
+/* ============ SIMILAR WORKERS ============ */
+.similar-sec{padding:64px 0;background:var(--porcelain-200)}
+.similar-sec h2{font-size:clamp(24px,2.5vw,32px);margin-bottom:24px}
+.similar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+
+/* Worker card (reused from homepage) */
+.wcard{
+  background:var(--porcelain);border:1px solid var(--porcelain-300);
+  border-radius:20px;padding:18px;position:relative;cursor:pointer;
+  transition:transform .2s, border-color .2s, box-shadow .2s;
+}
+.wcard:hover{transform:translateY(-3px);border-color:var(--graphite-200);box-shadow:0 12px 30px -10px rgba(26,29,30,.12)}
+.wcard-badge-avail{
+  position:absolute;top:14px;right:14px;
+  font-size:9.5px;font-weight:600;padding:3px 8px;border-radius:999px;letter-spacing:0.05em;
+  display:inline-flex;align-items:center;gap:4px;background:var(--graphite);color:var(--porcelain);
+}
+.wcard-badge-avail::before{content:'';width:5px;height:5px;border-radius:50%;background:#7CC95C}
+.wcard-head{display:flex;align-items:flex-start;gap:11px;margin-bottom:10px}
+.wcard-avatar{
+  width:38px;height:38px;border-radius:50%;color:var(--porcelain);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  font-family:'Geist',sans-serif;font-weight:500;font-size:14px;
+}
+.wcard-avatar.a-signal{background:var(--signal)}
+.wcard-avatar.a-graphite{background:var(--graphite-700)}
+.wcard-avatar.a-yellow{background:var(--yellow);color:var(--graphite)}
+.wcard-meta{flex:1;min-width:0}
+.wcard-name-row{display:flex;align-items:center;gap:6px}
+.wcard-origin-flag{width:14px;height:10px;border-radius:1.5px;box-shadow:0 0 0 1px rgba(26,29,30,.08)}
+.wcard-name{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:14px;
+  letter-spacing:-0.01em;color:var(--graphite);
+  display:inline-flex;align-items:center;gap:4px;
+}
+.wcard-name::after{
+  content:'';width:10px;height:12px;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236B7174' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='11' width='18' height='11' rx='2'/><path d='M7 11V7a5 5 0 0110 0v4'/></svg>") no-repeat center;
+  background-size:contain;
+}
+.wcard-prof{font-size:11.5px;color:var(--graphite-500);margin-top:2px}
+.wcard-rate{display:flex;align-items:baseline;gap:4px;margin:8px 0}
+.wcard-rate-prefix{font-size:11.5px;color:var(--graphite-500)}
+.wcard-rate-prefix::after{content:':';margin-right:2px}
+.wcard-rate-num{font-family:'Geist',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.02em}
+.wcard-rate-unit{font-size:11px;color:var(--graphite-500)}
+.wcard-rating{margin-left:auto;font-size:11px;color:var(--graphite-500);display:inline-flex;align-items:center;gap:3px}
+.wcard-rating .star{color:var(--yellow);font-size:13px}
+
+/* ============ FOOTER ============ */
+.footer{background:var(--graphite);color:var(--porcelain);padding:48px 0 24px}
+.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}
+.foot-col h5{
+  font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;
+  letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.5);margin-bottom:16px;
+}
+.foot-col h5::before{content:'• ';color:var(--signal)}
+.foot-col a{display:block;color:rgba(249,243,237,.7);text-decoration:none;font-size:13.5px;padding:5px 0}
+.foot-bottom{padding-top:24px;display:flex;justify-content:space-between;font-size:12px;color:rgba(249,243,237,.5)}
+
+@media (max-width:900px){
+  .prof-header-grid,.prof-content-grid,.similar-grid,.foot-top{grid-template-columns:1fr;gap:24px}
+  .prof-main{flex-direction:column;text-align:center;align-items:center}
+  .certs-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-mark">A</div>
+      <div class="nav-logo-name">Alogator</div>
+    </a>
+    <div class="nav-links">
+      <a href="/databaza-pracovnikov" class="active">Databáza pracovníkov</a>
+      <a href="/ponuka-prace">Pracovné ponuky</a>
+      <a href="/ako-to-funguje">Ako to funguje</a>
+      <a href="/cennik">Cenník</a>
+      <a href="/o-nas">O nás</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-btn">Prihlásenie</button>
+      <button class="nav-btn primary">Naplánovať demo</button>
+    </div>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="container">
+    <a href="/">Domov</a>
+    <span class="sep">/</span>
+    <a href="/databaza-pracovnikov">Databáza pracovníkov</a>
+    <span class="sep">/</span>
+    <a href="/ponuka-prace/elektrikar">Elektrikár</a>
+    <span class="sep">/</span>
+    <span>Marek N.</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<section class="prof-header">
+  <div class="container">
+    <div class="prof-header-grid">
+
+      <!-- Left: avatar + name + meta -->
+      <div class="prof-main">
+        <div class="prof-avatar">
+          M
+          <div class="prof-avatar-status" title="Online"></div>
+        </div>
+        <div class="prof-info">
+          <div class="prof-name-row">
+            <span class="flag flag-sk" title="Slovensko"></span>
+            <h1 class="prof-name locked">Marek N.</h1>
+          </div>
+          <div class="prof-prof"><strong>Elektrikár</strong> · 8 rokov praxe · VDE certifikát</div>
+
+          <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:14px">
+            <span class="prof-rating"><span class="star">★</span> 5.0 · 12 hodnotení</span>
+            <span style="background:var(--yellow);color:var(--graphite);padding:5px 11px;border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:600;letter-spacing:0.05em">PRO ČLEN</span>
+          </div>
+
+          <div class="prof-meta-row">
+            <div class="prof-meta-item"><span class="flag flag-sk"></span>Slovensko</div>
+            <div class="prof-meta-item">👤 <strong>32 r.</strong></div>
+            <div class="prof-meta-item">🌐 <strong>DE · EN · HU</strong></div>
+            <div class="prof-meta-item">🚗 <strong>Vlastné auto</strong></div>
+            <div class="prof-meta-item">💼 <strong>SZČO</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: rate card -->
+      <aside class="rate-card">
+        <div class="rate-card-label">Hodinová sadzba</div>
+        <div class="rate-row">
+          <span class="rate-prefix">od</span>
+          <span class="rate-num">30 €</span>
+          <span class="rate-unit">/ hod</span>
+        </div>
+        <div class="rate-note">Sadzba sa môže meniť podľa projektu a lokality</div>
+
+        <div class="rate-avail">
+          <span class="dot"></span>
+          <span><strong style="color:var(--porcelain)">Dostupný od 23. 5. 2026</strong></span>
+        </div>
+
+        <button class="rate-cta">🔓 Otvoriť kontakt</button>
+        <button class="rate-cta-secondary">Pridať do CRM</button>
+
+        <div class="rate-lock-note">
+          Kontakt je doplnková položka<br>k vášmu predplatnému.<br>
+          <a href="/cennik" style="color:var(--signal);text-decoration:underline">Cenník →</a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- TABS -->
+<section class="tabs-sec">
+  <div class="container">
+    <div class="tabs-row">
+      <span class="tab active">Profil</span>
+      <span class="tab">Skúsenosti <span class="tab-count">7</span></span>
+      <span class="tab">Certifikáty <span class="tab-count">5</span></span>
+      <span class="tab">Hodnotenia <span class="tab-count">12</span></span>
+      <span class="tab">Kalendár</span>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="prof-content">
+  <div class="container">
+    <div class="prof-content-grid">
+
+      <!-- LEFT COLUMN -->
+      <div>
+
+        <!-- VIDEO PREZENTÁCIA -->
+        <div class="sec-card">
+          <span class="label">Video prezentácia</span>
+          <h2 style="margin-top:8px">Marek sa <em>predstavuje</em></h2>
+          <p style="font-size:13.5px;color:var(--graphite-500);margin-bottom:18px">2-minútové video kde Marek hovorí o sebe, špecializácii a očakávaniach. Dostupné pre PRO členov.</p>
+
+          <div class="video-block">
+            <div class="video-play">▶</div>
+            <div class="video-meta">02:14 · Slovensky + Nemecky</div>
+          </div>
+        </div>
+
+        <!-- O MNE -->
+        <div class="sec-card">
+          <span class="label">O mne</span>
+          <h2 style="margin-top:8px">Krátko o sebe</h2>
+          <div class="about-text">
+            <p>Mám 8 rokov praxe v <strong>priemyselnej elektrike</strong> — silnoprúd, NN aj VN rozvádzače, meranie a riadenie procesov. Pracoval som na projektoch v Nemecku (Bilfinger Industrial Services), Rakúsku (Andritz) a na Slovensku.</p>
+
+            <p>Mám <strong>VDE certifikát</strong> a oprávnenie pre prácu na zariadeniach do 1000V. Hovorím nemecky na úrovni B2, anglicky B1 a maďarsky (rodný jazyk). Vlastné auto, ochotný cestovať.</p>
+
+            <p>Preferujem <strong>dlhodobejšie projekty (3+ mesiacov)</strong> v zahraničí s turnusmi 14/14 alebo 21/7. Pre kratšie projekty na Slovensku som flexibilný — pomáham aj rodinným firmám.</p>
+          </div>
+        </div>
+
+        <!-- SKÚSENOSTI -->
+        <div class="sec-card">
+          <span class="label">Pracovné skúsenosti</span>
+          <h2 style="margin-top:8px">7 projektov za <em>8 rokov</em></h2>
+
+          <div class="exp-list">
+            <div class="exp-item">
+              <div class="exp-date">
+                03/2025<br>– aktuálne<br>
+                <span style="color:var(--signal)">14 mes.</span>
+              </div>
+              <div class="exp-content">
+                <h4>Elektrikár — priemyselný projekt</h4>
+                <div class="exp-company">Bilfinger Industrial Services · <span class="flag flag-de"></span> Emsland, DE</div>
+                <p class="exp-desc">Inštalácia a údržba elektroinštalácie v chemickom závode. Práca s VN rozvádzačmi do 6kV, programovanie Siemens PLC, dokumentácia podľa nemeckých noriem.</p>
+                <div class="exp-tags">
+                  <span class="exp-tag">VN do 6kV</span>
+                  <span class="exp-tag">Siemens S7</span>
+                  <span class="exp-tag">DE B2</span>
+                  <span class="exp-tag">Chemický priemysel</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exp-item">
+              <div class="exp-date">
+                09/2023<br>– 02/2025<br>
+                <span>17 mes.</span>
+              </div>
+              <div class="exp-content">
+                <h4>Elektrikár — výrobná hala</h4>
+                <div class="exp-company">ANDRITZ AG · <span class="flag flag-at"></span> Linz, AT</div>
+                <p class="exp-desc">Stavba a oživenie elektrickej časti výrobnej linky na papier. Práca na meraní a regulácii, kabeláž do rozvádzačov, oživenie cez PLC.</p>
+                <div class="exp-tags">
+                  <span class="exp-tag">Meranie</span>
+                  <span class="exp-tag">Kabeláž</span>
+                  <span class="exp-tag">Papierenský priem.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exp-item">
+              <div class="exp-date">
+                01/2022<br>– 08/2023<br>
+                <span>19 mes.</span>
+              </div>
+              <div class="exp-content">
+                <h4>Elektrikár — energetika</h4>
+                <div class="exp-company">SES Tlmače · <span class="flag flag-sk"></span> Tlmače, SK</div>
+                <p class="exp-desc">Generálna oprava elektrickej časti turbíny v elektrárni. Práca v tíme 4 elektrikárov, koordinácia s mechanikami.</p>
+                <div class="exp-tags">
+                  <span class="exp-tag">Energetika</span>
+                  <span class="exp-tag">Turbíny</span>
+                  <span class="exp-tag">VN rozvádzače</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="exp-item">
+              <div class="exp-date">
+                06/2020<br>– 12/2021<br>
+                <span>19 mes.</span>
+              </div>
+              <div class="exp-content">
+                <h4>Junior elektrikár</h4>
+                <div class="exp-company">Siemens Slovensko · <span class="flag flag-sk"></span> Bratislava, SK</div>
+                <p class="exp-desc">Začiatok kariéry. Asistent senior elektrikárov pri inštalácii rozvádzačov, postupné získanie VDE certifikátu.</p>
+                <div class="exp-tags">
+                  <span class="exp-tag">Junior</span>
+                  <span class="exp-tag">Rozvádzače</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button style="margin-top:18px;background:transparent;border:0;color:var(--signal);font-family:'Inter',sans-serif;font-size:13.5px;font-weight:500;cursor:pointer">Zobraziť všetkých 7 projektov →</button>
+        </div>
+
+        <!-- HODNOTENIA -->
+        <div class="sec-card">
+          <span class="label">Hodnotenia od firiem</span>
+          <h2 style="margin-top:8px">12 hodnotení, priemer <em>5.0</em></h2>
+
+          <div class="review-item">
+            <div class="review-head">
+              <div>
+                <div class="review-name locked">Bilfinger Industrial Services</div>
+                <div class="review-meta">Projekt Emsland · 03/2025</div>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-text">"Marek je veľmi spoľahlivý, technicky zdatný a vie komunikovať priamo v nemčine. Pri komplikáciach v projekte vždy navrhol riešenie. Odporúčame pre dlhodobejšie projekty."</p>
+            <div class="review-tags">
+              <span class="review-tag">Spoľahlivý</span>
+              <span class="review-tag">Technicky zdatný</span>
+              <span class="review-tag">Komunikatívny</span>
+            </div>
+          </div>
+
+          <div class="review-item">
+            <div class="review-head">
+              <div>
+                <div class="review-name locked">ANDRITZ AG</div>
+                <div class="review-meta">Projekt Linz · 02/2025</div>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-text">"Profesionálny prístup, dochvíľnosť, dobrý tímový hráč. Pracoval s nami 17 mesiacov bez problémov. Hocikedy ho vezmeme späť."</p>
+            <div class="review-tags">
+              <span class="review-tag">Tímový hráč</span>
+              <span class="review-tag">Dochvíľny</span>
+            </div>
+          </div>
+
+          <div class="review-item">
+            <div class="review-head">
+              <div>
+                <div class="review-name locked">SES Tlmače</div>
+                <div class="review-meta">Generálna oprava · 08/2023</div>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-text">"Skúsený elektrikár, vedel si poradiť aj v krízových situáciách počas opravy. Dobre spolupracoval s tímom mechanikov."</p>
+          </div>
+
+          <button style="margin-top:18px;background:transparent;border:0;color:var(--signal);font-family:'Inter',sans-serif;font-size:13.5px;font-weight:500;cursor:pointer">Zobraziť všetkých 12 hodnotení →</button>
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN — Sidebar -->
+      <aside>
+
+        <!-- Summary card -->
+        <div class="sec-card" style="padding:24px">
+          <span class="label">Stručne</span>
+          <h2 style="margin-top:8px;font-size:18px;margin-bottom:16px">Profil v 4 bodoch</h2>
+          <div class="summary-card" style="padding:0;background:transparent">
+            <div class="summary-row">
+              <span class="summary-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></span>
+              <div class="summary-content">
+                <div class="summary-label">Jazyky</div>
+                <div class="summary-val">DE B2 · EN B1 · HU rodný</div>
+              </div>
+            </div>
+            <div class="summary-row">
+              <span class="summary-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></span>
+              <div class="summary-content">
+                <div class="summary-label">Skúsenosti</div>
+                <div class="summary-val">Bilfinger · ANDRITZ · Siemens · +1</div>
+              </div>
+            </div>
+            <div class="summary-row">
+              <span class="summary-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+              <div class="summary-content">
+                <div class="summary-label">Séniorita</div>
+                <div class="summary-val">8 rokov · Senior</div>
+              </div>
+            </div>
+            <div class="summary-row">
+              <span class="summary-icon pro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+              <div class="summary-content">
+                <div class="summary-label">Status</div>
+                <div class="summary-val">PRO člen · video prez.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jazyky detail -->
+        <div class="sec-card">
+          <span class="label">Jazyky</span>
+          <h2 style="margin-top:8px;font-size:18px;margin-bottom:18px">Jazyková výbava</h2>
+          <div class="langs-list">
+            <div class="lang-row">
+              <span class="lang-flag flag-hu"></span>
+              <span class="lang-name">Maďarsky</span>
+              <span class="lang-level">Rodný</span>
+              <div class="lang-bar"><div class="lang-bar-fill" style="width:100%"></div></div>
+            </div>
+            <div class="lang-row">
+              <span class="lang-flag flag-sk"></span>
+              <span class="lang-name">Slovensky</span>
+              <span class="lang-level">C2</span>
+              <div class="lang-bar"><div class="lang-bar-fill" style="width:100%"></div></div>
+            </div>
+            <div class="lang-row">
+              <span class="lang-flag flag-de"></span>
+              <span class="lang-name">Nemecky</span>
+              <span class="lang-level">B2</span>
+              <div class="lang-bar"><div class="lang-bar-fill" style="width:75%"></div></div>
+            </div>
+            <div class="lang-row">
+              <span class="lang-flag" style="background:linear-gradient(to bottom,#00247D 33%,#fff 33% 66%,#CF142B 66%)"></span>
+              <span class="lang-name">Anglicky</span>
+              <span class="lang-level">B1</span>
+              <div class="lang-bar"><div class="lang-bar-fill" style="width:55%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifikáty -->
+        <div class="sec-card">
+          <span class="label">Certifikáty</span>
+          <h2 style="margin-top:8px;font-size:18px;margin-bottom:18px">5 aktívnych</h2>
+          <div class="certs-grid" style="grid-template-columns:1fr">
+            <div class="cert-item">
+              <div class="cert-icon">⚡</div>
+              <div>
+                <div class="cert-name">VDE 0105-100</div>
+                <div class="cert-issued">VDE Verband · 2022</div>
+                <div class="cert-expiry">Platnosť do 2027</div>
+              </div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-icon">🔧</div>
+              <div>
+                <div class="cert-name">§ 22 Vyhláška 508/2009</div>
+                <div class="cert-issued">TI SR · 2021</div>
+                <div class="cert-expiry">Platnosť do 2026</div>
+              </div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-icon">🛡️</div>
+              <div>
+                <div class="cert-name">Bezpečnostná školenie</div>
+                <div class="cert-issued">BOZP · 2024</div>
+                <div class="cert-expiry expiring">Vyprší 09/2026</div>
+              </div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-icon">🔥</div>
+              <div>
+                <div class="cert-name">Ex zóna 1/21</div>
+                <div class="cert-issued">TÜV Süd · 2023</div>
+                <div class="cert-expiry">Platnosť do 2028</div>
+              </div>
+            </div>
+            <div class="cert-item">
+              <div class="cert-icon">🚗</div>
+              <div>
+                <div class="cert-name">Vodičský preukaz B</div>
+                <div class="cert-issued">Polícia SR · 2010</div>
+                <div class="cert-expiry">Platnosť do 2030</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kalendár dostupnosti -->
+        <div class="sec-card" style="padding:24px">
+          <span class="label">Kalendár dostupnosti</span>
+          <h2 style="margin-top:8px;font-size:18px;margin-bottom:16px">Najbližšie <em>4 týždne</em></h2>
+
+          <div class="cal-mini">
+            <div class="cal-mini-head">
+              <div class="cal-mini-title">Týždne 21–24</div>
+              <div class="cal-mini-month">Máj – Jún 2026</div>
+            </div>
+            <div class="cal-mini-weeks">
+              <div class="cal-mini-week">
+                <span class="cal-mini-wnum">21. T</span>
+                <div class="cal-mini-days">
+                  <div class="cal-mini-day busy">Po</div>
+                  <div class="cal-mini-day busy">Ut</div>
+                  <div class="cal-mini-day busy">St</div>
+                  <div class="cal-mini-day busy">Št</div>
+                  <div class="cal-mini-day free">Pi</div>
+                  <div class="cal-mini-day">So</div>
+                  <div class="cal-mini-day">Ne</div>
+                </div>
+              </div>
+              <div class="cal-mini-week">
+                <span class="cal-mini-wnum">22. T</span>
+                <div class="cal-mini-days">
+                  <div class="cal-mini-day free">Po</div>
+                  <div class="cal-mini-day free">Ut</div>
+                  <div class="cal-mini-day free">St</div>
+                  <div class="cal-mini-day free">Št</div>
+                  <div class="cal-mini-day free">Pi</div>
+                  <div class="cal-mini-day">So</div>
+                  <div class="cal-mini-day">Ne</div>
+                </div>
+              </div>
+              <div class="cal-mini-week">
+                <span class="cal-mini-wnum">23. T</span>
+                <div class="cal-mini-days">
+                  <div class="cal-mini-day free">Po</div>
+                  <div class="cal-mini-day free">Ut</div>
+                  <div class="cal-mini-day free">St</div>
+                  <div class="cal-mini-day free">Št</div>
+                  <div class="cal-mini-day free">Pi</div>
+                  <div class="cal-mini-day">So</div>
+                  <div class="cal-mini-day">Ne</div>
+                </div>
+              </div>
+              <div class="cal-mini-week">
+                <span class="cal-mini-wnum">24. T</span>
+                <div class="cal-mini-days">
+                  <div class="cal-mini-day busy">Po</div>
+                  <div class="cal-mini-day busy">Ut</div>
+                  <div class="cal-mini-day busy">St</div>
+                  <div class="cal-mini-day busy">Št</div>
+                  <div class="cal-mini-day busy">Pi</div>
+                  <div class="cal-mini-day">So</div>
+                  <div class="cal-mini-day">Ne</div>
+                </div>
+              </div>
+            </div>
+            <div class="cal-mini-legend">
+              <span><span class="led b"></span>Obsadené</span>
+              <span><span class="led f"></span>Voľné</span>
+              <span style="margin-left:auto;font-family:'JetBrains Mono',monospace">15 voľných dní</span>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- SIMILAR WORKERS -->
+<section class="similar-sec">
+  <div class="container">
+    <span class="eyebrow">• podobní pracovníci</span>
+    <h2 style="margin-top:10px">Ďalší elektrikári v databáze</h2>
+
+    <div class="similar-grid">
+      <div class="wcard">
+        <div class="wcard-badge-avail">Dostupný od 1.6.</div>
+        <div class="wcard-head">
+          <div class="wcard-avatar a-yellow">F</div>
+          <div class="wcard-meta">
+            <div class="wcard-name-row">
+              <span class="wcard-origin-flag flag-cz"></span>
+              <span class="wcard-name">Filip P.</span>
+            </div>
+            <div class="wcard-prof">Elektrikár · meranie · 6 r.</div>
+          </div>
+        </div>
+        <div class="wcard-rate">
+          <span class="wcard-rate-prefix">od</span>
+          <span class="wcard-rate-num">32 €</span>
+          <span class="wcard-rate-unit">/ hod</span>
+          <span class="wcard-rating"><span class="star">★</span> 5.0 · 24 hodnotení</span>
+        </div>
+      </div>
+
+      <div class="wcard">
+        <div class="wcard-badge-avail">Dostupný od 15.6.</div>
+        <div class="wcard-head">
+          <div class="wcard-avatar a-graphite">D</div>
+          <div class="wcard-meta">
+            <div class="wcard-name-row">
+              <span class="wcard-origin-flag flag-cz"></span>
+              <span class="wcard-name">Daniel R.</span>
+            </div>
+            <div class="wcard-prof">Elektrikár · silnoprúd · 9 r.</div>
+          </div>
+        </div>
+        <div class="wcard-rate">
+          <span class="wcard-rate-prefix">od</span>
+          <span class="wcard-rate-num">31 €</span>
+          <span class="wcard-rate-unit">/ hod</span>
+          <span class="wcard-rating"><span class="star">★</span> 4.9 · 18 hodnotení</span>
+        </div>
+      </div>
+
+      <div class="wcard">
+        <div class="wcard-badge-avail">Dostupný ihneď</div>
+        <div class="wcard-head">
+          <div class="wcard-avatar a-signal">R</div>
+          <div class="wcard-meta">
+            <div class="wcard-name-row">
+              <span class="wcard-origin-flag flag-sk"></span>
+              <span class="wcard-name">Roman K.</span>
+            </div>
+            <div class="wcard-prof">Elektrikár · NN · 11 r.</div>
+          </div>
+        </div>
+        <div class="wcard-rate">
+          <span class="wcard-rate-prefix">od</span>
+          <span class="wcard-rate-num">28 €</span>
+          <span class="wcard-rate-unit">/ hod</span>
+          <span class="wcard-rating"><span class="star">★</span> 4.7 · 15 hodnotení</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-col">
+        <div class="nav-logo" style="margin-bottom:14px">
+          <div class="nav-logo-mark">A</div>
+          <div class="nav-logo-name">Alogator</div>
+        </div>
+        <p style="font-size:13px;color:rgba(249,243,237,.6);line-height:1.5">Marketplace prepájajúci pracovníkov, agentúry a koncové firmy. SK · CZ · DE · AT · NL · BE</p>
+      </div>
+      <div class="foot-col">
+        <h5>Pre firmy</h5>
+        <a href="/pre-firmy">Naplánovať demo</a>
+        <a href="/databaza-pracovnikov">Databáza pracovníkov</a>
+        <a href="/cennik">Cenník</a>
+      </div>
+      <div class="foot-col">
+        <h5>Pre pracovníkov</h5>
+        <a href="/ponuka-prace">Pracovné ponuky</a>
+        <a href="/stiahnut-aplikaciu">Stiahnuť aplikáciu</a>
+        <a href="/ako-to-funguje">Ako to funguje</a>
+      </div>
+      <div class="foot-col">
+        <h5>Spoločnosť</h5>
+        <a href="/o-nas">O nás</a>
+        <a href="/kontakt">Kontakt</a>
+        <a href="/vseobecne-obchodne-podmienky">VOP</a>
+        <a href="/gdpr">GDPR</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Alogator · Profi Steel Holding</div>
+      <div>Made in Slovakia · alogator.sk</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

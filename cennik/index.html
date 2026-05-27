@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Cenník Alogator — Marketplace pre pracovníkov a firmy</title>
-<meta name="description" content="Platíte len za to, čo používate. Pracovník zdarma. Firma od inzerátu zadarmo po Alogator prístup za 499 €/mes. Modulárny cenník.">
+<title>Cenník Alogator — Tarify pre firmy hľadajúce remeselníkov</title>
+<meta name="description" content="3 tarify pre B2B prístup k databáze 3 047 overených remeselníkov. Starter 99 €/mes, Pro 249 €/mes, Enterprise custom. Bez provízií zo zákaziek.">
 <meta name="robots" content="index, follow">
-<meta property="og:title" content="Cenník Alogator — Modulárny prístup">
-<meta property="og:description" content="Pracovník zdarma. Firma — 5 úrovní podľa potreby. Doplnkové kontakty.">
+<meta property="og:title" content="Cenník Alogator — Tarify pre firmy">
+<meta property="og:description" content="Mesačný poplatok. Žiadne provízie zo zákaziek. Skúšobný mesiac zdarma.">
 <link rel="canonical" href="https://alogator.sk/cennik">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -57,9 +57,9 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 
 /* ============ HERO ============ */
 .lp-hero{padding:64px 0 32px;background:var(--porcelain);text-align:center}
-.lp-hero h1{font-size:clamp(40px,5vw,64px);margin-top:18px;max-width:760px;margin-left:auto;margin-right:auto}
+.lp-hero h1{font-size:clamp(40px,5vw,64px);margin-top:18px;max-width:720px;margin-left:auto;margin-right:auto}
 .lp-hero p.lead{
-  font-size:17px;color:var(--graphite-700);margin-top:20px;max-width:620px;
+  font-size:17px;color:var(--graphite-700);margin-top:20px;max-width:560px;
   margin-left:auto;margin-right:auto;line-height:1.55;
 }
 .lp-hero-stats{
@@ -71,227 +71,135 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .lp-stat-num em{font-style:italic;color:var(--signal);font-weight:500}
 .lp-stat-lbl{font-size:11.5px;color:var(--graphite-500);margin-top:4px;line-height:1.4}
 
-/* ============ USER TYPE TOGGLE ============ */
-.user-type-toggle{
-  display:inline-flex;gap:6px;margin:48px auto 0;
-  background:var(--porcelain-200);padding:5px;border-radius:999px;
+/* ============ BILLING TOGGLE ============ */
+.billing-toggle{
+  display:inline-flex;background:var(--porcelain-200);
+  padding:5px;border-radius:999px;margin-top:40px;
   border:1px solid var(--porcelain-300);
 }
-.ut-btn{
-  background:transparent;border:0;padding:11px 22px;border-radius:999px;
-  font-family:'Inter',sans-serif;font-size:14px;font-weight:500;
-  color:var(--graphite-500);cursor:pointer;transition:all .15s;
-  display:inline-flex;align-items:center;gap:8px;
+.billing-btn{
+  background:transparent;border:0;padding:9px 22px;border-radius:999px;
+  font-size:13.5px;font-weight:500;color:var(--graphite-500);cursor:pointer;
+  font-family:'Inter',sans-serif;display:inline-flex;align-items:center;gap:8px;
 }
-.ut-btn.active{background:var(--graphite);color:var(--porcelain)}
-.ut-icon{font-size:16px}
+.billing-btn.active{background:var(--graphite);color:var(--porcelain)}
+.billing-badge{
+  background:var(--yellow);color:var(--graphite);font-size:10px;font-weight:600;
+  padding:2px 7px;border-radius:999px;font-family:'JetBrains Mono',monospace;
+}
 
-/* ============ WORKER SECTION ============ */
-.worker-sec{padding:48px 0 80px;background:var(--porcelain);display:none}
-.worker-sec.active{display:block}
-.worker-card{
-  max-width:680px;margin:0 auto;
+/* ============ PRICING CARDS ============ */
+.pricing-sec{padding:48px 0 80px;background:var(--porcelain)}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}
+.pcard{
   background:var(--porcelain);border:1px solid var(--porcelain-300);
-  border-radius:24px;padding:48px;text-align:center;
-}
-.worker-card-icon{
-  width:64px;height:64px;border-radius:18px;
-  background:var(--signal-soft);color:var(--signal);
-  display:flex;align-items:center;justify-content:center;
-  margin:0 auto 20px;font-size:28px;
-}
-.worker-card h3{font-size:32px;letter-spacing:-0.02em;margin-bottom:10px}
-.worker-card .price-row{
-  display:flex;align-items:baseline;justify-content:center;gap:8px;margin:28px 0 8px;
-}
-.worker-card .price-num{
-  font-family:'Geist',sans-serif;font-weight:500;font-size:64px;letter-spacing:-0.025em;
-}
-.worker-card .price-unit{font-size:16px;color:var(--graphite-500)}
-.worker-card .price-note{
-  font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--graphite-500);
-  margin-bottom:24px;
-}
-.worker-card .price-note em{color:var(--signal);font-style:italic;font-weight:500}
-.worker-cta-row{display:flex;justify-content:center;gap:12px;margin-bottom:36px;flex-wrap:wrap}
-.btn-pri{
-  background:var(--graphite);color:var(--porcelain);border:0;
-  padding:14px 28px;border-radius:999px;
-  font-family:'Inter',sans-serif;font-size:14px;font-weight:500;cursor:pointer;
-}
-.btn-out{
-  background:transparent;color:var(--graphite);border:1.5px solid var(--graphite);
-  padding:14px 28px;border-radius:999px;
-  font-family:'Inter',sans-serif;font-size:14px;font-weight:500;cursor:pointer;
-}
-.worker-feats{
-  display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px;text-align:left;
-}
-.worker-feat{
-  display:flex;gap:12px;align-items:flex-start;
-  font-size:14px;color:var(--graphite-700);line-height:1.5;
-}
-.worker-feat-icon{
-  width:22px;height:22px;border-radius:50%;
-  background:var(--signal-soft);color:var(--signal);
-  display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;font-size:11px;font-weight:700;margin-top:1px;
-}
-.worker-feat strong{font-weight:500;color:var(--graphite)}
-
-/* ============ FIRMA PRICING — 5 TIERS ============ */
-.firma-sec{padding:48px 0 80px;background:var(--porcelain)}
-.firma-sec.hidden,.firma-block.hidden{display:none}
-.tier-intro{text-align:center;max-width:680px;margin:0 auto 48px}
-.tier-intro h3{font-size:clamp(22px,2.5vw,28px);margin-bottom:10px;letter-spacing:-0.02em}
-.tier-intro p{color:var(--graphite-700);font-size:15px;line-height:1.55}
-
-.tier-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-.tier-card{
-  background:var(--porcelain);border:1px solid var(--porcelain-300);
-  border-radius:18px;padding:24px 18px;position:relative;
+  border-radius:24px;padding:32px 28px;position:relative;
   display:flex;flex-direction:column;
 }
-.tier-card.featured{
+.pcard.featured{
   background:var(--graphite);color:var(--porcelain);border-color:var(--graphite);
-  transform:translateY(-8px);box-shadow:0 20px 50px -16px rgba(26,29,30,.3);
+  transform:translateY(-12px);box-shadow:0 24px 60px -20px rgba(26,29,30,.3);
 }
-.tier-card.featured h4,.tier-card.featured .tier-price{color:var(--porcelain)}
-.tier-card.featured .tier-unit,.tier-card.featured .tier-desc{color:rgba(249,243,237,.65)}
-.tier-card.featured .tier-feats li{color:rgba(249,243,237,.9)}
-.tier-card.featured .tier-feat-icon{background:var(--signal);color:var(--porcelain)}
-.tier-card.featured .tier-cta{background:var(--signal);color:var(--porcelain);border-color:var(--signal)}
-.tier-card.featured .tier-divider{color:rgba(249,243,237,.55)}
-.tier-badge{
-  position:absolute;top:-11px;left:50%;transform:translateX(-50%);
+.pcard.featured h3,.pcard.featured .price-num{color:var(--porcelain)}
+.pcard.featured .price-unit{color:rgba(249,243,237,.6)}
+.pcard.featured .pcard-desc{color:rgba(249,243,237,.75)}
+.pcard.featured .pfeat{color:rgba(249,243,237,.9)}
+.pcard.featured .pfeat-icon{background:var(--signal);color:var(--porcelain)}
+.pcard.featured .pcta{background:var(--signal);color:var(--porcelain);border-color:var(--signal)}
+.pcard.featured .pcta:hover{background:var(--signal-dark)}
+.pcard-badge{
+  position:absolute;top:-12px;left:50%;transform:translateX(-50%);
   background:var(--signal);color:var(--porcelain);
-  padding:4px 11px;border-radius:999px;
-  font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:600;
-  letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;
+  padding:5px 14px;border-radius:999px;
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:600;
+  letter-spacing:0.1em;text-transform:uppercase;
 }
-.tier-num{
-  font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;
-  letter-spacing:0.15em;color:var(--signal);text-transform:uppercase;margin-bottom:8px;
-}
-.tier-card.featured .tier-num{color:var(--yellow)}
-.tier-card h4{
-  font-family:'Geist',sans-serif;font-weight:500;font-size:18px;
-  letter-spacing:-0.015em;color:var(--graphite);margin-bottom:6px;
-}
-.tier-desc{font-size:12.5px;color:var(--graphite-500);min-height:48px;line-height:1.4;margin-bottom:18px}
-.tier-price-row{display:flex;align-items:baseline;gap:4px;margin-bottom:4px}
-.tier-price{
-  font-family:'Geist',sans-serif;font-weight:500;font-size:30px;letter-spacing:-0.02em;
-  color:var(--graphite);line-height:1;
-}
-.tier-unit{font-size:11.5px;color:var(--graphite-500)}
-.tier-billed{
-  font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--graphite-500);
-  letter-spacing:0.1em;margin-bottom:18px;
-}
-.tier-card.featured .tier-billed{color:rgba(249,243,237,.5)}
-.tier-cta{
-  background:transparent;color:var(--graphite);border:1.5px solid var(--graphite);
-  padding:10px 14px;border-radius:999px;
-  font-family:'Inter',sans-serif;font-size:12.5px;font-weight:500;cursor:pointer;
-  width:100%;margin-bottom:20px;transition:all .15s;
-}
-.tier-cta:hover{background:var(--graphite);color:var(--porcelain)}
-.tier-card.featured .tier-cta:hover{background:var(--signal-dark)}
-.tier-divider{
-  font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:500;
-  letter-spacing:0.15em;color:var(--graphite-500);text-transform:uppercase;margin-bottom:12px;
-}
-.tier-feats{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px}
-.tier-feats li{
-  display:flex;gap:8px;align-items:flex-start;
-  font-size:12px;color:var(--graphite-700);line-height:1.45;
-}
-.tier-feat-icon{
-  width:15px;height:15px;border-radius:50%;
-  background:var(--signal-soft);color:var(--signal);
-  display:flex;align-items:center;justify-content:center;
-  flex-shrink:0;font-size:8px;font-weight:700;margin-top:2px;
-}
-.tier-feats li strong{font-weight:500;color:var(--graphite)}
-.tier-card.featured .tier-feats li strong{color:var(--porcelain)}
-
-/* ============ KONTAKTY ============ */
-.contacts-sec{padding:80px 0;background:var(--porcelain-200)}
-.contacts-head{text-align:center;max-width:760px;margin:0 auto 48px}
-.contacts-head h2{font-size:clamp(28px,3vw,40px);margin:14px 0 14px}
-.contacts-head p{font-size:15px;color:var(--graphite-700);line-height:1.6}
-.contacts-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:1080px;margin:0 auto}
-.contact-card{
-  background:var(--porcelain);border:1px solid var(--porcelain-300);
-  border-radius:24px;padding:32px 28px;display:flex;flex-direction:column;
-}
-.contact-card.highlight{
-  background:linear-gradient(135deg,var(--signal-soft) 0%,var(--porcelain) 100%);
-  border-color:rgba(230,103,72,.25);
-}
-.contact-icon{
-  width:48px;height:48px;border-radius:14px;
-  display:flex;align-items:center;justify-content:center;
-  font-size:22px;margin-bottom:16px;
-  background:var(--porcelain-200);color:var(--graphite);
-}
-.contact-card.highlight .contact-icon{background:var(--signal);color:var(--porcelain)}
-.contact-card h3{font-size:22px;letter-spacing:-0.02em;margin-bottom:8px}
-.contact-card .contact-tag{
-  font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;
-  letter-spacing:0.15em;text-transform:uppercase;color:var(--signal);margin-bottom:8px;
-}
-.contact-card p.cdesc{font-size:14px;color:var(--graphite-700);line-height:1.55;margin-bottom:18px}
-.contact-bullets{list-style:none;padding:0;margin:0 0 24px;display:flex;flex-direction:column;gap:10px}
-.contact-bullets li{
-  display:flex;gap:10px;align-items:flex-start;
-  font-size:13.5px;color:var(--graphite-700);line-height:1.5;
-}
-.contact-bullets li::before{
-  content:'';width:6px;height:6px;border-radius:50%;background:var(--signal);
-  flex-shrink:0;margin-top:7px;
-}
-.contact-price{
-  margin-top:auto;padding-top:18px;border-top:1px solid var(--porcelain-300);
-  display:flex;justify-content:space-between;align-items:baseline;
-}
-.contact-price .lbl{font-size:12.5px;color:var(--graphite-500)}
-.contact-price .val{
-  font-family:'Geist',sans-serif;font-weight:500;font-size:20px;
+.pcard-name{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:22px;
   letter-spacing:-0.02em;color:var(--graphite);
 }
-.contact-price .val em{color:var(--signal);font-style:italic;font-size:14px;font-weight:500}
-
-/* ============ FLOW ============ */
-.flow-sec{padding:80px 0;background:var(--porcelain)}
-.flow-head{text-align:center;max-width:680px;margin:0 auto 48px}
-.flow-head h2{font-size:clamp(28px,3vw,40px);margin:14px 0 14px}
-.flow-head p{font-size:15px;color:var(--graphite-700);line-height:1.6}
-.flow-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1080px;margin:0 auto}
-.flow-step{
-  background:var(--porcelain-200);border:1px solid var(--porcelain-300);
-  border-radius:20px;padding:28px 24px;position:relative;
+.pcard-desc{
+  font-size:13.5px;color:var(--graphite-500);margin-top:8px;line-height:1.5;
+  min-height:42px;
 }
-.flow-num{
+.pcard-price{
+  display:flex;align-items:baseline;gap:6px;margin:24px 0 8px;
+}
+.price-num{
   font-family:'Geist',sans-serif;font-weight:500;font-size:48px;
-  letter-spacing:-0.025em;color:var(--signal);font-style:italic;line-height:1;margin-bottom:14px;
+  letter-spacing:-0.025em;color:var(--graphite);line-height:1;
 }
-.flow-step h4{font-size:18px;letter-spacing:-0.015em;margin-bottom:8px}
-.flow-step p{font-size:13.5px;color:var(--graphite-700);line-height:1.55}
-.flow-step .tag{
+.price-unit{font-size:14px;color:var(--graphite-500)}
+.pcard-billed{
+  font-size:11.5px;color:var(--graphite-500);margin-bottom:20px;
+  font-family:'JetBrains Mono',monospace;
+}
+.pcard.featured .pcard-billed{color:rgba(249,243,237,.5)}
+.pcta{
+  background:var(--graphite);color:var(--porcelain);border:1px solid var(--graphite);
+  padding:13px 24px;border-radius:999px;
+  font-family:'Inter',sans-serif;font-size:14px;font-weight:500;cursor:pointer;
+  margin-bottom:24px;transition:background .15s;
+}
+.pcta:hover{background:var(--graphite-700)}
+.pcta.outline{
+  background:transparent;color:var(--graphite);border-color:var(--graphite);
+}
+.pcta.outline:hover{background:var(--graphite);color:var(--porcelain)}
+.pfeat-divider{
   font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;
   letter-spacing:0.15em;text-transform:uppercase;color:var(--graphite-500);
-  display:inline-block;margin-top:12px;
-  background:var(--porcelain);padding:4px 10px;border-radius:999px;
+  margin-bottom:14px;
 }
+.pcard.featured .pfeat-divider{color:rgba(249,243,237,.6)}
+.pfeats{display:flex;flex-direction:column;gap:11px;margin-bottom:8px}
+.pfeat{
+  display:flex;gap:10px;align-items:flex-start;
+  font-size:13.5px;color:var(--graphite-700);line-height:1.45;
+}
+.pfeat-icon{
+  width:18px;height:18px;border-radius:50%;
+  background:var(--signal-soft);color:var(--signal);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;font-size:10px;font-weight:700;margin-top:1px;
+}
+.pfeat-icon.disabled{background:var(--porcelain-300);color:var(--graphite-500)}
+.pfeat-disabled{color:var(--graphite-500);text-decoration:line-through}
+
+/* ============ COMPARISON TABLE ============ */
+.compare-sec{padding:80px 0;background:var(--porcelain-200)}
+.compare-sec h2{font-size:clamp(28px,3vw,40px);text-align:center;margin-bottom:14px}
+.compare-sec .sub{text-align:center;color:var(--graphite-500);margin-bottom:48px;font-size:15px}
+.compare-table{
+  background:var(--porcelain);border:1px solid var(--porcelain-300);border-radius:20px;
+  overflow:hidden;
+}
+.compare-row{
+  display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;
+  border-bottom:1px solid var(--porcelain-300);
+}
+.compare-row:last-child{border-bottom:0}
+.compare-row.header{background:var(--graphite);color:var(--porcelain)}
+.compare-row.header .compare-cell{font-family:'Geist',sans-serif;font-weight:500;font-size:15px}
+.compare-row.section{background:var(--porcelain-200)}
+.compare-row.section .compare-cell{
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;
+  letter-spacing:0.15em;text-transform:uppercase;color:var(--signal);
+}
+.compare-cell{padding:14px 20px;font-size:13.5px;display:flex;align-items:center}
+.compare-cell:not(:first-child){justify-content:center;text-align:center;color:var(--graphite-700)}
+.compare-row.header .compare-cell{justify-content:center;color:var(--porcelain)}
+.compare-row.header .compare-cell:first-child{justify-content:flex-start;color:var(--porcelain)}
+.check{color:var(--signal);font-weight:700;font-size:16px}
+.dash{color:var(--graphite-200);font-weight:700;font-size:18px}
 
 /* ============ TRUST ============ */
-.trust-sec{padding:64px 0;background:var(--porcelain-200)}
+.trust-sec{padding:64px 0;background:var(--porcelain)}
 .trust-sec .container{text-align:center}
 .trust-lbl{
   font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;
-  letter-spacing:0.15em;text-transform:uppercase;color:var(--graphite-500);margin-bottom:32px;
+  letter-spacing:0.15em;text-transform:uppercase;color:var(--graphite-500);
+  margin-bottom:32px;
 }
 .trust-row{display:flex;justify-content:center;align-items:center;gap:56px;flex-wrap:wrap}
 .trust-logo{
@@ -300,11 +208,11 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 }
 
 /* ============ FAQ ============ */
-.faq-sec{padding:80px 0;background:var(--porcelain)}
+.faq-sec{padding:80px 0;background:var(--porcelain-200)}
 .faq-sec h2{font-size:clamp(28px,3vw,40px);text-align:center;margin-bottom:48px}
 .faq-list{max-width:780px;margin:0 auto}
 .faq-item{
-  background:var(--porcelain-200);border:1px solid var(--porcelain-300);border-radius:14px;
+  background:var(--porcelain);border:1px solid var(--porcelain-300);border-radius:14px;
   margin-bottom:10px;overflow:hidden;transition:border-color .15s;
 }
 .faq-item:hover{border-color:var(--graphite-200)}
@@ -323,7 +231,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .faq-a-inner{padding:0 22px 20px;font-size:14.5px;color:var(--graphite-700);line-height:1.6}
 
 /* ============ ENTERPRISE CTA ============ */
-.ent-sec{padding:64px 0;background:var(--porcelain-200)}
+.ent-sec{padding:64px 0;background:var(--porcelain)}
 .ent-banner{
   background:var(--graphite);color:var(--porcelain);
   border-radius:32px;padding:56px;
@@ -345,18 +253,23 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .ent-bullet{display:flex;gap:12px;align-items:flex-start;font-size:13.5px;color:rgba(249,243,237,.9)}
 .ent-bullet::before{
   content:'';width:18px;height:18px;border-radius:50%;background:var(--signal);
-  flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;margin-top:1px;
+  flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;
+  margin-top:1px;
 }
-.ent-cta{display:flex;flex-direction:column;gap:12px}
+.ent-cta{
+  display:flex;flex-direction:column;gap:12px;
+}
 .ent-cta-btn{
   background:var(--signal);color:var(--porcelain);border:0;
   padding:16px 32px;border-radius:999px;
-  font-family:'Inter',sans-serif;font-size:15px;font-weight:500;cursor:pointer;text-align:center;
+  font-family:'Inter',sans-serif;font-size:15px;font-weight:500;cursor:pointer;
+  text-align:center;
 }
 .ent-cta-secondary{
   background:transparent;color:var(--porcelain);
   border:1px solid rgba(249,243,237,.3);
-  padding:15px 32px;border-radius:999px;font-size:14px;cursor:pointer;text-align:center;
+  padding:15px 32px;border-radius:999px;font-size:14px;cursor:pointer;
+  text-align:center;
 }
 
 /* ============ FOOTER ============ */
@@ -370,22 +283,21 @@ em{font-style:italic;color:var(--signal);font-weight:500}
   letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.5);margin-bottom:16px;
 }
 .foot-col h5::before{content:'• ';color:var(--signal)}
-.foot-col a{display:block;color:rgba(249,243,237,.7);text-decoration:none;font-size:13.5px;padding:5px 0}
+.foot-col a{
+  display:block;color:rgba(249,243,237,.7);text-decoration:none;font-size:13.5px;padding:5px 0;
+}
 .foot-col a:hover{color:var(--signal)}
 .foot-bottom{
   padding-top:24px;display:flex;justify-content:space-between;align-items:center;
   font-size:12px;color:rgba(249,243,237,.5);
 }
 
-@media (max-width:1100px){
-  .tier-grid{grid-template-columns:repeat(3,1fr);gap:14px}
-  .tier-card.featured{transform:none}
-}
 @media (max-width:900px){
-  .tier-grid,.flow-steps{grid-template-columns:1fr;gap:14px}
-  .worker-feats,.contacts-grid,.foot-top{grid-template-columns:1fr;gap:24px}
-  .ent-banner{grid-template-columns:1fr;padding:32px}
+  .pricing-grid,.foot-top{grid-template-columns:1fr;gap:32px}
+  .pcard.featured{transform:none}
+  .compare-row{grid-template-columns:1.5fr 1fr 1fr 1fr;font-size:12px}
   .lp-hero-stats{gap:24px;flex-wrap:wrap}
+  .ent-banner{grid-template-columns:1fr;padding:32px}
 }
 </style>
 </head>
@@ -415,236 +327,107 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 <!-- HERO -->
 <section class="lp-hero">
   <div class="container">
-    <span class="eyebrow">cenník</span>
-    <h1>Trh, kde sa stretáva <em>všetko</em>.</h1>
+    <span class="eyebrow">cenník · b2b</span>
+    <h1>Mesačný poplatok.<br><em>Žiadne provízie</em> zo zákaziek.</h1>
     <p class="lead">
-      Alogator je marketplace pre stavebných a priemyselných pracovníkov.
-      Pracovníci, agentúry a koncové firmy sa stretávajú na jednom mieste —
-      platíte len za to, čo používate.
+      Platíte za prístup do databázy 3 047 overených remeselníkov.
+      Kontaktujte koľko chcete, dohodnite zákazky priamo — žiadne provízie z výplaty pracovníkov.
     </p>
 
     <div class="lp-hero-stats">
       <div>
         <div class="lp-stat-num">3 047</div>
-        <div class="lp-stat-lbl">pracovníkov</div>
-      </div>
-      <div>
-        <div class="lp-stat-num">642</div>
-        <div class="lp-stat-lbl">firiem a agentúr</div>
+        <div class="lp-stat-lbl">overených pracovníkov</div>
       </div>
       <div>
         <div class="lp-stat-num"><em>14 dní</em></div>
         <div class="lp-stat-lbl">skúšobné obdobie zdarma</div>
       </div>
+      <div>
+        <div class="lp-stat-num">642</div>
+        <div class="lp-stat-lbl">aktívnych firiem</div>
+      </div>
     </div>
 
-    <!-- User type toggle -->
-    <div class="user-type-toggle">
-      <button class="ut-btn active" onclick="toggleView(event,'worker')">
-        <span class="ut-icon">👷</span>Som pracovník
-      </button>
-      <button class="ut-btn" onclick="toggleView(event,'firma')">
-        <span class="ut-icon">🏗️</span>Sme firma
-      </button>
-    </div>
-  </div>
-</section>
-
-<!-- WORKER VIEW -->
-<section class="worker-sec active" id="view-worker">
-  <div class="container">
-    <div class="worker-card">
-      <div class="worker-card-icon">👷</div>
-      <h3>Pracovník</h3>
-      <p style="color:var(--graphite-700);max-width:480px;margin:0 auto">Pre SZČO zváračov, elektrikárov, montérov a všetkých remeselníkov hľadajúcich zákazky doma aj v zahraničí.</p>
-
-      <div class="price-row">
-        <span class="price-num">0 €</span>
-        <span class="price-unit">/ navždy</span>
-      </div>
-      <div class="price-note">Aplikácia <em>úplne zdarma</em> · iOS + Android</div>
-
-      <div class="worker-cta-row">
-        <button class="btn-pri">Stiahnuť aplikáciu →</button>
-        <button class="btn-out">Vytvoriť profil online</button>
-      </div>
-
-      <div class="worker-feats">
-        <div class="worker-feat"><span class="worker-feat-icon">✓</span><span><strong>Profil zdarma.</strong> Nastavíte sadzbu, dostupnosť, špecializáciu.</span></div>
-        <div class="worker-feat"><span class="worker-feat-icon">✓</span><span><strong>Ponuky od firiem aj agentúr.</strong> Vy si vyberáte.</span></div>
-        <div class="worker-feat"><span class="worker-feat-icon">✓</span><span><strong>Dream Job notifikácia.</strong> Push pri novej zhode.</span></div>
-        <div class="worker-feat"><span class="worker-feat-icon">✓</span><span><strong>Recenzie firiem.</strong> Vidíte hodnotenia pred kontaktom.</span></div>
-        <div class="worker-feat"><span class="worker-feat-icon">✓</span><span><strong>Volíte si úväzok.</strong> SZČO alebo HPP.</span></div>
-        <div class="worker-feat"><span class="worker-feat-icon">✓</span><span><strong>Faktúry v aplikácii.</strong> Priamo vystavujete a archivujete.</span></div>
-      </div>
+    <!-- Billing toggle -->
+    <div class="billing-toggle">
+      <button class="billing-btn active">Mesačne</button>
+      <button class="billing-btn">Ročne <span class="billing-badge">−20 %</span></button>
     </div>
   </div>
 </section>
 
-<!-- FIRMA VIEW -->
-<section class="firma-sec hidden" id="view-firma">
+<!-- PRICING CARDS -->
+<section class="pricing-sec">
   <div class="container">
-    <div class="tier-intro">
-      <span class="eyebrow">• 5 úrovní pre firmu</span>
-      <h3>Platíte len za to, čo používate</h3>
-      <p>Začnete inzerátom zdarma. Postupne pridávate moduly — CRM, kalendár, prístup do databázy — podľa toho, ako rastie vaša potreba.</p>
-    </div>
+    <div class="pricing-grid">
 
-    <div class="tier-grid">
-
-      <!-- FREE -->
-      <div class="tier-card">
-        <div class="tier-num">úroveň 01</div>
-        <h4>Free</h4>
-        <p class="tier-desc">Pre firmy, ktoré chcú začať bezplatne.</p>
-        <div class="tier-price-row">
-          <span class="tier-price">0 €</span>
-          <span class="tier-unit">/ mes.</span>
+      <!-- STARTER -->
+      <div class="pcard">
+        <h3 class="pcard-name">Starter</h3>
+        <p class="pcard-desc">Pre malé firmy, ktoré príjmu 1–3 ľudí mesačne.</p>
+        <div class="pcard-price">
+          <span class="price-num">99 €</span>
+          <span class="price-unit">/ mesiac</span>
         </div>
-        <div class="tier-billed">Bez záväzku</div>
-        <button class="tier-cta">Začať zdarma</button>
-        <div class="tier-divider">• čo dostanete</div>
-        <ul class="tier-feats">
-          <li><span class="tier-feat-icon">✓</span><span><strong>Inzeráty</strong> — pridávate pracovné ponuky</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>Ľudia sa <strong>ozývajú sami</strong></span></li>
-          <li><span class="tier-feat-icon">✓</span><span>Verejný profil firmy</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>1 admin</span></li>
-        </ul>
+        <div class="pcard-billed">+ DPH · fakturuje sa mesačne</div>
+        <button class="pcta outline">Vyskúšať 14 dní zdarma</button>
+        <div class="pfeat-divider">• čo je v balíku</div>
+        <div class="pfeats">
+          <div class="pfeat"><span class="pfeat-icon">✓</span><span><strong>10 kontaktov</strong> na pracovníkov mesačne</span></div>
+          <div class="pfeat"><span class="pfeat-icon">✓</span><span>Plný prístup do databázy 3 047 pracovníkov</span></div>
+          <div class="pfeat"><span class="pfeat-icon">✓</span><span>AI vyhľadávanie podľa špecifikácie</span></div>
+          <div class="pfeat"><span class="pfeat-icon">✓</span><span>Kalendár dostupnosti v real-time</span></div>
+          <div class="pfeat"><span class="pfeat-icon">✓</span><span>Hodnotenia pracovníkov od iných firiem</span></div>
+          <div class="pfeat"><span class="pfeat-icon">✓</span><span>Email support</span></div>
+          <div class="pfeat"><span class="pfeat-icon disabled">−</span><span class="pfeat-disabled">Tím viacero adminov</span></div>
+          <div class="pfeat"><span class="pfeat-icon disabled">−</span><span class="pfeat-disabled">CRM integrácia</span></div>
+        </div>
       </div>
 
-      <!-- CRM -->
-      <div class="tier-card">
-        <div class="tier-num">úroveň 02</div>
-        <h4>CRM</h4>
-        <p class="tier-desc">Spravujete svoje kontakty na jednom mieste.</p>
-        <div class="tier-price-row">
-          <span class="tier-price">99 €</span>
-          <span class="tier-unit">/ mes.</span>
+      <!-- PRO -->
+      <div class="pcard featured">
+        <div class="pcard-badge">Najobľúbenejšia</div>
+        <h3 class="pcard-name">Pro</h3>
+        <p class="pcard-desc">Pre rastúce firmy, ktoré príjmu 5–15 ľudí mesačne.</p>
+        <div class="pcard-price">
+          <span class="price-num">249 €</span>
+          <span class="price-unit">/ mesiac</span>
         </div>
-        <div class="tier-billed">+ DPH · mesačne</div>
-        <button class="tier-cta">Vyskúšať 14 dní</button>
-        <div class="tier-divider">• všetko z Free, plus</div>
-        <ul class="tier-feats">
-          <li><span class="tier-feat-icon">✓</span><span><strong>Vlastný CRM</strong> — kontakty, štítky, história</span></li>
-          <li><span class="tier-feat-icon">✓</span><span><strong>Import existujúcich kontaktov</strong> z Excel / CSV</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>Poznámky pri každom človeku</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>3 admini v tíme</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>Email support do 24h</span></li>
-        </ul>
-      </div>
-
-      <!-- KAPACITY -->
-      <div class="tier-card featured">
-        <div class="tier-badge">Najobľúbenejšia</div>
-        <div class="tier-num">úroveň 03</div>
-        <h4>Kapacity</h4>
-        <p class="tier-desc">Riadite kalendár vlastných ľudí v real-time.</p>
-        <div class="tier-price-row">
-          <span class="tier-price">199 €</span>
-          <span class="tier-unit">/ mes.</span>
+        <div class="pcard-billed">+ DPH · fakturuje sa mesačne</div>
+        <button class="pcta">Vyskúšať 14 dní zdarma</button>
+        <div class="pfeat-divider">• všetko zo Starter, plus</div>
+        <div class="pfeats">
+          <div class="pfeat"><span class="pfeat-icon">✓</span><span><strong>Neobmedzené kontakty</strong> na pracovníkov</span></div>
+          <div class="pfeat"><span class="pfeat-icon">✓</span><span><strong>5 adminov</strong> v tíme firmy</span></div>
+          <div class="pfeat"><span class="pfeat-icon">✓</span><span>Vlastné CRM — notes, štítky, história</span></div>
+          <div class="pfeat"><span class="pfeat-icon">✓</span><span>Plánovacie zobrazenie projektov (6+ týždňov)</span></div>
+          <div class="pfeat"><span class="pfeat-icon">✓</span><span>Export kontaktov + reportov (CSV, PDF)</span></div>
+          <div class="pfeat"><span class="pfeat-icon">✓</span><span>Priorita v podpore (do 4h)</span></div>
+          <div class="pfeat"><span class="pfeat-icon">✓</span><span>Webinár "Ako efektívne najímať" mesačne</span></div>
+          <div class="pfeat"><span class="pfeat-icon disabled">−</span><span class="pfeat-disabled">API prístup, SSO, custom branding</span></div>
         </div>
-        <div class="tier-billed">+ DPH · mesačne</div>
-        <button class="tier-cta">Vyskúšať 14 dní</button>
-        <div class="tier-divider">• všetko z CRM, plus</div>
-        <ul class="tier-feats">
-          <li><span class="tier-feat-icon">✓</span><span><strong>Kalendár vlastných ľudí</strong> — kto kedy voľný</span></li>
-          <li><span class="tier-feat-icon">✓</span><span><strong>Pracovníci aktualizujú dostupnosť sami</strong> cez appku</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>Plánovanie projektov 6+ týždňov dopredu</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>Konflikt detekcia (dvojité rezervácie)</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>5 adminov v tíme</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>Export reportov (CSV, PDF)</span></li>
-        </ul>
-      </div>
-
-      <!-- ALOGATOR -->
-      <div class="tier-card">
-        <div class="tier-num">úroveň 04</div>
-        <h4>Alogator</h4>
-        <p class="tier-desc">Vidíte aj kalendáre <em>všetkých</em> v databáze.</p>
-        <div class="tier-price-row">
-          <span class="tier-price">499 €</span>
-          <span class="tier-unit">/ mes.</span>
-        </div>
-        <div class="tier-billed">+ DPH · mesačne</div>
-        <button class="tier-cta">Vyskúšať 14 dní</button>
-        <div class="tier-divider">• všetko z Kapacity, plus</div>
-        <ul class="tier-feats">
-          <li><span class="tier-feat-icon">✓</span><span><strong>Prístup ku všetkým kalendárom</strong> v Alogator databáze (3 047 pracovníkov)</span></li>
-          <li><span class="tier-feat-icon">✓</span><span><strong>Vyberáte si voľných ľudí</strong> na svoje projekty</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>AI vyhľadávanie podľa špecifikácie</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>Filter podľa jazyka, certifikátov, lokality</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>10 adminov v tíme</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>Priorita v podpore (do 4h)</span></li>
-        </ul>
       </div>
 
       <!-- ENTERPRISE -->
-      <div class="tier-card">
-        <div class="tier-num">úroveň 05</div>
-        <h4>Enterprise</h4>
-        <p class="tier-desc">Hot leads od pracovníkov hneď po onboardingu.</p>
-        <div class="tier-price-row">
-          <span class="tier-price">Custom</span>
+      <div class="pcard">
+        <h3 class="pcard-name">Enterprise</h3>
+        <p class="pcard-desc">Pre veľké firmy a holdingy s 20+ projektmi súčasne.</p>
+        <div class="pcard-price">
+          <span class="price-num">Custom</span>
         </div>
-        <div class="tier-billed">Na mieru · ročná zmluva</div>
-        <button class="tier-cta">Naplánovať demo</button>
-        <div class="tier-divider">• všetko z Alogator, plus</div>
-        <ul class="tier-feats">
-          <li><span class="tier-feat-icon">✓</span><span><strong>Hot leads</strong> — pracovníci hneď po onboardingu / pri novej dostupnosti</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>Early access pred ostatnými firmami</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>API prístup (HubSpot, SAP, vlastné CRM)</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>SSO + custom branding</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>Dedikovaný account manager</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>Multi-country setup (SK + CZ + DE + AT + PL)</span></li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CONTACTS -->
-<section class="contacts-sec firma-block hidden" id="view-firma-contacts">
-  <div class="container">
-    <div class="contacts-head">
-      <span class="eyebrow">• doplnkové kontakty</span>
-      <h2>Kontakty kupujete <em>navyše</em></h2>
-      <p>Pri Alogator úrovni (od 499 €/mes) môžete kontaktovať pracovníkov v databáze. Otvorenie kontaktu je samostatný poplatok — buď zo svojich, alebo z Alogator zdrojov.</p>
-    </div>
-
-    <div class="contacts-grid">
-
-      <div class="contact-card highlight">
-        <div class="contact-icon">👥</div>
-        <div class="contact-tag">odporúčané</div>
-        <h3>Vlastné kontakty</h3>
-        <p class="cdesc">Pracovníci, ktorých už poznáte. Importujete ich do Alogatora a vidíte ich kalendár — vždy ich máte ako prvých.</p>
-        <ul class="contact-bullets">
-          <li>Človek, ktorý už pre vás robil</li>
-          <li>Viete, čo môžete očakávať</li>
-          <li>Vidíte ich kalendár dostupnosti</li>
-          <li>Berie ich prednostne na svoje projekty</li>
-        </ul>
-        <div class="contact-price">
-          <span class="lbl">Cena za otvorenie</span>
-          <span class="val"><em>v cene</em> predplatného</span>
-        </div>
-      </div>
-
-      <div class="contact-card">
-        <div class="contact-icon">🔍</div>
-        <div class="contact-tag">pre nových</div>
-        <h3>Alogator kontakty</h3>
-        <p class="cdesc">Pracovníci, ktorých zatiaľ nepoznáte. Ideálne keď vlastné kapacity nestačia a potrebujete obsadiť projekt.</p>
-        <ul class="contact-bullets">
-          <li>Prístup k 3 047+ pracovníkom v databáze</li>
-          <li>Filter podľa jazyka, certifikátov, sadzby</li>
-          <li>Vidíte hodnotenia od iných firiem</li>
-          <li>Reálny kalendár dostupnosti</li>
-        </ul>
-        <div class="contact-price">
-          <span class="lbl">Cena za otvorenie</span>
-          <span class="val">Na <em>vyžiadanie</em></span>
+        <div class="pcard-billed">+ DPH · ročná zmluva, fakturuje sa kvartálne</div>
+        <button class="pcta outline">Naplánovať demo</button>
+        <div class="pfeat-divider">• všetko z Pro, plus</div>
+        <div class="pfeats">
+          <div class="pfeat"><span class="pfeat-icon">✓</span><span><strong>Neobmedzený počet adminov</strong></span></div>
+          <div class="pfeat"><span class="pfeat-icon">✓</span><span>API prístup pre integráciu (HubSpot, SAP, vlastné CRM)</span></div>
+          <div class="pfeat"><span class="pfeat-icon">✓</span><span>SSO (Single Sign-On) cez firemný IdP</span></div>
+          <div class="pfeat"><span class="pfeat-icon">✓</span><span>Custom branding — vaše logo v komunikácii s pracovníkmi</span></div>
+          <div class="pfeat"><span class="pfeat-icon">✓</span><span>Dedikovaný account manager</span></div>
+          <div class="pfeat"><span class="pfeat-icon">✓</span><span>SLA 99,9 % uptime + 1h support response</span></div>
+          <div class="pfeat"><span class="pfeat-icon">✓</span><span>Multi-country setup (SK + CZ + DE + AT v jednom účte)</span></div>
+          <div class="pfeat"><span class="pfeat-icon">✓</span><span>Onboarding tréning pre tím</span></div>
         </div>
       </div>
 
@@ -652,34 +435,176 @@ em{font-style:italic;color:var(--signal);font-weight:500}
   </div>
 </section>
 
-<!-- FLOW -->
-<section class="flow-sec firma-block hidden" id="view-firma-flow">
+<!-- COMPARISON TABLE -->
+<section class="compare-sec">
   <div class="container">
-    <div class="flow-head">
-      <span class="eyebrow">• ako firma postupuje</span>
-      <h2>Tri kroky k <em>obsadenému projektu</em></h2>
-      <p>Logický postup pre každú firmu — najprv vlastní ľudia, potom Alogator databáza, na záver inzerát pre tých, ktorí sa ozvú sami.</p>
-    </div>
+    <span class="eyebrow" style="display:block;text-align:center;margin-bottom:10px">• porovnanie taríf</span>
+    <h2>Čo je v každej tarife</h2>
+    <p class="sub">Plný zoznam funkcií. Detail features cez stĺpec.</p>
 
-    <div class="flow-steps">
-      <div class="flow-step">
-        <div class="flow-num">01</div>
-        <h4>Vlastní ľudia</h4>
-        <p>Skontrolujete kalendár vlastných kontaktov, ktorých už máte v Alogatori. Vidíte, kto je voľný a kedy. Dáte prednosť tým, čo už pre vás robili.</p>
-        <span class="tag">CRM + Kapacity</span>
+    <div class="compare-table">
+
+      <div class="compare-row header">
+        <div class="compare-cell">Funkcia</div>
+        <div class="compare-cell">Starter</div>
+        <div class="compare-cell">Pro</div>
+        <div class="compare-cell">Enterprise</div>
       </div>
-      <div class="flow-step">
-        <div class="flow-num">02</div>
-        <h4>Alogator databáza</h4>
-        <p>Ak vlastní nestačia, otvoríte Alogator databázu — 3 047 ďalších pracovníkov, ktorých zatiaľ nepoznáte. Filtrujete podľa profesie, jazyka, dostupnosti.</p>
-        <span class="tag">Alogator úroveň</span>
+
+      <!-- Section: Database -->
+      <div class="compare-row section">
+        <div class="compare-cell">Databáza pracovníkov</div>
+        <div class="compare-cell"></div>
+        <div class="compare-cell"></div>
+        <div class="compare-cell"></div>
       </div>
-      <div class="flow-step">
-        <div class="flow-num">03</div>
-        <h4>Inzerát</h4>
-        <p>Alebo dáte verejný inzerát a pracovníci sa ozvú sami. Zadarmo, ale pasívnejší prístup — vy ste v pozícii čakania na ich odozvu.</p>
-        <span class="tag">Free</span>
+      <div class="compare-row">
+        <div class="compare-cell">Prístup do databázy</div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+        <div class="compare-cell"><span class="check">✓</span></div>
       </div>
+      <div class="compare-row">
+        <div class="compare-cell">AI vyhľadávanie + filter</div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">Kontakty na pracovníkov / mes.</div>
+        <div class="compare-cell">10</div>
+        <div class="compare-cell">Neobmedzene</div>
+        <div class="compare-cell">Neobmedzene</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">Hodnotenia + recenzie pracovníkov</div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">Video prezentácia pracovníkov</div>
+        <div class="compare-cell"><span class="dash">—</span></div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+      </div>
+
+      <!-- Section: Kalendár -->
+      <div class="compare-row section">
+        <div class="compare-cell">Kalendár + plánovanie</div>
+        <div class="compare-cell"></div>
+        <div class="compare-cell"></div>
+        <div class="compare-cell"></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">Týždenný prehľad dostupnosti</div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">Plánovací horizont</div>
+        <div class="compare-cell">4 týždne</div>
+        <div class="compare-cell">6+ týždňov</div>
+        <div class="compare-cell">Neobmedzene</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">Konflikt detekcia</div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+      </div>
+
+      <!-- Section: Tím a CRM -->
+      <div class="compare-row section">
+        <div class="compare-cell">Tím a CRM</div>
+        <div class="compare-cell"></div>
+        <div class="compare-cell"></div>
+        <div class="compare-cell"></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">Počet adminov</div>
+        <div class="compare-cell">1</div>
+        <div class="compare-cell">5</div>
+        <div class="compare-cell">Neobmedzene</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">Vlastné CRM — notes, štítky</div>
+        <div class="compare-cell"><span class="dash">—</span></div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">Export CSV + PDF</div>
+        <div class="compare-cell"><span class="dash">—</span></div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+      </div>
+
+      <!-- Section: Integrácie -->
+      <div class="compare-row section">
+        <div class="compare-cell">Integrácie</div>
+        <div class="compare-cell"></div>
+        <div class="compare-cell"></div>
+        <div class="compare-cell"></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">API prístup</div>
+        <div class="compare-cell"><span class="dash">—</span></div>
+        <div class="compare-cell"><span class="dash">—</span></div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">SSO (Single Sign-On)</div>
+        <div class="compare-cell"><span class="dash">—</span></div>
+        <div class="compare-cell"><span class="dash">—</span></div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">HubSpot / SAP / Salesforce</div>
+        <div class="compare-cell"><span class="dash">—</span></div>
+        <div class="compare-cell"><span class="dash">—</span></div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">Multi-country (SK+CZ+DE+AT)</div>
+        <div class="compare-cell"><span class="dash">—</span></div>
+        <div class="compare-cell"><span class="dash">—</span></div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+      </div>
+
+      <!-- Section: Podpora -->
+      <div class="compare-row section">
+        <div class="compare-cell">Podpora</div>
+        <div class="compare-cell"></div>
+        <div class="compare-cell"></div>
+        <div class="compare-cell"></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">Email support</div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">Response time</div>
+        <div class="compare-cell">24h</div>
+        <div class="compare-cell">4h</div>
+        <div class="compare-cell">1h · SLA</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">Dedikovaný account manager</div>
+        <div class="compare-cell"><span class="dash">—</span></div>
+        <div class="compare-cell"><span class="dash">—</span></div>
+        <div class="compare-cell"><span class="check">✓</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell">Onboarding tréning</div>
+        <div class="compare-cell"><span class="dash">—</span></div>
+        <div class="compare-cell">Webinár</div>
+        <div class="compare-cell">On-site / online</div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -708,58 +633,23 @@ em{font-style:italic;color:var(--signal);font-weight:500}
     <div class="faq-list">
 
       <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Prečo modulárny cenník namiesto klasických 3 taríf?<span class="faq-q-icon">+</span></div>
+        <div class="faq-q">Aký je rozdiel medzi mesačnou platbou a províziou zo zákaziek?<span class="faq-q-icon">+</span></div>
         <div class="faq-a"><div class="faq-a-inner">
-          Lebo každá firma má inú potrebu. Malá firma chce len pridávať inzeráty — to je zadarmo. Stredná firma chce CRM na evidenciu vlastných ľudí — to je 99 €. Veľká firma chce vidieť aj cudzích pracovníkov v Alogator databáze — to je 499 €. Platíte len za to, čo skutočne používate.
+          Klasické pracovné agentúry si berú 15–25 % proviziu z hrubého platu pracovníka — pri 30 €/hod to znamená 5–8 €/hod do agentúry. Alogator si berie len mesačný flat poplatok. Pri jednom pracovníkovi za 40 h/týždeň = 160 h/mes ušetríte približne 800–1 200 € mesačne oproti agentúre.
         </div></div>
       </div>
 
       <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Aký je najväčší benefit "Kapacity" úrovne (199 €)?<span class="faq-q-icon">+</span></div>
+        <div class="faq-q">Čo sa stane po skúšobnom období 14 dní?<span class="faq-q-icon">+</span></div>
         <div class="faq-a"><div class="faq-a-inner">
-          Vidíte kalendár vlastných ľudí v real-time. Pracovníci sami aktualizujú svoju dostupnosť cez aplikáciu — vy už nemusíte volať a pýtať sa "máš čas na nasledujúci projekt?". Vidíte to priamo. Plus si plánujete projekty 6+ týždňov dopredu bez konfliktov a dvojitých rezervácií.
+          Skúšobné obdobie je úplne bezplatné a bez kreditnej karty. Počas 14 dní máte plný prístup ku všetkým funkciám zvolenej tarify. Na konci skúšobky vám pošleme upozornenie — buď pokračujete s plateným plánom, alebo váš účet automaticky prejde do read-only módu. Žiadne skryté poplatky.
         </div></div>
       </div>
 
       <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Čo presne znamená "Alogator" úroveň za 499 €?<span class="faq-q-icon">+</span></div>
+        <div class="faq-q">Môžem zmeniť tarifu počas zmluvy?<span class="faq-q-icon">+</span></div>
         <div class="faq-a"><div class="faq-a-inner">
-          Máte plný prístup ku kalendárom všetkých pracovníkov v Alogator databáze — 3 047 ľudí, ktorí nie sú vaši vlastní. Filtrujete podľa profesie, jazyka, sadzby, certifikátov. Vidíte ich reálnu dostupnosť a môžete kontaktovať na otvorenie projektu. Otvorenie samotného kontaktu je doplnková položka (cena na vyžiadanie).
-        </div></div>
-      </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Čo je Enterprise úroveň a aké sú "hot leads"?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          Enterprise dáva prístup k pracovníkom, ktorí <strong>práve dokončili onboarding</strong> alebo <strong>nastavili novú dostupnosť</strong>. Inými slovami — vidíte ich ako prví, predtým, než sa dostanú do bežnej databázy pre ostatné firmy. Plus API integráciu, SSO, dedikovaného account managera a multi-country setup.
-        </div></div>
-      </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Aký je rozdiel medzi vlastnými a Alogator kontaktmi?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          <strong>Vlastné kontakty</strong> sú ľudia, ktorí už pre vás robili — vy ich importujete do Alogatora a získate ich kalendár dostupnosti. Berie ich prednostne. <strong>Alogator kontakty</strong> sú pracovníci, ktorých zatiaľ nepoznáte — ideálne keď vlastné kapacity nestačia. Otvorenie cudzieho kontaktu je samostatný poplatok.
-        </div></div>
-      </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Môžem si vyskúšať platenú úroveň zdarma?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          Áno. Každá platená úroveň (CRM, Kapacity, Alogator) má 14 dní zdarma bez kreditnej karty. Plný prístup ku všetkým funkciám. Na konci skúšobky vám pošleme upozornenie — buď pokračujete, alebo účet automaticky prejde do read-only módu. Žiadne skryté poplatky.
-        </div></div>
-      </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Môžem zmeniť úroveň počas zmluvy?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          Áno, kedykoľvek. Upgrade (napr. z CRM na Kapacity) sa aktivuje okamžite a fakturuje sa pro rata za zostávajúce dni. Downgrade sa aplikuje od ďalšieho fakturačného obdobia.
-        </div></div>
-      </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Pracovník platí za používanie Alogatora?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          Nie. Aplikácia pre pracovníkov je úplne zdarma — registrácia, profil, vyhľadávanie ponúk, push notifikácie aj kontakt s firmami. Žiadne provízie z výplaty. V budúcnosti pripravujeme voliteľné PREMIUM členstvo s lepšou viditeľnosťou v listingoch.
+          Áno, kedykoľvek. Upgrade (zo Starter na Pro) sa aktivuje okamžite a fakturuje sa pro rata za zostávajúce dni. Downgrade sa aplikuje od ďalšieho fakturačného obdobia.
         </div></div>
       </div>
 
@@ -773,7 +663,35 @@ em{font-style:italic;color:var(--signal);font-weight:500}
       <div class="faq-item" onclick="this.classList.toggle('open')">
         <div class="faq-q">Existuje zľava pri ročnej fakturácii?<span class="faq-q-icon">+</span></div>
         <div class="faq-a"><div class="faq-a-inner">
-          Áno. Pri ročnej fakturácii vopred dostávate 20 % zľavu — CRM 79 €/mes (namiesto 99 €), Kapacity 159 €/mes (namiesto 199 €), Alogator 399 €/mes (namiesto 499 €). Enterprise sa fakturuje kvartálne a podmienky sa dohadujú individuálne.
+          Áno. Pri ročnej fakturácii vopred dostávate 20 % zľavu — Starter 79 €/mes (namiesto 99 €), Pro 199 €/mes (namiesto 249 €). Enterprise sa fakturuje kvartálne a podmienky sa dohadujú individuálne.
+        </div></div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Sú pracovníci pri kontakte cez Alogator už overení?<span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">
+          Áno. Každý pracovník v databáze prešiel overením identity, certifikátov a predchádzajúcich skúseností. Pri PRO členoch máte navyše video prezentáciu a hodnotenia od iných firiem, s ktorými už spolupracovali.
+        </div></div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Môžem zrušiť predplatné kedykoľvek?<span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">
+          Pri mesačnom plánovaní áno — výpovedná lehota je do konca aktuálneho fakturačného obdobia. Pri ročnom predplatnom je predplatné nevratné, ale účet zostáva aktívny do konca obdobia. Enterprise zmluvy majú individuálnu výpovednú lehotu (zvyčajne 60–90 dní).
+        </div></div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Funguje Alogator aj v zahraničí?<span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">
+          Áno. Aktuálne má Alogator pracovníkov dostupných pre Slovensko, Česko, Nemecko, Rakúsko, Belgicko, Holandsko, Švajčiarsko a ďalšie EÚ krajiny. Firma z DE alebo AT môže okamžite kontaktovať SK/CZ remeselníkov. Pre Enterprise plán je k dispozícii multi-country setup v jednom účte.
+        </div></div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Akú návratnosť môžem očakávať?<span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">
+          Priemerná firma s 5 zákazkami mesačne ušetrí cca 4 000–6 000 € v agentúrnych províziách za rok. Pri Pro pláne (249 €/mes = 2 988 €/rok) sa investícia vracia po 3–5 zákazkach. Plus rýchlejší time-to-hire — priemerne 4,2 dňa namiesto 12.
         </div></div>
       </div>
 
@@ -788,13 +706,13 @@ em{font-style:italic;color:var(--signal);font-weight:500}
       <div>
         <span class="eyebrow" style="color:rgba(249,243,237,.8)">• enterprise</span>
         <h2>Veľký tím, multi-country?<br>Postavíme to <em>spolu</em>.</h2>
-        <p>Pre holdingy, generálnych dodávateľov a firmy s 20+ projektmi súčasne navrhneme custom setup — multi-country, API integrácia, SSO, hot leads, dedikovaný account manager.</p>
+        <p>Pre holdingy, generálnych dodávateľov a firmy s 20+ projektmi súčasne navrhneme custom setup — multi-country, API integrácia, SSO, dedikovaný account manager.</p>
 
         <div class="ent-bullets">
-          <div class="ent-bullet">Hot leads od pracovníkov hneď po onboardingu</div>
-          <div class="ent-bullet">Multi-country setup (SK + CZ + DE + AT + PL)</div>
-          <div class="ent-bullet">API integrácia s vašim CRM (HubSpot, SAP, Salesforce)</div>
+          <div class="ent-bullet">Multi-country setup v jednom účte (SK + CZ + DE + AT + PL)</div>
+          <div class="ent-bullet">API integrácia s vašim CRM (HubSpot, SAP, Salesforce, custom)</div>
           <div class="ent-bullet">Dedikovaný account manager + SLA 99,9 %</div>
+          <div class="ent-bullet">Onboarding tréning pre tím (do 2 týždňov)</div>
         </div>
       </div>
       <div class="ent-cta">
@@ -817,7 +735,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           <div class="nav-logo-mark">A</div>
           <div class="nav-logo-name">Alogator</div>
         </div>
-        <p style="font-size:13px;color:rgba(249,243,237,.6);line-height:1.5">Marketplace prepájajúci pracovníkov, agentúry a koncové firmy v stavebníctve a priemysle. SK · CZ · DE · AT · NL · BE</p>
+        <p style="font-size:13px;color:rgba(249,243,237,.6);line-height:1.5">Marketplace prepájajúci pracovníkov a firmy v stavebníctve a priemysle. SK · CZ · DE · AT · NL · BE</p>
       </div>
       <div class="foot-col">
         <h5>Pre firmy</h5>
@@ -847,25 +765,6 @@ em{font-style:italic;color:var(--signal);font-weight:500}
     </div>
   </div>
 </footer>
-
-<script>
-function toggleView(e, view){
-  document.querySelectorAll('.ut-btn').forEach(b => b.classList.remove('active'));
-  e.target.closest('.ut-btn').classList.add('active');
-  const w = document.getElementById('view-worker');
-  const f = document.getElementById('view-firma');
-  const blocks = document.querySelectorAll('.firma-block');
-  if (view === 'worker') {
-    w.classList.add('active');
-    f.classList.add('hidden');
-    blocks.forEach(b => b.classList.add('hidden'));
-  } else {
-    w.classList.remove('active');
-    f.classList.remove('hidden');
-    blocks.forEach(b => b.classList.remove('hidden'));
-  }
-}
-</script>
 
 </body>
 </html>

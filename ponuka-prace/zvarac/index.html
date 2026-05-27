@@ -3,35 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Práca pre profesiu zvárač na Slovensku — TIG, CO2, MIG/MAG · Alogator</title>
-<meta name="description" content="297 aktuálnych ponúk pre zváračov v Nemecku, Rakúsku a na Slovensku. TIG, CO2, MIG/MAG. Plat od 25 €/hod, ubytovanie, živnosť aj HPP.">
-<meta name="robots" content="index, follow">
-<meta property="og:title" content="Práca pre zváračov · TIG, CO2, MIG/MAG · Alogator">
-<meta property="og:description" content="297 ponúk pre zváračov. Plat 25–45 €/hod. Nemecko, Rakúsko, SK. Bez sprostredkovateľov.">
-<link rel="canonical" href="https://alogator.sk/ponuka-prace/zvarac">
+<title>Zvárač MIG/MAG · Emsland, DE · 32 €/hod · Alogator</title>
+<meta name="description" content="Práca pre zvárača MIG/MAG v chemickom závode v Emslande. 32 €/hod, ubytovanie v cene, turnusy 21/7, nástup ihneď. Bilfinger Industrial Services.">
 
-<!-- TODO Framer: nahradiť Geist za Gellix -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-
-<!-- JobPosting Schema.org pre AI search a Google -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Práca pre zváračov",
-  "description": "Aktuálne ponuky pre profesiu zvárač naprieč EÚ",
-  "numberOfItems": 297
-}
-</script>
 
 <style>
 :root{
   --signal:#E66748;--signal-dark:#D4573A;--signal-soft:#FDE8E0;
   --graphite:#1A1D1E;--graphite-700:#3F4445;--graphite-500:#6B7174;--graphite-200:#D9D9D6;
   --porcelain:#F9F3ED;--porcelain-200:#F0E8DD;--porcelain-300:#E8DFD1;
-  --yellow:#F5D547;
+  --yellow:#F5D547;--green:#3F7D5F;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 body{
@@ -44,17 +28,22 @@ body{
   letter-spacing:0.15em;text-transform:uppercase;color:var(--signal);
 }
 .eyebrow::before{content:'• '}
-h1,h2,h3,h4{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.025em;line-height:1.08;color:var(--graphite)}
+h1,h2,h3,h4{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.025em;line-height:1.1;color:var(--graphite)}
 em{font-style:italic;color:var(--signal);font-weight:500}
 
+/* Flags */
+.flag{width:18px;height:13px;border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 0 1px rgba(26,29,30,.08)}
+.flag-sk{background:linear-gradient(to bottom,#fff 33%,#0B4EA2 33% 66%,#EE1620 66%)}
+.flag-cz{background:linear-gradient(135deg,#fff 50%,#D7141A 50%);position:relative}
+.flag-cz::before{content:'';position:absolute;left:0;top:0;bottom:0;width:50%;background:#11457E;clip-path:polygon(0 0,100% 50%,0 100%)}
+.flag-de{background:linear-gradient(to bottom,#000 33%,#dd0000 33% 66%,#ffce00 66%)}
+.flag-at{background:linear-gradient(to bottom,#ED2939 50%,#fff 50%)}
+.flag-nl{background:linear-gradient(to bottom,#AE1C28 33%,#fff 33% 66%,#21468B 66%)}
+
 /* ============ NAVBAR ============ */
-.navbar{
-  background:var(--graphite);color:var(--porcelain);padding:18px 0;
-}
+.navbar{background:var(--graphite);color:var(--porcelain);padding:18px 0}
 .nav-inner{display:flex;justify-content:space-between;align-items:center}
-.nav-logo{
-  display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--porcelain);
-}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--porcelain)}
 .nav-logo-mark{
   width:32px;height:32px;background:var(--signal);border-radius:9px;
   display:flex;align-items:center;justify-content:center;
@@ -63,6 +52,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .nav-logo-name{font-family:'Geist',sans-serif;font-weight:500;font-size:20px}
 .nav-links{display:flex;gap:32px}
 .nav-links a{color:rgba(249,243,237,.85);text-decoration:none;font-size:14px}
+.nav-links a.active{color:var(--porcelain);font-weight:500}
 .nav-actions{display:flex;gap:10px;align-items:center}
 .nav-btn{
   background:transparent;border:1px solid rgba(249,243,237,.2);color:var(--porcelain);
@@ -79,255 +69,335 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .breadcrumb a:hover{color:var(--signal)}
 .breadcrumb .sep{margin:0 8px;color:var(--graphite-200)}
 
-/* ============ HERO ============ */
-.lp-hero{padding:32px 0 56px;background:var(--porcelain)}
-.lp-hero-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:64px;align-items:start}
-.lp-hero h1{font-size:clamp(40px,5vw,64px);margin-top:14px}
-.lp-hero p.lead{
-  font-size:17px;color:var(--graphite-700);margin-top:20px;max-width:560px;line-height:1.55;
+/* ============ HEADER ============ */
+.job-header{padding:24px 0 40px;background:var(--porcelain)}
+.job-header-grid{
+  display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:flex-start;
 }
-.lp-hero p.lead strong{color:var(--graphite);font-weight:500}
-.lp-stats{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
-  margin-top:32px;padding-top:28px;border-top:1px solid var(--porcelain-300);
-  max-width:560px;
-}
-.lp-stat-num{
-  font-family:'Geist',sans-serif;font-weight:500;font-size:32px;letter-spacing:-0.02em;color:var(--graphite);
-}
-.lp-stat-num em{font-style:italic;color:var(--signal);font-weight:500}
-.lp-stat-lbl{font-size:11.5px;color:var(--graphite-500);margin-top:4px;line-height:1.4}
 
-.lp-hero-side{
-  background:var(--graphite);color:var(--porcelain);border-radius:24px;padding:24px;
-  position:sticky;top:24px;
+/* URGENCY BADGE */
+.urgency-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.urgency-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--signal-soft);color:var(--signal-dark);
+  padding:5px 11px;border-radius:999px;
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:600;
+  letter-spacing:0.05em;text-transform:uppercase;
 }
-.lp-hero-side h3{
-  color:var(--porcelain);font-size:18px;margin-bottom:16px;
+.urgency-badge.hot{background:var(--signal);color:var(--porcelain)}
+.urgency-badge.new{background:var(--yellow);color:var(--graphite)}
+.urgency-badge .dot{width:6px;height:6px;border-radius:50%;background:currentColor;animation:pulse 1.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+.job-main{display:flex;gap:20px;align-items:flex-start}
+.job-logo{
+  width:88px;height:88px;border-radius:18px;
+  background:var(--graphite);color:var(--porcelain);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Geist',sans-serif;font-weight:500;font-size:32px;
+  flex-shrink:0;position:relative;
 }
-.lp-side-subprof{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
-.lp-side-row{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:10px 14px;background:rgba(249,243,237,.05);border-radius:10px;
-  font-size:13px;cursor:pointer;transition:background .15s;
+.job-logo.locked::after{
+  content:'';position:absolute;inset:0;border-radius:18px;
+  background:rgba(26,29,30,.85)
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F9F3ED' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='11' width='18' height='11' rx='2'/><path d='M7 11V7a5 5 0 0110 0v4'/></svg>") no-repeat center;
+  background-size:36px;
+  backdrop-filter:blur(4px);
 }
-.lp-side-row:hover{background:rgba(249,243,237,.1)}
-.lp-side-row .cnt{font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(249,243,237,.5)}
-.lp-side-cta{
+.job-info{flex:1;min-width:0}
+.job-title{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:36px;
+  letter-spacing:-0.02em;color:var(--graphite);line-height:1.1;margin-bottom:8px;
+}
+.job-company{
+  font-size:16px;color:var(--graphite-700);margin-bottom:14px;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.job-company .locked-name{
+  background:var(--porcelain-200);color:var(--graphite-500);
+  padding:3px 10px;border-radius:6px;
+  font-family:'JetBrains Mono',monospace;font-size:13px;
+  display:inline-flex;align-items:center;gap:6px;
+}
+.job-meta-row{
+  display:flex;flex-wrap:wrap;gap:18px;font-size:13.5px;color:var(--graphite-700);
+  padding-top:16px;border-top:1px solid var(--porcelain-300);
+}
+.job-meta-item{display:inline-flex;align-items:center;gap:7px}
+.job-meta-item strong{color:var(--graphite);font-weight:500}
+
+/* Rate card (right side) */
+.rate-card{
+  background:var(--graphite);color:var(--porcelain);
+  border-radius:24px;padding:32px;position:sticky;top:24px;
+}
+.rate-card-label{
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;
+  letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.6);
+}
+.rate-card-label::before{content:'• ';color:var(--signal)}
+.rate-row{display:flex;align-items:baseline;gap:6px;margin:10px 0 4px}
+.rate-num{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:48px;
+  letter-spacing:-0.025em;color:var(--porcelain);line-height:1;
+}
+.rate-unit{font-size:14px;color:rgba(249,243,237,.6)}
+.rate-note{font-size:12.5px;color:rgba(249,243,237,.6);margin-bottom:20px}
+.rate-bonuses{display:flex;flex-direction:column;gap:8px;margin-bottom:22px}
+.bonus-row{
+  display:flex;align-items:center;gap:10px;
+  font-size:13px;color:rgba(249,243,237,.9);
+}
+.bonus-icon{
+  width:20px;height:20px;border-radius:50%;background:rgba(124,201,92,.2);color:#7CC95C;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  font-size:11px;font-weight:700;
+}
+.bonus-row strong{color:var(--porcelain);font-weight:500}
+.rate-cta{
   background:var(--signal);color:var(--porcelain);border:0;
   width:100%;padding:14px;border-radius:999px;
-  font-family:'Inter',sans-serif;font-size:14px;font-weight:500;
-  cursor:pointer;margin-top:10px;
+  font-family:'Inter',sans-serif;font-size:14px;font-weight:500;cursor:pointer;
+  margin-bottom:10px;
+}
+.rate-cta:hover{background:var(--signal-dark)}
+.rate-cta-secondary{
+  background:transparent;color:var(--porcelain);
+  border:1px solid rgba(249,243,237,.25);
+  width:100%;padding:13px;border-radius:999px;
+  font-family:'Inter',sans-serif;font-size:13.5px;font-weight:500;cursor:pointer;
+}
+.rate-lock-note{
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;color:rgba(249,243,237,.5);
+  text-align:center;margin-top:14px;line-height:1.5;
+}
+.rate-applicants{
+  display:flex;align-items:center;gap:10px;margin-top:18px;
+  padding-top:18px;border-top:1px solid rgba(249,243,237,.1);
+  font-size:12px;color:rgba(249,243,237,.7);
+}
+.applicants-avatars{display:flex}
+.applicants-avatars span{
+  width:26px;height:26px;border-radius:50%;
+  border:2px solid var(--graphite);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Geist',sans-serif;font-weight:500;font-size:11px;
+  color:var(--porcelain);
+  margin-left:-7px;
+}
+.applicants-avatars span:first-child{margin-left:0}
+
+/* ============ TABS ============ */
+.tabs-sec{padding:24px 0 0;background:var(--porcelain);border-top:1px solid var(--porcelain-300)}
+.tabs-row{display:flex;gap:24px;font-family:'Inter',sans-serif;font-size:14px}
+.tab{
+  padding:14px 0;color:var(--graphite-500);cursor:pointer;
+  position:relative;font-weight:500;
+}
+.tab.active{color:var(--graphite)}
+.tab.active::after{
+  content:'';position:absolute;bottom:-1px;left:0;right:0;
+  height:2px;background:var(--signal);
 }
 
-/* ============ INTRO TEXT ============ */
-.lp-intro{padding:56px 0;background:var(--porcelain-200)}
-.lp-intro-inner{max-width:760px;margin:0 auto;font-size:17px;line-height:1.65;color:var(--graphite-700)}
-.lp-intro h2{font-size:clamp(28px,3vw,36px);color:var(--graphite);margin-bottom:24px}
-.lp-intro p{margin-bottom:18px}
-.lp-intro p strong{color:var(--graphite);font-weight:500}
-.lp-intro a{color:var(--signal);text-decoration:underline;text-underline-offset:2px}
+/* ============ MAIN CONTENT ============ */
+.job-content{padding:40px 0 64px;background:var(--porcelain)}
+.job-content-grid{display:grid;grid-template-columns:2fr 1fr;gap:48px;align-items:flex-start}
 
-/* ============ LISTING ============ */
-.lp-listing{padding:64px 0;background:var(--porcelain)}
-.lp-listing-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:24px}
-.lp-listing-head h2{font-size:clamp(28px,3vw,36px)}
-.lp-listing-head .sort{
-  font-size:13px;color:var(--graphite-500);
+/* Section card */
+.sec-card{
+  background:var(--porcelain);border:1px solid var(--porcelain-300);
+  border-radius:24px;padding:32px;margin-bottom:18px;
 }
-.lp-listing-head .sort strong{color:var(--graphite);font-weight:500;text-decoration:underline;cursor:pointer}
+.sec-card h2{font-size:22px;letter-spacing:-0.02em;margin-bottom:18px}
+.sec-card h2 em{font-style:italic;color:var(--signal)}
+.sec-card .label{
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;
+  letter-spacing:0.15em;text-transform:uppercase;color:var(--signal);
+}
+.sec-card .label::before{content:'• '}
 
-/* Sub-profession quick filter */
-.subprof-bar{
-  display:flex;gap:8px;overflow-x:auto;margin-bottom:24px;padding-bottom:4px;
-  scrollbar-width:none;
+/* Popis text */
+.desc-text{font-size:15px;line-height:1.65;color:var(--graphite-700)}
+.desc-text p{margin-bottom:14px}
+.desc-text strong{color:var(--graphite);font-weight:500}
+.desc-text h3{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:16px;
+  letter-spacing:-0.015em;color:var(--graphite);margin:18px 0 10px;
 }
-.subprof-bar::-webkit-scrollbar{display:none}
-.subprof-btn{
-  background:transparent;color:var(--graphite);
-  border:1px solid var(--graphite);
-  padding:8px 16px;border-radius:999px;
-  font-family:'Inter',sans-serif;font-size:13px;font-weight:500;
-  white-space:nowrap;cursor:pointer;flex-shrink:0;
-  display:inline-flex;align-items:center;gap:8px;
-  transition:all .15s;
+.desc-text ul{padding-left:0;list-style:none;margin-bottom:14px}
+.desc-text li{
+  padding-left:20px;position:relative;margin-bottom:8px;line-height:1.6;
 }
-.subprof-btn:hover{background:var(--graphite);color:var(--porcelain)}
-.subprof-btn.active{background:var(--graphite);color:var(--porcelain)}
-.subprof-btn .cnt{
-  font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--graphite-500);
-}
-.subprof-btn.active .cnt,.subprof-btn:hover .cnt{
-  color:rgba(249,243,237,.7);background:rgba(249,243,237,.12);padding:1px 6px;border-radius:999px;
+.desc-text li::before{
+  content:'';position:absolute;left:0;top:9px;
+  width:6px;height:6px;border-radius:50%;background:var(--signal);
 }
 
-/* JOB CARDS — rovnaké ako hlavná stránka */
-.jobs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+/* Požiadavky bloky */
+.req-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.req-card{
+  background:var(--porcelain-200);border:1px solid var(--porcelain-300);
+  border-radius:14px;padding:16px;display:flex;gap:12px;align-items:flex-start;
+}
+.req-icon{
+  width:36px;height:36px;border-radius:10px;
+  background:var(--signal-soft);color:var(--signal);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;font-size:18px;
+}
+.req-title{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:13.5px;
+  color:var(--graphite);letter-spacing:-0.01em;
+}
+.req-value{font-size:12.5px;color:var(--graphite-700);margin-top:3px;line-height:1.4}
+.req-card.must .req-icon{background:var(--signal);color:var(--porcelain)}
+.req-card.nice .req-icon{background:var(--porcelain-300);color:var(--graphite-500)}
+
+/* Conditions table */
+.cond-table{display:flex;flex-direction:column;gap:0}
+.cond-row{
+  display:grid;grid-template-columns:200px 1fr;gap:24px;
+  padding:14px 0;border-bottom:1px solid var(--porcelain-300);
+}
+.cond-row:last-child{border-bottom:0}
+.cond-label{
+  font-family:'JetBrains Mono',monospace;font-size:11px;
+  color:var(--graphite-500);letter-spacing:0.02em;
+}
+.cond-value{font-size:14px;color:var(--graphite);}
+.cond-value strong{font-weight:500}
+.cond-value .highlight{
+  background:var(--signal-soft);color:var(--signal-dark);
+  padding:2px 8px;border-radius:6px;font-weight:500;font-size:13px;
+}
+
+/* Firma profil (locked) */
+.firma-card{
+  background:linear-gradient(135deg,var(--porcelain-200),var(--porcelain));
+  border:1px solid var(--porcelain-300);
+  border-radius:18px;padding:24px;position:relative;overflow:hidden;
+}
+.firma-locked-overlay{
+  position:absolute;inset:0;background:rgba(249,243,237,.7);
+  backdrop-filter:blur(5px);
+  display:flex;align-items:center;justify-content:center;
+  flex-direction:column;gap:12px;
+}
+.firma-locked-overlay .lock-icon{
+  width:48px;height:48px;border-radius:50%;
+  background:var(--signal);color:var(--porcelain);
+  display:flex;align-items:center;justify-content:center;font-size:22px;
+}
+.firma-locked-overlay h4{font-size:16px;letter-spacing:-0.01em}
+.firma-locked-overlay p{font-size:12.5px;color:var(--graphite-500);text-align:center;max-width:280px}
+.firma-locked-overlay button{
+  background:var(--signal);color:var(--porcelain);border:0;
+  padding:10px 20px;border-radius:999px;
+  font-family:'Inter',sans-serif;font-size:13px;font-weight:500;cursor:pointer;
+  margin-top:6px;
+}
+
+/* Map placeholder */
+.map-block{
+  background:linear-gradient(135deg,#3F4445 0%,#1A1D1E 100%);
+  border-radius:18px;padding:0;
+  aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;color:var(--porcelain);
+}
+.map-pin{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--signal);color:var(--porcelain);
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;
+  box-shadow:0 0 0 8px rgba(230,103,72,.2),0 0 0 16px rgba(230,103,72,.1);
+}
+.map-overlay{
+  position:absolute;bottom:16px;left:16px;
+  font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(249,243,237,.7);
+}
+.map-overlay strong{color:var(--porcelain);font-weight:500}
+
+/* Sidebar — summary widget */
+.summary-widget{
+  background:var(--porcelain-200);border-radius:18px;padding:24px;
+}
+.summary-row{
+  display:flex;align-items:flex-start;gap:12px;
+  padding:10px 0;border-bottom:1px solid var(--porcelain-300);
+}
+.summary-row:first-child{padding-top:0}
+.summary-row:last-child{border-bottom:0;padding-bottom:0}
+.summary-icon{
+  width:32px;height:32px;border-radius:9px;
+  background:var(--signal-soft);color:var(--signal);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;font-size:14px;
+}
+.summary-content{flex:1;min-width:0}
+.summary-label{
+  font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;
+  letter-spacing:0.12em;text-transform:uppercase;color:var(--graphite-500);
+  margin-bottom:2px;
+}
+.summary-val{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:14px;
+  color:var(--graphite);letter-spacing:-0.01em;
+}
+.summary-sub{font-size:11.5px;color:var(--graphite-500);margin-top:2px}
+
+/* ============ SIMILAR JOBS ============ */
+.similar-sec{padding:64px 0;background:var(--porcelain-200)}
+.similar-sec h2{font-size:clamp(24px,2.5vw,32px);margin-bottom:24px}
+.similar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+
 .jcard{
   background:var(--porcelain);border:1px solid var(--porcelain-300);
-  border-radius:20px;padding:18px;position:relative;cursor:pointer;
-  transition:transform .2s, border-color .2s, box-shadow .2s;
+  border-radius:20px;padding:20px;
+  display:flex;flex-direction:column;gap:12px;
+  cursor:pointer;transition:transform .2s,border-color .2s;
 }
-.jcard:hover{transform:translateY(-3px);border-color:var(--graphite-200);box-shadow:0 12px 30px -10px rgba(26,29,30,.12)}
-.jcard-badge{
-  position:absolute;top:14px;right:14px;
-  font-size:9.5px;font-weight:600;padding:3px 8px;border-radius:999px;letter-spacing:0.05em;
-  display:inline-flex;align-items:center;gap:4px;
-}
-.jcard-badge.b-top{background:var(--yellow);color:var(--graphite)}
-.jcard-badge.b-now{background:var(--graphite);color:var(--porcelain)}
-.jcard-badge.b-now::before{content:'';width:5px;height:5px;border-radius:50%;background:#7CC95C}
-.jcard-badge.b-new{background:var(--signal-soft);color:#993C1D}
-.jcard-head{display:flex;align-items:flex-start;gap:11px;margin-bottom:10px}
-.jcard-logo{
-  width:38px;height:38px;border-radius:9px;
-  background:linear-gradient(135deg,var(--graphite-200) 0%,var(--graphite-500) 100%);
-  color:var(--porcelain);
-  display:flex;align-items:center;justify-content:center;flex-shrink:0;
-  position:relative;
-}
-.jcard-logo::after{
-  content:'🔒';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-  font-size:14px;filter:grayscale(1);
-}
+.jcard:hover{transform:translateY(-3px);border-color:var(--graphite-200)}
+.jcard-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
 .jcard-meta{flex:1;min-width:0}
+.jcard-loc{
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;
+  color:var(--graphite-500);letter-spacing:0.05em;
+  display:inline-flex;align-items:center;gap:6px;margin-bottom:6px;
+}
 .jcard-title{
-  font-family:'Geist',sans-serif;font-weight:500;font-size:16px;letter-spacing:-0.01em;
-  line-height:1.15;color:var(--graphite);
+  font-family:'Geist',sans-serif;font-weight:500;font-size:16px;
+  letter-spacing:-0.015em;color:var(--graphite);line-height:1.2;
 }
-.jcard-company{
-  font-size:11.5px;color:var(--graphite-500);margin-top:2px;font-style:italic;
-  display:inline-flex;align-items:center;gap:5px;
+.jcard-company{font-size:12px;color:var(--graphite-500);margin-top:3px}
+.jcard-rate{
+  display:flex;align-items:baseline;gap:4px;margin-top:8px;
+  padding-top:12px;border-top:1px solid var(--porcelain-300);
 }
-.jcard-company::after{
-  content:'';width:11px;height:13px;
-  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236B7174' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='11' width='18' height='11' rx='2'/><path d='M7 11V7a5 5 0 0110 0v4'/></svg>") no-repeat center;
-  background-size:contain;
-}
-.jcard-salary{display:flex;align-items:baseline;gap:5px;margin:8px 0}
-.jcard-salary-num{font-family:'Geist',sans-serif;font-weight:500;font-size:26px;letter-spacing:-0.02em}
-.jcard-salary-unit{font-size:11.5px;color:var(--graphite-500)}
-.jcard-bonus{
-  margin-left:auto;padding:3px 9px;border-radius:999px;font-size:10.5px;font-weight:500;
-}
-.jcard-bonus.housing{background:var(--signal-soft);color:#993C1D}
-.jcard-bonus.slots{background:var(--signal-soft);color:#993C1D}
-.jcard-bonus.business{background:var(--porcelain-200);color:var(--graphite-700)}
-.jcard-info{
-  display:flex;gap:8px;flex-wrap:wrap;align-items:center;
-  font-size:11.5px;color:var(--graphite-700);margin-bottom:11px;
-}
-.jcard-info .sep{color:var(--graphite-200)}
-.jcard-info .country-flag{width:14px;height:10px;border-radius:2px;display:inline-block;vertical-align:middle;margin-right:5px}
-.flag-de{background:linear-gradient(to bottom,#000 33%,#dd0000 33% 66%,#ffce00 66%)}
-.flag-at{background:linear-gradient(to bottom,#ED2939 50%,#fff 50%)}
-.flag-cz{background:linear-gradient(135deg,#fff 50%,#D7141A 50%);position:relative}
-.flag-cz::before{content:'';position:absolute;left:0;top:0;bottom:0;width:50%;background:#11457E;clip-path:polygon(0 0,100% 50%,0 100%)}
-.flag-sk{background:linear-gradient(to bottom,#fff 33%,#0B4EA2 33% 66%,#EE1620 66%)}
-.flag-ch{background:#EF1414;position:relative}
-.jcard-info .date-pill{color:var(--graphite);font-weight:500}
-.jcard-foot{display:flex;justify-content:space-between;align-items:center;padding-top:11px;border-top:1px solid var(--porcelain-300)}
+.jcard-rate-num{font-family:'Geist',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.02em}
+.jcard-rate-unit{font-size:11px;color:var(--graphite-500)}
 .jcard-tags{display:flex;gap:5px;flex-wrap:wrap}
 .jcard-tag{
-  background:var(--porcelain-200);border:1px solid var(--porcelain-300);
-  color:var(--graphite-700);font-size:10px;font-weight:500;padding:3px 8px;border-radius:999px;
-}
-.jcard-cta{
-  background:var(--graphite);color:var(--porcelain);
-  border:0;padding:7px 16px;border-radius:999px;font-size:12px;font-weight:500;cursor:pointer;
-}
-.load-more-wrap{text-align:center;margin-top:32px}
-.load-more{
-  background:transparent;color:var(--graphite);
-  border:1.5px solid var(--graphite);
-  padding:13px 32px;border-radius:999px;font-size:14px;font-weight:500;cursor:pointer;
-  transition:all .15s;
-}
-.load-more:hover{background:var(--graphite);color:var(--porcelain)}
-
-/* ============ FAQ ============ */
-.faq-sec{padding:64px 0;background:var(--porcelain-200)}
-.faq-sec h2{font-size:clamp(28px,3vw,36px);text-align:center;margin-bottom:32px}
-.faq-list{max-width:780px;margin:0 auto}
-.faq-item{
-  background:var(--porcelain);border:1px solid var(--porcelain-300);border-radius:14px;
-  margin-bottom:10px;overflow:hidden;
-}
-.faq-q{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:18px 22px;cursor:pointer;font-size:15px;font-weight:500;
-}
-.faq-q-icon{
-  width:24px;height:24px;border-radius:50%;border:1px solid var(--graphite-200);
-  display:flex;align-items:center;justify-content:center;font-size:14px;
-  transition:transform .2s;flex-shrink:0;
-}
-.faq-item.open .faq-q-icon{transform:rotate(45deg);background:var(--signal);color:var(--porcelain);border-color:var(--signal)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .3s}
-.faq-item.open .faq-a{max-height:500px}
-.faq-a-inner{padding:0 22px 20px;font-size:14.5px;color:var(--graphite-700);line-height:1.6}
-
-/* ============ RELATED ============ */
-.related-sec{padding:64px 0;background:var(--porcelain)}
-.related-sec h2{font-size:clamp(24px,2.5vw,32px);margin-bottom:32px}
-.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
-.related-col h4{
-  font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;
-  letter-spacing:0.15em;text-transform:uppercase;color:var(--graphite-500);margin-bottom:14px;
-}
-.related-col h4::before{content:'• ';color:var(--signal)}
-.related-col a{
-  display:block;color:var(--graphite);text-decoration:none;font-size:14.5px;
-  padding:8px 0;border-bottom:1px solid var(--porcelain-300);
-  transition:color .15s;
-}
-.related-col a:last-child{border-bottom:0}
-.related-col a:hover{color:var(--signal)}
-.related-col .cnt{
-  font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--graphite-500);float:right;
-}
-
-/* ============ CTA BANNER ============ */
-.cta-banner-sec{padding:0 0 64px}
-.cta-banner{
-  background:var(--signal);color:var(--porcelain);
-  border-radius:32px;padding:48px 56px;
-  display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;
-}
-.cta-banner h2{font-family:'Geist',sans-serif;font-weight:500;font-size:clamp(28px,3vw,40px);color:var(--porcelain);letter-spacing:-0.02em;line-height:1.1}
-.cta-banner h2 em{color:var(--yellow);font-style:italic}
-.cta-banner p{font-size:15px;margin-top:12px;color:rgba(249,243,237,.85)}
-.cta-banner-btn{
-  background:var(--graphite);color:var(--porcelain);
-  border:0;padding:15px 32px;border-radius:999px;font-size:14.5px;font-weight:500;cursor:pointer;
+  background:var(--porcelain-200);color:var(--graphite-700);
+  font-size:10.5px;padding:3px 9px;border-radius:999px;
 }
 
 /* ============ FOOTER ============ */
 .footer{background:var(--graphite);color:var(--porcelain);padding:48px 0 24px}
-.foot-top{
-  display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;
-  padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08);
-}
+.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}
 .foot-col h5{
   font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;
   letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.5);margin-bottom:16px;
 }
 .foot-col h5::before{content:'• ';color:var(--signal)}
-.foot-col a{
-  display:block;color:rgba(249,243,237,.7);text-decoration:none;font-size:13.5px;padding:5px 0;
-}
-.foot-col a:hover{color:var(--signal)}
-.foot-bottom{
-  padding-top:24px;display:flex;justify-content:space-between;align-items:center;
-  font-size:12px;color:rgba(249,243,237,.5);
-}
+.foot-col a{display:block;color:rgba(249,243,237,.7);text-decoration:none;font-size:13.5px;padding:5px 0}
+.foot-bottom{padding-top:24px;display:flex;justify-content:space-between;font-size:12px;color:rgba(249,243,237,.5)}
 
 @media (max-width:900px){
-  .lp-hero-grid,.related-grid{grid-template-columns:1fr;gap:32px}
-  .jobs-grid{grid-template-columns:1fr}
-  .lp-stats{grid-template-columns:repeat(3,1fr);gap:14px}
-  .foot-top{grid-template-columns:1fr 1fr;gap:32px}
-  .cta-banner{grid-template-columns:1fr;padding:32px;gap:24px}
+  .job-header-grid,.job-content-grid,.similar-grid,.foot-top{grid-template-columns:1fr;gap:24px}
+  .job-main{flex-direction:column;text-align:center;align-items:center}
+  .req-grid{grid-template-columns:1fr}
+  .cond-row{grid-template-columns:1fr;gap:6px}
 }
 </style>
 </head>
@@ -341,14 +411,15 @@ em{font-style:italic;color:var(--signal);font-weight:500}
       <div class="nav-logo-name">Alogator</div>
     </a>
     <div class="nav-links">
-      <a href="/pre-pracovnikov">Pre pracovníkov</a>
-      <a href="/pre-firmy">Pre firmy</a>
+      <a href="/databaza-pracovnikov">Databáza pracovníkov</a>
+      <a href="/ponuka-prace" class="active">Pracovné ponuky</a>
       <a href="/ako-to-funguje">Ako to funguje</a>
       <a href="/cennik">Cenník</a>
+      <a href="/o-nas">O nás</a>
     </div>
     <div class="nav-actions">
       <button class="nav-btn">Prihlásenie</button>
-      <button class="nav-btn primary">Registrácia</button>
+      <button class="nav-btn primary">Stiahnuť aplikáciu</button>
     </div>
   </div>
 </nav>
@@ -358,395 +429,460 @@ em{font-style:italic;color:var(--signal);font-weight:500}
   <div class="container">
     <a href="/">Domov</a>
     <span class="sep">/</span>
-    <a href="/ponuka-prace">Ponuka práce</a>
+    <a href="/ponuka-prace">Pracovné ponuky</a>
     <span class="sep">/</span>
-    <span>Zvárač</span>
+    <a href="/ponuka-prace/zvarac">Zvárač</a>
+    <span class="sep">/</span>
+    <a href="/praca-v-zahranici/nemecko">Nemecko</a>
+    <span class="sep">/</span>
+    <span>Emsland</span>
   </div>
 </div>
 
-<!-- HERO -->
-<section class="lp-hero">
+<!-- HEADER -->
+<section class="job-header">
   <div class="container">
-    <div class="lp-hero-grid">
+    <div class="job-header-grid">
+
+      <!-- Left: title + meta -->
       <div>
-        <span class="eyebrow">profesia · ponuka práce</span>
-        <h1>Práca pre profesiu<br><em>zvárač</em> v EÚ.</h1>
-        <p class="lead">
-          <strong>297 aktuálnych ponúk</strong> pre zváračov v Nemecku, Rakúsku, Belgicku a na Slovensku.
-          TIG, CO2, MIG/MAG — vyplňte profil v aplikácii a firmy vás budú oslovovať priamo, 
-          podľa vašej dostupnosti a sadzby.
-        </p>
-        <div class="lp-stats">
-          <div>
-            <div class="lp-stat-num">297</div>
-            <div class="lp-stat-lbl">aktívnych ponúk</div>
-          </div>
-          <div>
-            <div class="lp-stat-num">25–45 <em>€</em></div>
-            <div class="lp-stat-lbl">hodinová sadzba</div>
-          </div>
-          <div>
-            <div class="lp-stat-num">4,2 <em>dňa</em></div>
-            <div class="lp-stat-lbl">priemerný čas do nástupu</div>
+        <div class="urgency-row">
+          <span class="urgency-badge hot"><span class="dot"></span>Nástup ihneď</span>
+          <span class="urgency-badge new">Nová ponuka · 2 dni</span>
+          <span class="urgency-badge">Top sadzba v regióne</span>
+        </div>
+
+        <div class="job-main">
+          <div class="job-logo locked">B</div>
+          <div class="job-info">
+            <h1 class="job-title">Zvárač MIG/MAG · TIG</h1>
+            <div class="job-company">
+              <span class="locked-name">🔒 Firma · DE</span>
+              <span style="color:var(--graphite-500);font-size:13px">Generálny dodávateľ, 200+ zamestnancov</span>
+            </div>
+
+            <div class="job-meta-row">
+              <div class="job-meta-item"><span class="flag flag-de"></span><strong>Emsland</strong>, Niedersachsen</div>
+              <div class="job-meta-item">⏱ <strong>3+ mesiacov</strong></div>
+              <div class="job-meta-item">📅 <strong>Turnusy 21/7</strong></div>
+              <div class="job-meta-item">🔧 <strong>50 h / týždeň</strong></div>
+              <div class="job-meta-item">🏭 <strong>Chemický priemysel</strong></div>
+            </div>
           </div>
         </div>
       </div>
 
-      <aside class="lp-hero-side">
-        <h3>Subprofesia</h3>
-        <div class="lp-side-subprof">
-          <div class="lp-side-row">
-            <span>Zvárač MIG/MAG</span>
-            <span class="cnt">124</span>
+      <!-- Right: rate card -->
+      <aside class="rate-card">
+        <div class="rate-card-label">Hodinová sadzba</div>
+        <div class="rate-row">
+          <span class="rate-num">32 €</span>
+          <span class="rate-unit">/ hod</span>
+        </div>
+        <div class="rate-note">+ nadčasy 1.5× · víkendy 2×</div>
+
+        <div class="rate-bonuses">
+          <div class="bonus-row"><span class="bonus-icon">✓</span><span><strong>Ubytovanie</strong> platí firma</span></div>
+          <div class="bonus-row"><span class="bonus-icon">✓</span><span><strong>Doprava</strong> hradená pri turnuse</span></div>
+          <div class="bonus-row"><span class="bonus-icon">✓</span><span><strong>Stravné</strong> 12 € / deň</span></div>
+          <div class="bonus-row"><span class="bonus-icon">✓</span><span><strong>SZČO aj HPP</strong> možné</span></div>
+        </div>
+
+        <button class="rate-cta">✋ Mám záujem</button>
+        <button class="rate-cta-secondary">Uložiť na neskôr</button>
+
+        <div class="rate-applicants">
+          <div class="applicants-avatars">
+            <span style="background:var(--signal)">M</span>
+            <span style="background:var(--yellow);color:var(--graphite)">D</span>
+            <span style="background:var(--graphite-700)">F</span>
+            <span style="background:var(--signal-dark)">+8</span>
           </div>
-          <div class="lp-side-row">
-            <span>Zvárač TIG</span>
-            <span class="cnt">89</span>
-          </div>
-          <div class="lp-side-row">
-            <span>Zvárač CO2</span>
-            <span class="cnt">68</span>
-          </div>
-          <div class="lp-side-row">
-            <span>Zvárač 141 / 135</span>
-            <span class="cnt">42</span>
-          </div>
-          <div class="lp-side-row">
-            <span>Potrubný zvárač</span>
-            <span class="cnt">31</span>
+          <span><strong>11 záujemcov</strong> za posledných 24h</span>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- TABS -->
+<section class="tabs-sec">
+  <div class="container">
+    <div class="tabs-row">
+      <span class="tab active">Popis</span>
+      <span class="tab">Požiadavky</span>
+      <span class="tab">Podmienky</span>
+      <span class="tab">Firma</span>
+      <span class="tab">Hodnotenia</span>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="job-content">
+  <div class="container">
+    <div class="job-content-grid">
+
+      <!-- LEFT COLUMN -->
+      <div>
+
+        <!-- POPIS POZÍCIE -->
+        <div class="sec-card">
+          <span class="label">Popis pozície</span>
+          <h2 style="margin-top:8px">Práca pre <em>skúseného zvárača</em></h2>
+          <div class="desc-text">
+            <p>Hľadáme zvárača <strong>MIG/MAG a TIG</strong> na dlhodobý projekt v chemickom závode v Emslande. Práca v tíme 8 zváračov, denné turnusy s českým / slovenským koordinátorom, prísne dodržiavanie nemeckých noriem.</p>
+
+            <h3>Hlavné úlohy</h3>
+            <ul>
+              <li>Zváranie potrubia a rúrkových konštrukcií (nehrdzavejúca oceľ, hliník)</li>
+              <li>Práca podľa <strong>WPS</strong> (Welding Procedure Specification)</li>
+              <li>Vizuálna kontrola zvarov, drobné opravy</li>
+              <li>Dokumentácia (denný report) — väčšinou v nemčine</li>
+              <li>Spolupráca s nemeckým inžinierom kvality</li>
+            </ul>
+
+            <h3>Čo o tomto projekte hovoria predchádzajúci pracovníci</h3>
+            <ul>
+              <li>"Dobrá organizácia, koordinátor hovorí česky" — Daniel R., 4.9 ★</li>
+              <li>"Firma platí načas, ubytovanie v slušnom apartmáne" — Roman S., 4.7 ★</li>
+              <li>"Veľa nadčasov, kto chce zarobiť, tu zarobí" — Marek N., 5.0 ★</li>
+            </ul>
           </div>
         </div>
-        <button class="lp-side-cta">Vytvoriť profil zadarmo →</button>
+
+        <!-- POŽIADAVKY -->
+        <div class="sec-card">
+          <span class="label">Požiadavky</span>
+          <h2 style="margin-top:8px">Čo musíte mať</h2>
+
+          <h3 style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--graphite-500);margin-bottom:14px">• Musíte mať</h3>
+          <div class="req-grid" style="margin-bottom:24px">
+            <div class="req-card must">
+              <div class="req-icon">📜</div>
+              <div>
+                <div class="req-title">Certifikát EN ISO 9606-1</div>
+                <div class="req-value">Aktuálny, MIG/MAG 135 alebo TIG 141</div>
+              </div>
+            </div>
+            <div class="req-card must">
+              <div class="req-icon">⏱</div>
+              <div>
+                <div class="req-title">Min. 3 roky praxe</div>
+                <div class="req-value">V priemyselnom zváraní</div>
+              </div>
+            </div>
+            <div class="req-card must">
+              <div class="req-icon">🛡️</div>
+              <div>
+                <div class="req-title">Pasportované zdravie</div>
+                <div class="req-value">Lekárska prehliadka platná v EÚ</div>
+              </div>
+            </div>
+            <div class="req-card must">
+              <div class="req-icon">🌐</div>
+              <div>
+                <div class="req-title">Nemčina A2+</div>
+                <div class="req-value">Základná komunikácia s nemeckým personálom</div>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--graphite-500);margin-bottom:14px">• Výhoda (nie podmienka)</h3>
+          <div class="req-grid">
+            <div class="req-card nice">
+              <div class="req-icon">🔥</div>
+              <div>
+                <div class="req-title">Skúsenosti s nehrdzav. oceľou</div>
+                <div class="req-value">Špecifikum chem. priemyslu</div>
+              </div>
+            </div>
+            <div class="req-card nice">
+              <div class="req-icon">📋</div>
+              <div>
+                <div class="req-title">Skúsenosť s WPS</div>
+                <div class="req-value">Welding Procedure Specification</div>
+              </div>
+            </div>
+            <div class="req-card nice">
+              <div class="req-icon">🚗</div>
+              <div>
+                <div class="req-title">Vlastné auto</div>
+                <div class="req-value">Doprava na pracovisko po príchode</div>
+              </div>
+            </div>
+            <div class="req-card nice">
+              <div class="req-icon">💼</div>
+              <div>
+                <div class="req-title">Predchádzajúce DE projekty</div>
+                <div class="req-value">Znalosť nemeckého workflow</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PODMIENKY -->
+        <div class="sec-card">
+          <span class="label">Podmienky práce</span>
+          <h2 style="margin-top:8px">Detaily, ktoré <em>musíte vedieť</em></h2>
+
+          <div class="cond-table">
+            <div class="cond-row">
+              <span class="cond-label">Sadzba</span>
+              <span class="cond-value"><strong>32 €/hod</strong> · nadčasy 1.5× · víkendy 2× · sviatky 2×</span>
+            </div>
+            <div class="cond-row">
+              <span class="cond-label">Týždenný úväzok</span>
+              <span class="cond-value"><strong>50 hodín</strong> (Po–Pi 10 h + sobota voliteľne)</span>
+            </div>
+            <div class="cond-row">
+              <span class="cond-label">Turnusy</span>
+              <span class="cond-value"><strong>21/7</strong> — 3 týždne práca, 1 týždeň voľno</span>
+            </div>
+            <div class="cond-row">
+              <span class="cond-label">Trvanie projektu</span>
+              <span class="cond-value">Minimum <strong>3 mesiace</strong>, možné predĺženie až do konca roku 2026</span>
+            </div>
+            <div class="cond-row">
+              <span class="cond-label">Nástup</span>
+              <span class="cond-value"><span class="highlight">Ihneď</span> · do 7 dní od potvrdenia kontraktu</span>
+            </div>
+            <div class="cond-row">
+              <span class="cond-label">Typ úväzku</span>
+              <span class="cond-value"><strong>SZČO</strong> (fakturujete priamo) alebo <strong>HPP</strong> cez nemeckú spoločnosť</span>
+            </div>
+            <div class="cond-row">
+              <span class="cond-label">Ubytovanie</span>
+              <span class="cond-value"><span class="highlight">Hradí firma</span> · 2-lôžkový apartmán 5 km od pracoviska</span>
+            </div>
+            <div class="cond-row">
+              <span class="cond-label">Doprava</span>
+              <span class="cond-value">Pri nástupe a konci turnusu — hradí firma do 800 km</span>
+            </div>
+            <div class="cond-row">
+              <span class="cond-label">Stravné</span>
+              <span class="cond-value">12 €/deň, vyplácané v hotovosti pri turnuse</span>
+            </div>
+            <div class="cond-row">
+              <span class="cond-label">Pracovné oblečenie</span>
+              <span class="cond-value">Poskytuje firma (zváračská kukla, kombinéza, rukavice)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- LOKALITA / MAP -->
+        <div class="sec-card">
+          <span class="label">Lokalita</span>
+          <h2 style="margin-top:8px"><span class="flag flag-de" style="margin-right:8px;width:24px;height:18px"></span>Emsland, <em>Niedersachsen</em></h2>
+
+          <div class="map-block" style="margin-bottom:16px">
+            <div class="map-pin">📍</div>
+            <div class="map-overlay">
+              <strong>Pracovisko:</strong> Emsland Industrial Park<br>
+              <strong>Najbližšie mesto:</strong> Lingen (Ems), 18 km<br>
+              <strong>Letisko:</strong> FMO Münster/Osnabrück, 95 km
+            </div>
+          </div>
+
+          <div class="desc-text">
+            <p><strong>Emsland</strong> je región v severnom Nemecku známy chemickým a energetickým priemyslom. BASF, RWE a ďalšie nadnárodné firmy tu majú výrobné závody. Cesta zo Slovenska autom je <strong>cca 12–14 hodín</strong> (1 200 km), letecky 2.5h cez FMO.</p>
+
+            <p>Veľká slovenská a česká komunita v regióne — vyše <strong>800 remeselníkov</strong> z Alogator databázy tu už pracovalo. Cesty na Slovensko sú jednoduché počas voľného týždňa turnusu.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN — Sidebar -->
+      <aside>
+
+        <!-- Summary widget -->
+        <div class="sec-card" style="padding:24px;position:sticky;top:24px">
+          <span class="label">Stručne</span>
+          <h2 style="margin-top:8px;font-size:18px;margin-bottom:16px">Ponuka v 6 bodoch</h2>
+
+          <div class="summary-widget" style="background:transparent;padding:0">
+            <div class="summary-row">
+              <span class="summary-icon">💰</span>
+              <div class="summary-content">
+                <div class="summary-label">Sadzba</div>
+                <div class="summary-val">32 €/hod + bonusy</div>
+                <div class="summary-sub">~ 6 400 €/mes brutto pri 50h/týž</div>
+              </div>
+            </div>
+            <div class="summary-row">
+              <span class="summary-icon">📍</span>
+              <div class="summary-content">
+                <div class="summary-label">Lokalita</div>
+                <div class="summary-val">Emsland, DE</div>
+                <div class="summary-sub">1 200 km od Bratislavy</div>
+              </div>
+            </div>
+            <div class="summary-row">
+              <span class="summary-icon">⏱</span>
+              <div class="summary-content">
+                <div class="summary-label">Trvanie</div>
+                <div class="summary-val">3+ mesiacov</div>
+                <div class="summary-sub">Turnusy 21/7</div>
+              </div>
+            </div>
+            <div class="summary-row">
+              <span class="summary-icon">🌐</span>
+              <div class="summary-content">
+                <div class="summary-label">Jazyk</div>
+                <div class="summary-val">DE A2+</div>
+                <div class="summary-sub">Český koordinátor v tíme</div>
+              </div>
+            </div>
+            <div class="summary-row">
+              <span class="summary-icon">🏠</span>
+              <div class="summary-content">
+                <div class="summary-label">Ubytovanie</div>
+                <div class="summary-val">V cene firmy</div>
+                <div class="summary-sub">2-lôžkový apartmán</div>
+              </div>
+            </div>
+            <div class="summary-row">
+              <span class="summary-icon">🚀</span>
+              <div class="summary-content">
+                <div class="summary-label">Nástup</div>
+                <div class="summary-val">Ihneď</div>
+                <div class="summary-sub">Do 7 dní od potvrdenia</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Firma (locked) -->
+        <div class="sec-card">
+          <span class="label">Firma</span>
+          <h2 style="margin-top:8px;font-size:18px;margin-bottom:14px">O zamestnávateľovi</h2>
+
+          <div class="firma-card">
+            <!-- Skryté dáta (locked overlay) -->
+            <div style="opacity:.25">
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+                <div style="width:48px;height:48px;background:var(--graphite);border-radius:12px"></div>
+                <div>
+                  <div style="font-family:'Geist',sans-serif;font-weight:500;font-size:16px;color:var(--graphite)">Bilfinger Industrial</div>
+                  <div style="font-size:12px;color:var(--graphite-500)">Hannover, Germany</div>
+                </div>
+              </div>
+              <div style="font-size:13px;color:var(--graphite-700);line-height:1.55;margin-bottom:14px">
+                Bilfinger Industrial Services je generálny dodávateľ priemyselných služieb v Nemecku s pôsobnosťou v chemickom, energetickom a petrochemickom priemysle...
+              </div>
+              <div style="display:flex;gap:18px;font-size:12px;color:var(--graphite-500)">
+                <span>★ 4.7 / 27 hodnotení</span>
+                <span>200+ zamestnancov</span>
+              </div>
+            </div>
+
+            <!-- Overlay -->
+            <div class="firma-locked-overlay">
+              <div class="lock-icon">🔒</div>
+              <h4>Detaily firmy sú zamknuté</h4>
+              <p>Stiahnite si aplikáciu a prejavte záujem o pozíciu. Po overení vám sprístupníme kontakt na firmu.</p>
+              <button>Stiahnuť aplikáciu →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats sidebar -->
+        <div class="sec-card" style="padding:24px">
+          <span class="label">Aktivita ponuky</span>
+          <h2 style="margin-top:8px;font-size:18px;margin-bottom:14px">Posledných 7 dní</h2>
+
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div style="display:flex;justify-content:space-between;align-items:baseline">
+              <span style="font-size:13px;color:var(--graphite-700)">Zobrazenia</span>
+              <span style="font-family:'Geist',sans-serif;font-weight:500;font-size:18px">142</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline">
+              <span style="font-size:13px;color:var(--graphite-700)">Záujemci</span>
+              <span style="font-family:'Geist',sans-serif;font-weight:500;font-size:18px;color:var(--signal)">11</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline">
+              <span style="font-size:13px;color:var(--graphite-700)">Pozvaní na pohovor</span>
+              <span style="font-family:'Geist',sans-serif;font-weight:500;font-size:18px">3</span>
+            </div>
+            <div style="background:var(--signal-soft);color:var(--signal-dark);padding:10px 12px;border-radius:10px;font-size:12px;line-height:1.5;margin-top:6px">
+              <strong style="display:block;margin-bottom:2px">⏰ Reagujte rýchlo</strong>
+              Firma plánuje vybrať kandidátov do <strong>3 dní</strong>.
+            </div>
+          </div>
+        </div>
+
       </aside>
     </div>
   </div>
 </section>
 
-<!-- INTRO TEXT (SEO content) -->
-<section class="lp-intro">
+<!-- SIMILAR JOBS -->
+<section class="similar-sec">
   <div class="container">
-    <div class="lp-intro-inner">
-      <h2>Zvárač je dnes jedna z najžiadanejších profesií v EÚ</h2>
-      <p>
-        Pre slovenských zváračov je dopyt najsilnejší v <strong>Nemecku</strong>, <strong>Rakúsku</strong> a <strong>Belgicku</strong>,
-        kde sa hodinová sadzba pohybuje od 25 do 45 €/hod. Najlepšie platené sú špecializované zvárky —
-        <strong>TIG zváranie</strong>, <strong>nerezová oceľ</strong> a <strong>potrubie</strong>.
-      </p>
-      <p>
-        Zvárači s <strong>NUC certifikátom</strong> a metódami <strong>141, 135 alebo 111</strong> majú v zahraničí
-        prakticky garantovanú prácu. Bežný zvárač MIG/MAG / CO2 bez certifikátu zarobí v Nemecku
-        cca 25–30 €/hod, špecialista s preukazom EN ISO 9606 sa pohybuje v rozsahu 32–42 €/hod.
-      </p>
-      <p>
-        Veľká časť ponúk obsahuje <strong>ubytovanie zdarma</strong> alebo zľavnené, najmä pri turnusoch
-        14/14 alebo 21/7. Firmy preferujú pracovníkov, ktorí vedia <strong>nemecky aspoň na úrovni A2–B1</strong>,
-        ale pre tímy je často postačujúce, ak jazyk ovláda predák.
-      </p>
-      <p>
-        Alogator je platforma kde si <strong>nastavíte svoju sadzbu</strong>, dostupnosť a špecializáciu —
-        a firmy vás kontaktujú samé. Žiadne agentúry, žiadne sprostredkovateľské poplatky.
-        <a href="/ako-to-funguje">Pozrite si ako to funguje →</a>
-      </p>
-    </div>
-  </div>
-</section>
+    <span class="eyebrow">• podobné ponuky</span>
+    <h2 style="margin-top:10px">Ďalšie ponuky pre zváračov</h2>
 
-<!-- LISTING -->
-<section class="lp-listing">
-  <div class="container">
-    <div class="lp-listing-head">
-      <div>
-        <span class="eyebrow">live ponuky</span>
-        <h2 style="margin-top:10px">Aktuálne ponuky pre zváračov</h2>
-      </div>
-      <div class="sort">
-        Zoradiť: <strong>Najnovšie ▾</strong>
-      </div>
-    </div>
-
-    <!-- Sub-profession filter -->
-    <div class="subprof-bar">
-      <button class="subprof-btn active">Všetky <span class="cnt">297</span></button>
-      <button class="subprof-btn">MIG/MAG <span class="cnt">124</span></button>
-      <button class="subprof-btn">TIG <span class="cnt">89</span></button>
-      <button class="subprof-btn">CO2 <span class="cnt">68</span></button>
-      <button class="subprof-btn">141 / 135 <span class="cnt">42</span></button>
-      <button class="subprof-btn">Potrubný zvárač <span class="cnt">31</span></button>
-      <button class="subprof-btn">Nerez <span class="cnt">28</span></button>
-    </div>
-
-    <!-- Jobs grid (6 cards) -->
-    <div class="jobs-grid">
+    <div class="similar-grid">
       <div class="jcard">
-        <div class="jcard-badge b-top">TOP</div>
         <div class="jcard-head">
-          <div class="jcard-logo"></div>
           <div class="jcard-meta">
-            <div class="jcard-title">Zvárač MIG/MAG</div>
-            <div class="jcard-company">Firma z DE</div>
+            <div class="jcard-loc"><span class="flag flag-de"></span> Bavorsko · Nemecko</div>
+            <div class="jcard-title">Zvárač TIG · potrubia</div>
+            <div class="jcard-company">🔒 Firma · DE</div>
           </div>
+          <span class="urgency-badge new">Nová</span>
         </div>
-        <div class="jcard-salary">
-          <span class="jcard-salary-num">30 €</span>
-          <span class="jcard-salary-unit">/ hod</span>
-          <span class="jcard-bonus housing">+ ubytovanie</span>
+        <div class="jcard-rate">
+          <span class="jcard-rate-num">28 €</span>
+          <span class="jcard-rate-unit">/ hod + bonusy</span>
         </div>
-        <div class="jcard-info">
-          <span><span class="country-flag flag-de"></span>Emsland, DE</span>
-          <span class="sep">·</span>
-          <span>45h / týždeň</span>
-          <span class="sep">·</span>
-          <span class="date-pill">Nástup 26.5.</span>
-        </div>
-        <div class="jcard-foot">
-          <div class="jcard-tags">
-            <span class="jcard-tag">MIG/MAG</span>
-            <span class="jcard-tag">DE B1</span>
-          </div>
-          <button class="jcard-cta">Registrovať</button>
-        </div>
-      </div>
-
-      <div class="jcard">
-        <div class="jcard-badge b-now">IHNEĎ</div>
-        <div class="jcard-head">
-          <div class="jcard-logo"></div>
-          <div class="jcard-meta">
-            <div class="jcard-title">Zvárač TIG</div>
-            <div class="jcard-company">Firma z DE</div>
-          </div>
-        </div>
-        <div class="jcard-salary">
-          <span class="jcard-salary-num">38 €</span>
-          <span class="jcard-salary-unit">/ hod</span>
-          <span class="jcard-bonus business">Živnosť</span>
-        </div>
-        <div class="jcard-info">
-          <span><span class="country-flag flag-de"></span>Budenheim, DE</span>
-          <span class="sep">·</span>
-          <span>55h / týždeň</span>
-          <span class="sep">·</span>
-          <span class="date-pill">11.05.–23.05.</span>
-        </div>
-        <div class="jcard-foot">
-          <div class="jcard-tags">
-            <span class="jcard-tag">TIG</span>
-            <span class="jcard-tag">141</span>
-          </div>
-          <button class="jcard-cta">Registrovať</button>
-        </div>
-      </div>
-
-      <div class="jcard">
-        <div class="jcard-badge b-new">NOVÉ · 2H</div>
-        <div class="jcard-head">
-          <div class="jcard-logo"></div>
-          <div class="jcard-meta">
-            <div class="jcard-title">Zvárač CO2</div>
-            <div class="jcard-company">Firma z AT</div>
-          </div>
-        </div>
-        <div class="jcard-salary">
-          <span class="jcard-salary-num">27 €</span>
-          <span class="jcard-salary-unit">/ hod</span>
-          <span class="jcard-bonus housing">+ ubytovanie</span>
-        </div>
-        <div class="jcard-info">
-          <span><span class="country-flag flag-at"></span>Linz, AT</span>
-          <span class="sep">·</span>
-          <span>50h / týždeň</span>
-          <span class="sep">·</span>
-          <span class="date-pill">Turnusy 14/14</span>
-        </div>
-        <div class="jcard-foot">
-          <div class="jcard-tags">
-            <span class="jcard-tag">CO2</span>
-            <span class="jcard-tag">DE A2</span>
-          </div>
-          <button class="jcard-cta">Registrovať</button>
-        </div>
-      </div>
-
-      <div class="jcard">
-        <div class="jcard-badge b-top">TOP</div>
-        <div class="jcard-head">
-          <div class="jcard-logo"></div>
-          <div class="jcard-meta">
-            <div class="jcard-title">Zvárač nerez · potrubie</div>
-            <div class="jcard-company">Firma zo CH</div>
-          </div>
-        </div>
-        <div class="jcard-salary">
-          <span class="jcard-salary-num">45 €</span>
-          <span class="jcard-salary-unit">/ hod</span>
-          <span class="jcard-bonus housing">+ ubytovanie</span>
-        </div>
-        <div class="jcard-info">
-          <span><span class="country-flag flag-ch"></span>Zürich, CH</span>
-          <span class="sep">·</span>
-          <span>40h / týždeň</span>
-          <span class="sep">·</span>
-          <span class="date-pill">Nástup 1.6.</span>
-        </div>
-        <div class="jcard-foot">
-          <div class="jcard-tags">
-            <span class="jcard-tag">TIG</span>
-            <span class="jcard-tag">EN ISO 9606</span>
-          </div>
-          <button class="jcard-cta">Registrovať</button>
+        <div class="jcard-tags">
+          <span class="jcard-tag">TIG</span>
+          <span class="jcard-tag">Nehrdz.</span>
+          <span class="jcard-tag">14/14</span>
         </div>
       </div>
 
       <div class="jcard">
         <div class="jcard-head">
-          <div class="jcard-logo"></div>
           <div class="jcard-meta">
-            <div class="jcard-title">Zvárač MIG/MAG</div>
-            <div class="jcard-company">Firma z CZ</div>
+            <div class="jcard-loc"><span class="flag flag-at"></span> Linz · Rakúsko</div>
+            <div class="jcard-title">Zvárač MIG/MAG · konštrukcie</div>
+            <div class="jcard-company">🔒 Firma · AT</div>
           </div>
         </div>
-        <div class="jcard-salary">
-          <span class="jcard-salary-num">19 €</span>
-          <span class="jcard-salary-unit">/ hod</span>
+        <div class="jcard-rate">
+          <span class="jcard-rate-num">31 €</span>
+          <span class="jcard-rate-unit">/ hod</span>
         </div>
-        <div class="jcard-info">
-          <span><span class="country-flag flag-cz"></span>Ostrava, CZ</span>
-          <span class="sep">·</span>
-          <span>50h / týždeň</span>
-          <span class="sep">·</span>
-          <span class="date-pill">Nástup 25.5.</span>
-        </div>
-        <div class="jcard-foot">
-          <div class="jcard-tags">
-            <span class="jcard-tag">MIG/MAG</span>
-            <span class="jcard-tag">CZ</span>
-          </div>
-          <button class="jcard-cta">Registrovať</button>
+        <div class="jcard-tags">
+          <span class="jcard-tag">MIG/MAG</span>
+          <span class="jcard-tag">Konštrukcie</span>
+          <span class="jcard-tag">50 h/tý</span>
         </div>
       </div>
 
       <div class="jcard">
-        <div class="jcard-badge b-now">IHNEĎ</div>
         <div class="jcard-head">
-          <div class="jcard-logo"></div>
           <div class="jcard-meta">
-            <div class="jcard-title">Zvárač 141</div>
-            <div class="jcard-company">Firma z DE</div>
+            <div class="jcard-loc"><span class="flag flag-nl"></span> Rotterdam · Holandsko</div>
+            <div class="jcard-title">Zvárač 141 NUC · potrubia</div>
+            <div class="jcard-company">🔒 Firma · NL</div>
           </div>
+          <span class="urgency-badge hot">Hot</span>
         </div>
-        <div class="jcard-salary">
-          <span class="jcard-salary-num">32 €</span>
-          <span class="jcard-salary-unit">/ hod</span>
-          <span class="jcard-bonus slots">3 miesta</span>
+        <div class="jcard-rate">
+          <span class="jcard-rate-num">42 €</span>
+          <span class="jcard-rate-unit">/ hod</span>
         </div>
-        <div class="jcard-info">
-          <span><span class="country-flag flag-de"></span>Hannover, DE</span>
-          <span class="sep">·</span>
-          <span>60h / týždeň</span>
-          <span class="sep">·</span>
-          <span class="date-pill">Nástup 26.5.</span>
-        </div>
-        <div class="jcard-foot">
-          <div class="jcard-tags">
-            <span class="jcard-tag">141</span>
-            <span class="jcard-tag">DE B1</span>
-          </div>
-          <button class="jcard-cta">Registrovať</button>
+        <div class="jcard-tags">
+          <span class="jcard-tag">NUC cert.</span>
+          <span class="jcard-tag">Nuclear</span>
+          <span class="jcard-tag">21/7</span>
         </div>
       </div>
-    </div>
-
-    <div class="load-more-wrap">
-      <button class="load-more">Načítať ďalších 24 ponúk →</button>
-      <div style="font-size:11.5px;color:var(--graphite-500);margin-top:8px">Zobrazené 6 z 297</div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq-sec">
-  <div class="container">
-    <h2>Časté otázky o práci pre zváračov</h2>
-    <div class="faq-list">
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Aký zvárací preukaz potrebujem pre prácu v Nemecku?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          Pre väčšinu nemeckých firiem stačí preukaz EN ISO 9606-1 (oceľ) alebo EN ISO 9606-2 (hliník). Špecializované pozície vyžadujú metódy 141 (TIG nerez), 135 (MAG) alebo 111 (ručné oblúkové zváranie). Pre potrubné práce je potrebný NUC certifikát.
-        </div></div>
-      </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Aký je rozdiel medzi TIG a CO2 zváraním z hľadiska platu?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          TIG zvárač zarobí v Nemecku priemerne o 5–10 €/hod viac ako CO2 / MIG-MAG zvárač, lebo TIG je technicky náročnejšie a vyžaduje preukaz. Bežné platy: CO2/MIG-MAG 25–30 €/hod, TIG 32–42 €/hod, špecialista na nerez/potrubie 40–48 €/hod.
-        </div></div>
-      </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Môžem pracovať ako zvárač na živnosť?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          Áno. Alogator je primárne SZČO platforma. V profile si nastavíte typ úväzku (živnosť / HPP) a vidíte len ponuky, ktoré sedia. Faktúry pre firmy si môžete vystavovať priamo cez aplikáciu. Pre prácu v zahraničí ako SZČO potrebujete A1 formulár.
-        </div></div>
-      </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Potrebujem vedieť po nemecky?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          Odporúča sa nemčina aspoň A2–B1. Pri tímoch (3+ ľudia) často stačí, ak jazyk ovláda predák. Bezpečnostné inštrukcie a technická dokumentácia sú vždy v nemčine — bez základov jazyka je práca obťiažna.
-        </div></div>
-      </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Je v ponukách zahrnuté ubytovanie?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          Často áno. V detaile každej ponuky vidíte, či firma poskytuje ubytovanie zdarma, čiastočne prispieva alebo si ho pracovník hradí sám. Filter "Ubytovanie zdarma" je k dispozícii vo vyhľadávaní. Pri turnusoch 14/14 alebo 21/7 je ubytovanie štandard.
-        </div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- RELATED -->
-<section class="related-sec">
-  <div class="container">
-    <h2>Súvisiace stránky</h2>
-    <div class="related-grid">
-      <div class="related-col">
-        <h4>Profesie</h4>
-        <a href="/ponuka-prace/elektrikar">Elektrikár <span class="cnt">142</span></a>
-        <a href="/ponuka-prace/potrubar">Potrubár <span class="cnt">98</span></a>
-        <a href="/ponuka-prace/zamocnik">Zámočník <span class="cnt">74</span></a>
-        <a href="/ponuka-prace/monter">Montér <span class="cnt">186</span></a>
-        <a href="/ponuka-prace/murar">Murár <span class="cnt">62</span></a>
-        <a href="/ponuka-prace/tesar">Tesár <span class="cnt">48</span></a>
-      </div>
-      <div class="related-col">
-        <h4>Najsilnejšie destinácie</h4>
-        <a href="/praca-v-zahranici/nemecko">Práca v Nemecku <span class="cnt">412</span></a>
-        <a href="/praca-v-zahranici/rakusko">Práca v Rakúsku <span class="cnt">78</span></a>
-        <a href="/praca-v-zahranici/belgicko">Práca v Belgicku <span class="cnt">52</span></a>
-        <a href="/praca-v-zahranici/holandsko">Práca v Holandsku <span class="cnt">28</span></a>
-        <a href="/praca-v-zahranici">Práca v zahraničí · prehľad</a>
-      </div>
-      <div class="related-col">
-        <h4>Mestá z regiónu</h4>
-        <a href="/ponuka-prace/bratislava">Práca Bratislava <span class="cnt">82</span></a>
-        <a href="/ponuka-prace/presov">Práca Prešov <span class="cnt">48</span></a>
-        <a href="/ponuka-prace/kosice">Práca Košice <span class="cnt">52</span></a>
-        <a href="/ponuka-prace/zilina">Práca Žilina <span class="cnt">42</span></a>
-        <a href="/ponuka-prace/martin">Práca Martin <span class="cnt">32</span></a>
-        <a href="/ponuka-prace/poprad">Práca Poprad <span class="cnt">38</span></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA BANNER -->
-<section class="cta-banner-sec">
-  <div class="container">
-    <div class="cta-banner">
-      <div>
-        <span class="eyebrow" style="color:rgba(249,243,237,.8)">• začnite dnes</span>
-        <h2 style="margin-top:12px">Prvá ponuka pre zváračov<br>do <em>týždňa</em>.</h2>
-        <p>Bezplatná registrácia. Žiadne poplatky, žiadne provízie. Vyplníte profil, nastavíte sadzbu a firmy vás kontaktujú priamo.</p>
-      </div>
-      <button class="cta-banner-btn">Vytvoriť profil zadarmo →</button>
     </div>
   </div>
 </section>
@@ -760,13 +896,12 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           <div class="nav-logo-mark">A</div>
           <div class="nav-logo-name">Alogator</div>
         </div>
-        <p style="font-size:13px;color:rgba(249,243,237,.6);line-height:1.5">Marketplace prepájajúci pracovníkov a firmy v stavebníctve a priemysle. SK · CZ · DE · AT · NL · BE</p>
+        <p style="font-size:13px;color:rgba(249,243,237,.6);line-height:1.5">Marketplace prepájajúci pracovníkov, agentúry a koncové firmy. SK · CZ · DE · AT · NL · BE</p>
       </div>
       <div class="foot-col">
         <h5>Pre firmy</h5>
         <a href="/pre-firmy">Naplánovať demo</a>
         <a href="/databaza-pracovnikov">Databáza pracovníkov</a>
-        <a href="/kalendar">Kalendár dostupnosti</a>
         <a href="/cennik">Cenník</a>
       </div>
       <div class="foot-col">
@@ -774,7 +909,6 @@ em{font-style:italic;color:var(--signal);font-weight:500}
         <a href="/ponuka-prace">Pracovné ponuky</a>
         <a href="/stiahnut-aplikaciu">Stiahnuť aplikáciu</a>
         <a href="/ako-to-funguje">Ako to funguje</a>
-        <a href="/premium">PREMIUM členstvo</a>
       </div>
       <div class="foot-col">
         <h5>Spoločnosť</h5>
@@ -785,7 +919,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
       </div>
     </div>
     <div class="foot-bottom">
-      <div>© 2026 Alogator · Profi Steel Holding · Všetky práva vyhradené</div>
+      <div>© 2026 Alogator · Profi Steel Holding</div>
       <div>Made in Slovakia · alogator.sk</div>
     </div>
   </div>

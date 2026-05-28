@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GDPR · Ochrana osobných údajov · Alogator</title>
+<meta name="description" content="Ochrana osobných údajov (GDPR) platformy Alogator. Podmienky používania pre pracovníkov, agentúry a koncové firmy.">
+<link rel="canonical" href="https://alogator.com/sk/gdpr">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--signal:#E66748;--signal-soft:#FDE8E0;--graphite:#1A1D1E;--graphite-700:#3F4445;--graphite-500:#6B7174;--graphite-200:#D9D9D6;--porcelain:#F9F3ED;--porcelain-200:#F0E8DD;--porcelain-300:#E8DFD1}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--porcelain);color:var(--graphite);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+.legal-container{max-width:800px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.02em;color:var(--graphite)}
+.navbar{background:var(--graphite);color:var(--porcelain);padding:18px 0}
+.nav-inner{display:flex;justify-content:space-between;align-items:center}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--porcelain)}
+.nav-logo-mark{width:32px;height:32px;background:var(--signal);border-radius:9px;display:flex;align-items:center;justify-content:center;font-family:'Geist',sans-serif;font-weight:500;font-size:16px}
+.nav-logo-name{font-family:'Geist',sans-serif;font-weight:500;font-size:20px}
+.nav-links{display:flex;gap:32px}
+.nav-links a{color:rgba(249,243,237,.85);text-decoration:none;font-size:14px}
+.nav-actions{display:flex;gap:10px}
+.nav-btn{background:transparent;border:1px solid rgba(249,243,237,.2);color:var(--porcelain);padding:8px 18px;border-radius:999px;font-size:13.5px;cursor:pointer}
+.nav-btn.primary{background:var(--signal);border-color:var(--signal)}
+.breadcrumb{padding:18px 0;font-size:12.5px;color:var(--graphite-500);font-family:'JetBrains Mono',monospace}
+.breadcrumb a{color:var(--graphite-500);text-decoration:none}
+.breadcrumb .sep{margin:0 8px;color:var(--graphite-200)}
+
+/* LEGAL TABS */
+.legal-tabs{background:var(--porcelain-200);border-bottom:1px solid var(--porcelain-300);padding:0 24px}
+.legal-tabs-inner{max-width:800px;margin:0 auto;display:flex;gap:24px}
+.legal-tab{padding:14px 0;font-size:14px;font-weight:500;color:var(--graphite-500);cursor:pointer;border-bottom:2px solid transparent;text-decoration:none;display:inline-block}
+.legal-tab.active{color:var(--graphite);border-bottom-color:var(--signal)}
+
+/* LEGAL CONTENT */
+.legal-hero{padding:48px 0 0}
+.legal-hero h1{font-size:clamp(28px,4vw,44px);margin-bottom:10px}
+.legal-hero .meta{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--graphite-500);letter-spacing:0.05em}
+
+.legal-body{padding:40px 0 80px}
+.legal-body h2{font-size:20px;margin:32px 0 12px;padding-top:32px;border-top:1px solid var(--porcelain-300)}
+.legal-body h2:first-child{border-top:0;padding-top:0;margin-top:0}
+.legal-body h3{font-size:16px;margin:20px 0 8px;color:var(--graphite-700)}
+.legal-body p{margin-bottom:12px;color:var(--graphite-700)}
+.legal-body p strong{color:var(--graphite);font-weight:500}
+.legal-body ul,.legal-body ol{padding-left:20px;margin-bottom:12px;color:var(--graphite-700)}
+.legal-body li{margin-bottom:6px;line-height:1.6}
+.legal-body a{color:var(--signal);text-decoration:underline}
+
+.legal-toc{background:var(--porcelain-200);border:1px solid var(--porcelain-300);border-radius:14px;padding:20px 24px;margin-bottom:32px}
+.legal-toc h4{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--graphite-500);margin-bottom:12px}
+.legal-toc ol{padding-left:18px;color:var(--graphite-700);font-size:13.5px}
+.legal-toc li{margin-bottom:4px}
+.legal-toc a{color:var(--signal);text-decoration:none}
+
+.footer{background:var(--graphite);color:var(--porcelain);padding:32px 0 20px}
+.foot-bottom{display:flex;justify-content:space-between;font-size:12px;color:rgba(249,243,237,.5)}
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="/sk" class="nav-logo"><div class="nav-logo-mark">A</div><div class="nav-logo-name">Alogator</div></a>
+    <div class="nav-links">
+      <a href="/sk/databaza-pracovnikov">Databáza pracovníkov</a>
+      <a href="/sk/ponuka-prace">Pracovné ponuky</a>
+      <a href="/sk/cennik">Cenník</a>
+      <a href="/sk/o-nas">O nás</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-btn">Prihlásenie</button>
+      <button class="nav-btn primary">Demo</button>
+    </div>
+  </div>
+</nav>
+
+<div class="breadcrumb"><div class="container"><a href="/sk">Domov</a><span class="sep">/</span><span>Právne dokumenty</span></div></div>
+
+<div class="legal-tabs">
+  <div class="legal-tabs-inner">
+    <a href="/sk/vseobecne-obchodne-podmienky" class="legal-tab">VOP</a>
+    <a href="/sk/gdpr" class="legal-tab active">GDPR</a>
+    <a href="/sk/cookies" class="legal-tab">Cookies</a>
+  </div>
+</div>
+
+<div class="legal-hero"><div class="legal-container">
+  <h1>Ochrana osobných údajov (GDPR)</h1>
+  <p class="meta">VERZIA 1.0 · Platné od 1. júna 2026 · Posledná aktualizácia: 1. júna 2026</p>
+</div></div>
+
+<div class="legal-body"><div class="legal-container">
+
+  <h2>1. Prevádzkovateľ osobných údajov</h2>
+<p>Prevádzkovateľom osobných údajov je Profi Steel Holding s.r.o., so sídlom na Slovensku. Kontakt: <a href="mailto:gdpr@alogator.com">gdpr@alogator.com</a></p>
+
+<h2>2. Aké osobné údaje spracovávame</h2>
+<h3>2.1 Pracovníci</h3>
+<ul>
+<li>Identifikačné údaje: meno, priezvisko, dátum narodenia, štátna príslušnosť</li>
+<li>Kontaktné údaje: e-mail, telefón</li>
+<li>Profesijné údaje: certifikáty, pracovné skúsenosti, hodnotenia, sadzba</li>
+<li>Technické údaje: IP adresa, zariadenie, poloha (len pri výslovnom súhlase)</li>
+<li>Fotografie a video prezentácia (len pri PRO členstve s výslovným súhlasom)</li>
+</ul>
+<h3>2.2 Firmy</h3>
+<ul>
+<li>Firemné údaje: obchodné meno, IČO, IČ DPH, sídlo</li>
+<li>Kontaktné osoby: meno, e-mail, telefón</li>
+<li>Fakturačné údaje potrebné pre platby</li>
+<li>Histórie transakcií a kontaktov v rámci Platformy</li>
+</ul>
+
+<h2>3. Právny základ spracúvania</h2>
+<p>Osobné údaje spracúvame na základe:</p>
+<ul>
+<li><strong>Plnenie zmluvy (čl. 6 ods. 1 písm. b GDPR)</strong> — pre prevádzku účtu a poskytovanie Služieb</li>
+<li><strong>Oprávnený záujem (čl. 6 ods. 1 písm. f GDPR)</strong> — pre bezpečnosť Platformy, prevenciu podvodov a analytiku</li>
+<li><strong>Súhlas (čl. 6 ods. 1 písm. a GDPR)</strong> — pre marketingovú komunikáciu a voliteľné funkcie</li>
+<li><strong>Právna povinnosť (čl. 6 ods. 1 písm. c GDPR)</strong> — pre účtovné a daňové povinnosti</li>
+</ul>
+
+<h2>4. Ako dlho uchovávame vaše údaje</h2>
+<ul>
+<li>Aktívny účet: po celú dobu existencie účtu</li>
+<li>Po zrušení účtu: 3 roky (oprávnený záujem — riešenie prípadných sporov)</li>
+<li>Fakturačné dokumenty: 10 rokov (zákonná povinnosť)</li>
+<li>Marketingový súhlas: do odvolania súhlasu</li>
+</ul>
+
+<h2>5. Vaše práva</h2>
+<p>Máte právo kedykoľvek:</p>
+<ul>
+<li><strong>Prístup</strong> — požiadať o kópiu vašich osobných údajov</li>
+<li><strong>Oprava</strong> — požiadať o opravu nesprávnych údajov</li>
+<li><strong>Vymazanie</strong> — požiadať o vymazanie ("právo na zabudnutie")</li>
+<li><strong>Prenosnosť</strong> — získať údaje v strojovo čitateľnom formáte</li>
+<li><strong>Námietka</strong> — namietať proti spracúvaniu na základe oprávneného záujmu</li>
+<li><strong>Odvolanie súhlasu</strong> — kedykoľvek odvolať udelený súhlas</li>
+</ul>
+<p>Žiadosti zasielajte na: <a href="mailto:gdpr@alogator.com">gdpr@alogator.com</a>. Odpovieme do 30 dní.</p>
+
+<h2>6. Príjemcovia osobných údajov</h2>
+<p>Vaše údaje nepredávame tretím stranám. Zdieľame ich len s:</p>
+<ul>
+<li>Poskytovateľmi cloudových služieb (hosting, e-mail) — EÚ alebo krajiny so zodpovedajúcou ochranou</li>
+<li>Platobnými procesormi pre spracovanie platieb</li>
+<li>Orgánmi verejnej moci na základe zákonnej povinnosti</li>
+</ul>
+
+<h2>7. Automatizované rozhodovanie</h2>
+<p>Platforma využíva automatizované párovanie (matching) Pracovníkov a Firiem na základe profilových údajov. Toto párovanie nie je právne záväzné rozhodnutie — konečné rozhodnutie vždy robí Firma alebo Pracovník.</p>
+
+<h2>8. Sťažnosti</h2>
+<p>Ak sa domnievate, že vaše práva boli porušené, môžete podať sťažnosť na Úrad na ochranu osobných údajov SR: <a href="https://www.dataprotection.gov.sk" target="_blank">dataprotection.gov.sk</a></p>
+<hr style="border:0;border-top:1px solid var(--porcelain-300);margin:32px 0">
+  <p style="font-size:13px;color:var(--graphite-500)">Pre otázky k týmto VOP kontaktujte: <a href="mailto:legal@alogator.com">legal@alogator.com</a></p>
+
+</div></div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="foot-bottom">
+      <div>© 2026 Alogator · Profi Steel Holding · Všetky práva vyhradené</div>
+      <div>
+        <a href="/sk/vseobecne-obchodne-podmienky" style="color:rgba(249,243,237,.5);text-decoration:none;margin-right:16px">VOP</a>
+        <a href="/sk/gdpr" style="color:rgba(249,243,237,.5);text-decoration:none;margin-right:16px">GDPR</a>
+        <a href="/sk/cookies" style="color:rgba(249,243,237,.5);text-decoration:none">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

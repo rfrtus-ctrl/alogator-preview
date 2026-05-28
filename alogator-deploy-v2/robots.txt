@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /sk/
+Allow: /cz/
+Disallow: /app/
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*?*
+
+# Sitemaps
+Sitemap: https://alogator.com/sk/sitemap.xml
+
+# Crawl delay (buď slušní ku serverom)
+Crawl-delay: 1

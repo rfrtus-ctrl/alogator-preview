@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stránka nenájdená · Alogator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --signal:#E66748;--signal-dark:#D4573A;--signal-soft:#FDE8E0;
+  --graphite:#1A1D1E;--graphite-700:#3F4445;--graphite-500:#6B7174;
+  --porcelain:#F9F3ED;--porcelain-200:#F0E8DD;--porcelain-300:#E8DFD1;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Inter',sans-serif;background:var(--porcelain);color:var(--graphite);
+  min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;
+}
+.box{max-width:560px;text-align:center}
+.eyebrow{
+  font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;
+  letter-spacing:0.15em;text-transform:uppercase;color:var(--signal);
+  margin-bottom:20px;
+}
+.eyebrow::before{content:'• '}
+h1{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:88px;letter-spacing:-0.03em;
+  color:var(--graphite);line-height:1;margin-bottom:14px;
+}
+h1 em{font-style:italic;color:var(--signal);font-weight:500}
+h2{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:28px;letter-spacing:-0.02em;
+  color:var(--graphite);margin-bottom:14px;
+}
+p{font-size:15px;color:var(--graphite-700);line-height:1.6;margin-bottom:28px}
+.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 24px;border-radius:999px;
+  font-family:'Inter',sans-serif;font-size:14px;font-weight:500;
+  text-decoration:none;transition:all .15s;
+}
+.btn-pri{background:var(--graphite);color:var(--porcelain)}
+.btn-pri:hover{background:var(--signal)}
+.btn-out{background:transparent;color:var(--graphite);border:1.5px solid var(--graphite)}
+.btn-out:hover{background:var(--graphite);color:var(--porcelain)}
+</style>
+</head>
+<body>
+<div class="box">
+  <span class="eyebrow">chyba 404</span>
+  <h1>4<em>0</em>4</h1>
+  <h2>Túto stránku <em>sme nenašli</em></h2>
+  <p>Stránka možno bola presunutá, premenovaná alebo zatiaľ neexistuje. Skúste sa vrátiť na domovskú stránku alebo prejsť na cenník.</p>
+  <div class="cta-row">
+    <a href="/" class="btn btn-pri">← Domovská stránka</a>
+    <a href="/cennik" class="btn btn-out">Cenník</a>
+  </div>
+</div>
+</body>
+</html>

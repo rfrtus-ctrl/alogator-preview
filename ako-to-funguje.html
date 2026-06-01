@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ako to funguje · Alogator — Marketplace pre pracovníkov a firmy</title>
+<meta name="description" content="Ako funguje Alogator — 4 kroky pre firmy hľadajúce remeselníkov a 4 kroky pre pracovníkov hľadajúcich zákazky v DE/AT/NL/BE.">
+<link rel="canonical" href="https://alogator.com/sk/ako-to-funguje">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--signal:#E66748;--signal-dark:#D4573A;--signal-soft:#FDE8E0;--graphite:#1A1D1E;--graphite-700:#3F4445;--graphite-500:#6B7174;--graphite-200:#D9D9D6;--porcelain:#F9F3ED;--porcelain-200:#F0E8DD;--porcelain-300:#E8DFD1;--yellow:#F5D547}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--porcelain);color:var(--graphite);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--signal)}
+.eyebrow::before{content:'• '}
+h1,h2,h3,h4{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.025em;line-height:1.08;color:var(--graphite)}
+em{font-style:italic;color:var(--signal);font-weight:500}
+.navbar{background:var(--graphite);color:var(--porcelain);padding:18px 0}
+.nav-inner{display:flex;justify-content:space-between;align-items:center}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--porcelain)}
+.nav-logo-mark{width:32px;height:32px;background:var(--signal);border-radius:9px;display:flex;align-items:center;justify-content:center;font-family:'Geist',sans-serif;font-weight:500;font-size:16px}
+.nav-logo-name{font-family:'Geist',sans-serif;font-weight:500;font-size:20px}
+.nav-links{display:flex;gap:32px}
+.nav-links a{color:rgba(249,243,237,.85);text-decoration:none;font-size:14px}
+.nav-links a.active{color:var(--porcelain);font-weight:500}
+.nav-actions{display:flex;gap:10px}
+.nav-btn{background:transparent;border:1px solid rgba(249,243,237,.2);color:var(--porcelain);padding:8px 18px;border-radius:999px;font-size:13.5px;cursor:pointer}
+.nav-btn.primary{background:var(--signal);border-color:var(--signal)}
+.breadcrumb{padding:18px 0 8px;font-size:12.5px;color:var(--graphite-500);font-family:'JetBrains Mono',monospace}
+.breadcrumb a{color:var(--graphite-500);text-decoration:none}
+.breadcrumb .sep{margin:0 8px;color:var(--graphite-200)}
+
+/* HERO */
+.hero{padding:64px 0 48px;text-align:center}
+.hero h1{font-size:clamp(40px,5vw,68px);max-width:800px;margin:16px auto}
+.hero p.lead{font-size:17px;color:var(--graphite-700);max-width:580px;margin:18px auto 40px;line-height:1.6}
+
+/* TOGGLE */
+.view-toggle{display:inline-flex;background:var(--porcelain-200);padding:5px;border-radius:999px;border:1px solid var(--porcelain-300);gap:6px}
+.vt-btn{background:transparent;border:0;padding:12px 28px;border-radius:999px;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:var(--graphite-500);cursor:pointer;transition:all .15s;display:inline-flex;align-items:center;gap:8px}
+.vt-btn.active{background:var(--graphite);color:var(--porcelain)}
+
+/* STEPS SECTION */
+.steps-sec{padding:64px 0 80px}
+.steps-view{display:none}
+.steps-view.active{display:block}
+
+.steps-timeline{position:relative;max-width:960px;margin:48px auto 0}
+.steps-timeline::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--porcelain-300);transform:translateX(-50%)}
+
+.step-item{display:grid;grid-template-columns:1fr 80px 1fr;gap:0;margin-bottom:48px;align-items:center}
+.step-item:last-child{margin-bottom:0}
+.step-content{padding:0 32px}
+.step-content.right{text-align:right}
+.step-num-wrap{display:flex;justify-content:center;position:relative;z-index:1}
+.step-num{
+  width:56px;height:56px;border-radius:50%;
+  background:var(--graphite);color:var(--porcelain);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Geist',sans-serif;font-weight:500;font-size:18px;letter-spacing:-0.02em;
+  border:4px solid var(--porcelain);
+}
+.step-num.signal{background:var(--signal)}
+.step-card{
+  background:var(--porcelain);border:1px solid var(--porcelain-300);
+  border-radius:20px;padding:24px 28px;
+}
+.step-card:hover{border-color:var(--graphite-200);box-shadow:0 8px 24px -8px rgba(26,29,30,.08)}
+.step-icon{font-size:28px;margin-bottom:12px}
+.step-card h3{font-size:20px;letter-spacing:-0.02em;margin-bottom:8px}
+.step-card p{font-size:14px;color:var(--graphite-700);line-height:1.6}
+.step-card .step-detail{
+  margin-top:14px;padding-top:14px;border-top:1px solid var(--porcelain-300);
+  display:flex;flex-direction:column;gap:8px;
+}
+.step-detail-item{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--graphite-700)}
+.step-detail-item::before{content:'·';color:var(--signal);font-size:18px;line-height:1;flex-shrink:0}
+
+/* COMPARE */
+.compare-sec{padding:64px 0;background:var(--porcelain-200)}
+.compare-sec h2{font-size:clamp(28px,3vw,40px);text-align:center;margin:14px 0 48px}
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:960px;margin:0 auto}
+.compare-card{background:var(--porcelain);border:1px solid var(--porcelain-300);border-radius:24px;padding:32px}
+.compare-card h3{font-size:22px;letter-spacing:-0.02em;margin-bottom:20px}
+.compare-list{display:flex;flex-direction:column;gap:14px}
+.compare-item{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--graphite-700);line-height:1.5}
+.compare-icon{width:28px;height:28px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:13px}
+.compare-icon.yes{background:var(--signal-soft);color:var(--signal)}
+.compare-icon.no{background:var(--porcelain-300);color:var(--graphite-500)}
+.compare-item .compare-text strong{color:var(--graphite);font-weight:500;display:block}
+
+/* FAQ */
+.faq-sec{padding:80px 0}
+.faq-sec h2{font-size:clamp(28px,3vw,40px);text-align:center;margin:14px 0 48px}
+.faq-list{max-width:780px;margin:0 auto}
+.faq-item{background:var(--porcelain-200);border:1px solid var(--porcelain-300);border-radius:14px;margin-bottom:10px;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;cursor:pointer;font-size:15px;font-weight:500}
+.faq-q-icon{width:24px;height:24px;border-radius:50%;border:1px solid var(--graphite-200);display:flex;align-items:center;justify-content:center;font-size:14px;transition:transform .2s;flex-shrink:0}
+.faq-item.open .faq-q-icon{transform:rotate(45deg);background:var(--signal);color:var(--porcelain);border-color:var(--signal)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s}
+.faq-item.open .faq-a{max-height:400px}
+.faq-a-inner{padding:0 22px 20px;font-size:14.5px;color:var(--graphite-700);line-height:1.6}
+
+/* CTA */
+.cta-sec{padding:64px 0;background:var(--porcelain-200)}
+.cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:960px;margin:0 auto}
+.cta-card{border-radius:24px;padding:40px;text-align:center}
+.cta-card.dark{background:var(--graphite)}
+.cta-card.signal{background:var(--signal)}
+.cta-card h3{font-size:26px;letter-spacing:-0.02em;margin-bottom:10px}
+.cta-card.dark h3,.cta-card.dark p{color:var(--porcelain)}
+.cta-card.signal h3,.cta-card.signal p{color:var(--porcelain)}
+.cta-card p{font-size:15px;margin-bottom:24px;opacity:.85}
+.cta-btn{display:inline-block;padding:13px 28px;border-radius:999px;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;text-decoration:none;cursor:pointer;border:0}
+.cta-btn.white{background:var(--porcelain);color:var(--graphite)}
+.cta-btn.outline-white{background:transparent;color:var(--porcelain);border:2px solid rgba(249,243,237,.4)}
+
+.footer{background:var(--graphite);color:var(--porcelain);padding:48px 0 24px}
+.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}
+.foot-col h5{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.5);margin-bottom:16px}
+.foot-col h5::before{content:'• ';color:var(--signal)}
+.foot-col a{display:block;color:rgba(249,243,237,.7);text-decoration:none;font-size:13.5px;padding:5px 0}
+.foot-col a:hover{color:var(--signal)}
+.foot-bottom{padding-top:24px;display:flex;justify-content:space-between;font-size:12px;color:rgba(249,243,237,.5)}
+@media(max-width:900px){
+  .steps-timeline::before{left:28px}
+  .step-item{grid-template-columns:56px 1fr;gap:16px}
+  .step-content.right{text-align:left;order:2}
+  .step-content:not(.right){display:none}
+  .step-num-wrap{justify-content:flex-start}
+  .compare-grid,.cta-grid,.foot-top{grid-template-columns:1fr;gap:18px}
+}
+</style>
+</head>
+<body>
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="/sk" class="nav-logo"><div class="nav-logo-mark">A</div><div class="nav-logo-name">Alogator</div></a>
+    <div class="nav-links">
+      <a href="/sk/databaza-pracovnikov">Databáza pracovníkov</a>
+      <a href="/sk/ponuka-prace">Pracovné ponuky</a>
+      <a href="/sk/ako-to-funguje" class="active">Ako to funguje</a>
+      <a href="/sk/cennik">Cenník</a>
+      <a href="/sk/o-nas">O nás</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-btn">Prihlásenie</button>
+      <button class="nav-btn primary">Naplánovať demo</button>
+    </div>
+  </div>
+</nav>
+
+<div class="breadcrumb"><div class="container"><a href="/sk">Domov</a><span class="sep">/</span><span>Ako to funguje</span></div></div>
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">ako to funguje</span>
+    <h1>Jednoduché pre <em>každého</em>.</h1>
+    <p class="lead">Či ste firma hľadajúca remeselníkov, alebo remeselník hľadajúci zákazky — Alogator funguje v 4 krokoch. Pre každého inak, ale rovnako jednoducho.</p>
+    <div class="view-toggle">
+      <button class="vt-btn active" onclick="switchView(event,'firma')">🏗️ Som firma</button>
+      <button class="vt-btn" onclick="switchView(event,'worker')">👷 Som pracovník</button>
+    </div>
+  </div>
+</section>
+
+<section class="steps-sec">
+  <div class="container">
+
+    <!-- FIRMA VIEW -->
+    <div class="steps-view active" id="view-firma">
+      <div style="text-align:center;margin-bottom:8px"><span class="eyebrow">pre firmy a agentúry</span></div>
+      <h2 style="text-align:center;font-size:clamp(28px,3vw,40px);margin-bottom:0">Prvý kandidát do <em>24 hodín</em>.</h2>
+
+      <div class="steps-timeline">
+
+        <div class="step-item">
+          <div class="step-content right">
+            <div class="step-card">
+              <div class="step-icon">📋</div>
+              <h3>Registrujte sa zdarma</h3>
+              <p>Vytvoríte účet firmy za 2 minúty. Zadáte IČO, e-mail, heslo. Žiadna kreditná karta — 14 dní zdarma s plným prístupom.</p>
+              <div class="step-detail">
+                <div class="step-detail-item">Aktivuje sa automaticky po registrácii</div>
+                <div class="step-detail-item">Dostanete demo tour po platforme</div>
+                <div class="step-detail-item">Na výber: Free, CRM, Kapacity, Alogator alebo Enterprise</div>
+              </div>
+            </div>
+          </div>
+          <div class="step-num-wrap"><div class="step-num signal">01</div></div>
+          <div class="step-content"></div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-content"></div>
+          <div class="step-num-wrap"><div class="step-num signal">02</div></div>
+          <div class="step-content">
+            <div class="step-card">
+              <div class="step-icon">🔍</div>
+              <h3>Opíšte koho hľadáte</h3>
+              <p>Zadáte požiadavky do AI vyhľadávania: profesia, jazyk, certifikáty, dostupnosť, lokalita. Alogator nájde zhodu v databáze 3 047 pracovníkov.</p>
+              <div class="step-detail">
+                <div class="step-detail-item">AI vyhľadávanie rozumie voľnému textu aj filtrovaniu</div>
+                <div class="step-detail-item">Vidíte real-time kalendár dostupnosti každého</div>
+                <div class="step-detail-item">Filter podľa jazyka, certifikátov, sadzby, lokality</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-content right">
+            <div class="step-card">
+              <div class="step-icon">📞</div>
+              <h3>Kontaktujte priamo</h3>
+              <p>Keď nájdete vhodného kandidáta, odkryjete kontakt (vlastné kontakty v cene, Alogator kontakty doplnkovo). Dohodnutie podmienok prebehne priamo medzi vami — bez sprostredkovateľa.</p>
+              <div class="step-detail">
+                <div class="step-detail-item">Vlastní kontakty (ľudia čo pre vás robili) — v cene predplatného</div>
+                <div class="step-detail-item">Noví Alogator kontakty — doplnková platba</div>
+                <div class="step-detail-item">Alebo pridajte inzerát a čakajte na prihlásenia</div>
+              </div>
+            </div>
+          </div>
+          <div class="step-num-wrap"><div class="step-num signal">03</div></div>
+          <div class="step-content"></div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-content"></div>
+          <div class="step-num-wrap"><div class="step-num signal">04</div></div>
+          <div class="step-content">
+            <div class="step-card">
+              <div class="step-icon">✅</div>
+              <h3>Plánujte a opakujte</h3>
+              <p>Po obsadení projektu pridáte pracovníka do vlastného CRM. Pri ďalšom projekte začínate od vlastných overených kontaktov — nie od nuly. Kalendár dostupnosti vám ukáže, kto je kedy voľný.</p>
+              <div class="step-detail">
+                <div class="step-detail-item">Vlastné CRM — história, hodnotenia, poznámky</div>
+                <div class="step-detail-item">Plánovanie 6+ týždňov dopredu</div>
+                <div class="step-detail-item">Hot leads (Enterprise) — noví pracovníci hneď po onboardingu</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- WORKER VIEW -->
+    <div class="steps-view" id="view-worker">
+      <div style="text-align:center;margin-bottom:8px"><span class="eyebrow">pre pracovníkov</span></div>
+      <h2 style="text-align:center;font-size:clamp(28px,3vw,40px);margin-bottom:0">Prvá ponuka do <em>48 hodín</em>.</h2>
+
+      <div class="steps-timeline">
+
+        <div class="step-item">
+          <div class="step-content right">
+            <div class="step-card">
+              <div class="step-icon">📱</div>
+              <h3>Stiahnite aplikáciu zdarma</h3>
+              <p>Alogator app je na App Store aj Google Play. Registrácia trvá 5 minút — meno, profesia, e-mail. Aplikácia je úplne zdarma, žiadne poplatky ani provízie z výplaty.</p>
+              <div class="step-detail">
+                <div class="step-detail-item">iOS a Android — zadarmo</div>
+                <div class="step-detail-item">Voliteľné PREMIUM členstvo pre lepšiu viditeľnosť</div>
+                <div class="step-detail-item">SZČO aj HPP — vy si vyberiete typ úväzku</div>
+              </div>
+            </div>
+          </div>
+          <div class="step-num-wrap"><div class="step-num">01</div></div>
+          <div class="step-content"></div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-content"></div>
+          <div class="step-num-wrap"><div class="step-num">02</div></div>
+          <div class="step-content">
+            <div class="step-card">
+              <div class="step-icon">🪪</div>
+              <h3>Vyplňte profil</h3>
+              <p>Zadáte profesiu, certifikáty, jazyky, pracovné skúsenosti a sadzbu. Silný profil = viac ponúk. PRO členovia môžu nahrať aj video prezentáciu.</p>
+              <div class="step-detail">
+                <div class="step-detail-item">Certifikáty (EN ISO 9606, VDE, NUC, BOZP...)</div>
+                <div class="step-detail-item">Jazykové znalosti (DE, EN, PL, HU...)</div>
+                <div class="step-detail-item">Pracovná história — firmy a projekty</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-content right">
+            <div class="step-card">
+              <div class="step-icon">📅</div>
+              <h3>Nastavte dostupnosť</h3>
+              <p>V kalendári nastavíte kedy ste voľní. Firmy vidia váš reálny kalendár — kontaktujú len tých, ktorí sú dostupní. Žiadne zbytočné dopyty na nevhodné termíny.</p>
+              <div class="step-detail">
+                <div class="step-detail-item">Týždenný kalendár — označíte voľné a obsadené dni</div>
+                <div class="step-detail-item">Nastavíte aj preferovanú lokalitu (SK, DE, AT, NL...)</div>
+                <div class="step-detail-item">Dream Job notifikácia — push pri novej zhode</div>
+              </div>
+            </div>
+          </div>
+          <div class="step-num-wrap"><div class="step-num">03</div></div>
+          <div class="step-content"></div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-content"></div>
+          <div class="step-num-wrap"><div class="step-num">04</div></div>
+          <div class="step-content">
+            <div class="step-card">
+              <div class="step-icon">💼</div>
+              <h3>Príjmite ponuku</h3>
+              <p>Firmy alebo agentúry vás kontaktujú priamo. Vy si vyberáte — prijmete alebo odmietnete. Podmienky dohodujete priamo, bez prostredníka. Faktúry vystavujete priamo v aplikácii.</p>
+              <div class="step-detail">
+                <div class="step-detail-item">Hodnotenia firiem od iných pracovníkov — viete komu dôverovať</div>
+                <div class="step-detail-item">Faktúry a zmluvy priamo v aplikácii</div>
+                <div class="step-detail-item">História projektov — budujete si reputáciu</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMPARE: Alogator vs tradičný proces -->
+<section class="compare-sec">
+  <div class="container">
+    <span class="eyebrow" style="display:block;text-align:center;margin-bottom:10px">• porovnanie</span>
+    <h2>Alogator vs. <em>tradičný spôsob</em></h2>
+    <div class="compare-grid">
+      <div class="compare-card">
+        <h3 style="color:var(--graphite-500)">❌ Tradičný spôsob</h3>
+        <div class="compare-list">
+          <div class="compare-item"><div class="compare-icon no">—</div><div class="compare-text"><strong>Telefonické dopytovanie</strong>Hodiny telefonovania agentúram, čakanie na odpovede</div></div>
+          <div class="compare-item"><div class="compare-icon no">—</div><div class="compare-text"><strong>Neistá dostupnosť</strong>Nikto nevie povedať kto je voľný a kedy</div></div>
+          <div class="compare-item"><div class="compare-icon no">—</div><div class="compare-text"><strong>Agentúrna marža 15–25 %</strong>Platíte navyše za sprostredkovanie</div></div>
+          <div class="compare-item"><div class="compare-icon no">—</div><div class="compare-text"><strong>Žiadna história</strong>Pri každom projekte začínate od nuly</div></div>
+          <div class="compare-item"><div class="compare-icon no">—</div><div class="compare-text"><strong>Papierová administratíva</strong>Zmluvy, certifikáty, faktúry — chaos</div></div>
+        </div>
+      </div>
+      <div class="compare-card" style="border-color:var(--signal);background:var(--signal-soft)">
+        <h3>✅ S Alogatorom</h3>
+        <div class="compare-list">
+          <div class="compare-item"><div class="compare-icon yes">✓</div><div class="compare-text"><strong>AI vyhľadávanie v sekunde</strong>Opíšete koho hľadáte, Alogator nájde zhody okamžite</div></div>
+          <div class="compare-item"><div class="compare-icon yes">✓</div><div class="compare-text"><strong>Real-time kalendár</strong>Vidíte presne kto je voľný kedy — bez volania</div></div>
+          <div class="compare-item"><div class="compare-icon yes">✓</div><div class="compare-text"><strong>Mesačný flat poplatok</strong>Platíte za platformu, nie za každú zákazku</div></div>
+          <div class="compare-item"><div class="compare-icon yes">✓</div><div class="compare-text"><strong>CRM s históriou</strong>Vlastní overeníľudia vždy ako prví</div></div>
+          <div class="compare-item"><div class="compare-icon yes">✓</div><div class="compare-text"><strong>Všetko digitálne</strong>Profily, certifikáty, faktúry, hodnotenia — v jednej aplikácii</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-sec">
+  <div class="container">
+    <span class="eyebrow" style="display:block;text-align:center;margin-bottom:10px">• otázky</span>
+    <h2>Ako to <em>funguje v praxi</em></h2>
+    <div class="faq-list">
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Ako dlho trvá nájsť prvého kandidáta?<span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Pri Alogator tarife (prístup k celej databáze) väčšina firiem nájde prvého vhodného kandidáta do 24 hodín. Závisí od profesie a špecifickosti požiadaviek. Zvárači a elektrikári sú dostupní takmer vždy, špecializovanejšie profesie (napr. NUC certifikát) môžu trvať 2–3 dni.</div></div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Čo je rozdiel medzi vlastnými kontaktmi a Alogator kontaktmi?<span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Vlastné kontakty sú ľudia, ktorí pre vás už pracovali — importujete ich do Alogatora a vidíte ich kalendár dostupnosti. Sú v cene predplatného. Alogator kontakty sú noví ľudia z databázy, ktorých ste doteraz nepoznali — odkrytie kontaktu je doplnková platba nad rámec predplatného.</div></div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Môže byť firma aj agentúra zároveň?<span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Áno, presne tak funguje väčšina používateľov. Agentúra môže na Alogatore zároveň ponúkať voľné kapacity svojich ľudí (B2B ponuka) aj hľadať ďalších pracovníkov na doplnenie tímu pri veľkom projekte (B2B dopyt). Platforma to podporuje natívne.</div></div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Ako funguje hodnotenie pracovníkov?<span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Po ukončení projektu môže firma ohodnotiť pracovníka (1–5 hviezdičiek + textová recenzia). Hodnotenie je viditeľné pre ostatné firmy na profile pracovníka. Systém verifikuje, že hodnotenie pochádza od firmy, ktorá s pracovníkom skutočne spolupracovala — zamedzuje falošným hodnoteniam.</div></div>
+      </div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Pracovník — komu sa ukáže môj profil?<span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Váš profil je viditeľný firmám a agentúram registrovaným na platforme. Voľné prezeranie (bez registrácie) vidí iba anonymizovaný profil — "Marek N." bez kontaktných údajov. Plné kontaktné údaje sa odhalia len firme, ktorá za to zaplatí alebo má váš predchádzajúci súhlas.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sec">
+  <div class="container">
+    <div class="cta-grid">
+      <div class="cta-card dark">
+        <div style="font-size:36px;margin-bottom:12px">🏗️</div>
+        <h3>Pre firmy a agentúry</h3>
+        <p>14 dní zdarma s plným prístupom. Bez kreditnej karty.</p>
+        <a href="/sk/kontakt" class="cta-btn white">Naplánovať demo →</a>
+      </div>
+      <div class="cta-card signal">
+        <div style="font-size:36px;margin-bottom:12px">👷</div>
+        <h3>Pre pracovníkov</h3>
+        <p>Aplikácia zdarma. iOS + Android. Registrácia 5 minút.</p>
+        <a href="/sk/stiahnut-aplikaciu" class="cta-btn white">Stiahnuť aplikáciu →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-col">
+        <div class="nav-logo" style="margin-bottom:14px"><div class="nav-logo-mark">A</div><div class="nav-logo-name">Alogator</div></div>
+        <p style="font-size:13px;color:rgba(249,243,237,.6);line-height:1.5">Marketplace prepájajúci pracovníkov, agentúry a koncové firmy. SK · CZ · DE · AT · NL · BE</p>
+      </div>
+      <div class="foot-col">
+        <h5>Pre firmy</h5>
+        <a href="/sk/databaza-pracovnikov">Databáza pracovníkov</a>
+        <a href="/sk/cennik">Cenník</a>
+        <a href="/sk/kontakt">Naplánovať demo</a>
+      </div>
+      <div class="foot-col">
+        <h5>Pre pracovníkov</h5>
+        <a href="/sk/ponuka-prace">Pracovné ponuky</a>
+        <a href="/sk/stiahnut-aplikaciu">Stiahnuť aplikáciu</a>
+      </div>
+      <div class="foot-col">
+        <h5>Spoločnosť</h5>
+        <a href="/sk/o-nas">O nás</a>
+        <a href="/sk/kontakt">Kontakt</a>
+        <a href="/sk/vseobecne-obchodne-podmienky">VOP</a>
+        <a href="/sk/gdpr">GDPR</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Alogator · Profi Steel Holding</div>
+      <div>Made in Slovakia · alogator.com/sk</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function switchView(e, view) {
+  document.querySelectorAll('.vt-btn').forEach(b => b.classList.remove('active'));
+  e.target.closest('.vt-btn').classList.add('active');
+  document.querySelectorAll('.steps-view').forEach(v => v.classList.remove('active'));
+  document.getElementById('view-' + view).classList.add('active');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kontakt · Naplánovať demo · Alogator</title>
+<meta name="description" content="Naplánovajte si demo Alogatora. Odpovieme do 24 hodín. Pre firmy hľadajúce remeselníkov aj pre pracovníkov hľadajúcich prácu.">
+<link rel="canonical" href="https://alogator.com/sk/kontakt">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --signal:#E66748;--signal-dark:#D4573A;--signal-soft:#FDE8E0;
+  --graphite:#1A1D1E;--graphite-700:#3F4445;--graphite-500:#6B7174;--graphite-200:#D9D9D6;
+  --porcelain:#F9F3ED;--porcelain-200:#F0E8DD;--porcelain-300:#E8DFD1;
+  --yellow:#F5D547;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--porcelain);color:var(--graphite);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--signal)}
+.eyebrow::before{content:'• '}
+h1,h2,h3,h4{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.025em;line-height:1.08;color:var(--graphite)}
+em{font-style:italic;color:var(--signal);font-weight:500}
+
+/* NAVBAR */
+.navbar{background:var(--graphite);color:var(--porcelain);padding:18px 0}
+.nav-inner{display:flex;justify-content:space-between;align-items:center}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--porcelain)}
+.nav-logo-mark{width:32px;height:32px;background:var(--signal);border-radius:9px;display:flex;align-items:center;justify-content:center;font-family:'Geist',sans-serif;font-weight:500;font-size:16px}
+.nav-logo-name{font-family:'Geist',sans-serif;font-weight:500;font-size:20px}
+.nav-links{display:flex;gap:32px}
+.nav-links a{color:rgba(249,243,237,.85);text-decoration:none;font-size:14px}
+.nav-links a.active{color:var(--porcelain);font-weight:500}
+.nav-actions{display:flex;gap:10px;align-items:center}
+.nav-btn{background:transparent;border:1px solid rgba(249,243,237,.2);color:var(--porcelain);padding:8px 18px;border-radius:999px;font-size:13.5px;cursor:pointer}
+.nav-btn.primary{background:var(--signal);border-color:var(--signal)}
+
+/* BREADCRUMB */
+.breadcrumb{padding:18px 0 8px;font-size:12.5px;color:var(--graphite-500);font-family:'JetBrains Mono',monospace}
+.breadcrumb a{color:var(--graphite-500);text-decoration:none}
+.breadcrumb a:hover{color:var(--signal)}
+.breadcrumb .sep{margin:0 8px;color:var(--graphite-200)}
+
+/* HERO */
+.hero{padding:56px 0 0}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:flex-start}
+.hero-left h1{font-size:clamp(40px,4.5vw,60px);margin-top:16px;margin-bottom:16px}
+.hero-left p.lead{font-size:17px;color:var(--graphite-700);line-height:1.6;max-width:480px;margin-bottom:32px}
+
+/* Typ kontaktu toggle */
+.contact-type{display:flex;gap:10px;margin-bottom:40px}
+.ct-btn{
+  flex:1;background:var(--porcelain);border:1.5px solid var(--porcelain-300);
+  border-radius:16px;padding:16px 18px;cursor:pointer;text-align:left;
+  transition:all .15s;font-family:'Inter',sans-serif;
+}
+.ct-btn:hover{border-color:var(--graphite-200)}
+.ct-btn.active{background:var(--graphite);border-color:var(--graphite);color:var(--porcelain)}
+.ct-btn .ct-icon{font-size:22px;margin-bottom:8px;display:block}
+.ct-btn .ct-label{font-family:'Geist',sans-serif;font-weight:500;font-size:15px;display:block;margin-bottom:3px}
+.ct-btn.active .ct-label{color:var(--porcelain)}
+.ct-btn .ct-sub{font-size:12px;color:var(--graphite-500);line-height:1.4}
+.ct-btn.active .ct-sub{color:rgba(249,243,237,.6)}
+
+/* Priame kontakty */
+.direct-contacts{display:flex;flex-direction:column;gap:12px;margin-bottom:32px}
+.dc-item{
+  display:flex;align-items:center;gap:14px;
+  background:var(--porcelain-200);border:1px solid var(--porcelain-300);
+  border-radius:14px;padding:14px 18px;text-decoration:none;color:var(--graphite);
+  transition:border-color .15s;
+}
+.dc-item:hover{border-color:var(--graphite-200)}
+.dc-icon{
+  width:40px;height:40px;border-radius:11px;
+  background:var(--signal-soft);color:var(--signal);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;font-size:18px;
+}
+.dc-content{}
+.dc-label{font-size:11.5px;color:var(--graphite-500);font-family:'JetBrains Mono',monospace;letter-spacing:0.05em;text-transform:uppercase}
+.dc-value{font-family:'Geist',sans-serif;font-weight:500;font-size:15px;color:var(--graphite);letter-spacing:-0.01em}
+
+/* Promise badges */
+.promises{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.promise{
+  background:var(--porcelain-200);border:1px solid var(--porcelain-300);
+  border-radius:12px;padding:14px;display:flex;gap:10px;align-items:flex-start;
+}
+.promise-icon{
+  width:28px;height:28px;border-radius:8px;
+  background:var(--signal-soft);color:var(--signal);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;font-size:13px;
+}
+.promise-text{font-size:13px;color:var(--graphite-700);line-height:1.4}
+.promise-text strong{color:var(--graphite);font-weight:500;display:block;margin-bottom:1px}
+
+/* FORMULÁR */
+.form-card{
+  background:var(--porcelain);border:1px solid var(--porcelain-300);
+  border-radius:24px;padding:36px;
+  box-shadow:0 8px 40px -12px rgba(26,29,30,.1);
+}
+.form-card h2{font-size:24px;letter-spacing:-0.02em;margin-bottom:6px}
+.form-card .form-sub{font-size:14px;color:var(--graphite-500);margin-bottom:28px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group.full{grid-column:1/-1}
+.form-label{
+  font-size:12px;font-weight:500;color:var(--graphite-700);
+  font-family:'JetBrains Mono',monospace;letter-spacing:0.05em;text-transform:uppercase;
+}
+.form-label .req{color:var(--signal)}
+.form-input,.form-select,.form-textarea{
+  background:var(--porcelain-200);border:1.5px solid var(--porcelain-300);
+  border-radius:11px;padding:12px 14px;
+  font-family:'Inter',sans-serif;font-size:14px;color:var(--graphite);
+  transition:border-color .15s;outline:none;width:100%;
+}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--signal)}
+.form-input::placeholder,.form-textarea::placeholder{color:var(--graphite-500)}
+.form-textarea{resize:vertical;min-height:100px}
+.form-select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236B7174' stroke-width='2'><polyline points='6 9 12 15 18 9'/></svg>");background-repeat:no-repeat;background-position:right 12px center;background-size:16px;padding-right:36px}
+
+/* Slot picker */
+.slot-picker{grid-column:1/-1}
+.slot-label-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.slots-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.slot-btn{
+  background:var(--porcelain-200);border:1.5px solid var(--porcelain-300);
+  border-radius:10px;padding:10px 8px;cursor:pointer;
+  font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:var(--graphite-700);
+  text-align:center;transition:all .15s;
+}
+.slot-btn:hover{border-color:var(--graphite-200);color:var(--graphite)}
+.slot-btn.selected{background:var(--graphite);border-color:var(--graphite);color:var(--porcelain)}
+.slot-btn.busy{background:var(--porcelain-300);color:var(--graphite-500);cursor:not-allowed;text-decoration:line-through}
+.slot-day{font-size:10px;color:inherit;opacity:.7;margin-bottom:2px}
+
+/* Segment select */
+.segment-btns{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;grid-column:1/-1}
+.seg-btn{
+  background:var(--porcelain-200);border:1.5px solid var(--porcelain-300);
+  border-radius:11px;padding:12px;cursor:pointer;text-align:center;
+  font-family:'Inter',sans-serif;font-size:13px;font-weight:500;color:var(--graphite-700);
+  transition:all .15s;
+}
+.seg-btn:hover{border-color:var(--graphite-200)}
+.seg-btn.active{background:var(--signal-soft);border-color:var(--signal);color:var(--signal-dark)}
+.seg-icon{font-size:18px;display:block;margin-bottom:4px}
+
+.form-submit{
+  width:100%;padding:15px;border-radius:999px;border:0;
+  background:var(--signal);color:var(--porcelain);
+  font-family:'Inter',sans-serif;font-size:15px;font-weight:500;cursor:pointer;
+  margin-top:8px;transition:background .15s;
+}
+.form-submit:hover{background:var(--signal-dark)}
+.form-note{font-size:12px;color:var(--graphite-500);text-align:center;margin-top:10px;line-height:1.5}
+
+/* WHAT TO EXPECT */
+.expect-sec{padding:80px 0;background:var(--porcelain-200)}
+.expect-sec h2{font-size:clamp(28px,3vw,40px);text-align:center;margin:14px 0 14px}
+.expect-sec .sub{text-align:center;color:var(--graphite-500);margin-bottom:48px;max-width:560px;margin-left:auto;margin-right:auto}
+.expect-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.expect-step{text-align:center;padding:28px 20px}
+.expect-num{
+  width:52px;height:52px;border-radius:50%;
+  background:var(--signal-soft);color:var(--signal);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Geist',sans-serif;font-weight:500;font-size:20px;letter-spacing:-0.02em;
+  margin:0 auto 16px;
+}
+.expect-step h4{font-size:16px;letter-spacing:-0.015em;margin-bottom:8px}
+.expect-step p{font-size:13.5px;color:var(--graphite-700);line-height:1.55}
+
+/* FAQ */
+.faq-sec{padding:80px 0;background:var(--porcelain)}
+.faq-sec h2{font-size:clamp(28px,3vw,40px);text-align:center;margin-bottom:48px}
+.faq-list{max-width:780px;margin:0 auto}
+.faq-item{background:var(--porcelain-200);border:1px solid var(--porcelain-300);border-radius:14px;margin-bottom:10px;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;cursor:pointer;font-size:15px;font-weight:500}
+.faq-q-icon{width:24px;height:24px;border-radius:50%;border:1px solid var(--graphite-200);display:flex;align-items:center;justify-content:center;font-size:14px;transition:transform .2s;flex-shrink:0}
+.faq-item.open .faq-q-icon{transform:rotate(45deg);background:var(--signal);color:var(--porcelain);border-color:var(--signal)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s}
+.faq-item.open .faq-a{max-height:400px}
+.faq-a-inner{padding:0 22px 20px;font-size:14.5px;color:var(--graphite-700);line-height:1.6}
+
+/* SUCCESS STATE */
+.success-state{display:none;text-align:center;padding:48px 24px}
+.success-icon{
+  width:80px;height:80px;border-radius:50%;
+  background:rgba(63,125,95,.12);color:var(--green,#3F7D5F);
+  display:flex;align-items:center;justify-content:center;
+  font-size:36px;margin:0 auto 20px;
+}
+.success-state h3{font-size:28px;letter-spacing:-0.02em;margin-bottom:10px}
+.success-state p{font-size:15px;color:var(--graphite-700);max-width:380px;margin:0 auto 24px;line-height:1.6}
+.success-back{
+  background:var(--graphite);color:var(--porcelain);border:0;
+  padding:13px 24px;border-radius:999px;
+  font-family:'Inter',sans-serif;font-size:14px;font-weight:500;cursor:pointer;
+}
+
+/* FOOTER */
+.footer{background:var(--graphite);color:var(--porcelain);padding:48px 0 24px}
+.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}
+.foot-col h5{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.5);margin-bottom:16px}
+.foot-col h5::before{content:'• ';color:var(--signal)}
+.foot-col a{display:block;color:rgba(249,243,237,.7);text-decoration:none;font-size:13.5px;padding:5px 0}
+.foot-col a:hover{color:var(--signal)}
+.foot-bottom{padding-top:24px;display:flex;justify-content:space-between;font-size:12px;color:rgba(249,243,237,.5)}
+
+@media(max-width:900px){
+  .hero-grid,.expect-steps,.foot-top{grid-template-columns:1fr;gap:32px}
+  .form-grid{grid-template-columns:1fr}
+  .form-group.full{grid-column:1}
+  .slot-picker,.segment-btns{grid-column:1}
+  .slots-grid{grid-template-columns:repeat(2,1fr)}
+  .segment-btns{grid-template-columns:1fr}
+  .contact-type{flex-direction:column}
+  .promises{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="/sk" class="nav-logo">
+      <div class="nav-logo-mark">A</div>
+      <div class="nav-logo-name">Alogator</div>
+    </a>
+    <div class="nav-links">
+      <a href="/sk/databaza-pracovnikov">Databáza pracovníkov</a>
+      <a href="/sk/ponuka-prace">Pracovné ponuky</a>
+      <a href="/sk/ako-to-funguje">Ako to funguje</a>
+      <a href="/sk/cennik">Cenník</a>
+      <a href="/sk/o-nas">O nás</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-btn">Prihlásenie</button>
+      <button class="nav-btn primary">Naplánovať demo</button>
+    </div>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="container">
+    <a href="/sk">Domov</a>
+    <span class="sep">/</span>
+    <span>Kontakt</span>
+  </div>
+</div>
+
+<!-- HERO + FORM -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+
+      <!-- LEFT -->
+      <div class="hero-left">
+        <span class="eyebrow">kontakt</span>
+        <h1>Naplánovať <em>demo</em>.</h1>
+        <p class="lead">Ukážeme vám Alogator naživo — ako funguje databáza, kalendár dostupnosti, inzeráty. Odpovieme do 24 hodín.</p>
+
+        <!-- Typ kontaktu -->
+        <div class="contact-type">
+          <button class="ct-btn active" onclick="switchType(event,'firma')">
+            <span class="ct-icon">🏗️</span>
+            <span class="ct-label">Sme firma</span>
+            <span class="ct-sub">Hľadáme pracovníkov, chceme demo alebo cenovú ponuku</span>
+          </button>
+          <button class="ct-btn" onclick="switchType(event,'worker')">
+            <span class="ct-icon">👷</span>
+            <span class="ct-label">Som pracovník</span>
+            <span class="ct-sub">Mám otázku o appke alebo registrácii</span>
+          </button>
+        </div>
+
+        <!-- Priame kontakty -->
+        <div class="direct-contacts">
+          <a href="mailto:demo@alogator.com" class="dc-item">
+            <div class="dc-icon">✉️</div>
+            <div class="dc-content">
+              <div class="dc-label">E-mail · firmy a demo</div>
+              <div class="dc-value">demo@alogator.com</div>
+            </div>
+          </a>
+          <a href="tel:+421905123456" class="dc-item">
+            <div class="dc-icon">📞</div>
+            <div class="dc-content">
+              <div class="dc-label">Telefón · Po–Pia 9–17</div>
+              <div class="dc-value">+421 905 123 456</div>
+            </div>
+          </a>
+          <a href="mailto:support@alogator.com" class="dc-item">
+            <div class="dc-icon">🛟</div>
+            <div class="dc-content">
+              <div class="dc-label">Podpora · pracovníci</div>
+              <div class="dc-value">support@alogator.com</div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Promises -->
+        <div class="promises">
+          <div class="promise">
+            <span class="promise-icon">⚡</span>
+            <div class="promise-text">
+              <strong>Odpoveď do 24h</strong>
+              Každý pracovný deň garantujeme odpoveď.
+            </div>
+          </div>
+          <div class="promise">
+            <span class="promise-icon">🎯</span>
+            <div class="promise-text">
+              <strong>Demo na mieru</strong>
+              Ukážeme presne to, čo vás zaujíma.
+            </div>
+          </div>
+          <div class="promise">
+            <span class="promise-icon">🇸🇰</span>
+            <div class="promise-text">
+              <strong>Slovensky aj nemecky</strong>
+              Demo viete mať v SK, CZ alebo DE jazyku.
+            </div>
+          </div>
+          <div class="promise">
+            <span class="promise-icon">🆓</span>
+            <div class="promise-text">
+              <strong>14 dní zdarma</strong>
+              Po demo vám aktivujeme skúšobné obdobie.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT — FORMULÁR -->
+      <div>
+        <div class="form-card">
+
+          <!-- Success state (skryté, ukáže sa po odoslaní) -->
+          <div class="success-state" id="success-state">
+            <div class="success-icon">✓</div>
+            <h3>Správa odoslaná!</h3>
+            <p>Ozveme sa vám do <strong>24 hodín</strong>. Skontrolujte aj Spam priečinok.</p>
+            <button class="success-back" onclick="document.getElementById('success-state').style.display='none';document.getElementById('contact-form').style.display='block'">← Späť na formulár</button>
+          </div>
+
+          <!-- Formulár -->
+          <div id="contact-form">
+            <h2>Napíšte nám</h2>
+            <p class="form-sub">Vyplňte formulár a ozveme sa do 24 hodín.</p>
+
+            <div class="form-grid">
+
+              <!-- Segment -->
+              <div class="segment-btns">
+                <button class="seg-btn active" onclick="selectSeg(event,'firma')">
+                  <span class="seg-icon">🏗️</span>Firma / Agentúra
+                </button>
+                <button class="seg-btn" onclick="selectSeg(event,'worker')">
+                  <span class="seg-icon">👷</span>Pracovník
+                </button>
+                <button class="seg-btn" onclick="selectSeg(event,'other')">
+                  <span class="seg-icon">💬</span>Iné
+                </button>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Meno a priezvisko <span class="req">*</span></label>
+                <input class="form-input" type="text" placeholder="Ján Novák" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Firma</label>
+                <input class="form-input" type="text" placeholder="ACME s.r.o.">
+              </div>
+              <div class="form-group">
+                <label class="form-label">E-mail <span class="req">*</span></label>
+                <input class="form-input" type="email" placeholder="jan@acme.sk" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Telefón</label>
+                <input class="form-input" type="tel" placeholder="+421 9XX XXX XXX">
+              </div>
+              <div class="form-group full">
+                <label class="form-label">Čo vás zaujíma?</label>
+                <select class="form-select">
+                  <option value="">Vybrať tému...</option>
+                  <option>Demo platformy</option>
+                  <option>Cenník a tarify</option>
+                  <option>API integrácia (WF/technická)</option>
+                  <option>Partnerstvo / agentúra</option>
+                  <option>Podpora pre pracovníka</option>
+                  <option>Iné</option>
+                </select>
+              </div>
+              <div class="form-group full">
+                <label class="form-label">Správa</label>
+                <textarea class="form-textarea" placeholder="Napríklad: Hľadáme 5 zváračov na projekt v Nemecku od júna, chceme vidieť ako funguje kalendár dostupnosti..."></textarea>
+              </div>
+
+              <!-- Slot picker -->
+              <div class="form-group slot-picker">
+                <div class="slot-label-row">
+                  <label class="form-label">Preferovaný čas demo callu</label>
+                  <span style="font-size:11.5px;color:var(--graphite-500)">(nepovinné)</span>
+                </div>
+                <div class="slots-grid">
+                  <button class="slot-btn" onclick="selectSlot(this)"><div class="slot-day">Ut 3.6.</div>10:00</button>
+                  <button class="slot-btn" onclick="selectSlot(this)"><div class="slot-day">Ut 3.6.</div>14:00</button>
+                  <button class="slot-btn" onclick="selectSlot(this)"><div class="slot-day">St 4.6.</div>9:00</button>
+                  <button class="slot-btn busy"><div class="slot-day">St 4.6.</div>11:00</button>
+                  <button class="slot-btn" onclick="selectSlot(this)"><div class="slot-day">Št 5.6.</div>10:00</button>
+                  <button class="slot-btn" onclick="selectSlot(this)"><div class="slot-day">Št 5.6.</div>15:00</button>
+                  <button class="slot-btn" onclick="selectSlot(this)"><div class="slot-day">Pi 6.6.</div>9:00</button>
+                  <button class="slot-btn" onclick="selectSlot(this)"><div class="slot-day">Pi 6.6.</div>13:00</button>
+                </div>
+              </div>
+
+              <div class="form-group full">
+                <button class="form-submit" onclick="submitForm(event)">Odoslať správu →</button>
+                <p class="form-note">Odoslaním súhlasíte so spracovaním osobných údajov podľa <a href="/sk/gdpr" style="color:var(--signal)">GDPR zásad</a>. Vaše údaje neposkytneme tretím stranám.</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHAT TO EXPECT -->
+<section class="expect-sec">
+  <div class="container">
+    <span class="eyebrow" style="display:block;text-align:center;margin-bottom:10px">• čo sa stane po odoslaní</span>
+    <h2>Čo sa stane <em>ďalej</em></h2>
+    <p class="sub">Od prvého kontaktu po aktívny účet — zvyčajne do 48 hodín.</p>
+
+    <div class="expect-steps">
+      <div class="expect-step">
+        <div class="expect-num">01</div>
+        <h4>Odošlete formulár</h4>
+        <p>Vyplníte kontaktné údaje a voliteľne vyberiete čas demo callu.</p>
+      </div>
+      <div class="expect-step">
+        <div class="expect-num">02</div>
+        <h4>Ozveme sa do 24h</h4>
+        <p>Náš tím vás kontaktuje e-mailom alebo telefonicky a potvrdí termín dema.</p>
+      </div>
+      <div class="expect-step">
+        <div class="expect-num">03</div>
+        <h4>30-minútové demo</h4>
+        <p>Ukážeme vám platformu naživo — databázu, kalendár, inzeráty, cenník podľa vašich potrieb.</p>
+      </div>
+      <div class="expect-step">
+        <div class="expect-num">04</div>
+        <h4>14 dní skúšobný prístup</h4>
+        <p>Po deme aktivujeme váš účet s plným prístupom zdarma. Bez kreditnej karty.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-sec">
+  <div class="container">
+    <span class="eyebrow" style="display:block;text-align:center;margin-bottom:10px">• otázky</span>
+    <h2>Rýchle otázky</h2>
+    <div class="faq-list">
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Ako dlho trvá demo call?<span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Zvyčajne 30 minút. Pre väčšie firmy (Enterprise) ponúkame aj 60-minútové demo s technickým tímom (API integrácia, SSO). Vopred vám pošleme agendu a otázky, aby sme čas využili efektívne.</div></div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Môžem demo absolvovať sám alebo je nutný tím?<span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Demo absolvujete sami alebo s kolegami — je to na vás. Pre rozhodnutie o Enterprise pláne odporúčame prizvať aj technického človeka (HR, IT). Pre Starter/Pro plán stačí jeden kontakt.</div></div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Čo potrebujem pred demom pripraviť?<span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Nič špeciálne. Pomôže ak viete odpovedať na: Koľko pracovníkov ročne hľadáte? Aké profesie? V ktorých krajinách? Aký je váš aktuálny proces náboru? Na základe toho demo prispôsobíme vašim potrebám.</div></div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Akým jazykom prebehne demo?<span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Demo môžeme viesť v slovenčine, češtine alebo nemčine. Ak ste firma z DE/AT — bez problémov vám ukážeme platformu v nemeckom UI a zodpovieme otázky na DE.</div></div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Mám záujem len o cenovú ponuku, nie demo — je to OK?<span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Samozrejme. V správe napíšte "cenová ponuka" a pošlite nám váš objem (koľko pracovníkov, aké profesie, krajiny). Pošleme vám priamu ponuku e-mailom bez nutnosti demo callu.</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-col">
+        <div class="nav-logo" style="margin-bottom:14px">
+          <div class="nav-logo-mark">A</div>
+          <div class="nav-logo-name">Alogator</div>
+        </div>
+        <p style="font-size:13px;color:rgba(249,243,237,.6);line-height:1.5">Marketplace prepájajúci pracovníkov, agentúry a koncové firmy. SK · CZ · DE · AT · NL · BE</p>
+      </div>
+      <div class="foot-col">
+        <h5>Pre firmy</h5>
+        <a href="/sk/pre-firmy">Pre firmy</a>
+        <a href="/sk/databaza-pracovnikov">Databáza pracovníkov</a>
+        <a href="/sk/cennik">Cenník</a>
+        <a href="/sk/kontakt">Naplánovať demo</a>
+      </div>
+      <div class="foot-col">
+        <h5>Pre pracovníkov</h5>
+        <a href="/sk/ponuka-prace">Pracovné ponuky</a>
+        <a href="/sk/stiahnut-aplikaciu">Stiahnuť aplikáciu</a>
+        <a href="/sk/ako-to-funguje">Ako to funguje</a>
+      </div>
+      <div class="foot-col">
+        <h5>Spoločnosť</h5>
+        <a href="/sk/o-nas">O nás</a>
+        <a href="/sk/kontakt">Kontakt</a>
+        <a href="/sk/vseobecne-obchodne-podmienky">VOP</a>
+        <a href="/sk/gdpr">GDPR</a>
+        <a href="/sk/cookies">Cookies</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Alogator · Profi Steel Holding · Všetky práva vyhradené</div>
+      <div>Made in Slovakia · alogator.com/sk</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Contact type toggle
+function switchType(e, type) {
+  document.querySelectorAll('.ct-btn').forEach(b => b.classList.remove('active'));
+  e.target.closest('.ct-btn').classList.add('active');
+}
+
+// Segment select
+function selectSeg(e, seg) {
+  document.querySelectorAll('.seg-btn').forEach(b => b.classList.remove('active'));
+  e.target.closest('.seg-btn').classList.add('active');
+}
+
+// Slot select
+function selectSlot(btn) {
+  document.querySelectorAll('.slot-btn:not(.busy)').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+}
+
+// Form submit (simulácia — WF napojí reálny endpoint)
+function submitForm(e) {
+  e.preventDefault();
+  const name = document.querySelector('input[type="text"]').value;
+  const email = document.querySelector('input[type="email"]').value;
+  if (!name || !email) {
+    alert('Prosím vyplňte meno a e-mail.');
+    return;
+  }
+  document.getElementById('contact-form').style.display = 'none';
+  document.getElementById('success-state').style.display = 'block';
+}
+</script>
+
+</body>
+</html>

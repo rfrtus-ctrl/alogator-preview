@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Práce pro zámečníky v Česku — ocelové konstrukce, brány, zábradlí · Alogator</title>
+<meta name="description" content="Pracovní nabídky pro zámečníky — ocelové konstrukce, brány, zábradlí, MIG/MAG. Práce v Česku i v zahraničí (Německo, Rakousko). Vytvořte si profil zdarma a firmy vás osloví samy.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<style>
+:root{--signal:#E66748;--signal-dark:#D4573A;--signal-soft:#FDE8E0;--graphite:#1A1D1E;--graphite-700:#3F4445;--graphite-500:#6B7174;--graphite-200:#D9D9D6;--porcelain:#F9F3ED;--porcelain-200:#F0E8DD;--porcelain-300:#E8DFD1;--yellow:#F5D547;--green:#3F7D5F}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:var(--porcelain);color:var(--graphite);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}.container{max-width:1280px;margin:0 auto;padding:0 24px}.eyebrow{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--signal)}.eyebrow::before{content:'• '}h1,h2,h3,h4{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.025em;line-height:1.1;color:var(--graphite)}em{font-style:italic;color:var(--signal);font-weight:500}
+.flag{width:18px;height:13px;border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 0 1px rgba(26,29,30,.08)}.flag-cz{background:linear-gradient(135deg,#fff 50%,#D7141A 50%);position:relative}.flag-cz::before{content:'';position:absolute;left:0;top:0;bottom:0;width:50%;background:#11457E;clip-path:polygon(0 0,100% 50%,0 100%)}.flag-de{background:linear-gradient(to bottom,#000 33%,#dd0000 33% 66%,#ffce00 66%)}.flag-at{background:linear-gradient(to bottom,#ED2939 50%,#fff 50%)}.flag-nl{background:linear-gradient(to bottom,#AE1C28 33%,#fff 33% 66%,#21468B 66%)}
+.navbar{background:var(--graphite);color:var(--porcelain);padding:18px 0}.nav-inner{display:flex;justify-content:space-between;align-items:center}.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--porcelain)}.nav-logo-mark{width:32px;height:32px;background:var(--signal);border-radius:9px;display:flex;align-items:center;justify-content:center;font-family:'Geist',sans-serif;font-weight:500;font-size:16px}.nav-logo-name{font-family:'Geist',sans-serif;font-weight:500;font-size:20px}.nav-links{display:flex;gap:32px}.nav-links a{color:rgba(249,243,237,.85);text-decoration:none;font-size:14px}.nav-links a.active{color:var(--porcelain);font-weight:500}.nav-actions{display:flex;gap:10px;align-items:center}.nav-btn{background:transparent;border:1px solid rgba(249,243,237,.2);color:var(--porcelain);padding:8px 18px;border-radius:999px;font-size:13.5px;cursor:pointer}.nav-btn.primary{background:var(--signal);border-color:var(--signal)}
+.breadcrumb{padding:18px 0 8px;background:var(--porcelain);font-size:12.5px;color:var(--graphite-500);font-family:'JetBrains Mono',monospace}.breadcrumb a{color:var(--graphite-500);text-decoration:none}.breadcrumb a:hover{color:var(--signal)}.breadcrumb .sep{margin:0 8px;color:var(--graphite-200)}
+.job-header{padding:24px 0 40px;background:var(--porcelain)}.job-header-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:flex-start}.urgency-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.urgency-badge{display:inline-flex;align-items:center;gap:6px;background:var(--signal-soft);color:var(--signal-dark);padding:5px 11px;border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase}.urgency-badge.hot{background:var(--signal);color:var(--porcelain)}.urgency-badge.new{background:var(--yellow);color:var(--graphite)}.urgency-badge .dot{width:6px;height:6px;border-radius:50%;background:currentColor;animation:pulse 1.5s ease-in-out infinite}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.job-main{display:flex;gap:20px;align-items:flex-start}.job-info{flex:1;min-width:0}.job-title{font-family:'Geist',sans-serif;font-weight:500;font-size:36px;letter-spacing:-0.02em;color:var(--graphite);line-height:1.1;margin-bottom:8px}.job-meta-row{display:flex;flex-wrap:wrap;gap:18px;font-size:13.5px;color:var(--graphite-700);padding-top:16px;border-top:1px solid var(--porcelain-300)}.job-meta-item{display:inline-flex;align-items:center;gap:7px}.job-meta-item strong{color:var(--graphite);font-weight:500}
+.rate-card{background:var(--graphite);color:var(--porcelain);border-radius:24px;padding:32px;position:sticky;top:24px}.rate-card-label{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.6)}.rate-card-label::before{content:'• ';color:var(--signal)}.rate-row{display:flex;align-items:baseline;gap:6px;margin:10px 0 4px}.rate-num{font-family:'Geist',sans-serif;font-weight:500;font-size:48px;letter-spacing:-0.025em;color:var(--porcelain);line-height:1}.rate-unit{font-size:14px;color:rgba(249,243,237,.6)}.rate-note{font-size:12.5px;color:rgba(249,243,237,.6);margin-bottom:20px}.rate-bonuses{display:flex;flex-direction:column;gap:8px;margin-bottom:22px}.bonus-row{display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(249,243,237,.9)}.bonus-icon{width:20px;height:20px;border-radius:50%;background:rgba(124,201,92,.2);color:#7CC95C;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;font-weight:700}.bonus-row strong{color:var(--porcelain);font-weight:500}.rate-cta{background:var(--signal);color:var(--porcelain);border:0;width:100%;padding:14px;border-radius:999px;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;cursor:pointer;margin-bottom:10px}.rate-cta:hover{background:var(--signal-dark)}.rate-cta-secondary{background:transparent;color:var(--porcelain);border:1px solid rgba(249,243,237,.25);width:100%;padding:13px;border-radius:999px;font-family:'Inter',sans-serif;font-size:13.5px;font-weight:500;cursor:pointer}.rate-applicants{display:flex;align-items:center;gap:10px;margin-top:18px;padding-top:18px;border-top:1px solid rgba(249,243,237,.1);font-size:12px;color:rgba(249,243,237,.7)}.applicants-avatars{display:flex}.applicants-avatars span{width:26px;height:26px;border-radius:50%;border:2px solid var(--graphite);display:flex;align-items:center;justify-content:center;font-family:'Geist',sans-serif;font-weight:500;font-size:11px;color:var(--porcelain);margin-left:-7px}.applicants-avatars span:first-child{margin-left:0}
+.job-content{padding:40px 0 64px;background:var(--porcelain)}.job-content-grid{display:grid;grid-template-columns:2fr 1fr;gap:48px;align-items:flex-start}
+.sec-card{background:var(--porcelain);border:1px solid var(--porcelain-300);border-radius:24px;padding:32px;margin-bottom:18px}.sec-card h2{font-size:22px;letter-spacing:-0.02em;margin-bottom:18px}.sec-card h2 em{font-style:italic;color:var(--signal)}.sec-card .label{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--signal)}.sec-card .label::before{content:'• '}
+.desc-text{font-size:15px;line-height:1.65;color:var(--graphite-700)}.desc-text p{margin-bottom:14px}.desc-text strong{color:var(--graphite);font-weight:500}.desc-text h3{font-family:'Geist',sans-serif;font-weight:500;font-size:16px;letter-spacing:-0.015em;color:var(--graphite);margin:18px 0 10px}.desc-text ul{padding-left:0;list-style:none;margin-bottom:14px}.desc-text li{padding-left:20px;position:relative;margin-bottom:8px;line-height:1.6}.desc-text li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--signal)}.desc-text a{color:var(--signal);text-decoration:none;font-weight:500}.desc-text a:hover{text-decoration:underline}
+.summary-widget{background:var(--porcelain-200);border-radius:18px;padding:24px}.summary-row{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid var(--porcelain-300)}.summary-row:first-child{padding-top:0}.summary-row:last-child{border-bottom:0;padding-bottom:0}.summary-icon{width:32px;height:32px;border-radius:9px;background:var(--signal-soft);color:var(--signal);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px}.summary-content{flex:1;min-width:0}.summary-label{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--graphite-500);margin-bottom:2px}.summary-val{font-family:'Geist',sans-serif;font-weight:500;font-size:14px;color:var(--graphite);letter-spacing:-0.01em}.summary-sub{font-size:11.5px;color:var(--graphite-500);margin-top:2px}
+.similar-sec{padding:64px 0;background:var(--porcelain-200)}.similar-sec h2{font-size:clamp(24px,2.5vw,32px);margin-bottom:24px}.similar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.jcard{background:var(--porcelain);border:1px solid var(--porcelain-300);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:12px;cursor:pointer;transition:transform .2s,border-color .2s}.jcard:hover{transform:translateY(-3px);border-color:var(--graphite-200)}.jcard-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}.jcard-meta{flex:1;min-width:0}.jcard-loc{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--graphite-500);letter-spacing:0.05em;display:inline-flex;align-items:center;gap:6px;margin-bottom:6px}.jcard-title{font-family:'Geist',sans-serif;font-weight:500;font-size:16px;letter-spacing:-0.015em;color:var(--graphite);line-height:1.2}.jcard-company{font-size:12px;color:var(--graphite-500);margin-top:3px}.jcard-rate{display:flex;align-items:baseline;gap:4px;margin-top:8px;padding-top:12px;border-top:1px solid var(--porcelain-300)}.jcard-rate-num{font-family:'Geist',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.02em}.jcard-rate-unit{font-size:11px;color:var(--graphite-500)}.jcard-tags{display:flex;gap:5px;flex-wrap:wrap}.jcard-tag{background:var(--porcelain-200);color:var(--graphite-700);font-size:10.5px;padding:3px 9px;border-radius:999px}
+.footer{background:var(--graphite);color:var(--porcelain);padding:48px 0 24px}.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}.foot-col h5{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.5);margin-bottom:16px}.foot-col h5::before{content:'• ';color:var(--signal)}.foot-col a{display:block;color:rgba(249,243,237,.7);text-decoration:none;font-size:13.5px;padding:5px 0}.foot-bottom{padding-top:24px;display:flex;justify-content:space-between;font-size:12px;color:rgba(249,243,237,.5)}
+@media (max-width:900px){.job-header-grid,.job-content-grid,.similar-grid,.foot-top{grid-template-columns:1fr;gap:24px}.job-main{flex-direction:column;text-align:center;align-items:center}}
+</style>
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://alogator.com/cz/nabidka-prace/zamecnik">
+<link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/nabidka-prace/zamecnik">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alogator">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:title" content="Práce pro zámečníky v Česku — ocelové konstrukce, brány, zábradlí · Alogator">
+<meta property="og:description" content="Pracovní nabídky pro zámečníky — ocelové konstrukce, brány, zábradlí, MIG/MAG. Práce v Česku i v zahraničí (Německo, Rakousko). Vytvořte si profil zdarma.">
+<meta property="og:url" content="https://alogator.com/cz/nabidka-prace/zamecnik">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Práce pro zámečníky v Česku — ocelové konstrukce, brány, zábradlí · Alogator">
+<meta name="twitter:description" content="Pracovní nabídky pro zámečníky — ocelové konstrukce, brány, zábradlí, MIG/MAG. Práce v Česku i v zahraničí. Vytvořte si profil zdarma.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Domů","item":"https://alogator.com/cz"},{"@type":"ListItem","position":2,"name":"Pracovní nabídky","item":"https://alogator.com/cz/nabidka-prace"},{"@type":"ListItem","position":3,"name":"Zámečník","item":"https://alogator.com/cz/nabidka-prace/zamecnik"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Co dělá zámečník a jaký je rozdíl oproti svářeči?","acceptedAnswer":{"@type":"Answer","text":"Zámečník vyrábí a montuje ocelové konstrukce, brány, zábradlí, schodiště a další kovové prvky. Oproti svářeči, který se specializuje čistě na svařování, zámečník pracuje s celým výrobním procesem — od čtení výkresů, řezání a ohýbání materiálu přes svařování (nejčastěji MIG/MAG) až po finální montáž. Mnozí zámečníci ovládají i základy zámečnického svařování, ale nemusí mít certifikát EN ISO 9606-1."}},{"@type":"Question","name":"Jaké jsou sazby pro zámečníky?","acceptedAnswer":{"@type":"Answer","text":"V Česku se sazby pohybují kolem 14–18 €/hod, v zahraničí (Německo, Rakousko, Nizozemsko) dosahují 24–32 €/hod. Záleží na zkušenostech, typu zakázky a zda pracujete na OSVČ nebo v zaměstnaneckém poměru."}},{"@type":"Question","name":"Dá se práce zámečníka dělat na OSVČ?","acceptedAnswer":{"@type":"Answer","text":"Ano. Velká část nabídek pro zámečníky je na OSVČ — fakturujete přímo a sami si řešíte odvody. Část nabídek je i na HPP. V profilu si nastavíte, co vám vyhovuje, a vidíte jen relevantní nabídky."}}]}</script>
+</head>
+<body>
+
+<nav class="navbar"><div class="container nav-inner"><a href="/cz" class="nav-logo"><div class="nav-logo-mark">A</div><div class="nav-logo-name">Alogator</div></a><div class="nav-links"><a href="/cz/databaze-pracovniku">Databáze pracovníků</a><a href="/cz/nabidka-prace" class="active">Pracovní nabídky</a><a href="/cz/jak-to-funguje">Jak to funguje</a><a href="/cz/cenik">Ceník</a><a href="/cz/o-nas">O nás</a></div><div class="nav-actions"><button class="nav-btn" onclick="location.href='/app'" style="cursor:pointer">Přihlášení</button><button class="nav-btn primary" onclick="location.href='/cz/stahnout-aplikaci'" style="cursor:pointer">Stáhnout aplikaci</button></div></div></nav>
+
+<div class="breadcrumb"><div class="container"><a href="/cz">Domů</a><span class="sep">/</span><a href="/cz/nabidka-prace">Pracovní nabídky</a><span class="sep">/</span><span>Zámečník</span></div></div>
+
+<section class="job-header">
+  <div class="container">
+    <div class="job-header-grid">
+      <div>
+        <div class="urgency-row"><span class="eyebrow">PRACOVNÍ NABÍDKY · ZÁMEČNÍK</span></div>
+        <div class="job-main">
+          <div class="job-info">
+            <h1 class="job-title">Práce pro profesi <em>zámečník</em> v Česku</h1>
+            <p style="font-size:16px;color:var(--graphite-700);max-width:560px;margin-bottom:18px;line-height:1.5">Nabídky pro zámečníky — ocelové konstrukce, brány, zábradlí, v Česku i v zahraničí. Vytvořte si profil a firmy vás osloví.</p>
+            <div class="job-meta-row">
+              <div class="job-meta-item">📋 <strong>45 nabídek</strong> pro zámečníky</div>
+              <div class="job-meta-item">💰 od <strong>14 €/hod</strong></div>
+              <div class="job-meta-item">🌍 <strong>DE · AT · NL · CZ</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="rate-card">
+        <div class="rate-card-label">Profil zámečníka</div>
+        <div class="rate-row"><span class="rate-num">0 €</span><span class="rate-unit">registrace</span></div>
+        <div class="rate-note">Pro pracovníky vždy zdarma</div>
+        <div class="rate-bonuses">
+          <div class="bonus-row"><span class="bonus-icon">✓</span><span><strong>Kalendář dostupnosti</strong> — kdy a kam můžete</span></div>
+          <div class="bonus-row"><span class="bonus-icon">✓</span><span><strong>Firmy oslovují samy</strong> — nemusíte obvolávat</span></div>
+          <div class="bonus-row"><span class="bonus-icon">✓</span><span><strong>Konstrukce i montáž</strong> nabídky na jednom místě</span></div>
+          <div class="bonus-row"><span class="bonus-icon">✓</span><span><strong>Na OSVČ i turnusy</strong></span></div>
+        </div>
+        <button class="rate-cta" onclick="location.href='/app'" style="cursor:pointer">Vytvořit profil zdarma</button>
+        <button class="rate-cta-secondary" onclick="location.href='/cz/stahnout-aplikaci'" style="cursor:pointer">Stáhnout aplikaci</button>
+        <div class="rate-applicants">
+          <div class="applicants-avatars"><span style="background:var(--signal)">T</span><span style="background:var(--yellow);color:var(--graphite)">K</span><span style="background:var(--graphite-700)">M</span><span style="background:var(--signal-dark)">+</span></div>
+          <span><strong>Zámečníci</strong> z CZ/SK už pracují v DE/AT</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="job-content">
+  <div class="container">
+    <div class="job-content-grid">
+      <div>
+
+        <div class="sec-card">
+          <span class="label">O profesi</span>
+          <h2 style="margin-top:8px">Co dělá <em>zámečník</em> a kde je o něj poptávka</h2>
+          <div class="desc-text">
+            <p><strong>Zámečník</strong> (někdy též zámečník-svářeč) vyrábí a montuje kovové konstrukce a prvky — od <strong>ocelových konstrukcí</strong> hal a mostů přes <strong>brány, zábradlí a schodiště</strong> až po drobné zámečnické výrobky. Na rozdíl od svářeče, který se specializuje čistě na svařování, zámečník pracuje s celým výrobním procesem: čte výkresy, řeže a ohýbá materiál, svařuje (nejčastěji <strong>MIG/MAG</strong>) a provádí finální montáž.</p>
+
+            <p>Zámečník je žádaná profese v Česku i v zahraničí. Největší poptávka je v <strong>Německu a Rakousku</strong>, kde se staví ocelové haly, průmyslové objekty a infrastruktura. Sazby v zahraničí dosahují <strong>24–32 €/hod</strong>, v Česku se pohybují kolem <strong>14–18 €/hod</strong>. Více o možnostech za hranicemi najdete na stránce <a href="/cz/prace-v-zahranici">práce v zahraničí</a>.</p>
+
+            <p>Zámečníci, kteří ovládají i svařování podle normy a mají certifikát, dostávají se k lépe placeným zakázkám. Pokud máte zkušenosti s MIG/MAG a dokážete pracovat podle výkresů, máte dveře otevřené.</p>
+
+            <p>Na Alogator si vytvoříte profil s <strong>kalendářem dostupnosti</strong> — firmy vás osloví samy podle toho, kdy a kam můžete nastoupit. Profil je pro pracovníky vždy zdarma.</p>
+          </div>
+        </div>
+
+        <div class="sec-card">
+          <span class="label">Nabídky pro zámečníky</span>
+          <h2 style="margin-top:8px">Aktuální <em>nabídky</em> pro zámečníky</h2>
+          <div class="similar-grid" style="margin-top:6px">
+            <div class="jcard" onclick="location.href='/app'"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc"><span class="flag flag-de"></span> Düsseldorf · Německo</div><div class="jcard-title">Zámečník · ocelové konstrukce</div><div class="jcard-company">🔒 Firma · DE</div></div><span class="urgency-badge hot"><span class="dot"></span>Hot</span></div><div class="jcard-rate"><span class="jcard-rate-num">28 €</span><span class="jcard-rate-unit">/ hod + bonusy</span></div><div class="jcard-tags"><span class="jcard-tag">Konstrukce</span><span class="jcard-tag">MIG/MAG</span><span class="jcard-tag">Turnusy</span></div></div>
+
+            <div class="jcard" onclick="location.href='/app'"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc"><span class="flag flag-at"></span> Linz · Rakousko</div><div class="jcard-title">Zámečník · brány a zábradlí</div><div class="jcard-company">🔒 Firma · AT</div></div><span class="urgency-badge new">Nová</span></div><div class="jcard-rate"><span class="jcard-rate-num">26 €</span><span class="jcard-rate-unit">/ hod</span></div><div class="jcard-tags"><span class="jcard-tag">Brány</span><span class="jcard-tag">Zábradlí</span><span class="jcard-tag">40 h/tý</span></div></div>
+
+            <div class="jcard" onclick="location.href='/app'"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc"><span class="flag flag-nl"></span> Rotterdam · Nizozemsko</div><div class="jcard-title">Zámečník-svářeč · průmysl</div><div class="jcard-company">🔒 Firma · NL</div></div><span class="urgency-badge hot"><span class="dot"></span>Top sazba</span></div><div class="jcard-rate"><span class="jcard-rate-num">32 €</span><span class="jcard-rate-unit">/ hod</span></div><div class="jcard-tags"><span class="jcard-tag">MIG/MAG</span><span class="jcard-tag">Průmysl</span><span class="jcard-tag">Ubytování</span></div></div>
+
+            <div class="jcard" onclick="location.href='/app'"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc"><span class="flag flag-cz"></span> Ostrava · Česko</div><div class="jcard-title">Zámečník · výroba</div><div class="jcard-company">🔒 Firma · CZ</div></div></div><div class="jcard-rate"><span class="jcard-rate-num">16 €</span><span class="jcard-rate-unit">/ hod</span></div><div class="jcard-tags"><span class="jcard-tag">Výroba</span><span class="jcard-tag">Hala</span><span class="jcard-tag">OSVČ</span></div></div>
+
+            <div class="jcard" onclick="location.href='/app'"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc"><span class="flag flag-de"></span> Stuttgart · Německo</div><div class="jcard-title">Montážní zámečník</div><div class="jcard-company">🔒 Firma · DE</div></div><span class="urgency-badge new">Nová</span></div><div class="jcard-rate"><span class="jcard-rate-num">27 €</span><span class="jcard-rate-unit">/ hod</span></div><div class="jcard-tags"><span class="jcard-tag">Montáž</span><span class="jcard-tag">Konstrukce</span><span class="jcard-tag">45 h/tý</span></div></div>
+
+            <div class="jcard" onclick="location.href='/app'"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc"><span class="flag flag-at"></span> Vídeň · Rakousko</div><div class="jcard-title">Zámečník · schodiště</div><div class="jcard-company">🔒 Firma · AT</div></div></div><div class="jcard-rate"><span class="jcard-rate-num">25 €</span><span class="jcard-rate-unit">/ hod</span></div><div class="jcard-tags"><span class="jcard-tag">Schodiště</span><span class="jcard-tag">Zábradlí</span><span class="jcard-tag">HPP</span></div></div>
+          </div>
+          <div style="margin-top:24px;text-align:center"><button class="rate-cta" style="max-width:320px;margin:0 auto;display:inline-block" onclick="location.href='/app'">Vytvořit profil a vidět firmy</button></div>
+        </div>
+
+        <div class="sec-card">
+          <span class="label">Časté otázky</span>
+          <h2 style="margin-top:8px">Na co se zámečníků <em>nejčastěji ptáme</em></h2>
+          <div class="desc-text">
+            <h3>Co dělá zámečník a jaký je rozdíl oproti svářeči?</h3>
+            <p>Zámečník vyrábí a montuje ocelové konstrukce, brány, zábradlí, schodiště a další kovové prvky. Oproti svářeči, který se specializuje čistě na svařování, zámečník pracuje s celým výrobním procesem — od čtení výkresů, řezání a ohýbání materiálu přes svařování (nejčastěji <strong>MIG/MAG</strong>) až po finální montáž.</p>
+
+            <h3>Jaké jsou sazby pro zámečníky?</h3>
+            <p>V Česku se sazby pohybují kolem <strong>14–18 €/hod</strong>, v zahraničí (Německo, Rakousko, Nizozemsko) dosahují <strong>24–32 €/hod</strong>. Záleží na zkušenostech, typu zakázky a zda pracujete na OSVČ nebo v zaměstnaneckém poměru.</p>
+
+            <h3>Dá se práce zámečníka dělat na OSVČ?</h3>
+            <p>Ano. Velká část nabídek pro zámečníky je na <strong>OSVČ</strong> — fakturujete přímo a sami si řešíte odvody. Část nabídek je i na <strong>HPP</strong>. V profilu si nastavíte, co vám vyhovuje, a vidíte jen relevantní nabídky.</p>
+          </div>
+        </div>
+
+        <div class="sec-card">
+          <span class="label">Související</span>
+          <h2 style="margin-top:8px">Kam dál</h2>
+          <div class="desc-text">
+            <h3>Práce v zahraničí</h3>
+            <ul><li><a href="/cz/prace-v-zahranici">Práce v zahraničí</a></li><li><a href="/cz/prace-v-zahranici/nemecko">Práce v Německu</a></li><li><a href="/cz/prace-v-zahranici/rakousko">Práce v Rakousku</a></li></ul>
+            <h3>Další profese</h3>
+            <ul><li><a href="/cz/nabidka-prace/svarec">Práce pro svářeče</a></li><li><a href="/cz/nabidka-prace/elektrikar">Práce pro elektrikáře</a></li><li><a href="/cz/nabidka-prace/instalater">Práce pro instalatéry</a></li></ul>
+          </div>
+        </div>
+
+      </div>
+
+      <aside>
+        <div class="sec-card" style="padding:24px;position:sticky;top:24px">
+          <span class="label">Stručně</span>
+          <h2 style="margin-top:8px;font-size:18px;margin-bottom:16px">Zámečník v 5 bodech</h2>
+          <div class="summary-widget" style="background:transparent;padding:0">
+            <div class="summary-row"><span class="summary-icon">💰</span><div class="summary-content"><div class="summary-label">Sazby</div><div class="summary-val">CZ 14–18 €/hod</div><div class="summary-sub">Zahraničí 24–32 €/hod</div></div></div>
+            <div class="summary-row"><span class="summary-icon">🔧</span><div class="summary-content"><div class="summary-label">Práce</div><div class="summary-val">Konstrukce · brány · zábradlí</div><div class="summary-sub">MIG/MAG, montáž, výkresy</div></div></div>
+            <div class="summary-row"><span class="summary-icon">🌍</span><div class="summary-content"><div class="summary-label">Kde</div><div class="summary-val">DE · AT · NL · CZ</div><div class="summary-sub">45 aktuálních nabídek</div></div></div>
+            <div class="summary-row"><span class="summary-icon">📅</span><div class="summary-content"><div class="summary-label">Forma</div><div class="summary-val">OSVČ i HPP</div><div class="summary-sub">Vyberete si v profilu</div></div></div>
+            <div class="summary-row"><span class="summary-icon">✋</span><div class="summary-content"><div class="summary-label">Jak to jde</div><div class="summary-val">Firmy oslovují vás</div><div class="summary-sub">Profil zdarma</div></div></div>
+          </div>
+          <button class="rate-cta" style="margin-top:18px" onclick="location.href='/app'">Vytvořit profil zdarma</button>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="similar-sec">
+  <div class="container">
+    <span class="eyebrow">další profese</span>
+    <h2 style="margin-top:10px">Hledáte jinou profesi?</h2>
+    <div class="similar-grid">
+      <div class="jcard" onclick="location.href='/cz/nabidka-prace/svarec'"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc">PROFESE</div><div class="jcard-title">Svářeč</div><div class="jcard-company">TIG · CO2 · MIG/MAG</div></div></div><div class="jcard-tags"><span class="jcard-tag">DE · AT · NL</span><span class="jcard-tag">od 16 €/hod</span></div></div>
+      <div class="jcard" onclick="location.href='/cz/nabidka-prace/elektrikar'"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc">PROFESE</div><div class="jcard-title">Elektrikář</div><div class="jcard-company">Průmysl · instalace</div></div></div><div class="jcard-tags"><span class="jcard-tag">DE · AT · NL</span><span class="jcard-tag">od 15 €/hod</span></div></div>
+      <div class="jcard" onclick="location.href='/cz/nabidka-prace/instalater'"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc">PROFESE</div><div class="jcard-title">Instalatér</div><div class="jcard-company">Vodoinstalatér · topenář</div></div></div><div class="jcard-tags"><span class="jcard-tag">DE · AT</span><span class="jcard-tag">od 14 €/hod</span></div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="foot-top"><div class="foot-col"><div class="nav-logo" style="margin-bottom:14px"><div class="nav-logo-mark">A</div><div class="nav-logo-name">Alogator</div></div><p style="font-size:13px;color:rgba(249,243,237,.6);line-height:1.5">Marketplace propojující pracovníky, agentury a koncové firmy. CZ · SK · DE · AT · NL · BE</p></div><div class="foot-col"><h5>Pro firmy</h5><a href="/cz/pro-firmy">Naplánovat demo</a><a href="/cz/databaze-pracovniku">Databáze pracovníků</a><a href="/cz/cenik">Ceník</a></div><div class="foot-col"><h5>Pro pracovníky</h5><a href="/cz/nabidka-prace">Pracovní nabídky</a><a href="/cz/stahnout-aplikaci">Stáhnout aplikaci</a><a href="/cz/jak-to-funguje">Jak to funguje</a></div><div class="foot-col"><h5>Společnost</h5><a href="/cz/o-nas">O nás</a><a href="/cz/kontakt">Kontakt</a><a href="/cz/vseobecne-obchodni-podminky">VOP</a><a href="/cz/gdpr">GDPR</a></div></div><div class="foot-bottom"><div>© 2026 Alogator · Profi Steel Holding</div><div>Made in Slovakia · alogator.com</div></div></div></footer>
+
+<script src="/assets/consent.js" defer></script>
+</body>
+</html>

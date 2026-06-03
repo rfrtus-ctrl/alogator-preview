@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Databáze pracovníků — 3 047 ověřených řemeslníků · Alogator</title>
+<meta name="description" content="Databáze 3 047 ověřených stavbařů a řemeslníků. Svářeči, elektrikáři, montéři, potrubáři. Dostupnost v reálném čase. Filtrujte podle profese, země, jazyka.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --signal: #E66748;
+  --signal-dark: #D4573A;
+  --signal-soft: #FDE8E0;
+  --graphite: #1A1D1E;
+  --graphite-700: #3F4445;
+  --graphite-500: #6B7174;
+  --graphite-200: #D9D9D6;
+  --porcelain: #F9F3ED;
+  --porcelain-200: #F0E8DD;
+  --porcelain-300: #E8DFD1;
+  --yellow: #F5D547;
+  --green: #2E8B57;
+  --green-soft: #D4EDDA;
+  --r-sm: 12px;
+  --r-md: 20px;
+  --r-lg: 32px;
+  --r-pill: 999px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Geist', 'Inter', system-ui, sans-serif;
+  background: var(--porcelain);
+  color: var(--graphite);
+  line-height: 1.5;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+/* NAV */
+.nav {
+  border-bottom: 1px solid var(--graphite-200);
+  padding: 16px 0;
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: blur(12px);
+  background: rgba(249, 243, 237, 0.92);
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; }
+.nav-logo {
+  font: 600 22px 'Geist';
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none; color: var(--graphite);
+}
+.nav-logo-mark {
+  width: 32px; height: 32px; background: var(--signal); border-radius: 8px;
+  display: grid; place-items: center; color: var(--porcelain); font-weight: 700; font-size: 16px;
+}
+.nav-links { display: flex; gap: 28px; }
+.nav-links a {
+  color: var(--graphite); text-decoration: none;
+  font: 500 14px 'Inter'; transition: color 0.15s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--signal); }
+.nav-actions { display: flex; gap: 10px; align-items: center; }
+.btn-ghost {
+  background: transparent; color: var(--graphite); border: 1.5px solid var(--graphite);
+  padding: 9px 18px; border-radius: var(--r-pill); font: 500 14px 'Geist'; cursor: pointer;
+  text-decoration: none; transition: all 0.15s;
+}
+.btn-ghost:hover { background: var(--graphite); color: var(--porcelain); }
+.btn-primary {
+  background: var(--signal); color: var(--porcelain); border: 0;
+  padding: 10px 20px; border-radius: var(--r-pill); font: 500 14px 'Geist'; cursor: pointer;
+  text-decoration: none; transition: background 0.15s;
+}
+.btn-primary:hover { background: var(--signal-dark); }
+
+/* HERO */
+.hero {
+  padding: 48px 0 32px;
+  border-bottom: 1px solid var(--porcelain-300);
+}
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px; font-weight: 500;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--signal); margin-bottom: 12px;
+}
+.eyebrow::before { content: '• '; }
+.hero h1 {
+  font: 500 52px/1.05 'Geist';
+  letter-spacing: -0.03em;
+  margin-bottom: 12px;
+}
+.hero h1 em { font-style: italic; color: var(--signal); }
+.hero-sub {
+  font: 400 16px/1.6 'Inter';
+  color: var(--graphite-700);
+  max-width: 560px;
+  margin-bottom: 32px;
+}
+.hero-stats {
+  display: flex; gap: 32px; align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--graphite-500);
+  letter-spacing: 0.05em;
+}
+.hero-stat strong {
+  display: block; font-size: 24px; font-weight: 600;
+  color: var(--graphite); letter-spacing: -0.02em;
+  font-family: 'Geist', sans-serif;
+}
+.hero-stat-divider { width: 1px; height: 32px; background: var(--graphite-200); }
+.live-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--porcelain-200); border: 1px solid var(--porcelain-300);
+  padding: 5px 12px; border-radius: var(--r-pill);
+  font: 500 11px 'JetBrains Mono'; letter-spacing: 0.08em;
+  color: var(--graphite-500);
+}
+.live-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--green); animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; } 50% { opacity: 0.4; }
+}
+
+/* AI SEARCH */
+.search-wrap {
+  padding: 24px 0 0;
+}
+.search-box {
+  background: #fff;
+  border: 1.5px solid var(--graphite);
+  border-radius: var(--r-md);
+  padding: 18px 20px;
+  box-shadow: 0 2px 0 var(--graphite);
+  margin-bottom: 16px;
+}
+.search-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px; font-weight: 500;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--signal); margin-bottom: 8px;
+  display: flex; align-items: center; gap: 6px;
+}
+.search-input-row {
+  display: flex; align-items: center; gap: 12px;
+}
+.search-input {
+  flex: 1; border: 0; outline: 0;
+  font: 400 15px 'Inter'; color: var(--graphite-700);
+  background: transparent;
+}
+.search-input::placeholder { color: var(--graphite-200); }
+.search-btn {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--signal); border: 0; cursor: pointer;
+  display: grid; place-items: center; color: #fff;
+  font-size: 18px; flex-shrink: 0;
+  transition: background 0.15s;
+}
+.search-btn:hover { background: var(--signal-dark); }
+.search-chips {
+  display: flex; gap: 6px; flex-wrap: wrap;
+  padding-top: 12px; border-top: 1px solid var(--porcelain-300); margin-top: 12px;
+}
+.search-chip {
+  border: 1px solid var(--graphite-200);
+  padding: 4px 11px; border-radius: var(--r-pill);
+  font: 400 11.5px 'Inter'; color: var(--graphite-700);
+  cursor: pointer; transition: all 0.15s;
+}
+.search-chip:hover { border-color: var(--signal); color: var(--signal); }
+
+/* FILTER ROWS */
+.filter-rows {
+  margin-top: 16px; margin-bottom: 8px;
+}
+.filter-row {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 0; flex-wrap: wrap;
+}
+.filter-row + .filter-row {
+  border-top: 1px solid var(--porcelain-300);
+}
+.filter-row-label {
+  font: 500 10px 'JetBrains Mono'; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--graphite-500);
+  min-width: 72px; flex-shrink: 0;
+}
+.fchip {
+  background: transparent; color: var(--graphite);
+  border: 1px solid var(--graphite-200); padding: 5px 13px;
+  border-radius: var(--r-pill); font: 400 12.5px 'Inter';
+  white-space: nowrap; cursor: pointer; transition: all 0.15s;
+  display: inline-flex; align-items: center; gap: 5px;
+}
+.fchip:hover { border-color: var(--graphite); }
+.fchip.active {
+  background: var(--signal); color: var(--porcelain);
+  border-color: var(--signal);
+}
+.fchip .fcnt {
+  font: 500 10px 'JetBrains Mono'; opacity: 0.7;
+}
+.fchip.active .fcnt { opacity: 0.85; }
+.range-input {
+  display: inline-flex; align-items: center; gap: 6px;
+  font: 400 12.5px 'Inter'; color: var(--graphite-500);
+  margin-left: 4px;
+}
+.range-input input[type=number] {
+  width: 52px; border: 1px solid var(--graphite-200);
+  background: var(--porcelain); border-radius: var(--r-pill);
+  padding: 4px 10px; font: 400 12px 'Inter'; color: var(--graphite);
+  text-align: center; outline: none;
+}
+.range-input input[type=number]:focus { border-color: var(--graphite); }
+.filter-meta {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 0 16px; margin-top: 2px;
+  font: 400 12.5px 'Inter'; color: var(--graphite-500);
+}
+.filter-meta strong { font-family: 'JetBrains Mono', monospace; color: var(--graphite); }
+.filter-reset { color: var(--graphite-500); text-decoration: underline; cursor: pointer; }
+.filter-reset:hover { color: var(--signal); }
+.filter-sort {
+  border: 1px solid var(--graphite-200); background: var(--porcelain);
+  padding: 4px 12px; border-radius: var(--r-pill);
+  font: 400 12px 'Inter'; color: var(--graphite); cursor: pointer;
+  -webkit-appearance: none; appearance: none;
+}
+
+/* WORKER GRID */
+.worker-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+/* WORKER CARD */
+.worker-card {
+  background: #fff;
+  border: 1px solid var(--porcelain-300);
+  border-radius: 20px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.15s;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.worker-card:hover {
+  border-color: var(--graphite-200);
+  box-shadow: 0 4px 16px rgba(26,29,30,0.08);
+  transform: translateY(-1px);
+}
+.card-top {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; margin-bottom: 14px;
+}
+.card-avatar-wrap { display: flex; align-items: center; gap: 12px; }
+.card-avatar {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: var(--graphite); color: var(--porcelain);
+  display: grid; place-items: center;
+  font: 600 18px 'Geist'; flex-shrink: 0;
+  position: relative;
+}
+.card-avatar.blur-avatar { filter: blur(6px); user-select: none; }
+.card-avatar-flag {
+  position: absolute; bottom: -4px; right: -4px;
+  width: 18px; height: 13px; border-radius: 3px;
+  font-size: 12px; line-height: 1; border: 1.5px solid #fff;
+}
+.card-name {
+  font: 600 15px 'Geist'; letter-spacing: -0.01em;
+  color: var(--graphite);
+}
+.card-name.blurred {
+  filter: blur(4px); user-select: none;
+  background: var(--graphite-200); border-radius: 4px;
+  color: transparent; min-width: 80px;
+}
+.card-profession {
+  font: 400 12.5px 'Inter'; color: var(--graphite-500);
+  margin-top: 1px;
+}
+.card-badges { display: flex; gap: 5px; align-items: center; }
+.badge-pro {
+  background: var(--yellow); color: var(--graphite);
+  font: 700 9px 'JetBrains Mono'; letter-spacing: 0.08em;
+  padding: 2px 7px; border-radius: var(--r-pill);
+}
+.badge-free {
+  background: var(--porcelain-200); color: var(--graphite-500);
+  font: 700 9px 'JetBrains Mono'; letter-spacing: 0.08em;
+  padding: 2px 7px; border-radius: var(--r-pill);
+}
+.badge-avail {
+  font: 500 11px 'Inter'; color: var(--green);
+  background: var(--green-soft);
+  padding: 2px 8px; border-radius: var(--r-pill);
+}
+.badge-avail.soon {
+  color: var(--signal); background: var(--signal-soft);
+}
+
+/* RATE */
+.card-rate {
+  display: flex; align-items: baseline; gap: 4px;
+  margin-bottom: 12px;
+}
+.card-rate-num {
+  font: 500 26px 'Geist'; letter-spacing: -0.025em;
+  color: var(--graphite);
+}
+.card-rate-unit {
+  font: 400 12px 'Inter'; color: var(--graphite-500);
+}
+.card-rate-prefix {
+  font: 400 12px 'Inter'; color: var(--graphite-500);
+}
+
+/* CARD PICTOGRAMS */
+.card-picts {
+  display: flex; gap: 8px; flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.card-pict {
+  display: flex; align-items: center; gap: 5px;
+  font: 400 11.5px 'Inter'; color: var(--graphite-500);
+  background: var(--porcelain-200);
+  padding: 4px 9px; border-radius: var(--r-pill);
+}
+.card-pict svg { flex-shrink: 0; }
+
+/* LOCK OVERLAY */
+.card-lock-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 12px; border-top: 1px solid var(--porcelain-300);
+}
+.lock-info {
+  display: flex; align-items: center; gap: 6px;
+  font: 400 11.5px 'Inter'; color: var(--graphite-500);
+}
+.lock-icon { font-size: 13px; }
+.card-cta {
+  background: var(--signal); color: var(--porcelain);
+  border: 0; padding: 7px 15px; border-radius: var(--r-pill);
+  font: 500 12px 'Geist'; cursor: pointer;
+  text-decoration: none; transition: background 0.15s;
+}
+.card-cta:hover { background: var(--signal-dark); }
+.card-cta.locked {
+  background: var(--porcelain-200); color: var(--graphite-500);
+  border: 1px solid var(--graphite-200);
+}
+
+/* ALOGATOR REGISTERED ICON */
+.card-alogator-icon {
+  position: absolute; top: -3px; left: -3px;
+  width: 14px; height: 14px;
+  background: var(--signal); border: 2px solid #fff;
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+}
+.card-alogator-icon svg { display: block; }
+
+/* SKILL TAGS */
+.card-skill-tags {
+  display: flex; gap: 5px; flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.card-skill-tag {
+  background: var(--signal-soft); color: var(--signal-dark);
+  font: 500 10px 'JetBrains Mono'; letter-spacing: 0.03em;
+  padding: 2px 8px; border-radius: var(--r-pill);
+}
+
+/* LOCKED CARD OVERLAY */
+.worker-card.locked-card {
+  position: relative; overflow: hidden;
+}
+.locked-card::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(249,243,237,0.85) 100%);
+  border-radius: 20px; pointer-events: none;
+}
+
+/* UPSELL CARD */
+.upsell-card {
+  background: var(--graphite);
+  border-radius: 20px; padding: 24px;
+  display: flex; flex-direction: column;
+  justify-content: center; gap: 12px;
+}
+.upsell-card .eyebrow { color: var(--yellow); margin-bottom: 4px; }
+.upsell-card h3 {
+  font: 500 20px/1.2 'Geist'; color: var(--porcelain);
+  letter-spacing: -0.02em;
+}
+.upsell-card p {
+  font: 400 13px/1.5 'Inter'; color: rgba(249,243,237,0.65);
+}
+.upsell-card .btn-primary {
+  align-self: flex-start; margin-top: 4px;
+}
+
+/* LOAD MORE */
+.load-more {
+  text-align: center; margin: 8px 0 48px;
+}
+.btn-outline {
+  background: transparent; color: var(--graphite);
+  border: 1.5px solid var(--graphite);
+  padding: 12px 32px; border-radius: var(--r-pill);
+  font: 500 14px 'Geist'; cursor: pointer; transition: all 0.15s;
+}
+.btn-outline:hover { background: var(--graphite); color: var(--porcelain); }
+.load-sub {
+  font: 400 11.5px 'Inter'; color: var(--graphite-500); margin-top: 10px;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--graphite); color: var(--porcelain);
+  padding: 48px 0 24px;
+}
+.foot-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 32px; margin-bottom: 40px;
+}
+.foot-col h4 {
+  font: 600 11px 'JetBrains Mono'; letter-spacing: 0.12em;
+  text-transform: uppercase; color: rgba(249,243,237,0.5);
+  margin-bottom: 14px;
+}
+.foot-col h4::before { content: '•  '; color: var(--signal); }
+.foot-col a {
+  display: block; color: rgba(249,243,237,0.75);
+  text-decoration: none; font: 400 14px 'Inter';
+  margin-bottom: 8px; transition: color 0.15s;
+}
+.foot-col a:hover { color: var(--porcelain); }
+.foot-brand {
+  display: flex; align-items: center; gap: 10px;
+  font: 600 20px 'Geist'; color: var(--porcelain); margin-bottom: 12px;
+}
+.foot-tagline { font: 400 13px 'Inter'; color: rgba(249,243,237,0.5); max-width: 240px; line-height: 1.6; }
+.foot-bottom {
+  display: flex; justify-content: space-between; align-items: center;
+  border-top: 1px solid rgba(249,243,237,0.1); padding-top: 20px;
+  font: 400 12px 'JetBrains Mono'; color: rgba(249,243,237,0.35);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 1024px) {
+  .worker-grid { grid-template-columns: repeat(2, 1fr); }
+  .foot-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .worker-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 36px; }
+  .nav-links { display: none; }
+}
+</style>
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://alogator.com/cz/databaze-pracovniku">
+<link rel="alternate" hreflang="sk-SK" href="https://alogator.com/cz/databaze-pracovniku">
+<link rel="alternate" hreflang="x-default" href="https://alogator.com/cz/databaze-pracovniku">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alogator">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:title" content="Databáze pracovníků — 3 047 ověřených řemeslníků · Alogator">
+<meta property="og:description" content="Databáze 3 047 ověřených stavbařů a řemeslníků. Svářeči, elektrikáři, montéři, potrubáři. Dostupnost v reálném čase. Filtrujte podle profese, země, jazyka.">
+<meta property="og:url" content="https://alogator.com/sk/databaza-pracovnikov">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Databáze pracovníků — 3 047 ověřených řemeslníků · Alogator">
+<meta name="twitter:description" content="Databáze 3 047 ověřených stavbařů a řemeslníků. Svářeči, elektrikáři, montéři, potrubáři. Dostupnost v reálném čase. Filtrujte podle profese, země, jazyka.">
+<!-- alg-schema -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Domov", "item": "https://alogator.com/cz"}, {"@type": "ListItem", "position": 2, "name": "Databáze pracovníků", "item": "https://alogator.com/cz/databaze-pracovniku"}]}</script>
+<!-- /alg-schema -->
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/cz" class="nav-logo">
+      <span class="nav-logo-mark">A</span>
+      Alogator
+    </a>
+    <div class="nav-links">
+      <a href="/cz/databaze-pracovniku" class="active">Databáze pracovníků</a>
+      <a href="/cz/nabidka-prace">Pracovní nabídky</a>
+      <a href="/cz/jak-to-funguje">Jak to funguje</a>
+      <a href="/cz/cenik">Ceník</a>
+      <a href="/cz/o-nas">O nás</a>
+    </div>
+    <div class="nav-actions">
+      <a href="/app" class="btn-ghost">Přihlášení</a>
+      <a href="/cz/stahnout-aplikaci" class="btn-primary">Stáhnout aplikaci</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">Databáze pracovníků</div>
+    <h1>3 047 pracovníků<br>po <em>celé EU</em></h1>
+    <p class="hero-sub">Stavební řemesla ověřená v reálném čase. Filtrujte podle profese, lokality, praxe, jazyka nebo certifikátu.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <strong>3 047</strong>
+        PRACOVNÍKŮ
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <strong>380</strong>
+        AGENTUR
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <strong>284</strong>
+        DOSTUPNÝCH IHNED
+      </div>
+      <div class="hero-stat-divider"></div>
+      <span class="live-badge">
+        <span class="live-dot"></span>
+        Živě z Alogator app
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- SEARCH + FILTERS -->
+<div class="search-wrap">
+  <div class="container">
+    <div class="search-box">
+      <div class="search-label">
+        <span>✦</span> AI vyhledávání · popište koho hledáte
+      </div>
+      <div class="search-input-row">
+        <input class="search-input" type="text" placeholder="Například: Hledám svářeče MIG/MAG do Bavorska, dostupný od června, mluví německy, vlastní auto...">
+        <button class="search-btn">→</button>
+      </div>
+      <div class="search-chips">
+        <span class="search-chip">⚡ Elektrikář · Německo</span>
+        <span class="search-chip">⚡ Tým 5 montérů · DE/AT</span>
+        <span class="search-chip">⚡ Svářeč · NUC certifikát</span>
+      </div>
+    </div>
+
+    <!-- FILTER ROWS -->
+    <div class="filter-rows">
+      <!-- PROFESIA -->
+      <div class="filter-row">
+        <span class="filter-row-label">Profese</span>
+        <button class="fchip active">Všichni <span class="fcnt">3 047</span></button>
+        <button class="fchip">🔥 Svářeč <span class="fcnt">297</span></button>
+        <button class="fchip">⚡ Elektrikář <span class="fcnt">142</span></button>
+        <button class="fchip">🔧 Montér <span class="fcnt">186</span></button>
+        <button class="fchip">🔩 Potrubář <span class="fcnt">98</span></button>
+        <button class="fchip">🔗 Zámečník <span class="fcnt">74</span></button>
+        <button class="fchip">🧱 Zedník <span class="fcnt">62</span></button>
+        <button class="fchip">🪵 Tesař <span class="fcnt">48</span></button>
+        <button class="fchip">🚜 Bagrista <span class="fcnt">38</span></button>
+      </div>
+
+      <!-- KRAJINA -->
+      <div class="filter-row">
+        <span class="filter-row-label">Země</span>
+        <button class="fchip">🇸🇰 Slovensko <span class="fcnt">1 240</span></button>
+        <button class="fchip">🇨🇿 Česko <span class="fcnt">892</span></button>
+        <button class="fchip">🇵🇱 Polsko <span class="fcnt">415</span></button>
+        <button class="fchip">🇭🇺 Maďarsko <span class="fcnt">310</span></button>
+        <button class="fchip">🇷🇴 Rumunsko <span class="fcnt">190</span></button>
+      </div>
+
+      <!-- ĎALŠIE -->
+      <div class="filter-row">
+        <span class="filter-row-label">Další</span>
+        <button class="fchip">Dostupný ihned <span class="fcnt">284</span></button>
+        <button class="fchip">S certifikátem</button>
+        <button class="fchip">🇩🇪 Němčina</button>
+        <button class="fchip">🇬🇧 Angličtina</button>
+        <span class="range-input">
+          Praxe
+          <input type="number" value="1" min="0" max="40"> –
+          <input type="number" value="40" min="0" max="40"> r.
+        </span>
+      </div>
+    </div>
+
+    <!-- FILTER META -->
+    <div class="filter-meta">
+      <span><strong>284</strong> z 3 047 · řadit</span>
+      <span style="display:flex;align-items:center;gap:12px">
+        <span class="filter-reset">Resetovat filtry</span>
+        <select class="filter-sort">
+          <option>Nejnovější</option>
+          <option>Dostupnost — nejdříve</option>
+          <option>Sazba — od nejnižší</option>
+          <option>Sazba — od nejvyšší</option>
+        </select>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- WORKER GRID -->
+<div class="container">
+  <div class="worker-grid">
+
+    <!-- KARTA 1 — Marek N. — odomknutá (PRO, dostupný) -->
+    <a href="/cz/pracovnik/marek-n" class="worker-card">
+      <div class="card-top">
+        <div class="card-avatar-wrap">
+          <div class="card-avatar" style="background:#2A6496;">
+            M
+            <span class="card-avatar-flag">🇸🇰</span>
+            <span class="card-alogator-icon"><svg width="8" height="8" viewBox="0 0 10 10" fill="white"><polygon points="5,0 9.33,2.5 9.33,7.5 5,10 0.67,7.5 0.67,2.5"/></svg></span>
+          </div>
+          <div>
+            <div class="card-name">Marek N.</div>
+            <div class="card-profession">Elektrikář · úroveň ●●●●○</div>
+          </div>
+        </div>
+        <div class="card-badges">
+          <span class="badge-pro">PRO</span>
+          <span class="badge-avail">Dostupný od 23.5.</span>
+        </div>
+      </div>
+      <div class="card-rate">
+        <span class="card-rate-prefix">od:</span>
+        <span class="card-rate-num">30 €</span>
+        <span class="card-rate-unit">/ hod</span>
+      </div>
+      <div class="card-picts">
+        <span class="card-pict">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          Němčina · Angličtina
+        </span>
+        <span class="card-pict">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          Bilfinger · DE
+        </span>
+        <span class="card-pict">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          3 cert.
+        </span>
+        <span class="card-pict">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          od 23.5.2026
+        </span>
+      </div>
+      <div class="card-skill-tags">
+        <span class="card-skill-tag">MNS</span>
+        <span class="card-skill-tag">NN/VN</span>
+        <span class="card-skill-tag">Revízie</span>
+      </div>
+      <div class="card-lock-row">
+        <div class="lock-info">
+          <span>★ 5.0</span>
+          <span style="color:var(--graphite-200)">·</span>
+          <span>12 hodnocení</span>
+        </div>
+        <span class="card-cta">Zobrazit profil</span>
+      </div>
+    </a>
+
+    <!-- KARTA 2 — Daniel R. — odomknutá (PRO, dostupný od) -->
+    <a href="/cz/pracovnik/marek-n" class="worker-card">
+      <div class="card-top">
+        <div class="card-avatar-wrap">
+          <div class="card-avatar" style="background:#1A1D1E;">
+            D
+            <span class="card-avatar-flag">🇨🇿</span>
+            <span class="card-alogator-icon"><svg width="8" height="8" viewBox="0 0 10 10" fill="white"><polygon points="5,0 9.33,2.5 9.33,7.5 5,10 0.67,7.5 0.67,2.5"/></svg></span>
+          </div>
+          <div>
+            <div class="card-name">Daniel R.</div>
+            <div class="card-profession">Svářeč MIG/MAG · úroveň ●●●●●</div>
+          </div>
+        </div>
+        <div class="card-badges">
+          <span class="badge-pro">PRO</span>
+          <span class="badge-avail soon">Od 15.6.</span>
+        </div>
+      </div>
+      <div class="card-rate">
+        <span class="card-rate-prefix">od:</span>
+        <span class="card-rate-num">28 €</span>
+        <span class="card-rate-unit">/ hod</span>
+      </div>
+      <div class="card-picts">
+        <span class="card-pict">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          Čeština · Němčina · +1
+        </span>
+        <span class="card-pict">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          Siemens · DE
+        </span>
+        <span class="card-pict">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          5 cert.
+        </span>
+        <span class="card-pict">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          od 15.6.2026
+        </span>
+      </div>
+      <div class="card-skill-tags">
+        <span class="card-skill-tag">MIG/MAG</span>
+        <span class="card-skill-tag">TIG 141</span>
+        <span class="card-skill-tag">WPS certif.</span>
+      </div>
+      <div class="card-lock-row">
+        <div class="lock-info">
+          <span>★ 4.9</span>
+          <span style="color:var(--graphite-200)">·</span>
+          <span>18 hodnocení</span>
+        </div>
+        <span class="card-cta">Zobrazit profil</span>
+      </div>
+    </a>
+
+    <!-- KARTA 3 — Jakub H. — odomknutá (Free, dostupný) -->
+    <a href="/cz/pracovnik/marek-n" class="worker-card">
+      <div class="card-top">
+        <div class="card-avatar-wrap">
+          <div class="card-avatar" style="background:#E66748;">
+            J
+            <span class="card-avatar-flag">🇨🇿</span>
+          </div>
+          <div>
+            <div class="card-name">Jakub H.</div>
+            <div class="card-profession">Bagrista · Montér · úroveň ●●●○○</div>
+          </div>
+        </div>
+        <div class="card-badges">
+          <span class="badge-free">Free</span>
+          <span class="badge-avail">Dostupný ihned</span>
+        </div>
+      </div>
+      <div class="card-rate">
+        <span class="card-rate-prefix">od:</span>
+        <span class="card-rate-num">26 €</span>
+        <span class="card-rate-unit">/ hod</span>
+      </div>
+      <div class="card-picts">
+        <span class="card-pict">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          Polština · Angličtina · +2
+        </span>
+        <span class="card-pict">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          Strabag · AT
+        </span>
+        <span class="card-pict">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          1 cert.
+        </span>
+        <span class="card-pict" style="opacity:0.45">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Kal. 🔒
+        </span>
+      </div>
+      <div class="card-skill-tags">
+        <span class="card-skill-tag">Excavator</span>
+        <span class="card-skill-tag">IPAF</span>
+      </div>
+      <div class="card-lock-row">
+        <div class="lock-info">
+          <span>★ 4.7</span>
+          <span style="color:var(--graphite-200)">·</span>
+          <span>8 hodnocení</span>
+        </div>
+        <span class="card-cta">Zobrazit profil</span>
+      </div>
+    </a>
+
+    <!-- KARTA 4 — Locked (anonymná) -->
+    <div class="worker-card locked-card">
+      <div class="card-top">
+        <div class="card-avatar-wrap">
+          <div class="card-avatar blur-avatar" style="background:#6B7174;">
+            F
+            <span class="card-avatar-flag">🇸🇰</span>
+          </div>
+          <div>
+            <div class="card-name blurred">Filip P.</div>
+            <div class="card-profession">Elektrikář · meranie · 6 let</div>
+          </div>
+        </div>
+        <div class="card-badges">
+          <span class="badge-pro">PRO</span>
+          <span class="badge-avail">Dostupný ihned</span>
+        </div>
+      </div>
+      <div class="card-rate">
+        <span class="card-rate-prefix">od:</span>
+        <span class="card-rate-num">32 €</span>
+        <span class="card-rate-unit">/ hod</span>
+      </div>
+      <div class="card-picts">
+        <span class="card-pict">CZ · DE</span>
+        <span class="card-pict">6 let</span>
+        <span class="card-pict" style="opacity:0.5">Kal. 🔒</span>
+      </div>
+      <div class="card-lock-row">
+        <div class="lock-info">
+          <span class="lock-icon">🔒</span>
+          <span>Přístup od Premium+</span>
+        </div>
+        <a href="/cz/cenik" class="card-cta locked">Odemknout →</a>
+      </div>
+    </div>
+
+    <!-- KARTA 5 — Locked -->
+    <div class="worker-card locked-card">
+      <div class="card-top">
+        <div class="card-avatar-wrap">
+          <div class="card-avatar blur-avatar" style="background:#3F4445;">
+            R
+            <span class="card-avatar-flag">🇨🇿</span>
+          </div>
+          <div>
+            <div class="card-name blurred">Roman S.</div>
+            <div class="card-profession">Zámečník · Svářeč · 7 let</div>
+          </div>
+        </div>
+        <div class="card-badges">
+          <span class="badge-pro">PRO</span>
+          <span class="badge-avail soon">Od 1.7.</span>
+        </div>
+      </div>
+      <div class="card-rate">
+        <span class="card-rate-prefix">od:</span>
+        <span class="card-rate-num">25 €</span>
+        <span class="card-rate-unit">/ hod</span>
+      </div>
+      <div class="card-picts">
+        <span class="card-pict">CZ · DE</span>
+        <span class="card-pict">7 let</span>
+        <span class="card-pict" style="opacity:0.5">Kal. 🔒</span>
+      </div>
+      <div class="card-lock-row">
+        <div class="lock-info">
+          <span class="lock-icon">🔒</span>
+          <span>Přístup od Premium+</span>
+        </div>
+        <a href="/cz/cenik" class="card-cta locked">Odemknout →</a>
+      </div>
+    </div>
+
+    <!-- UPSELL CARD -->
+    <div class="upsell-card">
+      <div class="eyebrow">Alogator tier</div>
+      <h3>Vidíte jen 3 z 3 047</h3>
+      <p>Databáze je dostupná od plánu Premium+. Získejte přístup ke všem profilům včetně kalendáře dostupnosti.</p>
+      <a href="/cz/cenik" class="btn-primary">Podívat se na plány →</a>
+    </div>
+
+  </div>
+
+  <div class="load-more">
+    <button class="btn-outline">Načíst dalších 24 pracovníků →</button>
+    <div class="load-sub">Zobrazeno 5 z 284 dostupných · <a href="#" style="color:var(--graphite-500);text-decoration:underline">resetovat filtr</a></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-brand">
+          <span class="nav-logo-mark">A</span>
+          Alogator
+        </div>
+        <div class="foot-tagline">Marketplace propojující pracovníky a firmy ve stavebnictví a průmyslu. SK · CZ · DE · AT · NL · BE.</div>
+      </div>
+      <div class="foot-col">
+        <h4>Pro firmy</h4>
+        <a href="/cz/kontakt">Naplánovat demo</a>
+        <a href="/cz/databaze-pracovniku">Databáze pracovníků</a>
+        <a href="/cz/cenik">Ceník</a>
+        <a href="/cz/jak-to-funguje">Jak to funguje</a>
+      </div>
+      <div class="foot-col">
+        <h4>Pro pracovníky</h4>
+        <a href="/cz/nabidka-prace">Pracovní nabídky</a>
+        <a href="/cz/stahnout-aplikaci">Stáhnout aplikaci</a>
+        <a href="/cz/jak-to-funguje">Jak to funguje</a>
+        <a href="/cz/pro-pracovniky">Pro pracovníky</a>
+      </div>
+      <div class="foot-col">
+        <h4>Společnost</h4>
+        <a href="/cz/o-nas">O nás</a>
+        <a href="/cz/kontakt">Kontakt</a>
+        <a href="/cz/vop">VOP</a>
+        <a href="/cz/gdpr">GDPR</a>
+        <a href="/cz/cookies">Cookies</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Alogator · Profi Steel Holding · Všechna práva vyhrazena</span>
+      <span>Made in Slovakia · alogator.com</span>
+    </div>
+  </div>
+</footer>
+
+  <script src="/assets/consent.js" defer></script>
+</body>
+</html>

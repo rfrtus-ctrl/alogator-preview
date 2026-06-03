@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stiahnuť aplikáciu — Práca v zahraničí vo vrecku · Alogator</title>
+<meta name="description" content="Stiahni si Alogator aplikáciu. Nové pracovné ponuky v zahraničí v reálnom čase, notifikácie, priamy kontakt so zamestnávateľom. iOS a Android, zadarmo.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --signal: #E66748;
+  --signal-dark: #D4573A;
+  --signal-soft: #FDE8E0;
+  --graphite: #1A1D1E;
+  --graphite-700: #3F4445;
+  --graphite-500: #6B7174;
+  --graphite-200: #D9D9D6;
+  --porcelain: #F9F3ED;
+  --porcelain-200: #F0E8DD;
+  --porcelain-300: #E8DFD1;
+  --yellow: #F5D547;
+  --green: #2E8B57;
+  --green-soft: #D4EDDA;
+  --r-sm: 12px;
+  --r-md: 20px;
+  --r-lg: 32px;
+  --r-pill: 999px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Geist', 'Inter', system-ui, sans-serif;
+  background: var(--porcelain);
+  color: var(--graphite);
+  line-height: 1.5;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+/* NAV */
+.nav {
+  border-bottom: 1px solid var(--graphite-200);
+  padding: 16px 0;
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: blur(12px);
+  background: rgba(249, 243, 237, 0.92);
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; }
+.nav-logo {
+  font: 600 22px 'Geist';
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none; color: var(--graphite);
+}
+.nav-logo-mark {
+  width: 32px; height: 32px; background: var(--signal); border-radius: 8px;
+  display: grid; place-items: center; color: var(--porcelain); font-weight: 700; font-size: 16px;
+}
+.nav-links { display: flex; gap: 28px; }
+.nav-links a {
+  color: var(--graphite); text-decoration: none;
+  font: 500 14px 'Inter'; transition: color 0.15s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--signal); }
+.nav-actions { display: flex; gap: 10px; align-items: center; }
+.btn-ghost {
+  background: transparent; color: var(--graphite); border: 1.5px solid var(--graphite);
+  padding: 9px 18px; border-radius: var(--r-pill); font: 500 14px 'Geist'; cursor: pointer;
+  text-decoration: none; transition: all 0.15s;
+}
+.btn-ghost:hover { background: var(--graphite); color: var(--porcelain); }
+.btn-primary {
+  background: var(--signal); color: var(--porcelain); border: 0;
+  padding: 10px 20px; border-radius: var(--r-pill); font: 500 14px 'Geist'; cursor: pointer;
+  text-decoration: none; transition: background 0.15s;
+}
+.btn-primary:hover { background: var(--signal-dark); }
+
+/* HERO */
+.hero {
+  padding: 64px 0 72px;
+  border-bottom: 1px solid var(--porcelain-300);
+}
+.hero-grid {
+  display: grid; grid-template-columns: 1fr 420px;
+  gap: 56px; align-items: center;
+}
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px; font-weight: 500;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--signal); margin-bottom: 16px;
+}
+.eyebrow::before { content: '• '; }
+.hero h1 {
+  font: 500 56px/1.04 'Geist';
+  letter-spacing: -0.03em;
+  margin-bottom: 18px;
+}
+.hero h1 em { font-style: italic; color: var(--signal); }
+.hero-sub {
+  font: 400 17px/1.6 'Inter';
+  color: var(--graphite-700);
+  max-width: 480px;
+  margin-bottom: 28px;
+}
+.store-badges { display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; }
+.store-badge {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--graphite); color: var(--porcelain);
+  padding: 11px 20px; border-radius: 14px;
+  text-decoration: none; transition: all 0.15s;
+}
+.store-badge:hover { background: #000; transform: translateY(-2px); }
+.store-badge svg { flex-shrink: 0; }
+.store-badge-text { text-align: left; line-height: 1.1; }
+.store-badge-text small {
+  display: block; font: 400 9.5px 'Inter';
+  color: rgba(249,243,237,0.65); letter-spacing: 0.02em;
+}
+.store-badge-text strong { font: 500 15px 'Geist'; letter-spacing: -0.01em; }
+.hero-rating {
+  display: flex; align-items: center; gap: 10px;
+  font: 400 13px 'Inter'; color: var(--graphite-500);
+}
+.hero-rating .stars { color: var(--signal); font-size: 14px; letter-spacing: 1px; }
+.hero-rating strong { color: var(--graphite); font-weight: 600; }
+
+/* PHONE MOCKUP */
+.phone {
+  width: 300px; height: 600px;
+  background: var(--graphite);
+  border-radius: 44px;
+  padding: 12px;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 30px 60px rgba(26,29,30,0.22);
+}
+.phone::before {
+  content: '';
+  position: absolute; top: 22px; left: 50%; transform: translateX(-50%);
+  width: 110px; height: 26px; background: var(--graphite);
+  border-radius: 0 0 16px 16px; z-index: 3;
+}
+.phone-screen {
+  width: 100%; height: 100%;
+  background: var(--porcelain);
+  border-radius: 34px;
+  overflow: hidden;
+  position: relative;
+}
+.app-statusbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 22px 8px;
+  font: 600 12px 'Geist'; color: var(--graphite);
+}
+.app-header {
+  padding: 8px 18px 14px;
+  border-bottom: 1px solid var(--porcelain-300);
+}
+.app-header-title { font: 600 19px 'Geist'; letter-spacing: -0.02em; }
+.app-header-sub { font: 400 11px 'Inter'; color: var(--graphite-500); margin-top: 2px; }
+.app-body { padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+.app-card {
+  background: #fff; border: 1px solid var(--porcelain-300);
+  border-radius: 16px; padding: 14px;
+}
+.app-card.feat { border-color: var(--signal); background: linear-gradient(135deg,#fff,var(--signal-soft)); }
+.app-card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.app-card-logo {
+  width: 28px; height: 28px; border-radius: 8px;
+  background: var(--graphite); filter: blur(4px);
+}
+.app-card-badge {
+  font: 700 8px 'JetBrains Mono'; letter-spacing: 0.06em;
+  padding: 2px 7px; border-radius: var(--r-pill);
+  background: var(--signal); color: var(--porcelain);
+}
+.app-card-badge.new { background: var(--yellow); color: var(--graphite); }
+.app-card-prof { font: 500 8px 'JetBrains Mono'; letter-spacing: 0.1em; text-transform: uppercase; color: var(--signal); margin-bottom: 3px; }
+.app-card-title { font: 500 13px/1.25 'Geist'; margin-bottom: 8px; }
+.app-card-foot { display: flex; justify-content: space-between; align-items: baseline; padding-top: 8px; border-top: 1px solid var(--porcelain-300); }
+.app-card-rate { font: 500 17px 'Geist'; letter-spacing: -0.02em; }
+.app-card-rate span { font: 400 9px 'Inter'; color: var(--graphite-500); }
+.app-card-loc { font: 400 9.5px 'Inter'; color: var(--graphite-500); }
+.app-tabbar {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  display: flex; justify-content: space-around; align-items: center;
+  padding: 12px 0 20px; background: #fff;
+  border-top: 1px solid var(--porcelain-300);
+}
+.app-tab { width: 22px; height: 22px; border-radius: 6px; background: var(--graphite-200); }
+.app-tab.active { background: var(--signal); }
+
+/* FEATURES */
+.features { padding: 72px 0; }
+.section-head { text-align: center; max-width: 600px; margin: 0 auto 48px; }
+.section-head .eyebrow { display: inline-block; }
+.section-head h2 {
+  font: 500 38px/1.1 'Geist'; letter-spacing: -0.03em; margin-bottom: 14px;
+}
+.section-head h2 em { font-style: italic; color: var(--signal); }
+.section-head p { font: 400 16px/1.6 'Inter'; color: var(--graphite-700); }
+.feature-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px;
+}
+.feature-card {
+  background: #fff; border: 1px solid var(--porcelain-300);
+  border-radius: var(--r-md); padding: 26px 22px;
+}
+.feature-icon {
+  width: 46px; height: 46px; border-radius: 13px;
+  background: var(--signal-soft); color: var(--signal);
+  display: grid; place-items: center; margin-bottom: 16px;
+}
+.feature-card h3 { font: 500 17px 'Geist'; letter-spacing: -0.01em; margin-bottom: 8px; }
+.feature-card p { font: 400 13.5px/1.55 'Inter'; color: var(--graphite-500); }
+
+/* STEPS */
+.steps { padding: 0 0 72px; }
+.steps-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  counter-reset: step;
+}
+.step {
+  position: relative; padding: 28px 24px;
+  background: var(--porcelain-200); border-radius: var(--r-md);
+}
+.step::before {
+  counter-increment: step; content: counter(step);
+  display: grid; place-items: center;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--signal); color: var(--porcelain);
+  font: 600 16px 'Geist'; margin-bottom: 16px;
+}
+.step h3 { font: 500 18px 'Geist'; letter-spacing: -0.01em; margin-bottom: 8px; }
+.step p { font: 400 14px/1.55 'Inter'; color: var(--graphite-500); }
+
+/* DOWNLOAD CTA */
+.download-cta { padding: 0 0 80px; }
+.download-box {
+  background: var(--graphite); border-radius: var(--r-lg);
+  padding: 56px 56px; display: grid;
+  grid-template-columns: 1fr auto; gap: 48px; align-items: center;
+}
+.download-box .eyebrow { color: var(--yellow); }
+.download-box h2 {
+  font: 500 36px/1.1 'Geist'; letter-spacing: -0.03em;
+  color: var(--porcelain); margin-bottom: 14px;
+}
+.download-box h2 em { font-style: italic; color: var(--yellow); }
+.download-box p {
+  font: 400 15px/1.6 'Inter'; color: rgba(249,243,237,0.65);
+  max-width: 440px; margin-bottom: 24px;
+}
+.download-box .store-badge {
+  background: rgba(249,243,237,0.1); border: 1px solid rgba(249,243,237,0.2);
+}
+.download-box .store-badge:hover { background: rgba(249,243,237,0.18); }
+.qr-card {
+  background: var(--porcelain); border-radius: var(--r-md);
+  padding: 20px; text-align: center; width: 200px;
+}
+.qr-code {
+  width: 160px; height: 160px; margin: 0 auto 12px;
+  background:
+    linear-gradient(var(--graphite),var(--graphite)) 0 0/100% 8px no-repeat,
+    linear-gradient(var(--graphite),var(--graphite)) 0 100%/100% 8px no-repeat,
+    linear-gradient(var(--graphite),var(--graphite)) 0 0/8px 100% no-repeat,
+    linear-gradient(var(--graphite),var(--graphite)) 100% 0/8px 100% no-repeat;
+  border-radius: 10px; position: relative; padding: 16px;
+}
+.qr-inner {
+  width: 100%; height: 100%;
+  background-image:
+    repeating-linear-gradient(0deg, var(--graphite) 0 6px, transparent 6px 12px),
+    repeating-linear-gradient(90deg, var(--graphite) 0 6px, transparent 6px 12px);
+  background-size: 12px 12px; opacity: 0.85;
+  -webkit-mask-image: repeating-conic-gradient(#000 0% 25%, transparent 0% 50%);
+  mask-image: repeating-conic-gradient(#000 0% 25%, transparent 0% 50%);
+  mask-size: 24px 24px;
+}
+.qr-card span { font: 500 11px 'JetBrains Mono'; letter-spacing: 0.05em; color: var(--graphite-500); }
+
+/* FOOTER */
+.footer {
+  background: var(--graphite); color: var(--porcelain);
+  padding: 48px 0 24px;
+}
+.foot-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 32px; margin-bottom: 40px;
+}
+.foot-col h4 {
+  font: 600 11px 'JetBrains Mono'; letter-spacing: 0.12em;
+  text-transform: uppercase; color: rgba(249,243,237,0.5);
+  margin-bottom: 14px;
+}
+.foot-col h4::before { content: '•  '; color: var(--signal); }
+.foot-col a {
+  display: block; color: rgba(249,243,237,0.75);
+  text-decoration: none; font: 400 14px 'Inter';
+  margin-bottom: 8px; transition: color 0.15s;
+}
+.foot-col a:hover { color: var(--porcelain); }
+.foot-brand {
+  display: flex; align-items: center; gap: 10px;
+  font: 600 20px 'Geist'; color: var(--porcelain); margin-bottom: 12px;
+}
+.foot-tagline { font: 400 13px 'Inter'; color: rgba(249,243,237,0.5); max-width: 240px; line-height: 1.6; }
+.foot-bottom {
+  display: flex; justify-content: space-between; align-items: center;
+  border-top: 1px solid rgba(249,243,237,0.1); padding-top: 20px;
+  font: 400 12px 'JetBrains Mono'; color: rgba(249,243,237,0.35);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 1024px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+  .phone { order: -1; }
+  .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .foot-grid { grid-template-columns: 1fr 1fr; }
+  .download-box { grid-template-columns: 1fr; }
+  .qr-card { display: none; }
+}
+@media (max-width: 640px) {
+  .hero h1 { font-size: 40px; }
+  .section-head h2 { font-size: 30px; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .steps-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  .download-box { padding: 40px 28px; }
+}
+</style>
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://alogator.com/sk/stiahnut-aplikaciu">
+<link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/stiahnut-aplikaciu">
+<link rel="alternate" hreflang="x-default" href="https://alogator.com/sk/stiahnut-aplikaciu">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alogator">
+<meta property="og:locale" content="sk_SK">
+<meta property="og:title" content="Stiahnuť aplikáciu — Práca v zahraničí vo vrecku · Alogator">
+<meta property="og:description" content="Stiahni si Alogator aplikáciu. Nové pracovné ponuky v zahraničí v reálnom čase, notifikácie, priamy kontakt so zamestnávateľom. iOS a Android, zadarmo.">
+<meta property="og:url" content="https://alogator.com/sk/stiahnut-aplikaciu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Stiahnuť aplikáciu — Práca v zahraničí vo vrecku · Alogator">
+<meta name="twitter:description" content="Stiahni si Alogator aplikáciu. Nové pracovné ponuky v zahraničí v reálnom čase, notifikácie, priamy kontakt so zamestnávateľom. iOS a Android, zadarmo.">
+<!-- alg-schema -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Domov", "item": "https://alogator.com/sk"}, {"@type": "ListItem", "position": 2, "name": "Stiahnuť aplikáciu", "item": "https://alogator.com/sk/stiahnut-aplikaciu"}]}</script>
+<!-- /alg-schema -->
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/sk" class="nav-logo">
+      <span class="nav-logo-mark">A</span>
+      Alogator
+    </a>
+    <div class="nav-links">
+      <a href="/sk/databaza-pracovnikov">Databáza pracovníkov</a>
+      <a href="/sk/ponuka-prace">Pracovné ponuky</a>
+      <a href="/sk/ako-to-funguje">Ako to funguje</a>
+      <a href="/sk/cennik">Cenník</a>
+      <a href="/sk/o-nas">O nás</a>
+    </div>
+    <div class="nav-actions">
+      <a href="/sk/kontakt" class="btn-ghost">Naplánovať demo</a>
+      <a href="/app" class="btn-primary">Prihlásenie</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Mobilná aplikácia</div>
+        <h1>Práca v zahraničí<br><em>vo vrecku</em></h1>
+        <p class="hero-sub">Nové ponuky v reálnom čase, notifikácie a priamy kontakt so zamestnávateľom. Pre pracovníkov vždy zadarmo — iOS aj Android.</p>
+        <div class="store-badges">
+          <a href="#" class="store-badge">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <span class="store-badge-text"><small>Stiahnuť na</small><strong>App Store</strong></span>
+          </a>
+          <a href="#" class="store-badge">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.83 1-.92 1.27-.27l13 8.5c.36.23.36.77 0 1L4.27 21.27C4 21.92 3 21.83 3 20.5z"/></svg>
+            <span class="store-badge-text"><small>Dostupné na</small><strong>Google Play</strong></span>
+          </a>
+        </div>
+        <div class="hero-rating">
+          <span class="stars">★★★★★</span>
+          <span><strong>4,8</strong> · 2 400+ hodnotení</span>
+        </div>
+      </div>
+
+      <!-- PHONE MOCKUP -->
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="app-statusbar">
+            <span>9:41</span>
+            <span>●●● ◀ 100%</span>
+          </div>
+          <div class="app-header">
+            <div class="app-header-title">Ponuky pre teba</div>
+            <div class="app-header-sub">247 aktívnych · zvárač, DE</div>
+          </div>
+          <div class="app-body">
+            <div class="app-card feat">
+              <div class="app-card-top">
+                <div class="app-card-logo"></div>
+                <span class="app-card-badge">HOT</span>
+              </div>
+              <div class="app-card-prof">Zvárač MIG/MAG</div>
+              <div class="app-card-title">Zvárač MIG/MAG – Emsland</div>
+              <div class="app-card-foot">
+                <span class="app-card-rate">28 €<span> / hod</span></span>
+                <span class="app-card-loc">🇩🇪 Emsland, DE</span>
+              </div>
+            </div>
+            <div class="app-card">
+              <div class="app-card-top">
+                <div class="app-card-logo"></div>
+                <span class="app-card-badge new">NEW</span>
+              </div>
+              <div class="app-card-prof">Zvárač TIG</div>
+              <div class="app-card-title">Zvárač TIG nerez – Düsseldorf</div>
+              <div class="app-card-foot">
+                <span class="app-card-rate">32 €<span> / hod</span></span>
+                <span class="app-card-loc">🇩🇪 Düsseldorf</span>
+              </div>
+            </div>
+            <div class="app-card">
+              <div class="app-card-top">
+                <div class="app-card-logo"></div>
+                <span class="app-card-badge new">NEW</span>
+              </div>
+              <div class="app-card-prof">Montér</div>
+              <div class="app-card-title">Montér konštrukcií – Linz</div>
+              <div class="app-card-foot">
+                <span class="app-card-rate">24 €<span> / hod</span></span>
+                <span class="app-card-loc">🇦🇹 Linz, AT</span>
+              </div>
+            </div>
+          </div>
+          <div class="app-tabbar">
+            <div class="app-tab active"></div>
+            <div class="app-tab"></div>
+            <div class="app-tab"></div>
+            <div class="app-tab"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Čo appka vie</div>
+      <h2>Všetko na <em>jednom mieste</em></h2>
+      <p>Od prvej ponuky až po podpísanú zmluvu — celý proces zvládneš z mobilu.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <h3>Ponuky naživo</h3>
+        <p>Nové miesta v DE, AT, NL a BE hneď ako pribudnú. Žiadne zastarané inzeráty.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        </div>
+        <h3>Notifikácie na mieru</h3>
+        <p>Nastav si profesiu, krajinu a plat — appka ti pošle len to, čo ťa zaujíma.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>Priamy kontakt</h3>
+        <p>Po registrácii vidíš názov firmy a píšeš zamestnávateľovi priamo v aplikácii.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <h3>Kalendár dostupnosti</h3>
+        <p>Označ kedy si voľný a firmy ťa nájdu samé, keď budú zháňať ľudí.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="steps">
+  <div class="container">
+    <div class="steps-grid">
+      <div class="step">
+        <h3>Stiahni a zaregistruj sa</h3>
+        <p>Registrácia trvá 2 minúty a je úplne zadarmo. Vyplň profesiu a prax.</p>
+      </div>
+      <div class="step">
+        <h3>Nastav si preferencie</h3>
+        <p>Krajina, plat, termín nástupu. Appka ti odfiltruje len relevantné ponuky.</p>
+      </div>
+      <div class="step">
+        <h3>Spoj sa s firmou</h3>
+        <p>Odomkneš názov zamestnávateľa a dohodneš sa priamo — bez čakania.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD CTA -->
+<section class="download-cta">
+  <div class="container">
+    <div class="download-box">
+      <div>
+        <div class="eyebrow">Stiahni teraz</div>
+        <h2>Tvoja ďalšia práca <em>je o pár klikov</em></h2>
+        <p>Pripoj sa k tisícom stavbárov a remeselníkov, ktorí si cez Alogator našli prácu v zahraničí.</p>
+        <div class="store-badges" style="margin-bottom:0">
+          <a href="#" class="store-badge">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <span class="store-badge-text"><small>Stiahnuť na</small><strong>App Store</strong></span>
+          </a>
+          <a href="#" class="store-badge">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.83 1-.92 1.27-.27l13 8.5c.36.23.36.77 0 1L4.27 21.27C4 21.92 3 21.83 3 20.5z"/></svg>
+            <span class="store-badge-text"><small>Dostupné na</small><strong>Google Play</strong></span>
+          </a>
+        </div>
+      </div>
+      <div class="qr-card">
+        <div class="qr-code"><div class="qr-inner"></div></div>
+        <span>Naskenuj a stiahni</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-brand">
+          <span class="nav-logo-mark">A</span>
+          Alogator
+        </div>
+        <div class="foot-tagline">Marketplace prepájajúci pracovníkov a firmy v stavebníctve a priemysle. SK · CZ · DE · AT · NL · BE.</div>
+      </div>
+      <div class="foot-col">
+        <h4>Pre firmy</h4>
+        <a href="/sk/kontakt">Naplánovať demo</a>
+        <a href="/sk/databaza-pracovnikov">Databáza pracovníkov</a>
+        <a href="/sk/cennik">Cenník</a>
+        <a href="/sk/ako-to-funguje">Ako to funguje</a>
+      </div>
+      <div class="foot-col">
+        <h4>Pre pracovníkov</h4>
+        <a href="/sk/ponuka-prace">Pracovné ponuky</a>
+        <a href="/sk/stiahnut-aplikaciu">Stiahnuť aplikáciu</a>
+        <a href="/sk/ako-to-funguje">Ako to funguje</a>
+        <a href="/sk/pre-pracovnikov">Pre pracovníkov</a>
+      </div>
+      <div class="foot-col">
+        <h4>Spoločnosť</h4>
+        <a href="/sk/o-nas">O nás</a>
+        <a href="/sk/kontakt">Kontakt</a>
+        <a href="/sk/vop">VOP</a>
+        <a href="/sk/gdpr">GDPR</a>
+        <a href="/sk/cookies">Cookies</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Alogator · Profi Steel Holding · Všetky práva vyhradené</span>
+      <span>Made in Slovakia · alogator.com</span>
+    </div>
+  </div>
+</footer>
+
+  <script src="/assets/consent.js" defer></script>
+</body>
+</html>

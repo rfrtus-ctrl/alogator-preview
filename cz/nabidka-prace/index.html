@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pracovni nabidky v zahranici — 247 ovesenych mist · Alogator</title>
+<meta name="description" content="247 pracovnich nabidek v DE, AT, NL, BE pro stavbare a remeslniky. Svareci, elektrikari, monteri. Filtrujte podle profese, zeme, platu a terminu nastupu.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --signal: #E66748;
+  --signal-dark: #D4573A;
+  --signal-soft: #FDE8E0;
+  --graphite: #1A1D1E;
+  --graphite-700: #3F4445;
+  --graphite-500: #6B7174;
+  --graphite-200: #D9D9D6;
+  --porcelain: #F9F3ED;
+  --porcelain-200: #F0E8DD;
+  --porcelain-300: #E8DFD1;
+  --yellow: #F5D547;
+  --green: #2E8B57;
+  --green-soft: #D4EDDA;
+  --r-sm: 12px;
+  --r-md: 20px;
+  --r-lg: 32px;
+  --r-pill: 999px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Geist', 'Inter', system-ui, sans-serif;
+  background: var(--porcelain);
+  color: var(--graphite);
+  line-height: 1.5;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+/* NAV */
+.nav {
+  border-bottom: 1px solid var(--graphite-200);
+  padding: 16px 0;
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: blur(12px);
+  background: rgba(249, 243, 237, 0.92);
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; }
+.nav-logo {
+  font: 600 22px 'Geist';
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none; color: var(--graphite);
+}
+.nav-logo-mark {
+  width: 32px; height: 32px; background: var(--signal); border-radius: 8px;
+  display: grid; place-items: center; color: var(--porcelain); font-weight: 700; font-size: 16px;
+}
+.nav-links { display: flex; gap: 28px; }
+.nav-links a {
+  color: var(--graphite); text-decoration: none;
+  font: 500 14px 'Inter'; transition: color 0.15s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--signal); }
+.nav-actions { display: flex; gap: 10px; align-items: center; }
+.btn-ghost {
+  background: transparent; color: var(--graphite); border: 1.5px solid var(--graphite);
+  padding: 9px 18px; border-radius: var(--r-pill); font: 500 14px 'Geist'; cursor: pointer;
+  text-decoration: none; transition: all 0.15s;
+}
+.btn-ghost:hover { background: var(--graphite); color: var(--porcelain); }
+.btn-primary {
+  background: var(--signal); color: var(--porcelain); border: 0;
+  padding: 10px 20px; border-radius: var(--r-pill); font: 500 14px 'Geist'; cursor: pointer;
+  text-decoration: none; transition: background 0.15s;
+}
+.btn-primary:hover { background: var(--signal-dark); }
+
+/* HERO */
+.hero {
+  padding: 48px 0 32px;
+  border-bottom: 1px solid var(--porcelain-300);
+}
+.eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px; font-weight: 500;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--signal); margin-bottom: 12px;
+}
+.eyebrow::before { content: '• '; }
+.hero h1 {
+  font: 500 52px/1.05 'Geist';
+  letter-spacing: -0.03em;
+  margin-bottom: 12px;
+}
+.hero h1 em { font-style: italic; color: var(--signal); }
+.hero-sub {
+  font: 400 16px/1.6 'Inter';
+  color: var(--graphite-700);
+  max-width: 560px;
+  margin-bottom: 32px;
+}
+.hero-stats {
+  display: flex; gap: 32px; align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: var(--graphite-500);
+  letter-spacing: 0.05em;
+}
+.hero-stat strong {
+  display: block; font-size: 24px; font-weight: 600;
+  color: var(--graphite); letter-spacing: -0.02em;
+  font-family: 'Geist', sans-serif;
+}
+.hero-stat-divider { width: 1px; height: 32px; background: var(--graphite-200); }
+.live-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--porcelain-200); border: 1px solid var(--porcelain-300);
+  padding: 5px 12px; border-radius: var(--r-pill);
+  font: 500 11px 'JetBrains Mono'; letter-spacing: 0.08em;
+  color: var(--graphite-500);
+}
+.live-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--green); animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; } 50% { opacity: 0.4; }
+}
+
+/* AI SEARCH */
+.search-wrap { padding: 24px 0 0; }
+.search-box {
+  background: #fff;
+  border: 1.5px solid var(--graphite);
+  border-radius: var(--r-md);
+  padding: 18px 20px;
+  box-shadow: 0 2px 0 var(--graphite);
+  margin-bottom: 16px;
+}
+.search-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px; font-weight: 500;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--signal); margin-bottom: 8px;
+  display: flex; align-items: center; gap: 6px;
+}
+.search-input-row {
+  display: flex; align-items: center; gap: 12px;
+}
+.search-input {
+  flex: 1; border: 0; outline: 0;
+  font: 400 15px 'Inter'; color: var(--graphite-700);
+  background: transparent;
+}
+.search-input::placeholder { color: var(--graphite-200); }
+.search-btn {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--signal); border: 0; cursor: pointer;
+  display: grid; place-items: center; color: #fff;
+  font-size: 18px; flex-shrink: 0;
+  transition: background 0.15s;
+}
+.search-btn:hover { background: var(--signal-dark); }
+.search-chips {
+  display: flex; gap: 6px; flex-wrap: wrap;
+  padding-top: 12px; border-top: 1px solid var(--porcelain-300); margin-top: 12px;
+}
+.search-chip {
+  border: 1px solid var(--graphite-200);
+  padding: 4px 11px; border-radius: var(--r-pill);
+  font: 400 11.5px 'Inter'; color: var(--graphite-700);
+  cursor: pointer; transition: all 0.15s;
+}
+.search-chip:hover { border-color: var(--signal); color: var(--signal); }
+
+/* PROFESIA TABS */
+.prof-tabs {
+  display: flex; gap: 8px; overflow-x: auto;
+  padding: 16px 0 4px; scrollbar-width: none;
+}
+.prof-tabs::-webkit-scrollbar { display: none; }
+.prof-tab {
+  background: transparent; color: var(--graphite);
+  border: 1px solid var(--graphite); padding: 7px 15px;
+  border-radius: var(--r-pill); font: 500 13px 'Inter';
+  white-space: nowrap; cursor: pointer; transition: all 0.15s;
+  display: flex; align-items: center; gap: 6px;
+}
+.prof-tab.active {
+  background: var(--graphite); color: var(--porcelain);
+}
+.prof-tab:hover:not(.active) { background: var(--porcelain-200); }
+.prof-tab .cnt {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; opacity: 0.6;
+}
+
+/* FILTER ROWS */
+.filter-rows {
+  margin-bottom: 8px;
+}
+.filter-row {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 0; flex-wrap: wrap;
+}
+.filter-row + .filter-row {
+  border-top: 1px solid var(--porcelain-300);
+}
+.filter-row-label {
+  font: 500 10px 'JetBrains Mono'; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--graphite-500);
+  min-width: 72px; flex-shrink: 0;
+}
+.fchip {
+  background: transparent; color: var(--graphite);
+  border: 1px solid var(--graphite-200); padding: 5px 13px;
+  border-radius: var(--r-pill); font: 400 12.5px 'Inter';
+  white-space: nowrap; cursor: pointer; transition: all 0.15s;
+  display: inline-flex; align-items: center; gap: 5px;
+}
+.fchip:hover { border-color: var(--graphite); }
+.fchip.active {
+  background: var(--signal); color: var(--porcelain);
+  border-color: var(--signal);
+}
+.fchip .fcnt {
+  font: 500 10px 'JetBrains Mono'; opacity: 0.7;
+}
+.fchip.active .fcnt { opacity: 0.85; }
+.salary-range {
+  display: inline-flex; align-items: center; gap: 6px;
+  font: 400 12.5px 'Inter'; color: var(--graphite-500);
+  margin-left: 4px;
+}
+.salary-range input[type=number] {
+  width: 52px; border: 1px solid var(--graphite-200);
+  background: var(--porcelain); border-radius: var(--r-pill);
+  padding: 4px 10px; font: 400 12px 'Inter'; color: var(--graphite);
+  text-align: center; outline: none;
+}
+.salary-range input[type=number]:focus { border-color: var(--graphite); }
+.filter-meta {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 0 16px; margin-top: 2px;
+  font: 400 12.5px 'Inter'; color: var(--graphite-500);
+}
+.filter-meta strong { font-family: 'JetBrains Mono', monospace; color: var(--graphite); }
+.filter-reset { color: var(--graphite-500); text-decoration: underline; cursor: pointer; }
+.filter-reset:hover { color: var(--signal); }
+.filter-sort {
+  border: 1px solid var(--graphite-200); background: var(--porcelain);
+  padding: 4px 12px; border-radius: var(--r-pill);
+  font: 400 12px 'Inter'; color: var(--graphite); cursor: pointer;
+  -webkit-appearance: none; appearance: none;
+}
+
+/* JOB GRID */
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+/* JOB CARD */
+.job-card {
+  background: #fff;
+  border: 1px solid var(--porcelain-300);
+  border-radius: 20px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.15s;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.job-card:hover {
+  border-color: var(--graphite-200);
+  box-shadow: 0 4px 16px rgba(26,29,30,0.08);
+  transform: translateY(-1px);
+}
+.job-card.featured {
+  border-color: var(--signal);
+  background: linear-gradient(135deg, #fff 0%, var(--signal-soft) 100%);
+}
+.jcard-head {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; margin-bottom: 14px;
+}
+.jcard-logo {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: var(--graphite); color: var(--porcelain);
+  display: grid; place-items: center;
+  font: 600 14px 'JetBrains Mono'; flex-shrink: 0;
+  filter: blur(5px);
+  user-select: none;
+}
+.jcard-badge {
+  font: 700 9px 'JetBrains Mono'; letter-spacing: 0.08em;
+  padding: 3px 8px; border-radius: var(--r-pill);
+  display: flex; align-items: center; gap: 4px;
+}
+.jcard-badge.hot {
+  background: var(--signal); color: var(--porcelain);
+}
+.jcard-badge.hot::before {
+  content: '';
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--porcelain); opacity: 0.8;
+  animation: pulse 1.5s infinite;
+}
+.jcard-badge.new {
+  background: var(--yellow); color: var(--graphite);
+}
+.jcard-badge.feat {
+  background: var(--signal-soft); color: var(--signal-dark);
+  border: 1px solid var(--signal);
+}
+.jcard-prof {
+  font: 500 9.5px 'JetBrains Mono'; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--signal);
+  margin-bottom: 4px;
+}
+.jcard-title {
+  font: 500 15px/1.25 'Geist'; letter-spacing: -0.01em;
+  color: var(--graphite); margin-bottom: 6px;
+}
+.jcard-company {
+  display: flex; align-items: center; gap: 5px;
+  font: 400 11.5px 'Inter'; color: var(--graphite-500);
+  margin-bottom: 14px;
+}
+.jcard-lock {
+  display: inline-flex; align-items: center; gap: 4px;
+  background: var(--porcelain-200); border: 1px solid var(--porcelain-300);
+  padding: 2px 8px; border-radius: var(--r-pill);
+  font: 500 10.5px 'JetBrains Mono'; color: var(--graphite-500);
+}
+.jcard-meta {
+  display: flex; gap: 10px; flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.jcard-meta-item {
+  display: flex; align-items: center; gap: 4px;
+  font: 400 11.5px 'Inter'; color: var(--graphite-500);
+}
+.jcard-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 12px; border-top: 1px solid var(--porcelain-300);
+}
+.jcard-rate {
+  display: flex; align-items: baseline; gap: 3px;
+}
+.jcard-rate-num {
+  font: 500 22px 'Geist'; letter-spacing: -0.025em; color: var(--graphite);
+}
+.jcard-rate-unit {
+  font: 400 11px 'Inter'; color: var(--graphite-500);
+}
+.jcard-actions {
+  display: flex; align-items: center; gap: 8px;
+}
+.jcard-bookmark {
+  width: 30px; height: 30px; border-radius: 50%;
+  background: var(--porcelain-200); border: 1px solid var(--porcelain-300);
+  display: grid; place-items: center; cursor: pointer;
+  font-size: 13px; transition: all 0.15s;
+}
+.jcard-bookmark:hover { background: var(--signal-soft); border-color: var(--signal); }
+.jcard-age {
+  font: 400 10px 'JetBrains Mono'; color: var(--graphite-500);
+  letter-spacing: 0.05em;
+}
+
+/* UPSELL CARD */
+.upsell-card {
+  background: var(--graphite);
+  border-radius: 20px; padding: 24px;
+  display: flex; flex-direction: column;
+  justify-content: center; gap: 12px;
+}
+.upsell-card .eyebrow { color: var(--yellow); margin-bottom: 4px; }
+.upsell-card h3 {
+  font: 500 20px/1.2 'Geist'; color: var(--porcelain);
+  letter-spacing: -0.02em;
+}
+.upsell-card p {
+  font: 400 13px/1.5 'Inter'; color: rgba(249,243,237,0.65);
+}
+.upsell-card .btn-primary {
+  align-self: flex-start; margin-top: 4px;
+}
+
+/* LOAD MORE */
+.load-more {
+  text-align: center; margin: 8px 0 48px;
+}
+.btn-outline {
+  background: transparent; color: var(--graphite);
+  border: 1.5px solid var(--graphite);
+  padding: 12px 32px; border-radius: var(--r-pill);
+  font: 500 14px 'Geist'; cursor: pointer; transition: all 0.15s;
+}
+.btn-outline:hover { background: var(--graphite); color: var(--porcelain); }
+.load-sub {
+  font: 400 11.5px 'Inter'; color: var(--graphite-500); margin-top: 10px;
+}
+
+/* APP CTA BANNER */
+.app-banner {
+  background: var(--graphite); border-radius: 20px;
+  padding: 36px 40px; margin: 0 0 48px;
+  display: flex; align-items: center; justify-content: space-between; gap: 32px;
+}
+.app-banner-text h3 {
+  font: 500 26px/1.15 'Geist'; letter-spacing: -0.02em;
+  color: var(--porcelain); margin-bottom: 8px;
+}
+.app-banner-text h3 em { font-style: italic; color: var(--yellow); }
+.app-banner-text p {
+  font: 400 14px/1.5 'Inter'; color: rgba(249,243,237,0.6);
+  max-width: 420px;
+}
+.app-banner-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.btn-app {
+  background: rgba(249,243,237,0.1); color: var(--porcelain);
+  border: 1px solid rgba(249,243,237,0.2);
+  padding: 10px 22px; border-radius: var(--r-pill);
+  font: 500 13px 'Geist'; cursor: pointer; text-decoration: none;
+  transition: all 0.15s; white-space: nowrap;
+}
+.btn-app:hover { background: rgba(249,243,237,0.18); }
+.btn-app.primary { background: var(--signal); border-color: var(--signal); }
+.btn-app.primary:hover { background: var(--signal-dark); border-color: var(--signal-dark); }
+
+/* SEO SECTION */
+.seo-section {
+  background: var(--porcelain-200);
+  border-top: 1px solid var(--porcelain-300);
+  padding: 40px 0 48px;
+}
+.seo-section h2 {
+  font: 500 18px/1.3 'Geist'; letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+.seo-links {
+  columns: 2; column-gap: 32px;
+  margin-bottom: 24px;
+}
+.seo-links a {
+  display: block; color: var(--graphite-700);
+  text-decoration: none; font: 400 13px 'Inter';
+  margin-bottom: 6px; break-inside: avoid;
+  transition: color 0.15s;
+}
+.seo-links a:hover { color: var(--signal); }
+.seo-text {
+  font: 400 13px/1.7 'Inter'; color: var(--graphite-500);
+  max-width: 720px;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--graphite); color: var(--porcelain);
+  padding: 48px 0 24px;
+}
+.foot-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 32px; margin-bottom: 40px;
+}
+.foot-col h4 {
+  font: 600 11px 'JetBrains Mono'; letter-spacing: 0.12em;
+  text-transform: uppercase; color: rgba(249,243,237,0.5);
+  margin-bottom: 14px;
+}
+.foot-col h4::before { content: '•  '; color: var(--signal); }
+.foot-col a {
+  display: block; color: rgba(249,243,237,0.75);
+  text-decoration: none; font: 400 14px 'Inter';
+  margin-bottom: 8px; transition: color 0.15s;
+}
+.foot-col a:hover { color: var(--porcelain); }
+.foot-brand {
+  display: flex; align-items: center; gap: 10px;
+  font: 600 20px 'Geist'; color: var(--porcelain); margin-bottom: 12px;
+}
+.foot-tagline { font: 400 13px 'Inter'; color: rgba(249,243,237,0.5); max-width: 240px; line-height: 1.6; }
+.foot-bottom {
+  display: flex; justify-content: space-between; align-items: center;
+  border-top: 1px solid rgba(249,243,237,0.1); padding-top: 20px;
+  font: 400 12px 'JetBrains Mono'; color: rgba(249,243,237,0.35);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 1024px) {
+  .job-grid { grid-template-columns: repeat(2, 1fr); }
+  .foot-grid { grid-template-columns: 1fr 1fr; }
+  .app-banner { flex-direction: column; }
+}
+@media (max-width: 640px) {
+  .job-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 36px; }
+  .nav-links { display: none; }
+  .seo-links { columns: 1; }
+}
+</style>
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://alogator.com/cz/nabidka-prace">
+<link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/nabidka-prace">
+<link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/ponuka-prace">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alogator">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:title" content="Pracovni nabidky v zahranici — 247 overenych mist · Alogator">
+<meta property="og:description" content="247 pracovnich nabidek v DE, AT, NL, BE pro stavbare a remeslniky. Svareci, elektrikari, monteri. Filtrujte podle profese, zeme, platu a terminu nastupu.">
+<meta property="og:url" content="https://alogator.com/cz/nabidka-prace">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Pracovni nabidky v zahranici — 247 overenych mist · Alogator">
+<meta name="twitter:description" content="247 pracovnich nabidek v DE, AT, NL, BE pro stavbare a remeslniky. Svareci, elektrikari, monteri. Filtrujte podle profese, zeme, platu a terminu nastupu.">
+<!-- alg-schema -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Domov", "item": "https://alogator.com/cz"}, {"@type": "ListItem", "position": 2, "name": "Pracovni nabidky", "item": "https://alogator.com/cz/nabidka-prace"}]}</script>
+<!-- /alg-schema -->
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/cz" class="nav-logo">
+      <span class="nav-logo-mark">A</span>
+      Alogator
+    </a>
+    <div class="nav-links">
+      <a href="/cz/databaze-pracovniku">Databaze pracovniku</a>
+      <a href="/cz/nabidka-prace" class="active">Pracovni nabidky</a>
+      <a href="/cz/jak-to-funguje">Jak to funguje</a>
+      <a href="/cz/cenik">Cenik</a>
+      <a href="/cz/o-nas">O nas</a>
+    </div>
+    <div class="nav-actions">
+      <a href="/app" class="btn-ghost">Prihlaseni</a>
+      <a href="/cz/stahnout-aplikaci" class="btn-primary">Stahnout aplikaci</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">Pracovni nabidky</div>
+    <h1>Najdi praci<br><em>v zahranici</em></h1>
+    <p class="hero-sub">Overene nabidky od agentur a firem v DE, AT, NL a BE. Registrace zdarma — ziskate pristup k nazvum zamestnavatelu a primemu kontaktu.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <strong>247</strong>
+        AKTIVNICH NABIDEK
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <strong>12</strong>
+        ZEMI
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <strong>89</strong>
+        IHNED NASTUP
+      </div>
+      <div class="hero-stat-divider"></div>
+      <span class="live-badge">
+        <span class="live-dot"></span>
+        Aktualizovano denne
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- SEARCH + FILTERS -->
+<div class="search-wrap">
+  <div class="container">
+    <div class="search-box">
+      <div class="search-label">
+        <span>✦</span> AI vyhledavani · popiste co hledate
+      </div>
+      <div class="search-input-row">
+        <input class="search-input" type="text" placeholder="Napriklad: Svarec MIG/MAG, Nemecko, min. 25€/h, nastup ihned...">
+        <button class="search-btn">→</button>
+      </div>
+      <div class="search-chips">
+        <span class="search-chip">⚡ Svarec · Nemecko · ihned</span>
+        <span class="search-chip">⚡ Elektrikar · Rakousko</span>
+        <span class="search-chip">⚡ Monter · Belgie · min. 24€</span>
+        <span class="search-chip">⚡ Tesar · NL/BE</span>
+      </div>
+    </div>
+
+    <!-- FILTER ROWS -->
+    <div class="filter-rows">
+      <!-- PROFESE -->
+      <div class="filter-row">
+        <span class="filter-row-label">Profese</span>
+        <button class="fchip active">Vsechny <span class="fcnt">247</span></button>
+        <button class="fchip">🔥 Svarec <span class="fcnt">89</span></button>
+        <button class="fchip">⚡ Elektrikar <span class="fcnt">52</span></button>
+        <button class="fchip">🔧 Monter <span class="fcnt">41</span></button>
+        <button class="fchip">🪵 Tesar <span class="fcnt">28</span></button>
+        <button class="fchip">🧱 Zednik <span class="fcnt">21</span></button>
+        <button class="fchip">🔩 Potrubir <span class="fcnt">16</span></button>
+      </div>
+
+      <!-- ZEME -->
+      <div class="filter-row">
+        <span class="filter-row-label">Zeme</span>
+        <button class="fchip">🇩🇪 Nemecko <span class="fcnt">98</span></button>
+        <button class="fchip">🇦🇹 Rakousko <span class="fcnt">64</span></button>
+        <button class="fchip">🇳🇱 Nizozemsko <span class="fcnt">47</span></button>
+        <button class="fchip">🇧🇪 Belgie <span class="fcnt">38</span></button>
+      </div>
+
+      <!-- NASTUP -->
+      <div class="filter-row">
+        <span class="filter-row-label">Nastup</span>
+        <button class="fchip">Ihned <span class="fcnt">67</span></button>
+        <button class="fchip">Do 1 mesice <span class="fcnt">112</span></button>
+        <button class="fchip">Do 3 mesicu <span class="fcnt">133</span></button>
+        <button class="fchip">🏠 Ubytovani v cene</button>
+        <button class="fchip">🚗 Doprava hrazena</button>
+        <button class="fchip">OSVC mozne</button>
+        <span class="salary-range">
+          Sazba
+          <input type="number" value="15" min="10" max="80"> €
+          –
+          <input type="number" value="50" min="10" max="80"> €/h
+        </span>
+      </div>
+    </div>
+
+    <!-- FILTER META -->
+    <div class="filter-meta">
+      <span><strong>247</strong> nabidek · radit</span>
+      <span style="display:flex;align-items:center;gap:12px">
+        <span class="filter-reset">Resetovat filtry</span>
+        <select class="filter-sort">
+          <option>Relevance</option>
+          <option>Nejnovejsi</option>
+          <option>Plat — od nejvyssiho</option>
+          <option>Plat — od nejnizsiho</option>
+        </select>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- JOB GRID -->
+<div class="container">
+  <div class="job-grid">
+
+    <!-- KARTA 1 — HOT · Svarec MIG/MAG · Emsland DE -->
+    <a href="/cz/nabidka/svarec-mig-mag-emsland" class="job-card">
+      <div class="jcard-head">
+        <div class="jcard-logo">AG</div>
+        <span class="jcard-badge hot">HOT</span>
+      </div>
+      <div class="jcard-prof">Svarec MIG/MAG</div>
+      <div class="jcard-title">Svarec MIG/MAG – Emsland, Nemecko</div>
+      <div class="jcard-company">
+        <span class="jcard-lock">🔒 Prihlaste se</span>
+        <span>· 🇩🇪</span>
+      </div>
+      <div class="jcard-meta">
+        <span class="jcard-meta-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Emsland, DE
+        </span>
+        <span class="jcard-meta-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          ihned
+        </span>
+        <span class="jcard-meta-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          3–5 svarecu
+        </span>
+      </div>
+      <div class="jcard-footer">
+        <div class="jcard-rate">
+          <span class="jcard-rate-num">28 €</span>
+          <span class="jcard-rate-unit">/ hod</span>
+        </div>
+        <div class="jcard-actions">
+          <div class="jcard-bookmark">♡</div>
+          <span class="jcard-age">2 dny</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- KARTA 2 — NEW · Elektrikar · Rotterdam NL -->
+    <a href="/cz/nabidka/elektrikar-rotterdam" class="job-card">
+      <div class="jcard-head">
+        <div class="jcard-logo">BX</div>
+        <span class="jcard-badge new">NEW</span>
+      </div>
+      <div class="jcard-prof">Elektrikar</div>
+      <div class="jcard-title">Elektrikar NN/VN – Rotterdam, Nizozemsko</div>
+      <div class="jcard-company">
+        <span class="jcard-lock">🔒 Prihlaste se</span>
+        <span>· 🇳🇱</span>
+      </div>
+      <div class="jcard-meta">
+        <span class="jcard-meta-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Rotterdam, NL
+        </span>
+        <span class="jcard-meta-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          1. 7. 2026
+        </span>
+        <span class="jcard-meta-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          1–2 elektrikari
+        </span>
+      </div>
+      <div class="jcard-footer">
+        <div class="jcard-rate">
+          <span class="jcard-rate-num">26 €</span>
+          <span class="jcard-rate-unit">/ hod</span>
+        </div>
+        <div class="jcard-actions">
+          <div class="jcard-bookmark">♡</div>
+          <span class="jcard-age">dnes</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- KARTA 3 — FEATURED · Monter ocelovych konstrukci · Linz AT -->
+    <a href="/cz/nabidka/monter-konstrukci-linz" class="job-card featured">
+      <div class="jcard-head">
+        <div class="jcard-logo">PS</div>
+        <span class="jcard-badge feat">FEATURED</span>
+      </div>
+      <div class="jcard-prof">Monter konstrukci</div>
+      <div class="jcard-title">Monter ocelovych konstrukci – Linz, Rakousko</div>
+      <div class="jcard-company">
+        <span class="jcard-lock">🔒 Prihlaste se</span>
+        <span>· 🇦🇹</span>
+      </div>
+      <div class="jcard-meta">
+        <span class="jcard-meta-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Linz, AT
+        </span>
+        <span class="jcard-meta-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          flexibilne
+        </span>
+        <span class="jcard-meta-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          4–6 monteru
+        </span>
+      </div>
+      <div class="jcard-footer">
+        <div class="jcard-rate">
+          <span class="jcard-rate-num">24 €</span>
+          <span class="jcard-rate-unit">/ hod</span>
+        </div>
+        <div class="jcard-actions">
+          <div class="jcard-bookmark">♡</div>
+          <span class="jcard-age">3 dny</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- KARTA 4 · Svarec TIG · Dusseldorf DE -->
+    <a href="/cz/nabidka/svarec-tig-dusseldorf" class="job-card">
+      <div class="jcard-head">
+        <div class="jcard-logo">MT</div>
+        <span class="jcard-badge hot">HOT</span>
+      </div>
+      <div class="jcard-prof">Svarec TIG</div>
+      <div class="jcard-title">Svarec TIG nerez – Dusseldorf, Nemecko</div>
+      <div class="jcard-company">
+        <span class="jcard-lock">🔒 Prihlaste se</span>
+        <span>· 🇩🇪</span>
+      </div>
+      <div class="jcard-meta">
+        <span class="jcard-meta-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Dusseldorf, DE
+        </span>
+        <span class="jcard-meta-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          15. 6. 2026
+        </span>
+        <span class="jcard-meta-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          2 svareci
+        </span>
+      </div>
+      <div class="jcard-footer">
+        <div class="jcard-rate">
+          <span class="jcard-rate-num">32 €</span>
+          <span class="jcard-rate-unit">/ hod</span>
+        </div>
+        <div class="jcard-actions">
+          <div class="jcard-bookmark">♡</div>
+          <span class="jcard-age">5 dni</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- KARTA 5 · Tesar · Gent BE -->
+    <a href="/cz/nabidka/tesar-gent" class="job-card">
+      <div class="jcard-head">
+        <div class="jcard-logo">VB</div>
+        <span class="jcard-badge new">NEW</span>
+      </div>
+      <div class="jcard-prof">Tesar</div>
+      <div class="jcard-title">Tesar – hruba stavba, Gent, Belgie</div>
+      <div class="jcard-company">
+        <span class="jcard-lock">🔒 Prihlaste se</span>
+        <span>· 🇧🇪</span>
+      </div>
+      <div class="jcard-meta">
+        <span class="jcard-meta-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Gent, BE
+        </span>
+        <span class="jcard-meta-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          1. 8. 2026
+        </span>
+        <span class="jcard-meta-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          3–4 tesari
+        </span>
+      </div>
+      <div class="jcard-footer">
+        <div class="jcard-rate">
+          <span class="jcard-rate-num">23 €</span>
+          <span class="jcard-rate-unit">/ hod</span>
+        </div>
+        <div class="jcard-actions">
+          <div class="jcard-bookmark">♡</div>
+          <span class="jcard-age">1 den</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- UPSELL KARTA -->
+    <div class="upsell-card">
+      <div class="eyebrow">Registrace zdarma</div>
+      <h3>Zobrazite si nazev firmy a kontakt</h3>
+      <p>Registrace trva 2 minuty. Pristup k nazvum zamestnavatelu a primemu kontaktu je pro pracovniky vzdy zdarma.</p>
+      <a href="/app" class="btn-primary">Registrovat se zdarma →</a>
+    </div>
+
+  </div>
+
+  <div class="load-more">
+    <button class="btn-outline">Nacist dalsich 24 nabidek →</button>
+    <div class="load-sub">Zobrazeno 5 z 247 aktivnich · <a href="#" style="color:var(--graphite-500);text-decoration:underline">resetovat filtr</a></div>
+  </div>
+</div>
+
+<!-- APP CTA BANNER -->
+<div class="container">
+  <div class="app-banner">
+    <div class="app-banner-text">
+      <h3>Dostavej nabidky <em>primo do mobilu</em></h3>
+      <p>Alogator aplikace — nove nabidky, notifikace, zpravy od zamestnavatelu. iOS a Android. Registrace zdarma.</p>
+    </div>
+    <div class="app-banner-actions">
+      <a href="#" class="btn-app">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;margin-right:6px"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        App Store
+      </a>
+      <a href="#" class="btn-app primary">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;margin-right:6px"><path d="M3 20.5v-17c0-.83 1-.92 1.27-.27l13 8.5c.36.23.36.77 0 1L4.27 21.27C4 21.92 3 21.83 3 20.5z"/></svg>
+        Google Play
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- SEO SEKCE -->
+<section class="seo-section">
+  <div class="container">
+    <h2>Pracovni nabidky v zahranici podle profese</h2>
+    <div class="seo-links">
+      <a href="/cz/nabidka-prace/svarec">Prace svarec zahranici</a>
+      <a href="/cz/nabidka-prace/elektrikar">Prace elektrikar zahranici</a>
+      <a href="/cz/nabidka-prace/instalater">Prace vodar / instalater zahranici</a>
+      <a href="/cz/nabidka-prace/zamecnik">Prace zamecnik zahranici</a>
+      <a href="/cz/nabidka-prace/tesar">Prace tesar zahranici</a>
+      <a href="/cz/nabidka-prace/zednik">Prace zednik zahranici</a>
+      <a href="/cz/prace-v-zahranici">Prace v zahranici pro Cechy</a>
+      <a href="/cz/prace-v-zahranici/nemecko">Prace v Nemecku</a>
+      <a href="/cz/prace-v-zahranici/rakousko">Prace v Rakousku</a>
+      <a href="/cz/prace-v-zahranici/nizozemsko">Prace v Nizozemsku</a>
+    </div>
+    <p class="seo-text">Alogator spojuje stavbare a remeslniky z Ceska a Slovenska s agenturami a firmami v Nemecku, Rakousku, Nizozemsku a Belgii. Registrace a pristup k nabidkam je pro pracovniky vzdy zdarma.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-brand">
+          <span class="nav-logo-mark">A</span>
+          Alogator
+        </div>
+        <div class="foot-tagline">Marketplace propojujici pracovniky a firmy ve stavebnictvi a prumyslu. SK · CZ · DE · AT · NL · BE.</div>
+      </div>
+      <div class="foot-col">
+        <h4>Pro firmy</h4>
+        <a href="/cz/kontakt">Naplanovat demo</a>
+        <a href="/cz/databaze-pracovniku">Databaze pracovniku</a>
+        <a href="/cz/cenik">Cenik</a>
+        <a href="/cz/jak-to-funguje">Jak to funguje</a>
+      </div>
+      <div class="foot-col">
+        <h4>Pro pracovniky</h4>
+        <a href="/cz/nabidka-prace">Pracovni nabidky</a>
+        <a href="/cz/stahnout-aplikaci">Stahnout aplikaci</a>
+        <a href="/cz/jak-to-funguje">Jak to funguje</a>
+        <a href="/cz/pro-pracovniky">Pro pracovniky</a>
+      </div>
+      <div class="foot-col">
+        <h4>Spolecnost</h4>
+        <a href="/cz/o-nas">O nas</a>
+        <a href="/cz/kontakt">Kontakt</a>
+        <a href="/cz/vop">VOP</a>
+        <a href="/cz/gdpr">GDPR</a>
+        <a href="/cz/cookies">Cookies</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Alogator · Profi Steel Holding · Vsechna prava vyhrazena</span>
+      <span>Made in Slovakia · alogator.com</span>
+    </div>
+  </div>
+</footer>
+
+  <script src="/assets/consent.js" defer></script>
+</body>
+</html>

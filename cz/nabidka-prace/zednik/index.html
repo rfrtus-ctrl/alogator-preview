@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Práce pro zedníky v Česku — zdivo, omítky, obklady · Alogator</title>
+<meta name="description" content="Pracovní nabídky pro zedníky — zdivo, omítky, obklady, zateplování. Práce v Česku i v zahraničí (Německo, Rakousko). Vytvořte si profil zdarma a firmy vás osloví samy.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<style>
+:root{--signal:#E66748;--signal-dark:#D4573A;--signal-soft:#FDE8E0;--graphite:#1A1D1E;--graphite-700:#3F4445;--graphite-500:#6B7174;--graphite-200:#D9D9D6;--porcelain:#F9F3ED;--porcelain-200:#F0E8DD;--porcelain-300:#E8DFD1;--yellow:#F5D547;--green:#3F7D5F}*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',sans-serif;background:var(--porcelain);color:var(--graphite);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}.container{max-width:1280px;margin:0 auto;padding:0 24px}.eyebrow{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--signal)}.eyebrow::before{content:'• '}h1,h2,h3,h4{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.025em;line-height:1.1;color:var(--graphite)}em{font-style:italic;color:var(--signal);font-weight:500}
+.flag{width:18px;height:13px;border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 0 1px rgba(26,29,30,.08)}.flag-cz{background:linear-gradient(135deg,#fff 50%,#D7141A 50%);position:relative}.flag-cz::before{content:'';position:absolute;left:0;top:0;bottom:0;width:50%;background:#11457E;clip-path:polygon(0 0,100% 50%,0 100%)}.flag-de{background:linear-gradient(to bottom,#000 33%,#dd0000 33% 66%,#ffce00 66%)}.flag-at{background:linear-gradient(to bottom,#ED2939 50%,#fff 50%)}.flag-nl{background:linear-gradient(to bottom,#AE1C28 33%,#fff 33% 66%,#21468B 66%)}
+.navbar{background:var(--graphite);color:var(--porcelain);padding:18px 0}.nav-inner{display:flex;justify-content:space-between;align-items:center}.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--porcelain)}.nav-logo-mark{width:32px;height:32px;background:var(--signal);border-radius:9px;display:flex;align-items:center;justify-content:center;font-family:'Geist',sans-serif;font-weight:500;font-size:16px}.nav-logo-name{font-family:'Geist',sans-serif;font-weight:500;font-size:20px}.nav-links{display:flex;gap:32px}.nav-links a{color:rgba(249,243,237,.85);text-decoration:none;font-size:14px}.nav-links a.active{color:var(--porcelain);font-weight:500}.nav-actions{display:flex;gap:10px;align-items:center}.nav-btn{background:transparent;border:1px solid rgba(249,243,237,.2);color:var(--porcelain);padding:8px 18px;border-radius:999px;font-size:13.5px;cursor:pointer}.nav-btn.primary{background:var(--signal);border-color:var(--signal)}
+.breadcrumb{padding:18px 0 8px;background:var(--porcelain);font-size:12.5px;color:var(--graphite-500);font-family:'JetBrains Mono',monospace}.breadcrumb a{color:var(--graphite-500);text-decoration:none}.breadcrumb a:hover{color:var(--signal)}.breadcrumb .sep{margin:0 8px;color:var(--graphite-200)}
+.job-header{padding:24px 0 40px;background:var(--porcelain)}.job-header-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:flex-start}.urgency-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.urgency-badge{display:inline-flex;align-items:center;gap:6px;background:var(--signal-soft);color:var(--signal-dark);padding:5px 11px;border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase}.urgency-badge.hot{background:var(--signal);color:var(--porcelain)}.urgency-badge.new{background:var(--yellow);color:var(--graphite)}.urgency-badge .dot{width:6px;height:6px;border-radius:50%;background:currentColor;animation:pulse 1.5s ease-in-out infinite}@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.job-main{display:flex;gap:20px;align-items:flex-start}.job-logo{width:88px;height:88px;border-radius:18px;background:var(--graphite);color:var(--porcelain);display:flex;align-items:center;justify-content:center;font-family:'Geist',sans-serif;font-weight:500;font-size:32px;flex-shrink:0}.job-info{flex:1;min-width:0}.job-title{font-family:'Geist',sans-serif;font-weight:500;font-size:36px;letter-spacing:-0.02em;color:var(--graphite);line-height:1.1;margin-bottom:8px}.job-meta-row{display:flex;flex-wrap:wrap;gap:18px;font-size:13.5px;color:var(--graphite-700);padding-top:16px;border-top:1px solid var(--porcelain-300)}.job-meta-item{display:inline-flex;align-items:center;gap:7px}.job-meta-item strong{color:var(--graphite);font-weight:500}
+.rate-card{background:var(--graphite);color:var(--porcelain);border-radius:24px;padding:32px;position:sticky;top:24px}.rate-card-label{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.6)}.rate-card-label::before{content:'• ';color:var(--signal)}.rate-row{display:flex;align-items:baseline;gap:6px;margin:10px 0 4px}.rate-num{font-family:'Geist',sans-serif;font-weight:500;font-size:48px;letter-spacing:-0.025em;color:var(--porcelain);line-height:1}.rate-unit{font-size:14px;color:rgba(249,243,237,.6)}.rate-note{font-size:12.5px;color:rgba(249,243,237,.6);margin-bottom:20px}.rate-bonuses{display:flex;flex-direction:column;gap:8px;margin-bottom:22px}.bonus-row{display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(249,243,237,.9)}.bonus-icon{width:20px;height:20px;border-radius:50%;background:rgba(124,201,92,.2);color:#7CC95C;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;font-weight:700}.bonus-row strong{color:var(--porcelain);font-weight:500}.rate-cta{background:var(--signal);color:var(--porcelain);border:0;width:100%;padding:14px;border-radius:999px;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;cursor:pointer;margin-bottom:10px}.rate-cta:hover{background:var(--signal-dark)}.rate-cta-secondary{background:transparent;color:var(--porcelain);border:1px solid rgba(249,243,237,.25);width:100%;padding:13px;border-radius:999px;font-family:'Inter',sans-serif;font-size:13.5px;font-weight:500;cursor:pointer}.rate-applicants{display:flex;align-items:center;gap:10px;margin-top:18px;padding-top:18px;border-top:1px solid rgba(249,243,237,.1);font-size:12px;color:rgba(249,243,237,.7)}.applicants-avatars{display:flex}.applicants-avatars span{width:26px;height:26px;border-radius:50%;border:2px solid var(--graphite);display:flex;align-items:center;justify-content:center;font-family:'Geist',sans-serif;font-weight:500;font-size:11px;color:var(--porcelain);margin-left:-7px}.applicants-avatars span:first-child{margin-left:0}
+.job-content{padding:40px 0 64px;background:var(--porcelain)}.job-content-grid{display:grid;grid-template-columns:2fr 1fr;gap:48px;align-items:flex-start}
+.sec-card{background:var(--porcelain);border:1px solid var(--porcelain-300);border-radius:24px;padding:32px;margin-bottom:18px}.sec-card h2{font-size:22px;letter-spacing:-0.02em;margin-bottom:18px}.sec-card h2 em{font-style:italic;color:var(--signal)}.sec-card .label{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--signal)}.sec-card .label::before{content:'• '}
+.desc-text{font-size:15px;line-height:1.65;color:var(--graphite-700)}.desc-text p{margin-bottom:14px}.desc-text strong{color:var(--graphite);font-weight:500}.desc-text h3{font-family:'Geist',sans-serif;font-weight:500;font-size:16px;letter-spacing:-0.015em;color:var(--graphite);margin:18px 0 10px}.desc-text ul{padding-left:0;list-style:none;margin-bottom:14px}.desc-text li{padding-left:20px;position:relative;margin-bottom:8px;line-height:1.6}.desc-text li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--signal)}.desc-text a{color:var(--signal);text-decoration:none;font-weight:500}.desc-text a:hover{text-decoration:underline}
+.summary-widget{background:var(--porcelain-200);border-radius:18px;padding:24px}.summary-row{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid var(--porcelain-300)}.summary-row:first-child{padding-top:0}.summary-row:last-child{border-bottom:0;padding-bottom:0}.summary-icon{width:32px;height:32px;border-radius:9px;background:var(--signal-soft);color:var(--signal);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px}.summary-content{flex:1;min-width:0}.summary-label{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--graphite-500);margin-bottom:2px}.summary-val{font-family:'Geist',sans-serif;font-weight:500;font-size:14px;color:var(--graphite);letter-spacing:-0.01em}.summary-sub{font-size:11.5px;color:var(--graphite-500);margin-top:2px}
+.similar-sec{padding:64px 0;background:var(--porcelain-200)}.similar-sec h2{font-size:clamp(24px,2.5vw,32px);margin-bottom:24px}.similar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.jcard{background:var(--porcelain);border:1px solid var(--porcelain-300);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:12px;cursor:pointer;transition:transform .2s,border-color .2s}.jcard:hover{transform:translateY(-3px);border-color:var(--graphite-200)}.jcard-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}.jcard-meta{flex:1;min-width:0}.jcard-loc{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--graphite-500);letter-spacing:0.05em;display:inline-flex;align-items:center;gap:6px;margin-bottom:6px}.jcard-title{font-family:'Geist',sans-serif;font-weight:500;font-size:16px;letter-spacing:-0.015em;color:var(--graphite);line-height:1.2}.jcard-company{font-size:12px;color:var(--graphite-500);margin-top:3px}.jcard-rate{display:flex;align-items:baseline;gap:4px;margin-top:8px;padding-top:12px;border-top:1px solid var(--porcelain-300)}.jcard-rate-num{font-family:'Geist',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.02em}.jcard-rate-unit{font-size:11px;color:var(--graphite-500)}.jcard-tags{display:flex;gap:5px;flex-wrap:wrap}.jcard-tag{background:var(--porcelain-200);color:var(--graphite-700);font-size:10.5px;padding:3px 9px;border-radius:999px}
+.footer{background:var(--graphite);color:var(--porcelain);padding:48px 0 24px}.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}.foot-col h5{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.5);margin-bottom:16px}.foot-col h5::before{content:'• ';color:var(--signal)}.foot-col a{display:block;color:rgba(249,243,237,.7);text-decoration:none;font-size:13.5px;padding:5px 0}.foot-bottom{padding-top:24px;display:flex;justify-content:space-between;font-size:12px;color:rgba(249,243,237,.5)}
+@media (max-width:900px){.job-header-grid,.job-content-grid,.similar-grid,.foot-top{grid-template-columns:1fr;gap:24px}.job-main{flex-direction:column;text-align:center;align-items:center}}
+</style>
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://alogator.com/cz/nabidka-prace/zednik">
+<link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/nabidka-prace/zednik">
+<link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/ponuka-prace/murar">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alogator">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:title" content="Práce pro zedníky v Česku — zdivo, omítky, obklady · Alogator">
+<meta property="og:description" content="Pracovní nabídky pro zedníky — zdivo, omítky, obklady, zateplování. Práce v Česku i v zahraničí (Německo, Rakousko). Vytvořte si profil zdarma.">
+<meta property="og:url" content="https://alogator.com/cz/nabidka-prace/zednik">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Práce pro zedníky v Česku — zdivo, omítky, obklady · Alogator">
+<meta name="twitter:description" content="Pracovní nabídky pro zedníky — zdivo, omítky, obklady, zateplování. Práce v Česku i v zahraničí (Německo, Rakousko). Vytvořte si profil zdarma.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Domů","item":"https://alogator.com/cz"},{"@type":"ListItem","position":2,"name":"Pracovní nabídky","item":"https://alogator.com/cz/nabidka-prace"},{"@type":"ListItem","position":3,"name":"Zedník","item":"https://alogator.com/cz/nabidka-prace/zednik"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Jaké práce dělá zedník?","acceptedAnswer":{"@type":"Answer","text":"Zedník staví zdivo nosných stěn i příček, provádí vnitřní a vnější omítky (ruční i strojní), obklady a dlažby a zateplování fasád (ETICS). Mnozí zedníci zvládají i sádrokarton a drobné betonářské práce. Na stavbě čte výkresy a pracuje podle projektové dokumentace."}},{"@type":"Question","name":"Jsou zakázky pro zedníky i v Česku, nebo jen v zahraničí?","acceptedAnswer":{"@type":"Answer","text":"Ano, nabídky pro zedníky jsou i v Česku — například v Brně, Praze či Ostravě. Zároveň je silná poptávka v Německu a Rakousku, kde jsou hodinové sazby vyšší. Na Alogator si vybíráte vy: v profilu uvedete, kde chcete pracovat, a firmy vás osloví podle toho."}},{"@type":"Question","name":"Dá se práce zedníka dělat na OSVČ?","acceptedAnswer":{"@type":"Answer","text":"Ano. Hodně zedníků pracuje na OSVČ (živnost) a fakturuje přímo firmě — v Česku i v zahraničí. Část nabídek je i na HPP. Zda jde o OSVČ nebo HPP, je uvedeno u každé konkrétní nabídky."}}]}</script>
+</head>
+<body>
+
+<nav class="navbar"><div class="container nav-inner"><a href="/cz" class="nav-logo"><div class="nav-logo-mark">A</div><div class="nav-logo-name">Alogator</div></a><div class="nav-links"><a href="/cz/databaze-pracovniku">Databáze pracovníků</a><a href="/cz/nabidka-prace" class="active">Pracovní nabídky</a><a href="/cz/jak-to-funguje">Jak to funguje</a><a href="/cz/cenik">Ceník</a><a href="/cz/o-nas">O nás</a></div><div class="nav-actions"><button class="nav-btn" onclick="location.href='/app'" style="cursor:pointer">Přihlášení</button><button class="nav-btn primary" onclick="location.href='/cz/stahnout-aplikaci'" style="cursor:pointer">Stáhnout aplikaci</button></div></div></nav>
+
+<div class="breadcrumb"><div class="container"><a href="/cz">Domů</a><span class="sep">/</span><a href="/cz/nabidka-prace">Pracovní nabídky</a><span class="sep">/</span><span>Zedník</span></div></div>
+
+<section class="job-header">
+  <div class="container">
+    <div class="job-header-grid">
+      <div>
+        <span class="eyebrow">PRACOVNÍ NABÍDKY · ZEDNÍK</span>
+        <div class="job-main" style="margin-top:18px">
+          <div class="job-logo">Z</div>
+          <div class="job-info">
+            <h1 class="job-title">Práce pro profesi <em>zedník</em> v Česku</h1>
+            <p style="font-size:16px;color:var(--graphite-700);line-height:1.6;margin-bottom:14px;max-width:620px">Nabídky pro zedníky — zdivo, omítky, obklady, v Česku i v zahraničí. Vytvořte si profil a firmy vás osloví.</p>
+            <div class="job-meta-row">
+              <div class="job-meta-item">🧱 <strong>21 nabídek</strong></div>
+              <div class="job-meta-item">💰 <strong>od 14 €/hod</strong></div>
+              <div class="job-meta-item">📍 <strong>DE · AT · CZ</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="rate-card">
+        <div class="rate-card-label">Pro zedníky zdarma</div>
+        <div class="rate-row"><span class="rate-num">0 €</span><span class="rate-unit">profil pracovníka</span></div>
+        <div class="rate-note">Registrace i kalendář dostupnosti bez poplatku</div>
+        <div class="rate-bonuses">
+          <div class="bonus-row"><span class="bonus-icon">✓</span><span><strong>Profil zdarma</strong> — žádné poplatky pro zedníka</span></div>
+          <div class="bonus-row"><span class="bonus-icon">✓</span><span><strong>Firmy vás osloví</strong> samy podle profilu</span></div>
+          <div class="bonus-row"><span class="bonus-icon">✓</span><span><strong>CZ i zahraničí</strong> — vy si vyberete</span></div>
+          <div class="bonus-row"><span class="bonus-icon">✓</span><span><strong>Kalendář dostupnosti</strong> — kdy můžete nastoupit</span></div>
+        </div>
+        <button class="rate-cta" onclick="location.href='/app'" style="cursor:pointer">Vytvořit profil zdarma</button>
+        <button class="rate-cta-secondary" onclick="location.href='/cz/stahnout-aplikaci'" style="cursor:pointer">Stáhnout aplikaci</button>
+        <div class="rate-applicants">
+          <div class="applicants-avatars"><span style="background:var(--signal)">M</span><span style="background:var(--yellow);color:var(--graphite)">P</span><span style="background:var(--graphite-700)">J</span><span style="background:var(--signal-dark)">+</span></div>
+          <span>Zedníci z CZ už <strong>pracují přes Alogator</strong></span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="job-content">
+  <div class="container">
+    <div class="job-content-grid">
+      <div>
+
+        <div class="sec-card">
+          <span class="label">O profesi</span>
+          <h2 style="margin-top:8px">Co dělá <em>zedník</em> a kde je o něj zájem</h2>
+          <div class="desc-text">
+            <p><strong>Zedník</strong> staví a opravuje konstrukce z cihel, pórobetonu a dalších materiálů. Mezi hlavní zednické práce patří <strong>zdivo</strong> (nosné stěny i příčky), <strong>omítky</strong> (ruční i strojní), <strong>obklady a dlažby</strong> v koupelnách či kuchyních a <strong>zateplování fasád (ETICS)</strong>. Mnozí zedníci zvládají i sádrokarton a drobné betonářské práce.</p>
+
+            <p>Poptávka je vysoká nejen v Česku, ale i v zahraničí: zkušený zedník je žádaný v <strong>Německu a Rakousku</strong>, kde jsou hodinové sazby výrazně vyšší. Pokud vás láká <a href="/cz/prace-v-zahranici">práce v zahraničí</a>, nabídky pro zedníky jsou dostupné celoročně.</p>
+
+            <p>Na Alogator nepodáváte desítky životopisů. Vytvoříte si <strong>jeden profil s kalendářem dostupnosti</strong> a uvedete, kdy a kam můžete nastoupit — a firmy vás osloví samy. Profil pracovníka je zdarma.</p>
+          </div>
+        </div>
+
+        <div class="sec-card">
+          <span class="label">Nabídky pro zedníky</span>
+          <h2 style="margin-top:8px">Aktuální <em>pracovní nabídky</em> pro zedníky</h2>
+          <div class="similar-grid" style="margin-top:4px">
+            <div class="jcard"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc"><span class="flag flag-de"></span> Mnichov · Německo</div><div class="jcard-title">Zedník</div><div class="jcard-company">🔒 Firma · DE</div></div><span class="urgency-badge hot"><span class="dot"></span>Hot</span></div><div class="jcard-rate"><span class="jcard-rate-num">23 €</span><span class="jcard-rate-unit">/ hod + bonusy</span></div><div class="jcard-tags"><span class="jcard-tag">Zdivo</span><span class="jcard-tag">Omítky</span><span class="jcard-tag">Ubytování</span></div></div>
+
+            <div class="jcard"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc"><span class="flag flag-at"></span> Vídeň · Rakousko</div><div class="jcard-title">Zedník-obkladač</div><div class="jcard-company">🔒 Firma · AT</div></div><span class="urgency-badge new">Nová</span></div><div class="jcard-rate"><span class="jcard-rate-num">24 €</span><span class="jcard-rate-unit">/ hod</span></div><div class="jcard-tags"><span class="jcard-tag">Obklady</span><span class="jcard-tag">Dlažby</span><span class="jcard-tag">40 h/tý</span></div></div>
+
+            <div class="jcard"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc"><span class="flag flag-de"></span> Frankfurt · Německo</div><div class="jcard-title">Zedník</div><div class="jcard-company">🔒 Firma · DE</div></div></div><div class="jcard-rate"><span class="jcard-rate-num">25 €</span><span class="jcard-rate-unit">/ hod</span></div><div class="jcard-tags"><span class="jcard-tag">Zdivo</span><span class="jcard-tag">Zateplování</span><span class="jcard-tag">45 h/tý</span></div></div>
+
+            <div class="jcard"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc"><span class="flag flag-cz"></span> Brno · Česko</div><div class="jcard-title">Zedník</div><div class="jcard-company">🔒 Firma · CZ</div></div></div><div class="jcard-rate"><span class="jcard-rate-num">15 €</span><span class="jcard-rate-unit">/ hod</span></div><div class="jcard-tags"><span class="jcard-tag">Zdivo</span><span class="jcard-tag">Omítky</span><span class="jcard-tag">OSVČ</span></div></div>
+
+            <div class="jcard"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc"><span class="flag flag-at"></span> Linz · Rakousko</div><div class="jcard-title">Zedník / sádrokartonář</div><div class="jcard-company">🔒 Firma · AT</div></div><span class="urgency-badge new">Nová</span></div><div class="jcard-rate"><span class="jcard-rate-num">24 €</span><span class="jcard-rate-unit">/ hod</span></div><div class="jcard-tags"><span class="jcard-tag">Sádrokarton</span><span class="jcard-tag">Příčky</span><span class="jcard-tag">Ubytování</span></div></div>
+
+            <div class="jcard"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc"><span class="flag flag-de"></span> Stuttgart · Německo</div><div class="jcard-title">Obkladač</div><div class="jcard-company">🔒 Firma · DE</div></div><span class="urgency-badge hot"><span class="dot"></span>Hot</span></div><div class="jcard-rate"><span class="jcard-rate-num">25 €</span><span class="jcard-rate-unit">/ hod</span></div><div class="jcard-tags"><span class="jcard-tag">Obklady</span><span class="jcard-tag">Dlažby</span><span class="jcard-tag">45 h/tý</span></div></div>
+          </div>
+          <div style="margin-top:24px;text-align:center"><button class="rate-cta" style="max-width:320px;width:100%" onclick="location.href='/app'">Vytvořit profil zdarma</button></div>
+        </div>
+
+        <div class="sec-card">
+          <span class="label">Časté otázky</span>
+          <h2 style="margin-top:8px">Časté otázky o práci pro <em>zedníky</em></h2>
+          <div class="desc-text">
+            <h3>Jaké práce dělá zedník?</h3>
+            <p>Zedník staví zdivo nosných stěn i příček, provádí vnitřní a vnější omítky (ruční i strojní), obklady a dlažby a zateplování fasád (ETICS). Mnozí zedníci zvládají i sádrokarton a drobné betonářské práce. Na stavbě čte výkresy a pracuje podle projektové dokumentace.</p>
+
+            <h3>Jsou zakázky pro zedníky i v Česku, nebo jen v zahraničí?</h3>
+            <p>Ano, nabídky pro zedníky jsou i v Česku — například v Brně, Praze či Ostravě. Zároveň je silná poptávka v Německu a Rakousku, kde jsou hodinové sazby vyšší. Na Alogator si vybíráte vy: v profilu uvedete, kde chcete pracovat, a firmy vás osloví podle toho.</p>
+
+            <h3>Dá se práce zedníka dělat na OSVČ?</h3>
+            <p>Ano. Hodně zedníků pracuje na OSVČ (živnost) a fakturuje přímo firmě — v Česku i v zahraničí. Část nabídek je i na HPP. Zda jde o OSVČ nebo HPP, je uvedeno u každé konkrétní nabídky.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <aside>
+        <div class="sec-card" style="position:sticky;top:24px">
+          <span class="label">Související</span>
+          <h2 style="margin-top:8px;font-size:18px;margin-bottom:14px">Práce v zahraničí</h2>
+          <div class="desc-text" style="font-size:14px">
+            <ul style="margin-bottom:0"><li><a href="/cz/prace-v-zahranici">Práce v zahraničí</a></li><li><a href="/cz/prace-v-zahranici/nemecko">Práce v Německu</a></li><li><a href="/cz/prace-v-zahranici/rakousko">Práce v Rakousku</a></li></ul>
+          </div>
+          <h2 style="margin-top:20px;font-size:18px;margin-bottom:14px">Další profese</h2>
+          <div class="desc-text" style="font-size:14px">
+            <ul style="margin-bottom:0"><li><a href="/cz/nabidka-prace/svarec">Práce pro svářeče</a></li><li><a href="/cz/nabidka-prace/elektrikar">Práce pro elektrikáře</a></li><li><a href="/cz/nabidka-prace/tesar">Práce pro tesaře</a></li><li><a href="/cz/nabidka-prace/zamecnik">Práce pro zámečníky</a></li><li><a href="/cz/nabidka-prace/instalater">Práce pro instalatéry</a></li></ul>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="similar-sec">
+  <div class="container">
+    <span class="eyebrow">související profese</span>
+    <h2 style="margin-top:10px">Hledáte jinou profesi?</h2>
+    <div class="similar-grid">
+      <a href="/cz/nabidka-prace/svarec" style="text-decoration:none"><div class="jcard"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc">PROFESE</div><div class="jcard-title">Svářeč</div><div class="jcard-company">MIG/MAG · TIG</div></div></div><div class="jcard-tags"><span class="jcard-tag">DE</span><span class="jcard-tag">AT</span><span class="jcard-tag">CZ</span></div></div></a>
+      <a href="/cz/nabidka-prace/elektrikar" style="text-decoration:none"><div class="jcard"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc">PROFESE</div><div class="jcard-title">Elektrikář</div><div class="jcard-company">Instalace · průmysl</div></div></div><div class="jcard-tags"><span class="jcard-tag">DE</span><span class="jcard-tag">AT</span><span class="jcard-tag">CZ</span></div></div></a>
+      <a href="/cz/nabidka-prace/tesar" style="text-decoration:none"><div class="jcard"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc">PROFESE</div><div class="jcard-title">Tesař</div><div class="jcard-company">Krovy · bednění · dřevostavby</div></div></div><div class="jcard-tags"><span class="jcard-tag">DE</span><span class="jcard-tag">AT</span><span class="jcard-tag">CZ</span></div></div></a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="foot-top"><div class="foot-col"><div class="nav-logo" style="margin-bottom:14px"><div class="nav-logo-mark">A</div><div class="nav-logo-name">Alogator</div></div><p style="font-size:13px;color:rgba(249,243,237,.6);line-height:1.5">Marketplace propojující pracovníky, agentury a koncové firmy. CZ · SK · DE · AT · NL · BE</p></div><div class="foot-col"><h5>Pro firmy</h5><a href="/cz/pro-firmy">Naplánovat demo</a><a href="/cz/databaze-pracovniku">Databáze pracovníků</a><a href="/cz/cenik">Ceník</a></div><div class="foot-col"><h5>Pro pracovníky</h5><a href="/cz/nabidka-prace">Pracovní nabídky</a><a href="/cz/stahnout-aplikaci">Stáhnout aplikaci</a><a href="/cz/jak-to-funguje">Jak to funguje</a></div><div class="foot-col"><h5>Společnost</h5><a href="/cz/o-nas">O nás</a><a href="/cz/kontakt">Kontakt</a><a href="/cz/vseobecne-obchodni-podminky">VOP</a><a href="/cz/gdpr">GDPR</a></div></div><div class="foot-bottom"><div>© 2026 Alogator · Profi Steel Holding</div><div>Made in Slovakia · alogator.com</div></div></div></footer>
+
+<script src="/assets/consent.js" defer></script>
+</body>
+</html>

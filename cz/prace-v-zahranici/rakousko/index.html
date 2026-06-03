@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prace v Rakousku · nabidky pro remeslniky · 26–34 €/hod · Alogator</title>
+<meta name="description" content="Prace v Rakousku pro Cechy — svareci, elektrikari, montezi, zednici. Blizko domova, plat 26–34 €/hod, ubytovani v cene, nastup ihned.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --signal:#E66748;--signal-dark:#D4573A;--signal-soft:#FDE8E0;
+  --graphite:#1A1D1E;--graphite-700:#3F4445;--graphite-500:#6B7174;--graphite-200:#D9D9D6;
+  --porcelain:#F9F3ED;--porcelain-200:#F0E8DD;--porcelain-300:#E8DFD1;
+  --yellow:#F5D547;--green:#3F7D5F;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--porcelain);color:var(--graphite);font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--signal)}
+.eyebrow::before{content:'• '}
+h1,h2,h3,h4{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.025em;line-height:1.1;color:var(--graphite)}
+em{font-style:italic;color:var(--signal);font-weight:500}
+
+.flag{width:18px;height:13px;border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 0 1px rgba(26,29,30,.08)}
+.flag-cz{background:linear-gradient(135deg,#fff 50%,#D7141A 50%);position:relative}
+.flag-cz::before{content:'';position:absolute;left:0;top:0;bottom:0;width:50%;background:#11457E;clip-path:polygon(0 0,100% 50%,0 100%)}
+.flag-de{background:linear-gradient(to bottom,#000 33%,#dd0000 33% 66%,#ffce00 66%)}
+.flag-at{background:linear-gradient(to bottom,#ED2939 50%,#fff 50%)}
+.flag-nl{background:linear-gradient(to bottom,#AE1C28 33%,#fff 33% 66%,#21468B 66%)}
+
+.navbar{background:var(--graphite);color:var(--porcelain);padding:18px 0}
+.nav-inner{display:flex;justify-content:space-between;align-items:center}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--porcelain)}
+.nav-logo-mark{width:32px;height:32px;background:var(--signal);border-radius:9px;display:flex;align-items:center;justify-content:center;font-family:'Geist',sans-serif;font-weight:500;font-size:16px}
+.nav-logo-name{font-family:'Geist',sans-serif;font-weight:500;font-size:20px}
+.nav-links{display:flex;gap:32px}
+.nav-links a{color:rgba(249,243,237,.85);text-decoration:none;font-size:14px}
+.nav-links a.active{color:var(--porcelain);font-weight:500}
+.nav-actions{display:flex;gap:10px;align-items:center}
+.nav-btn{background:transparent;border:1px solid rgba(249,243,237,.2);color:var(--porcelain);padding:8px 18px;border-radius:999px;font-size:13.5px;cursor:pointer}
+.nav-btn.primary{background:var(--signal);border-color:var(--signal)}
+
+.breadcrumb{padding:18px 0 8px;background:var(--porcelain);font-size:12.5px;color:var(--graphite-500);font-family:'JetBrains Mono',monospace}
+.breadcrumb a{color:var(--graphite-500);text-decoration:none}
+.breadcrumb a:hover{color:var(--signal)}
+.breadcrumb .sep{margin:0 8px;color:var(--graphite-200)}
+
+.job-header{padding:24px 0 40px;background:var(--porcelain)}
+.job-header-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:flex-start}
+.urgency-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.urgency-badge{display:inline-flex;align-items:center;gap:6px;background:var(--signal-soft);color:var(--signal-dark);padding:5px 11px;border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase}
+.urgency-badge.hot{background:var(--signal);color:var(--porcelain)}
+.urgency-badge.new{background:var(--yellow);color:var(--graphite)}
+.urgency-badge .dot{width:6px;height:6px;border-radius:50%;background:currentColor;animation:pulse 1.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+.job-main{display:flex;gap:20px;align-items:flex-start}
+.job-logo{width:88px;height:88px;border-radius:18px;background:var(--graphite);color:var(--porcelain);display:flex;align-items:center;justify-content:center;font-family:'Geist',sans-serif;font-weight:500;font-size:32px;flex-shrink:0}
+.job-info{flex:1;min-width:0}
+.job-title{font-family:'Geist',sans-serif;font-weight:500;font-size:36px;letter-spacing:-0.02em;color:var(--graphite);line-height:1.1;margin-bottom:8px}
+.job-company{font-size:16px;color:var(--graphite-700);margin-bottom:14px;display:inline-flex;align-items:center;gap:8px}
+.job-meta-row{display:flex;flex-wrap:wrap;gap:18px;font-size:13.5px;color:var(--graphite-700);padding-top:16px;border-top:1px solid var(--porcelain-300)}
+.job-meta-item{display:inline-flex;align-items:center;gap:7px}
+.job-meta-item strong{color:var(--graphite);font-weight:500}
+
+.rate-card{background:var(--graphite);color:var(--porcelain);border-radius:24px;padding:32px;position:sticky;top:24px}
+.rate-card-label{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.6)}
+.rate-card-label::before{content:'• ';color:var(--signal)}
+.rate-row{display:flex;align-items:baseline;gap:6px;margin:10px 0 4px}
+.rate-num{font-family:'Geist',sans-serif;font-weight:500;font-size:48px;letter-spacing:-0.025em;color:var(--porcelain);line-height:1}
+.rate-unit{font-size:14px;color:rgba(249,243,237,.6)}
+.rate-note{font-size:12.5px;color:rgba(249,243,237,.6);margin-bottom:20px}
+.rate-bonuses{display:flex;flex-direction:column;gap:8px;margin-bottom:22px}
+.bonus-row{display:flex;align-items:center;gap:10px;font-size:13px;color:rgba(249,243,237,.9)}
+.bonus-icon{width:20px;height:20px;border-radius:50%;background:rgba(124,201,92,.2);color:#7CC95C;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11px;font-weight:700}
+.bonus-row strong{color:var(--porcelain);font-weight:500}
+.rate-cta{background:var(--signal);color:var(--porcelain);border:0;width:100%;padding:14px;border-radius:999px;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;cursor:pointer;margin-bottom:10px}
+.rate-cta:hover{background:var(--signal-dark)}
+.rate-cta-secondary{background:transparent;color:var(--porcelain);border:1px solid rgba(249,243,237,.25);width:100%;padding:13px;border-radius:999px;font-family:'Inter',sans-serif;font-size:13.5px;font-weight:500;cursor:pointer}
+.rate-applicants{display:flex;align-items:center;gap:10px;margin-top:18px;padding-top:18px;border-top:1px solid rgba(249,243,237,.1);font-size:12px;color:rgba(249,243,237,.7)}
+.applicants-avatars{display:flex}
+.applicants-avatars span{width:26px;height:26px;border-radius:50%;border:2px solid var(--graphite);display:flex;align-items:center;justify-content:center;font-family:'Geist',sans-serif;font-weight:500;font-size:11px;color:var(--porcelain);margin-left:-7px}
+.applicants-avatars span:first-child{margin-left:0}
+
+.tabs-sec{padding:24px 0 0;background:var(--porcelain);border-top:1px solid var(--porcelain-300)}
+.tabs-row{display:flex;gap:24px;font-family:'Inter',sans-serif;font-size:14px}
+.tab{padding:14px 0;color:var(--graphite-500);cursor:pointer;position:relative;font-weight:500}
+.tab.active{color:var(--graphite)}
+.tab.active::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:2px;background:var(--signal)}
+
+.job-content{padding:40px 0 64px;background:var(--porcelain)}
+.job-content-grid{display:grid;grid-template-columns:2fr 1fr;gap:48px;align-items:flex-start}
+.sec-card{background:var(--porcelain);border:1px solid var(--porcelain-300);border-radius:24px;padding:32px;margin-bottom:18px}
+.sec-card h2{font-size:22px;letter-spacing:-0.02em;margin-bottom:18px}
+.sec-card h2 em{font-style:italic;color:var(--signal)}
+.sec-card .label{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--signal)}
+.sec-card .label::before{content:'• '}
+.desc-text{font-size:15px;line-height:1.65;color:var(--graphite-700)}
+.desc-text p{margin-bottom:14px}
+.desc-text strong{color:var(--graphite);font-weight:500}
+.desc-text h3{font-family:'Geist',sans-serif;font-weight:500;font-size:16px;letter-spacing:-0.015em;color:var(--graphite);margin:18px 0 10px}
+.desc-text ul{padding-left:0;list-style:none;margin-bottom:14px}
+.desc-text li{padding-left:20px;position:relative;margin-bottom:8px;line-height:1.6}
+.desc-text li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--signal)}
+
+.req-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.req-card{background:var(--porcelain-200);border:1px solid var(--porcelain-300);border-radius:14px;padding:16px;display:flex;gap:12px;align-items:flex-start}
+.req-icon{width:36px;height:36px;border-radius:10px;background:var(--signal-soft);color:var(--signal);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
+.req-title{font-family:'Geist',sans-serif;font-weight:500;font-size:13.5px;color:var(--graphite);letter-spacing:-0.01em}
+.req-value{font-size:12.5px;color:var(--graphite-700);margin-top:3px;line-height:1.4}
+.req-card.must .req-icon{background:var(--signal);color:var(--porcelain)}
+
+.cond-table{display:flex;flex-direction:column;gap:0}
+.cond-row{display:grid;grid-template-columns:200px 1fr;gap:24px;padding:14px 0;border-bottom:1px solid var(--porcelain-300)}
+.cond-row:last-child{border-bottom:0}
+.cond-label{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--graphite-500);letter-spacing:0.02em}
+.cond-value{font-size:14px;color:var(--graphite)}
+.cond-value strong{font-weight:500}
+.cond-value .highlight{background:var(--signal-soft);color:var(--signal-dark);padding:2px 8px;border-radius:6px;font-weight:500;font-size:13px}
+
+.firma-card{background:linear-gradient(135deg,var(--porcelain-200),var(--porcelain));border:1px solid var(--porcelain-300);border-radius:18px;padding:24px;position:relative;overflow:hidden}
+.firma-locked-overlay{position:absolute;inset:0;background:rgba(249,243,237,.7);backdrop-filter:blur(5px);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px}
+.firma-locked-overlay .lock-icon{width:48px;height:48px;border-radius:50%;background:var(--signal);color:var(--porcelain);display:flex;align-items:center;justify-content:center;font-size:22px}
+.firma-locked-overlay h4{font-size:16px;letter-spacing:-0.01em}
+.firma-locked-overlay p{font-size:12.5px;color:var(--graphite-500);text-align:center;max-width:280px}
+.firma-locked-overlay button{background:var(--signal);color:var(--porcelain);border:0;padding:10px 20px;border-radius:999px;font-family:'Inter',sans-serif;font-size:13px;font-weight:500;cursor:pointer;margin-top:6px}
+
+.summary-widget{background:var(--porcelain-200);border-radius:18px;padding:24px}
+.summary-row{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid var(--porcelain-300)}
+.summary-row:first-child{padding-top:0}
+.summary-row:last-child{border-bottom:0;padding-bottom:0}
+.summary-icon{width:32px;height:32px;border-radius:9px;background:var(--signal-soft);color:var(--signal);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px}
+.summary-content{flex:1;min-width:0}
+.summary-label{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--graphite-500);margin-bottom:2px}
+.summary-val{font-family:'Geist',sans-serif;font-weight:500;font-size:14px;color:var(--graphite);letter-spacing:-0.01em}
+.summary-sub{font-size:11.5px;color:var(--graphite-500);margin-top:2px}
+
+.similar-sec{padding:64px 0;background:var(--porcelain-200)}
+.similar-sec h2{font-size:clamp(24px,2.5vw,32px);margin-bottom:24px}
+.similar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.jcard{background:var(--porcelain);border:1px solid var(--porcelain-300);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:12px;cursor:pointer;transition:transform .2s,border-color .2s}
+.jcard:hover{transform:translateY(-3px);border-color:var(--graphite-200)}
+.jcard-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.jcard-meta{flex:1;min-width:0}
+.jcard-loc{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--graphite-500);letter-spacing:0.05em;display:inline-flex;align-items:center;gap:6px;margin-bottom:6px}
+.jcard-title{font-family:'Geist',sans-serif;font-weight:500;font-size:16px;letter-spacing:-0.015em;color:var(--graphite);line-height:1.2}
+.jcard-company{font-size:12px;color:var(--graphite-500);margin-top:3px}
+.jcard-rate{display:flex;align-items:baseline;gap:4px;margin-top:8px;padding-top:12px;border-top:1px solid var(--porcelain-300)}
+.jcard-rate-num{font-family:'Geist',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.02em}
+.jcard-rate-unit{font-size:11px;color:var(--graphite-500)}
+.jcard-tags{display:flex;gap:5px;flex-wrap:wrap}
+.jcard-tag{background:var(--porcelain-200);color:var(--graphite-700);font-size:10.5px;padding:3px 9px;border-radius:999px}
+
+.footer{background:var(--graphite);color:var(--porcelain);padding:48px 0 24px}
+.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}
+.foot-col h5{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.5);margin-bottom:16px}
+.foot-col h5::before{content:'• ';color:var(--signal)}
+.foot-col a{display:block;color:rgba(249,243,237,.7);text-decoration:none;font-size:13.5px;padding:5px 0}
+.foot-bottom{padding-top:24px;display:flex;justify-content:space-between;font-size:12px;color:rgba(249,243,237,.5)}
+
+@media (max-width:900px){
+  .job-header-grid,.job-content-grid,.similar-grid,.foot-top{grid-template-columns:1fr;gap:24px}
+  .job-main{flex-direction:column;text-align:center;align-items:center}
+  .req-grid{grid-template-columns:1fr}
+  .cond-row{grid-template-columns:1fr;gap:6px}
+}
+</style>
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://alogator.com/cz/prace-v-zahranici/rakousko">
+<link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/prace-v-zahranici/rakousko">
+<link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/praca-v-zahranici/rakusko">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alogator">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:title" content="Prace v Rakousku · nabidky pro remeslniky · 26–34 €/hod · Alogator">
+<meta property="og:description" content="Prace v Rakousku pro Cechy — svareci, elektrikari, montezi, zednici. Blizko domova, plat 26–34 €/hod, ubytovani v cene, nastup ihned.">
+<meta property="og:url" content="https://alogator.com/cz/prace-v-zahranici/rakousko">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Prace v Rakousku · nabidky pro remeslniky · 26–34 €/hod · Alogator">
+<meta name="twitter:description" content="Prace v Rakousku pro Cechy — svareci, elektrikari, montezi, zednici. Blizko domova, plat 26–34 €/hod, ubytovani v cene, nastup ihned.">
+<!-- alg-schema -->
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Domov", "item": "https://alogator.com/cz"}, {"@type": "ListItem", "position": 2, "name": "Prace v zahranici", "item": "https://alogator.com/cz/prace-v-zahranici"}, {"@type": "ListItem", "position": 3, "name": "Rakousko", "item": "https://alogator.com/cz/prace-v-zahranici/rakousko"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Kolik vydelam v Rakousku jako remeslnik?", "acceptedAnswer": {"@type": "Answer", "text": "Hodinove sazby se pohybuji od 26 do 34 €/hod podle profese a spolkove zeme. Pri plnem uvazku to vychazi priblizne 5 400 € mesicne. Minimalni mzdu v kazdem oboru garantuje rakouska kolektivni smlouva (Kollektivvertrag)."}}, {"@type": "Question", "name": "Potrebuji nemcinu?", "acceptedAnswer": {"@type": "Answer", "text": "Zakladni nemcina (A1+) je vyhodou, ale u mnohych pozic neni podminkou. V tymech byva cesky nebo slovensky koordinator, ktery vam pomuze s komunikaci i administrativou pri nastupu."}}, {"@type": "Question", "name": "Jak daleko je to z Ceska?", "acceptedAnswer": {"@type": "Answer", "text": "Viden je jen 250 km od Brna a vetsina rakouskych pracovist je do 200–400 km od ceske hranice. Diky tomu muzete travit vikendy doma a pritom pracovat za zapadni platy."}}, {"@type": "Question", "name": "Mohu pracovat jako OSVC?", "acceptedAnswer": {"@type": "Answer", "text": "Ano. Pracovat muzete jako OSVC (fakturujete primo) nebo na HPP pres rakouskou firmu — podle toho, co vam vic vyhovuje. Registrace pracovnika v Alogator je zdarma."}}]}</script>
+<!-- /alg-schema -->
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="/cz" class="nav-logo">
+      <div class="nav-logo-mark">A</div>
+      <div class="nav-logo-name">Alogator</div>
+    </a>
+    <div class="nav-links">
+      <a href="/cz/databaze-pracovniku">Databaze pracovniku</a>
+      <a href="/cz/nabidka-prace" class="active">Pracovni nabidky</a>
+      <a href="/cz/jak-to-funguje">Jak to funguje</a>
+      <a href="/cz/cenik">Cenik</a>
+      <a href="/cz/o-nas">O nas</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-btn" onclick="location.href='/app'" style="cursor:pointer">Prihlaseni</button>
+      <button class="nav-btn primary" onclick="location.href='/cz/stahnout-aplikaci'" style="cursor:pointer">Stahnout aplikaci</button>
+    </div>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="container">
+    <a href="/cz">Domov</a>
+    <span class="sep">/</span>
+    <a href="/cz/prace-v-zahranici">Prace v zahranici</a>
+    <span class="sep">/</span>
+    <span>Rakousko</span>
+  </div>
+</div>
+
+<section class="job-header">
+  <div class="container">
+    <div class="job-header-grid">
+      <div>
+        <div class="urgency-row">
+          <span class="urgency-badge hot"><span class="dot"></span>64 nabidek v Rakousku</span>
+          <span class="urgency-badge new">Blizko domova</span>
+          <span class="urgency-badge">Nastup ihned</span>
+        </div>
+        <div class="job-main">
+          <div class="job-logo"><span class="flag flag-at" style="width:48px;height:36px;border-radius:8px"></span></div>
+          <div class="job-info">
+            <h1 class="job-title">Prace v <em>Rakousku</em></h1>
+            <div class="job-company">
+              <span style="color:var(--graphite-700);font-size:16px">Blizko domova, vysoke platy</span>
+            </div>
+            <div class="job-meta-row">
+              <div class="job-meta-item"><span class="flag flag-at"></span><strong>Viden</strong>, Linz, Stajersko, Tyrolsko</div>
+              <div class="job-meta-item">📋 <strong>64 nabidek v AT</strong></div>
+              <div class="job-meta-item">💰 <strong>plat od 26 €/hod</strong></div>
+              <div class="job-meta-item">📍 <strong>250 km od Brna</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="rate-card">
+        <div class="rate-card-label">Hodinova sazba</div>
+        <div class="rate-row">
+          <span class="rate-num">26–34 €</span>
+          <span class="rate-unit">/ hod</span>
+        </div>
+        <div class="rate-note">podle profese a spolkove zeme</div>
+        <div class="rate-bonuses">
+          <div class="bonus-row"><span class="bonus-icon">✓</span><span><strong>Ubytovani</strong> v cene</span></div>
+          <div class="bonus-row"><span class="bonus-icon">✓</span><span><strong>Doprava</strong> hrazena</span></div>
+          <div class="bonus-row"><span class="bonus-icon">✓</span><span><strong>Blizko CZ</strong> — vikendy doma</span></div>
+          <div class="bonus-row"><span class="bonus-icon">✓</span><span><strong>OSVC i HPP</strong> mozne</span></div>
+        </div>
+        <button class="rate-cta" onclick="location.href='/cz/stahnout-aplikaci'" style="cursor:pointer">Stahnout aplikaci</button>
+        <button class="rate-cta-secondary">Zobrazit nabidky</button>
+        <div class="rate-applicants">
+          <div class="applicants-avatars">
+            <span style="background:var(--signal)">J</span>
+            <span style="background:var(--yellow);color:var(--graphite)">P</span>
+            <span style="background:var(--graphite-700)">M</span>
+            <span style="background:var(--signal-dark)">+9</span>
+          </div>
+          <span><strong>12 zajemcu</strong> za poslednich 24h</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="tabs-sec">
+  <div class="container">
+    <div class="tabs-row">
+      <span class="tab active">Prehled</span>
+      <span class="tab">Profese</span>
+      <span class="tab">Regiony</span>
+      <span class="tab">Podminky</span>
+      <span class="tab">Hodnoceni</span>
+    </div>
+  </div>
+</section>
+
+<section class="job-content">
+  <div class="container">
+    <div class="job-content-grid">
+      <div>
+
+        <div class="sec-card">
+          <span class="label">Prehled</span>
+          <h2 style="margin-top:8px">Proc <em>Rakousko</em></h2>
+          <div class="desc-text">
+            <p>Rakousko je pro ceske remeslniky jedna z nejlepsich destinaci v Evrope. <strong>Viden lezi jen 250 km od Brna</strong> a vetsina rakouskych pracovist je do 200–400 km od ceske hranice. To znamena jedine — muzete pracovat za zapadni platy a pritom byt pres vikend doma s rodinou.</p>
+
+            <p>Rakouske firmy dlouhodobe bojuji s nedostatkem kvalifikovanych remeslniku. Dopyt po <strong>svarecich, elektrikarich, monterech a zednicich</strong> je vysoky zejmena ve Vidni, Hornim Rakousku a Stajersku, kde sidli tezky prumysl a probihaji velke stavebni projekty. Hodinove sazby se pohybuji od <strong>26 do 34 €/hod</strong> podle profese a spolkove zeme — pri plnem uvazku to vychazi okolo 5 400 € mesicne.</p>
+
+            <p>Co potrebujete? V Rakousku plati system kolektivnich smluv (Kollektivvertrag), ktery garantuje minimalni mzdy v kazdem oboru. U vetsiny pozic staci <strong>certifikat v oboru, platna lekarska prohlidka a zakladni nemcina</strong>. Mnohe tymy maji ceskeho nebo slovenskeho koordinatora, takze jazyk neni prekazkou pri nastupu.</p>
+
+            <h3>Hlavni vyhody prace v AT</h3>
+            <ul>
+              <li><strong>Blizko domova</strong> — Viden 250 km od Brna, vikendy doma</li>
+              <li><strong>Vysoke platy</strong> — 26–34 €/hod, kolektivni smlouva garantuje minimum</li>
+              <li><strong>Ubytovani a doprava</strong> vetsinou v cene</li>
+              <li><strong>Stabilni dopyt</strong> — prumysl i stavebnictvi hledaji remeslniky</li>
+              <li><strong>OSVC i HPP</strong> — flexibilni typ uvazku</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sec-card">
+          <span class="label">Profese</span>
+          <h2 style="margin-top:8px">Zadane <em>profese v AT</em></h2>
+          <div class="req-grid">
+            <a href="/cz/nabidka-prace/svarec" style="text-decoration:none">
+              <div class="req-card must">
+                <div class="req-icon">🔥</div>
+                <div>
+                  <div class="req-title">Svarec</div>
+                  <div class="req-value">28–34 €/hod · MIG/MAG, TIG, potrubi</div>
+                </div>
+              </div>
+            </a>
+            <a href="/cz/nabidka-prace/elektrikar" style="text-decoration:none">
+              <div class="req-card must">
+                <div class="req-icon">⚡</div>
+                <div>
+                  <div class="req-title">Elektrikar</div>
+                  <div class="req-value">28–32 €/hod · prumysl, stavby</div>
+                </div>
+              </div>
+            </a>
+            <div class="req-card">
+              <div class="req-icon">🔧</div>
+              <div>
+                <div class="req-title">Zamecnik</div>
+                <div class="req-value">26–30 €/hod · ocelove konstrukce</div>
+              </div>
+            </div>
+            <a href="/cz/nabidka-prace/zednik" style="text-decoration:none">
+              <div class="req-card">
+                <div class="req-icon">🧱</div>
+                <div>
+                  <div class="req-title">Zednik</div>
+                  <div class="req-value">24–27 €/hod · pozemni stavby</div>
+                </div>
+              </div>
+            </a>
+            <a href="/cz/nabidka-prace/tesar" style="text-decoration:none">
+              <div class="req-card">
+                <div class="req-icon">🪚</div>
+                <div>
+                  <div class="req-title">Tesar</div>
+                  <div class="req-value">25–28 €/hod · krovy, bedneni</div>
+                </div>
+              </div>
+            </a>
+            <div class="req-card">
+              <div class="req-icon">🔩</div>
+              <div>
+                <div class="req-title">Potrubar</div>
+                <div class="req-value">29–33 €/hod · chemie, energetika</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sec-card">
+          <span class="label">Regiony</span>
+          <h2 style="margin-top:8px">Kde se <em>pracuje v AT</em></h2>
+          <div class="cond-table">
+            <div class="cond-row">
+              <span class="cond-label">Viden</span>
+              <span class="cond-value"><span class="highlight">Nejvice nabidek</span> · 250 km od Brna · stavby, montaze, prumysl</span>
+            </div>
+            <div class="cond-row">
+              <span class="cond-label">Horni Rakousko / Linz</span>
+              <span class="cond-value"><strong>Tezky prumysl</strong> · ocelarny voestalpine, chemicke zavody</span>
+            </div>
+            <div class="cond-row">
+              <span class="cond-label">Stajersko / Graz</span>
+              <span class="cond-value">Automobilovy a strojarensky prumysl, stavebnictvi</span>
+            </div>
+            <div class="cond-row">
+              <span class="cond-label">Tyrolsko</span>
+              <span class="cond-value">Turismus a stavby · hotely, infrastruktura, montaze</span>
+            </div>
+            <div class="cond-row">
+              <span class="cond-label">Solnohradsko</span>
+              <span class="cond-value">Stavebnictvi a prumysl v regionu Salzburg</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sec-card">
+          <span class="label">Podminky</span>
+          <h2 style="margin-top:8px">Co <em>potrebujete</em></h2>
+          <div class="cond-table">
+            <div class="cond-row">
+              <span class="cond-label">Nemcina</span>
+              <span class="cond-value"><strong>A1+</strong> vyhoda · v mnohych tymech cesky / slovensky koordinator</span>
+            </div>
+            <div class="cond-row">
+              <span class="cond-label">Certifikaty</span>
+              <span class="cond-value">Platna osvedceni v oboru (napr. svarecsky certifikat, elektro)</span>
+            </div>
+            <div class="cond-row">
+              <span class="cond-label">Lekarska prohlidka</span>
+              <span class="cond-value">Platna v EU, pripadne pracovni zdravotni zpusobilost</span>
+            </div>
+            <div class="cond-row">
+              <span class="cond-label">Typ uvazku</span>
+              <span class="cond-value"><strong>OSVC</strong> (fakturujete primo) nebo <strong>HPP</strong> pres rakouskou firmu</span>
+            </div>
+            <div class="cond-row">
+              <span class="cond-label">Kollektivvertrag</span>
+              <span class="cond-value"><span class="highlight">Kolektivni smlouva</span> garantuje minimalni mzdu v kazdem oboru</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sec-card">
+          <span class="label">Caste otazky</span>
+          <h2 style="margin-top:8px">Prace v AT — <em>otazky a odpovedi</em></h2>
+          <div class="desc-text">
+            <h3>Kolik vydelam v Rakousku jako remeslnik?</h3>
+            <p>Hodinove sazby se pohybuji od <strong>26 do 34 €/hod</strong> podle profese a spolkove zeme. Pri plnem uvazku to vychazi priblizne <strong>5 400 € mesicne</strong>. Minimalni mzdu v kazdem oboru garantuje rakouska kolektivni smlouva (Kollektivvertrag).</p>
+
+            <h3>Potrebuji nemcinu?</h3>
+            <p>Zakladni nemcina (<strong>A1+</strong>) je vyhodou, ale u mnohych pozic neni podminkou. V tymech byva cesky nebo slovensky koordinator, ktery vam pomuze s komunikaci i administrativou pri nastupu.</p>
+
+            <h3>Jak daleko je to z domova?</h3>
+            <p>Viden je jen <strong>250 km od Brna</strong> a vetsina rakouskych pracovist je do 200–400 km od ceske hranice. Diky tomu muzete travit <strong>vikendy doma</strong> a pritom pracovat za zapadni platy.</p>
+
+            <h3>Mohu pracovat jako OSVC?</h3>
+            <p>Ano. Pracovat muzete jako <strong>OSVC</strong> (fakturujete primo) nebo na <strong>HPP</strong> pres rakouskou firmu — podle toho, co vam vic vyhovuje. Registrace pracovnika v Alogator je <strong>zdarma</strong>.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <aside>
+
+        <div class="sec-card" style="padding:24px;position:sticky;top:24px">
+          <span class="label">Strucne</span>
+          <h2 style="margin-top:8px;font-size:18px;margin-bottom:16px">Prace v AT v 6 bodech</h2>
+          <div class="summary-widget" style="background:transparent;padding:0">
+            <div class="summary-row">
+              <span class="summary-icon">💰</span>
+              <div class="summary-content">
+                <div class="summary-label">Sazba</div>
+                <div class="summary-val">26–34 €/hod</div>
+                <div class="summary-sub">~ 5 400 €/mes pri plnem uvazku</div>
+              </div>
+            </div>
+            <div class="summary-row">
+              <span class="summary-icon">📋</span>
+              <div class="summary-content">
+                <div class="summary-label">Nabidky</div>
+                <div class="summary-val">64 nabidek v AT</div>
+                <div class="summary-sub">napric 9 spolkovymi zememi</div>
+              </div>
+            </div>
+            <div class="summary-row">
+              <span class="summary-icon">📍</span>
+              <div class="summary-content">
+                <div class="summary-label">Vzdalenost</div>
+                <div class="summary-val">Blizko CZ</div>
+                <div class="summary-sub">~ 250 km od Brna · vikendy doma</div>
+              </div>
+            </div>
+            <div class="summary-row">
+              <span class="summary-icon">🏠</span>
+              <div class="summary-content">
+                <div class="summary-label">Ubytovani</div>
+                <div class="summary-val">V cene</div>
+                <div class="summary-sub">vetsina nabidek</div>
+              </div>
+            </div>
+            <div class="summary-row">
+              <span class="summary-icon">📝</span>
+              <div class="summary-content">
+                <div class="summary-label">Uvazek</div>
+                <div class="summary-val">OSVC / HPP</div>
+                <div class="summary-sub">podle preference</div>
+              </div>
+            </div>
+            <div class="summary-row">
+              <span class="summary-icon">🚀</span>
+              <div class="summary-content">
+                <div class="summary-label">Nastup</div>
+                <div class="summary-val">Ihned</div>
+                <div class="summary-sub">mnohe pozice volne ted</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sec-card">
+          <span class="label">Firmy</span>
+          <h2 style="margin-top:8px;font-size:18px;margin-bottom:14px">Kdo zamestava v AT</h2>
+          <div class="firma-card">
+            <div style="opacity:.25">
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+                <div style="width:48px;height:48px;background:var(--graphite);border-radius:12px"></div>
+                <div>
+                  <div style="font-family:'Geist',sans-serif;font-weight:500;font-size:16px;color:var(--graphite)">Rakouska firma</div>
+                  <div style="font-size:12px;color:var(--graphite-500)">Viden, Rakousko</div>
+                </div>
+              </div>
+              <div style="font-size:13px;color:var(--graphite-700);line-height:1.55;margin-bottom:14px">
+                Overeni rakousti zamestnavatele z prumyslu a stavebnictvi hledaji remeslniky z CZ a SK na dlouhodobe projekty...
+              </div>
+              <div style="display:flex;gap:18px;font-size:12px;color:var(--graphite-500)">
+                <span>★ 4.7 prumer</span>
+                <span>64 aktivnich nabidek</span>
+              </div>
+            </div>
+            <div class="firma-locked-overlay">
+              <div class="lock-icon">🔒</div>
+              <h4>Detaily firem jsou zamcene</h4>
+              <p>Stahnete si aplikaci a projevte zajem o pozici. Po overeni vam zpristupnime kontakt na firmu.</p>
+              <button onclick="location.href='/cz/stahnout-aplikaci'" style="cursor:pointer">Stahnout aplikaci →</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="sec-card" style="padding:24px">
+          <span class="label">Statistiky AT</span>
+          <h2 style="margin-top:8px;font-size:18px;margin-bottom:14px">Rakousko v cislech</h2>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div style="display:flex;justify-content:space-between;align-items:baseline">
+              <span style="font-size:13px;color:var(--graphite-700)">Aktivni nabidky</span>
+              <span style="font-family:'Geist',sans-serif;font-weight:500;font-size:18px">64</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline">
+              <span style="font-size:13px;color:var(--graphite-700)">Prumerna sazba</span>
+              <span style="font-family:'Geist',sans-serif;font-weight:500;font-size:18px;color:var(--signal)">~29 €</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:baseline">
+              <span style="font-size:13px;color:var(--graphite-700)">Spolkove zeme</span>
+              <span style="font-family:'Geist',sans-serif;font-weight:500;font-size:18px">9</span>
+            </div>
+            <div style="background:var(--signal-soft);color:var(--signal-dark);padding:10px 12px;border-radius:10px;font-size:12px;line-height:1.5;margin-top:6px">
+              <strong style="display:block;margin-bottom:2px">📍 Blizko domova</strong>
+              Vetsina pracovist je do <strong>400 km</strong> od ceske hranice.
+            </div>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="similar-sec">
+  <div class="container">
+    <span class="eyebrow">• nabidky v rakousku</span>
+    <h2 style="margin-top:10px">Nabidky v Rakousku</h2>
+    <div class="similar-grid">
+      <div class="jcard">
+        <div class="jcard-head">
+          <div class="jcard-meta">
+            <div class="jcard-loc"><span class="flag flag-at"></span> Linz · Rakousko</div>
+            <div class="jcard-title">Zamecnik ocelovych konstrukci</div>
+            <div class="jcard-company">🔒 Firma · AT</div>
+          </div>
+          <span class="urgency-badge new">Nova</span>
+        </div>
+        <div class="jcard-rate">
+          <span class="jcard-rate-num">26 €</span>
+          <span class="jcard-rate-unit">/ hod + bonusy</span>
+        </div>
+        <div class="jcard-tags">
+          <span class="jcard-tag">Montaz</span>
+          <span class="jcard-tag">Konstrukce</span>
+          <span class="jcard-tag">Ubytovani</span>
+        </div>
+      </div>
+
+      <div class="jcard">
+        <div class="jcard-head">
+          <div class="jcard-meta">
+            <div class="jcard-loc"><span class="flag flag-at"></span> Viden · Rakousko</div>
+            <div class="jcard-title">Svarec MIG/MAG</div>
+            <div class="jcard-company">🔒 Firma · AT</div>
+          </div>
+          <span class="urgency-badge hot">Hot</span>
+        </div>
+        <div class="jcard-rate">
+          <span class="jcard-rate-num">31 €</span>
+          <span class="jcard-rate-unit">/ hod</span>
+        </div>
+        <div class="jcard-tags">
+          <span class="jcard-tag">MIG/MAG</span>
+          <span class="jcard-tag">250 km od Brna</span>
+          <span class="jcard-tag">OSVC/HPP</span>
+        </div>
+      </div>
+
+      <div class="jcard">
+        <div class="jcard-head">
+          <div class="jcard-meta">
+            <div class="jcard-loc"><span class="flag flag-at"></span> Graz · Rakousko</div>
+            <div class="jcard-title">Elektrikar</div>
+            <div class="jcard-company">🔒 Firma · AT</div>
+          </div>
+        </div>
+        <div class="jcard-rate">
+          <span class="jcard-rate-num">29 €</span>
+          <span class="jcard-rate-unit">/ hod</span>
+        </div>
+        <div class="jcard-tags">
+          <span class="jcard-tag">Prumysl</span>
+          <span class="jcard-tag">Stajersko</span>
+          <span class="jcard-tag">Nastup ihned</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-col">
+        <div class="nav-logo" style="margin-bottom:14px">
+          <div class="nav-logo-mark">A</div>
+          <div class="nav-logo-name">Alogator</div>
+        </div>
+        <p style="font-size:13px;color:rgba(249,243,237,.6);line-height:1.5">Marketplace propojujici pracovniky, agentury a koncove firmy. CZ · SK · DE · AT · NL · BE</p>
+      </div>
+      <div class="foot-col">
+        <h5>Pro firmy</h5>
+        <a href="/cz/pro-firmy">Naplanovat demo</a>
+        <a href="/cz/databaze-pracovniku">Databaze pracovniku</a>
+        <a href="/cz/cenik">Cenik</a>
+      </div>
+      <div class="foot-col">
+        <h5>Pro pracovniky</h5>
+        <a href="/cz/nabidka-prace">Pracovni nabidky</a>
+        <a href="/cz/stahnout-aplikaci">Stahnout aplikaci</a>
+        <a href="/cz/jak-to-funguje">Jak to funguje</a>
+      </div>
+      <div class="foot-col">
+        <h5>Spolecnost</h5>
+        <a href="/cz/o-nas">O nas</a>
+        <a href="/cz/kontakt">Kontakt</a>
+        <a href="/cz/vseobecne-obchodni-podminky">VOP</a>
+        <a href="/cz/gdpr">GDPR</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Alogator · Profi Steel Holding</div>
+      <div>Made in Czechia · alogator.com</div>
+    </div>
+  </div>
+</footer>
+
+  <script src="/assets/consent.js" defer></script>
+</body>
+</html>

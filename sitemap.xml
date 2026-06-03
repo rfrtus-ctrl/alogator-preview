@@ -2,144 +2,400 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- CORE PAGES -->
+  <!-- ========== HOMEPAGE ========== -->
   <url>
-    <loc>https://alogator.com/sk/</loc>
-    <lastmod>2026-06-01</lastmod>
+    <loc>https://alogator.com/sk</loc>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/"/>
-    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://alogator.com/"/>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alogator.com/sk"/>
   </url>
   <url>
-    <loc>https://alogator.com/sk/cennik</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://alogator.com/cz</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://alogator.com/sk"/>
+  </url>
+
+  <!-- ========== CORE PAGES — SK ========== -->
+  <url>
+    <loc>https://alogator.com/sk/ponuka-prace</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/ponuka-prace"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/nabidka-prace"/>
   </url>
   <url>
     <loc>https://alogator.com/sk/databaza-pracovnikov</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/databaza-pracovnikov"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/databaze-pracovniku"/>
   </url>
   <url>
-    <loc>https://alogator.com/sk/ponuka-prace</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>daily</changefreq>
+    <loc>https://alogator.com/sk/cennik</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/cennik"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/cenik"/>
   </url>
   <url>
     <loc>https://alogator.com/sk/ako-to-funguje</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/ako-to-funguje"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/jak-to-funguje"/>
+  </url>
+  <url>
+    <loc>https://alogator.com/sk/stiahnut-aplikaciu</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/stiahnut-aplikaciu"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/stahnout-aplikaci"/>
+  </url>
+  <url>
+    <loc>https://alogator.com/sk/pre-firmy</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/pre-firmy"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/pro-firmy"/>
+  </url>
+  <url>
+    <loc>https://alogator.com/sk/pre-pracovnikov</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/pre-pracovnikov"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/pro-pracovniky"/>
   </url>
   <url>
     <loc>https://alogator.com/sk/o-nas</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/o-nas"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/o-nas"/>
   </url>
   <url>
     <loc>https://alogator.com/sk/kontakt</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/kontakt"/>
   </url>
 
-  <!-- SEO LP TIER A — PROFESIE -->
+  <!-- ========== CORE PAGES — CZ ========== -->
   <url>
-    <loc>https://alogator.com/sk/ponuka-prace/zvarac</loc>
-    <lastmod>2026-06-01</lastmod>
+    <loc>https://alogator.com/cz/nabidka-prace</loc>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/ponuka-prace"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/nabidka-prace"/>
+  </url>
+  <url>
+    <loc>https://alogator.com/cz/databaze-pracovniku</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/databaza-pracovnikov"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/databaze-pracovniku"/>
+  </url>
+  <url>
+    <loc>https://alogator.com/cz/cenik</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/cennik"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/cenik"/>
+  </url>
+  <url>
+    <loc>https://alogator.com/cz/jak-to-funguje</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/ako-to-funguje"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/jak-to-funguje"/>
+  </url>
+  <url>
+    <loc>https://alogator.com/cz/stahnout-aplikaci</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/stiahnut-aplikaciu"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/stahnout-aplikaci"/>
+  </url>
+  <url>
+    <loc>https://alogator.com/cz/pro-firmy</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/pre-firmy"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/pro-firmy"/>
+  </url>
+  <url>
+    <loc>https://alogator.com/cz/pro-pracovniky</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/pre-pracovnikov"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/pro-pracovniky"/>
+  </url>
+  <url>
+    <loc>https://alogator.com/cz/o-nas</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/o-nas"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/o-nas"/>
+  </url>
+  <url>
+    <loc>https://alogator.com/cz/kontakt</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/kontakt"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/kontakt"/>
+  </url>
+
+  <!-- ========== PROFESIE — SK ========== -->
+  <url>
+    <loc>https://alogator.com/sk/ponuka-prace/zvarac</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/ponuka-prace/zvarac"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/nabidka-prace/svarec"/>
   </url>
   <url>
     <loc>https://alogator.com/sk/ponuka-prace/elektrikar</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://alogator.com/sk/ponuka-prace/monter</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/ponuka-prace/elektrikar"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/nabidka-prace/elektrikar"/>
   </url>
   <url>
     <loc>https://alogator.com/sk/ponuka-prace/tesar</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/ponuka-prace/tesar"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/nabidka-prace/tesar"/>
   </url>
   <url>
     <loc>https://alogator.com/sk/ponuka-prace/murar</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alogator.com/sk/ponuka-prace/potrubar</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/ponuka-prace/murar"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/nabidka-prace/zednik"/>
   </url>
   <url>
     <loc>https://alogator.com/sk/ponuka-prace/zamocnik</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/ponuka-prace/zamocnik"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/nabidka-prace/zamecnik"/>
+  </url>
+  <url>
+    <loc>https://alogator.com/sk/ponuka-prace/instalater</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/ponuka-prace/instalater"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/nabidka-prace/instalater"/>
   </url>
 
-  <!-- SEO LP TIER A — ZAHRANICÍ -->
+  <!-- ========== PROFESIE — CZ ========== -->
+  <url>
+    <loc>https://alogator.com/cz/nabidka-prace/svarec</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/ponuka-prace/zvarac"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/nabidka-prace/svarec"/>
+  </url>
+  <url>
+    <loc>https://alogator.com/cz/nabidka-prace/elektrikar</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/ponuka-prace/elektrikar"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/nabidka-prace/elektrikar"/>
+  </url>
+  <url>
+    <loc>https://alogator.com/cz/nabidka-prace/tesar</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/ponuka-prace/tesar"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/nabidka-prace/tesar"/>
+  </url>
+  <url>
+    <loc>https://alogator.com/cz/nabidka-prace/zednik</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/ponuka-prace/murar"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/nabidka-prace/zednik"/>
+  </url>
+  <url>
+    <loc>https://alogator.com/cz/nabidka-prace/zamecnik</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/ponuka-prace/zamocnik"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/nabidka-prace/zamecnik"/>
+  </url>
+  <url>
+    <loc>https://alogator.com/cz/nabidka-prace/instalater</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/ponuka-prace/instalater"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/nabidka-prace/instalater"/>
+  </url>
+
+  <!-- ========== ZAHRANIČIE — SK ========== -->
   <url>
     <loc>https://alogator.com/sk/praca-v-zahranici</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/praca-v-zahranici"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/prace-v-zahranici"/>
   </url>
   <url>
     <loc>https://alogator.com/sk/praca-v-zahranici/nemecko</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/praca-v-zahranici/nemecko"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/prace-v-zahranici/nemecko"/>
   </url>
   <url>
     <loc>https://alogator.com/sk/praca-v-zahranici/rakusko</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://alogator.com/sk/praca-v-zahranici/belgicko</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/praca-v-zahranici/rakusko"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/prace-v-zahranici/rakousko"/>
   </url>
   <url>
     <loc>https://alogator.com/sk/praca-v-zahranici/holandsko</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/praca-v-zahranici/holandsko"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/prace-v-zahranici/nizozemsko"/>
+  </url>
+
+  <!-- ========== ZAHRANIČIE — CZ ========== -->
+  <url>
+    <loc>https://alogator.com/cz/prace-v-zahranici</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/praca-v-zahranici"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/prace-v-zahranici"/>
+  </url>
+  <url>
+    <loc>https://alogator.com/cz/prace-v-zahranici/nemecko</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/praca-v-zahranici/nemecko"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/prace-v-zahranici/nemecko"/>
+  </url>
+  <url>
+    <loc>https://alogator.com/cz/prace-v-zahranici/rakousko</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/praca-v-zahranici/rakusko"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/prace-v-zahranici/rakousko"/>
+  </url>
+  <url>
+    <loc>https://alogator.com/cz/prace-v-zahranici/nizozemsko</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/praca-v-zahranici/holandsko"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/prace-v-zahranici/nizozemsko"/>
+  </url>
+
+  <!-- ========== MESTÁ — SK (len existujúce) ========== -->
+  <url>
+    <loc>https://alogator.com/sk/ponuka-prace/presov</loc>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- SEO LP TIER B — MESTÁ (top 10) -->
-  <url><loc>https://alogator.com/sk/ponuka-prace/presov</loc><lastmod>2026-06-01</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://alogator.com/sk/ponuka-prace/bratislava</loc><lastmod>2026-06-01</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://alogator.com/sk/ponuka-prace/martin</loc><lastmod>2026-06-01</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://alogator.com/sk/ponuka-prace/zilina</loc><lastmod>2026-06-01</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://alogator.com/sk/ponuka-prace/kosice</loc><lastmod>2026-06-01</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://alogator.com/sk/ponuka-prace/banska-bystrica</loc><lastmod>2026-06-01</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://alogator.com/sk/ponuka-prace/nitra</loc><lastmod>2026-06-01</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://alogator.com/sk/ponuka-prace/trnava</loc><lastmod>2026-06-01</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://alogator.com/sk/ponuka-prace/poprad</loc><lastmod>2026-06-01</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://alogator.com/sk/ponuka-prace/prievidza</loc><lastmod>2026-06-01</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <!-- ========== LEGAL — SK ========== -->
+  <url>
+    <loc>https://alogator.com/sk/vseobecne-obchodne-podmienky</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/vseobecne-obchodne-podmienky"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/vop"/>
+  </url>
+  <url>
+    <loc>https://alogator.com/sk/gdpr</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/gdpr"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/gdpr"/>
+  </url>
+  <url>
+    <loc>https://alogator.com/sk/cookies</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/cookies"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/cookies"/>
+  </url>
 
-  <!-- LEGAL -->
-  <url><loc>https://alogator.com/sk/vseobecne-obchodne-podmienky</loc><lastmod>2026-06-01</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://alogator.com/sk/gdpr</loc><lastmod>2026-06-01</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://alogator.com/sk/cookies</loc><lastmod>2026-06-01</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <!-- ========== LEGAL — CZ ========== -->
+  <url>
+    <loc>https://alogator.com/cz/vop</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/vseobecne-obchodne-podmienky"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/vop"/>
+  </url>
+  <url>
+    <loc>https://alogator.com/cz/gdpr</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/gdpr"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/gdpr"/>
+  </url>
+  <url>
+    <loc>https://alogator.com/cz/cookies</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="sk-SK" href="https://alogator.com/sk/cookies"/>
+    <xhtml:link rel="alternate" hreflang="cs-CZ" href="https://alogator.com/cz/cookies"/>
+  </url>
 
 </urlset>

@@ -59,6 +59,16 @@ h1,h2,h3{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.02em;c
 
 .footer{background:var(--graphite);color:var(--porcelain);padding:32px 0 20px}
 .foot-bottom{display:flex;justify-content:space-between;font-size:12px;color:rgba(249,243,237,.5)}
+@media(max-width:900px){
+  .container,.legal-container{padding:0 16px}
+  .legal-hero h1{font-size:28px}
+  .legal-body h2{font-size:17px}
+  .legal-body h3{font-size:14.5px}
+  .legal-tabs-inner{gap:16px;overflow-x:auto}
+  .legal-tab{font-size:13px;white-space:nowrap}
+  .foot-top{grid-template-columns:1fr}
+  .foot-bottom{flex-direction:column;gap:8px}
+}
 </style>
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://alogator.com/sk/vop">
@@ -76,6 +86,8 @@ h1,h2,h3{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.02em;c
 <!-- alg-schema -->
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Domov", "item": "https://alogator.com/sk"}, {"@type": "ListItem", "position": 2, "name": "VOP", "item": "https://alogator.com/sk/vop"}]}</script>
 <!-- /alg-schema -->
+<link rel="stylesheet" href="/assets/mobile-nav.css">
+<script src="/assets/mobile-nav.js" defer></script>
 </head>
 <body>
 <nav class="navbar">

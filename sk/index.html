@@ -836,18 +836,22 @@ section.boxed .container{
 
 /* ============ SECTION AI SEARCH ============ */
 .sec-search{
-  background:#f9c4b0;
-  border:2px solid var(--signal);
+  background:var(--signal);
+  border:none;
   border-radius:20px;
   padding:16px 18px;
   margin-bottom:14px;
-  box-shadow:0 4px 20px -4px rgba(230,103,72,.35);
+  box-shadow:0 8px 28px -4px rgba(230,103,72,.45);
   transition:transform .2s, box-shadow .2s;
 }
 .sec-search:focus-within{
   transform:translateY(-2px);
-  box-shadow:0 6px 28px -4px rgba(230,103,72,.5);
+  box-shadow:0 12px 36px -6px rgba(230,103,72,.6);
 }
+.sec-search-label{color:rgba(249,243,237,.8)!important}
+.sec-search-label svg{stroke:rgba(249,243,237,.8)!important}
+.sec-search-input{color:var(--porcelain)!important}
+.sec-search-input::placeholder{color:rgba(249,243,237,.6)!important}
 .sec-search-label{
   font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:500;
   letter-spacing:0.15em;text-transform:uppercase;color:var(--signal);

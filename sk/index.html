@@ -1264,33 +1264,34 @@ section.boxed .container{
   padding:16px 32px;
 }
 .calendar-section .container{
-  background:var(--graphite);
+  background:var(--signal);
   border-radius:24px;padding:48px 32px;
   max-width:1280px;position:relative;overflow:hidden;
 }
 .calendar-section h2{color:var(--porcelain)}
-.calendar-section .sec-sub{color:rgba(249,243,237,.6)}
-.calendar-section .eyebrow{color:var(--signal)}
+.calendar-section .sec-sub{color:rgba(249,243,237,.75)}
+.calendar-section .eyebrow{color:rgba(249,243,237,.7)}
 .cal-grid{
   display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
   margin-top:32px;
 }
 .cal-week{
-  background:rgba(249,243,237,.04);
-  border:1px solid rgba(249,243,237,.08);
+  background:#fff;
+  border:1px solid var(--porcelain-300);
   border-radius:20px;padding:16px;
   display:flex;flex-direction:column;gap:12px;
+  box-shadow:0 2px 12px rgba(0,0,0,.08);
 }
 .cal-week-head{
   display:flex;justify-content:space-between;align-items:flex-start;
   padding-bottom:12px;
-  border-bottom:1px solid rgba(249,243,237,.08);
+  border-bottom:1px solid var(--porcelain-300);
 }
 .cal-week-num{
-  font-family:'Geist',sans-serif;font-weight:500;font-size:16px;color:var(--porcelain);
+  font-family:'Geist',sans-serif;font-weight:600;font-size:16px;color:var(--graphite);
   line-height:1.2;
 }
-.cal-week-num small{font-size:10.5px;color:rgba(249,243,237,.5);display:block;font-family:'Inter';font-weight:400;margin-top:3px;letter-spacing:0}
+.cal-week-num small{font-size:10.5px;color:var(--graphite-500);display:block;font-family:'Inter';font-weight:400;margin-top:3px;letter-spacing:0}
 .cal-week-count{
   background:var(--signal);color:var(--porcelain);
   padding:4px 10px;border-radius:999px;
@@ -2977,7 +2978,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
         <p class="sec-sub">Plánujte projekty s istotou. Kalendár dostupnosti aktualizovaný pracovníkmi v reálnom čase — vidíte presne, kto, kedy a kde.</p>
       </div>
       <div class="sec-cta">
-        <button class="btn btn-solid btn-lg" onclick="location.href='/app'" style="cursor:pointer">Otvoriť kalendár →</button>
+        <button class="btn btn-dark btn-lg" onclick="location.href='/app'" style="cursor:pointer">Otvoriť kalendár →</button>
       </div>
     </div>
 

@@ -1,4 +1,4 @@
-// =====================================================
+﻿// =====================================================
 //  ALOGATOR · CONTENT.JS
 //  Texty sekcií na jednom mieste.
 //  Editujte tu — zmeny sa prejavia automaticky.

@@ -509,23 +509,23 @@ body {
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <div class="eyebrow">Databáza pracovníkov</div>
-    <h1>3 047 pracovníkov<br>po <em>celej EÚ</em></h1>
-    <p class="hero-sub">Stavbárske remeslá overené v reálnom čase. Filtrujte podľa profesie, lokality, praxe, jazyka alebo certifikátu.</p>
+    <div class="eyebrow" data-c="databaza.eyebrow">Databáza pracovníkov</div>
+    <h1 data-c="databaza.h1">3 047 pracovníkov<br>po <em>celej EÚ</em></h1>
+    <p class="hero-sub" data-c="databaza.sub">Stavbárske remeslá overené v reálnom čase. Filtrujte podľa profesie, lokality, praxe, jazyka alebo certifikátu.</p>
     <div class="hero-stats">
       <div class="hero-stat">
-        <strong>3 047</strong>
-        PRACOVNÍKOV
+        <strong data-c="databaza.stat1_num">3 047</strong>
+        <span data-c="databaza.stat1_label">PRACOVNÍKOV</span>
       </div>
       <div class="hero-stat-divider"></div>
       <div class="hero-stat">
-        <strong>380</strong>
-        AGENTÚR
+        <strong data-c="databaza.stat2_num">380</strong>
+        <span data-c="databaza.stat2_label">AGENTÚR</span>
       </div>
       <div class="hero-stat-divider"></div>
       <div class="hero-stat">
-        <strong>284</strong>
-        DOSTUPNÝCH IHNEĎ
+        <strong data-c="databaza.stat3_num">284</strong>
+        <span data-c="databaza.stat3_label">DOSTUPNÝCH IHNEĎ</span>
       </div>
       <div class="hero-stat-divider"></div>
       <span class="live-badge">
@@ -541,10 +541,10 @@ body {
   <div class="container">
     <div class="search-box">
       <div class="search-label">
-        <span>✦</span> AI vyhľadávanie · opíšte koho hľadáte
+        <span>✦</span> <span data-c="databaza.search_label">AI vyhľadávanie · opíšte koho hľadáte</span>
       </div>
       <div class="search-input-row">
-        <input class="search-input" type="text" placeholder="Napríklad: Hľadám zvárača MIG/MAG do Bavorska, dostupný od júna, hovorí nemecky, vlastné auto...">
+        <input class="search-input" type="text" data-c-placeholder="databaza.search_placeholder" placeholder="Napríklad: Hľadám zvárača MIG/MAG do Bavorska, dostupný od júna, hovorí nemecky, vlastné auto...">
         <button class="search-btn">→</button>
       </div>
       <div class="search-chips">
@@ -613,7 +613,7 @@ body {
 
 <!-- WORKER GRID -->
 <div class="container">
-  <div class="worker-grid">
+  <div class="worker-grid" id="worker-grid-dynamic">
 
     <!-- KARTA 1 — Marek N. — odomknutá, dostupný -->
     <a href="/sk/pracovnik/marek-n" class="worker-card">
@@ -864,8 +864,8 @@ body {
   </div>
 
   <div class="load-more">
-    <button class="btn-outline">Načítať ďalších 24 pracovníkov →</button>
-    <div class="load-sub">Zobrazené 5 z 284 dostupných · <a href="#" style="color:var(--graphite-500);text-decoration:underline">resetovať filter</a></div>
+    <button class="btn-outline" data-c="databaza.load_btn">Načítať ďalších 24 pracovníkov →</button>
+    <div class="load-sub"><span data-c="databaza.load_sub">Zobrazené 5 z 284 dostupných</span> · <a href="#" style="color:var(--graphite-500);text-decoration:underline">resetovať filter</a></div>
   </div>
 </div>
 
@@ -911,5 +911,7 @@ body {
 </footer>
 
   <script src="/assets/consent.js" defer></script>
+  <script src="/assets/content.js"></script>
+  <script src="/assets/content-apply.js" defer></script>
 </body>
 </html>

@@ -434,6 +434,7 @@ body {
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Domov","item":"https://alogator.com/sk"},{"@type":"ListItem","position":2,"name":"Pracovné ponuky","item":"https://alogator.com/sk/ponuka-prace"}]}</script>
 <link rel="stylesheet" href="/assets/mobile-nav.css">
 <script src="/assets/mobile-nav.js" defer></script>
+<script src="/assets/content.js"></script>
 </head>
 <body>
 
@@ -461,23 +462,23 @@ body {
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <div class="eyebrow">Pracovné ponuky</div>
-    <h1>Nájdi prácu<br><em>v zahraničí</em></h1>
-    <p class="hero-sub">Overené ponuky od firiem v DE, AT, NL a BE. Jasný plat, reálne podmienky — žiadne prekvapenia.</p>
+    <div class="eyebrow" data-c="jobs.eyebrow">Pracovné ponuky</div>
+    <h1 data-c="jobs.h1">Nájdi prácu<br><em>v zahraničí</em></h1>
+    <p class="hero-sub" data-c="jobs.sub">Overené ponuky od firiem v DE, AT, NL a BE. Jasný plat, reálne podmienky — žiadne prekvapenia.</p>
     <div class="hero-stats">
       <div class="hero-stat">
-        <strong>247</strong>
-        PONÚK
+        <strong data-c="jobs.stat1_num">247</strong>
+        <span data-c="jobs.stat1_label">PONÚK</span>
       </div>
       <div class="hero-stat-divider"></div>
       <div class="hero-stat">
-        <strong>12</strong>
-        KRAJÍN
+        <strong data-c="jobs.stat2_num">12</strong>
+        <span data-c="jobs.stat2_label">KRAJÍN</span>
       </div>
       <div class="hero-stat-divider"></div>
       <div class="hero-stat">
-        <strong>89</strong>
-        NOVÝCH TENTO TÝŽDEŇ
+        <strong data-c="jobs.stat3_num">89</strong>
+        <span data-c="jobs.stat3_label">NOVÝCH TENTO TÝŽDEŇ</span>
       </div>
       <div class="hero-stat-divider"></div>
       <span class="live-badge">
@@ -493,10 +494,10 @@ body {
   <div class="container">
     <div class="search-box">
       <div class="search-label">
-        <span>✦</span> AI vyhľadávanie · opíšte akú prácu hľadáte
+        <span>✦</span> <span data-c="jobs.search_label">AI vyhľadávanie · opíšte akú prácu hľadáte</span>
       </div>
       <div class="search-input-row">
-        <input class="search-input" type="text" placeholder="Napríklad: Zvárač MIG/MAG, Nemecko, min. 25 €/h, nástup ihneď, hovorím nemecky...">
+        <input class="search-input" type="text" data-c-placeholder="jobs.search_placeholder" placeholder="Napríklad: Zvárač MIG/MAG, Nemecko, min. 25 €/h, nástup ihneď, hovorím nemecky...">
         <button class="search-btn">→</button>
       </div>
       <div class="search-chips">
@@ -560,7 +561,7 @@ body {
 
 <!-- JOB GRID -->
 <div class="container">
-  <div class="job-grid">
+  <div class="job-grid" id="job-grid-dynamic">
 
     <!-- PONUKA 1 — HOT · Zvárač MIG/MAG · Emsland, DE -->
     <a href="/sk/ponuka-prace/zvarac" class="job-card">
@@ -705,8 +706,8 @@ body {
   </div>
 
   <div class="load-more">
-    <button class="btn-outline">Načítať ďalších 24 ponúk →</button>
-    <div class="load-sub">Zobrazené 5 z 247 ponúk · <a href="#" style="color:var(--graphite-500);text-decoration:underline">resetovať filter</a></div>
+    <button class="btn-outline" data-c="jobs.load_btn">Načítať ďalších 24 ponúk →</button>
+    <div class="load-sub"><span data-c="jobs.load_sub">Zobrazené 5 z 247 ponúk</span> · <a href="#" style="color:var(--graphite-500);text-decoration:underline">resetovať filter</a></div>
   </div>
 </div>
 
@@ -715,13 +716,13 @@ body {
   <div class="container">
     <div class="app-cta-inner">
       <div class="app-cta-text">
-        <div class="eyebrow">Pre pracovníkov · zadarmo</div>
-        <h2>Stiahni aplikáciu<br>a nájdi prácu za 48h</h2>
-        <p>Vyplň profil raz. Firmy z DE, AT, NL a BE ťa samy kontaktujú — ty vyberieš komu odpisuješ. Žiadne poplatky, žiadne prekvapenia.</p>
+        <div class="eyebrow" data-c="jobs.app_eyebrow">Pre pracovníkov · zadarmo</div>
+        <h2 data-c="jobs.app_h2">Stiahni aplikáciu<br>a nájdi prácu za 48h</h2>
+        <p data-c="jobs.app_p">Vyplň profil raz. Firmy z DE, AT, NL a BE ťa samy kontaktujú — ty vyberieš komu odpisuješ. Žiadne poplatky, žiadne prekvapenia.</p>
       </div>
       <div class="app-cta-actions">
-        <a href="/sk/stiahnut-aplikaciu" class="btn-solid">Stiahnuť iOS →</a>
-        <a href="/sk/stiahnut-aplikaciu" class="btn-outline-light">Stiahnuť Android</a>
+        <a href="/sk/stiahnut-aplikaciu" class="btn-solid" data-c="jobs.app_ios">Stiahnuť iOS →</a>
+        <a href="/sk/stiahnut-aplikaciu" class="btn-outline-light" data-c="jobs.app_android">Stiahnuť Android</a>
       </div>
     </div>
   </div>
@@ -788,5 +789,6 @@ body {
 </footer>
 
 <script src="/assets/consent.js" defer></script>
+<script src="/assets/content-apply.js" defer></script>
 </body>
 </html>

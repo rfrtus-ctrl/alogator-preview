@@ -987,6 +987,10 @@ section.boxed .container{
   font-style:italic;
   display:inline-flex;align-items:center;gap:5px;
 }
+.jcard-company .co-flag{
+  width:14px;height:10px;border-radius:2px;
+  display:inline-block;flex-shrink:0;
+}
 .jcard-company.locked::after{
   content:'';
   width:11px;height:13px;
@@ -1104,11 +1108,8 @@ section.boxed .container{
 .wcard-name-row{
   display:flex;align-items:center;gap:7px;
 }
-.wcard-origin-flag{
-  width:18px;height:13px;border-radius:2px;
-  flex-shrink:0;
-  box-shadow:0 0 0 1px rgba(26,29,30,.1);
-}
+.wcard-origin-flag{display:none}
+.wcard-emoji-flag,.cal-emoji-flag{font-size:14px;line-height:1;flex-shrink:0}
 .wcard-name{
   font-family:'Geist',sans-serif;font-weight:500;font-size:16px;
   letter-spacing:-0.01em;line-height:1.15;color:var(--graphite);
@@ -1308,10 +1309,7 @@ section.boxed .container{
 .cal-wcard-avatar.a-yellow{background:var(--yellow);color:var(--graphite)}
 .cal-wcard-meta{flex:1;min-width:0}
 .cal-wcard-name-row{display:flex;align-items:center;gap:5px}
-.cal-wcard-flag{
-  width:13px;height:10px;border-radius:1.5px;flex-shrink:0;
-  box-shadow:0 0 0 1px rgba(26,29,30,.1);
-}
+.cal-wcard-flag{display:none}
 .cal-wcard-name{
   font-family:'Geist',sans-serif;font-weight:500;font-size:13px;
   letter-spacing:-0.01em;color:var(--graphite);line-height:1.1;
@@ -1746,7 +1744,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
       <a href="/sk/o-nas" class="">O nás</a>
     </div>
     <div class="nav-cta">
-      <div class="lang"><span class="flag-sk"></span>SK <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg></div>
+      <div class="lang">🇸🇰 SK <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg></div>
       <button class="btn btn-ghost" onclick="location.href='/app'" style="cursor:pointer">Prihlásenie</button>
       <button class="btn btn-solid mode-b" onclick="location.href='/sk/kontakt'" style="cursor:pointer">Naplánovať demo</button>
       <button class="btn btn-solid mode-c" onclick="location.href='/app'" style="cursor:pointer">Registrácia</button>
@@ -1929,7 +1927,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
         <div class="float-card fc-1">
           <div class="fc-top">
             <div class="fc-avatar-wrap">
-              <div class="fc-avatar" style="background:#2A6496;">M<span class="fc-avatar-flag">🇸🇰</span></div>
+              <div class="fc-avatar" style="background:#2A6496;">M<span class="fc-avatar-flag"></span></div>
               <div>
                 <div class="fc-name">Marek N.</div>
                 <div class="fc-profession">Elektrikár · ●●●●○</div>
@@ -1964,7 +1962,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
         <div class="float-card fc-2">
           <div class="fc-top">
             <div class="fc-avatar-wrap">
-              <div class="fc-avatar" style="background:#1A1D1E;border:1px solid rgba(249,243,237,.15);">D<span class="fc-avatar-flag">🇨🇿</span></div>
+              <div class="fc-avatar" style="background:#1A1D1E;border:1px solid rgba(249,243,237,.15);">D<span class="fc-avatar-flag"></span></div>
               <div>
                 <div class="fc-name">Daniel R.</div>
                 <div class="fc-profession">Zvárač MIG/MAG · ●●●●●</div>
@@ -1999,7 +1997,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
         <div class="float-card fc-3">
           <div class="fc-top">
             <div class="fc-avatar-wrap">
-              <div class="fc-avatar" style="background:var(--signal);">J<span class="fc-avatar-flag">🇨🇿</span></div>
+              <div class="fc-avatar" style="background:var(--signal);">J<span class="fc-avatar-flag"></span></div>
               <div>
                 <div class="fc-name">Jakub H.</div>
                 <div class="fc-profession">Bagrista · Montér · ●●●○○</div>
@@ -2352,7 +2350,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="wcard-avatar a-signal">M</div>
           <div class="wcard-meta">
             <div class="wcard-name-row">
-              <span class="wcard-origin-flag flag-sk" title="Slovensko"></span>
+              <span class="wcard-emoji-flag">🇸🇰</span>
               <div class="wcard-name locked">Marek N.</div>
             </div>
             <div class="wcard-profession">Elektrikár · 8 rokov praxe</div>
@@ -2401,7 +2399,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="wcard-avatar a-graphite700">D</div>
           <div class="wcard-meta">
             <div class="wcard-name-row">
-              <span class="wcard-origin-flag flag-cz" title="Česko"></span>
+              <span class="wcard-emoji-flag">🇨🇿</span>
               <div class="wcard-name locked">Daniel R.</div>
             </div>
             <div class="wcard-profession">Zvárač MIG/MAG · TIG · 12 rokov</div>
@@ -2451,7 +2449,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="wcard-avatar">J</div>
           <div class="wcard-meta">
             <div class="wcard-name-row">
-              <span class="wcard-origin-flag flag-cz" title="Česko"></span>
+              <span class="wcard-emoji-flag">🇨🇿</span>
               <div class="wcard-name locked">Jakub H.</div>
             </div>
             <div class="wcard-profession">Bagrista · Montér · 5 rokov</div>
@@ -2500,7 +2498,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="wcard-avatar a-yellow">F</div>
           <div class="wcard-meta">
             <div class="wcard-name-row">
-              <span class="wcard-origin-flag flag-cz" title="Česko"></span>
+              <span class="wcard-emoji-flag">🇨🇿</span>
               <div class="wcard-name locked">Filip P.</div>
             </div>
             <div class="wcard-profession">Elektrikár · meranie · 6 rokov</div>
@@ -2549,7 +2547,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="wcard-avatar a-signal">Z</div>
           <div class="wcard-meta">
             <div class="wcard-name-row">
-              <span class="wcard-origin-flag flag-sk" title="Slovensko"></span>
+              <span class="wcard-emoji-flag">🇸🇰</span>
               <div class="wcard-name locked">Zoltán S.</div>
             </div>
             <div class="wcard-profession">Pokrývač · Klampiar · 9 rokov</div>
@@ -2598,7 +2596,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="wcard-avatar a-graphite700">R</div>
           <div class="wcard-meta">
             <div class="wcard-name-row">
-              <span class="wcard-origin-flag flag-cz" title="Česko"></span>
+              <span class="wcard-emoji-flag">🇨🇿</span>
               <div class="wcard-name locked">Roman S.</div>
             </div>
             <div class="wcard-profession">Zámočník · Zvárač · 7 rokov</div>
@@ -2747,7 +2745,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-logo lock"><span>P</span></div>
           <div class="jcard-meta">
             <div class="jcard-title">Zvárač MIG/MAG</div>
-            <div class="jcard-company locked">Firma z DE</div>
+            <div class="jcard-company locked">🇩🇪 Firma</div>
           </div>
         </div>
         <div class="jcard-salary">
@@ -2756,7 +2754,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <span class="jcard-bonus bonus-housing">+ ubytovanie</span>
         </div>
         <div class="jcard-info">
-          <span><span class="country-flag flag-de"></span>Emsland, DE</span>
+          <span>🇩🇪 Emsland, DE</span>
           <span class="sep">·</span>
           <span>45h / týždeň</span>
           <span class="sep">·</span>
@@ -2781,7 +2779,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-logo lock"><span>R</span></div>
           <div class="jcard-meta">
             <div class="jcard-title">Elektrikár — silnoprúd</div>
-            <div class="jcard-company locked">Firma z DE</div>
+            <div class="jcard-company locked">🇩🇪 Firma</div>
           </div>
         </div>
         <div class="jcard-salary">
@@ -2790,7 +2788,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <span class="jcard-bonus bonus-slots">2 miesta</span>
         </div>
         <div class="jcard-info">
-          <span><span class="country-flag flag-de"></span>Stuttgart, DE</span>
+          <span>🇩🇪 Stuttgart, DE</span>
           <span class="sep">·</span>
           <span>45h / týždeň</span>
           <span class="sep">·</span>
@@ -2814,7 +2812,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-logo lock"><span>K</span></div>
           <div class="jcard-meta">
             <div class="jcard-title">Zvárač TIG</div>
-            <div class="jcard-company locked">Firma z DE</div>
+            <div class="jcard-company locked">🇩🇪 Firma</div>
           </div>
         </div>
         <div class="jcard-salary">
@@ -2823,7 +2821,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <span class="jcard-bonus bonus-business">Živnosť</span>
         </div>
         <div class="jcard-info">
-          <span><span class="country-flag flag-de"></span>Budenheim, DE</span>
+          <span>🇩🇪 Budenheim, DE</span>
           <span class="sep">·</span>
           <span>55h / týždeň</span>
           <span class="sep">·</span>
@@ -2847,7 +2845,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-logo lock"><span>S</span></div>
           <div class="jcard-meta">
             <div class="jcard-title">Sadrokartonista</div>
-            <div class="jcard-company locked">Firma z DE</div>
+            <div class="jcard-company locked">🇩🇪 Firma</div>
           </div>
         </div>
         <div class="jcard-salary">
@@ -2856,7 +2854,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <span class="jcard-bonus bonus-housing">+ ubytovanie</span>
         </div>
         <div class="jcard-info">
-          <span><span class="country-flag flag-de"></span>Stuttgart, DE</span>
+          <span>🇩🇪 Stuttgart, DE</span>
           <span class="sep">·</span>
           <span>50h / týždeň</span>
           <span class="sep">·</span>
@@ -2880,7 +2878,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-logo lock"><span>P</span></div>
           <div class="jcard-meta">
             <div class="jcard-title">Pokrývač</div>
-            <div class="jcard-company locked">Firma zo CH</div>
+            <div class="jcard-company locked">🇨🇭 Firma</div>
           </div>
         </div>
         <div class="jcard-salary">
@@ -2889,7 +2887,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <span class="jcard-bonus bonus-housing">+ ubytovanie</span>
         </div>
         <div class="jcard-info">
-          <span><span class="country-flag flag-ch"></span>Zürich, CH</span>
+          <span>🇨🇭 Zürich, CH</span>
           <span class="sep">·</span>
           <span>50h / týždeň</span>
           <span class="sep">·</span>
@@ -2913,7 +2911,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-logo lock"><span>M</span></div>
           <div class="jcard-meta">
             <div class="jcard-title">Montér</div>
-            <div class="jcard-company locked">Firma z BE</div>
+            <div class="jcard-company locked">🇧🇪 Firma</div>
           </div>
         </div>
         <div class="jcard-salary">
@@ -2922,7 +2920,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <span class="jcard-bonus bonus-slots">5 miest</span>
         </div>
         <div class="jcard-info">
-          <span><span class="country-flag flag-be"></span>Antverpy, BE</span>
+          <span>🇧🇪 Antverpy, BE</span>
           <span class="sep">·</span>
           <span>50h / týždeň</span>
           <span class="sep">·</span>
@@ -2980,7 +2978,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="cal-wcard-avatar a-signal">M</div>
             <div class="cal-wcard-meta">
               <div class="cal-wcard-name-row">
-                <span class="cal-wcard-flag flag-sk"></span>
+                <span class="cal-emoji-flag">🇸🇰</span>
                 <span class="cal-wcard-name">Marek N.</span>
               </div>
               <div class="cal-wcard-prof">Elektrikár · 8 r.</div>
@@ -3012,7 +3010,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="cal-wcard-avatar a-yellow">J</div>
             <div class="cal-wcard-meta">
               <div class="cal-wcard-name-row">
-                <span class="cal-wcard-flag flag-cz"></span>
+                <span class="cal-emoji-flag">🇨🇿</span>
                 <span class="cal-wcard-name">Jakub H.</span>
               </div>
               <div class="cal-wcard-prof">Bagrista · Montér</div>
@@ -3044,7 +3042,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="cal-wcard-avatar a-graphite">P</div>
             <div class="cal-wcard-meta">
               <div class="cal-wcard-name-row">
-                <span class="cal-wcard-flag flag-sk"></span>
+                <span class="cal-emoji-flag">🇸🇰</span>
                 <span class="cal-wcard-name">Peter K.</span>
               </div>
               <div class="cal-wcard-prof">Zvárač MIG · MAG</div>
@@ -3076,7 +3074,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="cal-wcard-avatar a-signal">T</div>
             <div class="cal-wcard-meta">
               <div class="cal-wcard-name-row">
-                <span class="cal-wcard-flag flag-cz"></span>
+                <span class="cal-emoji-flag">🇨🇿</span>
                 <span class="cal-wcard-name">Tomáš V.</span>
               </div>
               <div class="cal-wcard-prof">Tesár · Debnenie</div>
@@ -3115,7 +3113,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="cal-wcard-avatar a-graphite">D</div>
             <div class="cal-wcard-meta">
               <div class="cal-wcard-name-row">
-                <span class="cal-wcard-flag flag-cz"></span>
+                <span class="cal-emoji-flag">🇨🇿</span>
                 <span class="cal-wcard-name">Daniel R.</span>
               </div>
               <div class="cal-wcard-prof">Zvárač MIG/MAG · TIG</div>
@@ -3147,7 +3145,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="cal-wcard-avatar a-signal">M</div>
             <div class="cal-wcard-meta">
               <div class="cal-wcard-name-row">
-                <span class="cal-wcard-flag flag-sk"></span>
+                <span class="cal-emoji-flag">🇸🇰</span>
                 <span class="cal-wcard-name">Marek N.</span>
               </div>
               <div class="cal-wcard-prof">Elektrikár · 8 r.</div>
@@ -3179,7 +3177,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="cal-wcard-avatar a-signal">A</div>
             <div class="cal-wcard-meta">
               <div class="cal-wcard-name-row">
-                <span class="cal-wcard-flag flag-sk"></span>
+                <span class="cal-emoji-flag">🇸🇰</span>
                 <span class="cal-wcard-name">Adam B.</span>
               </div>
               <div class="cal-wcard-prof">Murár · Obkladač</div>
@@ -3211,7 +3209,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="cal-wcard-avatar a-graphite">J</div>
             <div class="cal-wcard-meta">
               <div class="cal-wcard-name-row">
-                <span class="cal-wcard-flag flag-cz"></span>
+                <span class="cal-emoji-flag">🇨🇿</span>
                 <span class="cal-wcard-name">Jan S.</span>
               </div>
               <div class="cal-wcard-prof">Inštalatér · Kúrenie</div>
@@ -3250,7 +3248,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="cal-wcard-avatar a-yellow">F</div>
             <div class="cal-wcard-meta">
               <div class="cal-wcard-name-row">
-                <span class="cal-wcard-flag flag-cz"></span>
+                <span class="cal-emoji-flag">🇨🇿</span>
                 <span class="cal-wcard-name">Filip P.</span>
               </div>
               <div class="cal-wcard-prof">Elektrikár · meranie</div>
@@ -3282,7 +3280,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="cal-wcard-avatar a-signal">R</div>
             <div class="cal-wcard-meta">
               <div class="cal-wcard-name-row">
-                <span class="cal-wcard-flag flag-cz"></span>
+                <span class="cal-emoji-flag">🇨🇿</span>
                 <span class="cal-wcard-name">Roman S.</span>
               </div>
               <div class="cal-wcard-prof">Zámočník · Zvárač</div>
@@ -3314,7 +3312,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="cal-wcard-avatar a-signal">M</div>
             <div class="cal-wcard-meta">
               <div class="cal-wcard-name-row">
-                <span class="cal-wcard-flag flag-sk"></span>
+                <span class="cal-emoji-flag">🇸🇰</span>
                 <span class="cal-wcard-name">Martin K.</span>
               </div>
               <div class="cal-wcard-prof">Zvárač TIG · Nerez</div>
@@ -3346,7 +3344,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="cal-wcard-avatar a-graphite">V</div>
             <div class="cal-wcard-meta">
               <div class="cal-wcard-name-row">
-                <span class="cal-wcard-flag flag-cz"></span>
+                <span class="cal-emoji-flag">🇨🇿</span>
                 <span class="cal-wcard-name">Václav H.</span>
               </div>
               <div class="cal-wcard-prof">Tesár · Krovy</div>
@@ -3385,7 +3383,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="cal-wcard-avatar a-graphite">Z</div>
             <div class="cal-wcard-meta">
               <div class="cal-wcard-name-row">
-                <span class="cal-wcard-flag flag-sk"></span>
+                <span class="cal-emoji-flag">🇸🇰</span>
                 <span class="cal-wcard-name">Zoltán S.</span>
               </div>
               <div class="cal-wcard-prof">Pokrývač · Klampiar</div>
@@ -3417,7 +3415,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="cal-wcard-avatar a-graphite">D</div>
             <div class="cal-wcard-meta">
               <div class="cal-wcard-name-row">
-                <span class="cal-wcard-flag flag-cz"></span>
+                <span class="cal-emoji-flag">🇨🇿</span>
                 <span class="cal-wcard-name">Daniel R.</span>
               </div>
               <div class="cal-wcard-prof">Zvárač MIG/MAG · TIG</div>
@@ -3449,7 +3447,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="cal-wcard-avatar a-signal">S</div>
             <div class="cal-wcard-meta">
               <div class="cal-wcard-name-row">
-                <span class="cal-wcard-flag flag-cz"></span>
+                <span class="cal-emoji-flag">🇨🇿</span>
                 <span class="cal-wcard-name">Štefan R.</span>
               </div>
               <div class="cal-wcard-prof">Montér · Potrubár</div>
@@ -3481,7 +3479,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="cal-wcard-avatar a-yellow">K</div>
             <div class="cal-wcard-meta">
               <div class="cal-wcard-name-row">
-                <span class="cal-wcard-flag flag-sk"></span>
+                <span class="cal-emoji-flag">🇸🇰</span>
                 <span class="cal-wcard-name">Karol J.</span>
               </div>
               <div class="cal-wcard-prof">Elektrikár · NN</div>

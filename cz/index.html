@@ -953,6 +953,10 @@ section{padding:96px 0}
   font-style:italic;
   display:inline-flex;align-items:center;gap:5px;
 }
+.jcard-company .co-flag{
+  width:14px;height:10px;border-radius:2px;
+  display:inline-block;flex-shrink:0;
+}
 .jcard-company.locked::after{
   content:'';
   width:11px;height:13px;
@@ -1690,7 +1694,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
       <a href="/cz/o-nas" class="">O nás</a>
     </div>
     <div class="nav-cta">
-      <div class="lang"><span class="flag-sk"></span>SK <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg></div>
+      <div class="lang">🇸🇰 SK <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg></div>
       <button class="btn btn-ghost" onclick="location.href='/app'" style="cursor:pointer">Přihlášení</button>
       <button class="btn btn-solid mode-b" onclick="location.href='/cz/kontakt'" style="cursor:pointer">Naplánovat demo</button>
       <button class="btn btn-solid mode-c" onclick="location.href='/app'" style="cursor:pointer">Registrace</button>
@@ -1874,7 +1878,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="fc-avatar">M</div>
             <div class="fc-info">
               <div class="fc-name">Marek N.</div>
-              <div class="fc-meta"><span class="flag-sk"></span>Česko · 32 r.</div>
+              <div class="fc-meta">🇸🇰 Česko · 32 r.</div>
             </div>
             <div class="fc-rating">4/5 ★</div>
           </div>
@@ -1914,7 +1918,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="fc-avatar">D</div>
             <div class="fc-info">
               <div class="fc-name">Daniel R.</div>
-              <div class="fc-meta"><span class="flag-cz"></span>ČR · 41 r.</div>
+              <div class="fc-meta">🇨🇿 ČR · 41 r.</div>
             </div>
             <div class="fc-rating">5/5 ★</div>
           </div>
@@ -1954,7 +1958,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="fc-avatar">J</div>
             <div class="fc-info">
               <div class="fc-name">Jakub H.</div>
-              <div class="fc-meta"><span class="flag-cz"></span>ČR · 29 r.</div>
+              <div class="fc-meta">🇨🇿 ČR · 29 r.</div>
             </div>
             <div class="fc-rating">4/5 ★</div>
           </div>
@@ -2314,7 +2318,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="wcard-avatar a-signal">M</div>
           <div class="wcard-meta">
             <div class="wcard-name-row">
-              <span class="wcard-origin-flag flag-sk" title="Česko"></span>
+              <span class="wcard-emoji-flag">🇸🇰</span>
               <div class="wcard-name locked">Marek N.</div>
             </div>
             <div class="wcard-profession">Elektrikář · 8 let praxe</div>
@@ -2363,7 +2367,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="wcard-avatar a-graphite700">D</div>
           <div class="wcard-meta">
             <div class="wcard-name-row">
-              <span class="wcard-origin-flag flag-cz" title="Česko"></span>
+              <span class="wcard-emoji-flag">🇨🇿</span>
               <div class="wcard-name locked">Daniel R.</div>
             </div>
             <div class="wcard-profession">Svářeč MIG/MAG · TIG · 12 let</div>
@@ -2413,7 +2417,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="wcard-avatar">J</div>
           <div class="wcard-meta">
             <div class="wcard-name-row">
-              <span class="wcard-origin-flag flag-cz" title="Česko"></span>
+              <span class="wcard-emoji-flag">🇨🇿</span>
               <div class="wcard-name locked">Jakub H.</div>
             </div>
             <div class="wcard-profession">Bagrista · Montér · 5 let</div>
@@ -2462,7 +2466,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="wcard-avatar a-yellow">F</div>
           <div class="wcard-meta">
             <div class="wcard-name-row">
-              <span class="wcard-origin-flag flag-cz" title="Česko"></span>
+              <span class="wcard-emoji-flag">🇨🇿</span>
               <div class="wcard-name locked">Filip P.</div>
             </div>
             <div class="wcard-profession">Elektrikář · měření · 6 let</div>
@@ -2511,7 +2515,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="wcard-avatar a-signal">Z</div>
           <div class="wcard-meta">
             <div class="wcard-name-row">
-              <span class="wcard-origin-flag flag-sk" title="Česko"></span>
+              <span class="wcard-emoji-flag">🇸🇰</span>
               <div class="wcard-name locked">Zoltán S.</div>
             </div>
             <div class="wcard-profession">Pokrývač · Klampiar · 9 rokov</div>
@@ -2560,7 +2564,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="wcard-avatar a-graphite700">R</div>
           <div class="wcard-meta">
             <div class="wcard-name-row">
-              <span class="wcard-origin-flag flag-cz" title="Česko"></span>
+              <span class="wcard-emoji-flag">🇨🇿</span>
               <div class="wcard-name locked">Roman S.</div>
             </div>
             <div class="wcard-profession">Zámečník · Svářeč · 7 rokov</div>
@@ -2709,7 +2713,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-logo lock"><span>P</span></div>
           <div class="jcard-meta">
             <div class="jcard-title">Svářeč MIG/MAG</div>
-            <div class="jcard-company locked">Firma z DE</div>
+            <div class="jcard-company locked">🇩🇪 Firma</div>
           </div>
         </div>
         <div class="jcard-salary">
@@ -2743,7 +2747,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-logo lock"><span>R</span></div>
           <div class="jcard-meta">
             <div class="jcard-title">Elektrikář — silnoprúd</div>
-            <div class="jcard-company locked">Firma z DE</div>
+            <div class="jcard-company locked">🇩🇪 Firma</div>
           </div>
         </div>
         <div class="jcard-salary">
@@ -2776,7 +2780,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-logo lock"><span>K</span></div>
           <div class="jcard-meta">
             <div class="jcard-title">Svářeč TIG</div>
-            <div class="jcard-company locked">Firma z DE</div>
+            <div class="jcard-company locked">🇩🇪 Firma</div>
           </div>
         </div>
         <div class="jcard-salary">
@@ -2809,7 +2813,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-logo lock"><span>S</span></div>
           <div class="jcard-meta">
             <div class="jcard-title">Sadrokartonista</div>
-            <div class="jcard-company locked">Firma z DE</div>
+            <div class="jcard-company locked">🇩🇪 Firma</div>
           </div>
         </div>
         <div class="jcard-salary">
@@ -2842,7 +2846,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-logo lock"><span>P</span></div>
           <div class="jcard-meta">
             <div class="jcard-title">Pokrývač</div>
-            <div class="jcard-company locked">Firma zo CH</div>
+            <div class="jcard-company locked">🇨🇭 Firma</div>
           </div>
         </div>
         <div class="jcard-salary">
@@ -2875,7 +2879,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-logo lock"><span>M</span></div>
           <div class="jcard-meta">
             <div class="jcard-title">Montér</div>
-            <div class="jcard-company locked">Firma z BE</div>
+            <div class="jcard-company locked">🇧🇪 Firma</div>
           </div>
         </div>
         <div class="jcard-salary">
@@ -2932,7 +2936,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-logo lock"><span>A</span></div>
           <div class="jcard-meta">
             <div class="jcard-title">Svářeč MIG/MAG – Emsland</div>
-            <div class="jcard-company locked">Firma z DE</div>
+            <div class="jcard-company locked">🇩🇪 Firma</div>
           </div>
         </div>
         <div class="jcard-salary">
@@ -2965,7 +2969,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-logo lock"><span>B</span></div>
           <div class="jcard-meta">
             <div class="jcard-title">Elektrikář NN/VN – Rotterdam</div>
-            <div class="jcard-company locked">Firma z NL</div>
+            <div class="jcard-company locked">🇳🇱 Firma</div>
           </div>
         </div>
         <div class="jcard-salary">
@@ -2998,7 +3002,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-logo lock"><span>C</span></div>
           <div class="jcard-meta">
             <div class="jcard-title">Montér oceľových konštrukcií – Linz</div>
-            <div class="jcard-company locked">Firma z AT</div>
+            <div class="jcard-company locked">🇦🇹 Firma</div>
           </div>
         </div>
         <div class="jcard-salary">

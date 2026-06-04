@@ -89,6 +89,8 @@ a{color:inherit;text-decoration:none}
 .btn-ghost:hover{background:rgba(249,243,237,.08);border-color:rgba(249,243,237,.4)}
 .btn-solid{background:var(--signal);color:var(--porcelain)}
 .btn-solid:hover{background:var(--signal-dark)}
+.btn-demo{background:var(--yellow);color:var(--graphite);font-weight:600}
+.btn-demo:hover{background:#e8c820}
 .btn-dark{background:var(--graphite);color:var(--porcelain)}
 .btn-dark:hover{background:#000}
 .btn-outline{border:1.5px solid var(--graphite);color:var(--graphite);background:transparent}
@@ -1746,7 +1748,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
     <div class="nav-cta">
       <div class="lang">🇸🇰 SK <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg></div>
       <button class="btn btn-ghost" onclick="location.href='/app'" style="cursor:pointer">Prihlásenie</button>
-      <button class="btn btn-solid mode-b" onclick="location.href='/sk/kontakt'" style="cursor:pointer">Naplánovať demo</button>
+      <button class="btn btn-demo mode-b" onclick="openCalendly()" style="cursor:pointer">Naplánovať demo</button>
       <button class="btn btn-solid mode-c" onclick="location.href='/app'" style="cursor:pointer">Registrácia</button>
     </div>
   </div>
@@ -3814,5 +3816,53 @@ document.querySelectorAll('.mode-b, .mode-c').forEach(el => {
 </script>
 
   <script src="/assets/consent.js" defer></script>
+
+<!-- Calendly overlay -->
+<div id="calendly-overlay" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(26,29,30,.6);backdrop-filter:blur(4px);align-items:center;justify-content:center;">
+  <div style="background:#fff;border-radius:20px;width:min(680px,95vw);height:min(700px,90vh);overflow:hidden;position:relative;box-shadow:0 24px 80px rgba(0,0,0,.3);">
+    <button onclick="closeCalendly()" style="position:absolute;top:12px;right:12px;z-index:1;background:var(--graphite);color:#fff;border:none;border-radius:50%;width:32px;height:32px;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;">✕</button>
+    <iframe id="calendly-frame" src="" style="width:100%;height:100%;border:none;" title="Naplánovať demo"></iframe>
+  </div>
+</div>
+
+<!-- Floating demo CTA — B2B only -->
+<button id="floating-demo" class="mode-b" onclick="openCalendly()" style="
+  position:fixed;bottom:28px;right:28px;z-index:1000;
+  background:var(--yellow);color:var(--graphite);
+  border:none;border-radius:999px;
+  padding:14px 22px;font-size:14px;font-weight:700;font-family:inherit;
+  cursor:pointer;
+  box-shadow:0 4px 20px rgba(245,213,71,.5),0 2px 8px rgba(0,0,0,.15);
+  display:flex;align-items:center;gap:8px;
+  transition:transform .15s ease,box-shadow .15s ease;
+" onmouseover="this.style.transform='scale(1.05)';this.style.boxShadow='0 6px 28px rgba(245,213,71,.65),0 2px 10px rgba(0,0,0,.2)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 20px rgba(245,213,71,.5),0 2px 8px rgba(0,0,0,.15)'">
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="14" height="12" rx="2"/><path d="M1 7h14M5 1v4M11 1v4"/></svg>
+  Naplánovať demo
+</button>
+
+<script>
+// CALENDLY URL — nahraď svojím linkom po vytvorení účtu
+var CALENDLY_URL = 'https://calendly.com/alogator/demo';
+
+function openCalendly() {
+  var overlay = document.getElementById('calendly-overlay');
+  var frame = document.getElementById('calendly-frame');
+  if (!frame.src || frame.src === window.location.href) {
+    frame.src = CALENDLY_URL;
+  }
+  overlay.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeCalendly() {
+  document.getElementById('calendly-overlay').style.display = 'none';
+  document.body.style.overflow = '';
+}
+document.getElementById('calendly-overlay').addEventListener('click', function(e) {
+  if (e.target === this) closeCalendly();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeCalendly();
+});
+</script>
 </body>
 </html>

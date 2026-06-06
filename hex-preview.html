@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hexagón návrhy — Alogator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --signal: #E66748;
+    --graphite: #1A1D1E;
+    --porcelain: #F9F3ED;
+    --porcelain-200: #F0E8DD;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: #e8e0d8; padding: 40px 24px; }
+
+  .label {
+    font-family: 'Geist', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 12px;
+  }
+  .section { margin-bottom: 48px; }
+
+  /* ─── HEXAGÓN SVG shapes ─── */
+  .hex-cluster {
+    position: absolute;
+    right: 0; top: 0;
+    width: 420px; height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  /* ════════════════════════════
+     NÁVRH 1 — Hero, porcelain bg
+     Outline hexagóny, svetlý tón
+     ════════════════════════════ */
+  .demo1 {
+    background: var(--porcelain);
+    border-radius: 20px;
+    min-height: 320px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 48px 56px;
+    max-width: 960px;
+  }
+  .demo1-text { max-width: 460px; position: relative; z-index: 2; }
+  .demo1-text .eyebrow {
+    font-family: 'Geist', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--signal);
+    margin-bottom: 12px;
+  }
+  .demo1-text h2 {
+    font-family: 'Geist', sans-serif;
+    font-size: 38px;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    color: var(--graphite);
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+  .demo1-text h2 em { font-style: italic; color: var(--signal); }
+  .demo1-text p { font-size: 15px; color: #5a5a58; line-height: 1.6; }
+
+  /* ════════════════════════════
+     NÁVRH 2 — CTA Banner, dark bg
+     Glow hexagóny, tmavé pozadie
+     ════════════════════════════ */
+  .demo2 {
+    background: var(--graphite);
+    border-radius: 20px;
+    min-height: 260px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 48px 56px;
+    max-width: 960px;
+  }
+  .demo2-text { max-width: 520px; position: relative; z-index: 2; }
+  .demo2-text .eyebrow {
+    font-family: 'Geist', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--signal);
+    margin-bottom: 12px;
+  }
+  .demo2-text h2 {
+    font-family: 'Geist', sans-serif;
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+  .demo2-text p { font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.6; max-width: 400px; }
+  .demo2-cta {
+    display: inline-block;
+    margin-top: 24px;
+    background: var(--signal);
+    color: #fff;
+    font-family: 'Geist', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+  }
+
+  /* ════════════════════════════
+     NÁVRH 3 — Section bg accent
+     Signal orange pozadie, tonal
+     ════════════════════════════ */
+  .demo3 {
+    background: var(--signal);
+    border-radius: 20px;
+    min-height: 260px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 48px 56px;
+    max-width: 960px;
+  }
+  .demo3-text { max-width: 520px; position: relative; z-index: 2; }
+  .demo3-text .eyebrow {
+    font-family: 'Geist', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 12px;
+  }
+  .demo3-text h2 {
+    font-family: 'Geist', sans-serif;
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+  .demo3-text p { font-size: 15px; color: rgba(255,255,255,0.75); line-height: 1.6; max-width: 400px; }
+  .demo3-cta {
+    display: inline-block;
+    margin-top: 24px;
+    background: #fff;
+    color: var(--signal);
+    font-family: 'Geist', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+  }
+
+  .page-title {
+    font-family: 'Geist', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #666;
+    margin-bottom: 40px;
+  }
+</style>
+</head>
+<body>
+
+<p class="page-title">Alogator · Hexagón návrhy</p>
+
+<!-- ══════════════════════════════════════════ -->
+<!-- NÁVRH 1: Hero sekcia — porcelain, outline  -->
+<!-- ══════════════════════════════════════════ -->
+<div class="section">
+  <p class="label">Návrh 1 — Hero sekcia (porcelain bg) · outline hexagóny</p>
+  <div class="demo1">
+
+    <!-- Hexagón cluster SVG — outline style na svetlom bg -->
+    <svg class="hex-cluster" viewBox="0 0 420 320" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMid meet">
+      <!-- Veľký hexagón hore -->
+      <path d="M310 20 L390 65 L390 155 L310 200 L230 155 L230 65 Z"
+        fill="none"
+        stroke="rgba(230,103,72,0.25)"
+        stroke-width="1.5"
+        rx="14"
+      />
+      <!-- Zaoblenie pomocou filter -->
+      <!-- Menší hexagón dole-vlavo, prekrývajúci -->
+      <path d="M250 150 L320 190 L320 270 L250 310 L180 270 L180 190 Z"
+        fill="rgba(230,103,72,0.06)"
+        stroke="rgba(230,103,72,0.2)"
+        stroke-width="1.5"
+      />
+      <!-- Extra veľký bg hexagón, vystrihnutý vpravo -->
+      <path d="M340 80 L420 125 L420 215 L340 260 L260 215 L260 125 Z"
+        fill="rgba(230,103,72,0.04)"
+        stroke="rgba(230,103,72,0.12)"
+        stroke-width="1"
+      />
+    </svg>
+
+    <div class="demo1-text">
+      <p class="eyebrow">• Databáza pracovníkov</p>
+      <h2>3 047 pracovníkov<br>po <em>celej EÚ</em></h2>
+      <p>Stavbárske remeslá overené v reálnom čase. Filtrujte podľa profesie, lokality, praxe alebo certifikátu.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- NÁVRH 2: App CTA banner — dark bg, glow hexagóny -->
+<!-- ══════════════════════════════════════════════ -->
+<div class="section">
+  <p class="label">Návrh 2 — App CTA banner (graphite bg) · glow hexagóny</p>
+  <div class="demo2">
+
+    <!-- Hexagón cluster SVG — glow na tmavom bg -->
+    <svg class="hex-cluster" viewBox="0 0 420 320" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMid meet">
+      <defs>
+        <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#E66748" stop-opacity="0.4"/>
+          <stop offset="100%" stop-color="#E66748" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#E66748" stop-opacity="0.25"/>
+          <stop offset="100%" stop-color="#E66748" stop-opacity="0"/>
+        </radialGradient>
+        <filter id="blur1">
+          <feGaussianBlur stdDeviation="3"/>
+        </filter>
+      </defs>
+      <!-- Glow fill za hexagónom -->
+      <ellipse cx="310" cy="105" rx="90" ry="90" fill="url(#glow1)" filter="url(#blur1)"/>
+      <ellipse cx="260" cy="230" rx="80" ry="80" fill="url(#glow2)" filter="url(#blur1)"/>
+      <!-- Veľký hexagón -->
+      <path d="M310 20 L390 65 L390 155 L310 200 L230 155 L230 65 Z"
+        fill="rgba(26,29,30,0.6)"
+        stroke="rgba(230,103,72,0.5)"
+        stroke-width="1.5"
+      />
+      <!-- Menší hexagón -->
+      <path d="M250 150 L320 190 L320 270 L250 310 L180 270 L180 190 Z"
+        fill="rgba(26,29,30,0.5)"
+        stroke="rgba(230,103,72,0.35)"
+        stroke-width="1.5"
+      />
+    </svg>
+
+    <div class="demo2-text">
+      <p class="eyebrow">• Pre pracovníkov · zadarmo</p>
+      <h2>Stiahni aplikáciu<br>a nájdi prácu za 48h</h2>
+      <p>Vyplň profil raz. Firmy z DE, AT, NL a BE ťa samy kontaktujú — ty vyberieš komu odpisuješ.</p>
+      <a href="#" class="demo2-cta">Stiahnuť iOS →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- NÁVRH 3: Signal orange sekcia — tonal hexagóny       -->
+<!-- ══════════════════════════════════════════════════════ -->
+<div class="section">
+  <p class="label">Návrh 3 — Farebná sekcia (signal orange bg) · tonal hexagóny</p>
+  <div class="demo3">
+
+    <!-- Hexagón cluster SVG — tonal na signal orange -->
+    <svg class="hex-cluster" viewBox="0 0 420 320" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMid meet">
+      <!-- Veľký hexagón -->
+      <path d="M310 20 L390 65 L390 155 L310 200 L230 155 L230 65 Z"
+        fill="rgba(255,255,255,0.08)"
+        stroke="rgba(255,255,255,0.2)"
+        stroke-width="1.5"
+      />
+      <!-- Menší hexagón -->
+      <path d="M250 150 L320 190 L320 270 L250 310 L180 270 L180 190 Z"
+        fill="rgba(255,255,255,0.05)"
+        stroke="rgba(255,255,255,0.15)"
+        stroke-width="1.5"
+      />
+      <!-- Extra velky bg -->
+      <path d="M360 60 L430 105 L430 195 L360 240 L290 195 L290 105 Z"
+        fill="rgba(255,255,255,0.04)"
+        stroke="rgba(255,255,255,0.08)"
+        stroke-width="1"
+      />
+    </svg>
+
+    <div class="demo3-text">
+      <p class="eyebrow">• Naplánovať demo</p>
+      <h2>30 minút.<br>Žiadny sales pitch.</h2>
+      <p>Ukážeme vám reálne dáta — koľko pracovníkov dostupných vo vašom regióne tento mesiac.</p>
+      <a href="#" class="demo3-cta">Rezervovať termín →</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

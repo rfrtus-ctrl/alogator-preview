@@ -1664,6 +1664,19 @@ section.boxed .container{
   padding-top:24px;font-size:12px;color:rgba(249,243,237,.4);
 }
 
+/* ============ VIDEO DEMO ============ */
+.video-sec{padding:80px 0;background:var(--porcelain-200)}
+.video-head{text-align:center;max-width:680px;margin:0 auto 40px}
+.video-head h2{font-size:clamp(28px,3vw,40px);margin:14px 0 14px}
+.video-head p{font-size:15px;color:var(--graphite-700);line-height:1.6}
+.video-wrap{
+  max-width:960px;margin:0 auto;
+  border-radius:24px;overflow:hidden;
+  box-shadow:0 24px 64px -16px rgba(26,29,30,.18);
+  position:relative;background:var(--graphite);
+}
+.video-wrap video{width:100%;display:block}
+
 /* ============ B2B/B2C MODE STATES ============ */
 .mode-c{display:none}
 body.mode-b2c .mode-b{display:none}
@@ -2964,6 +2977,21 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
 <!-- hidden anchor for nav links -->
 <div id="jobs" class="mode-b" style="display:none"></div>
 
+<!-- ============ VIDEO DEMO (B2B) ============ -->
+<section class="video-sec mode-b">
+  <div class="container">
+    <div class="video-head">
+      <span class="eyebrow">• ako to funguje</span>
+      <h2>Pozrite si Alogator<br><em>v akcii</em>.</h2>
+      <p>Od registrácie po prvý kontakt s pracovníkom — celý proces v pár minútach.</p>
+    </div>
+    <div class="video-wrap">
+      <video controls preload="metadata" poster="">
+        <source src="/assets/demo-firma.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
 
 <!-- ============ CALENDAR PREVIEW (B2B) ============ -->
 <section id="calendar" class="calendar-section mode-b">

@@ -302,25 +302,13 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 /* ============ FAQ ============ */
 .faq-sec{padding:80px 0;background:var(--porcelain)}
 .faq-sec h2{font-size:clamp(28px,3vw,40px);text-align:center;margin-bottom:48px}
-.faq-list{max-width:780px;margin:0 auto}
-.faq-item{
-  background:var(--porcelain-200);border:1px solid var(--porcelain-300);border-radius:14px;
-  margin-bottom:10px;overflow:hidden;transition:border-color .15s;
-}
-.faq-item:hover{border-color:var(--graphite-200)}
-.faq-q{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:18px 22px;cursor:pointer;font-size:15px;font-weight:500;
-}
-.faq-q-icon{
-  width:24px;height:24px;border-radius:50%;border:1px solid var(--graphite-200);
-  display:flex;align-items:center;justify-content:center;font-size:14px;
-  transition:transform .2s;flex-shrink:0;
-}
-.faq-item.open .faq-q-icon{transform:rotate(45deg);background:var(--signal);color:var(--porcelain);border-color:var(--signal)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .3s}
-.faq-item.open .faq-a{max-height:500px}
-.faq-a-inner{padding:0 22px 20px;font-size:14.5px;color:var(--graphite-700);line-height:1.6}
+.faq-list{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.faq-item{background:var(--porcelain-200);border:1px solid var(--porcelain-300);border-radius:18px;padding:24px 22px;display:flex;flex-direction:column;gap:10px}
+.faq-num{width:28px;height:28px;border-radius:8px;background:var(--signal-soft);color:var(--signal);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;flex-shrink:0}
+.faq-q{font-family:'Geist',sans-serif;font-weight:500;font-size:14px;letter-spacing:-0.01em;color:var(--graphite);line-height:1.3}
+.faq-a-inner{font-size:12.5px;color:var(--graphite-700);line-height:1.55}
+@media(max-width:900px){.faq-list{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.faq-list{grid-template-columns:1fr}}
 
 /* ============ ENTERPRISE CTA ============ */
 .ent-sec{padding:64px 0;background:var(--porcelain-200)}
@@ -721,63 +709,46 @@ em{font-style:italic;color:var(--signal);font-weight:500}
     <span class="eyebrow" style="display:block;text-align:center;margin-bottom:10px">• často kladené otázky</span>
     <h2>Otázky o cenníku</h2>
     <div class="faq-list">
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Aký je rozdiel medzi Free a Premium?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          Free je základný vstup — pridávate inzeráty a ľudia sa ozvú sami, max 3 aktívne ponuky, 1 seat, žiadne kredity. Premium (199 €/mes) pridáva správu vlastných kontaktov, CRM, import pracovníkov, topovanie inzerátov a kalendár interných kapacít. Dostávate 200 kreditov mesačne a 2 seats.
-        </div></div>
+      <div class="faq-item">
+        <div class="faq-num">Q</div>
+        <div class="faq-q">Aký je rozdiel medzi Free a Premium?</div>
+        <div class="faq-a-inner">Free: max 3 inzeráty, 1 seat, 0 kreditov. Premium (199 €): max 10 inzerátov, CRM, import kontaktov, topovanie, kalendár interných kapacít, 200 kreditov, 2 seats.</div>
       </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Prečo je Business tarifa "game changer"?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          Business (499 €/mes) vám dá prístup ku <strong>kalendáru dostupnosti celej Alogator databázy</strong> — nie len vašich vlastných ľudí. Vidíte v reálnom čase, kto z 3 000+ pracovníkov je voľný a kedy. Toto nikto iný na trhu neponúka. Plus push notifikácie priamo na mobil pracovníkov a AI nástroje na vyhľadávanie.
-        </div></div>
+      <div class="faq-item">
+        <div class="faq-num">Q</div>
+        <div class="faq-q">Prečo je Business tarifa "game changer"?</div>
+        <div class="faq-a-inner">Business (499 €/mes) vám dá prístup ku kalendáru dostupnosti celej Alogator databázy — nie len vašich vlastných ľudí. Vidíte kto z 3 000+ pracovníkov je voľný a kedy. Plus push notifikácie a AI nástroje.</div>
       </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Čo sú kredity a ako fungujú?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          1 € = 1 kredit. Každý mesiac dostanete kredity podľa tarifu (Premium 200, Business 500, Business+ 2 000). Použijete ich na: odkrytie kontaktu pracovníka (20 kr.), topovanie inzerátu (20 kr.) alebo push notifikáciu na 100 pracovníkov (10 kr.). Nevyčerpané kredity prepadajú na konci mesiaca.
-        </div></div>
+      <div class="faq-item">
+        <div class="faq-num">Q</div>
+        <div class="faq-q">Čo sú kredity a ako fungujú?</div>
+        <div class="faq-a-inner">1 € = 1 kredit. Premium 200 kr./mes, Business 500 kr./mes, Business+ 2 000 kr./mes. Odkrytie kontaktu 20 kr., topovanie inzerátu 20 kr., push na 100 pracovníkov 10 kr. Nevyčerpané kredity prepadajú.</div>
       </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Môžem si vyskúšať platenú tarifu zdarma?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          Áno. Všetky platené tarify (Premium, Business, Business+) majú <strong>30 dní zdarma</strong> bez kreditnej karty. Plný prístup ku všetkým funkciám vrátane kreditov. Na konci skúšobky vám pošleme upozornenie — buď pokračujete, alebo účet automaticky prejde na Free.
-        </div></div>
+      <div class="faq-item">
+        <div class="faq-num">Q</div>
+        <div class="faq-q">Môžem si vyskúšať platenú tarifu zdarma?</div>
+        <div class="faq-a-inner">Áno. Všetky platené tarify majú 30 dní zdarma bez kreditnej karty. Plný prístup vrátane kreditov. Na konci skúšobky buď pokračujete, alebo účet prejde na Free.</div>
       </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Pre koho je Business+?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          Business+ (1 000 €/mes) je pre veľké tímy a holding štruktúry — max 40 aktívnych inzerátov, 5 seats, 2 000 kreditov mesačne. Navyše dostávate API prístup (napojenie na HubSpot, SAP), SSO pre váš firemný login, custom branding a dedikovaného account managera. Vhodné pre multi-country operácie (SK · CZ · DE · AT · PL).
-        </div></div>
+      <div class="faq-item">
+        <div class="faq-num">Q</div>
+        <div class="faq-q">Pre koho je Business+?</div>
+        <div class="faq-a-inner">Pre veľké tímy a holdingy — max 40 inzerátov, 5 seats, 2 000 kreditov, API (HubSpot, SAP), SSO, custom branding, dedikovaný account manager, multi-country (SK · CZ · DE · AT · PL).</div>
       </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Môžem zmeniť tarifu počas zmluvy?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          Áno, kedykoľvek. Upgrade sa aktivuje okamžite a fakturuje sa pro rata za zostávajúce dni. Downgrade sa aplikuje od ďalšieho fakturačného obdobia. Nie ste viazaní ročnou zmluvou — platíte mesačne.
-        </div></div>
+      <div class="faq-item">
+        <div class="faq-num">Q</div>
+        <div class="faq-q">Môžem zmeniť tarifu počas zmluvy?</div>
+        <div class="faq-a-inner">Áno, kedykoľvek. Upgrade sa aktivuje okamžite (pro rata). Downgrade od ďalšieho fakturačného obdobia. Platíte mesačne — žiadna ročná viazanosť.</div>
       </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Pracovník platí za používanie Alogatora?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          Nie. Aplikácia pre pracovníkov je úplne zdarma — registrácia, profil, vyhľadávanie ponúk, push notifikácie aj kontakt s firmami.
-        </div></div>
+      <div class="faq-item">
+        <div class="faq-num">Q</div>
+        <div class="faq-q">Pracovník platí za používanie Alogatora?</div>
+        <div class="faq-a-inner">Nie. Aplikácia pre pracovníkov je úplne zdarma — registrácia, profil, vyhľadávanie ponúk, push notifikácie aj kontakt s firmami.</div>
       </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Sú ceny s DPH alebo bez?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          Všetky ceny sú <strong>bez DPH</strong>. Pripočítava sa 23 % DPH (Slovensko) alebo sadzba podľa krajiny vašej firmy. Pre firmy v EÚ s platným IČ DPH sa fakturuje cez reverse charge.
-        </div></div>
+      <div class="faq-item">
+        <div class="faq-num">Q</div>
+        <div class="faq-q">Sú ceny s DPH alebo bez?</div>
+        <div class="faq-a-inner">Všetky ceny sú bez DPH. Pripočítava sa 23 % DPH (SK) alebo sadzba podľa krajiny. Pre EÚ firmy s IČ DPH fakturujeme cez reverse charge.</div>
       </div>
-
     </div>
   </div>
 </section>

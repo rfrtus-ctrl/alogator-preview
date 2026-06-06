@@ -140,13 +140,14 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 /* FAQ */
 .faq-sec{padding:80px 0;background:var(--porcelain-200)}
 .faq-sec h2{font-size:clamp(28px,3vw,40px);text-align:center;margin:14px 0 48px}
-.faq-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.faq-item{background:var(--porcelain);border:1px solid var(--porcelain-300);border-radius:20px;padding:24px 20px;display:flex;flex-direction:column;gap:10px}
-.faq-num{font:700 13px/1 'JetBrains Mono',monospace;color:var(--signal);background:var(--signal-soft);width:36px;height:36px;border-radius:12px;display:flex;align-items:center;justify-content:center}
-.faq-q{font-family:'Geist',sans-serif;font-weight:500;font-size:15px;letter-spacing:-0.01em;color:var(--graphite);line-height:1.3}
-.faq-a-inner{font-size:13.5px;color:var(--graphite-700);line-height:1.55}
-@media(max-width:768px){.faq-list{grid-template-columns:1fr 1fr}}
-@media(max-width:480px){.faq-list{grid-template-columns:1fr}}
+.faq-list{max-width:780px;margin:0 auto}
+.faq-item{background:var(--porcelain);border:1px solid var(--porcelain-300);border-radius:14px;margin-bottom:10px;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;cursor:pointer;font-size:15px;font-weight:500}
+.faq-q-icon{width:24px;height:24px;border-radius:50%;border:1px solid var(--graphite-200);display:flex;align-items:center;justify-content:center;font-size:14px;transition:transform .2s;flex-shrink:0}
+.faq-item.open .faq-q-icon{transform:rotate(45deg);background:var(--signal);color:var(--porcelain);border-color:var(--signal)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s}
+.faq-item.open .faq-a{max-height:400px}
+.faq-a-inner{padding:0 22px 20px;font-size:14.5px;color:var(--graphite-700);line-height:1.6}
 
 /* CTA BANNER */
 .cta-sec{padding:64px 0;background:var(--porcelain)}
@@ -440,30 +441,25 @@ em{font-style:italic;color:var(--signal);font-weight:500}
     <span class="eyebrow" style="display:block;text-align:center;margin-bottom:10px">• otázky</span>
     <h2>Časté otázky <em>firiem</em></h2>
     <div class="faq-list">
-      <div class="faq-item">
-        <div class="faq-num">Q</div>
-        <div class="faq-q">Ako rýchlo nájdem prvého kandidáta?</div>
-        <div class="faq-a-inner">Pri Business tarife väčšina firiem nájde prvého vhodného kandidáta do 24 hodín. Závisí od profesie — zvárači a elektrikári sú dostupní takmer vždy. Pre špecializovanejšie profily (NUC certifikát, konkrétny jazyk) počítajte 2–3 dni.</div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Ako rýchlo nájdem prvého kandidáta?<span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Pri Alogator tarife (prístup k celej databáze) väčšina firiem nájde prvého vhodného kandidáta do 24 hodín. Závisí od profesie — zvárači a elektrikári sú dostupní takmer vždy. Pre špecializovanejšie profily (NUC certifikát, konkrétny jazyk) počítajte 2–3 dni.</div></div>
       </div>
-      <div class="faq-item">
-        <div class="faq-num">Q</div>
-        <div class="faq-q">Mám tím 15 ľudí, ktorú tarifu potrebujem?</div>
-        <div class="faq-a-inner">Závisí od toho čo chcete. Premium (199 €) ak chcete evidovať vlastných ľudí a vidieť ich kalendár. Business (499 €) ak potrebujete aj ďalších ľudí z databázy keď vašich 15 nestačí — plus push notifikácie a AI nástroje.</div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Mám tím 15 ľudí, ktorú tarifu potrebujem?<span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Závisí od toho čo chcete. CRM (99 €) ak chcete len evidovať svojich 15 ľudí a ich históriu. Kapacity (199 €) ak chcete vidieť ich kalendár dostupnosti v real-time a plánovať projekty 6+ týždňov dopredu. Alogator (499 €) ak potrebujete aj ďalších ľudí z databázy keď vašich 15 nestačí.</div></div>
       </div>
-      <div class="faq-item">
-        <div class="faq-num">Q</div>
-        <div class="faq-q">Funguje Alogator aj pre firmy z Nemecka alebo Rakúska?</div>
-        <div class="faq-a-inner">Áno. Platformu môžete používať v slovenčine, češtine aj nemčine. Fakturácia cez reverse charge pre EÚ firmy s IČ DPH. Pre Business+ zákazníkov multi-country setup (SK + CZ + DE + AT v jednom účte).</div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Funguje Alogator aj pre firmy z Nemecka alebo Rakúska?<span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Áno. Platformu môžete používať v slovenčine, češtine aj nemčine. Fakturácia prebieha cez reverse charge pre EÚ firmy s IČ DPH. Pre Enterprise zákazníkov ponúkame multi-country setup (SK + CZ + DE + AT v jednom účte) a dedikovaného account managera.</div></div>
       </div>
-      <div class="faq-item">
-        <div class="faq-num">Q</div>
-        <div class="faq-q">Aký je rozdiel medzi agentúrou a pracovníkom na platforme?</div>
-        <div class="faq-a-inner">Pracovník je SZČO, ktorý pracuje sám. Agentúra má vlastný tím ľudí a celý tím ponúka ako balík — preberá pracovnoprávnu zodpovednosť. Priamy pracovník = nižšia cena, agentúra = menej administratívy. Oboje sú v databáze.</div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Aký je rozdiel medzi agentúrou a pracovníkom na platforme?<span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Pracovník je SZČO alebo zamestnanec, ktorý pracuje sám. Agentúra má vlastný tím ľudí a celý tím ponúka firmám ako balík. Výhoda agentúry: preberá pracovnoprávnu zodpovednosť za svojich ľudí (keď projekt skončí, firma len povie agentúre). Výhoda priameho pracovníka: nižšia cena (žiadna agentúrna marža).</div></div>
       </div>
-      <div class="faq-item">
-        <div class="faq-num">Q</div>
-        <div class="faq-q">Môžem Alogator integrovať s naším CRM (HubSpot, SAP)?</div>
-        <div class="faq-a-inner">Áno — pri Business+ tarife máte API prístup pre integráciu s HubSpot, SAP, Salesforce alebo vlastným CRM. Pre nižšie tarify je dostupný export CSV/PDF.</div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Môžem Alogator integrovať s naším existujúcim CRM (HubSpot, SAP)?<span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Áno — pri Enterprise tarife máte API prístup pre integráciu s HubSpot, SAP, Salesforce alebo vlastným CRM. Pre nižšie tarify je dostupný export CSV/PDF. Ak máte konkrétne požiadavky, napíšte nám a prediskutujeme technické možnosti.</div></div>
       </div>
     </div>
   </div>

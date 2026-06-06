@@ -95,13 +95,14 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 /* FAQ */
 .faq-sec{padding:80px 0}
 .faq-sec h2{font-size:clamp(28px,3vw,40px);text-align:center;margin:14px 0 48px}
-.faq-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.faq-item{background:var(--porcelain);border:1px solid var(--porcelain-300);border-radius:20px;padding:24px 20px;display:flex;flex-direction:column;gap:10px}
-.faq-num{font:700 13px/1 'JetBrains Mono',monospace;color:var(--signal);background:var(--signal-soft);width:36px;height:36px;border-radius:12px;display:flex;align-items:center;justify-content:center}
-.faq-q{font-family:'Geist',sans-serif;font-weight:500;font-size:15px;letter-spacing:-0.01em;color:var(--graphite);line-height:1.3}
-.faq-a-inner{font-size:13.5px;color:var(--graphite-700);line-height:1.55}
-@media(max-width:768px){.faq-list{grid-template-columns:1fr 1fr}}
-@media(max-width:480px){.faq-list{grid-template-columns:1fr}}
+.faq-list{max-width:780px;margin:0 auto}
+.faq-item{background:var(--porcelain-200);border:1px solid var(--porcelain-300);border-radius:14px;margin-bottom:10px;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;cursor:pointer;font-size:15px;font-weight:500}
+.faq-q-icon{width:24px;height:24px;border-radius:50%;border:1px solid var(--graphite-200);display:flex;align-items:center;justify-content:center;font-size:14px;transition:transform .2s;flex-shrink:0}
+.faq-item.open .faq-q-icon{transform:rotate(45deg);background:var(--signal);color:var(--porcelain);border-color:var(--signal)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s}
+.faq-item.open .faq-a{max-height:400px}
+.faq-a-inner{padding:0 22px 20px;font-size:14.5px;color:var(--graphite-700);line-height:1.6}
 
 /* CTA */
 .cta-sec{padding:64px 0;background:var(--porcelain-200)}
@@ -385,30 +386,25 @@ em{font-style:italic;color:var(--signal);font-weight:500}
     <span class="eyebrow" style="display:block;text-align:center;margin-bottom:10px">• otázky</span>
     <h2>Ako to <em>funguje v praxi</em></h2>
     <div class="faq-list">
-      <div class="faq-item">
-        <div class="faq-num">Q</div>
-        <div class="faq-q">Ako dlho trvá nájsť prvého kandidáta?</div>
-        <div class="faq-a-inner">Pri Business tarife väčšina firiem nájde prvého vhodného kandidáta do 24 hodín. Zvárači a elektrikári sú dostupní takmer vždy. Špecializovanejšie profesie (NUC certifikát) môžu trvať 2–3 dni.</div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Ako dlho trvá nájsť prvého kandidáta?<span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Pri Alogator tarife (prístup k celej databáze) väčšina firiem nájde prvého vhodného kandidáta do 24 hodín. Závisí od profesie a špecifickosti požiadaviek. Zvárači a elektrikári sú dostupní takmer vždy, špecializovanejšie profesie (napr. NUC certifikát) môžu trvať 2–3 dni.</div></div>
       </div>
-      <div class="faq-item">
-        <div class="faq-num">Q</div>
-        <div class="faq-q">Čo je rozdiel medzi vlastnými kontaktmi a Alogator kontaktmi?</div>
-        <div class="faq-a-inner">Vlastné kontakty sú ľudia, ktorí pre vás už pracovali — importujete ich a vidíte ich kalendár (v cene predplatného). Alogator kontakty sú noví ľudia z databázy — odkrytie = 20 kreditov.</div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Čo je rozdiel medzi vlastnými kontaktmi a Alogator kontaktmi?<span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Vlastné kontakty sú ľudia, ktorí pre vás už pracovali — importujete ich do Alogatora a vidíte ich kalendár dostupnosti. Sú v cene predplatného. Alogator kontakty sú noví ľudia z databázy, ktorých ste doteraz nepoznali — odkrytie kontaktu je doplnková platba nad rámec predplatného.</div></div>
       </div>
-      <div class="faq-item">
-        <div class="faq-num">Q</div>
-        <div class="faq-q">Môže byť firma aj agentúra zároveň?</div>
-        <div class="faq-a-inner">Áno. Agentúra môže ponúkať voľné kapacity svojich ľudí aj hľadať ďalších pracovníkov na doplnenie tímu. Platforma to podporuje natívne.</div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Môže byť firma aj agentúra zároveň?<span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Áno, presne tak funguje väčšina používateľov. Agentúra môže na Alogatore zároveň ponúkať voľné kapacity svojich ľudí (B2B ponuka) aj hľadať ďalších pracovníkov na doplnenie tímu pri veľkom projekte (B2B dopyt). Platforma to podporuje natívne.</div></div>
       </div>
-      <div class="faq-item">
-        <div class="faq-num">Q</div>
-        <div class="faq-q">Ako funguje hodnotenie pracovníkov?</div>
-        <div class="faq-a-inner">Po ukončení projektu firma ohodnotí pracovníka (1–5 hviezdičiek + recenzia). Systém verifikuje že hodnotenie pochádza od firmy, ktorá s pracovníkom skutočne spolupracovala.</div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Ako funguje hodnotenie pracovníkov?<span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Po ukončení projektu môže firma ohodnotiť pracovníka (1–5 hviezdičiek + textová recenzia). Hodnotenie je viditeľné pre ostatné firmy na profile pracovníka. Systém verifikuje, že hodnotenie pochádza od firmy, ktorá s pracovníkom skutočne spolupracovala — zamedzuje falošným hodnoteniam.</div></div>
       </div>
-      <div class="faq-item">
-        <div class="faq-num">Q</div>
-        <div class="faq-q">Pracovník — komu sa ukáže môj profil?</div>
-        <div class="faq-a-inner">Profil vidia firmy a agentúry registrované na platforme. Bez registrácie je profil anonymný ("Marek N."). Kontaktné údaje sa odhalia len firme, ktorá za to zaplatí alebo má váš predchádzajúci súhlas.</div>
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q">Pracovník — komu sa ukáže môj profil?<span class="faq-q-icon">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">Váš profil je viditeľný firmám a agentúram registrovaným na platforme. Voľné prezeranie (bez registrácie) vidí iba anonymizovaný profil — "Marek N." bez kontaktných údajov. Plné kontaktné údaje sa odhalia len firme, ktorá za to zaplatí alebo má váš predchádzajúci súhlas.</div></div>
       </div>
     </div>
   </div>

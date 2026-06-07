@@ -785,6 +785,10 @@ section.boxed .container{
 .hiw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
 .hiw-card{background:var(--porcelain);border:1px solid var(--porcelain-300);border-radius:20px;padding:24px 20px;display:flex;flex-direction:column;gap:10px}
 .hiw-num{font:700 13px/1 'JetBrains Mono',monospace;color:var(--signal);background:var(--signal-soft);width:36px;height:36px;border-radius:12px;display:flex;align-items:center;justify-content:center}
+.faq-list-c .hiw-card{padding:18px 16px;gap:8px}
+.faq-list-c .hiw-card h4{font-size:13px}
+.faq-list-c .hiw-card p{font-size:12px}
+.faq-list-c .hiw-num{width:28px;height:28px;border-radius:8px;font-size:11px}
 .hiw-title{font:500 15px/1.3 'Geist',-apple-system,sans-serif;color:var(--graphite);margin:0}
 .hiw-desc{font:400 13px/1.5 'Inter',sans-serif;color:var(--graphite-500);margin:0}
 .hiw-bullets{list-style:none;padding:0;margin:4px 0 0;display:flex;flex-direction:column;gap:5px}
@@ -3737,7 +3741,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
     </div>
 
     <!-- FAQ pre pracovníkov -->
-    <div class="hiw-grid faq-list-c" id="faq-list-workers" style="display:none">
+    <div class="hiw-grid faq-list-c" id="faq-list-workers" style="display:none;grid-template-columns:repeat(6,1fr)">
       <div class="hiw-card">
         <div class="hiw-num">Q</div>
         <h4>Platí sa za používanie aplikácie niečo?</h4>
@@ -3771,7 +3775,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
     </div>
 
     <!-- FAQ pre firmy -->
-    <div class="hiw-grid faq-list-c" id="faq-list-companies">
+    <div class="hiw-grid faq-list-c" id="faq-list-companies" style="grid-template-columns:repeat(5,1fr)">
       <div class="hiw-card">
         <div class="hiw-num">Q</div>
         <h4>Koľko stojí pre firmu Alogator?</h4>

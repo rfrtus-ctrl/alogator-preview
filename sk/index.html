@@ -3731,13 +3731,13 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
       <span class="eyebrow">• často kladené otázky</span>
       <h2>Otázky, ktoré <em>najčastejšie počujeme</em>.</h2>
       <div class="faq-tabs">
-        <button class="faq-tab active" onclick="document.querySelectorAll('.faq-tab').forEach(t=>t.classList.remove('active'));this.classList.add('active');document.querySelectorAll('.faq-list-c').forEach(l=>l.style.display='none');document.getElementById('faq-list-workers').style.display='grid'">Som pracovník</button>
-        <button class="faq-tab" onclick="document.querySelectorAll('.faq-tab').forEach(t=>t.classList.remove('active'));this.classList.add('active');document.querySelectorAll('.faq-list-c').forEach(l=>l.style.display='none');document.getElementById('faq-list-companies').style.display='grid'">Sme firma</button>
+        <button class="faq-tab active" onclick="document.querySelectorAll('.faq-tab').forEach(t=>t.classList.remove('active'));this.classList.add('active');document.querySelectorAll('.faq-list-c').forEach(l=>l.style.display='none');document.getElementById('faq-list-companies').style.display='grid'">Sme firma</button>
+        <button class="faq-tab" onclick="document.querySelectorAll('.faq-tab').forEach(t=>t.classList.remove('active'));this.classList.add('active');document.querySelectorAll('.faq-list-c').forEach(l=>l.style.display='none');document.getElementById('faq-list-workers').style.display='grid'">Som pracovník</button>
     </div>
     </div>
 
     <!-- FAQ pre pracovníkov -->
-    <div class="hiw-grid faq-list-c" id="faq-list-workers">
+    <div class="hiw-grid faq-list-c" id="faq-list-workers" style="display:none">
       <div class="hiw-card">
         <div class="hiw-num">Q</div>
         <h4>Platí sa za používanie aplikácie niečo?</h4>
@@ -3771,7 +3771,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
     </div>
 
     <!-- FAQ pre firmy -->
-    <div class="hiw-grid faq-list-c" id="faq-list-companies" style="display:none">
+    <div class="hiw-grid faq-list-c" id="faq-list-companies">
       <div class="hiw-card">
         <div class="hiw-num">Q</div>
         <h4>Koľko stojí pre firmu Alogator?</h4>

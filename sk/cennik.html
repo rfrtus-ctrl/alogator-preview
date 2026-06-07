@@ -472,18 +472,14 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 
     <!-- User type toggle -->
     <div class="user-type-toggle">
-      <button class="ut-btn active" onclick="toggleView(event,'worker')">
-        <span class="ut-icon">👷</span>Som pracovník
-      </button>
-      <button class="ut-btn" onclick="toggleView(event,'firma')">
-        <span class="ut-icon">🏗️</span>Sme firma
-      </button>
+      <button class="ut-btn active" onclick="toggleView(event,'firma')">Sme firma</button>
+      <button class="ut-btn" onclick="toggleView(event,'worker')">Som pracovník</button>
     </div>
   </div>
 </section>
 
 <!-- WORKER VIEW -->
-<section class="worker-sec active" id="view-worker">
+<section class="worker-sec" id="view-worker">
   <div class="container">
     <div class="worker-card">
       <div class="worker-card-icon">👷</div>
@@ -514,7 +510,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 </section>
 
 <!-- FIRMA VIEW -->
-<section class="firma-sec hidden" id="view-firma">
+<section class="firma-sec" id="view-firma">
   <div class="container">
     <div class="tier-intro">
       <span class="eyebrow">• 4 úrovní pre firmu</span>
@@ -617,7 +613,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 </section>
 
 <!-- CREDITS -->
-<section class="credits-sec firma-block hidden" id="view-firma-contacts">
+<section class="credits-sec firma-block" id="view-firma-contacts">
   <div class="container">
     <div class="credits-head">
       <span class="eyebrow">• kreditový systém</span>
@@ -656,7 +652,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 </section>
 
 <!-- FLOW -->
-<section class="flow-sec firma-block hidden" id="view-firma-flow">
+<section class="flow-sec firma-block" id="view-firma-flow">
   <div class="container">
     <div class="flow-head">
       <span class="eyebrow">• ako firma postupuje</span>

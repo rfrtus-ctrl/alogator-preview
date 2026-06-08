@@ -57,7 +57,13 @@ h1,h2,h3{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.02em;c
 .legal-toc li{margin-bottom:4px}
 .legal-toc a{color:var(--signal);text-decoration:none}
 
-.footer{background:var(--graphite);color:var(--porcelain);padding:32px 0 20px}
+.footer{background:var(--porcelain);padding:16px 32px 32px}
+.footer .container{background:var(--graphite);border-radius:24px;padding:48px 40px 28px;max-width:1280px;color:var(--porcelain)}
+.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}
+.foot-col h5{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.5);margin-bottom:16px}
+.foot-col h5::before{content:'\2022  ';color:var(--signal)}
+.foot-col a{display:block;color:rgba(249,243,237,.7);text-decoration:none;font-size:13.5px;padding:5px 0}
+.foot-col a:hover{color:var(--porcelain)}
 .foot-bottom{display:flex;justify-content:space-between;font-size:12px;color:rgba(249,243,237,.5)}
 @media(max-width:900px){
   .container,.legal-container{padding:0 16px}
@@ -67,7 +73,12 @@ h1,h2,h3{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.02em;c
   .legal-tabs-inner{gap:16px;overflow-x:auto}
   .legal-tab{font-size:13px;white-space:nowrap}
   .foot-top{grid-template-columns:1fr}
-  .foot-bottom{flex-direction:column;gap:8px}
+  .foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}
+.foot-col h5{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.5);margin-bottom:16px}
+.foot-col h5::before{content:'\2022  ';color:var(--signal)}
+.foot-col a{display:block;color:rgba(249,243,237,.7);text-decoration:none;font-size:13.5px;padding:5px 0}
+.foot-col a:hover{color:var(--porcelain)}
+.foot-bottom{flex-direction:column;gap:8px}
 }
 </style>
 <meta name="robots" content="index, follow">
@@ -159,7 +170,7 @@ h1,h2,h3{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.02em;c
     <li>CRM nástroje pro správu kontaktů a projektů</li>
     <li>Komunikační nástroje mezi Pracovníky a Firmami</li>
   </ul>
-  <p><strong>Důležité omezení:</strong> Provozovatel není stranou pracovněprávního vztahu mezi Pracovníkem a Firmou. Platforma slouží výhradně jako technický zprostředkovatel propojení.</p>
+  <p><strong>Důležité omezení:</strong> Provozovatel není stranou pracovněprávního vztahu mezi Pracovníkem a Firmou. Platforma slouží výhradně jako technický nástroj na propojení.</p>
 
   <h2 id="registrace">3. Registrace a Účet</h2>
   <p>Registrace je podmínkou používání placených funkcí Platformy. Bezplatné funkce (prohlížení inzerátů) jsou dostupné bez registrace.</p>
@@ -170,7 +181,7 @@ h1,h2,h3{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.02em;c
   <p>Aktuální ceník je dostupný na <a href="/cz/cenik">alogator.com/cz/cenik</a>. Provozovatel si vyhrazuje právo ceny měnit s 30denním upozorněním.</p>
   <p>Předplatné se obnovuje automaticky na začátku každého fakturačního období. Uživatel může automatické obnovení zrušit kdykoli v nastavení účtu.</p>
   <p>Všechny ceny jsou uváděny bez DPH. DPH se připočítává podle platné legislativy země sídla Uživatele.</p>
-  <p>Zkušební období 14 dní je bezplatné. Po uplynutí zkušebního období bez zrušení přechází účet automaticky na placené předplatné zvolené tarify.</p>
+  <p>Zkušební období 30 dní je bezplatné. Po uplynutí zkušebního období bez zrušení přechází účet automaticky na placené předplatné zvolené tarify.</p>
 
   <h2 id="prava">5. Práva a povinnosti Uživatelů</h2>
   <h3>5.1 Pracovník</h3>
@@ -215,13 +226,39 @@ h1,h2,h3{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.02em;c
 
 <footer class="footer">
   <div class="container">
-    <div class="foot-bottom">
-      <div>© 2026 Alogator · Profi Steel Holding · Všechna práva vyhrazena</div>
-      <div>
-        <a href="/cz/vop" style="color:rgba(249,243,237,.5);text-decoration:none;margin-right:16px">VOP</a>
-        <a href="/cz/gdpr" style="color:rgba(249,243,237,.5);text-decoration:none;margin-right:16px">GDPR</a>
-        <a href="/cz/cookies" style="color:rgba(249,243,237,.5);text-decoration:none">Cookies</a>
+    <div class="foot-top">
+      <div class="foot-col">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+          <div style="width:32px;height:32px;background:var(--signal);border-radius:9px;display:flex;align-items:center;justify-content:center;font-family:'Geist',sans-serif;font-weight:500;font-size:16px;color:var(--porcelain)">A</div>
+          <span style="font-family:'Geist',sans-serif;font-weight:500;font-size:20px;color:var(--porcelain)">Alogator</span>
+        </div>
+        <p style="font-size:13px;color:rgba(249,243,237,.6);line-height:1.5">Marketplace propojující pracovníky, agentury a koncové firmy. SK · CZ · DE · AT · NL · BE</p>
       </div>
+      <div class="foot-col">
+        <h5>Pro firmy</h5>
+        <a href="/cz/kontakt">Naplánovat demo</a>
+        <a href="/cz/databaze-pracovniku">Databáze pracovníků</a>
+        <a href="/cz/cenik">Ceník</a>
+        <a href="/cz/jak-to-funguje">Jak to funguje</a>
+      </div>
+      <div class="foot-col">
+        <h5>Pro pracovníky</h5>
+        <a href="/cz/nabidka-prace">Pracovní nabídky</a>
+        <a href="/cz/stahnout-aplikaci">Stáhnout aplikaci</a>
+        <a href="/cz/jak-to-funguje">Jak to funguje</a>
+        <a href="/cz/pro-pracovniky">Pro pracovníky</a>
+      </div>
+      <div class="foot-col">
+        <h5>Společnost</h5>
+        <a href="/cz/o-nas">O nás</a>
+        <a href="/cz/kontakt">Kontakt</a>
+        <a href="/cz/vop">VOP</a>
+        <a href="/cz/gdpr">GDPR</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Alogator · Všechna práva vyhrazena</div>
+      <div>www.alogator.com</div>
     </div>
   </div>
 </footer>

@@ -162,7 +162,8 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .form-note{font-size:12px;color:var(--graphite-500);text-align:center;margin-top:10px;line-height:1.5}
 
 /* WHAT TO EXPECT */
-.expect-sec{padding:80px 0;background:var(--porcelain-200)}
+.expect-sec{padding:16px 32px;background:var(--porcelain)}
+.expect-sec .container{background:#fff;border:1.5px solid var(--porcelain-300);border-radius:24px;padding:48px 32px;max-width:1280px;margin:0 auto}
 .expect-sec h2{font-size:clamp(28px,3vw,40px);text-align:center;margin:14px 0 14px}
 .expect-sec .sub{text-align:center;color:var(--graphite-500);margin-bottom:48px;max-width:560px;margin-left:auto;margin-right:auto}
 .expect-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
@@ -206,7 +207,8 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 }
 
 /* FOOTER */
-.footer{background:var(--graphite);color:var(--porcelain);padding:48px 0 24px}
+.footer{background:var(--porcelain);padding:16px 32px 32px}
+.footer .container{background:var(--graphite);border-radius:24px;padding:48px 40px 28px;max-width:1280px;color:var(--porcelain)}
 .foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}
 .foot-col h5{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.5);margin-bottom:16px}
 .foot-col h5::before{content:'• ';color:var(--signal)}
@@ -214,6 +216,8 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .foot-col a:hover{color:var(--signal)}
 .foot-bottom{padding-top:24px;display:flex;justify-content:space-between;font-size:12px;color:rgba(249,243,237,.5)}
 
+section.boxed{padding:16px 32px}
+section.boxed .container{background:#fff;border:1.5px solid var(--porcelain-300);border-radius:24px;padding:32px;max-width:1280px;margin:0 auto}
 @media(max-width:900px){
   .hero-grid,.expect-steps,.foot-top{grid-template-columns:1fr;gap:32px}
   .form-grid{grid-template-columns:1fr}
@@ -279,7 +283,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 </div>
 
 <!-- HERO + FORM -->
-<section class="hero">
+<section class="hero boxed">
   <div class="container">
     <div class="hero-grid">
 
@@ -292,12 +296,12 @@ em{font-style:italic;color:var(--signal);font-weight:500}
         <!-- Typ kontaktu -->
         <div class="contact-type">
           <button class="ct-btn active" onclick="location.href='/cz/kontakt'" style="cursor:pointer">
-            <span class="ct-icon">🏗️</span>
+            <span class="ct-icon"></span>
             <span class="ct-label">Jsme firma</span>
             <span class="ct-sub">Hledáme pracovníky, chceme demo nebo cenovou nabídku</span>
           </button>
           <button class="ct-btn" onclick="location.href='/app'" style="cursor:pointer">
-            <span class="ct-icon">👷</span>
+            <span class="ct-icon"></span>
             <span class="ct-label">Jsem pracovník</span>
             <span class="ct-sub">Mám otázku o aplikaci nebo registraci</span>
           </button>
@@ -306,21 +310,21 @@ em{font-style:italic;color:var(--signal);font-weight:500}
         <!-- Přímé kontakty -->
         <div class="direct-contacts">
           <a href="mailto:demo@alogator.com" class="dc-item">
-            <div class="dc-icon">✉️</div>
+            <div class="dc-icon"></div>
             <div class="dc-content">
               <div class="dc-label">E-mail · firmy a demo</div>
               <div class="dc-value">demo@alogator.com</div>
             </div>
           </a>
           <a href="tel:+421905123456" class="dc-item">
-            <div class="dc-icon">📞</div>
+            <div class="dc-icon"></div>
             <div class="dc-content">
               <div class="dc-label">Telefon · Po–Pá 9–17</div>
               <div class="dc-value">+421 905 123 456</div>
             </div>
           </a>
           <a href="mailto:support@alogator.com" class="dc-item">
-            <div class="dc-icon">🛟</div>
+            <div class="dc-icon"></div>
             <div class="dc-content">
               <div class="dc-label">Podpora · pracovníci</div>
               <div class="dc-value">support@alogator.com</div>
@@ -331,14 +335,14 @@ em{font-style:italic;color:var(--signal);font-weight:500}
         <!-- Promises -->
         <div class="promises">
           <div class="promise">
-            <span class="promise-icon">⚡</span>
+            <span class="promise-icon"></span>
             <div class="promise-text">
               <strong>Odpověď do 24h</strong>
               Každý pracovní den garantujeme odpověď.
             </div>
           </div>
           <div class="promise">
-            <span class="promise-icon">🎯</span>
+            <span class="promise-icon"></span>
             <div class="promise-text">
               <strong>Demo na míru</strong>
               Ukážeme přesně to, co vás zajímá.
@@ -352,9 +356,9 @@ em{font-style:italic;color:var(--signal);font-weight:500}
             </div>
           </div>
           <div class="promise">
-            <span class="promise-icon">🆓</span>
+            <span class="promise-icon"></span>
             <div class="promise-text">
-              <strong>14 dní zdarma</strong>
+              <strong>30 dní zdarma</strong>
               Po demo vám aktivujeme zkušební období.
             </div>
           </div>
@@ -383,13 +387,13 @@ em{font-style:italic;color:var(--signal);font-weight:500}
               <!-- Segment -->
               <div class="segment-btns">
                 <button class="seg-btn active" onclick="selectSeg(event,'firma')">
-                  <span class="seg-icon">🏗️</span>Firma / Agentura
+                  <span class="seg-icon"></span>Firma / Agentura
                 </button>
                 <button class="seg-btn" onclick="selectSeg(event,'worker')">
-                  <span class="seg-icon">👷</span>Pracovník
+                  <span class="seg-icon"></span>Pracovník
                 </button>
                 <button class="seg-btn" onclick="selectSeg(event,'other')">
-                  <span class="seg-icon">💬</span>Jiné
+                  <span class="seg-icon"></span>Jiné
                 </button>
               </div>
 
@@ -460,7 +464,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 </section>
 
 <!-- WHAT TO EXPECT -->
-<section class="expect-sec">
+<section class="expect-sec boxed">
   <div class="container">
     <span class="eyebrow" style="display:block;text-align:center;margin-bottom:10px">• co se stane po odeslání</span>
     <h2>Co se stane <em>dál</em></h2>
@@ -484,7 +488,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
       </div>
       <div class="expect-step">
         <div class="expect-num">04</div>
-        <h4>14 dní zkušební přístup</h4>
+        <h4>30 dní zkušební přístup</h4>
         <p>Po demu aktivujeme váš účet s plným přístupem zdarma. Bez kreditní karty.</p>
       </div>
     </div>
@@ -492,38 +496,37 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 </section>
 
 <!-- FAQ -->
-<section class="faq-sec">
-  <div class="container">
-    <span class="eyebrow" style="display:block;text-align:center;margin-bottom:10px">• otázky</span>
-    <h2>Rychlé otázky</h2>
-    <div class="faq-list">
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Jak dlouho trvá demo call?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Obvykle 30 minut. Pro větší firmy (Enterprise) nabízíme i 60minutové demo s technickým týmem (API integrace, SSO). Předem vám pošleme agendu a otázky, abychom čas využili efektivně.</div></div>
-      </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Mohu demo absolvovat sám nebo je nutný tým?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Demo absolvujete sami nebo s kolegy — je to na vás. Pro rozhodnutí o Enterprise plánu doporučujeme přizvat i technického člověka (HR, IT). Pro Starter/Pro plán stačí jeden kontakt.</div></div>
-      </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Co potřebuji před demem připravit?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Nic speciálního. Pomůže, když víte odpovědi na: Kolik pracovníků ročně hledáte? Jaké profese? Ve kterých zemích? Jaký je váš aktuální proces náboru? Na základě toho demo přizpůsobíme vašim potřebám.</div></div>
-      </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">V jakém jazyce proběhne demo?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Demo můžeme vést v češtině, slovenštině nebo němčině. Pokud jste firma z DE/AT — bez problémů vám ukážeme platformu v německém UI a zodpovíme otázky v DE.</div></div>
-      </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Mám zájem jen o cenovou nabídku, ne demo — je to OK?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Samozřejmě. Ve zprávě napište "cenová nabídka" a pošlete nám váš objem (kolik pracovníků, jaké profese, země). Pošleme vám přímou nabídku e-mailem bez nutnosti demo callu.</div></div>
-      </div>
-
-    </div>
+<section class="faq-sec boxed" style="padding:80px 0;background:var(--porcelain-200)">
+  <div class="container" style="max-width:1280px;margin:0 auto;padding:0 24px">
+    <div class="eyebrow">FAQ</div>
+    <h2 style="font:500 clamp(28px,3vw,40px)/1.1 'Geist';letter-spacing:-0.025em;margin:14px 0 48px">Rychlé otázky</h2>
+    <div class="hiw-grid" style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px">
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">01</div>
+    <h4 style="font-size:13px">Jak dlouho trvá demo call?</h4>
+    <p style="font-size:12px">Obvykle 30 minut. Pro větší firmy (Enterprise) nabízíme i 60minutové demo s technickým týmem (API integrace, SSO). Předem vám pošleme agendu a otázky, abychom čas využili efektivně.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">02</div>
+    <h4 style="font-size:13px">Mohu demo absolvovat sám nebo je nutný tým?</h4>
+    <p style="font-size:12px">Demo absolvujete sami nebo s kolegy — je to na vás. Pro rozhodnutí o Enterprise plánu doporučujeme přizvat i technického člověka (HR, IT). Pro Starter/Pro plán stačí jeden kontakt.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">03</div>
+    <h4 style="font-size:13px">Co potřebuji před demem připravit?</h4>
+    <p style="font-size:12px">Nic speciálního. Pomůže, když víte odpovědi na: Kolik pracovníků ročně hledáte? Jaké profese? Ve kterých zemích? Jaký je váš aktuální proces náboru? Na základě toho demo přizpůsobíme vašim potřebám.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">04</div>
+    <h4 style="font-size:13px">V jakém jazyce proběhne demo?</h4>
+    <p style="font-size:12px">Demo můžeme vést v češtině, slovenštině nebo němčině. Pokud jste firma z DE/AT — bez problémů vám ukážeme platformu v německém UI a zodpovíme otázky v DE.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">05</div>
+    <h4 style="font-size:13px">Mám zájem jen o cenovou nabídku, ne demo — je to OK?</h4>
+    <p style="font-size:12px">Samozřejmě. Ve zprávě napište "cenová nabídka" a pošlete nám váš objem (kolik pracovníků, jaké profese, země). Pošleme vám přímou nabídku e-mailem bez nutnosti demo callu.</p>
+  </div>
+</div>
   </div>
 </section>
 

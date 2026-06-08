@@ -24,8 +24,11 @@
 .summary-widget{background:var(--porcelain-200);border-radius:18px;padding:24px}.summary-row{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid var(--porcelain-300)}.summary-row:first-child{padding-top:0}.summary-row:last-child{border-bottom:0;padding-bottom:0}.summary-icon{width:32px;height:32px;border-radius:9px;background:var(--signal-soft);color:var(--signal);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px}.summary-content{flex:1;min-width:0}.summary-label{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--graphite-500);margin-bottom:2px}.summary-val{font-family:'Geist',sans-serif;font-weight:500;font-size:14px;color:var(--graphite);letter-spacing:-0.01em}.summary-sub{font-size:11.5px;color:var(--graphite-500);margin-top:2px}
 .similar-sec{padding:64px 0;background:var(--porcelain-200)}.similar-sec h2{font-size:clamp(24px,2.5vw,32px);margin-bottom:24px}.similar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .jcard{background:var(--porcelain);border:1px solid var(--porcelain-300);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:12px;cursor:pointer;transition:transform .2s,border-color .2s}.jcard:hover{transform:translateY(-3px);border-color:var(--graphite-200)}.jcard-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}.jcard-meta{flex:1;min-width:0}.jcard-loc{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--graphite-500);letter-spacing:0.05em;display:inline-flex;align-items:center;gap:6px;margin-bottom:6px}.jcard-title{font-family:'Geist',sans-serif;font-weight:500;font-size:16px;letter-spacing:-0.015em;color:var(--graphite);line-height:1.2}.jcard-company{font-size:12px;color:var(--graphite-500);margin-top:3px}.jcard-rate{display:flex;align-items:baseline;gap:4px;margin-top:8px;padding-top:12px;border-top:1px solid var(--porcelain-300)}.jcard-rate-num{font-family:'Geist',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.02em}.jcard-rate-unit{font-size:11px;color:var(--graphite-500)}.jcard-tags{display:flex;gap:5px;flex-wrap:wrap}.jcard-tag{background:var(--porcelain-200);color:var(--graphite-700);font-size:10.5px;padding:3px 9px;border-radius:999px}
-.footer{background:var(--graphite);color:var(--porcelain);padding:48px 0 24px}.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}.foot-col h5{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.5);margin-bottom:16px}.foot-col h5::before{content:'• ';color:var(--signal)}.foot-col a{display:block;color:rgba(249,243,237,.7);text-decoration:none;font-size:13.5px;padding:5px 0}.foot-bottom{padding-top:24px;display:flex;justify-content:space-between;font-size:12px;color:rgba(249,243,237,.5)}
+.footer{background:var(--porcelain);padding:16px 32px 32px}
+.footer .container{background:var(--graphite);border-radius:24px;padding:48px 40px 28px;max-width:1280px;color:var(--porcelain)}.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}.foot-col h5{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.5);margin-bottom:16px}.foot-col h5::before{content:'• ';color:var(--signal)}.foot-col a{display:block;color:rgba(249,243,237,.7);text-decoration:none;font-size:13.5px;padding:5px 0}.foot-bottom{padding-top:24px;display:flex;justify-content:space-between;font-size:12px;color:rgba(249,243,237,.5)}
 @media (max-width:900px){.job-header-grid,.job-content-grid,.similar-grid,.foot-top{grid-template-columns:1fr;gap:24px}.job-main{flex-direction:column;text-align:center;align-items:center}}
+section.boxed{padding:16px 32px}
+section.boxed .container{background:#fff;border:1.5px solid var(--porcelain-300);border-radius:24px;padding:32px;max-width:1280px;margin:0 auto}
 </style>
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://alogator.com/cz/nabidka-prace/zednik">
@@ -62,9 +65,9 @@
             <h1 class="job-title">Práce pro profesi <em>zedník</em> v Česku</h1>
             <p style="font-size:16px;color:var(--graphite-700);line-height:1.6;margin-bottom:14px;max-width:620px">Nabídky pro zedníky — zdivo, omítky, obklady, v Česku i v zahraničí. Vytvořte si profil a firmy vás osloví.</p>
             <div class="job-meta-row">
-              <div class="job-meta-item">🧱 <strong>21 nabídek</strong></div>
-              <div class="job-meta-item">💰 <strong>od 14 €/hod</strong></div>
-              <div class="job-meta-item">📍 <strong>DE · AT · CZ</strong></div>
+              <div class="job-meta-item"><strong>21 nabídek</strong></div>
+              <div class="job-meta-item"><strong>od 14 €/hod</strong></div>
+              <div class="job-meta-item"><strong>DE · AT · CZ</strong></div>
             </div>
           </div>
         </div>
@@ -112,17 +115,17 @@
           <span class="label">Nabídky pro zedníky</span>
           <h2 style="margin-top:8px">Aktuální <em>pracovní nabídky</em> pro zedníky</h2>
           <div class="similar-grid" style="margin-top:4px">
-            <div class="jcard"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc"><span class="flag flag-de"></span> Mnichov · Německo</div><div class="jcard-title">Zedník</div><div class="jcard-company">🔒 Firma · DE</div></div><span class="urgency-badge hot"><span class="dot"></span>Hot</span></div><div class="jcard-rate"><span class="jcard-rate-num">23 €</span><span class="jcard-rate-unit">/ hod + bonusy</span></div><div class="jcard-tags"><span class="jcard-tag">Zdivo</span><span class="jcard-tag">Omítky</span><span class="jcard-tag">Ubytování</span><span class="jcard-tag">Stavebnictví</span><span class="jcard-tag">45h/tyd</span><span class="jcard-tag">OSVČ</span><span class="jcard-tag">DE</span></div></div>
+            <div class="jcard"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc">ð©ðª Mnichov · Německo</div><div class="jcard-title">Zedník</div><div class="jcard-company">🔒 Firma · DE</div></div><span class="urgency-badge hot"><span class="dot"></span>Hot</span></div><div class="jcard-rate"><span class="jcard-rate-num">23 €</span><span class="jcard-rate-unit">/ hod + bonusy</span></div><div class="jcard-tags"><span class="jcard-tag">Zdivo</span><span class="jcard-tag">Omítky</span><span class="jcard-tag">Ubytování</span><span class="jcard-tag">Stavebnictví</span><span class="jcard-tag">45h/tyd</span><span class="jcard-tag">OSVČ</span><span class="jcard-tag">DE</span></div></div>
 
-            <div class="jcard"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc"><span class="flag flag-at"></span> Vídeň · Rakousko</div><div class="jcard-title">Zedník-obkladač</div><div class="jcard-company">🔒 Firma · AT</div></div><span class="urgency-badge new">Nová</span></div><div class="jcard-rate"><span class="jcard-rate-num">24 €</span><span class="jcard-rate-unit">/ hod</span></div><div class="jcard-tags"><span class="jcard-tag">Obklady</span><span class="jcard-tag">Dlažby</span><span class="jcard-tag">40 h/tý</span><span class="jcard-tag">Stavebnictví</span><span class="jcard-tag">Ubyt.: V ceně</span><span class="jcard-tag">HPP</span></div></div>
+            <div class="jcard"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc">ð¦ð¹ Vídeň · Rakousko</div><div class="jcard-title">Zedník-obkladač</div><div class="jcard-company">🔒 Firma · AT</div></div><span class="urgency-badge new">Nová</span></div><div class="jcard-rate"><span class="jcard-rate-num">24 €</span><span class="jcard-rate-unit">/ hod</span></div><div class="jcard-tags"><span class="jcard-tag">Obklady</span><span class="jcard-tag">Dlažby</span><span class="jcard-tag">40 h/tý</span><span class="jcard-tag">Stavebnictví</span><span class="jcard-tag">Ubyt.: V ceně</span><span class="jcard-tag">HPP</span></div></div>
 
-            <div class="jcard"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc"><span class="flag flag-de"></span> Frankfurt · Německo</div><div class="jcard-title">Zedník</div><div class="jcard-company">🔒 Firma · DE</div></div></div><div class="jcard-rate"><span class="jcard-rate-num">25 €</span><span class="jcard-rate-unit">/ hod</span></div><div class="jcard-tags"><span class="jcard-tag">Zdivo</span><span class="jcard-tag">Zateplování</span><span class="jcard-tag">45 h/tý</span><span class="jcard-tag">Stavebnictví</span><span class="jcard-tag">Ubyt.: Placene</span><span class="jcard-tag">OSVČ / HPP</span><span class="jcard-tag">DE</span></div></div>
+            <div class="jcard"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc">ð©ðª Frankfurt · Německo</div><div class="jcard-title">Zedník</div><div class="jcard-company">🔒 Firma · DE</div></div></div><div class="jcard-rate"><span class="jcard-rate-num">25 €</span><span class="jcard-rate-unit">/ hod</span></div><div class="jcard-tags"><span class="jcard-tag">Zdivo</span><span class="jcard-tag">Zateplování</span><span class="jcard-tag">45 h/tý</span><span class="jcard-tag">Stavebnictví</span><span class="jcard-tag">Ubyt.: Placene</span><span class="jcard-tag">OSVČ / HPP</span><span class="jcard-tag">DE</span></div></div>
 
-            <div class="jcard"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc"><span class="flag flag-cz"></span> Brno · Česko</div><div class="jcard-title">Zedník</div><div class="jcard-company">🔒 Firma · CZ</div></div></div><div class="jcard-rate"><span class="jcard-rate-num">15 €</span><span class="jcard-rate-unit">/ hod</span></div><div class="jcard-tags"><span class="jcard-tag">Zdivo</span><span class="jcard-tag">Omítky</span><span class="jcard-tag">OSVČ</span><span class="jcard-tag">Stavebnictví</span><span class="jcard-tag">40h/tyd</span></div></div>
+            <div class="jcard"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc">ð¨ð¿ Brno · Česko</div><div class="jcard-title">Zedník</div><div class="jcard-company">🔒 Firma · CZ</div></div></div><div class="jcard-rate"><span class="jcard-rate-num">15 €</span><span class="jcard-rate-unit">/ hod</span></div><div class="jcard-tags"><span class="jcard-tag">Zdivo</span><span class="jcard-tag">Omítky</span><span class="jcard-tag">OSVČ</span><span class="jcard-tag">Stavebnictví</span><span class="jcard-tag">40h/tyd</span></div></div>
 
-            <div class="jcard"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc"><span class="flag flag-at"></span> Linz · Rakousko</div><div class="jcard-title">Zedník / sádrokartonář</div><div class="jcard-company">🔒 Firma · AT</div></div><span class="urgency-badge new">Nová</span></div><div class="jcard-rate"><span class="jcard-rate-num">24 €</span><span class="jcard-rate-unit">/ hod</span></div><div class="jcard-tags"><span class="jcard-tag">Sádrokarton</span><span class="jcard-tag">Příčky</span><span class="jcard-tag">Ubytování</span><span class="jcard-tag">Stavebnictví</span><span class="jcard-tag">50h/tyd</span><span class="jcard-tag">HPP</span><span class="jcard-tag">DE</span></div></div>
+            <div class="jcard"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc">ð¦ð¹ Linz · Rakousko</div><div class="jcard-title">Zedník / sádrokartonář</div><div class="jcard-company">🔒 Firma · AT</div></div><span class="urgency-badge new">Nová</span></div><div class="jcard-rate"><span class="jcard-rate-num">24 €</span><span class="jcard-rate-unit">/ hod</span></div><div class="jcard-tags"><span class="jcard-tag">Sádrokarton</span><span class="jcard-tag">Příčky</span><span class="jcard-tag">Ubytování</span><span class="jcard-tag">Stavebnictví</span><span class="jcard-tag">50h/tyd</span><span class="jcard-tag">HPP</span><span class="jcard-tag">DE</span></div></div>
 
-            <div class="jcard"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc"><span class="flag flag-de"></span> Stuttgart · Německo</div><div class="jcard-title">Obkladač</div><div class="jcard-company">🔒 Firma · DE</div></div><span class="urgency-badge hot"><span class="dot"></span>Hot</span></div><div class="jcard-rate"><span class="jcard-rate-num">25 €</span><span class="jcard-rate-unit">/ hod</span></div><div class="jcard-tags"><span class="jcard-tag">Obklady</span><span class="jcard-tag">Dlažby</span><span class="jcard-tag">45 h/tý</span></div></div>
+            <div class="jcard"><div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc">ð©ðª Stuttgart · Německo</div><div class="jcard-title">Obkladač</div><div class="jcard-company">🔒 Firma · DE</div></div><span class="urgency-badge hot"><span class="dot"></span>Hot</span></div><div class="jcard-rate"><span class="jcard-rate-num">25 €</span><span class="jcard-rate-unit">/ hod</span></div><div class="jcard-tags"><span class="jcard-tag">Obklady</span><span class="jcard-tag">Dlažby</span><span class="jcard-tag">45 h/tý</span></div></div>
           </div>
           <div style="margin-top:24px;text-align:center"><button class="rate-cta" style="max-width:320px;width:100%" onclick="location.href='/app'">Vytvořit profil zdarma</button></div>
         </div>
@@ -130,16 +133,23 @@
         <div class="sec-card">
           <span class="label">Časté otázky</span>
           <h2 style="margin-top:8px">Časté otázky o práci pro <em>zedníky</em></h2>
-          <div class="desc-text">
-            <h3>Jaké práce dělá zedník?</h3>
-            <p>Zedník staví zdivo nosných stěn i příček, provádí vnitřní a vnější omítky (ruční i strojní), obklady a dlažby a zateplování fasád (ETICS). Mnozí zedníci zvládají i sádrokarton a drobné betonářské práce. Na stavbě čte výkresy a pracuje podle projektové dokumentace.</p>
-
-            <h3>Jsou zakázky pro zedníky i v Česku, nebo jen v zahraničí?</h3>
-            <p>Ano, nabídky pro zedníky jsou i v Česku — například v Brně, Praze či Ostravě. Zároveň je silná poptávka v Německu a Rakousku, kde jsou hodinové sazby vyšší. Na Alogator si vybíráte vy: v profilu uvedete, kde chcete pracovat, a firmy vás osloví podle toho.</p>
-
-            <h3>Dá se práce zedníka dělat na OSVČ?</h3>
-            <p>Ano. Hodně zedníků pracuje na OSVČ (živnost) a fakturuje přímo firmě — v Česku i v zahraničí. Část nabídek je i na HPP. Zda jde o OSVČ nebo HPP, je uvedeno u každé konkrétní nabídky.</p>
-          </div>
+          <div class="hiw-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">01</div>
+    <h4 style="font-size:13px">Jaké práce dělá zedník?</h4>
+    <p style="font-size:12px">Zedník staví zdivo nosných stěn i příček, provádí vnitřní a vnější omítky (ruční i strojní), obklady a dlažby a zateplování fasád (ETICS). Mnozí zedníci zvládají i sádrokarton a drobné betonářské práce. Na stavbě čte výkresy a pracuje podle projektové dokumentace.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">02</div>
+    <h4 style="font-size:13px">Jsou zakázky pro zedníky i v Česku, nebo jen v zahraničí?</h4>
+    <p style="font-size:12px">Ano, nabídky pro zedníky jsou i v Česku — například v Brně, Praze či Ostravě. Zároveň je silná poptávka v Německu a Rakousku, kde jsou hodinové sazby vyšší. Na Alogator si vybíráte vy: v profilu uvedete, kde chcete pracovat, a firmy vás osloví podle toho.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">03</div>
+    <h4 style="font-size:13px">Dá se práce zedníka dělat na OSVČ?</h4>
+    <p style="font-size:12px">Ano. Hodně zedníků pracuje na OSVČ (živnost) a fakturuje přímo firmě — v Česku i v zahraničí. Část nabídek je i na HPP. Zda jde o OSVČ nebo HPP, je uvedeno u každé konkrétní nabídky.</p>
+  </div>
+</div>
         </div>
 
       </div>
@@ -161,7 +171,7 @@
   </div>
 </section>
 
-<section class="similar-sec">
+<section class="similar-sec boxed">
   <div class="container">
     <span class="eyebrow">související profese</span>
     <h2 style="margin-top:10px">Hledáte jinou profesi?</h2>

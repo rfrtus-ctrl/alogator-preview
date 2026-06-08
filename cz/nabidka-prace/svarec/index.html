@@ -138,7 +138,8 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .jcard-tags{display:flex;gap:5px;flex-wrap:wrap}
 .jcard-tag{background:var(--porcelain-200);color:var(--graphite-700);font-size:10.5px;padding:3px 9px;border-radius:999px}
 
-.footer{background:var(--graphite);color:var(--porcelain);padding:48px 0 24px}
+.footer{background:var(--porcelain);padding:16px 32px 32px}
+.footer .container{background:var(--graphite);border-radius:24px;padding:48px 40px 28px;max-width:1280px;color:var(--porcelain)}
 .foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}
 .foot-col h5{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.5);margin-bottom:16px}
 .foot-col h5::before{content:'• ';color:var(--signal)}
@@ -149,6 +150,8 @@ em{font-style:italic;color:var(--signal);font-weight:500}
   .job-header-grid,.job-content-grid,.similar-grid,.foot-top{grid-template-columns:1fr;gap:24px}
   .job-main{flex-direction:column;text-align:center;align-items:center}
 }
+section.boxed{padding:16px 32px}
+section.boxed .container{background:#fff;border:1.5px solid var(--porcelain-300);border-radius:24px;padding:32px;max-width:1280px;margin:0 auto}
 </style>
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://alogator.com/cz/nabidka-prace/svarec">
@@ -223,9 +226,9 @@ em{font-style:italic;color:var(--signal);font-weight:500}
             </p>
 
             <div class="job-meta-row">
-              <div class="job-meta-item">📋 <strong>89 nabídek</strong> pro svářeče</div>
-              <div class="job-meta-item">💰 od <strong>16 €/hod</strong></div>
-              <div class="job-meta-item">🌍 <strong>DE · AT · NL · CZ</strong></div>
+              <div class="job-meta-item"><strong>89 nabídek</strong> pro svářeče</div>
+              <div class="job-meta-item">od <strong>16 €/hod</strong></div>
+              <div class="job-meta-item"><strong>DE · AT · NL · CZ</strong></div>
             </div>
           </div>
         </div>
@@ -296,7 +299,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
             <div class="jcard" onclick="location.href='/app'">
               <div class="jcard-head">
                 <div class="jcard-meta">
-                  <div class="jcard-loc"><span class="flag flag-de"></span> Emsland · Německo</div>
+                  <div class="jcard-loc">ð©ðª Emsland · Německo</div>
                   <div class="jcard-title">Svářeč TIG · potrubí</div>
                   <div class="jcard-company">🔒 Firma · DE</div>
                 </div>
@@ -320,7 +323,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
             <div class="jcard" onclick="location.href='/app'">
               <div class="jcard-head">
                 <div class="jcard-meta">
-                  <div class="jcard-loc"><span class="flag flag-at"></span> Linz · Rakousko</div>
+                  <div class="jcard-loc">ð¦ð¹ Linz · Rakousko</div>
                   <div class="jcard-title">Svářeč CO2 · konstrukce</div>
                   <div class="jcard-company">🔒 Firma · AT</div>
                 </div>
@@ -344,7 +347,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
             <div class="jcard" onclick="location.href='/app'">
               <div class="jcard-head">
                 <div class="jcard-meta">
-                  <div class="jcard-loc"><span class="flag flag-nl"></span> Rotterdam · Nizozemsko</div>
+                  <div class="jcard-loc">ð³ð± Rotterdam · Nizozemsko</div>
                   <div class="jcard-title">Svářeč 141 · potrubí</div>
                   <div class="jcard-company">🔒 Firma · NL</div>
                 </div>
@@ -368,7 +371,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
             <div class="jcard" onclick="location.href='/app'">
               <div class="jcard-head">
                 <div class="jcard-meta">
-                  <div class="jcard-loc"><span class="flag flag-cz"></span> Ostrava · Česko</div>
+                  <div class="jcard-loc">ð¨ð¿ Ostrava · Česko</div>
                   <div class="jcard-title">Svářeč MIG/MAG · výroba</div>
                   <div class="jcard-company">🔒 Firma · CZ</div>
                 </div>
@@ -390,7 +393,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
             <div class="jcard" onclick="location.href='/app'">
               <div class="jcard-head">
                 <div class="jcard-meta">
-                  <div class="jcard-loc"><span class="flag flag-at"></span> Vídeň · Rakousko</div>
+                  <div class="jcard-loc">ð¦ð¹ Vídeň · Rakousko</div>
                   <div class="jcard-title">Svářeč · ocelové konstrukce</div>
                   <div class="jcard-company">🔒 Firma · AT</div>
                 </div>
@@ -414,7 +417,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
             <div class="jcard" onclick="location.href='/app'">
               <div class="jcard-head">
                 <div class="jcard-meta">
-                  <div class="jcard-loc"><span class="flag flag-de"></span> Hamburg · Německo</div>
+                  <div class="jcard-loc">ð©ðª Hamburg · Německo</div>
                   <div class="jcard-title">Svářeč potrubí · TIG</div>
                   <div class="jcard-company">🔒 Firma · DE</div>
                 </div>
@@ -447,16 +450,23 @@ em{font-style:italic;color:var(--signal);font-weight:500}
         <div class="sec-card">
           <span class="label">Časté otázky</span>
           <h2 style="margin-top:8px">Na co se svářečů <em>nejčastěji ptáme</em></h2>
-          <div class="desc-text">
-            <h3>Jaký svářečský průkaz potřebuji pro práci v zahraničí?</h3>
-            <p>Potřebujete platný certifikát podle <strong>EN ISO 9606-1</strong> na metodu, kterou budete svařovat (nejčastěji TIG 141 nebo MIG/MAG 135). Firmy v Německu a Rakousku ho vyžadují a kontrolují jeho platnost. Čím více poloh a materiálů máte certifikovaných, tím více nabídek se vám otevře.</p>
-
-            <h3>Jaký je rozdíl v poptávce mezi TIG a CO2 svařováním?</h3>
-            <p>TIG (141) je žádanější a lépe placený — používá se na potrubí, nerezovou ocel a hliník v chemii či petrochemii. CO2/MIG-MAG (135) má také stálou poptávku u ocelových konstrukcí a halové výroby, kde se svařuje rychle. Pokud ovládáte obě metody, získáte přístup k širšímu výběru práce.</p>
-
-            <h3>Dá se práce svářeče dělat na OSVČ?</h3>
-            <p>Ano, většina nabídek je dostupná na OSVČ i na zaměstnanecký poměr. Na OSVČ fakturujete přímo a sami si řešíte odvody, což se při vyšších sazbách v zahraničí vyplatí. V profilu si jednoduše označíte, co vám vyhovuje, a firmy to při oslovení respektují.</p>
-          </div>
+          <div class="hiw-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">01</div>
+    <h4 style="font-size:13px">Jaký svářečský průkaz potřebuji pro práci v zahraničí?</h4>
+    <p style="font-size:12px">Potřebujete platný certifikát podle EN ISO 9606-1 na metodu, kterou budete svařovat (nejčastěji TIG 141 nebo MIG/MAG 135). Firmy v Německu a Rakousku ho vyžadují a kontrolují jeho platnost. Čím více poloh a materiálů máte certifikovaných, tím více nabídek se vám otevře.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">02</div>
+    <h4 style="font-size:13px">Jaký je rozdíl v poptávce mezi TIG a CO2 svařováním?</h4>
+    <p style="font-size:12px">TIG (141) je žádanější a lépe placený — používá se na potrubí, nerezovou ocel a hliník v chemii či petrochemii. CO2/MIG-MAG (135) má také stálou poptávku u ocelových konstrukcí a halové výroby, kde se svařuje rychle. Pokud ovládáte obě metody, získáte přístup k širšímu výběru práce.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">03</div>
+    <h4 style="font-size:13px">Dá se práce svářeče dělat na OSVČ?</h4>
+    <p style="font-size:12px">Ano, většina nabídek je dostupná na OSVČ i na zaměstnanecký poměr. Na OSVČ fakturujete přímo a sami si řešíte odvody, což se při vyšších sazbách v zahraničí vyplatí. V profilu si jednoduše označíte, co vám vyhovuje, a firmy to při oslovení respektují.</p>
+  </div>
+</div>
         </div>
 
         <!-- SOUVISEJÍCÍ -->
@@ -492,7 +502,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 
           <div class="summary-widget" style="background:transparent;padding:0">
             <div class="summary-row">
-              <span class="summary-icon">📋</span>
+              <span class="summary-icon"></span>
               <div class="summary-content">
                 <div class="summary-label">Nabídky</div>
                 <div class="summary-val">89 pro svářeče</div>
@@ -500,7 +510,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
               </div>
             </div>
             <div class="summary-row">
-              <span class="summary-icon">💰</span>
+              <span class="summary-icon"></span>
               <div class="summary-content">
                 <div class="summary-label">Sazby</div>
                 <div class="summary-val">CZ 16–20 €/hod</div>
@@ -508,7 +518,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
               </div>
             </div>
             <div class="summary-row">
-              <span class="summary-icon">🔥</span>
+              <span class="summary-icon"></span>
               <div class="summary-content">
                 <div class="summary-label">Metody</div>
                 <div class="summary-val">TIG 141 · CO2 135</div>
@@ -516,7 +526,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
               </div>
             </div>
             <div class="summary-row">
-              <span class="summary-icon">📜</span>
+              <span class="summary-icon"></span>
               <div class="summary-content">
                 <div class="summary-label">Certifikát</div>
                 <div class="summary-val">EN ISO 9606-1</div>
@@ -524,7 +534,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
               </div>
             </div>
             <div class="summary-row">
-              <span class="summary-icon">📅</span>
+              <span class="summary-icon"></span>
               <div class="summary-content">
                 <div class="summary-label">Forma</div>
                 <div class="summary-val">OSVČ i turnusy</div>
@@ -532,7 +542,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
               </div>
             </div>
             <div class="summary-row">
-              <span class="summary-icon">✋</span>
+              <span class="summary-icon"></span>
               <div class="summary-content">
                 <div class="summary-label">Jak to jde</div>
                 <div class="summary-val">Firmy oslovují vás</div>
@@ -551,7 +561,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
             <p>Svářeče, kteří v profilu uvedou TIG i CO2 a více certifikovaných poloh, firmy oslovují výrazně častěji. Doplňte si do profilu všechny metody a materiály, které zvládáte.</p>
           </div>
           <div style="background:var(--signal-soft);color:var(--signal-dark);padding:10px 12px;border-radius:10px;font-size:12px;line-height:1.5;margin-top:6px">
-            <strong style="display:block;margin-bottom:2px">📅 Doplňte kalendář</strong>
+            <strong style="display:block;margin-bottom:2px">Doplňte kalendář</strong>
             Profil s vyplněnou dostupností vidí firmy jako první.
           </div>
         </div>
@@ -562,7 +572,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 </section>
 
 <!-- DALŠÍ PROFESE -->
-<section class="similar-sec">
+<section class="similar-sec boxed">
   <div class="container">
     <span class="eyebrow">další profese</span>
     <h2 style="margin-top:10px">Hledáte jinou profesi?</h2>

@@ -78,7 +78,8 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .job-locked{font-size:10.5px;color:rgba(249,243,237,.35);display:flex;align-items:center;gap:4px;margin-top:5px}
 
 /* TRUST */
-.trust-sec{padding:40px 0;background:var(--porcelain-200);border-top:1px solid var(--porcelain-300)}
+.trust-sec{padding:16px 32px;background:var(--porcelain)}
+.trust-sec .container{background:#fff;border:1.5px solid var(--porcelain-300);border-radius:24px;padding:40px 32px}
 .trust-lbl{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--graphite-500);text-align:center;margin-bottom:24px}
 .trust-row{display:flex;justify-content:center;align-items:center;gap:48px;flex-wrap:wrap}
 .trust-logo{font-family:'Geist',sans-serif;font-weight:500;font-size:18px;color:var(--graphite-500);opacity:.7}
@@ -107,7 +108,8 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .steps-grid .step:last-child .step-arrow{display:none}
 
 /* PROFESSIONS */
-.profs-sec{padding:80px 0;background:var(--porcelain)}
+.profs-sec{padding:16px 32px;background:var(--porcelain)}
+.profs-sec .container{background:#fff;border:1.5px solid var(--porcelain-300);border-radius:24px;padding:80px 32px}
 .profs-sec h2{font-size:clamp(28px,3vw,44px);text-align:center;max-width:560px;margin:14px auto 48px}
 .profs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1000px;margin:0 auto 32px}
 .prof-card{background:var(--porcelain-200);border:1px solid var(--porcelain-300);border-radius:18px;padding:22px 18px;text-align:center;text-decoration:none;transition:border-color .15s,transform .15s;display:block}
@@ -118,7 +120,8 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .profs-cta{text-align:center}
 
 /* STATS */
-.stats-sec{padding:80px 0;background:var(--graphite)}
+.stats-sec{padding:16px 32px;background:var(--porcelain)}
+.stats-sec .container{background:var(--graphite);border-radius:24px;padding:80px 32px}
 .stats-sec h2{font-size:clamp(28px,3vw,44px);text-align:center;color:var(--porcelain);max-width:600px;margin:14px auto 14px}
 .stats-sub{text-align:center;color:rgba(249,243,237,.65);max-width:520px;margin:0 auto 48px;font-size:15px}
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:960px;margin:0 auto}
@@ -165,7 +168,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .faq-a-inner{padding:0 22px 20px;font-size:14.5px;color:var(--graphite-700);line-height:1.6}
 
 /* CTA */
-.cta-sec{padding:64px 0;background:var(--porcelain)}
+.cta-sec{padding:16px 32px;background:var(--porcelain)}
 .cta-banner{background:var(--graphite);border-radius:32px;padding:56px;display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center;position:relative;overflow:hidden}
 .cta-banner::before{content:'§';position:absolute;right:-40px;top:-60px;font-family:'Geist',sans-serif;font-size:280px;color:rgba(230,103,72,.08);font-style:italic;font-weight:300;pointer-events:none}
 .cta-banner h2{font-size:clamp(28px,3vw,40px);color:var(--porcelain);margin-top:12px}
@@ -176,13 +179,16 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .cta-btn-sec{background:transparent;color:var(--porcelain);border:1px solid rgba(249,243,237,.3);padding:14px 32px;border-radius:999px;font-size:14px;cursor:pointer;text-align:center;text-decoration:none;display:block}
 .cta-note{text-align:center;color:rgba(249,243,237,.4);font-size:11px;font-family:'JetBrains Mono',monospace;margin-top:8px}
 
-.footer{background:var(--graphite);color:var(--porcelain);padding:48px 0 24px}
+.footer{background:var(--porcelain);padding:16px 32px 32px}
+.footer .container{background:var(--graphite);border-radius:24px;padding:48px 40px 28px;max-width:1280px;color:var(--porcelain)}
 .foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}
 .foot-col h5{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.5);margin-bottom:16px}
 .foot-col h5::before{content:'• ';color:var(--signal)}
 .foot-col a{display:block;color:rgba(249,243,237,.7);text-decoration:none;font-size:13.5px;padding:5px 0}
 .foot-col a:hover{color:var(--signal)}
 .foot-bottom{padding-top:24px;display:flex;justify-content:space-between;font-size:12px;color:rgba(249,243,237,.5)}
+section.boxed{padding:16px 32px}
+section.boxed .container{background:#fff;border:1.5px solid var(--porcelain-300);border-radius:24px;padding:32px;max-width:1280px;margin:0 auto}
 @media(max-width:900px){.hero-grid,.features-grid,.steps-grid,.profs-grid,.stats-grid,.app-grid,.cta-banner,.foot-top{grid-template-columns:1fr;gap:24px}.profs-grid{grid-template-columns:1fr 1fr}.stats-grid{grid-template-columns:1fr 1fr}h1{font-size:32px!important}h2{font-size:24px!important}}
 </style>
 <meta name="robots" content="index, follow">
@@ -200,7 +206,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 <meta name="twitter:description" content="Najděte práci v Německu, Rakousku nebo Nizozemsku jako svářeč, elektrikář, montér nebo zedník. Registrace zdarma. Stovky ověřených nabídek od firem z DE, AT, NL, BE.">
 <!-- alg-schema -->
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Domov", "item": "https://alogator.com/cz"}, {"@type": "ListItem", "position": 2, "name": "Pro pracovníky", "item": "https://alogator.com/cz/pro-pracovniky"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Je registrace naozaj zadarmo?", "acceptedAnswer": {"@type": "Answer", "text": "Áno, registrace je zadarmo navždy a platí to pre všetkých pracovníkov. Neplatíte žádné měsíční poplatky. Alogator vydělává na firmách, které za přístup k databázi pracovníků platí předplatné."}}, {"@type": "Question", "name": "Vidím název firmy před registrací?", "acceptedAnswer": {"@type": "Answer", "text": "Bez registrace vidíte profesi, lokalitu práce (město + země kde se pracuje), plat, podmínky a zemi sídla firmy (napr. 🇸🇰 slovenská firma). Konkrétní název firmy se odemkne po bezplatné registraci — je to ochrana platformy před přímým kontaktem mimo Alogátor."}}, {"@type": "Question", "name": "Potřebuji umět německy?", "acceptedAnswer": {"@type": "Answer", "text": "Závisí na nabídce. Mnohé firmy v DE/AT pracují se SK/CZ týmy a stačí slovenština nebo čeština na pracovišti. Některé pozice vyžadují němčinu (obvykle A2 nebo B1 pro přímý kontakt s německými kolegy). V každé nabídce je jasně uvedený jazykový požadavek."}}, {"@type": "Question", "name": "Kde reálně najdu práci přes Alogator?", "acceptedAnswer": {"@type": "Answer", "text": "Prevažná väčšina nabídek je z Nemecka (Bavorsko, NRW, Dolné Sasko) a Rakúska (Viedeň, Graz, Linz). Roste nám i Nizozemsko (Rotterdam, Eindhoven) a Belgie (Antverpy, Gent). Nabídky z SK/CZ jsou méně časté, ale také se objevují — zejména pro agentury hledající posily pro zahraniční projekty."}}, {"@type": "Question", "name": "Jak funguje moje dostupnost v kalendáři?", "acceptedAnswer": {"@type": "Answer", "text": "V mobilní appce zaznačíte dny/týdny kdy jste volní. Firmy s prémiovým předplatným vidí váš kalendář a mohou vás kontaktovat předem — například vás rezervují na červenec když je květen. Vy schvalujete nebo odmítáte každou poptávku. Nikto vás nemôže \"zabookovať\" bez vášho súhlasu."}}, {"@type": "Question", "name": "Co je PRO profil a jak ho získám?", "acceptedAnswer": {"@type": "Answer", "text": "PRO badge dostanete po ověření: nahráte certifikáty (např. svářeč certifikát, VDE, ČSN normy), přidáte alespoň jednu referenci a vyplníte celou pracovní historii. Ověření trvá 1–2 pracovní dny. PRO pracovníci dostávajú o 23 % viac dopytov a firmy im nabídekajú priemerne o 2–3 €/h vyššiu sadzbu."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Je registrace naozaj zdarma?", "acceptedAnswer": {"@type": "Answer", "text": "Áno, registrace je zdarma navždy a platí to pre všetkých pracovníkov. Neplatíte žádné měsíční poplatky. Alogator vydělává na firmách, které za přístup k databázi pracovníků platí předplatné."}}, {"@type": "Question", "name": "Vidím název firmy před registrací?", "acceptedAnswer": {"@type": "Answer", "text": "Bez registrace vidíte profesi, lokalitu práce (město + země kde se pracuje), plat, podmínky a zemi sídla firmy (napr. 🇸🇰 slovenská firma). Konkrétní název firmy se odemkne po bezplatné registraci — je to ochrana platformy před přímým kontaktem mimo Alogátor."}}, {"@type": "Question", "name": "Potřebuji umět německy?", "acceptedAnswer": {"@type": "Answer", "text": "Závisí na nabídce. Mnohé firmy v DE/AT pracují se SK/CZ týmy a stačí slovenština nebo čeština na pracovišti. Některé pozice vyžadují němčinu (obvykle A2 nebo B1 pro přímý kontakt s německými kolegy). V každé nabídce je jasně uvedený jazykový požadavek."}}, {"@type": "Question", "name": "Kde reálně najdu práci přes Alogator?", "acceptedAnswer": {"@type": "Answer", "text": "Prevažná väčšina nabídek je z Nemecka (Bavorsko, NRW, Dolné Sasko) a Rakúska (Viedeň, Graz, Linz). Roste nám i Nizozemsko (Rotterdam, Eindhoven) a Belgie (Antverpy, Gent). Nabídky z SK/CZ jsou méně časté, ale také se objevují — zejména pro agentury hledající posily pro zahraniční projekty."}}, {"@type": "Question", "name": "Jak funguje moje dostupnost v kalendáři?", "acceptedAnswer": {"@type": "Answer", "text": "V mobilní appce zaznačíte dny/týdny kdy jste volní. Firmy s prémiovým předplatným vidí váš kalendář a mohou vás kontaktovat předem — například vás rezervují na červenec když je květen. Vy schvalujete nebo odmítáte každou poptávku. Nikto vás nemôže \"zabookovať\" bez vášho súhlasu."}}, {"@type": "Question", "name": "Co je PRO profil a jak ho získám?", "acceptedAnswer": {"@type": "Answer", "text": "PRO badge dostanete po ověření: nahráte certifikáty (např. svářeč certifikát, VDE, ČSN normy), přidáte alespoň jednu referenci a vyplníte celou pracovní historii. Ověření trvá 1–2 pracovní dny. PRO pracovníci dostávajú o 23 % viac dopytov a firmy im nabídekajú priemerne o 2–3 €/h vyššiu sadzbu."}}]}</script>
 <!-- /alg-schema -->
 <link rel="stylesheet" href="/assets/mobile-nav.css">
 <script src="/assets/mobile-nav.js" defer></script>
@@ -231,9 +237,9 @@ em{font-style:italic;color:var(--signal);font-weight:500}
   <div class="container">
     <div class="hero-grid">
       <div class="hero-left">
-        <div class="badge"><span class="badge-dot"></span>312 nových nabídek tento týden</div>
+        <div class="badge"><span class="badge-dot"></span>1000 + nabídek tento týden</div>
         <h1>Práce v zahraničí. <em>Jednoduše.</em></h1>
-        <p class="lead">Stovky ověřených nabídek od firem z Německa, Rakouska, Nizozemska a Belgie. Registrace zdarma. První nabídku dostanete za hodiny.</p>
+        <p class="lead">1000 + nabídek od firem a předních agentur v EU. Založte si profil zdarma a firmy vás začnou samy kontaktovat.</p>
         <div class="hero-cta-row">
           <a href="/cz/stahnout-aplikaci" class="btn-pri">Stáhnout aplikaci →</a>
           <a href="/cz/nabidka-prace" class="btn-out">Podívat se na nabídky</a>
@@ -245,7 +251,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
             <span style="background:var(--yellow);color:var(--graphite)">D</span>
             <span style="background:var(--graphite-500)">+</span>
           </div>
-          3 047 pracovníků ze SK a CZ už na platformě
+          4000 + pracovníků už na platformě
         </div>
       </div>
 
@@ -328,43 +334,43 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 </section>
 
 <!-- FEATURES -->
-<section class="features-sec">
+<section class="features-sec boxed">
   <div class="container">
     <span class="eyebrow" style="display:block;text-align:center;margin-bottom:10px">• proč alogator</span>
     <h2>Vše pro vaši <em>kariéru v zahraničí</em></h2>
     <div class="features-grid">
       <div class="feature-card">
-        <div class="feature-icon">🆓</div>
-        <h3>Registrace navždy zdarma</h3>
-        <p>Pracovníci neplatí nic. Vytvoříte profil, zadáte dostupnost a čekáte na nabídky. Žádné skryté poplatky.</p>
+        <div class="feature-icon"></div>
+        <h3>Pro pracovníky kompletně zdarma</h3>
+        <p>Vytvoříte si profil, zadáte svou cenu, dostupnost a nabídky chodí za vámi.</p>
         <span class="feature-tag free">Zdarma</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">📲</div>
+        <div class="feature-icon"></div>
         <h3>Mobilní aplikace</h3>
         <p>Nabídky, notifikace a váš kalendář dostupnosti v jedné appce. Dostupná pro iOS i Android. Spravujte kariéru z mobilu, kdekoliv jste.</p>
         <span class="feature-tag free">Zdarma</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">🔔</div>
+        <div class="feature-icon"></div>
         <h3>Notifikace na míru</h3>
         <p>Nastavíte si profesi, lokalitu a plat — Alogator vás upozorní když přijde nabídka která sedí. Nic nepřeskenujete, nevynecháte.</p>
         <span class="feature-tag free">Zdarma</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">📅</div>
+        <div class="feature-icon"></div>
         <h3>Kalendář dostupnosti</h3>
-        <p>Zadáte kdy jste volní a firmy vás mohou rezervovat dopředu. Žádné telefonování, žádné "zavolejte později". Vaše dostupnost je viditelná v real-time.</p>
+        <p>V aplikaci jedním klikem označíte, kdy máte volno a kdy jste k dispozici. Firmy vás díky tomu osloví přesně tehdy, kdy to má smysl.</p>
         <span class="feature-tag free">Zdarma</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">✅</div>
+        <div class="feature-icon"></div>
         <h3>Ověřený profil = vyšší sazba</h3>
         <p>Nahráte certifikáty, reference, pracovní historii. PRO profily dostávají o 23 % více nabídek a firmy jim nabízejí vyšší hodinovou sazbu.</p>
         <span class="feature-tag free">Zdarma</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">🌍</div>
+        <div class="feature-icon"></div>
         <h3>Vícejazyčná platforma</h3>
         <p>Profil v češtině nebo slovenštině. Nabídky přeložené do vašeho jazyka. Komunikace s firmami přes platformu — nepotřebujete němčinu na hledání práce.</p>
         <span class="feature-tag free">Zdarma</span>
@@ -374,28 +380,28 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 </section>
 
 <!-- HOW IT WORKS -->
-<section class="how-sec">
+<section class="how-sec boxed">
   <div class="container">
     <span class="eyebrow" style="display:block;text-align:center;margin-bottom:10px">• jak to funguje</span>
     <h2>Od registrace k první nabídce za <em>hodiny</em></h2>
     <div class="steps-grid">
       <div class="step">
         <div class="step-num">KROK 01</div>
-        <div style="font-size:32px;margin-bottom:14px">👤</div>
+        <div style="font-size:32px;margin-bottom:14px"></div>
         <h3>Vytvořte profil</h3>
         <p>Zdarma, za 5 minút. Profese, certifikáty, jazyky, hodinová sazba. Čím více info, tím lepší nabídky dostanete.</p>
         <div class="step-arrow">→</div>
       </div>
       <div class="step">
         <div class="step-num">KROK 02</div>
-        <div style="font-size:32px;margin-bottom:14px">📅</div>
+        <div style="font-size:32px;margin-bottom:14px"></div>
         <h3>Zadejte dostupnost</h3>
         <p>V mobilní appce zaznačíte kdy jste volní. Firmy v Německu, Rakousku a Nizozemsku vás vidí a mohou vám napsat.</p>
         <div class="step-arrow">→</div>
       </div>
       <div class="step">
         <div class="step-num">KROK 03</div>
-        <div style="font-size:32px;margin-bottom:14px">💼</div>
+        <div style="font-size:32px;margin-bottom:14px"></div>
         <h3>Přijměte nabídku</h3>
         <p>Dostanete notifikaci, prohlédnete si detaily nabídky a pokud sedí — odešlete zájem. Firma vás kontaktuje přímo.</p>
       </div>
@@ -410,42 +416,42 @@ em{font-style:italic;color:var(--signal);font-weight:500}
     <h2>Hledáme pracovníky <em>ve všech oborech</em></h2>
     <div class="profs-grid">
       <a href="/cz/nabidka-prace/svarec" class="prof-card">
-        <div class="prof-icon">🔥</div>
+        <div class="prof-icon"></div>
         <div class="prof-name">Svářeč</div>
         <div class="prof-count">84 nabídek</div>
       </a>
       <a href="/cz/nabidka-prace/elektrikar" class="prof-card">
-        <div class="prof-icon">⚡</div>
+        <div class="prof-icon"></div>
         <div class="prof-name">Elektrikář</div>
         <div class="prof-count">67 nabídek</div>
       </a>
       <a href="/cz/nabidka-prace/zednik" class="prof-card">
-        <div class="prof-icon">🧱</div>
+        <div class="prof-icon"></div>
         <div class="prof-name">Zedník</div>
         <div class="prof-count">51 nabídek</div>
       </a>
       <a href="/cz/nabidka-prace/tesar" class="prof-card">
-        <div class="prof-icon">🔨</div>
+        <div class="prof-icon"></div>
         <div class="prof-name">Tesař</div>
         <div class="prof-count">43 nabídek</div>
       </a>
       <a href="/cz/nabidka-prace" class="prof-card">
-        <div class="prof-icon">🔩</div>
+        <div class="prof-icon"></div>
         <div class="prof-name">Montér</div>
         <div class="prof-count">78 nabídek</div>
       </a>
       <a href="/cz/nabidka-prace" class="prof-card">
-        <div class="prof-icon">🏗️</div>
+        <div class="prof-icon"></div>
         <div class="prof-name">Bagrista</div>
         <div class="prof-count">29 nabídek</div>
       </a>
       <a href="/cz/nabidka-prace" class="prof-card">
-        <div class="prof-icon">🔧</div>
+        <div class="prof-icon"></div>
         <div class="prof-name">Instalatér</div>
         <div class="prof-count">34 nabídek</div>
       </a>
       <a href="/cz/nabidka-prace" class="prof-card">
-        <div class="prof-icon">➕</div>
+        <div class="prof-icon"></div>
         <div class="prof-name">Všetky obory</div>
         <div class="prof-count">312 nabídek</div>
       </a>
@@ -464,7 +470,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
     <p class="stats-sub">Reálná čísla z platformy — aktualizovaná každý den.</p>
     <div class="stats-grid">
       <div class="stat-card">
-        <div class="stat-num"><em>3 047</em></div>
+        <div class="stat-num"><em>4 000 +</em></div>
         <div class="stat-lbl">ověřených pracovníků<br>na platformě</div>
       </div>
       <div class="stat-card">
@@ -484,7 +490,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 </section>
 
 <!-- APP DOWNLOAD -->
-<section class="app-sec">
+<section class="app-sec boxed">
   <div class="container">
     <div class="app-grid">
       <div class="app-left">
@@ -493,14 +499,14 @@ em{font-style:italic;color:var(--signal);font-weight:500}
         <p>Spravujte dostupnost, prohlížejte nabídky a komunikujte s firmami odkudkoliv — z domu, ze staveniště, z vlaku. Aplikace je zdarma pro iOS i Android.</p>
         <div class="app-badges">
           <a href="/cz/stahnout-aplikaci" class="app-badge">
-            <div class="app-badge-icon">🍎</div>
+            <div class="app-badge-icon"></div>
             <div class="app-badge-text">
               <span class="app-badge-sub">Stáhnout z</span>
               <span class="app-badge-name">App Store</span>
             </div>
           </a>
           <a href="/cz/stahnout-aplikaci" class="app-badge">
-            <div class="app-badge-icon">🤖</div>
+            <div class="app-badge-icon"></div>
             <div class="app-badge-text">
               <span class="app-badge-sub">Stáhnout z</span>
               <span class="app-badge-name">Google Play</span>
@@ -515,21 +521,21 @@ em{font-style:italic;color:var(--signal);font-weight:500}
             <div class="app-phone-badge">Nové</div>
           </div>
           <div class="app-notif">
-            <div class="app-notif-icon">💼</div>
+            <div class="app-notif-icon"></div>
             <div>
               <div class="app-notif-text"><span class="app-notif-bold">Nová nabídka pro vás:</span> Svářeč MIG/MAG, Emsland DE — 30 €/h, nástup červenec 2026</div>
               <div class="app-notif-time">před 12 min</div>
             </div>
           </div>
           <div class="app-notif">
-            <div class="app-notif-icon">⚡</div>
+            <div class="app-notif-icon"></div>
             <div>
               <div class="app-notif-text"><span class="app-notif-bold">Poptávka na vás:</span> Firma z Vídně má zájem o váš profil — elektrikář VDE</div>
               <div class="app-notif-time">před 2 hod</div>
             </div>
           </div>
           <div class="app-notif">
-            <div class="app-notif-icon">📅</div>
+            <div class="app-notif-icon"></div>
             <div>
               <div class="app-notif-text"><span class="app-notif-bold">Kalendář:</span> Vaše dostupnost od 1. července je potvrzena — 3 firmy to vidí</div>
               <div class="app-notif-time">dnes ráno</div>
@@ -542,36 +548,42 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 </section>
 
 <!-- FAQ -->
-<section class="faq-sec">
-  <div class="container">
-    <span class="eyebrow" style="display:block;text-align:center;margin-bottom:10px">• otázky</span>
-    <h2>Časté otázky <em>pracovníků</em></h2>
-    <div class="faq-list">
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Je registrace naozaj zadarmo?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Áno, registrace je zadarmo navždy a platí to pre všetkých pracovníkov. Neplatíte žádné měsíční poplatky. Alogator vydělává na firmách, které za přístup k databázi pracovníků platí předplatné.</div></div>
-      </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Vidím název firmy před registrací?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Bez registrace vidíte profesi, lokalitu práce (město + země kde se pracuje), plat, podmínky a zemi sídla firmy (napr. 🇸🇰 slovenská firma). Konkrétní název firmy se odemkne po bezplatné registraci — je to ochrana platformy před přímým kontaktem mimo Alogátor.</div></div>
-      </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Potřebuji umět německy?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Závisí na nabídce. Mnohé firmy v DE/AT pracují se SK/CZ týmy a stačí slovenština nebo čeština na pracovišti. Některé pozice vyžadují němčinu (obvykle A2 nebo B1 pro přímý kontakt s německými kolegy). V každé nabídce je jasně uvedený jazykový požadavek.</div></div>
-      </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Kde reálně najdu práci přes Alogator?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Prevažná väčšina nabídek je z Nemecka (Bavorsko, NRW, Dolné Sasko) a Rakúska (Viedeň, Graz, Linz). Roste nám i Nizozemsko (Rotterdam, Eindhoven) a Belgie (Antverpy, Gent). Nabídky z SK/CZ jsou méně časté, ale také se objevují — zejména pro agentury hledající posily pro zahraniční projekty.</div></div>
-      </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Jak funguje moje dostupnost v kalendáři?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">V mobilní appce zaznačíte dny/týdny kdy jste volní. Firmy s prémiovým předplatným vidí váš kalendář a mohou vás kontaktovat předem — například vás rezervují na červenec když je květen. Vy schvalujete nebo odmítáte každou poptávku. Nikdo vás nemůže "zabookovat" bez vašeho souhlasu.</div></div>
-      </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Co je PRO profil a jak ho získám?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">PRO badge dostanete po ověření: nahráte certifikáty (např. svářeč certifikát, VDE, ČSN normy), přidáte alespoň jednu referenci a vyplníte celou pracovní historii. Ověření trvá 1–2 pracovní dny. PRO pracovníci dostávajú o 23 % viac dopytov a firmy im nabídekajú priemerne o 2–3 €/h vyššiu sadzbu.</div></div>
-      </div>
-    </div>
+<section class="faq-sec boxed" style="padding:80px 0;background:var(--porcelain-200)">
+  <div class="container" style="max-width:1280px;margin:0 auto;padding:0 24px">
+    <div class="eyebrow">FAQ</div>
+    <h2 style="font:500 clamp(28px,3vw,40px)/1.1 'Geist';letter-spacing:-0.025em;margin:14px 0 48px">Časté otázky <em>pracovníků</em></h2>
+    <div class="hiw-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">01</div>
+    <h4 style="font-size:13px">Je registrace naozaj zdarma?</h4>
+    <p style="font-size:12px">Áno, registrace je zdarma navždy a platí to pre všetkých pracovníkov. Neplatíte žádné měsíční poplatky. Alogator vydělává na firmách, které za přístup k databázi pracovníků platí předplatné.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">02</div>
+    <h4 style="font-size:13px">Vidím název firmy před registrací?</h4>
+    <p style="font-size:12px">Bez registrace vidíte profesi, lokalitu práce (město + země kde se pracuje), plat, podmínky a zemi sídla firmy (napr. 🇸🇰 slovenská firma). Konkrétní název firmy se odemkne po bezplatné registraci — je to ochrana platformy před přímým kontaktem mimo Alogátor.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">03</div>
+    <h4 style="font-size:13px">Potřebuji umět německy?</h4>
+    <p style="font-size:12px">Závisí na nabídce. Mnohé firmy v DE/AT pracují se SK/CZ týmy a stačí slovenština nebo čeština na pracovišti. Některé pozice vyžadují němčinu (obvykle A2 nebo B1 pro přímý kontakt s německými kolegy). V každé nabídce je jasně uvedený jazykový požadavek.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">04</div>
+    <h4 style="font-size:13px">Kde reálně najdu práci přes Alogator?</h4>
+    <p style="font-size:12px">Prevažná väčšina nabídek je z Nemecka (Bavorsko, NRW, Dolné Sasko) a Rakúska (Viedeň, Graz, Linz). Roste nám i Nizozemsko (Rotterdam, Eindhoven) a Belgie (Antverpy, Gent). Nabídky z SK/CZ jsou méně časté, ale také se objevují — zejména pro agentury hledající posily pro zahraniční projekty.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">05</div>
+    <h4 style="font-size:13px">Jak funguje moje dostupnost v kalendáři?</h4>
+    <p style="font-size:12px">V mobilní appce zaznačíte dny/týdny kdy jste volní. Firmy s prémiovým předplatným vidí váš kalendář a mohou vás kontaktovat předem — například vás rezervují na červenec když je květen. Vy schvalujete nebo odmítáte každou poptávku. Nikdo vás nemůže "zabookovat" bez vašeho souhlasu.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">06</div>
+    <h4 style="font-size:13px">Co je PRO profil a jak ho získám?</h4>
+    <p style="font-size:12px">PRO badge dostanete po ověření: nahráte certifikáty (např. svářeč certifikát, VDE, ČSN normy), přidáte alespoň jednu referenci a vyplníte celou pracovní historii. Ověření trvá 1–2 pracovní dny. PRO pracovníci dostávajú o 23 % viac dopytov a firmy im nabídekajú priemerne o 2–3 €/h vyššiu sadzbu.</p>
+  </div>
+</div>
   </div>
 </section>
 

@@ -81,8 +81,14 @@ body {
 
 /* HERO */
 .hero {
-  padding: 64px 0 72px;
-  border-bottom: 1px solid var(--porcelain-300);
+  padding: 16px 32px;
+  background: var(--porcelain);
+}
+.hero .container {
+  background: #fff;
+  border: 1.5px solid var(--porcelain-300);
+  border-radius: 24px;
+  padding: 64px 32px 72px;
 }
 .hero-grid {
   display: grid; grid-template-columns: 1fr 420px;
@@ -240,7 +246,7 @@ body {
 .step p { font: 400 14px/1.55 'Inter'; color: var(--graphite-500); }
 
 /* DOWNLOAD CTA */
-.download-cta { padding: 0 0 80px; }
+.download-cta { padding: 16px 32px; }
 .download-box {
   background: var(--graphite); border-radius: var(--r-lg);
   padding: 56px 56px; display: grid;
@@ -287,8 +293,12 @@ body {
 
 /* FOOTER */
 .footer {
-  background: var(--graphite); color: var(--porcelain);
-  padding: 48px 0 24px;
+  background: var(--porcelain);
+  padding: 16px 32px 32px;
+}
+.footer .container {
+  background: var(--graphite); border-radius: 24px;
+  padding: 48px 40px 28px; max-width: 1280px; color: var(--porcelain);
 }
 .foot-grid {
   display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -318,6 +328,8 @@ body {
   letter-spacing: 0.05em;
 }
 
+section.boxed{padding:16px 32px}
+section.boxed .container{background:#fff;border:1.5px solid var(--porcelain-300);border-radius:24px;padding:32px;max-width:1280px;margin:0 auto}
 @media (max-width: 1024px) {
   .hero-grid { grid-template-columns: 1fr; gap: 48px; }
   .phone { order: -1; }
@@ -463,7 +475,7 @@ body {
 </section>
 
 <!-- FEATURES -->
-<section class="features">
+<section class="features boxed">
   <div class="container">
     <div class="section-head">
       <div class="eyebrow">Co appka umí</div>
@@ -504,7 +516,7 @@ body {
 </section>
 
 <!-- STEPS -->
-<section class="steps">
+<section class="steps boxed">
   <div class="container">
     <div class="steps-grid">
       <div class="step">
@@ -524,7 +536,7 @@ body {
 </section>
 
 <!-- DOWNLOAD CTA -->
-<section class="download-cta">
+<section class="download-cta boxed">
   <div class="container">
     <div class="download-box">
       <div>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alogator — Marketplace pre pracovníkov, agentúry a firmy</title>
-<meta name="description" content="Marketplace stavebných a priemyselných pracovníkov. 3 047 pracovníkov, 642 firiem a agentúr. Spravujte vlastné kapacity, hľadajte zákazky alebo doplňujte tím v SK, CZ, DE, AT, NL, BE.">
+<meta name="description" content="Marketplace stavebných a priemyselných pracovníkov. 4 000 + pracovníkov, 642 firiem a agentúr. Spravujte vlastné kapacity, hľadajte zákazky alebo doplňujte tím v SK, CZ, DE, AT, NL, BE.">
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -321,10 +321,10 @@ body.mode-b2c .hero-meta-item.mode-c{display:flex}
   position:relative;height:620px;
 }
 .float-card{
-  position:absolute;background:var(--graphite);color:var(--porcelain);
-  border-radius:20px;padding:16px;
+  position:absolute;
   width:290px;
   box-shadow:0 30px 60px -20px rgba(26,29,30,.35);
+  border-radius:20px;
 }
 .fc-1{top:0;left:0;transform:rotate(-2deg);animation:float1 7s ease-in-out infinite}
 .fc-2{top:210px;right:0;transform:rotate(1.5deg);animation:float2 8s ease-in-out infinite}
@@ -333,58 +333,31 @@ body.mode-b2c .hero-meta-item.mode-c{display:flex}
 @keyframes float2{0%,100%{transform:rotate(2.5deg) translateY(0)}50%{transform:rotate(2.5deg) translateY(-10px)}}
 @keyframes float3{0%,100%{transform:rotate(-1.5deg) translateY(0)}50%{transform:rotate(-1.5deg) translateY(-8px)}}
 
-/* Float card inner structure — dark version of worker-card */
-.fc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:10px}
-.fc-avatar-wrap{display:flex;align-items:center;gap:10px}
-.fc-avatar{
-  width:40px;height:40px;border-radius:10px;
-  display:grid;place-items:center;
-  font:600 16px 'Geist';color:var(--porcelain);
-  flex-shrink:0;position:relative;
-}
-.fc-avatar-flag{position:absolute;bottom:-3px;right:-3px;font-size:10px;line-height:1}
-.fc-name{font:600 14px 'Geist';letter-spacing:-0.01em;color:var(--porcelain)}
-.fc-profession{font:400 11.5px 'Inter';color:rgba(249,243,237,.55);margin-top:1px}
-.fc-badge-avail{
-  font:500 10px 'Inter';
-  padding:2px 7px;border-radius:999px;
-  white-space:nowrap;
-}
-.fc-badge-avail.green{color:#4ADE80;background:rgba(74,222,128,.12)}
-.fc-badge-avail.soon{color:var(--signal);background:rgba(230,103,72,.12)}
-
-.fc-rate{display:flex;align-items:baseline;gap:3px;margin-bottom:8px}
-.fc-rate-prefix{font:400 11px 'Inter';color:rgba(249,243,237,.5)}
-.fc-rate-num{font:500 22px 'Geist';letter-spacing:-0.025em;color:var(--porcelain)}
-.fc-rate-unit{font:400 11px 'Inter';color:rgba(249,243,237,.5)}
-.fc-rate-stars{margin-left:auto;font:500 11px 'Inter';color:rgba(249,243,237,.6)}
-
-.fc-picts{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
-.fc-pict{
-  display:flex;align-items:center;gap:4px;
-  font:400 10.5px 'Inter';color:rgba(249,243,237,.6);
-  background:rgba(249,243,237,.06);
-  padding:3px 8px;border-radius:999px;
-}
-.fc-pict svg{flex-shrink:0;stroke:rgba(249,243,237,.45)}
-
-.fc-skill-tags{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:8px}
-.fc-skill-tag{
-  background:rgba(230,103,72,.15);color:var(--signal);
-  font:500 9px 'JetBrains Mono';letter-spacing:0.03em;
-  padding:2px 7px;border-radius:999px;
-}
-
-.fc-bottom-row{
-  display:flex;align-items:center;justify-content:space-between;
-  padding-top:8px;border-top:1px solid rgba(249,243,237,.08);
-}
-.fc-lock-info{font:400 10.5px 'Inter';color:rgba(249,243,237,.5);display:flex;align-items:center;gap:4px}
-.fc-cta{
-  background:var(--signal);color:var(--porcelain);
-  border:0;padding:5px 12px;border-radius:999px;
-  font:500 10.5px 'Geist';cursor:pointer;
-}
+/* Dark variant for hero float cards */
+.float-card .wcard{background:var(--graphite);border-color:rgba(249,243,237,.08);padding:16px}
+.float-card .wcard:hover{transform:none;box-shadow:none;border-color:rgba(249,243,237,.15)}
+.float-card .wcard-name{color:var(--porcelain)}
+.float-card .wcard-name.locked::after{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(249,243,237,.5)' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='11' width='18' height='11' rx='2'/><path d='M7 11V7a5 5 0 0110 0v4'/></svg>")}
+.float-card .wcard-profession{color:rgba(249,243,237,.55)}
+.float-card .wcard-badge-avail.available{background:rgba(74,222,128,.12);color:#4ADE80}
+.float-card .wcard-badge-avail.available::before{background:#4ADE80}
+.float-card .wcard-badge-avail.unavailable{background:rgba(230,103,72,.12);color:var(--signal)}
+.float-card .wcard-rate-prefix{color:rgba(249,243,237,.5)}
+.float-card .wcard-rate-num{color:var(--porcelain)}
+.float-card .wcard-rate-unit{color:rgba(249,243,237,.5)}
+.float-card .wcard-rating{color:rgba(249,243,237,.6)}
+.float-card .wcard-picto{border-color:rgba(249,243,237,.08)}
+.float-card .wcard-picto-item{color:rgba(249,243,237,.6)}
+.float-card .wcard-picto-icon{background:rgba(249,243,237,.08);color:rgba(249,243,237,.5)}
+.float-card .wcard-picto-val{color:rgba(249,243,237,.8)}
+.float-card .wcard-picto-item.pro .wcard-picto-icon{background:var(--yellow);color:var(--graphite)}
+.float-card .wcard-foot{border-color:rgba(249,243,237,.08)}
+.float-card .wcard-tag{background:rgba(230,103,72,.15);border-color:transparent;color:var(--signal)}
+.float-card .wcard-progress{border-color:rgba(249,243,237,.08)}
+.float-card .wcard-progress-bar{background:rgba(249,243,237,.1)}
+.float-card .wcard-progress-label{color:rgba(249,243,237,.5)}
+.float-card .wcard-progress-label b{color:rgba(249,243,237,.7)}
+.float-card .act-dot{border-color:var(--graphite)}
 
 /* ============ B2C PHONE SHOWCASE — REALISTIC 3D ============ */
 .phone-showcase{
@@ -711,17 +684,6 @@ body.mode-b2c .profession-strip.mode-c{display:block}
   color:var(--signal);font-weight:500;
 }
 .ps-more:hover{background:var(--signal);color:var(--porcelain);border-color:var(--signal)}
-.fc-bottom{
-  display:flex;justify-content:space-between;align-items:center;margin-top:14px;
-  padding-top:12px;border-top:1px solid rgba(249,243,237,.08);
-}
-.fc-price{font-family:'Geist';font-weight:500;font-size:19px;color:var(--porcelain)}
-.fc-price span{font-size:11px;color:rgba(249,243,237,.5);font-family:'Inter';font-weight:400}
-.fc-action{
-  font-size:11px;color:rgba(249,243,237,.7);
-  background:rgba(249,243,237,.08);padding:5px 10px;border-radius:999px;
-}
-
 /* Hero deco */
 .hero-deco{
   position:absolute;font-family:'Geist';font-weight:500;
@@ -1124,7 +1086,6 @@ section.boxed .container{
 .wcard-name-row{
   display:flex;align-items:center;gap:7px;
 }
-.wcard-origin-flag{display:none}
 .wcard-emoji-flag,.cal-emoji-flag{font-size:14px;line-height:1;flex-shrink:0}
 .wcard-name{
   font-family:'Geist',sans-serif;font-weight:500;font-size:16px;
@@ -1238,29 +1199,6 @@ section.boxed .container{
   font-size:11.5px;color:var(--graphite-500);margin-top:10px;
 }
 .load-more-stats a{color:var(--graphite);text-decoration:underline;text-underline-offset:2px;cursor:pointer}
-
-/* ============ WORKER GRID ============ */
-.worker-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
-}
-.worker-card{
-  background:var(--graphite);color:var(--porcelain);
-  border-radius:24px;padding:22px;
-  transition:transform .2s ease, box-shadow .2s ease;
-  cursor:pointer;
-}
-.worker-card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 20px 40px -10px rgba(26,29,30,.25);
-}
-.worker-card.featured{background:var(--signal)}
-.worker-card.featured .fc-meta{color:rgba(249,243,237,.85)}
-.worker-card.featured .fc-rating{background:var(--porcelain);color:var(--signal)}
-.worker-card.featured .fc-skill-seg{background:rgba(249,243,237,.25)}
-.worker-card.featured .fc-skill-seg.on{background:var(--porcelain)}
-.worker-card.featured .fc-tag{background:rgba(26,29,30,.2);color:var(--porcelain)}
-.worker-card.featured .fc-bottom{border-top-color:rgba(249,243,237,.2)}
-.worker-card.featured .fc-action{background:rgba(26,29,30,.2)}
 
 /* ============ CALENDAR PREVIEW ============ */
 .calendar-section{
@@ -1735,11 +1673,11 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
 <meta property="og:site_name" content="Alogator">
 <meta property="og:locale" content="sk_SK">
 <meta property="og:title" content="Alogator — Marketplace pre pracovníkov, agentúry a firmy">
-<meta property="og:description" content="Marketplace stavebných a priemyselných pracovníkov. 3 047 pracovníkov, 642 firiem a agentúr. Spravujte vlastné kapacity, hľadajte zákazky alebo doplňujte tím v SK, CZ, DE, AT, NL, BE.">
+<meta property="og:description" content="Marketplace stavebných a priemyselných pracovníkov. 4 000 + pracovníkov, 642 firiem a agentúr. Spravujte vlastné kapacity, hľadajte zákazky alebo doplňujte tím v SK, CZ, DE, AT, NL, BE.">
 <meta property="og:url" content="https://alogator.com/sk">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Alogator — Marketplace pre pracovníkov, agentúry a firmy">
-<meta name="twitter:description" content="Marketplace stavebných a priemyselných pracovníkov. 3 047 pracovníkov, 642 firiem a agentúr. Spravujte vlastné kapacity, hľadajte zákazky alebo doplňujte tím v SK, CZ, DE, AT, NL, BE.">
+<meta name="twitter:description" content="Marketplace stavebných a priemyselných pracovníkov. 4 000 + pracovníkov, 642 firiem a agentúr. Spravujte vlastné kapacity, hľadajte zákazky alebo doplňujte tím v SK, CZ, DE, AT, NL, BE.">
 <!-- alg-schema -->
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Platí sa za používanie aplikácie niečo?", "acceptedAnswer": {"@type": "Answer", "text": "Aplikácia pre pracovníkov je úplne zdarma — registrácia, profil, vyhľadávanie ponúk, push notifikácie aj kontakt s firmami. Pripravujeme voliteľné PREMIUM členstvo s lepšou viditeľnosťou v listingoch (lepšie pozície, prioritné zobrazenie)."}}, {"@type": "Question", "name": "Potrebujem vedieť cudzí jazyk, ak chcem ísť na projekt do zahraničia?", "acceptedAnswer": {"@type": "Answer", "text": "Nie vždy. Pri partiách často stačí, ak jeden člen tímu disponuje jazykom (zvyčajne nemčina). Jazykové požiadavky sú vždy transparentne uvedené v detaile ponuky — vidíte vopred, či sa hodíte. Pre individuálnych pracovníkov je odporúčaná aspoň základná úroveň jazyka krajiny."}}, {"@type": "Question", "name": "Mám istotu, že dostanem za prácu zaplatené?", "acceptedAnswer": {"@type": "Answer", "text": "Alogator spolupracuje len s overenými firmami. Pred kontaktom vidíte hodnotenia od iných pracovníkov, ktorí s firmou už spolupracovali. Pri problémoch máte k dispozícii náš support tím. Faktúry a zmluvy si môžete archivovať priamo v aplikácii."}}, {"@type": "Question", "name": "Ako rýchlo môže firma kontaktovať môj profil?", "acceptedAnswer": {"@type": "Answer", "text": "Hneď ako vyplníte profil, ste viditeľní pre firmy. Priemerný čas do prvej ponuky je 3–7 dní pre dostupných pracovníkov. Top profesie (zvárač, elektrikár, montér) dostávajú prvé oslovenie už do 24 hodín."}}, {"@type": "Question", "name": "Dá sa pracovať cez Alogator na živnosť?", "acceptedAnswer": {"@type": "Answer", "text": "Áno, Alogator je primárne určený pre SZČO. V profile si nastavíte typ úväzku (živnosť / HPP) a vidíte len ponuky, ktoré sedia. Faktúry pre firmy si môžete vystavovať priamo cez aplikáciu."}}, {"@type": "Question", "name": "Je ubytovanie zahrnuté v ponukách v zahraničí?", "acceptedAnswer": {"@type": "Answer", "text": "Často áno. V detaile každej ponuky vidíte, či firma poskytuje ubytovanie zdarma, čiastočne prispieva alebo si ho pracovník hradí sám. Filter \"Ubytovanie zdarma\" je k dispozícii vo vyhľadávaní."}}, {"@type": "Question", "name": "Koľko stojí pre firmu Alogator?", "acceptedAnswer": {"@type": "Answer", "text": "Máme modulárny cenník v 5 úrovniach — Free (0 €, len inzeráty), CRM (99 €, vlastné kontakty), Kapacity (199 €, kalendár vlastných ľudí), Alogator (499 €, prístup k celej databáze) a Enterprise (na mieru). Platíte len za to, čo používate."}}, {"@type": "Question", "name": "Ako rýchlo nájdem prvého pracovníka?", "acceptedAnswer": {"@type": "Answer", "text": "Priemerný čas od registrácie po prvý kontakt je 24 hodín. Top profesie (zvárač, elektrikár, montér) sú v databáze stovkami — okamžitý prístup, žiadne čakanie na životopisy."}}, {"@type": "Question", "name": "Sú pracovníci overení?", "acceptedAnswer": {"@type": "Answer", "text": "Áno. Každý profil prechádza kontrolou — overujeme identitu, certifikáty, predchádzajúce skúsenosti. Premium pracovníci majú navyše video prezentáciu a hodnotenia od iných firiem."}}, {"@type": "Question", "name": "Funguje Alogator aj v zahraničí?", "acceptedAnswer": {"@type": "Answer", "text": "Áno. Aktuálne má Alogator pracovníkov dostupných pre Slovensko, Česko, Nemecko, Rakúsko, Belgicko, Holandsko, Švajčiarsko a ďalšie EÚ krajiny. Firma v DE/AT môže okamžite kontaktovať SK/CZ remeselníkov."}}, {"@type": "Question", "name": "Ako funguje kalendár dostupnosti?", "acceptedAnswer": {"@type": "Answer", "text": "Každý pracovník si v appke nastavuje svoju dostupnosť po týždňoch. Vidíte v real-time, kto je voľný kedy a môžete plánovať projekty týždne dopredu. Žiadne dvojité rezervácie — systém upozorní pri konflikte."}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Alogator", "url": "https://alogator.com/sk", "description": "Marketplace prepájajúci stavebných pracovníkov a firmy v SK, CZ, DE, AT, NL a BE.", "areaServed": ["SK", "CZ", "DE", "AT", "NL", "BE"]}</script>
@@ -1802,7 +1740,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
         <span class="eyebrow mode-c" style="color:rgba(255,255,255,.7)">hľadám prácu</span>
 
         <!-- B2B headline -->
-        <h1 class="mode-b">Inzerujte zadarmo.<br>Platíte len za <em>reálny výsledok.</em></h1>
+        <h1 class="mode-b">Inzerujte zdarma.<br>Platíte len za <em>reálny výsledok.</em></h1>
 
         <!-- B2B profession chips (color-coded, klikateľné do databázy) -->
         <div class="hero-chips mode-b">
@@ -1840,11 +1778,11 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
         </div>
 
         <p class="hero-lead mode-b">
-          Pridajte inzerát alebo dopyt bez rizika. Získajte prístup k 3 047 overeným remeselníkom a popredným agentúram s live kalendárom dostupnosti.
+          Pridajte inzerát alebo dopyt bez rizika. Získajte prístup k 4 000 + overeným remeselníkom a popredným agentúram s live kalendárom dostupnosti.
         </p>
 
         <!-- B2C headline -->
-        <h1 class="mode-c">1000 + pracovných ponúk<br>od <em>top firiem a agentúr v Európe</em></h1>
+        <h1 class="mode-c">1000 + pracovných ponúk<br>od <em>top firiem v Európe</em></h1>
 
         <!-- B2C profession chips (color-coded) -->
         <div class="hero-chips mode-c">
@@ -1935,7 +1873,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="hero-meta-item">
             <span class="live-dot"></span>
             <span class="mode-b inline"><strong>147</strong>&nbsp;pracovníkov dostupných tento týždeň</span>
-            <span class="mode-c inline"><strong>730</strong>&nbsp;aktívnych ponúk práve teraz</span>
+            <span class="mode-c inline"><strong>1000 +</strong>&nbsp;aktívnych ponúk práve teraz</span>
           </div>
           <div class="hero-meta-item mode-c inline">
             <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="12" height="9" rx="1"/><path d="M5 6V4a3 3 0 016 0v2"/></svg>
@@ -1948,102 +1886,159 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
       <div class="hero-showcase mode-b">
         <!-- Float card 1 — Marek N. -->
         <div class="float-card fc-1">
-          <div class="fc-top">
-            <div class="fc-avatar-wrap">
-              <div class="fc-avatar" style="background:#2A6496;">M<span class="fc-avatar-flag"></span></div>
-              <div>
-                <div class="fc-name">Marek N.</div>
-                <div class="fc-profession">Elektrikár · ●●●●○</div>
+          <div class="wcard">
+            <div class="wcard-badge-avail available">Dostupný od 23.5.</div>
+            <div class="wcard-head">
+              <div class="wcard-avatar-wrap"><div class="wcard-avatar a-signal">M</div><span class="act-dot green"></span></div>
+              <div class="wcard-meta">
+                <div class="wcard-name-row">
+                  <span class="wcard-emoji-flag">🇸🇰</span>
+                  <div class="wcard-name locked">Marek N.</div>
+                </div>
+                <div class="wcard-profession">Elektrikár · 8 rokov praxe</div>
               </div>
             </div>
-            <span class="fc-badge-avail green">Dostupný od 23.5.</span>
-          </div>
-          <div class="fc-rate">
-            <span class="fc-rate-prefix">od:</span>
-            <span class="fc-rate-num">30 €</span>
-            <span class="fc-rate-unit">/ hod</span>
-            <span class="fc-rate-stars">★ 5.0 · 12 hodnotení</span>
-          </div>
-          <div class="fc-picts">
-            <span class="fc-pict"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 014 10 15 15 0 01-4 10 15 15 0 01-4-10 15 15 0 014-10z"/></svg>DE · EN</span>
-            <span class="fc-pict"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>Bilfinger</span>
-            <span class="fc-pict"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>8 rokov</span>
-            <span class="fc-pict"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>PRO</span>
-          </div>
-          <div class="fc-skill-tags">
-            <span class="fc-skill-tag">MNS</span>
-            <span class="fc-skill-tag">NN/VN</span>
-            <span class="fc-skill-tag">Revízie</span>
-          </div>
-          <div class="fc-bottom-row">
-            <span class="fc-cta">Zobraziť profil</span>
+            <div class="wcard-rate">
+              <span class="wcard-rate-prefix">od</span>
+              <span class="wcard-rate-num">30 €</span>
+              <span class="wcard-rate-unit">/ hod</span>
+              <span class="wcard-rating"><span class="star">★</span> 5.0 · 12 hodnotení</span>
+            </div>
+            <div class="wcard-picto">
+              <div class="wcard-picto-item">
+                <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></span>
+                <span class="wcard-picto-val">DE · EN</span>
+              </div>
+              <div class="wcard-picto-item">
+                <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></span>
+                <span class="wcard-picto-val">Bilfinger</span>
+              </div>
+              <div class="wcard-picto-item">
+                <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+                <span class="wcard-picto-val">8 rokov</span>
+              </div>
+              <div class="wcard-picto-item pro">
+                <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+                <span class="wcard-picto-val">PRO</span>
+              </div>
+            </div>
+            <div class="wcard-foot">
+              <div class="wcard-tags">
+                <span class="wcard-tag">MNS</span>
+                <span class="wcard-tag">NN/VN</span>
+                <span class="wcard-tag">Revízie</span>
+              </div>
+              <span class="wcard-cta">Zobraziť profil</span>
+            </div>
+            <div class="wcard-progress">
+              <div class="wcard-progress-label"><span>PROFIL</span><b>92%</b></div>
+              <div class="wcard-progress-bar"><div class="wcard-progress-fill" style="width:92%;background:#22c55e"></div></div>
+            </div>
           </div>
         </div>
 
         <!-- Float card 2 — Daniel R. -->
         <div class="float-card fc-2">
-          <div class="fc-top">
-            <div class="fc-avatar-wrap">
-              <div class="fc-avatar" style="background:#1A1D1E;border:1px solid rgba(249,243,237,.15);">D<span class="fc-avatar-flag"></span></div>
-              <div>
-                <div class="fc-name">Daniel R.</div>
-                <div class="fc-profession">Zvárač MIG/MAG · ●●●●●</div>
+          <div class="wcard">
+            <div class="wcard-badge-avail unavailable">Od 15.6.</div>
+            <div class="wcard-head">
+              <div class="wcard-avatar-wrap"><div class="wcard-avatar a-graphite700">D</div><span class="act-dot green"></span></div>
+              <div class="wcard-meta">
+                <div class="wcard-name-row">
+                  <span class="wcard-emoji-flag">🇨🇿</span>
+                  <div class="wcard-name locked">Daniel R.</div>
+                </div>
+                <div class="wcard-profession">Zvárač MIG/MAG · TIG · 12 rokov</div>
               </div>
             </div>
-            <span class="fc-badge-avail soon">Od 15.6.</span>
-          </div>
-          <div class="fc-rate">
-            <span class="fc-rate-prefix">od:</span>
-            <span class="fc-rate-num">28 €</span>
-            <span class="fc-rate-unit">/ hod</span>
-            <span class="fc-rate-stars">★ 4.9 · 18 hodnotení</span>
-          </div>
-          <div class="fc-picts">
-            <span class="fc-pict"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 014 10 15 15 0 01-4 10 15 15 0 01-4-10 15 15 0 014-10z"/></svg>CZ · DE · +1</span>
-            <span class="fc-pict"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>Siemens</span>
-            <span class="fc-pict"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>12 rokov</span>
-            <span class="fc-pict"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>PRO</span>
-          </div>
-          <div class="fc-skill-tags">
-            <span class="fc-skill-tag">MIG/MAG</span>
-            <span class="fc-skill-tag">TIG 141</span>
-            <span class="fc-skill-tag">WPS</span>
-          </div>
-          <div class="fc-bottom-row">
-            <span class="fc-cta">Zobraziť profil</span>
+            <div class="wcard-rate">
+              <span class="wcard-rate-prefix">od</span>
+              <span class="wcard-rate-num">28 €</span>
+              <span class="wcard-rate-unit">/ hod</span>
+              <span class="wcard-rating"><span class="star">★</span> 4.9 · 18 hodnotení</span>
+            </div>
+            <div class="wcard-picto">
+              <div class="wcard-picto-item">
+                <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></span>
+                <span class="wcard-picto-val">CZ · DE · +1</span>
+              </div>
+              <div class="wcard-picto-item">
+                <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></span>
+                <span class="wcard-picto-val">Siemens · +3</span>
+              </div>
+              <div class="wcard-picto-item">
+                <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+                <span class="wcard-picto-val">12 rokov</span>
+              </div>
+              <div class="wcard-picto-item pro">
+                <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+                <span class="wcard-picto-val">PRO</span>
+              </div>
+            </div>
+            <div class="wcard-foot">
+              <div class="wcard-tags">
+                <span class="wcard-tag">MIG/MAG</span>
+                <span class="wcard-tag">TIG 141</span>
+                <span class="wcard-tag">WPS certif.</span>
+              </div>
+              <span class="wcard-cta">Zobraziť profil</span>
+            </div>
+            <div class="wcard-progress">
+              <div class="wcard-progress-label"><span>PROFIL</span><b>85%</b></div>
+              <div class="wcard-progress-bar"><div class="wcard-progress-fill" style="width:85%;background:#22c55e"></div></div>
+            </div>
           </div>
         </div>
 
         <!-- Float card 3 — Jakub H. -->
         <div class="float-card fc-3">
-          <div class="fc-top">
-            <div class="fc-avatar-wrap">
-              <div class="fc-avatar" style="background:var(--signal);">J<span class="fc-avatar-flag"></span></div>
-              <div>
-                <div class="fc-name">Jakub H.</div>
-                <div class="fc-profession">Bagrista · Montér · ●●●○○</div>
+          <div class="wcard">
+            <div class="wcard-badge-avail available">Dostupný ihneď</div>
+            <div class="wcard-head">
+              <div class="wcard-avatar-wrap"><div class="wcard-avatar a-signal">J</div><span class="act-dot green"></span></div>
+              <div class="wcard-meta">
+                <div class="wcard-name-row">
+                  <span class="wcard-emoji-flag">🇨🇿</span>
+                  <div class="wcard-name locked">Jakub H.</div>
+                </div>
+                <div class="wcard-profession">Bagrista · Montér · 5 rokov</div>
               </div>
             </div>
-            <span class="fc-badge-avail green">Dostupný ihneď</span>
-          </div>
-          <div class="fc-rate">
-            <span class="fc-rate-prefix">od:</span>
-            <span class="fc-rate-num">26 €</span>
-            <span class="fc-rate-unit">/ hod</span>
-            <span class="fc-rate-stars">★ 4.7 · 8 hodnotení</span>
-          </div>
-          <div class="fc-picts">
-            <span class="fc-pict"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 014 10 15 15 0 01-4 10 15 15 0 01-4-10 15 15 0 014-10z"/></svg>PL · EN · +2</span>
-            <span class="fc-pict"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>Strabag</span>
-            <span class="fc-pict"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>5 rokov</span>
-            <span class="fc-pict" style="opacity:.45"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Kal. 🔒</span>
-          </div>
-          <div class="fc-skill-tags">
-            <span class="fc-skill-tag">Excavator</span>
-            <span class="fc-skill-tag">IPAF</span>
-          </div>
-          <div class="fc-bottom-row">
-            <span class="fc-cta">Zobraziť profil</span>
+            <div class="wcard-rate">
+              <span class="wcard-rate-prefix">od</span>
+              <span class="wcard-rate-num">26 €</span>
+              <span class="wcard-rate-unit">/ hod</span>
+              <span class="wcard-rating"><span class="star">★</span> 4.7 · 8 hodnotení</span>
+            </div>
+            <div class="wcard-picto">
+              <div class="wcard-picto-item">
+                <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></span>
+                <span class="wcard-picto-val">PL · EN</span>
+              </div>
+              <div class="wcard-picto-item">
+                <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></span>
+                <span class="wcard-picto-val">Strabag · AT</span>
+              </div>
+              <div class="wcard-picto-item">
+                <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+                <span class="wcard-picto-val">5 rokov</span>
+              </div>
+              <div class="wcard-picto-item" style="opacity:0.45">
+                <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+                <span class="wcard-picto-val">Kal. 🔒</span>
+              </div>
+            </div>
+            <div class="wcard-foot">
+              <div class="wcard-tags">
+                <span class="wcard-tag">Excavator</span>
+                <span class="wcard-tag">IPAF</span>
+              </div>
+              <span class="wcard-cta">Zobraziť profil</span>
+            </div>
+            <div class="wcard-progress">
+              <div class="wcard-progress-label"><span>PROFIL</span><b>44%</b></div>
+              <div class="wcard-progress-bar"><div class="wcard-progress-fill" style="width:44%;background:#f59e0b"></div></div>
+            </div>
           </div>
         </div>
       </div>
@@ -2239,8 +2234,8 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
         <div class="counter-trend">↑ 124 tento mesiac</div>
       </div>
       <div class="counter">
-        <div class="counter-num">700 <em>+</em></div>
-        <div class="counter-lbl">otvorených ponúk denne</div>
+        <div class="counter-num">3000 <em>+</em></div>
+        <div class="counter-lbl">otvorených inzerátov denne</div>
         <div class="counter-trend">↑ 38 tento týždeň</div>
       </div>
       <div class="counter">
@@ -2294,9 +2289,9 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
       <textarea class="sec-search-input" rows="2" placeholder="Napríklad: Hľadám zvárača MIG/MAG do Bavorska, dostupný od júna, hovorí nemecky, vlastné auto, s NUC certifikátom…"></textarea>
       <div class="sec-search-bottom">
         <div class="sec-search-pills">
-          <span class="sec-search-pill">⚡ Elektrikár · Nemecko</span>
-          <span class="sec-search-pill">⚡ Tím 5 montérov · DE/AT</span>
-          <span class="sec-search-pill">⚡ Zvárač · NUC certifikát</span>
+          <span class="sec-search-pill">Elektrikár · Nemecko</span>
+          <span class="sec-search-pill">Tím 5 montérov · DE/AT</span>
+          <span class="sec-search-pill">Zvárač · NUC certifikát</span>
         </div>
         <button class="sec-search-submit" aria-label="Vyhľadať">→</button>
       </div>
@@ -2306,7 +2301,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
     <div class="filter-rows">
       <div class="filter-row scroll">
         <span class="filter-row-label">Profesia</span>
-        <button class="fchip active">Všetci <span class="fcnt">3 047</span></button>
+        <button class="fchip active">Všetci <span class="fcnt">4 000 +</span></button>
         <button class="fchip">Zvárač <span class="fcnt">297</span></button>
         <button class="fchip">Elektrikár <span class="fcnt">142</span></button>
         <button class="fchip">Montér <span class="fcnt">186</span></button>
@@ -2349,7 +2344,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
       </div>
     </div>
     <div class="filter-meta">
-      <span><strong>284</strong> z 3 047 · zoradiť</span>
+      <span><strong>284</strong> z 4 000 + · zoradiť</span>
       <span class="filter-meta-r">
         <span class="filter-reset">Resetovať filtre</span>
         <select class="filter-sort">
@@ -2695,9 +2690,9 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
       <textarea class="sec-search-input" rows="2" placeholder="Napríklad: Som zvárač MIG/MAG, hľadám prácu v Bavorsku od júna, hovorím nemecky, vlastné auto, chcem aspoň 30€/hod a ubytovanie zdarma…"></textarea>
       <div class="sec-search-bottom">
         <div class="sec-search-pills">
-          <span class="sec-search-pill">⚡ Zvárač · Nemecko</span>
-          <span class="sec-search-pill">⚡ Elektrikár · ihneď</span>
-          <span class="sec-search-pill">⚡ 30€+ / hod</span>
+          <span class="sec-search-pill">Zvárač · Nemecko</span>
+          <span class="sec-search-pill">Elektrikár · ihneď</span>
+          <span class="sec-search-pill">30€+ / hod</span>
         </div>
         <button class="sec-search-submit" aria-label="Vyhľadať">→</button>
       </div>
@@ -2998,8 +2993,8 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
     <div class="sec-head">
       <div>
         <span class="eyebrow">• kalendár dostupnosti</span>
-        <h2 style="margin-top:14px">Upracte si plánovanie projektov<br><em>na týždne dopredu.</em></h2>
-        <p class="sec-sub">Inteligentný kalendár vám okamžite ukáže reálne voľné kapacity na trhu.</p>
+        <h2 style="margin-top:14px">Plánujte si projekty na<br><em>týždne dopredu.</em></h2>
+        <p class="sec-sub">Inteligentný kalendár vám okamžite ukáže  voľné kapacity na trhu.</p>
       </div>
       <div class="sec-cta">
         <button class="btn btn-solid btn-lg" onclick="location.href='/app'" style="cursor:pointer">Vyskúšať zdarma (Zero-Risk) →</button>
@@ -3613,13 +3608,13 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
         <p class="hiw-desc">Vyplnenie profilu trvá 5 minút. Profesia, jazyky, certifikáty, dostupnosť.</p>
         <ul class="hiw-bullets">
           <li>Aktivuje sa automaticky</li>
-          <li>Aplikácia úplne zadarmo</li>
+          <li>Aplikácia úplne zdarma</li>
         </ul>
       </div>
       <div class="hiw-card">
         <div class="hiw-num">02</div>
         <h4 class="hiw-title">Prezerajte ponuky</h4>
-        <p class="hiw-desc">730+ aktuálnych pozícií. Filtrujte podľa krajiny, platu, ubytovania.</p>
+        <p class="hiw-desc">1000 + aktuálnych pozícií. Filtrujte podľa krajiny, platu, ubytovania.</p>
         <ul class="hiw-bullets">
           <li>Push notifikácie na zhody</li>
           <li>Dream Job nastavenie</li>
@@ -3669,7 +3664,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <span class="feature-bullet-text"><strong>Vidíte hodnotenie firmy.</strong> Recenzie od ostatných pracovníkov pred kontaktom.</span>
           </div>
         </div>
-        <a href="#" class="feature-cta">Vytvoriť profil zadarmo →</a>
+        <a href="#" class="feature-cta">Vytvoriť profil zdarma →</a>
       </div>
       <div class="feature-visual">
         <div class="dj-mockup">
@@ -3678,7 +3673,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div style="font-size:10px;color:rgba(249,243,237,.5)">3 nové</div>
           </div>
           <div class="dj-row">
-            <div class="dj-icon">⚡</div>
+            <div class="dj-icon"></div>
             <div class="dj-row-content">
               <div class="dj-row-title">Zvárač MIG/MAG · Stuttgart, DE</div>
               <div class="dj-row-meta">32 €/hod · 50h/týždeň · Nástup 1.6.</div>
@@ -3714,14 +3709,14 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
     <div class="cta-banner">
       <div>
         <span class="eyebrow" style="color:var(--porcelain)">• začnite dnes</span>
-        <h2 style="margin-top:14px">Inzerujte zadarmo, náklady máte<br><em>iba pri reálnom výsledku.</em></h2>
-        <p class="mode-b">Žiadne skryté poplatky. Zaplatíte až za odkrytie kontaktu konkrétneho odborníka.</p>
+        <h2 style="margin-top:14px">Inzerujte zdarma, náklady máte<br><em>iba pri reálnom výsledku.</em></h2>
+        <p class="mode-b">Zaplatíte až za odkrytie kontaktu konkrétneho odborníka v prípade že vyhovuje Vašim požiadavkám</p>
         <p class="mode-c">Bezplatná registrácia. Aplikácia úplne zdarma. Vyplníte profil a začnete dostávať ponuky priamo od firiem aj agentúr.</p>
       </div>
       <div class="cta-actions">
         <button class="btn-cta-primary mode-b" onclick="openCalendly()" style="cursor:pointer">Naplánovať demo →</button>
         <button class="btn-cta-secondary mode-b" onclick="location.href='/sk/cennik'" style="cursor:pointer">Začať bez rizika zdarma</button>
-        <button class="btn-cta-primary mode-c">Vytvoriť profil zadarmo</button>
+        <button class="btn-cta-primary mode-c">Vytvoriť profil zdarma</button>
         <button class="btn-cta-secondary mode-c" onclick="location.href='/sk/stiahnut-aplikaciu'" style="cursor:pointer">Stiahnuť aplikáciu →</button>
       </div>
     </div>
@@ -3743,32 +3738,32 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
     <!-- FAQ pre pracovníkov -->
     <div class="hiw-grid faq-list-c" id="faq-list-workers" style="display:none;grid-template-columns:repeat(6,1fr)">
       <div class="hiw-card">
-        <div class="hiw-num">Q</div>
+        <div class="hiw-num">01</div>
         <h4>Platí sa za používanie aplikácie niečo?</h4>
         <p>Aplikácia pre pracovníkov je úplne zdarma — registrácia, profil, vyhľadávanie ponúk, push notifikácie aj kontakt s firmami.</p>
       </div>
       <div class="hiw-card">
-        <div class="hiw-num">Q</div>
+        <div class="hiw-num">02</div>
         <h4>Potrebujem cudzí jazyk na prácu v zahraničí?</h4>
         <p>Nie vždy. Pri partiách stačí, ak jeden člen tímu hovorí jazykom. Jazykové požiadavky sú vždy transparentne uvedené v detaile ponuky.</p>
       </div>
       <div class="hiw-card">
-        <div class="hiw-num">Q</div>
+        <div class="hiw-num">03</div>
         <h4>Mám istotu, že dostanem za prácu zaplatené?</h4>
         <p>Alogator spolupracuje len s overenými firmami. Pred kontaktom vidíte hodnotenia od iných pracovníkov. Faktúry si archivujete priamo v aplikácii.</p>
       </div>
       <div class="hiw-card">
-        <div class="hiw-num">Q</div>
+        <div class="hiw-num">04</div>
         <h4>Ako rýchlo ma firma kontaktuje?</h4>
         <p>Priemerný čas do prvej ponuky je 3–7 dní. Top profesie (zvárač, elektrikár, montér) dostávajú prvé oslovenie už do 24 hodín.</p>
       </div>
       <div class="hiw-card">
-        <div class="hiw-num">Q</div>
+        <div class="hiw-num">05</div>
         <h4>Dá sa pracovať cez Alogator na živnosť?</h4>
         <p>Áno, Alogator je primárne pre SZČO. V profile si nastavíte typ úväzku a vidíte len ponuky, ktoré sedia. Faktúry vystavujete priamo cez aplikáciu.</p>
       </div>
       <div class="hiw-card">
-        <div class="hiw-num">Q</div>
+        <div class="hiw-num">06</div>
         <h4>Je ubytovanie zahrnuté v ponukách v zahraničí?</h4>
         <p>Často áno. V detaile každej ponuky vidíte, či firma poskytuje ubytovanie zdarma alebo čiastočne prispieva. Filter "Ubytovanie zdarma" je k dispozícii vo vyhľadávaní.</p>
       </div>
@@ -3777,27 +3772,27 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
     <!-- FAQ pre firmy -->
     <div class="hiw-grid faq-list-c" id="faq-list-companies" style="grid-template-columns:repeat(5,1fr)">
       <div class="hiw-card">
-        <div class="hiw-num">Q</div>
+        <div class="hiw-num">01</div>
         <h4>Koľko stojí pre firmu Alogator?</h4>
         <p>4 úrovní — Free (0 €), Premium (199 €), Business (499 €), Business+ (1 000 €). Platíte len za to, čo používate. Všetky platené tarify majú 30 dní zdarma.</p>
       </div>
       <div class="hiw-card">
-        <div class="hiw-num">Q</div>
+        <div class="hiw-num">02</div>
         <h4>Ako rýchlo nájdem prvého pracovníka?</h4>
         <p>Priemerný čas od registrácie po prvý kontakt je 24 hodín. Top profesie sú v databáze stovkami — okamžitý prístup, žiadne čakanie na životopisy.</p>
       </div>
       <div class="hiw-card">
-        <div class="hiw-num">Q</div>
+        <div class="hiw-num">03</div>
         <h4>Sú pracovníci overení?</h4>
         <p>Áno. Každý profil prechádza kontrolou — overujeme identitu, certifikáty a skúsenosti. Premium pracovníci majú navyše hodnotenia od iných firiem.</p>
       </div>
       <div class="hiw-card">
-        <div class="hiw-num">Q</div>
+        <div class="hiw-num">04</div>
         <h4>Funguje Alogator aj v zahraničí?</h4>
         <p>Áno. Pracovníci dostupní pre SK, CZ, DE, AT, NL, BE a ďalšie EÚ krajiny. Firma v DE/AT môže okamžite kontaktovať SK/CZ remeselníkov.</p>
       </div>
       <div class="hiw-card">
-        <div class="hiw-num">Q</div>
+        <div class="hiw-num">05</div>
         <h4>Ako funguje kalendár dostupnosti?</h4>
         <p>Pracovníci aktualizujú dostupnosť v appke po týždňoch. Vidíte v real-time kto je voľný kedy — bez telefonovania. Systém upozorní pri konflikte rezervácií.</p>
       </div>

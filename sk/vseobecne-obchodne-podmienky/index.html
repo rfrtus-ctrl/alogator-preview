@@ -57,7 +57,13 @@ h1,h2,h3{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.02em;c
 .legal-toc li{margin-bottom:4px}
 .legal-toc a{color:var(--signal);text-decoration:none}
 
-.footer{background:var(--graphite);color:var(--porcelain);padding:32px 0 20px}
+.footer{background:var(--porcelain);padding:16px 32px 32px}
+.footer .container{background:var(--graphite);border-radius:24px;padding:48px 40px 28px;max-width:1280px;color:var(--porcelain)}
+.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}
+.foot-col h5{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.5);margin-bottom:16px}
+.foot-col h5::before{content:'• ';color:var(--signal)}
+.foot-col a{display:block;color:rgba(249,243,237,.7);text-decoration:none;font-size:13.5px;padding:5px 0}
+.foot-col a:hover{color:var(--porcelain)}
 .foot-bottom{display:flex;justify-content:space-between;font-size:12px;color:rgba(249,243,237,.5)}
 </style>
 <meta name="robots" content="index, follow">
@@ -147,7 +153,7 @@ h1,h2,h3{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.02em;c
     <li>CRM nástroje pre správu kontaktov a projektov</li>
     <li>Komunikačné nástroje medzi Pracovníkmi a Firmami</li>
   </ul>
-  <p><strong>Dôležité obmedzenie:</strong> Prevádzkovateľ nie je stranou pracovnoprávneho vzťahu medzi Pracovníkom a Firmou. Platforma slúži výlučne ako technický sprostredkovateľ prepojenia.</p>
+  <p><strong>Dôležité obmedzenie:</strong> Prevádzkovateľ nie je stranou pracovnoprávneho vzťahu medzi Pracovníkom a Firmou. Platforma slúži výlučne ako technický nástroj na prepojenie.</p>
 
   <h2 id="registracia">3. Registrácia a Účet</h2>
   <p>Registrácia je podmienkou používania platených funkcií Platformy. Bezplatné funkcie (prezeranie inzerátov) sú dostupné bez registrácie.</p>
@@ -158,7 +164,7 @@ h1,h2,h3{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.02em;c
   <p>Aktuálny cenník je dostupný na <a href="/sk/cennik">alogator.com/sk/cennik</a>. Prevádzkovateľ si vyhradzuje právo ceny meniť s 30-dňovým upozornením.</p>
   <p>Predplatné sa obnovuje automaticky na začiatku každého fakturačného obdobia. Používateľ môže automatické obnovenie zrušiť kedykoľvek v nastaveniach účtu.</p>
   <p>Všetky ceny sú uvádzané bez DPH. DPH sa pripočítava podľa platnej legislatívy krajiny sídla Používateľa.</p>
-  <p>Skúšobné obdobie 14 dní je bezplatné. Po uplynutí skúšobného obdobia bez zrušenia prechádza účet automaticky na platené predplatné zvolenej tarify.</p>
+  <p>Skúšobné obdobie 30 dní je bezplatné. Po uplynutí skúšobného obdobia bez zrušenia prechádza účet automaticky na platené predplatné zvolenej tarify.</p>
 
   <h2 id="prava">5. Práva a povinnosti Používateľov</h2>
   <h3>5.1 Pracovník</h3>
@@ -203,13 +209,39 @@ h1,h2,h3{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.02em;c
 
 <footer class="footer">
   <div class="container">
-    <div class="foot-bottom">
-      <div>© 2026 Alogator · Profi Steel Holding · Všetky práva vyhradené</div>
-      <div>
-        <a href="/sk/vseobecne-obchodne-podmienky" style="color:rgba(249,243,237,.5);text-decoration:none;margin-right:16px">VOP</a>
-        <a href="/sk/gdpr" style="color:rgba(249,243,237,.5);text-decoration:none;margin-right:16px">GDPR</a>
-        <a href="/sk/cookies" style="color:rgba(249,243,237,.5);text-decoration:none">Cookies</a>
+    <div class="foot-top">
+      <div class="foot-col">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+          <div style="width:32px;height:32px;background:var(--signal);border-radius:9px;display:flex;align-items:center;justify-content:center;font-family:'Geist',sans-serif;font-weight:500;font-size:16px;color:var(--porcelain)">A</div>
+          <span style="font-family:'Geist',sans-serif;font-weight:500;font-size:20px;color:var(--porcelain)">Alogator</span>
+        </div>
+        <p style="font-size:13px;color:rgba(249,243,237,.6);line-height:1.5">Marketplace prepájajúci pracovníkov, agentúry a koncové firmy. SK · CZ · DE · AT · NL · BE</p>
       </div>
+      <div class="foot-col">
+        <h5>Pre firmy</h5>
+        <a href="/sk/kontakt">Naplánovať demo</a>
+        <a href="/sk/databaza-pracovnikov">Databáza pracovníkov</a>
+        <a href="/sk/cennik">Cenník</a>
+        <a href="/sk/ako-to-funguje">Ako to funguje</a>
+      </div>
+      <div class="foot-col">
+        <h5>Pre pracovníkov</h5>
+        <a href="/sk/ponuka-prace">Pracovné ponuky</a>
+        <a href="/sk/stiahnut-aplikaciu">Stiahnuť aplikáciu</a>
+        <a href="/sk/ako-to-funguje">Ako to funguje</a>
+        <a href="/sk/pre-pracovnikov">Pre pracovníkov</a>
+      </div>
+      <div class="foot-col">
+        <h5>Spoločnosť</h5>
+        <a href="/sk/o-nas">O nás</a>
+        <a href="/sk/kontakt">Kontakt</a>
+        <a href="/sk/vop">VOP</a>
+        <a href="/sk/gdpr">GDPR</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Alogator · Všetky práva vyhradené</div>
+      <div>www.alogator.com</div>
     </div>
   </div>
 </footer>

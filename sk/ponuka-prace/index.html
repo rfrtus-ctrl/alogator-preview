@@ -223,106 +223,36 @@ body {
 }
 
 /* JOB GRID */
-.job-grid {
+.similar-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin-bottom: 32px;
 }
 
-/* JOB CARD */
-.job-card {
-  background: #fff;
-  border: 1px solid var(--porcelain-300);
-  border-radius: 20px;
-  padding: 20px;
-  cursor: pointer;
-  transition: all 0.15s;
-  position: relative;
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-.job-card:hover {
-  border-color: var(--graphite-200);
-  box-shadow: 0 4px 16px rgba(26,29,30,0.08);
-  transform: translateY(-1px);
-}
-.job-card.featured {
-  border-color: var(--signal);
-  box-shadow: 0 0 0 1px var(--signal);
-}
-.job-card-top {
-  display: flex; align-items: flex-start;
-  justify-content: space-between; margin-bottom: 14px;
-}
-.job-logo {
-  width: 36px; height: 36px; border-radius: 10px;
-  background: var(--graphite); color: var(--porcelain);
-  display: grid; place-items: center;
-  font: 600 11px 'JetBrains Mono'; flex-shrink: 0;
-  letter-spacing: 0.05em;
-}
-.job-badge {
-  font: 500 10px 'JetBrains Mono'; letter-spacing: 0.08em;
-  padding: 3px 9px; border-radius: var(--r-pill);
-  text-transform: uppercase;
-}
-.job-badge.hot { background: var(--signal-soft); color: var(--signal-dark); }
-.job-badge.new-badge { background: #DBEAFE; color: #1E40AF; }
-.job-badge.featured-badge { background: var(--yellow); color: var(--graphite); }
-.job-profession {
-  font: 500 9.5px 'JetBrains Mono';
-  letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--graphite-500); margin-bottom: 4px;
-}
-.job-title {
-  font: 500 15px/1.3 'Geist';
-  color: var(--graphite); margin-bottom: 6px;
-  letter-spacing: -0.01em;
-}
-.job-company {
-  display: flex; align-items: center; gap: 6px;
-  font: 400 12px 'Inter'; color: var(--graphite-500);
-  margin-bottom: 12px;
-}
-.job-company-lock {
-  display: inline-flex; align-items: center; gap: 4px;
-  background: var(--porcelain-200); border: 1px solid var(--porcelain-300);
-  border-radius: var(--r-pill); padding: 2px 8px;
-  font: 400 11.5px 'Inter'; color: var(--graphite-500);
-}
-.job-meta {
-  display: flex; gap: 10px; flex-wrap: wrap;
-  margin-bottom: 14px;
-  font: 400 12px 'Inter'; color: var(--graphite-700);
-}
-.job-meta-item { display: flex; align-items: center; gap: 4px; }
-.job-footer {
-  display: flex; align-items: center; justify-content: space-between;
-  padding-top: 12px; border-top: 1px solid var(--porcelain-300);
-}
-.job-rate {
-  font: 600 20px 'Geist'; letter-spacing: -0.02em; color: var(--graphite);
-}
-.job-rate span { font: 400 12px 'Inter'; color: var(--graphite-500); font-weight: 400; }
-.job-footer-right { display: flex; align-items: center; gap: 10px; }
-.job-bookmark {
-  background: none; border: 1px solid var(--graphite-200);
-  width: 32px; height: 32px; border-radius: var(--r-pill);
-  display: grid; place-items: center; cursor: pointer;
-  transition: all 0.15s; color: var(--graphite-500); font-size: 14px;
-}
-.job-bookmark:hover { border-color: var(--graphite); color: var(--graphite); }
-.job-ago { font: 400 11px 'JetBrains Mono'; color: var(--graphite-500); letter-spacing: 0.03em; }
-.job-cta {
-  background: var(--signal); color: var(--porcelain); border: 0;
-  padding: 7px 15px; border-radius: var(--r-pill);
-  font: 500 12px 'Geist'; cursor: pointer;
-  text-decoration: none; transition: background 0.15s;
-  white-space: nowrap;
-}
-.job-cta:hover { background: var(--signal-dark); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* UPSELL CARD */
 .upsell-card {
@@ -348,7 +278,8 @@ body {
 .load-sub { font: 400 11.5px 'Inter'; color: var(--graphite-500); margin-top: 10px; }
 
 /* APP CTA BANNER */
-.app-cta { background: var(--graphite); padding: 56px 0; }
+.app-cta { background: var(--porcelain); padding: 16px 32px; }
+.app-cta .container { background: var(--graphite); border-radius: 24px; padding: 56px 40px; max-width: 1280px; margin: 0 auto; }
 .app-cta-inner {
   display: flex; align-items: center; justify-content: space-between; gap: 32px;
 }
@@ -374,7 +305,8 @@ body {
 .btn-outline-light:hover { border-color: var(--porcelain); }
 
 /* SEO SECTION */
-.seo-section { padding: 48px 0; border-top: 1px solid var(--porcelain-300); }
+.seo-section { padding: 16px 32px; background: var(--porcelain); }
+.seo-section .container { background: #fff; border: 1.5px solid var(--porcelain-300); border-radius: 24px; padding: 40px 32px; max-width: 1280px; margin: 0 auto; }
 .seo-section h2 { font: 500 18px 'Geist'; letter-spacing: -0.02em; color: var(--graphite); margin-bottom: 20px; }
 .seo-links { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
 .seo-links a {
@@ -387,7 +319,8 @@ body {
 .seo-text { font: 400 13px/1.7 'Inter'; color: var(--graphite-500); max-width: 720px; margin-top: 16px; }
 
 /* FOOTER */
-.footer { background: var(--graphite); color: var(--porcelain); padding: 48px 0 24px; }
+.footer { background: var(--porcelain); padding: 16px 32px 32px; }
+.footer .container { background: var(--graphite); border-radius: 24px; padding: 48px 40px 28px; max-width: 1280px; color: var(--porcelain); }
 .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; margin-bottom: 40px; }
 .foot-col h4 {
   font: 600 11px 'JetBrains Mono'; letter-spacing: 0.12em;
@@ -408,15 +341,125 @@ body {
 }
 
 @media (max-width: 1024px) {
-  .job-grid { grid-template-columns: repeat(2, 1fr); }
+  .similar-grid { grid-template-columns: repeat(2, 1fr); }
   .foot-grid { grid-template-columns: 1fr 1fr; }
   .app-cta-inner { flex-direction: column; }
 }
 @media (max-width: 640px) {
-  .job-grid { grid-template-columns: 1fr; }
+  .similar-grid { grid-template-columns: 1fr; }
   .hero h1 { font-size: 36px; }
   .nav-links { display: none; }
 }
+
+.jcard{
+  background:var(--porcelain);
+  border:1px solid var(--porcelain-300);
+  border-radius:20px;padding:18px;
+  position:relative;cursor:pointer;
+  transition:transform .2s, box-shadow .2s, border-color .2s;
+}
+.jcard:hover{
+  transform:translateY(-3px);
+  border-color:var(--graphite-200);
+  box-shadow:0 12px 30px -10px rgba(26,29,30,.12);
+}
+.jcard-badge{
+  position:absolute;top:14px;right:14px;
+  font-family:'Inter',sans-serif;font-size:9.5px;font-weight:600;
+  padding:3px 8px;border-radius:999px;letter-spacing:0.05em;
+  display:inline-flex;align-items:center;gap:4px;
+}
+.jcard-badge.b-top{background:var(--yellow);color:var(--graphite)}
+.jcard-badge.b-now{background:var(--graphite);color:var(--porcelain)}
+.jcard-badge.b-now::before{content:'';width:5px;height:5px;border-radius:50%;background:#7CC95C;display:inline-block}
+.jcard-badge.b-new{background:var(--signal-soft);color:#993C1D}
+.jcard-head{display:flex;align-items:flex-start;gap:11px;margin-bottom:10px}
+.jcard-logo{
+  width:38px;height:38px;border-radius:9px;
+  background:var(--graphite);color:var(--porcelain);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Geist',sans-serif;font-weight:500;font-size:15px;
+  flex-shrink:0;
+}
+.jcard-logo.lock{
+  background:linear-gradient(135deg,var(--graphite-200) 0%,var(--graphite-500) 100%);
+  color:var(--porcelain);
+  position:relative;
+}
+.jcard-logo.lock::after{
+  content:'🔒';
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  font-size:14px;
+  filter:grayscale(1);
+}
+.jcard-logo.lock span{visibility:hidden}
+.jcard-meta{flex:1;min-width:0}
+.jcard-title{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:16px;
+  letter-spacing:-0.01em;line-height:1.15;color:var(--graphite);
+}
+.jcard-company{
+  font-family:'Inter',sans-serif;font-size:11.5px;
+  color:var(--graphite-500);margin-top:2px;
+}
+.jcard-company.locked{
+  color:var(--graphite-500);
+  font-style:italic;
+  display:inline-flex;align-items:center;gap:5px;
+}
+.jcard-company.locked::after{
+  content:'';
+  width:11px;height:13px;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236B7174' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='11' width='18' height='11' rx='2'/><path d='M7 11V7a5 5 0 0110 0v4'/></svg>") no-repeat center;
+  background-size:contain;
+}
+.jcard-salary{
+  display:flex;align-items:baseline;gap:5px;margin:8px 0;
+}
+.jcard-salary-num{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:26px;
+  letter-spacing:-0.02em;color:var(--graphite);
+}
+.jcard-salary-unit{font-size:11.5px;color:var(--graphite-500)}
+.jcard-bonus{
+  margin-left:auto;padding:3px 9px;border-radius:999px;
+  font-size:10.5px;font-weight:500;
+}
+.jcard-bonus.bonus-housing{background:var(--signal-soft);color:#993C1D}
+.jcard-bonus.bonus-slots{background:var(--signal-soft);color:#993C1D}
+.jcard-bonus.bonus-business{background:var(--porcelain-200);color:var(--graphite-700)}
+.jcard-info{
+  display:flex;gap:8px;flex-wrap:wrap;align-items:center;
+  font-size:11.5px;color:var(--graphite-700);margin-bottom:11px;
+}
+.jcard-info .sep{color:var(--graphite-200)}
+.jcard-info .date-pill{
+  color:var(--graphite);font-weight:500;
+}
+.jcard-foot{
+  display:flex;justify-content:space-between;align-items:center;
+  padding-top:11px;border-top:1px solid var(--porcelain-300);
+}
+.jcard-tags{display:flex;gap:5px;flex-wrap:wrap}
+.jcard-tag{
+  background:var(--porcelain-200);
+  border:1px solid var(--porcelain-300);
+  color:var(--graphite-700);
+  font-family:'Inter',sans-serif;font-size:10px;font-weight:500;
+  padding:3px 8px;border-radius:999px;
+}
+.jcard-cta{
+  background:var(--signal);color:var(--porcelain);
+  border:0;padding:7px 16px;border-radius:999px;
+  font-family:'Inter',sans-serif;font-size:12px;font-weight:500;
+  cursor:pointer;
+  transition:background .15s;
+}
+.jcard-cta:hover{background:var(--signal-dark)}
+.jcard-cta.locked{
+  background:var(--graphite);color:var(--porcelain);
+}
+.jcard-cta.locked:hover{background:#000}
 </style>
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://alogator.com/sk/ponuka-prace">
@@ -463,8 +506,8 @@ body {
 <section class="hero">
   <div class="container">
     <div class="eyebrow" data-c="jobs.eyebrow">Pracovné ponuky</div>
-    <h1 data-c="jobs.h1">Nájdi prácu<br><em>v zahraničí</em></h1>
-    <p class="hero-sub" data-c="jobs.sub">Overené ponuky od firiem v DE, AT, NL a BE. Jasný plat, reálne podmienky — žiadne prekvapenia.</p>
+    <h1 data-c="jobs.h1">Nájdi prácu<br><em>doma aj v zahraničí</em></h1>
+    <p class="hero-sub" data-c="jobs.sub">Ponuky od firiem v rámci celej Európy</p>
     <div class="hero-stats">
       <div class="hero-stat">
         <strong data-c="jobs.stat1_num">247</strong>
@@ -494,18 +537,18 @@ body {
   <div class="container">
     <div class="search-box">
       <div class="search-label">
-        <span>✦</span> <span data-c="jobs.search_label">AI vyhľadávanie · opíšte akú prácu hľadáte</span>
+        <span></span> <span data-c="jobs.search_label">AI vyhľadávanie · opíšte akú prácu hľadáte</span>
       </div>
       <div class="search-input-row">
         <input class="search-input" type="text" data-c-placeholder="jobs.search_placeholder" placeholder="Napríklad: Zvárač MIG/MAG, Nemecko, min. 25 €/h, nástup ihneď, hovorím nemecky...">
         <button class="search-btn">→</button>
       </div>
       <div class="search-chips">
-        <span class="search-chip">⚡ Zvárač · Nemecko</span>
-        <span class="search-chip">⚡ Elektrikár · Rakúsko</span>
-        <span class="search-chip">⚡ Nemecko · od 28 €/h</span>
-        <span class="search-chip">⚡ Nástup ihneď · AT</span>
-        <span class="search-chip">⚡ Belgicko</span>
+        <span class="search-chip">Zvárač · Nemecko</span>
+        <span class="search-chip">Elektrikár · Rakúsko</span>
+        <span class="search-chip">Nemecko · od 28 €/h</span>
+        <span class="search-chip">Nástup ihneď · AT</span>
+        <span class="search-chip">Belgicko</span>
       </div>
     </div>
 
@@ -514,12 +557,12 @@ body {
       <div class="filter-row">
         <span class="filter-row-label">Profesia</span>
         <button class="fchip active">Všetky <span class="fcnt">247</span></button>
-        <button class="fchip">🔥 Zvárač <span class="fcnt">89</span></button>
-        <button class="fchip">⚡ Elektrikár <span class="fcnt">52</span></button>
-        <button class="fchip">🔧 Montér <span class="fcnt">41</span></button>
-        <button class="fchip">🪵 Tesár <span class="fcnt">28</span></button>
-        <button class="fchip">🧱 Murár <span class="fcnt">21</span></button>
-        <button class="fchip">🔩 Potrubár <span class="fcnt">16</span></button>
+        <button class="fchip">Zvárač <span class="fcnt">89</span></button>
+        <button class="fchip">Elektrikár <span class="fcnt">52</span></button>
+        <button class="fchip">Montér <span class="fcnt">41</span></button>
+        <button class="fchip">Tesár <span class="fcnt">28</span></button>
+        <button class="fchip">Murár <span class="fcnt">21</span></button>
+        <button class="fchip">Potrubár <span class="fcnt">16</span></button>
         <button class="fchip">Iné</button>
       </div>
 
@@ -561,146 +604,159 @@ body {
 
 <!-- JOB GRID -->
 <div class="container">
-  <div class="job-grid">
+  <div class="similar-grid">
 
     <!-- PONUKA 1 — HOT · Zvárač MIG/MAG · Emsland, DE -->
-    <a href="/sk/ponuka-prace/zvarac" class="job-card">
-      <div class="job-card-top">
-        <div class="job-logo" style="background:#1A1D1E;">DE</div>
-        <span class="job-badge hot">🔥 HOT</span>
-      </div>
-      <div class="job-profession">Zvárač</div>
-      <div class="job-title">Zvárač MIG/MAG – Emsland, DE</div>
-      <div class="job-company">
-        <span class="job-company-lock">🔒 Prihláste sa pre názov firmy</span>
-        <span>🇩🇪</span>
-      </div>
-      <div class="job-meta">
-        <span class="job-meta-item">📍 Emsland, Nemecko</span>
-        <span class="job-meta-item">🗓 Nástup ihneď</span>
-        <span class="job-meta-item">🏠 Ubytovanie</span>
-      </div>
-      <div class="job-footer">
-        <div class="job-rate">28 €<span> / hod</span></div>
-        <div class="job-footer-right">
-          <button class="job-bookmark" onclick="return false">🔖</button>
-          <span class="job-ago">2 dni</span>
-          <span class="job-cta">Zobraziť →</span>
+    <div class="jcard" onclick="location.href='/sk/ponuka-prace/zvarac'">
+        <div class="jcard-badge b-top">TOP</div>
+        <div class="jcard-head">
+          <div class="jcard-logo lock"><span>Z</span></div>
+          <div class="jcard-meta">
+            <div class="jcard-title">Zvárač MIG/MAG – Emsland, DE</div>
+            <div class="jcard-company locked">🇩🇪 Firma</div>
+          </div>
+        </div>
+        <div class="jcard-salary">
+          <span class="jcard-salary-num">28 €</span>
+          <span class="jcard-salary-unit">/ hod</span>
+          <span class="jcard-bonus bonus-housing">+ ubytovanie</span>
+        </div>
+        <div class="jcard-info">
+          <span>🇩🇪 Emsland, DE</span>
+            <span class="sep">·</span>
+            <span class="date-pill">Nástup ihneď</span>
+        </div>
+        <div class="jcard-foot">
+          <div class="jcard-tags">
+            <span class="jcard-tag">Zvárač</span>
+              <span class="jcard-tag">DE</span>
+          </div>
+          <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
         </div>
       </div>
-    </a>
 
     <!-- PONUKA 2 — NEW · Elektrikár · Rotterdam, NL -->
-    <a href="/sk/ponuka-prace/elektrikar" class="job-card">
-      <div class="job-card-top">
-        <div class="job-logo" style="background:#1E40AF;">NL</div>
-        <span class="job-badge new-badge">✦ NEW</span>
-      </div>
-      <div class="job-profession">Elektrikár</div>
-      <div class="job-title">Elektrikár NVQ3 – Rotterdam, NL</div>
-      <div class="job-company">
-        <span class="job-company-lock">🔒 Prihláste sa pre názov firmy</span>
-        <span>🇳🇱</span>
-      </div>
-      <div class="job-meta">
-        <span class="job-meta-item">📍 Rotterdam, Holandsko</span>
-        <span class="job-meta-item">🗓 1.7.2026</span>
-      </div>
-      <div class="job-footer">
-        <div class="job-rate">26 €<span> / hod</span></div>
-        <div class="job-footer-right">
-          <button class="job-bookmark" onclick="return false">🔖</button>
-          <span class="job-ago">dnes</span>
-          <span class="job-cta">Zobraziť →</span>
+    <div class="jcard" onclick="location.href='/sk/ponuka-prace/elektrikar'">
+        <div class="jcard-badge b-new">NOVÉ</div>
+        <div class="jcard-head">
+          <div class="jcard-logo lock"><span>E</span></div>
+          <div class="jcard-meta">
+            <div class="jcard-title">Elektrikár NVQ3 – Rotterdam, NL</div>
+            <div class="jcard-company locked">🇳🇱 Firma</div>
+          </div>
+        </div>
+        <div class="jcard-salary">
+          <span class="jcard-salary-num">26 €</span>
+          <span class="jcard-salary-unit">/ hod</span>
+          
+        </div>
+        <div class="jcard-info">
+          <span>🇳🇱 Rotterdam, NL</span>
+            <span class="sep">·</span>
+            <span class="date-pill">1.7.2026</span>
+        </div>
+        <div class="jcard-foot">
+          <div class="jcard-tags">
+            <span class="jcard-tag">Elektrikár</span>
+              <span class="jcard-tag">NL</span>
+          </div>
+          <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
         </div>
       </div>
-    </a>
 
     <!-- PONUKA 3 — FEATURED · Montér oceľových konštrukcií · Linz, AT -->
-    <a href="/sk/ponuka-prace/zvarac" class="job-card featured">
-      <div class="job-card-top">
-        <div class="job-logo" style="background:#E66748;">AT</div>
-        <span class="job-badge featured-badge">⭐ Odporúčané</span>
-      </div>
-      <div class="job-profession">Montér</div>
-      <div class="job-title">Montér oceľových konštrukcií – Linz, AT</div>
-      <div class="job-company">
-        <span class="job-company-lock">🔒 Prihláste sa pre názov firmy</span>
-        <span>🇦🇹</span>
-      </div>
-      <div class="job-meta">
-        <span class="job-meta-item">📍 Linz, Rakúsko</span>
-        <span class="job-meta-item">🗓 Flexibilne</span>
-        <span class="job-meta-item">🏠 Ubytovanie</span>
-      </div>
-      <div class="job-footer">
-        <div class="job-rate">24 €<span> / hod</span></div>
-        <div class="job-footer-right">
-          <button class="job-bookmark" onclick="return false">🔖</button>
-          <span class="job-ago">3 dni</span>
-          <span class="job-cta">Zobraziť →</span>
+    <div class="jcard" onclick="location.href='/sk/ponuka-prace/zvarac'">
+        <div class="jcard-badge b-top">TOP</div>
+        <div class="jcard-head">
+          <div class="jcard-logo lock"><span>M</span></div>
+          <div class="jcard-meta">
+            <div class="jcard-title">Montér oceľových konštrukcií – Linz, AT</div>
+            <div class="jcard-company locked">🇦🇹 Firma</div>
+          </div>
+        </div>
+        <div class="jcard-salary">
+          <span class="jcard-salary-num">24 €</span>
+          <span class="jcard-salary-unit">/ hod</span>
+          <span class="jcard-bonus bonus-housing">+ ubytovanie</span>
+        </div>
+        <div class="jcard-info">
+          <span>🇦🇹 Linz, AT</span>
+            <span class="sep">·</span>
+            <span class="date-pill">Flexibilne</span>
+        </div>
+        <div class="jcard-foot">
+          <div class="jcard-tags">
+            <span class="jcard-tag">Montér</span>
+              <span class="jcard-tag">AT</span>
+          </div>
+          <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
         </div>
       </div>
-    </a>
 
     <!-- PONUKA 4 — Tesár · München, DE -->
-    <a href="/sk/ponuka-prace/tesar" class="job-card">
-      <div class="job-card-top">
-        <div class="job-logo" style="background:#3F4445;">DE</div>
-        <span class="job-badge new-badge">✦ NEW</span>
-      </div>
-      <div class="job-profession">Tesár</div>
-      <div class="job-title">Tesár – bytová výstavba – München, DE</div>
-      <div class="job-company">
-        <span class="job-company-lock">🔒 Prihláste sa pre názov firmy</span>
-        <span>🇩🇪</span>
-      </div>
-      <div class="job-meta">
-        <span class="job-meta-item">📍 München, Nemecko</span>
-        <span class="job-meta-item">🗓 Nástup ihneď</span>
-      </div>
-      <div class="job-footer">
-        <div class="job-rate">25 €<span> / hod</span></div>
-        <div class="job-footer-right">
-          <button class="job-bookmark" onclick="return false">🔖</button>
-          <span class="job-ago">dnes</span>
-          <span class="job-cta">Zobraziť →</span>
+    <div class="jcard" onclick="location.href='/sk/ponuka-prace/tesar'">
+        <div class="jcard-badge b-new">NOVÉ</div>
+        <div class="jcard-head">
+          <div class="jcard-logo lock"><span>T</span></div>
+          <div class="jcard-meta">
+            <div class="jcard-title">Tesár – bytová výstavba – München, DE</div>
+            <div class="jcard-company locked">🇩🇪 Firma</div>
+          </div>
+        </div>
+        <div class="jcard-salary">
+          <span class="jcard-salary-num">25 €</span>
+          <span class="jcard-salary-unit">/ hod</span>
+          
+        </div>
+        <div class="jcard-info">
+          <span>🇩🇪 München, DE</span>
+            <span class="sep">·</span>
+            <span class="date-pill">Nástup ihneď</span>
+        </div>
+        <div class="jcard-foot">
+          <div class="jcard-tags">
+            <span class="jcard-tag">Tesár</span>
+              <span class="jcard-tag">DE</span>
+          </div>
+          <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
         </div>
       </div>
-    </a>
 
     <!-- PONUKA 5 — Zvárač TIG · Gent, BE -->
-    <a href="/sk/ponuka-prace/zvarac" class="job-card">
-      <div class="job-card-top">
-        <div class="job-logo" style="background:#1A1D1E;">BE</div>
-        <span class="job-badge hot">🔥 HOT</span>
-      </div>
-      <div class="job-profession">Zvárač</div>
-      <div class="job-title">Zvárač TIG 141 – Gent, BE</div>
-      <div class="job-company">
-        <span class="job-company-lock">🔒 Prihláste sa pre názov firmy</span>
-        <span>🇧🇪</span>
-      </div>
-      <div class="job-meta">
-        <span class="job-meta-item">📍 Gent, Belgicko</span>
-        <span class="job-meta-item">🗓 15.6.2026</span>
-      </div>
-      <div class="job-footer">
-        <div class="job-rate">30 €<span> / hod</span></div>
-        <div class="job-footer-right">
-          <button class="job-bookmark" onclick="return false">🔖</button>
-          <span class="job-ago">1 deň</span>
-          <span class="job-cta">Zobraziť →</span>
+    <div class="jcard" onclick="location.href='/sk/ponuka-prace/zvarac'">
+        <div class="jcard-badge b-top">TOP</div>
+        <div class="jcard-head">
+          <div class="jcard-logo lock"><span>Z</span></div>
+          <div class="jcard-meta">
+            <div class="jcard-title">Zvárač TIG 141 – Gent, BE</div>
+            <div class="jcard-company locked">🇧🇪 Firma</div>
+          </div>
+        </div>
+        <div class="jcard-salary">
+          <span class="jcard-salary-num">30 €</span>
+          <span class="jcard-salary-unit">/ hod</span>
+          
+        </div>
+        <div class="jcard-info">
+          <span>🇧🇪 Gent, BE</span>
+            <span class="sep">·</span>
+            <span class="date-pill">15.6.2026</span>
+        </div>
+        <div class="jcard-foot">
+          <div class="jcard-tags">
+            <span class="jcard-tag">Zvárač</span>
+              <span class="jcard-tag">BE</span>
+          </div>
+          <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
         </div>
       </div>
-    </a>
 
     <!-- UPSELL CARD -->
     <div class="upsell-card">
-      <div class="eyebrow">Zadarmo</div>
+      <div class="eyebrow">Zdarma</div>
       <h3>Vidíš kontakty<br>bez poplatkov</h3>
-      <p>Registrácia pre pracovníkov je bezplatná. Prihláste sa a uvidíte plné detaily všetkých ponúk — názov firmy, kontakt, presné podmienky.</p>
-      <a href="/app" class="btn-primary">Registrovať sa zadarmo →</a>
+      <p>Registrácia pre pracovníkov je bezplatná. Prihláste sa a uvidíte dôležité detaily všetkých ponúk — názov firmy, kontakt, presné podmienky.</p>
+      <a href="/app" class="btn-primary">Registrovať sa zdarma →</a>
     </div>
 
   </div>
@@ -716,9 +772,9 @@ body {
   <div class="container">
     <div class="app-cta-inner">
       <div class="app-cta-text">
-        <div class="eyebrow" data-c="jobs.app_eyebrow">Pre pracovníkov · zadarmo</div>
-        <h2 data-c="jobs.app_h2">Stiahni aplikáciu<br>a nájdi prácu za 48h</h2>
-        <p data-c="jobs.app_p">Vyplň profil raz. Firmy z DE, AT, NL a BE ťa samy kontaktujú — ty vyberieš komu odpisuješ. Žiadne poplatky, žiadne prekvapenia.</p>
+        <div class="eyebrow" data-c="jobs.app_eyebrow">Pre pracovníkov · zdarma</div>
+        <h2 data-c="jobs.app_h2">Stiahni aplikáciu<br>a nájdi okamžite prácu</h2>
+        <p data-c="jobs.app_p">Vyplň profil raz. Nastavuj si dostupnosť a firmy ťa budú samé kontaktovať</p>
       </div>
       <div class="app-cta-actions">
         <a href="/sk/stiahnut-aplikaciu" class="btn-solid" data-c="jobs.app_ios">Stiahnuť iOS →</a>

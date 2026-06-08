@@ -112,31 +112,31 @@ h1 { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; letter
 }
 .cal-week { border-radius: 16px; padding: 14px; }
 
-.wcard {
-  border-radius: 12px;
-  padding: 10px 11px;
-  margin-bottom: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.wcard:last-child { margin-bottom: 0; }
-.wcard-head { display: flex; align-items: center; gap: 8px; }
-.wcard-av {
-  width: 30px; height: 30px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-weight: 500; font-size: 12px; flex-shrink: 0;
-}
-.wcard-name { font-size: 12px; font-weight: 500; }
-.wcard-prof { font-size: 10.5px; }
-.wcard-rating { margin-left: auto; font-size: 10px; font-weight: 500; }
-.wcard-rate { font-size: 13px; font-weight: 600; }
-.wcard-rate span { font-size: 10px; font-weight: 400; }
-.wcard-tags { display: flex; gap: 4px; flex-wrap: wrap; }
-.wcard-tag {
-  font-size: 9.5px; padding: 2px 7px; border-radius: 999px;
-  font-family: 'JetBrains Mono', monospace;
-}
+/* Canonical wcard structure (compact for calendar) */
+.wcard{border-radius:12px;padding:10px 11px;margin-bottom:8px;display:flex;flex-direction:column;gap:6px;position:relative;cursor:pointer;text-decoration:none;color:inherit}
+.wcard:last-child{margin-bottom:0}
+.wcard-head{display:flex;align-items:center;gap:8px}
+.wcard-avatar-wrap{position:relative;flex-shrink:0;width:30px;height:30px}
+.wcard-avatar{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;font-weight:500;font-size:12px;flex-shrink:0}
+.wcard-avatar.a-signal{background:var(--signal);color:#fff}
+.wcard-avatar.a-graphite700{background:var(--graphite-700);color:var(--porcelain)}
+.wcard-avatar.a-yellow{background:var(--yellow);color:var(--graphite)}
+.act-dot{position:absolute;bottom:0;right:0;width:10px;height:10px;border-radius:50%;border:2px solid #fff}
+.act-dot.green{background:#22c55e}
+.wcard-meta{flex:1;min-width:0}
+.wcard-name-row{display:flex;align-items:center;gap:5px}
+.wcard-emoji-flag{font-size:12px;line-height:1;flex-shrink:0}
+.wcard-name{font-size:12px;font-weight:500}
+.wcard-profession{font-size:10.5px}
+.wcard-rating{margin-left:auto;font-size:10px;font-weight:500}
+.wcard-rating .star{font-size:11px}
+.wcard-rate{display:flex;align-items:baseline;gap:3px}
+.wcard-rate-prefix{font-size:10px;font-weight:400}
+.wcard-rate-prefix::after{content:':';margin-right:2px}
+.wcard-rate-num{font-size:13px;font-weight:600}
+.wcard-rate-unit{font-size:10px;font-weight:400}
+.wcard-tags{display:flex;gap:4px;flex-wrap:wrap}
+.wcard-tag{font-size:9.5px;padding:2px 7px;border-radius:999px;font-family:'JetBrains Mono',monospace}
 
 
 /* ===================================================
@@ -161,11 +161,11 @@ h1 { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; letter
 .var-a .cal-week-num small { color: rgba(249,243,237,.5); }
 .var-a .cal-week-count { background: rgba(249,243,237,.15); color: var(--porcelain); }
 .var-a .wcard { background: rgba(249,243,237,.1); }
-.var-a .wcard-av.sig { background: rgba(249,243,237,.25); color: var(--porcelain); }
-.var-a .wcard-av.yel { background: var(--yellow); color: var(--graphite); }
-.var-a .wcard-av.gph { background: rgba(249,243,237,.15); color: var(--porcelain); }
+.var-a .wcard-avatar.a-signal { background: rgba(249,243,237,.25); color: var(--porcelain); }
+.var-a .wcard-avatar.a-yellow { background: var(--yellow); color: var(--graphite); }
+.var-a .wcard-avatar.a-graphite700 { background: rgba(249,243,237,.15); color: var(--porcelain); }
 .var-a .wcard-name { color: var(--porcelain); }
-.var-a .wcard-prof { color: rgba(249,243,237,.6); }
+.var-a .wcard-profession { color: rgba(249,243,237,.6); }
 .var-a .wcard-rating { color: rgba(249,243,237,.7); }
 .var-a .wcard-rate { color: var(--porcelain); }
 .var-a .wcard-rate span { color: rgba(249,243,237,.55); }
@@ -195,11 +195,11 @@ h1 { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; letter
 .var-b .cal-week-num small { color: rgba(249,243,237,.35); }
 .var-b .cal-week-count { background: var(--signal); color: #fff; }
 .var-b .wcard { background: rgba(249,243,237,.04); border: 1px solid rgba(249,243,237,.06); }
-.var-b .wcard-av.sig { background: var(--signal); color: #fff; }
-.var-b .wcard-av.yel { background: var(--yellow); color: var(--graphite); }
-.var-b .wcard-av.gph { background: var(--graphite-700); color: var(--porcelain); }
+.var-b .wcard-avatar.a-signal { background: var(--signal); color: #fff; }
+.var-b .wcard-avatar.a-yellow { background: var(--yellow); color: var(--graphite); }
+.var-b .wcard-avatar.a-graphite700 { background: var(--graphite-700); color: var(--porcelain); }
 .var-b .wcard-name { color: var(--porcelain); }
-.var-b .wcard-prof { color: rgba(249,243,237,.5); }
+.var-b .wcard-profession { color: rgba(249,243,237,.5); }
 .var-b .wcard-rating { color: var(--yellow); }
 .var-b .wcard-rate { color: var(--porcelain); }
 .var-b .wcard-rate span { color: rgba(249,243,237,.4); }
@@ -230,11 +230,11 @@ h1 { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; letter
 .var-c .cal-week-num small { color: var(--graphite-500); }
 .var-c .cal-week-count { background: var(--signal); color: #fff; }
 .var-c .wcard { background: var(--porcelain); border: 1px solid var(--porcelain-300); }
-.var-c .wcard-av.sig { background: var(--signal); color: #fff; }
-.var-c .wcard-av.yel { background: var(--yellow); color: var(--graphite); }
-.var-c .wcard-av.gph { background: var(--graphite-700); color: #fff; }
+.var-c .wcard-avatar.a-signal { background: var(--signal); color: #fff; }
+.var-c .wcard-avatar.a-yellow { background: var(--yellow); color: var(--graphite); }
+.var-c .wcard-avatar.a-graphite700 { background: var(--graphite-700); color: #fff; }
 .var-c .wcard-name { color: var(--graphite); }
-.var-c .wcard-prof { color: var(--graphite-500); }
+.var-c .wcard-profession { color: var(--graphite-500); }
 .var-c .wcard-rating { color: var(--graphite-500); }
 .var-c .wcard-rate { color: var(--graphite); }
 .var-c .wcard-rate span { color: var(--graphite-500); }
@@ -264,18 +264,18 @@ h1 { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; letter
         <div class="cal-week-count">28</div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av sig">M</div><div><div class="wcard-name">🇸🇰 Marek N.</div><div class="wcard-prof">Elektrikár · 8 r.</div></div><div class="wcard-rating">★ 5.0</div></div>
-        <div class="wcard-rate">30 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-signal">M</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Marek N.</span></div><div class="wcard-profession">Elektrikár · 8 r.</div></div><div class="wcard-rating"><span class="star">★</span> 5.0</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">30 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">DE · EN</span><span class="wcard-tag">8 r.</span><span class="wcard-tag pro">PRO</span></div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av yel">J</div><div><div class="wcard-name">🇨🇿 Jakub H.</div><div class="wcard-prof">Bagrista · Montér</div></div><div class="wcard-rating">★ 4.7</div></div>
-        <div class="wcard-rate">26 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-yellow">J</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇨🇿</span><span class="wcard-name">Jakub H.</span></div><div class="wcard-profession">Bagrista · Montér</div></div><div class="wcard-rating"><span class="star">★</span> 4.7</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">26 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">PL · EN</span><span class="wcard-tag">5 r.</span><span class="wcard-tag">Free</span></div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av gph">P</div><div><div class="wcard-name">🇸🇰 Peter K.</div><div class="wcard-prof">Zvárač MIG · MAG</div></div><div class="wcard-rating">★ 4.8</div></div>
-        <div class="wcard-rate">27 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-graphite700">P</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Peter K.</span></div><div class="wcard-profession">Zvárač MIG · MAG</div></div><div class="wcard-rating"><span class="star">★</span> 4.8</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">27 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">SK · DE</span><span class="wcard-tag">10 r.</span><span class="wcard-tag pro">PRO</span></div>
       </div>
     </div>
@@ -286,18 +286,18 @@ h1 { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; letter
         <div class="cal-week-count">34</div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av gph">D</div><div><div class="wcard-name">🇨🇿 Daniel R.</div><div class="wcard-prof">Zvárač MIG/MAG · TIG</div></div><div class="wcard-rating">★ 4.9</div></div>
-        <div class="wcard-rate">28 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-graphite700">D</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇨🇿</span><span class="wcard-name">Daniel R.</span></div><div class="wcard-profession">Zvárač MIG/MAG · TIG</div></div><div class="wcard-rating"><span class="star">★</span> 4.9</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">28 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">CZ · DE</span><span class="wcard-tag">12 r.</span><span class="wcard-tag pro">PRO</span></div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av sig">M</div><div><div class="wcard-name">🇸🇰 Marek N.</div><div class="wcard-prof">Elektrikár · 8 r.</div></div><div class="wcard-rating">★ 5.0</div></div>
-        <div class="wcard-rate">30 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-signal">M</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Marek N.</span></div><div class="wcard-profession">Elektrikár · 8 r.</div></div><div class="wcard-rating"><span class="star">★</span> 5.0</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">30 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">DE · EN</span><span class="wcard-tag">8 r.</span><span class="wcard-tag pro">PRO</span></div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av yel">A</div><div><div class="wcard-name">🇸🇰 Adam B.</div><div class="wcard-prof">Murár · Obkladač</div></div><div class="wcard-rating">★ 4.3</div></div>
-        <div class="wcard-rate">22 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-yellow">A</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Adam B.</span></div><div class="wcard-profession">Murár · Obkladač</div></div><div class="wcard-rating"><span class="star">★</span> 4.3</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">22 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">SK · DE</span><span class="wcard-tag">4 r.</span><span class="wcard-tag">Free</span></div>
       </div>
     </div>
@@ -308,18 +308,18 @@ h1 { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; letter
         <div class="cal-week-count">22</div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av gph">F</div><div><div class="wcard-name">🇨🇿 Filip P.</div><div class="wcard-prof">Elektrikár · meranie</div></div><div class="wcard-rating">★ 5.0</div></div>
-        <div class="wcard-rate">32 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-graphite700">F</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇨🇿</span><span class="wcard-name">Filip P.</span></div><div class="wcard-profession">Elektrikár · meranie</div></div><div class="wcard-rating"><span class="star">★</span> 5.0</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">32 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">CZ · DE</span><span class="wcard-tag">6 r.</span><span class="wcard-tag pro">PRO</span></div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av sig">R</div><div><div class="wcard-name">🇨🇿 Roman S.</div><div class="wcard-prof">Zámočník · Zvárač</div></div><div class="wcard-rating">★ 4.6</div></div>
-        <div class="wcard-rate">25 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-signal">R</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇨🇿</span><span class="wcard-name">Roman S.</span></div><div class="wcard-profession">Zámočník · Zvárač</div></div><div class="wcard-rating"><span class="star">★</span> 4.6</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">25 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">CZ · DE</span><span class="wcard-tag">7 r.</span><span class="wcard-tag pro">PRO</span></div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av yel">M</div><div><div class="wcard-name">🇸🇰 Martin K.</div><div class="wcard-prof">Zvárač TIG · Nerez</div></div><div class="wcard-rating">★ 4.6</div></div>
-        <div class="wcard-rate">30 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-yellow">M</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Martin K.</span></div><div class="wcard-profession">Zvárač TIG · Nerez</div></div><div class="wcard-rating"><span class="star">★</span> 4.6</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">30 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">SK · DE</span><span class="wcard-tag">13 r.</span><span class="wcard-tag pro">PRO</span></div>
       </div>
     </div>
@@ -348,18 +348,18 @@ h1 { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; letter
         <div class="cal-week-count">28</div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av sig">M</div><div><div class="wcard-name">🇸🇰 Marek N.</div><div class="wcard-prof">Elektrikár · 8 r.</div></div><div class="wcard-rating">★ 5.0</div></div>
-        <div class="wcard-rate">30 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-signal">M</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Marek N.</span></div><div class="wcard-profession">Elektrikár · 8 r.</div></div><div class="wcard-rating"><span class="star">★</span> 5.0</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">30 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">DE · EN</span><span class="wcard-tag">8 r.</span><span class="wcard-tag pro">PRO</span></div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av yel">J</div><div><div class="wcard-name">🇨🇿 Jakub H.</div><div class="wcard-prof">Bagrista · Montér</div></div><div class="wcard-rating">★ 4.7</div></div>
-        <div class="wcard-rate">26 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-yellow">J</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇨🇿</span><span class="wcard-name">Jakub H.</span></div><div class="wcard-profession">Bagrista · Montér</div></div><div class="wcard-rating"><span class="star">★</span> 4.7</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">26 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">PL · EN</span><span class="wcard-tag">5 r.</span><span class="wcard-tag">Free</span></div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av gph">P</div><div><div class="wcard-name">🇸🇰 Peter K.</div><div class="wcard-prof">Zvárač MIG · MAG</div></div><div class="wcard-rating">★ 4.8</div></div>
-        <div class="wcard-rate">27 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-graphite700">P</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Peter K.</span></div><div class="wcard-profession">Zvárač MIG · MAG</div></div><div class="wcard-rating"><span class="star">★</span> 4.8</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">27 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">SK · DE</span><span class="wcard-tag">10 r.</span><span class="wcard-tag pro">PRO</span></div>
       </div>
     </div>
@@ -370,18 +370,18 @@ h1 { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; letter
         <div class="cal-week-count">34</div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av gph">D</div><div><div class="wcard-name">🇨🇿 Daniel R.</div><div class="wcard-prof">Zvárač MIG/MAG · TIG</div></div><div class="wcard-rating">★ 4.9</div></div>
-        <div class="wcard-rate">28 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-graphite700">D</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇨🇿</span><span class="wcard-name">Daniel R.</span></div><div class="wcard-profession">Zvárač MIG/MAG · TIG</div></div><div class="wcard-rating"><span class="star">★</span> 4.9</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">28 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">CZ · DE</span><span class="wcard-tag">12 r.</span><span class="wcard-tag pro">PRO</span></div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av sig">M</div><div><div class="wcard-name">🇸🇰 Marek N.</div><div class="wcard-prof">Elektrikár · 8 r.</div></div><div class="wcard-rating">★ 5.0</div></div>
-        <div class="wcard-rate">30 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-signal">M</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Marek N.</span></div><div class="wcard-profession">Elektrikár · 8 r.</div></div><div class="wcard-rating"><span class="star">★</span> 5.0</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">30 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">DE · EN</span><span class="wcard-tag">8 r.</span><span class="wcard-tag pro">PRO</span></div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av yel">A</div><div><div class="wcard-name">🇸🇰 Adam B.</div><div class="wcard-prof">Murár · Obkladač</div></div><div class="wcard-rating">★ 4.3</div></div>
-        <div class="wcard-rate">22 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-yellow">A</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Adam B.</span></div><div class="wcard-profession">Murár · Obkladač</div></div><div class="wcard-rating"><span class="star">★</span> 4.3</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">22 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">SK · DE</span><span class="wcard-tag">4 r.</span><span class="wcard-tag">Free</span></div>
       </div>
     </div>
@@ -392,18 +392,18 @@ h1 { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; letter
         <div class="cal-week-count">22</div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av gph">F</div><div><div class="wcard-name">🇨🇿 Filip P.</div><div class="wcard-prof">Elektrikár · meranie</div></div><div class="wcard-rating">★ 5.0</div></div>
-        <div class="wcard-rate">32 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-graphite700">F</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇨🇿</span><span class="wcard-name">Filip P.</span></div><div class="wcard-profession">Elektrikár · meranie</div></div><div class="wcard-rating"><span class="star">★</span> 5.0</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">32 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">CZ · DE</span><span class="wcard-tag">6 r.</span><span class="wcard-tag pro">PRO</span></div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av sig">R</div><div><div class="wcard-name">🇨🇿 Roman S.</div><div class="wcard-prof">Zámočník · Zvárač</div></div><div class="wcard-rating">★ 4.6</div></div>
-        <div class="wcard-rate">25 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-signal">R</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇨🇿</span><span class="wcard-name">Roman S.</span></div><div class="wcard-profession">Zámočník · Zvárač</div></div><div class="wcard-rating"><span class="star">★</span> 4.6</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">25 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">CZ · DE</span><span class="wcard-tag">7 r.</span><span class="wcard-tag pro">PRO</span></div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av yel">M</div><div><div class="wcard-name">🇸🇰 Martin K.</div><div class="wcard-prof">Zvárač TIG · Nerez</div></div><div class="wcard-rating">★ 4.6</div></div>
-        <div class="wcard-rate">30 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-yellow">M</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Martin K.</span></div><div class="wcard-profession">Zvárač TIG · Nerez</div></div><div class="wcard-rating"><span class="star">★</span> 4.6</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">30 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">SK · DE</span><span class="wcard-tag">13 r.</span><span class="wcard-tag pro">PRO</span></div>
       </div>
     </div>
@@ -432,18 +432,18 @@ h1 { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; letter
         <div class="cal-week-count">28</div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av sig">M</div><div><div class="wcard-name">🇸🇰 Marek N.</div><div class="wcard-prof">Elektrikár · 8 r.</div></div><div class="wcard-rating">★ 5.0</div></div>
-        <div class="wcard-rate">30 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-signal">M</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Marek N.</span></div><div class="wcard-profession">Elektrikár · 8 r.</div></div><div class="wcard-rating"><span class="star">★</span> 5.0</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">30 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">DE · EN</span><span class="wcard-tag">8 r.</span><span class="wcard-tag pro">PRO</span></div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av yel">J</div><div><div class="wcard-name">🇨🇿 Jakub H.</div><div class="wcard-prof">Bagrista · Montér</div></div><div class="wcard-rating">★ 4.7</div></div>
-        <div class="wcard-rate">26 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-yellow">J</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇨🇿</span><span class="wcard-name">Jakub H.</span></div><div class="wcard-profession">Bagrista · Montér</div></div><div class="wcard-rating"><span class="star">★</span> 4.7</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">26 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">PL · EN</span><span class="wcard-tag">5 r.</span><span class="wcard-tag">Free</span></div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av gph">P</div><div><div class="wcard-name">🇸🇰 Peter K.</div><div class="wcard-prof">Zvárač MIG · MAG</div></div><div class="wcard-rating">★ 4.8</div></div>
-        <div class="wcard-rate">27 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-graphite700">P</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Peter K.</span></div><div class="wcard-profession">Zvárač MIG · MAG</div></div><div class="wcard-rating"><span class="star">★</span> 4.8</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">27 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">SK · DE</span><span class="wcard-tag">10 r.</span><span class="wcard-tag pro">PRO</span></div>
       </div>
     </div>
@@ -454,18 +454,18 @@ h1 { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; letter
         <div class="cal-week-count">34</div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av gph">D</div><div><div class="wcard-name">🇨🇿 Daniel R.</div><div class="wcard-prof">Zvárač MIG/MAG · TIG</div></div><div class="wcard-rating">★ 4.9</div></div>
-        <div class="wcard-rate">28 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-graphite700">D</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇨🇿</span><span class="wcard-name">Daniel R.</span></div><div class="wcard-profession">Zvárač MIG/MAG · TIG</div></div><div class="wcard-rating"><span class="star">★</span> 4.9</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">28 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">CZ · DE</span><span class="wcard-tag">12 r.</span><span class="wcard-tag pro">PRO</span></div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av sig">M</div><div><div class="wcard-name">🇸🇰 Marek N.</div><div class="wcard-prof">Elektrikár · 8 r.</div></div><div class="wcard-rating">★ 5.0</div></div>
-        <div class="wcard-rate">30 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-signal">M</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Marek N.</span></div><div class="wcard-profession">Elektrikár · 8 r.</div></div><div class="wcard-rating"><span class="star">★</span> 5.0</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">30 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">DE · EN</span><span class="wcard-tag">8 r.</span><span class="wcard-tag pro">PRO</span></div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av yel">A</div><div><div class="wcard-name">🇸🇰 Adam B.</div><div class="wcard-prof">Murár · Obkladač</div></div><div class="wcard-rating">★ 4.3</div></div>
-        <div class="wcard-rate">22 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-yellow">A</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Adam B.</span></div><div class="wcard-profession">Murár · Obkladač</div></div><div class="wcard-rating"><span class="star">★</span> 4.3</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">22 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">SK · DE</span><span class="wcard-tag">4 r.</span><span class="wcard-tag">Free</span></div>
       </div>
     </div>
@@ -476,18 +476,18 @@ h1 { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; letter
         <div class="cal-week-count">22</div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av gph">F</div><div><div class="wcard-name">🇨🇿 Filip P.</div><div class="wcard-prof">Elektrikár · meranie</div></div><div class="wcard-rating">★ 5.0</div></div>
-        <div class="wcard-rate">32 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-graphite700">F</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇨🇿</span><span class="wcard-name">Filip P.</span></div><div class="wcard-profession">Elektrikár · meranie</div></div><div class="wcard-rating"><span class="star">★</span> 5.0</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">32 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">CZ · DE</span><span class="wcard-tag">6 r.</span><span class="wcard-tag pro">PRO</span></div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av sig">R</div><div><div class="wcard-name">🇨🇿 Roman S.</div><div class="wcard-prof">Zámočník · Zvárač</div></div><div class="wcard-rating">★ 4.6</div></div>
-        <div class="wcard-rate">25 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-signal">R</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇨🇿</span><span class="wcard-name">Roman S.</span></div><div class="wcard-profession">Zámočník · Zvárač</div></div><div class="wcard-rating"><span class="star">★</span> 4.6</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">25 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">CZ · DE</span><span class="wcard-tag">7 r.</span><span class="wcard-tag pro">PRO</span></div>
       </div>
       <div class="wcard">
-        <div class="wcard-head"><div class="wcard-av yel">M</div><div><div class="wcard-name">🇸🇰 Martin K.</div><div class="wcard-prof">Zvárač TIG · Nerez</div></div><div class="wcard-rating">★ 4.6</div></div>
-        <div class="wcard-rate">30 € <span>/ hod</span></div>
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-yellow">M</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Martin K.</span></div><div class="wcard-profession">Zvárač TIG · Nerez</div></div><div class="wcard-rating"><span class="star">★</span> 4.6</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">30 €</span><span class="wcard-rate-unit">/ hod</span></div>
         <div class="wcard-tags"><span class="wcard-tag">SK · DE</span><span class="wcard-tag">13 r.</span><span class="wcard-tag pro">PRO</span></div>
       </div>
     </div>

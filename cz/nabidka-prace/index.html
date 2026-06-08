@@ -444,9 +444,16 @@ body {
 
 /* SEO SECTION */
 .seo-section {
-  background: var(--porcelain-200);
-  border-top: 1px solid var(--porcelain-300);
-  padding: 40px 0 48px;
+  padding: 16px 32px;
+  background: var(--porcelain);
+}
+.seo-section .container {
+  background: #fff;
+  border: 1.5px solid var(--porcelain-300);
+  border-radius: 24px;
+  padding: 40px 32px;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 .seo-section h2 {
   font: 500 18px/1.3 'Geist'; letter-spacing: -0.02em;
@@ -470,8 +477,12 @@ body {
 
 /* FOOTER */
 .footer {
-  background: var(--graphite); color: var(--porcelain);
-  padding: 48px 0 24px;
+  background: var(--porcelain);
+  padding: 16px 32px 32px;
+}
+.footer .container {
+  background: var(--graphite); border-radius: 24px;
+  padding: 48px 40px 28px; max-width: 1280px; color: var(--porcelain);
 }
 .foot-grid {
   display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -560,7 +571,7 @@ body {
   <div class="container">
     <div class="eyebrow">Pracovni nabidky</div>
     <h1>Najdi praci<br><em>v zahranici</em></h1>
-    <p class="hero-sub">Overene nabidky od agentur a firem v DE, AT, NL a BE. Registrace zdarma — ziskate pristup k nazvum zamestnavatelu a primemu kontaktu.</p>
+    <p class="hero-sub">Ověřené nabídky od agentur a firem v rámci celé Evropy. Registrace zdarma — získáte přístup k názvům zaměstnavatelů a přímému kontaktu.</p>
     <div class="hero-stats">
       <div class="hero-stat">
         <strong>247</strong>
@@ -597,10 +608,10 @@ body {
         <button class="search-btn">→</button>
       </div>
       <div class="search-chips">
-        <span class="search-chip">⚡ Svarec · Nemecko · ihned</span>
-        <span class="search-chip">⚡ Elektrikar · Rakousko</span>
-        <span class="search-chip">⚡ Monter · Belgie · min. 24€</span>
-        <span class="search-chip">⚡ Tesar · NL/BE</span>
+        <span class="search-chip">Svarec · Nemecko · ihned</span>
+        <span class="search-chip">Elektrikar · Rakousko</span>
+        <span class="search-chip">Monter · Belgie · min. 24€</span>
+        <span class="search-chip">Tesar · NL/BE</span>
       </div>
     </div>
 
@@ -610,12 +621,12 @@ body {
       <div class="filter-row">
         <span class="filter-row-label">Profese</span>
         <button class="fchip active">Vsechny <span class="fcnt">247</span></button>
-        <button class="fchip">🔥 Svarec <span class="fcnt">89</span></button>
-        <button class="fchip">⚡ Elektrikar <span class="fcnt">52</span></button>
-        <button class="fchip">🔧 Monter <span class="fcnt">41</span></button>
-        <button class="fchip">🪵 Tesar <span class="fcnt">28</span></button>
-        <button class="fchip">🧱 Zednik <span class="fcnt">21</span></button>
-        <button class="fchip">🔩 Potrubir <span class="fcnt">16</span></button>
+        <button class="fchip">Svarec <span class="fcnt">89</span></button>
+        <button class="fchip">Elektrikar <span class="fcnt">52</span></button>
+        <button class="fchip">Monter <span class="fcnt">41</span></button>
+        <button class="fchip">Tesar <span class="fcnt">28</span></button>
+        <button class="fchip">Zednik <span class="fcnt">21</span></button>
+        <button class="fchip">Potrubir <span class="fcnt">16</span></button>
       </div>
 
       <!-- ZEME -->
@@ -633,7 +644,7 @@ body {
         <button class="fchip">Ihned <span class="fcnt">67</span></button>
         <button class="fchip">Do 1 mesice <span class="fcnt">112</span></button>
         <button class="fchip">Do 3 mesicu <span class="fcnt">133</span></button>
-        <button class="fchip">🏠 Ubytovani v cene</button>
+        <button class="fchip">Ubytovani v cene</button>
         <button class="fchip">🚗 Doprava hrazena</button>
         <button class="fchip">OSVC mozne</button>
         <span class="salary-range">
@@ -910,8 +921,8 @@ body {
 <div class="container">
   <div class="app-banner">
     <div class="app-banner-text">
-      <h3>Dostavej nabidky <em>primo do mobilu</em></h3>
-      <p>Alogator aplikace — nove nabidky, notifikace, zpravy od zamestnavatelu. iOS a Android. Registrace zdarma.</p>
+      <h3>Dostávejte nabídky <em>okamžitě</em></h3>
+      <p>Vyplňte profil jednou. Nastavujte si dostupnost a firmy vás budou samy kontaktovat.</p>
     </div>
     <div class="app-banner-actions">
       <a href="#" class="btn-app">

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Práca pre elektrikárov na Slovensku — § oprávnenie, priemysel · Alogator</title>
-<meta name="description" content="Pracovné ponuky pre elektrikárov — priemyselné aj domové inštalácie, NN/VN. Práca na Slovensku aj v zahraničí (Nemecko, Rakúsko, Holandsko). Vytvor si profil zadarmo.">
+<meta name="description" content="Pracovné ponuky pre elektrikárov — priemyselné aj domové inštalácie, NN/VN. Práca na Slovensku aj v zahraničí (Nemecko, Rakúsko, Holandsko). Vytvor si profil zdarma.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,14 +32,14 @@ h1,h2,h3,h4{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.025
 em{font-style:italic;color:var(--signal);font-weight:500}
 
 /* Flags */
-.flag{width:18px;height:13px;border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 0 1px rgba(26,29,30,.08)}
-.flag-sk{background:linear-gradient(to bottom,#fff 33%,#0B4EA2 33% 66%,#EE1620 66%)}
-.flag-cz{background:linear-gradient(135deg,#fff 50%,#D7141A 50%);position:relative}
-.flag-cz::before{content:'';position:absolute;left:0;top:0;bottom:0;width:50%;background:#11457E;clip-path:polygon(0 0,100% 50%,0 100%)}
-.flag-de{background:linear-gradient(to bottom,#000 33%,#dd0000 33% 66%,#ffce00 66%)}
-.flag-at{background:linear-gradient(to bottom,#ED2939 50%,#fff 50%)}
-.flag-nl{background:linear-gradient(to bottom,#AE1C28 33%,#fff 33% 66%,#21468B 66%)}
-.flag-be{background:linear-gradient(to right,#000 33%,#FAE042 33% 66%,#ED2939 66%)}
+
+
+
+
+
+
+
+
 
 /* ============ NAVBAR ============ */
 .navbar{background:var(--graphite);color:var(--porcelain);padding:18px 0}
@@ -78,16 +78,10 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 
 /* URGENCY BADGE */
 .urgency-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
-.urgency-badge{
-  display:inline-flex;align-items:center;gap:6px;
-  background:var(--signal-soft);color:var(--signal-dark);
-  padding:5px 11px;border-radius:999px;
-  font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:600;
-  letter-spacing:0.05em;text-transform:uppercase;
-}
-.urgency-badge.hot{background:var(--signal);color:var(--porcelain)}
-.urgency-badge.new{background:var(--yellow);color:var(--graphite)}
-.urgency-badge .dot{width:6px;height:6px;border-radius:50%;background:currentColor;animation:pulse 1.5s ease-in-out infinite}
+
+
+
+
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 
 .job-main{display:flex;gap:20px;align-items:flex-start}
@@ -354,39 +348,22 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .similar-sec h2{font-size:clamp(24px,2.5vw,32px);margin-bottom:24px}
 .similar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 
-.jcard{
-  background:var(--porcelain);border:1px solid var(--porcelain-300);
-  border-radius:20px;padding:20px;
-  display:flex;flex-direction:column;gap:12px;
-  cursor:pointer;transition:transform .2s,border-color .2s;
-}
-.jcard:hover{transform:translateY(-3px);border-color:var(--graphite-200)}
-.jcard-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
-.jcard-meta{flex:1;min-width:0}
-.jcard-loc{
-  font-family:'JetBrains Mono',monospace;font-size:10.5px;
-  color:var(--graphite-500);letter-spacing:0.05em;
-  display:inline-flex;align-items:center;gap:6px;margin-bottom:6px;
-}
-.jcard-title{
-  font-family:'Geist',sans-serif;font-weight:500;font-size:16px;
-  letter-spacing:-0.015em;color:var(--graphite);line-height:1.2;
-}
-.jcard-company{font-size:12px;color:var(--graphite-500);margin-top:3px}
-.jcard-rate{
-  display:flex;align-items:baseline;gap:4px;margin-top:8px;
-  padding-top:12px;border-top:1px solid var(--porcelain-300);
-}
-.jcard-rate-num{font-family:'Geist',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.02em}
-.jcard-rate-unit{font-size:11px;color:var(--graphite-500)}
-.jcard-tags{display:flex;gap:5px;flex-wrap:wrap}
-.jcard-tag{
-  background:var(--porcelain-200);color:var(--graphite-700);
-  font-size:10.5px;padding:3px 9px;border-radius:999px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ============ FOOTER ============ */
-.footer{background:var(--graphite);color:var(--porcelain);padding:48px 0 24px}
+.footer{background:var(--porcelain);padding:16px 32px 32px}
+.footer .container{background:var(--graphite);border-radius:24px;padding:48px 40px 28px;max-width:1280px;color:var(--porcelain)}
 .foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}
 .foot-col h5{
   font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;
@@ -402,6 +379,118 @@ em{font-style:italic;color:var(--signal);font-weight:500}
   .req-grid{grid-template-columns:1fr}
   .cond-row{grid-template-columns:1fr;gap:6px}
 }
+
+.jcard{
+  background:var(--porcelain);
+  border:1px solid var(--porcelain-300);
+  border-radius:20px;padding:18px;
+  position:relative;cursor:pointer;
+  transition:transform .2s, box-shadow .2s, border-color .2s;
+}
+.jcard:hover{
+  transform:translateY(-3px);
+  border-color:var(--graphite-200);
+  box-shadow:0 12px 30px -10px rgba(26,29,30,.12);
+}
+.jcard-badge{
+  position:absolute;top:14px;right:14px;
+  font-family:'Inter',sans-serif;font-size:9.5px;font-weight:600;
+  padding:3px 8px;border-radius:999px;letter-spacing:0.05em;
+  display:inline-flex;align-items:center;gap:4px;
+}
+.jcard-badge.b-top{background:var(--yellow);color:var(--graphite)}
+.jcard-badge.b-now{background:var(--graphite);color:var(--porcelain)}
+.jcard-badge.b-now::before{content:'';width:5px;height:5px;border-radius:50%;background:#7CC95C;display:inline-block}
+.jcard-badge.b-new{background:var(--signal-soft);color:#993C1D}
+.jcard-head{display:flex;align-items:flex-start;gap:11px;margin-bottom:10px}
+.jcard-logo{
+  width:38px;height:38px;border-radius:9px;
+  background:var(--graphite);color:var(--porcelain);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Geist',sans-serif;font-weight:500;font-size:15px;
+  flex-shrink:0;
+}
+.jcard-logo.lock{
+  background:linear-gradient(135deg,var(--graphite-200) 0%,var(--graphite-500) 100%);
+  color:var(--porcelain);
+  position:relative;
+}
+.jcard-logo.lock::after{
+  content:'🔒';
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  font-size:14px;
+  filter:grayscale(1);
+}
+.jcard-logo.lock span{visibility:hidden}
+.jcard-meta{flex:1;min-width:0}
+.jcard-title{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:16px;
+  letter-spacing:-0.01em;line-height:1.15;color:var(--graphite);
+}
+.jcard-company{
+  font-family:'Inter',sans-serif;font-size:11.5px;
+  color:var(--graphite-500);margin-top:2px;
+}
+.jcard-company.locked{
+  color:var(--graphite-500);
+  font-style:italic;
+  display:inline-flex;align-items:center;gap:5px;
+}
+.jcard-company.locked::after{
+  content:'';
+  width:11px;height:13px;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236B7174' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='11' width='18' height='11' rx='2'/><path d='M7 11V7a5 5 0 0110 0v4'/></svg>") no-repeat center;
+  background-size:contain;
+}
+.jcard-salary{
+  display:flex;align-items:baseline;gap:5px;margin:8px 0;
+}
+.jcard-salary-num{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:26px;
+  letter-spacing:-0.02em;color:var(--graphite);
+}
+.jcard-salary-unit{font-size:11.5px;color:var(--graphite-500)}
+.jcard-bonus{
+  margin-left:auto;padding:3px 9px;border-radius:999px;
+  font-size:10.5px;font-weight:500;
+}
+.jcard-bonus.bonus-housing{background:var(--signal-soft);color:#993C1D}
+.jcard-bonus.bonus-slots{background:var(--signal-soft);color:#993C1D}
+.jcard-bonus.bonus-business{background:var(--porcelain-200);color:var(--graphite-700)}
+.jcard-info{
+  display:flex;gap:8px;flex-wrap:wrap;align-items:center;
+  font-size:11.5px;color:var(--graphite-700);margin-bottom:11px;
+}
+.jcard-info .sep{color:var(--graphite-200)}
+.jcard-info .date-pill{
+  color:var(--graphite);font-weight:500;
+}
+.jcard-foot{
+  display:flex;justify-content:space-between;align-items:center;
+  padding-top:11px;border-top:1px solid var(--porcelain-300);
+}
+.jcard-tags{display:flex;gap:5px;flex-wrap:wrap}
+.jcard-tag{
+  background:var(--porcelain-200);
+  border:1px solid var(--porcelain-300);
+  color:var(--graphite-700);
+  font-family:'Inter',sans-serif;font-size:10px;font-weight:500;
+  padding:3px 8px;border-radius:999px;
+}
+.jcard-cta{
+  background:var(--signal);color:var(--porcelain);
+  border:0;padding:7px 16px;border-radius:999px;
+  font-family:'Inter',sans-serif;font-size:12px;font-weight:500;
+  cursor:pointer;
+  transition:background .15s;
+}
+.jcard-cta:hover{background:var(--signal-dark)}
+.jcard-cta.locked{
+  background:var(--graphite);color:var(--porcelain);
+}
+.jcard-cta.locked:hover{background:#000}
+section.boxed{padding:16px 32px}
+section.boxed .container{background:#fff;border:1.5px solid var(--porcelain-300);border-radius:24px;padding:32px;max-width:1280px;margin:0 auto}
 </style>
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://alogator.com/sk/ponuka-prace/elektrikar">
@@ -411,11 +500,11 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 <meta property="og:site_name" content="Alogator">
 <meta property="og:locale" content="sk_SK">
 <meta property="og:title" content="Práca pre elektrikárov na Slovensku — § oprávnenie, priemysel · Alogator">
-<meta property="og:description" content="Pracovné ponuky pre elektrikárov — priemyselné aj domové inštalácie, NN/VN. Práca na Slovensku aj v zahraničí (Nemecko, Rakúsko, Holandsko). Vytvor si profil zadarmo.">
+<meta property="og:description" content="Pracovné ponuky pre elektrikárov — priemyselné aj domové inštalácie, NN/VN. Práca na Slovensku aj v zahraničí (Nemecko, Rakúsko, Holandsko). Vytvor si profil zdarma.">
 <meta property="og:url" content="https://alogator.com/sk/ponuka-prace/elektrikar">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Práca pre elektrikárov na Slovensku — § oprávnenie, priemysel · Alogator">
-<meta name="twitter:description" content="Pracovné ponuky pre elektrikárov — priemyselné aj domové inštalácie, NN/VN. Práca na Slovensku aj v zahraničí (Nemecko, Rakúsko, Holandsko). Vytvor si profil zadarmo.">
+<meta name="twitter:description" content="Pracovné ponuky pre elektrikárov — priemyselné aj domové inštalácie, NN/VN. Práca na Slovensku aj v zahraničí (Nemecko, Rakúsko, Holandsko). Vytvor si profil zdarma.">
 <!-- alg-schema -->
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Domov", "item": "https://alogator.com/sk"}, {"@type": "ListItem", "position": 2, "name": "Pracovné ponuky", "item": "https://alogator.com/sk/ponuka-prace"}, {"@type": "ListItem", "position": 3, "name": "Elektrikár", "item": "https://alogator.com/sk/ponuka-prace/elektrikar"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Aké oprávnenie potrebuje elektrikár pre prácu v zahraničí?", "acceptedAnswer": {"@type": "Answer", "text": "Vo väčšine prípadov vám stačí slovenské oprávnenie podľa § vyhlášky 508/2009 (najčastejšie §21 alebo §22) spolu s preukázateľnou praxou. Firmy v Nemecku pracujú podľa noriem VDE, v Holandsku podľa NEN — tie poznáte v praxi rýchlo a často vás s nimi zaškolí priamo zamestnávateľ. Niektoré projekty žiadajú aj platnú lekársku prehliadku a základnú angličtinu alebo nemčinu na pracovnú komunikáciu."}}, {"@type": "Question", "name": "Aký je rozdiel medzi priemyselným a domovým elektrikárom?", "acceptedAnswer": {"@type": "Answer", "text": "Priemyselný elektrikár robí na halách, v energetike a na veľkých stavbách — montuje rozvádzače, ťahá silovú kabeláž a oživuje stroje, často aj na vysokom napätí (VN). Domový elektrikár rieši inštalácie v bytoch a rodinných domoch — zásuvky, svetlá, bleskozvody, prevažne na nízkom napätí (NN). Priemyselné ponuky bývajú lepšie platené, ale vyžadujú viac praxe a vyšší stupeň oprávnenia."}}, {"@type": "Question", "name": "Dá sa robiť elektrikár na živnosť?", "acceptedAnswer": {"@type": "Answer", "text": "Áno. Veľká časť ponúk je na SZČO (živnosť) — fakturujete priamo a sami si platíte odvody. Mnohé firmy v zahraničí ponúkajú aj HPP cez miestnu spoločnosť. Na Alogator pri každej ponuke vidíte, či ide o živnosť alebo zamestnanecký pomer, takže si vyberiete to, čo vám sedí."}}]}</script>
@@ -477,9 +566,9 @@ em{font-style:italic;color:var(--signal);font-weight:500}
             </div>
 
             <div class="job-meta-row">
-              <div class="job-meta-item">📋 <strong>52 ponúk</strong></div>
-              <div class="job-meta-item">💰 <strong>od 22 €/hod</strong></div>
-              <div class="job-meta-item"><span class="flag flag-de"></span><span class="flag flag-at"></span><span class="flag flag-nl"></span><span class="flag flag-sk"></span> <strong>DE · AT · NL · SK</strong></div>
+              <div class="job-meta-item"><strong>52 ponúk</strong></div>
+              <div class="job-meta-item"><strong>od 22 €/hod</strong></div>
+              <div class="job-meta-item">🇩🇪🇦🇹🇳🇱🇸🇰 <strong>DE · AT · NL · SK</strong></div>
             </div>
           </div>
         </div>
@@ -495,16 +584,16 @@ em{font-style:italic;color:var(--signal);font-weight:500}
         <div class="rate-note">Nové ponuky pribúdajú každý týždeň</div>
 
         <div class="rate-bonuses">
-          <div class="bonus-row"><span class="bonus-icon">✓</span><span><strong>Profil zadarmo</strong> pre pracovníkov</span></div>
+          <div class="bonus-row"><span class="bonus-icon">✓</span><span><strong>Profil zdarma</strong> pre pracovníkov</span></div>
           <div class="bonus-row"><span class="bonus-icon">✓</span><span><strong>Kalendár dostupnosti</strong> — firmy vás oslovia</span></div>
           <div class="bonus-row"><span class="bonus-icon">✓</span><span><strong>SK aj zahraničie</strong> v jednej appke</span></div>
           <div class="bonus-row"><span class="bonus-icon">✓</span><span><strong>SZČO aj HPP</strong> ponuky</span></div>
         </div>
 
-        <button class="rate-cta" onclick="location.href='/app'" style="cursor:pointer">Vytvoriť profil zadarmo</button>
+        <button class="rate-cta" onclick="location.href='/app'" style="cursor:pointer">Vytvoriť profil zdarma</button>
         <button class="rate-cta-secondary" onclick="location.href='/sk/stiahnut-aplikaciu'" style="cursor:pointer">Stiahnuť aplikáciu</button>
 
-        <div class="rate-lock-note">Registrácia pre pracovníkov je vždy zadarmo.</div>
+        <div class="rate-lock-note">Registrácia pre pracovníkov je vždy zdarma.</div>
       </aside>
 
     </div>
@@ -542,147 +631,201 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 
           <div class="similar-grid" style="grid-template-columns:repeat(2,1fr)">
             <div class="jcard" onclick="location.href='/app'">
-              <div class="jcard-head">
-                <div class="jcard-meta">
-                  <div class="jcard-loc"><span class="flag flag-nl"></span> Rotterdam · Holandsko</div>
-                  <div class="jcard-title">Elektrikár NN/VN · priemysel</div>
-                  <div class="jcard-company">🔒 Firma · NL</div>
-                </div>
-                <span class="urgency-badge hot">Hot</span>
+            <div class="jcard-badge b-top">TOP</div>
+            <div class="jcard-head">
+              <div class="jcard-logo lock"><span>E</span></div>
+              <div class="jcard-meta">
+                <div class="jcard-title">Elektrikár NN/VN · priemysel</div>
+                <div class="jcard-company locked">🇳🇱 Firma</div>
               </div>
-              <div class="jcard-rate">
-                <span class="jcard-rate-num">28 €</span>
-                <span class="jcard-rate-unit">/ hod + bonusy</span>
-              </div>
+            </div>
+            <div class="jcard-salary">
+              <span class="jcard-salary-num">28 €</span>
+              <span class="jcard-salary-unit">/ hod</span>
+              <span class="jcard-bonus bonus-housing">+ bonusy</span>
+            </div>
+            <div class="jcard-info">
+              <span>🇳🇱 Rotterdam, NL</span>
+            </div>
+            <div class="jcard-foot">
               <div class="jcard-tags">
                 <span class="jcard-tag">NN/VN</span>
-                <span class="jcard-tag">NEN</span>
-                <span class="jcard-tag">Ubytovanie</span>
-                <span class="jcard-tag">Petrochémia</span>
-                <span class="jcard-tag">Živnosť</span>
-                <span class="jcard-tag">EN</span>
+              <span class="jcard-tag">NEN</span>
+              <span class="jcard-tag">Ubytovanie</span>
+              <span class="jcard-tag">Petrochémia</span>
+              <span class="jcard-tag">Živnosť</span>
+              <span class="jcard-tag">EN</span>
               </div>
-            </div>
-
-            <div class="jcard" onclick="location.href='/app'">
-              <div class="jcard-head">
-                <div class="jcard-meta">
-                  <div class="jcard-loc"><span class="flag flag-de"></span> Mníchov · Nemecko</div>
-                  <div class="jcard-title">Elektrikár · priemysel</div>
-                  <div class="jcard-company">🔒 Firma · DE</div>
-                </div>
-                <span class="urgency-badge new">Nová</span>
-              </div>
-              <div class="jcard-rate">
-                <span class="jcard-rate-num">30 €</span>
-                <span class="jcard-rate-unit">/ hod</span>
-              </div>
-              <div class="jcard-tags">
-                <span class="jcard-tag">VDE</span>
-                <span class="jcard-tag">Rozvádzače</span>
-                <span class="jcard-tag">40 h/tý</span>
-                <span class="jcard-tag">Energetika</span>
-                <span class="jcard-tag">Ubyt.: Platené</span>
-                <span class="jcard-tag">HPP</span>
-                <span class="jcard-tag">DE</span>
-              </div>
-            </div>
-
-            <div class="jcard" onclick="location.href='/app'">
-              <div class="jcard-head">
-                <div class="jcard-meta">
-                  <div class="jcard-loc"><span class="flag flag-at"></span> Linz · Rakúsko</div>
-                  <div class="jcard-title">Elektrikár MaR · automatizácia</div>
-                  <div class="jcard-company">🔒 Firma · AT</div>
-                </div>
-              </div>
-              <div class="jcard-rate">
-                <span class="jcard-rate-num">29 €</span>
-                <span class="jcard-rate-unit">/ hod</span>
-              </div>
-              <div class="jcard-tags">
-                <span class="jcard-tag">MaR</span>
-                <span class="jcard-tag">Meranie</span>
-                <span class="jcard-tag">38 h/tý</span>
-                <span class="jcard-tag">Petrochémia</span>
-                <span class="jcard-tag">Ubyt.: V cene</span>
-                <span class="jcard-tag">Živnosť</span>
-                <span class="jcard-tag">EN/DE</span>
-              </div>
-            </div>
-
-            <div class="jcard" onclick="location.href='/app'">
-              <div class="jcard-head">
-                <div class="jcard-meta">
-                  <div class="jcard-loc"><span class="flag flag-sk"></span> Bratislava · Slovensko</div>
-                  <div class="jcard-title">Elektrikár · domové inštalácie</div>
-                  <div class="jcard-company">🔒 Firma · SK</div>
-                </div>
-              </div>
-              <div class="jcard-rate">
-                <span class="jcard-rate-num">17 €</span>
-                <span class="jcard-rate-unit">/ hod</span>
-              </div>
-              <div class="jcard-tags">
-                <span class="jcard-tag">§21</span>
-                <span class="jcard-tag">Inštalácie</span>
-                <span class="jcard-tag">SK</span>
-                <span class="jcard-tag">Stavebníctvo</span>
-                <span class="jcard-tag">40h/týž</span>
-                <span class="jcard-tag">HPP</span>
-              </div>
-            </div>
-
-            <div class="jcard" onclick="location.href='/app'">
-              <div class="jcard-head">
-                <div class="jcard-meta">
-                  <div class="jcard-loc"><span class="flag flag-de"></span> Stuttgart · Nemecko</div>
-                  <div class="jcard-title">Elektromontér · kabeláž</div>
-                  <div class="jcard-company">🔒 Firma · DE</div>
-                </div>
-                <span class="urgency-badge hot">Hot</span>
-              </div>
-              <div class="jcard-rate">
-                <span class="jcard-rate-num">27 €</span>
-                <span class="jcard-rate-unit">/ hod</span>
-              </div>
-              <div class="jcard-tags">
-                <span class="jcard-tag">Kabeláž</span>
-                <span class="jcard-tag">Montáž</span>
-                <span class="jcard-tag">45 h/tý</span>
-                <span class="jcard-tag">Energetika</span>
-                <span class="jcard-tag">Ubyt.: Platené</span>
-                <span class="jcard-tag">Živnosť / HPP</span>
-              </div>
-            </div>
-
-            <div class="jcard" onclick="location.href='/app'">
-              <div class="jcard-head">
-                <div class="jcard-meta">
-                  <div class="jcard-loc"><span class="flag flag-at"></span> Viedeň · Rakúsko</div>
-                  <div class="jcard-title">Revízny technik</div>
-                  <div class="jcard-company">🔒 Firma · AT</div>
-                </div>
-                <span class="urgency-badge new">Nová</span>
-              </div>
-              <div class="jcard-rate">
-                <span class="jcard-rate-num">31 €</span>
-                <span class="jcard-rate-unit">/ hod</span>
-              </div>
-              <div class="jcard-tags">
-                <span class="jcard-tag">§23</span>
-                <span class="jcard-tag">Revízie</span>
-                <span class="jcard-tag">VN</span>
-                <span class="jcard-tag">Energetika</span>
-                <span class="jcard-tag">50h/týž</span>
-                <span class="jcard-tag">Živnosť</span>
-                <span class="jcard-tag">Fakt.: 30/30</span>
-              </div>
+              <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
             </div>
           </div>
 
+            <div class="jcard" onclick="location.href='/app'">
+            <div class="jcard-badge b-new">NOVÉ</div>
+            <div class="jcard-head">
+              <div class="jcard-logo lock"><span>E</span></div>
+              <div class="jcard-meta">
+                <div class="jcard-title">Elektrikár · priemysel</div>
+                <div class="jcard-company locked">🇩🇪 Firma</div>
+              </div>
+            </div>
+            <div class="jcard-salary">
+              <span class="jcard-salary-num">30 €</span>
+              <span class="jcard-salary-unit">/ hod</span>
+              <span class="jcard-bonus bonus-housing">+ ubytovanie</span>
+            </div>
+            <div class="jcard-info">
+              <span>🇩🇪 Mníchov, DE</span>
+            <span class="sep">·</span>
+            <span>40h / týždeň</span>
+            </div>
+            <div class="jcard-foot">
+              <div class="jcard-tags">
+                <span class="jcard-tag">VDE</span>
+              <span class="jcard-tag">Rozvádzače</span>
+              <span class="jcard-tag">40 h/tý</span>
+              <span class="jcard-tag">Energetika</span>
+              <span class="jcard-tag">Ubyt.: Platené</span>
+              <span class="jcard-tag">HPP</span>
+              <span class="jcard-tag">DE</span>
+              </div>
+              <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
+            </div>
+          </div>
+
+            <div class="jcard" onclick="location.href='/app'">
+            
+            <div class="jcard-head">
+              <div class="jcard-logo lock"><span>E</span></div>
+              <div class="jcard-meta">
+                <div class="jcard-title">Elektrikár MaR · automatizácia</div>
+                <div class="jcard-company locked">🇦🇹 Firma</div>
+              </div>
+            </div>
+            <div class="jcard-salary">
+              <span class="jcard-salary-num">29 €</span>
+              <span class="jcard-salary-unit">/ hod</span>
+              <span class="jcard-bonus bonus-housing">+ ubytovanie</span>
+            </div>
+            <div class="jcard-info">
+              <span>🇦🇹 Linz, AT</span>
+            <span class="sep">·</span>
+            <span>38h / týždeň</span>
+            </div>
+            <div class="jcard-foot">
+              <div class="jcard-tags">
+                <span class="jcard-tag">MaR</span>
+              <span class="jcard-tag">Meranie</span>
+              <span class="jcard-tag">38 h/tý</span>
+              <span class="jcard-tag">Petrochémia</span>
+              <span class="jcard-tag">Ubyt.: V cene</span>
+              <span class="jcard-tag">Živnosť</span>
+              <span class="jcard-tag">EN/DE</span>
+              </div>
+              <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
+            </div>
+          </div>
+
+            <div class="jcard" onclick="location.href='/app'">
+            
+            <div class="jcard-head">
+              <div class="jcard-logo lock"><span>E</span></div>
+              <div class="jcard-meta">
+                <div class="jcard-title">Elektrikár · domové inštalácie</div>
+                <div class="jcard-company locked">🇸🇰 Firma</div>
+              </div>
+            </div>
+            <div class="jcard-salary">
+              <span class="jcard-salary-num">17 €</span>
+              <span class="jcard-salary-unit">/ hod</span>
+              
+            </div>
+            <div class="jcard-info">
+              <span>🇸🇰 Bratislava, SK</span>
+            <span class="sep">·</span>
+            <span>40h / týždeň</span>
+            </div>
+            <div class="jcard-foot">
+              <div class="jcard-tags">
+                <span class="jcard-tag">§21</span>
+              <span class="jcard-tag">Inštalácie</span>
+              <span class="jcard-tag">SK</span>
+              <span class="jcard-tag">Stavebníctvo</span>
+              <span class="jcard-tag">40h/týž</span>
+              <span class="jcard-tag">HPP</span>
+              </div>
+              <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
+            </div>
+          </div>
+
+            <div class="jcard" onclick="location.href='/app'">
+            <div class="jcard-badge b-top">TOP</div>
+            <div class="jcard-head">
+              <div class="jcard-logo lock"><span>E</span></div>
+              <div class="jcard-meta">
+                <div class="jcard-title">Elektromontér · kabeláž</div>
+                <div class="jcard-company locked">🇩🇪 Firma</div>
+              </div>
+            </div>
+            <div class="jcard-salary">
+              <span class="jcard-salary-num">27 €</span>
+              <span class="jcard-salary-unit">/ hod</span>
+              <span class="jcard-bonus bonus-housing">+ ubytovanie</span>
+            </div>
+            <div class="jcard-info">
+              <span>🇩🇪 Stuttgart, DE</span>
+            <span class="sep">·</span>
+            <span>45h / týždeň</span>
+            </div>
+            <div class="jcard-foot">
+              <div class="jcard-tags">
+                <span class="jcard-tag">Kabeláž</span>
+              <span class="jcard-tag">Montáž</span>
+              <span class="jcard-tag">45 h/tý</span>
+              <span class="jcard-tag">Energetika</span>
+              <span class="jcard-tag">Ubyt.: Platené</span>
+              <span class="jcard-tag">Živnosť / HPP</span>
+              </div>
+              <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
+            </div>
+          </div>
+
+            <div class="jcard" onclick="location.href='/app'">
+            <div class="jcard-badge b-new">NOVÉ</div>
+            <div class="jcard-head">
+              <div class="jcard-logo lock"><span>R</span></div>
+              <div class="jcard-meta">
+                <div class="jcard-title">Revízny technik</div>
+                <div class="jcard-company locked">🇦🇹 Firma</div>
+              </div>
+            </div>
+            <div class="jcard-salary">
+              <span class="jcard-salary-num">31 €</span>
+              <span class="jcard-salary-unit">/ hod</span>
+              
+            </div>
+            <div class="jcard-info">
+              <span>🇦🇹 Viedeň, AT</span>
+            <span class="sep">·</span>
+            <span>50h / týždeň</span>
+            </div>
+            <div class="jcard-foot">
+              <div class="jcard-tags">
+                <span class="jcard-tag">§23</span>
+              <span class="jcard-tag">Revízie</span>
+              <span class="jcard-tag">VN</span>
+              <span class="jcard-tag">Energetika</span>
+              <span class="jcard-tag">50h/týž</span>
+              <span class="jcard-tag">Živnosť</span>
+              <span class="jcard-tag">Fakt.: 30/30</span>
+              </div>
+              <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
+            </div>
+          </div>
+          </div>
+
           <div style="margin-top:24px;text-align:center">
-            <button class="rate-cta" style="width:auto;padding:13px 28px;background:var(--signal);color:var(--porcelain);border:0;border-radius:999px;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;cursor:pointer" onclick="location.href='/app'">Vytvoriť profil zadarmo a vidieť všetkých 52 ponúk</button>
+            <button class="rate-cta" style="width:auto;padding:13px 28px;background:var(--signal);color:var(--porcelain);border:0;border-radius:999px;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;cursor:pointer" onclick="location.href='/app'">Vytvoriť profil zdarma a vidieť všetkých 52 ponúk</button>
           </div>
         </div>
 
@@ -691,15 +834,22 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           <span class="label">Časté otázky</span>
           <h2 style="margin-top:8px">Časté otázky <em>elektrikárov</em></h2>
 
-          <div class="desc-text">
-            <h3>Aké oprávnenie potrebuje elektrikár pre prácu v zahraničí?</h3>
-            <p>Vo väčšine prípadov vám stačí slovenské oprávnenie podľa <strong>§ vyhlášky 508/2009</strong> (najčastejšie §21 alebo §22) spolu s preukázateľnou praxou. Firmy v Nemecku pracujú podľa noriem <strong>VDE</strong>, v Holandsku podľa <strong>NEN</strong> — tie poznáte v praxi rýchlo a často vás s nimi zaškolí priamo zamestnávateľ. Niektoré projekty žiadajú aj platnú lekársku prehliadku a základnú angličtinu alebo nemčinu na pracovnú komunikáciu.</p>
-
-            <h3>Aký je rozdiel medzi priemyselným a domovým elektrikárom?</h3>
-            <p>Priemyselný elektrikár robí na halách, v energetike a na veľkých stavbách — montuje rozvádzače, ťahá silovú kabeláž a oživuje stroje, často aj na <strong>vysokom napätí (VN)</strong>. Domový elektrikár rieši inštalácie v bytoch a rodinných domoch — zásuvky, svetlá, bleskozvody, prevažne na <strong>nízkom napätí (NN)</strong>. Priemyselné ponuky bývajú lepšie platené, ale vyžadujú viac praxe a vyšší stupeň oprávnenia.</p>
-
-            <h3>Dá sa robiť elektrikár na živnosť?</h3>
-            <p>Áno. Veľká časť ponúk je na <strong>SZČO (živnosť)</strong> — fakturujete priamo a sami si platíte odvody. Mnohé firmy v zahraničí ponúkajú aj <strong>HPP</strong> cez miestnu spoločnosť. Na Alogator pri každej ponuke vidíte, či ide o živnosť alebo zamestnanecký pomer, takže si vyberiete to, čo vám sedí.</p>
+          <div class="hiw-grid faq-grid-cards" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px">
+            <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:20px;background:var(--porcelain-200);display:flex;flex-direction:column">
+              <div class="hiw-num" style="font-size:28px">01</div>
+              <h4 style="font-size:13px;font-weight:600;margin:0">Aké oprávnenie potrebuje elektrikár pre prácu v zahraničí?</h4>
+              <p style="font-size:12px;color:var(--graphite-700);line-height:1.5;margin:0">Vo väčšine prípadov vám stačí slovenské oprávnenie podľa <strong>§ vyhlášky 508/2009</strong> (najčastejšie §21 alebo §22) spolu s preukázateľnou praxou. Firmy v Nemecku pracujú podľa noriem <strong>VDE</strong>, v Holandsku podľa <strong>NEN</strong> — tie poznáte v praxi rýchlo a často vás s nimi zaškolí priamo zamestnávateľ. Niektoré projekty žiadajú aj platnú lekársku prehliadku a základnú angličtinu alebo nemčinu na pracovnú komunikáciu.</p>
+            </div>
+            <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:20px;background:var(--porcelain-200);display:flex;flex-direction:column">
+              <div class="hiw-num" style="font-size:28px">02</div>
+              <h4 style="font-size:13px;font-weight:600;margin:0">Aký je rozdiel medzi priemyselným a domovým elektrikárom?</h4>
+              <p style="font-size:12px;color:var(--graphite-700);line-height:1.5;margin:0">Priemyselný elektrikár robí na halách, v energetike a na veľkých stavbách — montuje rozvádzače, ťahá silovú kabeláž a oživuje stroje, často aj na <strong>vysokom napätí (VN)</strong>. Domový elektrikár rieši inštalácie v bytoch a rodinných domoch — zásuvky, svetlá, bleskozvody, prevažne na <strong>nízkom napätí (NN)</strong>. Priemyselné ponuky bývajú lepšie platené, ale vyžadujú viac praxe a vyšší stupeň oprávnenia.</p>
+            </div>
+            <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:20px;background:var(--porcelain-200);display:flex;flex-direction:column">
+              <div class="hiw-num" style="font-size:28px">03</div>
+              <h4 style="font-size:13px;font-weight:600;margin:0">Dá sa robiť elektrikár na živnosť?</h4>
+              <p style="font-size:12px;color:var(--graphite-700);line-height:1.5;margin:0">Áno. Veľká časť ponúk je na <strong>SZČO (živnosť)</strong> — fakturujete priamo a sami si platíte odvody. Mnohé firmy v zahraničí ponúkajú aj <strong>HPP</strong> cez miestnu spoločnosť. Na Alogator pri každej ponuke vidíte, či ide o živnosť alebo zamestnanecký pomer, takže si vyberiete to, čo vám sedí.</p>
+            </div>
           </div>
         </div>
 
@@ -737,7 +887,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 
           <div class="summary-widget" style="background:transparent;padding:0">
             <div class="summary-row">
-              <span class="summary-icon">💰</span>
+              <span class="summary-icon"></span>
               <div class="summary-content">
                 <div class="summary-label">Sadzby</div>
                 <div class="summary-val">22–31 €/hod</div>
@@ -745,7 +895,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
               </div>
             </div>
             <div class="summary-row">
-              <span class="summary-icon">📜</span>
+              <span class="summary-icon"></span>
               <div class="summary-content">
                 <div class="summary-label">Oprávnenie</div>
                 <div class="summary-val">§ 508/2009</div>
@@ -753,7 +903,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
               </div>
             </div>
             <div class="summary-row">
-              <span class="summary-icon">🏭</span>
+              <span class="summary-icon"></span>
               <div class="summary-content">
                 <div class="summary-label">Zameranie</div>
                 <div class="summary-val">Priemysel aj domové</div>
@@ -761,7 +911,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
               </div>
             </div>
             <div class="summary-row">
-              <span class="summary-icon">🌍</span>
+              <span class="summary-icon"></span>
               <div class="summary-content">
                 <div class="summary-label">Krajiny</div>
                 <div class="summary-val">DE · AT · NL · SK</div>
@@ -769,16 +919,16 @@ em{font-style:italic;color:var(--signal);font-weight:500}
               </div>
             </div>
             <div class="summary-row">
-              <span class="summary-icon">📅</span>
+              <span class="summary-icon"></span>
               <div class="summary-content">
                 <div class="summary-label">Profil</div>
-                <div class="summary-val">Zadarmo</div>
+                <div class="summary-val">Zdarma</div>
                 <div class="summary-sub">Kalendár dostupnosti → firmy oslovia</div>
               </div>
             </div>
           </div>
 
-          <button class="rate-cta" style="margin-top:18px;background:var(--signal);color:var(--porcelain);border:0;width:100%;padding:14px;border-radius:999px;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;cursor:pointer" onclick="location.href='/app'">Vytvoriť profil zadarmo</button>
+          <button class="rate-cta" style="margin-top:18px;background:var(--signal);color:var(--porcelain);border:0;width:100%;padding:14px;border-radius:999px;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;cursor:pointer" onclick="location.href='/app'">Vytvoriť profil zdarma</button>
         </div>
 
       </aside>
@@ -787,7 +937,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 </section>
 
 <!-- SIMILAR / SÚVISIACE PROFESIE -->
-<section class="similar-sec">
+<section class="similar-sec boxed">
   <div class="container">
     <span class="eyebrow">súvisiace profesie</span>
     <h2 style="margin-top:10px">Hľadáte inú profesiu?</h2>
@@ -795,43 +945,52 @@ em{font-style:italic;color:var(--signal);font-weight:500}
     <div class="similar-grid">
       <div class="jcard" onclick="location.href='/sk/ponuka-prace/zvarac'">
         <div class="jcard-head">
+          <div class="jcard-logo lock"><span>Z</span></div>
           <div class="jcard-meta">
-            <div class="jcard-loc">PROFESIA</div>
             <div class="jcard-title">Zvárač</div>
             <div class="jcard-company">MIG/MAG · TIG · priemysel</div>
           </div>
         </div>
-        <div class="jcard-tags">
-          <span class="jcard-tag">DE · AT · NL</span>
-          <span class="jcard-tag">od 24 €/hod</span>
+        <div class="jcard-foot" style="border-top:0;padding-top:6px">
+          <div class="jcard-tags">
+            <span class="jcard-tag">DE · AT · NL</span>
+              <span class="jcard-tag">od 24 €/hod</span>
+          </div>
+          <button class="jcard-cta" onclick="location.href='/sk/ponuka-prace/zvarac'" style="cursor:pointer">Zobraziť</button>
         </div>
       </div>
 
       <div class="jcard" onclick="location.href='/sk/ponuka-prace/tesar'">
         <div class="jcard-head">
+          <div class="jcard-logo lock"><span>T</span></div>
           <div class="jcard-meta">
-            <div class="jcard-loc">PROFESIA</div>
             <div class="jcard-title">Tesár</div>
             <div class="jcard-company">Krovy · debnenie · stavby</div>
           </div>
         </div>
-        <div class="jcard-tags">
-          <span class="jcard-tag">DE · AT</span>
-          <span class="jcard-tag">od 21 €/hod</span>
+        <div class="jcard-foot" style="border-top:0;padding-top:6px">
+          <div class="jcard-tags">
+            <span class="jcard-tag">DE · AT</span>
+              <span class="jcard-tag">od 21 €/hod</span>
+          </div>
+          <button class="jcard-cta" onclick="location.href='/sk/ponuka-prace/tesar'" style="cursor:pointer">Zobraziť</button>
         </div>
       </div>
 
       <div class="jcard" onclick="location.href='/sk/ponuka-prace/murar'">
         <div class="jcard-head">
+          <div class="jcard-logo lock"><span>M</span></div>
           <div class="jcard-meta">
-            <div class="jcard-loc">PROFESIA</div>
             <div class="jcard-title">Murár</div>
             <div class="jcard-company">Hrubá stavba · omietky</div>
           </div>
         </div>
-        <div class="jcard-tags">
-          <span class="jcard-tag">DE · AT</span>
-          <span class="jcard-tag">od 20 €/hod</span>
+        <div class="jcard-foot" style="border-top:0;padding-top:6px">
+          <div class="jcard-tags">
+            <span class="jcard-tag">DE · AT</span>
+              <span class="jcard-tag">od 20 €/hod</span>
+          </div>
+          <button class="jcard-cta" onclick="location.href='/sk/ponuka-prace/murar'" style="cursor:pointer">Zobraziť</button>
         </div>
       </div>
     </div>

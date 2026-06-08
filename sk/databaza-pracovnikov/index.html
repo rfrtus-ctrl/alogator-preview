@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Databáza pracovníkov — 3 047 overených remeselníkov · Alogator</title>
-<meta name="description" content="Databáza 3 047 overených stavbárov a remeselníkov. Zvárači, elektrikári, montéri, potrubári. Dostupnosť v reálnom čase. Filtrujte podľa profesie, krajiny, jazyka.">
+<title>Databáza pracovníkov — 4 000 + overených remeselníkov · Alogator</title>
+<meta name="description" content="Databáza 4 000 + overených stavbárov a remeselníkov. Zvárači, elektrikári, montéri, potrubári. Dostupnosť v reálnom čase. Filtrujte podľa profesie, krajiny, jazyka.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -328,8 +328,12 @@ body {
 
 /* FOOTER */
 .footer {
-  background: var(--graphite); color: var(--porcelain);
-  padding: 48px 0 24px;
+  background: var(--porcelain);
+  padding: 16px 32px 32px;
+}
+.footer .container {
+  background: var(--graphite); border-radius: 24px;
+  padding: 48px 40px 28px; max-width: 1280px; color: var(--porcelain);
 }
 .foot-grid {
   display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -376,12 +380,12 @@ body {
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Alogator">
 <meta property="og:locale" content="sk_SK">
-<meta property="og:title" content="Databáza pracovníkov — 3 047 overených remeselníkov · Alogator">
-<meta property="og:description" content="Databáza 3 047 overených stavbárov a remeselníkov. Zvárači, elektrikári, montéri, potrubári. Dostupnosť v reálnom čase. Filtrujte podľa profesie, krajiny, jazyka.">
+<meta property="og:title" content="Databáza pracovníkov — 4 000 + overených remeselníkov · Alogator">
+<meta property="og:description" content="Databáza 4 000 + overených stavbárov a remeselníkov. Zvárači, elektrikári, montéri, potrubári. Dostupnosť v reálnom čase. Filtrujte podľa profesie, krajiny, jazyka.">
 <meta property="og:url" content="https://alogator.com/sk/databaza-pracovnikov">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Databáza pracovníkov — 3 047 overených remeselníkov · Alogator">
-<meta name="twitter:description" content="Databáza 3 047 overených stavbárov a remeselníkov. Zvárači, elektrikári, montéri, potrubári. Dostupnosť v reálnom čase. Filtrujte podľa profesie, krajiny, jazyka.">
+<meta name="twitter:title" content="Databáza pracovníkov — 4 000 + overených remeselníkov · Alogator">
+<meta name="twitter:description" content="Databáza 4 000 + overených stavbárov a remeselníkov. Zvárači, elektrikári, montéri, potrubári. Dostupnosť v reálnom čase. Filtrujte podľa profesie, krajiny, jazyka.">
 <!-- alg-schema -->
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Domov", "item": "https://alogator.com/sk"}, {"@type": "ListItem", "position": 2, "name": "Databáza pracovníkov", "item": "https://alogator.com/sk/databaza-pracovnikov"}]}</script>
 <!-- /alg-schema -->
@@ -415,11 +419,11 @@ body {
 <section class="hero">
   <div class="container">
     <div class="eyebrow" data-c="databaza.eyebrow">Databáza pracovníkov</div>
-    <h1 data-c="databaza.h1">3 047 pracovníkov<br>po <em>celej EÚ</em></h1>
+    <h1 data-c="databaza.h1">4 000 + pracovníkov<br>po <em>celej EÚ</em></h1>
     <p class="hero-sub" data-c="databaza.sub">Stavbárske remeslá overené v reálnom čase. Filtrujte podľa profesie, lokality, praxe, jazyka alebo certifikátu.</p>
     <div class="hero-stats">
       <div class="hero-stat">
-        <strong data-c="databaza.stat1_num">3 047</strong>
+        <strong data-c="databaza.stat1_num">4 000 +</strong>
         <span data-c="databaza.stat1_label">PRACOVNÍKOV</span>
       </div>
       <div class="hero-stat-divider"></div>
@@ -446,16 +450,16 @@ body {
   <div class="container">
     <div class="search-box">
       <div class="search-label">
-        <span>✦</span> <span data-c="databaza.search_label">AI vyhľadávanie · opíšte koho hľadáte</span>
+        <span></span> <span data-c="databaza.search_label">AI vyhľadávanie · opíšte koho hľadáte</span>
       </div>
       <div class="search-input-row">
         <input class="search-input" type="text" data-c-placeholder="databaza.search_placeholder" placeholder="Napríklad: Hľadám zvárača MIG/MAG do Bavorska, dostupný od júna, hovorí nemecky, vlastné auto...">
         <button class="search-btn">→</button>
       </div>
       <div class="search-chips">
-        <span class="search-chip">⚡ Elektrikár · Nemecko</span>
-        <span class="search-chip">⚡ Tím 5 montérov · DE/AT</span>
-        <span class="search-chip">⚡ Zvárač · NUC certifikát</span>
+        <span class="search-chip">Elektrikár · Nemecko</span>
+        <span class="search-chip">Tím 5 montérov · DE/AT</span>
+        <span class="search-chip">Zvárač · NUC certifikát</span>
       </div>
     </div>
 
@@ -464,15 +468,15 @@ body {
       <!-- PROFESIA -->
       <div class="filter-row">
         <span class="filter-row-label">Profesia</span>
-        <button class="fchip active">Všetci <span class="fcnt">3 047</span></button>
-        <button class="fchip">🔥 Zvárač <span class="fcnt">297</span></button>
-        <button class="fchip">⚡ Elektrikár <span class="fcnt">142</span></button>
-        <button class="fchip">🔧 Montér <span class="fcnt">186</span></button>
-        <button class="fchip">🔩 Potrubár <span class="fcnt">98</span></button>
+        <button class="fchip active">Všetci <span class="fcnt">4 000 +</span></button>
+        <button class="fchip">Zvárač <span class="fcnt">297</span></button>
+        <button class="fchip">Elektrikár <span class="fcnt">142</span></button>
+        <button class="fchip">Montér <span class="fcnt">186</span></button>
+        <button class="fchip">Potrubár <span class="fcnt">98</span></button>
         <button class="fchip">🔗 Zámočník <span class="fcnt">74</span></button>
-        <button class="fchip">🧱 Murár <span class="fcnt">62</span></button>
-        <button class="fchip">🪵 Tesár <span class="fcnt">48</span></button>
-        <button class="fchip">🚜 Bagrista <span class="fcnt">38</span></button>
+        <button class="fchip">Murár <span class="fcnt">62</span></button>
+        <button class="fchip">Tesár <span class="fcnt">48</span></button>
+        <button class="fchip">Bagrista <span class="fcnt">38</span></button>
       </div>
 
       <!-- KRAJINA -->
@@ -502,7 +506,7 @@ body {
 
     <!-- FILTER META -->
     <div class="filter-meta">
-      <span><strong>284</strong> z 3 047 · zoradiť</span>
+      <span><strong>284</strong> z 4 000 + · zoradiť</span>
       <span style="display:flex;align-items:center;gap:12px">
         <span class="filter-reset">Resetovať filtre</span>
         <select class="filter-sort">
@@ -733,7 +737,7 @@ body {
     <!-- UPSELL CARD -->
     <div class="upsell-card">
       <div class="eyebrow">Alogator tier</div>
-      <h3>Vidíte len 3 z 3 047</h3>
+      <h3>Vidíte len 3 z 4 000 +</h3>
       <p>Databáza je dostupná od plánu Premium+. Získajte prístup ku všetkým profilom vrátane kalendára dostupnosti.</p>
       <a href="/sk/cennik" class="btn-primary">Pozrieť plány →</a>
     </div>

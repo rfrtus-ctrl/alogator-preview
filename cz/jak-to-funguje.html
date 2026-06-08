@@ -80,7 +80,8 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .step-detail-item::before{content:'·';color:var(--signal);font-size:18px;line-height:1;flex-shrink:0}
 
 /* COMPARE */
-.compare-sec{padding:64px 0;background:var(--porcelain-200)}
+.compare-sec{padding:16px 32px;background:var(--porcelain)}
+.compare-sec .container{background:#fff;border:1.5px solid var(--porcelain-300);border-radius:24px;padding:48px 32px;max-width:1280px;margin:0 auto}
 .compare-sec h2{font-size:clamp(28px,3vw,40px);text-align:center;margin:14px 0 48px}
 .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:960px;margin:0 auto}
 .compare-card{background:var(--porcelain);border:1px solid var(--porcelain-300);border-radius:24px;padding:32px}
@@ -105,7 +106,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .faq-a-inner{padding:0 22px 20px;font-size:14.5px;color:var(--graphite-700);line-height:1.6}
 
 /* CTA */
-.cta-sec{padding:64px 0;background:var(--porcelain-200)}
+.cta-sec{padding:16px 32px;background:var(--porcelain)}
 .cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:960px;margin:0 auto}
 .cta-card{border-radius:24px;padding:40px;text-align:center}
 .cta-card.dark{background:var(--graphite)}
@@ -118,13 +119,16 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .cta-btn.white{background:var(--porcelain);color:var(--graphite)}
 .cta-btn.outline-white{background:transparent;color:var(--porcelain);border:2px solid rgba(249,243,237,.4)}
 
-.footer{background:var(--graphite);color:var(--porcelain);padding:48px 0 24px}
+.footer{background:var(--porcelain);padding:16px 32px 32px}
+.footer .container{background:var(--graphite);border-radius:24px;padding:48px 40px 28px;max-width:1280px;color:var(--porcelain)}
 .foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}
 .foot-col h5{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.5);margin-bottom:16px}
 .foot-col h5::before{content:'• ';color:var(--signal)}
 .foot-col a{display:block;color:rgba(249,243,237,.7);text-decoration:none;font-size:13.5px;padding:5px 0}
 .foot-col a:hover{color:var(--signal)}
 .foot-bottom{padding-top:24px;display:flex;justify-content:space-between;font-size:12px;color:rgba(249,243,237,.5)}
+section.boxed{padding:16px 32px}
+section.boxed .container{background:#fff;border:1.5px solid var(--porcelain-300);border-radius:24px;padding:32px;max-width:1280px;margin:0 auto}
 @media(max-width:900px){
   .steps-timeline::before{left:28px}
   .step-item{grid-template-columns:56px 1fr;gap:16px}
@@ -180,15 +184,15 @@ em{font-style:italic;color:var(--signal);font-weight:500}
   <div class="container">
     <span class="eyebrow">jak to funguje</span>
     <h1>Jednoduché pro <em>každého</em>.</h1>
-    <p class="lead">Ať jste firma hledající řemeslníky, nebo řemeslník hledající zakázky — Alogator funguje ve 4 krocích. Pro každého jinak, ale stejně jednoduše.</p>
+    <p class="lead">Ať jste firma hledající odborníky, nebo odborník hledající zakázky — Alogator funguje ve 4 krocích. Pro každého jinak, ale stejně jednoduše.</p>
     <div class="view-toggle">
-      <button class="vt-btn active" onclick="switchView(event,'firma')">🏗️ Jsem firma</button>
-      <button class="vt-btn" onclick="switchView(event,'worker')">👷 Jsem pracovník</button>
+      <button class="vt-btn active" onclick="switchView(event,'firma')">Jsem firma</button>
+      <button class="vt-btn" onclick="switchView(event,'worker')">Jsem pracovník</button>
     </div>
   </div>
 </section>
 
-<section class="steps-sec">
+<section class="steps-sec boxed">
   <div class="container">
 
     <!-- FIRMA VIEW -->
@@ -201,9 +205,9 @@ em{font-style:italic;color:var(--signal);font-weight:500}
         <div class="step-item">
           <div class="step-content right">
             <div class="step-card">
-              <div class="step-icon">📋</div>
+              <div class="step-icon"></div>
               <h3>Zaregistrujte se zdarma</h3>
-              <p>Vytvoříte účet firmy za 2 minuty. Zadáte IČO, e-mail, heslo. Žádná kreditní karta — 14 dní zdarma s plným přístupem.</p>
+              <p>Vytvoříte účet firmy za 2 minuty. Zadáte IČO, e-mail, heslo. Žádná kreditní karta — 30 dní zdarma s plným přístupem.</p>
               <div class="step-detail">
                 <div class="step-detail-item">Aktivuje se automaticky po registraci</div>
                 <div class="step-detail-item">Dostanete demo tour po platformě</div>
@@ -220,9 +224,9 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           <div class="step-num-wrap"><div class="step-num signal">02</div></div>
           <div class="step-content">
             <div class="step-card">
-              <div class="step-icon">🔍</div>
+              <div class="step-icon"></div>
               <h3>Popište koho hledáte</h3>
-              <p>Zadáte požadavky do AI vyhledávání: profese, jazyk, certifikáty, dostupnost, lokalita. Alogator najde shodu v databázi 3 047 pracovníků.</p>
+              <p>Zadáte požadavky do AI vyhledávání: profese, jazyk, certifikáty, dostupnost, lokalita. Alogator najde shodu v databázi 4 000 + pracovníků.</p>
               <div class="step-detail">
                 <div class="step-detail-item">AI vyhledávání rozumí volnému textu i filtrování</div>
                 <div class="step-detail-item">Vidíte real-time kalendář dostupnosti každého</div>
@@ -235,7 +239,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
         <div class="step-item">
           <div class="step-content right">
             <div class="step-card">
-              <div class="step-icon">📞</div>
+              <div class="step-icon"></div>
               <h3>Kontaktujte přímo</h3>
               <p>Když najdete vhodného kandidáta, odkryjete kontakt (vlastní kontakty v ceně, Alogator kontakty doplňkově). Dohodnutí podmínek proběhne přímo mezi vámi.</p>
               <div class="step-detail">
@@ -254,7 +258,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           <div class="step-num-wrap"><div class="step-num signal">04</div></div>
           <div class="step-content">
             <div class="step-card">
-              <div class="step-icon">✅</div>
+              <div class="step-icon"></div>
               <h3>Plánujte a opakujte</h3>
               <p>Po obsazení projektu přidáte pracovníka do vlastního CRM. Při dalším projektu začínáte od vlastních ověřených kontaktů — ne od nuly. Kalendář dostupnosti vám ukáže, kdo je kdy volný.</p>
               <div class="step-detail">
@@ -279,9 +283,9 @@ em{font-style:italic;color:var(--signal);font-weight:500}
         <div class="step-item">
           <div class="step-content right">
             <div class="step-card">
-              <div class="step-icon">📱</div>
+              <div class="step-icon"></div>
               <h3>Stáhněte aplikaci zdarma</h3>
-              <p>Alogator app je na App Store i Google Play. Registrace trvá 5 minut — jméno, profese, e-mail. Aplikace je úplně zdarma, žádné poplatky ani provize z výplaty.</p>
+              <p>Alogator app je na App Store i Google Play. Registrace trvá 5 minut — jméno, profese, e-mail. Aplikace je úplně zdarma pro pracovníky.</p>
               <div class="step-detail">
                 <div class="step-detail-item">iOS a Android — zdarma</div>
                 <div class="step-detail-item">Volitelné PREMIUM členství pro lepší viditelnost</div>
@@ -298,7 +302,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           <div class="step-num-wrap"><div class="step-num">02</div></div>
           <div class="step-content">
             <div class="step-card">
-              <div class="step-icon">🪪</div>
+              <div class="step-icon"></div>
               <h3>Vyplňte profil</h3>
               <p>Zadáte profesi, certifikáty, jazyky, pracovní zkušenosti a sazbu. Silný profil = více nabídek. PRO členové mohou nahrát i video prezentaci.</p>
               <div class="step-detail">
@@ -313,7 +317,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
         <div class="step-item">
           <div class="step-content right">
             <div class="step-card">
-              <div class="step-icon">📅</div>
+              <div class="step-icon"></div>
               <h3>Nastavte dostupnost</h3>
               <p>V kalendáři nastavíte kdy jste volní. Firmy vidí váš reálný kalendář — kontaktují jen ty, kteří jsou dostupní. Žádné zbytečné poptávky na nevhodné termíny.</p>
               <div class="step-detail">
@@ -332,7 +336,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           <div class="step-num-wrap"><div class="step-num">04</div></div>
           <div class="step-content">
             <div class="step-card">
-              <div class="step-icon">💼</div>
+              <div class="step-icon"></div>
               <h3>Přijměte nabídku</h3>
               <p>Firmy nebo agentury vás kontaktují přímo. Vy si vybíráte — přijmete nebo odmítnete. Podmínky dohodujete přímo. Faktury vystavujete přímo v aplikaci.</p>
               <div class="step-detail">
@@ -351,13 +355,13 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 </section>
 
 <!-- COMPARE: Alogator vs tradičný proces -->
-<section class="compare-sec">
+<section class="compare-sec boxed">
   <div class="container">
     <span class="eyebrow" style="display:block;text-align:center;margin-bottom:10px">• srovnání</span>
     <h2>Alogator vs. <em>tradiční způsob</em></h2>
     <div class="compare-grid">
       <div class="compare-card">
-        <h3 style="color:var(--graphite-500)">❌ Tradiční způsob</h3>
+        <h3 style="color:var(--graphite-500)">Tradiční způsob</h3>
         <div class="compare-list">
           <div class="compare-item"><div class="compare-icon no">—</div><div class="compare-text"><strong>Telefonické poptávání</strong>Hodiny telefonování agenturám, čekání na odpovědi</div></div>
           <div class="compare-item"><div class="compare-icon no">—</div><div class="compare-text"><strong>Nejistá dostupnost</strong>Nikdo neví kdo je volný a kdy</div></div>
@@ -367,11 +371,11 @@ em{font-style:italic;color:var(--signal);font-weight:500}
         </div>
       </div>
       <div class="compare-card" style="border-color:var(--signal);background:var(--signal-soft)">
-        <h3>✅ S Alogátorem</h3>
+        <h3>S Alogátorem</h3>
         <div class="compare-list">
           <div class="compare-item"><div class="compare-icon yes">✓</div><div class="compare-text"><strong>AI vyhledávání za sekundu</strong>Popíšete koho hledáte, Alogator najde shody okamžitě</div></div>
-          <div class="compare-item"><div class="compare-icon yes">✓</div><div class="compare-text"><strong>Real-time kalendář</strong>Vidíte přesně kdo je volný kdy — bez volání</div></div>
-          <div class="compare-item"><div class="compare-icon yes">✓</div><div class="compare-text"><strong>Měsíční flat poplatek</strong>Platíte za platformu, ne za každou zakázku</div></div>
+          <div class="compare-item"><div class="compare-icon yes">✓</div><div class="compare-text"><strong>Real-time kalendář</strong>Vidíte přesně kdo je volný kdy</div></div>
+          <div class="compare-item"><div class="compare-icon yes">✓</div><div class="compare-text">Transparentní náklady pod kontrolou bez procent z vaší hodinovky</div></div>
           <div class="compare-item"><div class="compare-icon yes">✓</div><div class="compare-text"><strong>CRM s historií</strong>Vlastní ověření lidé vždy jako první</div></div>
           <div class="compare-item"><div class="compare-icon yes">✓</div><div class="compare-text"><strong>Vše digitálně</strong>Profily, certifikáty, faktury, hodnocení — v jedné aplikaci</div></div>
         </div>
@@ -381,32 +385,37 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 </section>
 
 <!-- FAQ -->
-<section class="faq-sec">
-  <div class="container">
-    <span class="eyebrow" style="display:block;text-align:center;margin-bottom:10px">• otázky</span>
-    <h2>Jak to <em>funguje v praxi</em></h2>
-    <div class="faq-list">
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Jak dlouho trvá najít prvního kandidáta?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Při Alogator tarifu (přístup k celé databázi) většina firem najde prvního vhodného kandidáta do 24 hodin. Závisí na profesi a specifičnosti požadavků. Svářeči a elektrikáři jsou dostupní téměř vždy, specializovanější profese (např. NUC certifikát) mohou trvat 2–3 dny.</div></div>
-      </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Jaký je rozdíl mezi vlastními kontakty a Alogator kontakty?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Vlastní kontakty jsou lidé, kteří pro vás už pracovali — importujete je do Alogatoru a vidíte jejich kalendář dostupnosti. Jsou v ceně předplatného. Alogator kontakty jsou noví lidé z databáze, které jste dosud neznali — odkrytí kontaktu je doplňková platba nad rámec předplatného.</div></div>
-      </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Může být firma i agentura zároveň?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Ano, přesně tak funguje většina uživatelů. Agentura může na Alogátoru zároveň nabízet volné kapacity svých lidí (B2B nabídka) i hledat další pracovníky na doplnění týmu při velkém projektu (B2B poptávka). Platforma to podporuje nativně.</div></div>
-      </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Jak funguje hodnocení pracovníků?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Po ukončení projektu může firma ohodnotit pracovníka (1–5 hvězdiček + textová recenze). Hodnocení je viditelné pro ostatní firmy na profilu pracovníka. Systém verifikuje, že hodnocení pochází od firmy, která s pracovníkem skutečně spolupracovala — zabraňuje falešným hodnocením.</div></div>
-      </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Pracovník — komu se ukáže můj profil?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Váš profil je viditelný firmám a agenturám registrovaným na platformě. Volné prohlížení (bez registrace) vidí pouze anonymizovaný profil — "Marek N." bez kontaktních údajů. Plné kontaktní údaje se odhalí jen firmě, která za to zaplatí nebo má váš předchozí souhlas.</div></div>
-      </div>
-    </div>
+<section class="faq-sec boxed" style="padding:80px 0;background:var(--porcelain-200)">
+  <div class="container" style="max-width:1280px;margin:0 auto;padding:0 24px">
+    <div class="eyebrow">FAQ</div>
+    <h2 style="font:500 clamp(28px,3vw,40px)/1.1 'Geist';letter-spacing:-0.025em;margin:14px 0 48px">Jak to <em>funguje v praxi</em></h2>
+    <div class="hiw-grid" style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px">
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">01</div>
+    <h4 style="font-size:13px">Jak dlouho trvá najít prvního kandidáta?</h4>
+    <p style="font-size:12px">Při Alogator tarifu (přístup k celé databázi) většina firem najde prvního vhodného kandidáta do 24 hodin. Závisí na profesi a specifičnosti požadavků. Svářeči a elektrikáři jsou dostupní téměř vždy, specializovanější profese (např. NUC certifikát) mohou trvat 2–3 dny.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">02</div>
+    <h4 style="font-size:13px">Jaký je rozdíl mezi vlastními kontakty a Alogator kontakty?</h4>
+    <p style="font-size:12px">Vlastní kontakty jsou lidé, kteří pro vás už pracovali — importujete je do Alogatoru a vidíte jejich kalendář dostupnosti. Jsou v ceně předplatného. Alogator kontakty jsou noví lidé z databáze, které jste dosud neznali — odkrytí kontaktu je doplňková platba nad rámec předplatného.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">03</div>
+    <h4 style="font-size:13px">Může být firma i agentura zároveň?</h4>
+    <p style="font-size:12px">Ano, přesně tak funguje většina uživatelů. Agentura může na Alogátoru zároveň nabízet volné kapacity svých lidí (B2B nabídka) i hledat další pracovníky na doplnění týmu při velkém projektu (B2B poptávka). Platforma to podporuje nativně.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">04</div>
+    <h4 style="font-size:13px">Jak funguje hodnocení pracovníků?</h4>
+    <p style="font-size:12px">Po ukončení projektu může firma ohodnotit pracovníka (1–5 hvězdiček + textová recenze). Hodnocení je viditelné pro ostatní firmy na profilu pracovníka. Systém verifikuje, že hodnocení pochází od firmy, která s pracovníkem skutečně spolupracovala — zabraňuje falešným hodnocením.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">05</div>
+    <h4 style="font-size:13px">Pracovník — komu se ukáže můj profil?</h4>
+    <p style="font-size:12px">Váš profil je viditelný firmám a agenturám registrovaným na platformě. Volné prohlížení (bez registrace) vidí pouze anonymizovaný profil — "Marek N." bez kontaktních údajů. Plné kontaktní údaje se odhalí jen firmě, která za to zaplatí nebo má váš předchozí souhlas.</p>
+  </div>
+</div>
   </div>
 </section>
 
@@ -415,13 +424,13 @@ em{font-style:italic;color:var(--signal);font-weight:500}
   <div class="container">
     <div class="cta-grid">
       <div class="cta-card dark">
-        <div style="font-size:36px;margin-bottom:12px">🏗️</div>
+        <div style="font-size:36px;margin-bottom:12px"></div>
         <h3>Pro firmy a agentury</h3>
-        <p>14 dní zdarma s plným přístupem. Bez kreditní karty.</p>
+        <p>30 dní zdarma s plným přístupem. Bez kreditní karty.</p>
         <a href="/cz/kontakt" class="cta-btn white">Naplánovat demo →</a>
       </div>
       <div class="cta-card signal">
-        <div style="font-size:36px;margin-bottom:12px">👷</div>
+        <div style="font-size:36px;margin-bottom:12px"></div>
         <h3>Pro pracovníky</h3>
         <p>Aplikace zdarma. iOS + Android. Registrace 5 minut.</p>
         <a href="/cz/stahnout-aplikaci" class="cta-btn white">Stáhnout aplikaci →</a>

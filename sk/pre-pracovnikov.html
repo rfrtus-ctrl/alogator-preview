@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Pre pracovníkov · Alogator — Práca v zahraničí pre remeselníkov</title>
-<meta name="description" content="Nájdite prácu v Nemecku, Rakúsku alebo Holandsku ako zvárač, elektrikár, montér alebo murár. Registrácia zadarmo. Stovky overených ponúk od firiem z DE, AT, NL, BE.">
+<meta name="description" content="Nájdite prácu v Nemecku, Rakúsku alebo Holandsku ako zvárač, elektrikár, montér alebo murár. Registrácia zdarma. Stovky overených ponúk od firiem z DE, AT, NL, BE.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,16 +69,17 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .dash-stat-num{font-family:'Geist',sans-serif;font-weight:500;font-size:22px;color:var(--porcelain);letter-spacing:-0.02em}
 .dash-stat-lbl{font-size:10.5px;color:rgba(249,243,237,.5);margin-top:3px}
 .job-list{display:flex;flex-direction:column;gap:10px}
-.job-card{background:rgba(249,243,237,.06);border-radius:12px;padding:12px 14px}
-.job-card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px}
-.job-title{font-family:'Geist',sans-serif;font-weight:500;font-size:13.5px;color:var(--porcelain)}
-.job-salary{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--yellow);white-space:nowrap}
-.job-meta{display:flex;gap:8px;flex-wrap:wrap}
-.job-tag{font-size:10.5px;color:rgba(249,243,237,.5);background:rgba(249,243,237,.08);padding:2px 8px;border-radius:999px}
-.job-locked{font-size:10.5px;color:rgba(249,243,237,.35);display:flex;align-items:center;gap:4px;margin-top:5px}
+
+
+
+
+
+
+
 
 /* TRUST */
-.trust-sec{padding:40px 0;background:var(--porcelain-200);border-top:1px solid var(--porcelain-300)}
+.trust-sec{padding:16px 32px;background:var(--porcelain)}
+.trust-sec .container{background:#fff;border:1.5px solid var(--porcelain-300);border-radius:24px;padding:40px 32px}
 .trust-lbl{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--graphite-500);text-align:center;margin-bottom:24px}
 .trust-row{display:flex;justify-content:center;align-items:center;gap:48px;flex-wrap:wrap}
 .trust-logo{font-family:'Geist',sans-serif;font-weight:500;font-size:18px;color:var(--graphite-500);opacity:.7}
@@ -107,7 +108,8 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .steps-grid .step:last-child .step-arrow{display:none}
 
 /* PROFESSIONS */
-.profs-sec{padding:80px 0;background:var(--porcelain)}
+.profs-sec{padding:16px 32px;background:var(--porcelain)}
+.profs-sec .container{background:#fff;border:1.5px solid var(--porcelain-300);border-radius:24px;padding:80px 32px}
 .profs-sec h2{font-size:clamp(28px,3vw,44px);text-align:center;max-width:560px;margin:14px auto 48px}
 .profs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1000px;margin:0 auto 32px}
 .prof-card{background:var(--porcelain-200);border:1px solid var(--porcelain-300);border-radius:18px;padding:22px 18px;text-align:center;text-decoration:none;transition:border-color .15s,transform .15s;display:block}
@@ -118,7 +120,8 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .profs-cta{text-align:center}
 
 /* STATS */
-.stats-sec{padding:80px 0;background:var(--graphite)}
+.stats-sec{padding:16px 32px;background:var(--porcelain)}
+.stats-sec .container{background:var(--graphite);border-radius:24px;padding:80px 32px}
 .stats-sec h2{font-size:clamp(28px,3vw,44px);text-align:center;color:var(--porcelain);max-width:600px;margin:14px auto 14px}
 .stats-sub{text-align:center;color:rgba(249,243,237,.65);max-width:520px;margin:0 auto 48px;font-size:15px}
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:960px;margin:0 auto}
@@ -153,19 +156,17 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .app-notif-time{font-size:10px;color:rgba(249,243,237,.35);margin-top:3px;font-family:'JetBrains Mono',monospace}
 
 /* FAQ */
-.faq-sec{padding:80px 0;background:var(--porcelain)}
+.faq-sec{padding:80px 0}
 .faq-sec h2{font-size:clamp(28px,3vw,40px);text-align:center;margin:14px 0 48px}
-.faq-list{max-width:780px;margin:0 auto}
-.faq-item{background:var(--porcelain-200);border:1px solid var(--porcelain-300);border-radius:14px;margin-bottom:10px;overflow:hidden}
-.faq-q{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;cursor:pointer;font-size:15px;font-weight:500}
-.faq-q-icon{width:24px;height:24px;border-radius:50%;border:1px solid var(--graphite-200);display:flex;align-items:center;justify-content:center;font-size:14px;transition:transform .2s;flex-shrink:0}
-.faq-item.open .faq-q-icon{transform:rotate(45deg);background:var(--signal);color:var(--porcelain);border-color:var(--signal)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .3s}
-.faq-item.open .faq-a{max-height:400px}
-.faq-a-inner{padding:0 22px 20px;font-size:14.5px;color:var(--graphite-700);line-height:1.6}
+.hiw-grid.faq-grid-cards .hiw-card{padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md, 20px);background:var(--porcelain-200);display:flex;flex-direction:column}
+.hiw-grid.faq-grid-cards .hiw-num{font-size:28px}
+.hiw-grid.faq-grid-cards h4{font-size:13px;font-weight:600;margin:0}
+.hiw-grid.faq-grid-cards p{font-size:12px;color:var(--graphite-700);line-height:1.5;margin:0}
+@media(max-width:900px){.hiw-grid.faq-grid-cards{grid-template-columns:repeat(2,1fr)!important}}
+@media(max-width:480px){.hiw-grid.faq-grid-cards{grid-template-columns:1fr!important}}
 
 /* CTA */
-.cta-sec{padding:64px 0;background:var(--porcelain)}
+.cta-sec{padding:16px 32px;background:var(--porcelain)}
 .cta-banner{background:var(--graphite);border-radius:32px;padding:56px;display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center;position:relative;overflow:hidden}
 .cta-banner::before{content:'§';position:absolute;right:-40px;top:-60px;font-family:'Geist',sans-serif;font-size:280px;color:rgba(230,103,72,.08);font-style:italic;font-weight:300;pointer-events:none}
 .cta-banner h2{font-size:clamp(28px,3vw,40px);color:var(--porcelain);margin-top:12px}
@@ -176,14 +177,127 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .cta-btn-sec{background:transparent;color:var(--porcelain);border:1px solid rgba(249,243,237,.3);padding:14px 32px;border-radius:999px;font-size:14px;cursor:pointer;text-align:center;text-decoration:none;display:block}
 .cta-note{text-align:center;color:rgba(249,243,237,.4);font-size:11px;font-family:'JetBrains Mono',monospace;margin-top:8px}
 
-.footer{background:var(--graphite);color:var(--porcelain);padding:48px 0 24px}
+.footer{background:var(--porcelain);padding:16px 32px 32px}
+.footer .container{background:var(--graphite);border-radius:24px;padding:48px 40px 28px;max-width:1280px;color:var(--porcelain)}
 .foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}
 .foot-col h5{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.5);margin-bottom:16px}
 .foot-col h5::before{content:'• ';color:var(--signal)}
 .foot-col a{display:block;color:rgba(249,243,237,.7);text-decoration:none;font-size:13.5px;padding:5px 0}
 .foot-col a:hover{color:var(--signal)}
 .foot-bottom{padding-top:24px;display:flex;justify-content:space-between;font-size:12px;color:rgba(249,243,237,.5)}
+section.boxed{padding:16px 32px}
+section.boxed .container{background:#fff;border:1.5px solid var(--porcelain-300);border-radius:24px;padding:32px;max-width:1280px;margin:0 auto}
 @media(max-width:900px){.hero-grid,.features-grid,.steps-grid,.profs-grid,.stats-grid,.app-grid,.cta-banner,.foot-top{grid-template-columns:1fr;gap:24px}.profs-grid{grid-template-columns:1fr 1fr}.stats-grid{grid-template-columns:1fr 1fr}h1{font-size:32px!important}h2{font-size:24px!important}}
+
+.jcard{
+  background:var(--porcelain);
+  border:1px solid var(--porcelain-300);
+  border-radius:20px;padding:18px;
+  position:relative;cursor:pointer;
+  transition:transform .2s, box-shadow .2s, border-color .2s;
+}
+.jcard:hover{
+  transform:translateY(-3px);
+  border-color:var(--graphite-200);
+  box-shadow:0 12px 30px -10px rgba(26,29,30,.12);
+}
+.jcard-badge{
+  position:absolute;top:14px;right:14px;
+  font-family:'Inter',sans-serif;font-size:9.5px;font-weight:600;
+  padding:3px 8px;border-radius:999px;letter-spacing:0.05em;
+  display:inline-flex;align-items:center;gap:4px;
+}
+.jcard-badge.b-top{background:var(--yellow);color:var(--graphite)}
+.jcard-badge.b-now{background:var(--graphite);color:var(--porcelain)}
+.jcard-badge.b-now::before{content:'';width:5px;height:5px;border-radius:50%;background:#7CC95C;display:inline-block}
+.jcard-badge.b-new{background:var(--signal-soft);color:#993C1D}
+.jcard-head{display:flex;align-items:flex-start;gap:11px;margin-bottom:10px}
+.jcard-logo{
+  width:38px;height:38px;border-radius:9px;
+  background:var(--graphite);color:var(--porcelain);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Geist',sans-serif;font-weight:500;font-size:15px;
+  flex-shrink:0;
+}
+.jcard-logo.lock{
+  background:linear-gradient(135deg,var(--graphite-200) 0%,var(--graphite-500) 100%);
+  color:var(--porcelain);
+  position:relative;
+}
+.jcard-logo.lock::after{
+  content:'🔒';
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  font-size:14px;
+  filter:grayscale(1);
+}
+.jcard-logo.lock span{visibility:hidden}
+.jcard-meta{flex:1;min-width:0}
+.jcard-title{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:16px;
+  letter-spacing:-0.01em;line-height:1.15;color:var(--graphite);
+}
+.jcard-company{
+  font-family:'Inter',sans-serif;font-size:11.5px;
+  color:var(--graphite-500);margin-top:2px;
+}
+.jcard-company.locked{
+  color:var(--graphite-500);
+  font-style:italic;
+  display:inline-flex;align-items:center;gap:5px;
+}
+.jcard-company.locked::after{
+  content:'';
+  width:11px;height:13px;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236B7174' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='11' width='18' height='11' rx='2'/><path d='M7 11V7a5 5 0 0110 0v4'/></svg>") no-repeat center;
+  background-size:contain;
+}
+.jcard-salary{
+  display:flex;align-items:baseline;gap:5px;margin:8px 0;
+}
+.jcard-salary-num{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:26px;
+  letter-spacing:-0.02em;color:var(--graphite);
+}
+.jcard-salary-unit{font-size:11.5px;color:var(--graphite-500)}
+.jcard-bonus{
+  margin-left:auto;padding:3px 9px;border-radius:999px;
+  font-size:10.5px;font-weight:500;
+}
+.jcard-bonus.bonus-housing{background:var(--signal-soft);color:#993C1D}
+.jcard-bonus.bonus-slots{background:var(--signal-soft);color:#993C1D}
+.jcard-bonus.bonus-business{background:var(--porcelain-200);color:var(--graphite-700)}
+.jcard-info{
+  display:flex;gap:8px;flex-wrap:wrap;align-items:center;
+  font-size:11.5px;color:var(--graphite-700);margin-bottom:11px;
+}
+.jcard-info .sep{color:var(--graphite-200)}
+.jcard-info .date-pill{
+  color:var(--graphite);font-weight:500;
+}
+.jcard-foot{
+  display:flex;justify-content:space-between;align-items:center;
+  padding-top:11px;border-top:1px solid var(--porcelain-300);
+}
+.jcard-tags{display:flex;gap:5px;flex-wrap:wrap}
+.jcard-tag{
+  background:var(--porcelain-200);
+  border:1px solid var(--porcelain-300);
+  color:var(--graphite-700);
+  font-family:'Inter',sans-serif;font-size:10px;font-weight:500;
+  padding:3px 8px;border-radius:999px;
+}
+.jcard-cta{
+  background:var(--signal);color:var(--porcelain);
+  border:0;padding:7px 16px;border-radius:999px;
+  font-family:'Inter',sans-serif;font-size:12px;font-weight:500;
+  cursor:pointer;
+  transition:background .15s;
+}
+.jcard-cta:hover{background:var(--signal-dark)}
+.jcard-cta.locked{
+  background:var(--graphite);color:var(--porcelain);
+}
+.jcard-cta.locked:hover{background:#000}
 </style>
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://alogator.com/sk/pre-pracovnikov">
@@ -193,14 +307,14 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 <meta property="og:site_name" content="Alogator">
 <meta property="og:locale" content="sk_SK">
 <meta property="og:title" content="Pre pracovníkov · Alogator — Práca v zahraničí pre remeselníkov">
-<meta property="og:description" content="Nájdite prácu v Nemecku, Rakúsku alebo Holandsku ako zvárač, elektrikár, montér alebo murár. Registrácia zadarmo. Stovky overených ponúk od firiem z DE, AT, NL, BE.">
+<meta property="og:description" content="Nájdite prácu v Nemecku, Rakúsku alebo Holandsku ako zvárač, elektrikár, montér alebo murár. Registrácia zdarma. Stovky overených ponúk od firiem z DE, AT, NL, BE.">
 <meta property="og:url" content="https://alogator.com/sk/pre-pracovnikov">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Pre pracovníkov · Alogator — Práca v zahraničí pre remeselníkov">
-<meta name="twitter:description" content="Nájdite prácu v Nemecku, Rakúsku alebo Holandsku ako zvárač, elektrikár, montér alebo murár. Registrácia zadarmo. Stovky overených ponúk od firiem z DE, AT, NL, BE.">
+<meta name="twitter:description" content="Nájdite prácu v Nemecku, Rakúsku alebo Holandsku ako zvárač, elektrikár, montér alebo murár. Registrácia zdarma. Stovky overených ponúk od firiem z DE, AT, NL, BE.">
 <!-- alg-schema -->
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Domov", "item": "https://alogator.com/sk"}, {"@type": "ListItem", "position": 2, "name": "Pre pracovníkov", "item": "https://alogator.com/sk/pre-pracovnikov"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Je registrácia naozaj zadarmo?", "acceptedAnswer": {"@type": "Answer", "text": "Áno, registrácia je zadarmo navždy a platí to pre všetkých pracovníkov. Neplatíte žiadne mesačné poplatky ani provízie zo zákazky. Alogator zarába na firmách, ktoré za prístup k databáze pracovníkov platia predplatné."}}, {"@type": "Question", "name": "Vidím názov firmy pred registráciou?", "acceptedAnswer": {"@type": "Answer", "text": "Bez registrácie vidíte profesiu, lokalitu práce (mesto + krajina kde sa pracuje), plat, podmienky a krajinu sídla firmy (napr. 🇸🇰 slovenská firma). Konkrétny názov firmy sa odomkne po bezplatnej registrácii — je to ochrana platformy pred priamym kontaktom mimo Alogátora."}}, {"@type": "Question", "name": "Potrebujem vedieť po nemecky?", "acceptedAnswer": {"@type": "Answer", "text": "Závisí od ponuky. Mnohé firmy v DE/AT pracujú so SK/CZ tímami a stačí slovenčina alebo čeština na pracovisku. Niektoré pozície vyžadujú nemčinu (zvyčajne A2 alebo B1 pre priamy kontakt s nemeckými kolegami). V každej ponuke je jasne uvedená jazyková požiadavka."}}, {"@type": "Question", "name": "Kde reálne nájdem prácu cez Alogator?", "acceptedAnswer": {"@type": "Answer", "text": "Prevažná väčšina ponúk je z Nemecka (Bavorsko, NRW, Dolné Sasko) a Rakúska (Viedeň, Graz, Linz). Rastie nám aj Holandsko (Rotterdam, Eindhoven) a Belgicko (Antwerp, Gent). Ponuky z SK/CZ sú menej časté, ale tiež sa objavujú — najmä pre agentúry hľadajúce posily pre zahraničné projekty."}}, {"@type": "Question", "name": "Ako funguje moja dostupnosť v kalendári?", "acceptedAnswer": {"@type": "Answer", "text": "V mobilnej appke zaznačíte dni/týždne kedy ste voľní. Firmy s prémiovým predplatným vidia váš kalendár a môžu vás kontaktovať vopred — napríklad rezervujú vás na júl keď je máj. Vy schvaľujete alebo odmietate každý dopyt. Nikto vás nemôže \"zabookovať\" bez vášho súhlasu."}}, {"@type": "Question", "name": "Čo je PRO profil a ako ho získam?", "acceptedAnswer": {"@type": "Answer", "text": "PRO badge dostanete po overení: nahráte certifikáty (napr. zvárač certifikát, VDE, STN normy), pridáte aspoň jednu referenciu a vyplníte celú pracovnú históriu. Overenie trvá 1–2 pracovné dni. PRO pracovníci dostávajú o 23 % viac dopytov a firmy im ponúkajú priemerne o 2–3 €/h vyššiu sadzbu."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Je registrácia naozaj zdarma?", "acceptedAnswer": {"@type": "Answer", "text": "Áno, registrácia je zdarma navždy a platí to pre všetkých pracovníkov. Neplatíte žiadne mesačné poplatky. Alogator zarába na firmách, ktoré za prístup k databáze pracovníkov platia predplatné."}}, {"@type": "Question", "name": "Vidím názov firmy pred registráciou?", "acceptedAnswer": {"@type": "Answer", "text": "Bez registrácie vidíte profesiu, lokalitu práce (mesto + krajina kde sa pracuje), plat, podmienky a krajinu sídla firmy (napr. 🇸🇰 slovenská firma). Konkrétny názov firmy sa odomkne po bezplatnej registrácii — je to ochrana platformy pred priamym kontaktom mimo Alogátora."}}, {"@type": "Question", "name": "Potrebujem vedieť po nemecky?", "acceptedAnswer": {"@type": "Answer", "text": "Závisí od ponuky. Mnohé firmy v DE/AT pracujú so SK/CZ tímami a stačí slovenčina alebo čeština na pracovisku. Niektoré pozície vyžadujú nemčinu (zvyčajne A2 alebo B1 pre priamy kontakt s nemeckými kolegami). V každej ponuke je jasne uvedená jazyková požiadavka."}}, {"@type": "Question", "name": "Kde reálne nájdem prácu cez Alogator?", "acceptedAnswer": {"@type": "Answer", "text": "Prevažná väčšina ponúk je z Nemecka (Bavorsko, NRW, Dolné Sasko) a Rakúska (Viedeň, Graz, Linz). Rastie nám aj Holandsko (Rotterdam, Eindhoven) a Belgicko (Antwerp, Gent). Ponuky z SK/CZ sú menej časté, ale tiež sa objavujú — najmä pre agentúry hľadajúce posily pre zahraničné projekty."}}, {"@type": "Question", "name": "Ako funguje moja dostupnosť v kalendári?", "acceptedAnswer": {"@type": "Answer", "text": "V mobilnej appke zaznačíte dni/týždne kedy ste voľní. Firmy s prémiovým predplatným vidia váš kalendár a môžu vás kontaktovať vopred — napríklad rezervujú vás na júl keď je máj. Vy schvaľujete alebo odmietate každý dopyt. Nikto vás nemôže \"zabookovať\" bez vášho súhlasu."}}, {"@type": "Question", "name": "Čo je PRO profil a ako ho získam?", "acceptedAnswer": {"@type": "Answer", "text": "PRO badge dostanete po overení: nahráte certifikáty (napr. zvárač certifikát, VDE, STN normy), pridáte aspoň jednu referenciu a vyplníte celú pracovnú históriu. Overenie trvá 1–2 pracovné dni. PRO pracovníci dostávajú o 23 % viac dopytov a firmy im ponúkajú priemerne o 2–3 €/h vyššiu sadzbu."}}]}</script>
 <!-- /alg-schema -->
 <link rel="stylesheet" href="/assets/mobile-nav.css">
 <script src="/assets/mobile-nav.js" defer></script>
@@ -231,11 +345,11 @@ em{font-style:italic;color:var(--signal);font-weight:500}
   <div class="container">
     <div class="hero-grid">
       <div class="hero-left">
-        <div class="badge"><span class="badge-dot"></span>312 nových ponúk tento týždeň</div>
-        <h1>Práca v zahraničí. <em>Jednoducho.</em></h1>
-        <p class="lead">Stovky overených ponúk od firiem z Nemecka, Rakúska, Holandska a Belgicka. Registrácia zadarmo. Prvú ponuku dostanete za hodiny.</p>
+        <div class="badge"><span class="badge-dot"></span>1000 + aktuálnych projektov tento týždeň</div>
+        <h1>Vaša práca v zahraničí.<br><em>Podľa vašich predstáv.</em></h1>
+        <p class="lead">1000 + ponúk od  firiem a popredných agentúr v EÚ. Založte si profil zdarma a získajte prístup k všetkým projektom s jasnou hodinovkou bez skrytých poplatkov.</p>
         <div class="hero-cta-row">
-          <a href="/sk/stiahnut-aplikaciu" class="btn-pri">Stiahnuť aplikáciu →</a>
+          <a href="/app" class="btn-pri">Chcem dostávať ponuky (Zdarma) →</a>
           <a href="/sk/ponuka-prace" class="btn-out">Pozrieť ponuky</a>
         </div>
         <div class="hero-trust">
@@ -245,7 +359,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
             <span style="background:var(--yellow);color:var(--graphite)">D</span>
             <span style="background:var(--graphite-500)">+</span>
           </div>
-          3 047 pracovníkov zo SK a CZ už na platforme
+          4000 + pracovníkov zo SK a CZ už na platforme
         </div>
       </div>
 
@@ -260,42 +374,88 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           <div class="dash-stat"><div class="dash-stat-num">6</div><div class="dash-stat-lbl">krajín EÚ</div></div>
           <div class="dash-stat"><div class="dash-stat-num">0 €</div><div class="dash-stat-lbl">registrácia</div></div>
         </div>
-        <div class="job-list">
-          <div class="job-card">
-            <div class="job-card-top">
-              <div class="job-title">Zvárač MIG/MAG — Emsland, DE</div>
-              <div class="job-salary">26–32 €/h</div>
+        <div class="similar-grid" style="display:flex;flex-direction:column;gap:10px">
+          <div class="jcard" onclick="location.href='/app'">
+            <div class="jcard-head">
+              <div class="jcard-logo lock"><span>Z</span></div>
+              <div class="jcard-meta">
+                <div class="jcard-title">Zvárač MIG/MAG — Emsland, DE</div>
+                <div class="jcard-company locked">🇩🇪 Firma</div>
+              </div>
             </div>
-            <div class="job-meta">
-              <span class="job-tag">🇩🇪 Nemecko</span>
-              <span class="job-tag">Priemysel</span>
-              <span class="job-tag">Nástup: júl 2026</span>
+            <div class="jcard-salary">
+              <span class="jcard-salary-num">26–32 €</span>
+              <span class="jcard-salary-unit">/ hod</span>
             </div>
-            <div class="job-locked">🔒 Názov firmy po registrácii</div>
+            <div class="jcard-info">
+              <span>🇩🇪 Emsland, DE</span>
+              <span class="sep">·</span>
+              <span>50h / týždeň</span>
+            </div>
+            <div class="jcard-foot">
+              <div class="jcard-tags">
+                <span class="jcard-tag">Priemysel</span>
+              <span class="jcard-tag">Nástup: júl 2026</span>
+              <span class="jcard-tag">50h/týž</span>
+              <span class="jcard-tag">Živnosť</span>
+              <span class="jcard-tag">DE</span>
+              </div>
+              <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
+            </div>
           </div>
-          <div class="job-card">
-            <div class="job-card-top">
-              <div class="job-title">Elektrikár VDE — Viedeň, AT</div>
-              <div class="job-salary">28–34 €/h</div>
+          <div class="jcard" onclick="location.href='/app'">
+            <div class="jcard-head">
+              <div class="jcard-logo lock"><span>E</span></div>
+              <div class="jcard-meta">
+                <div class="jcard-title">Elektrikár VDE — Viedeň, AT</div>
+                <div class="jcard-company locked">🇦🇹 Firma</div>
+              </div>
             </div>
-            <div class="job-meta">
-              <span class="job-tag">🇦🇹 Rakúsko</span>
-              <span class="job-tag">Energetika</span>
-              <span class="job-tag">Nástup: august 2026</span>
+            <div class="jcard-salary">
+              <span class="jcard-salary-num">28–34 €</span>
+              <span class="jcard-salary-unit">/ hod</span>
             </div>
-            <div class="job-locked">🔒 Názov firmy po registrácii</div>
+            <div class="jcard-info">
+              <span>🇦🇹 Viedeň, AT</span>
+              <span class="sep">·</span>
+              <span>45h / týždeň</span>
+            </div>
+            <div class="jcard-foot">
+              <div class="jcard-tags">
+                <span class="jcard-tag">Energetika</span>
+              <span class="jcard-tag">Nástup: august 2026</span>
+              <span class="jcard-tag">Ubyt.: V cene</span>
+              <span class="jcard-tag">45h/týž</span>
+              <span class="jcard-tag">HPP</span>
+              </div>
+              <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
+            </div>
           </div>
-          <div class="job-card">
-            <div class="job-card-top">
-              <div class="job-title">Montér oceľových konštrukcií — Hamburg</div>
-              <div class="job-salary">24–28 €/h</div>
+          <div class="jcard" onclick="location.href='/app'">
+            <div class="jcard-head">
+              <div class="jcard-logo lock"><span>M</span></div>
+              <div class="jcard-meta">
+                <div class="jcard-title">Montér oceľových konštrukcií — Hamburg</div>
+                <div class="jcard-company locked">🇩🇪 Firma</div>
+              </div>
             </div>
-            <div class="job-meta">
-              <span class="job-tag">🇩🇪 Nemecko</span>
-              <span class="job-tag">Montáž</span>
-              <span class="job-tag">Nástup: ihneď</span>
+            <div class="jcard-salary">
+              <span class="jcard-salary-num">24–28 €</span>
+              <span class="jcard-salary-unit">/ hod</span>
             </div>
-            <div class="job-locked">🔒 Názov firmy po registrácii</div>
+            <div class="jcard-info">
+              <span>🇩🇪 Hamburg, DE</span>
+            </div>
+            <div class="jcard-foot">
+              <div class="jcard-tags">
+                <span class="jcard-tag">Montáž</span>
+              <span class="jcard-tag">Nástup: ihneď</span>
+              <span class="jcard-tag">Ubyt.: Platené</span>
+              <span class="jcard-tag">Živnosť / HPP</span>
+              <span class="jcard-tag">Fakt.: 14/14</span>
+              </div>
+              <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
+            </div>
           </div>
         </div>
       </div>
@@ -319,74 +479,74 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 </section>
 
 <!-- FEATURES -->
-<section class="features-sec">
+<section class="features-sec boxed">
   <div class="container">
     <span class="eyebrow" style="display:block;text-align:center;margin-bottom:10px">• prečo alogator</span>
-    <h2>Všetko pre vašu <em>kariéru v zahraničí</em></h2>
+    <h2>Všetko, čo potrebujete pre <em>stabilnú prácu v zahraničí</em></h2>
     <div class="features-grid">
       <div class="feature-card">
-        <div class="feature-icon">🆓</div>
-        <h3>Registrácia navždy zadarmo</h3>
-        <p>Pracovníci neplatia nič. Vytvoríte profil, zadáte dostupnosť a čakáte na ponuky. Žiadne skryté poplatky, žiadna provízia zo zákazky.</p>
-        <span class="feature-tag free">Zadarmo</span>
+        
+        <h3>Registrácia navždy zdarma</h3>
+        <p>Pre pracovoníkov kompletne zdarma. Vytvoríte si profil, zadáte svoju cenu, dostupnosť a ponuky chodia za vami.</p>
+        <span class="feature-tag free">Zdarma</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">📲</div>
+        
         <h3>Mobilná aplikácia</h3>
         <p>Ponuky, notifikácie a váš kalendár dostupnosti v jednej appke. Dostupná pre iOS aj Android. Spravujte kariéru z mobilu, kdekoľvek ste.</p>
-        <span class="feature-tag free">Zadarmo</span>
+        <span class="feature-tag free">Zdarma</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">🔔</div>
+        
         <h3>Notifikácie na mieru</h3>
         <p>Nastavíte si profesiu, lokalitu a plat — Alogator vás upozorní keď príde ponuka ktorá sedí. Nič nepreskenujete, nevynecháte.</p>
-        <span class="feature-tag free">Zadarmo</span>
+        <span class="feature-tag free">Zdarma</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">📅</div>
+        
         <h3>Kalendár dostupnosti</h3>
-        <p>Zadáte kedy ste voľní a firmy vás môžu rezervovať dopredu. Žiadne telefonovanie, žiadne "zavolajte neskôr". Vaša dostupnosť je viditeľná v real-time.</p>
-        <span class="feature-tag free">Zadarmo</span>
+        <p>V aplikácii jedným klikom označíte, kedy máte voľno a kedy ste k dipozícií. Firmy vás vďaka tomu oslovia presne vtedy, keď to má zmysel.</p>
+        <span class="feature-tag free">Zdarma</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">✅</div>
+        
         <h3>Overený profil = vyššia sadzba</h3>
         <p>Nahráte certifikáty, referencie, pracovnú históriu. PRO profily dostávajú o 23 % viac ponúk a firmy im ponúkajú vyššiu hodinovú sadzbu.</p>
-        <span class="feature-tag free">Zadarmo</span>
+        <span class="feature-tag free">Zdarma</span>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">🌍</div>
+        
         <h3>Multijazyčná platforma</h3>
         <p>Profil v slovenčine alebo češtine. Ponuky preložené do vášho jazyka. Komunikácia s firmami cez platformu — nepotrebujete nemčinu na hľadanie práce.</p>
-        <span class="feature-tag free">Zadarmo</span>
+        <span class="feature-tag free">Zdarma</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- HOW IT WORKS -->
-<section class="how-sec">
+<section class="how-sec boxed">
   <div class="container">
     <span class="eyebrow" style="display:block;text-align:center;margin-bottom:10px">• ako to funguje</span>
-    <h2>Od registrácie k prvej ponuke za <em>hodiny</em></h2>
+    <h2>Od založenia profilu k overeným projektom <em>za pár hodín</em></h2>
     <div class="steps-grid">
       <div class="step">
         <div class="step-num">KROK 01</div>
-        <div style="font-size:32px;margin-bottom:14px">👤</div>
+        
         <h3>Vytvorte profil</h3>
-        <p>Zadarmo, za 5 minút. Profesie, certifikáty, jazyky, hodinová sadzba. Čím viac info, tým lepšie ponuky dostanete.</p>
+        <p>Zdarma, za 5 minút. Profesie, certifikáty, jazyky, hodinová sadzba. Čím viac info, tým lepšie ponuky dostanete.</p>
         <div class="step-arrow">→</div>
       </div>
       <div class="step">
         <div class="step-num">KROK 02</div>
-        <div style="font-size:32px;margin-bottom:14px">📅</div>
+        
         <h3>Zadajte dostupnosť</h3>
         <p>V mobilnej appke zaznačíte kedy ste voľní. Firmy v Nemecku, Rakúsku a Holandsku vás vidia a môžu vám napísať.</p>
         <div class="step-arrow">→</div>
       </div>
       <div class="step">
         <div class="step-num">KROK 03</div>
-        <div style="font-size:32px;margin-bottom:14px">💼</div>
+        
         <h3>Prijmite ponuku</h3>
         <p>Dostanete notifikáciu, pozriete si detaily ponuky a ak sedí — odošlete záujem. Firma vás kontaktuje priamo.</p>
       </div>
@@ -401,42 +561,42 @@ em{font-style:italic;color:var(--signal);font-weight:500}
     <h2>Hľadáme pracovníkov <em>vo všetkých odboroch</em></h2>
     <div class="profs-grid">
       <a href="/sk/ponuka-prace/zvarac" class="prof-card">
-        <div class="prof-icon">🔥</div>
+        
         <div class="prof-name">Zvárač</div>
         <div class="prof-count">84 ponúk</div>
       </a>
       <a href="/sk/ponuka-prace/elektrikar" class="prof-card">
-        <div class="prof-icon">⚡</div>
+        
         <div class="prof-name">Elektrikár</div>
         <div class="prof-count">67 ponúk</div>
       </a>
       <a href="/sk/ponuka-prace/murar" class="prof-card">
-        <div class="prof-icon">🧱</div>
+        
         <div class="prof-name">Murár</div>
         <div class="prof-count">51 ponúk</div>
       </a>
       <a href="/sk/ponuka-prace/tesar" class="prof-card">
-        <div class="prof-icon">🔨</div>
+        
         <div class="prof-name">Tesár</div>
         <div class="prof-count">43 ponúk</div>
       </a>
       <a href="/sk/ponuka-prace" class="prof-card">
-        <div class="prof-icon">🔩</div>
+        
         <div class="prof-name">Montér</div>
         <div class="prof-count">78 ponúk</div>
       </a>
       <a href="/sk/ponuka-prace" class="prof-card">
-        <div class="prof-icon">🏗️</div>
+        
         <div class="prof-name">Bagrista</div>
         <div class="prof-count">29 ponúk</div>
       </a>
       <a href="/sk/ponuka-prace" class="prof-card">
-        <div class="prof-icon">🔧</div>
+        
         <div class="prof-name">Inštalatér</div>
         <div class="prof-count">34 ponúk</div>
       </a>
       <a href="/sk/ponuka-prace" class="prof-card">
-        <div class="prof-icon">➕</div>
+        
         <div class="prof-name">Všetky odbory</div>
         <div class="prof-count">312 ponúk</div>
       </a>
@@ -451,47 +611,47 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 <section class="stats-sec">
   <div class="container">
     <span class="eyebrow" style="display:block;text-align:center;margin-bottom:10px;color:rgba(249,243,237,.6)">• v číslach</span>
-    <h2>Platforma, ktorej <em>dôverujú tisíce</em></h2>
+    <h2>Ekosystém, ktorému dôverujú <em>tisíce majstrov a firiem</em></h2>
     <p class="stats-sub">Reálne čísla z platformy — aktualizované každý deň.</p>
     <div class="stats-grid">
       <div class="stat-card">
-        <div class="stat-num"><em>3 047</em></div>
-        <div class="stat-lbl">overených pracovníkov<br>na platforme</div>
+        <div class="stat-num">4000 <em>+</em></div>
+        <div class="stat-lbl">overených pracovníkov na platforme</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num">312</div>
-        <div class="stat-lbl">nových ponúk<br>tento týždeň</div>
+        <div class="stat-num">500 <em>+</em></div>
+        <div class="stat-lbl">nových ponúk tento týždeň</div>
       </div>
       <div class="stat-card">
         <div class="stat-num"><em>28</em> €</div>
-        <div class="stat-lbl">priemerná hodinová<br>sadzba na platforme</div>
+        <div class="stat-lbl">priemerná hodinová sadzba na platforme</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num">6</div>
-        <div class="stat-lbl">krajín EÚ —<br>DE, AT, NL, BE, SK, CZ</div>
+        <div class="stat-num">16</div>
+        <div class="stat-lbl">v rámci Európy</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- APP DOWNLOAD -->
-<section class="app-sec">
+<section class="app-sec boxed">
   <div class="container">
     <div class="app-grid">
       <div class="app-left">
         <span class="eyebrow">mobilná aplikácia</span>
         <h2>Vaša kariéra v <em>mobile</em></h2>
-        <p>Spravujte dostupnosť, prezerajte ponuky a komunikujte s firmami odkiaľkoľvek — z domu, zo staveniska, z vlaku. Aplikácia je zadarmo pre iOS aj Android.</p>
+        <p>Spravujte svoju dostupnosť, prezerajte ponuky od top firiem aj agentúr a majte zmluvy či faktúry na jednom mieste – priamo vo vrecku. Aplikácia je zdarma pre iOS aj Android.</p>
         <div class="app-badges">
           <a href="/sk/stiahnut-aplikaciu" class="app-badge">
-            <div class="app-badge-icon">🍎</div>
+            <div class="app-badge-icon"></div>
             <div class="app-badge-text">
               <span class="app-badge-sub">Stiahnuť z</span>
               <span class="app-badge-name">App Store</span>
             </div>
           </a>
           <a href="/sk/stiahnut-aplikaciu" class="app-badge">
-            <div class="app-badge-icon">🤖</div>
+            <div class="app-badge-icon"></div>
             <div class="app-badge-text">
               <span class="app-badge-sub">Stiahnuť z</span>
               <span class="app-badge-name">Google Play</span>
@@ -506,21 +666,21 @@ em{font-style:italic;color:var(--signal);font-weight:500}
             <div class="app-phone-badge">Nové</div>
           </div>
           <div class="app-notif">
-            <div class="app-notif-icon">💼</div>
+            <div class="app-notif-icon"></div>
             <div>
               <div class="app-notif-text"><span class="app-notif-bold">Nová ponuka pre vás:</span> Zvárač MIG/MAG, Emsland DE — 30 €/h, nástup júl 2026</div>
               <div class="app-notif-time">pred 12 min</div>
             </div>
           </div>
           <div class="app-notif">
-            <div class="app-notif-icon">⚡</div>
+            <div class="app-notif-icon"></div>
             <div>
               <div class="app-notif-text"><span class="app-notif-bold">Dopyt na vás:</span> Firma z Viedne má záujem o váš profil — elektrikár VDE</div>
               <div class="app-notif-time">pred 2 hod</div>
             </div>
           </div>
           <div class="app-notif">
-            <div class="app-notif-icon">📅</div>
+            <div class="app-notif-icon"></div>
             <div>
               <div class="app-notif-text"><span class="app-notif-bold">Kalendár:</span> Vaša dostupnosť od 1. júla je potvrdená — 3 firmy to vidia</div>
               <div class="app-notif-time">dnes ráno</div>
@@ -533,34 +693,40 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 </section>
 
 <!-- FAQ -->
-<section class="faq-sec">
+<section class="faq-sec boxed">
   <div class="container">
     <span class="eyebrow" style="display:block;text-align:center;margin-bottom:10px">• otázky</span>
-    <h2>Časté otázky <em>pracovníkov</em></h2>
-    <div class="faq-list">
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Je registrácia naozaj zadarmo?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Áno, registrácia je zadarmo navždy a platí to pre všetkých pracovníkov. Neplatíte žiadne mesačné poplatky ani provízie zo zákazky. Alogator zarába na firmách, ktoré za prístup k databáze pracovníkov platia predplatné.</div></div>
+    <h2 style="text-align:center;margin-bottom:32px">Časté otázky <em>pracovníkov</em></h2>
+    <div class="hiw-grid faq-grid-cards" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+      <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md, 20px)">
+        <div class="hiw-num" style="font-size:28px">01</div>
+        <h4 style="font-size:13px">Je registrácia naozaj zdarma?</h4>
+        <p style="font-size:12px">Áno, registrácia je zdarma navždy a platí to pre všetkých pracovníkov. Neplatíte žiadne mesačné poplatky. Alogator zarába na firmách, ktoré za prístup k databáze pracovníkov platia predplatné.</p>
       </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Vidím názov firmy pred registráciou?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Bez registrácie vidíte profesiu, lokalitu práce (mesto + krajina kde sa pracuje), plat, podmienky a krajinu sídla firmy (napr. 🇸🇰 slovenská firma). Konkrétny názov firmy sa odomkne po bezplatnej registrácii — je to ochrana platformy pred priamym kontaktom mimo Alogátora.</div></div>
+      <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md, 20px)">
+        <div class="hiw-num" style="font-size:28px">02</div>
+        <h4 style="font-size:13px">Vidím názov firmy pred registráciou?</h4>
+        <p style="font-size:12px">Bez registrácie vidíte profesiu, lokalitu práce (mesto + krajina kde sa pracuje), plat, podmienky a krajinu sídla firmy (napr. 🇸🇰 slovenská firma). Konkrétny názov firmy sa odomkne po bezplatnej registrácii — je to ochrana platformy pred priamym kontaktom mimo Alogátora.</p>
       </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Potrebujem vedieť po nemecky?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Závisí od ponuky. Mnohé firmy v DE/AT pracujú so SK/CZ tímami a stačí slovenčina alebo čeština na pracovisku. Niektoré pozície vyžadujú nemčinu (zvyčajne A2 alebo B1 pre priamy kontakt s nemeckými kolegami). V každej ponuke je jasne uvedená jazyková požiadavka.</div></div>
+      <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md, 20px)">
+        <div class="hiw-num" style="font-size:28px">03</div>
+        <h4 style="font-size:13px">Potrebujem vedieť po nemecky?</h4>
+        <p style="font-size:12px">Závisí od ponuky. Mnohé firmy v DE/AT pracujú so SK/CZ tímami a stačí slovenčina alebo čeština na pracovisku. Niektoré pozície vyžadujú nemčinu (zvyčajne A2 alebo B1 pre priamy kontakt s nemeckými kolegami). V každej ponuke je jasne uvedená jazyková požiadavka.</p>
       </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Kde reálne nájdem prácu cez Alogator?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Prevažná väčšina ponúk je z Nemecka (Bavorsko, NRW, Dolné Sasko) a Rakúska (Viedeň, Graz, Linz). Rastie nám aj Holandsko (Rotterdam, Eindhoven) a Belgicko (Antwerp, Gent). Ponuky z SK/CZ sú menej časté, ale tiež sa objavujú — najmä pre agentúry hľadajúce posily pre zahraničné projekty.</div></div>
+      <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md, 20px)">
+        <div class="hiw-num" style="font-size:28px">04</div>
+        <h4 style="font-size:13px">Kde reálne nájdem prácu cez Alogator?</h4>
+        <p style="font-size:12px">Prevažná väčšina ponúk je z Nemecka (Bavorsko, NRW, Dolné Sasko) a Rakúska (Viedeň, Graz, Linz). Rastie nám aj Holandsko (Rotterdam, Eindhoven) a Belgicko (Antwerp, Gent). Ponuky z SK/CZ sú menej časté, ale tiež sa objavujú — najmä pre agentúry hľadajúce posily pre zahraničné projekty.</p>
       </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Ako funguje moja dostupnosť v kalendári?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">V mobilnej appke zaznačíte dni/týždne kedy ste voľní. Firmy s prémiovým predplatným vidia váš kalendár a môžu vás kontaktovať vopred — napríklad rezervujú vás na júl keď je máj. Vy schvaľujete alebo odmietate každý dopyt. Nikto vás nemôže "zabookovať" bez vášho súhlasu.</div></div>
+      <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md, 20px)">
+        <div class="hiw-num" style="font-size:28px">05</div>
+        <h4 style="font-size:13px">Ako funguje moja dostupnosť v kalendári?</h4>
+        <p style="font-size:12px">V mobilnej appke zaznačíte dni/týždne kedy ste voľní. Firmy s prémiovým predplatným vidia váš kalendár a môžu vás kontaktovať vopred — napríklad rezervujú vás na júl keď je máj. Vy schvaľujete alebo odmietate každý dopyt. Nikto vás nemôže "zabookovať" bez vášho súhlasu.</p>
       </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Čo je PRO profil a ako ho získam?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">PRO badge dostanete po overení: nahráte certifikáty (napr. zvárač certifikát, VDE, STN normy), pridáte aspoň jednu referenciu a vyplníte celú pracovnú históriu. Overenie trvá 1–2 pracovné dni. PRO pracovníci dostávajú o 23 % viac dopytov a firmy im ponúkajú priemerne o 2–3 €/h vyššiu sadzbu.</div></div>
+      <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md, 20px)">
+        <div class="hiw-num" style="font-size:28px">06</div>
+        <h4 style="font-size:13px">Čo je PRO profil a ako ho získam?</h4>
+        <p style="font-size:12px">PRO badge dostanete po overení: nahráte certifikáty (napr. zvárač certifikát, VDE, STN normy), pridáte aspoň jednu referenciu a vyplníte celú pracovnú históriu. Overenie trvá 1–2 pracovné dni. PRO pracovníci dostávajú o 23 % viac dopytov a firmy im ponúkajú priemerne o 2–3 €/h vyššiu sadzbu.</p>
       </div>
     </div>
   </div>
@@ -572,13 +738,13 @@ em{font-style:italic;color:var(--signal);font-weight:500}
     <div class="cta-banner">
       <div>
         <span class="eyebrow" style="color:rgba(249,243,237,.7)">• začnite dnes</span>
-        <h2>Profil za 5 minút,<br>prvá ponuka do <em>24 hodín</em>.</h2>
-        <p>Zadarmo, navždy. Žiadne poplatky, žiadne provízie. Stovky overených ponúk z DE, AT, NL, BE čakajú na vás.</p>
+        <h2>Profil za 5 minút,<br>prvá overená ponuka do <em>24 hodín.</em></h2>
+        <p>Navždy zdarma. Stovky stabilných projektov od koncových firiem a popredných agentúr z DE, AT, NL a BE čakajú na vaše voľné kapacity.</p>
       </div>
       <div class="cta-actions">
         <a href="/sk/stiahnut-aplikaciu" class="cta-btn-pri">Stiahnuť aplikáciu →</a>
-        <a href="/app" class="cta-btn-sec">Registrovať sa zadarmo</a>
-        <div class="cta-note">Registrácia zadarmo · žiadna kreditná karta</div>
+        <a href="/app" class="cta-btn-sec">Registrovať sa zdarma</a>
+        <div class="cta-note">Registrácia zdarma · žiadna kreditná karta</div>
       </div>
     </div>
   </div>
@@ -615,7 +781,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
     </div>
     <div class="foot-bottom">
       <div>© 2026 Alogator · Profi Steel Holding</div>
-      <div>Made in Slovakia · alogator.com/sk</div>
+      <div>www.alogator.com</div>
     </div>
   </div>
 </footer>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Cenník Alogator — Marketplace pre pracovníkov a firmy</title>
-<meta name="description" content="Platíte len za to, čo používate. Pracovník zdarma. Firma od inzerátu zadarmo po Alogator prístup za 499 €/mes. Modulárny cenník.">
+<meta name="description" content="Platíte len za to, čo používate. Pracovník zdarma. Firma od inzerátu zdarma po Alogator prístup za 499 €/mes. Modulárny cenník.">
 
 
 
@@ -146,7 +146,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .tier-intro h3{font-size:clamp(22px,2.5vw,28px);margin-bottom:10px;letter-spacing:-0.02em}
 .tier-intro p{color:var(--graphite-700);font-size:15px;line-height:1.55}
 
-.tier-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.tier-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .tier-card{
   background:var(--porcelain);border:1px solid var(--porcelain-300);
   border-radius:18px;padding:24px 18px;position:relative;
@@ -287,8 +287,8 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 }
 
 /* ============ TRUST ============ */
-.trust-sec{padding:64px 0;background:var(--porcelain-200)}
-.trust-sec .container{text-align:center}
+.trust-sec{padding:16px 32px;background:var(--porcelain)}
+.trust-sec .container{text-align:center;background:#fff;border:1.5px solid var(--porcelain-300);border-radius:24px;padding:40px 32px;max-width:1280px;margin:0 auto}
 .trust-lbl{
   font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;
   letter-spacing:0.15em;text-transform:uppercase;color:var(--graphite-500);margin-bottom:32px;
@@ -302,28 +302,16 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 /* ============ FAQ ============ */
 .faq-sec{padding:80px 0;background:var(--porcelain)}
 .faq-sec h2{font-size:clamp(28px,3vw,40px);text-align:center;margin-bottom:48px}
-.faq-list{max-width:780px;margin:0 auto}
-.faq-item{
-  background:var(--porcelain-200);border:1px solid var(--porcelain-300);border-radius:14px;
-  margin-bottom:10px;overflow:hidden;transition:border-color .15s;
-}
-.faq-item:hover{border-color:var(--graphite-200)}
-.faq-q{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:18px 22px;cursor:pointer;font-size:15px;font-weight:500;
-}
-.faq-q-icon{
-  width:24px;height:24px;border-radius:50%;border:1px solid var(--graphite-200);
-  display:flex;align-items:center;justify-content:center;font-size:14px;
-  transition:transform .2s;flex-shrink:0;
-}
-.faq-item.open .faq-q-icon{transform:rotate(45deg);background:var(--signal);color:var(--porcelain);border-color:var(--signal)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .3s}
-.faq-item.open .faq-a{max-height:500px}
-.faq-a-inner{padding:0 22px 20px;font-size:14.5px;color:var(--graphite-700);line-height:1.6}
+.hiw-grid.faq-grid-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.hiw-grid.faq-grid-cards .hiw-card{background:var(--porcelain-200);border:1px solid var(--porcelain-300);border-radius:20px;padding:24px 20px;display:flex;flex-direction:column;gap:10px}
+.hiw-grid.faq-grid-cards .hiw-num{width:32px;height:32px;border-radius:10px;background:var(--signal-soft);color:var(--signal);font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hiw-grid.faq-grid-cards h4{font-size:14px;font-weight:600;color:var(--graphite);line-height:1.35;margin:0}
+.hiw-grid.faq-grid-cards p{font-size:13px;color:var(--graphite-700);line-height:1.55;margin:0}
+@media(max-width:900px){.hiw-grid.faq-grid-cards{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.hiw-grid.faq-grid-cards{grid-template-columns:1fr}}
 
 /* ============ ENTERPRISE CTA ============ */
-.ent-sec{padding:64px 0;background:var(--porcelain-200)}
+.ent-sec{padding:16px 32px;background:var(--porcelain)}
 .ent-banner{
   background:var(--graphite);color:var(--porcelain);
   border-radius:32px;padding:56px;
@@ -360,7 +348,8 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 }
 
 /* ============ FOOTER ============ */
-.footer{background:var(--graphite);color:var(--porcelain);padding:48px 0 24px}
+.footer{background:var(--porcelain);padding:16px 32px 32px}
+.footer .container{background:var(--graphite);border-radius:24px;padding:48px 40px 28px;max-width:1280px;color:var(--porcelain)}
 .foot-top{
   display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;
   padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08);
@@ -378,9 +367,36 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 }
 
 @media (max-width:1100px){
-  .tier-grid{grid-template-columns:repeat(3,1fr);gap:14px}
+  .tier-grid{grid-template-columns:repeat(2,1fr);gap:14px}
   .tier-card.featured{transform:none}
 }
+/* ============ CREDITS ============ */
+.credits-sec{padding:80px 0;background:var(--porcelain-200)}
+.credits-head{text-align:center;max-width:680px;margin:0 auto 48px}
+.credits-head h2{font-size:clamp(28px,3vw,40px);margin:14px 0 14px}
+.credits-head p{font-size:15px;color:var(--graphite-700);line-height:1.6}
+.credits-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;max-width:960px;margin:0 auto}
+.credit-card{
+  background:var(--porcelain);border:1px solid var(--porcelain-300);
+  border-radius:20px;padding:28px 24px;display:flex;flex-direction:column;gap:8px;
+}
+.credit-card.highlight{
+  background:var(--graphite);color:var(--porcelain);border-color:var(--graphite);
+}
+.credit-icon{font-size:26px;margin-bottom:4px}
+.credit-card h4{font-family:'Geist',sans-serif;font-weight:500;font-size:17px;letter-spacing:-0.015em;color:var(--graphite)}
+.credit-card.highlight h4{color:var(--porcelain)}
+.credit-card p{font-size:13px;color:var(--graphite-700);line-height:1.5}
+.credit-card.highlight p{color:rgba(249,243,237,.75)}
+.credit-price{
+  margin-top:auto;padding-top:14px;border-top:1px solid var(--porcelain-300);
+  font-family:'Geist',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.02em;color:var(--signal);
+}
+.credit-card.highlight .credit-price{border-top-color:rgba(249,243,237,.15)}
+.credit-rate{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--graphite-500);letter-spacing:0.1em;text-transform:uppercase;margin-top:2px}
+.credit-card.highlight .credit-rate{color:rgba(249,243,237,.5)}
+section.boxed{padding:16px 32px}
+section.boxed .container{background:#fff;border:1.5px solid var(--porcelain-300);border-radius:24px;padding:32px;max-width:1280px;margin:0 auto}
 @media (max-width:900px){
   .tier-grid,.flow-steps{grid-template-columns:1fr;gap:14px}
   .worker-feats,.contacts-grid,.foot-top{grid-template-columns:1fr;gap:24px}
@@ -398,14 +414,14 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 <meta property="og:site_name" content="Alogator">
 <meta property="og:locale" content="sk_SK">
 <meta property="og:title" content="Cenník Alogator — Marketplace pre pracovníkov a firmy">
-<meta property="og:description" content="Platíte len za to, čo používate. Pracovník zdarma. Firma od inzerátu zadarmo po Alogator prístup za 499 €/mes. Modulárny cenník.">
+<meta property="og:description" content="Platíte len za to, čo používate. Pracovník zdarma. Firma od inzerátu zdarma po Alogator prístup za 499 €/mes. Modulárny cenník.">
 <meta property="og:url" content="https://alogator.com/sk/cennik">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Cenník Alogator — Marketplace pre pracovníkov a firmy">
-<meta name="twitter:description" content="Platíte len za to, čo používate. Pracovník zdarma. Firma od inzerátu zadarmo po Alogator prístup za 499 €/mes. Modulárny cenník.">
+<meta name="twitter:description" content="Platíte len za to, čo používate. Pracovník zdarma. Firma od inzerátu zdarma po Alogator prístup za 499 €/mes. Modulárny cenník.">
 <!-- alg-schema -->
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Domov", "item": "https://alogator.com/sk"}, {"@type": "ListItem", "position": 2, "name": "Cenník", "item": "https://alogator.com/sk/cennik"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Prečo modulárny cenník namiesto klasických 3 taríf?", "acceptedAnswer": {"@type": "Answer", "text": "Lebo každá firma má inú potrebu. Malá firma chce len pridávať inzeráty — to je zadarmo. Stredná firma chce CRM na evidenciu vlastných ľudí — to je 99 €. Veľká firma chce vidieť aj cudzích pracovníkov v Alogator databáze — to je 499 €. Platíte len za to, čo skutočne používate."}}, {"@type": "Question", "name": "Aký je najväčší benefit \"Kapacity\" úrovne (199 €)?", "acceptedAnswer": {"@type": "Answer", "text": "Vidíte kalendár vlastných ľudí v real-time. Pracovníci sami aktualizujú svoju dostupnosť cez aplikáciu — vy už nemusíte volať a pýtať sa \"máš čas na nasledujúci projekt?\". Vidíte to priamo. Plus si plánujete projekty 6+ týždňov dopredu bez konfliktov a dvojitých rezervácií."}}, {"@type": "Question", "name": "Čo presne znamená \"Alogator\" úroveň za 499 €?", "acceptedAnswer": {"@type": "Answer", "text": "Máte plný prístup ku kalendárom všetkých pracovníkov v Alogator databáze — 3 047 ľudí, ktorí nie sú vaši vlastní. Filtrujete podľa profesie, jazyka, sadzby, certifikátov. Vidíte ich reálnu dostupnosť a môžete kontaktovať na otvorenie projektu. Otvorenie samotného kontaktu je doplnková položka (cena na vyžiadanie)."}}, {"@type": "Question", "name": "Čo je Enterprise úroveň a aké sú \"hot leads\"?", "acceptedAnswer": {"@type": "Answer", "text": "Enterprise dáva prístup k pracovníkom, ktorí práve dokončili onboarding alebo nastavili novú dostupnosť. Inými slovami — vidíte ich ako prví, predtým, než sa dostanú do bežnej databázy pre ostatné firmy. Plus API integráciu, SSO, dedikovaného account managera a multi-country setup."}}, {"@type": "Question", "name": "Aký je rozdiel medzi vlastnými a Alogator kontaktmi?", "acceptedAnswer": {"@type": "Answer", "text": "Vlastné kontakty sú ľudia, ktorí už pre vás robili — vy ich importujete do Alogatora a získate ich kalendár dostupnosti. Berie ich prednostne. Alogator kontakty sú pracovníci, ktorých zatiaľ nepoznáte — ideálne keď vlastné kapacity nestačia. Otvorenie cudzieho kontaktu je samostatný poplatok."}}, {"@type": "Question", "name": "Môžem si vyskúšať platenú úroveň zdarma?", "acceptedAnswer": {"@type": "Answer", "text": "Áno. Každá platená úroveň (CRM, Kapacity, Alogator) má 14 dní zdarma bez kreditnej karty. Plný prístup ku všetkým funkciám. Na konci skúšobky vám pošleme upozornenie — buď pokračujete, alebo účet automaticky prejde do read-only módu. Žiadne skryté poplatky."}}, {"@type": "Question", "name": "Môžem zmeniť úroveň počas zmluvy?", "acceptedAnswer": {"@type": "Answer", "text": "Áno, kedykoľvek. Upgrade (napr. z CRM na Kapacity) sa aktivuje okamžite a fakturuje sa pro rata za zostávajúce dni. Downgrade sa aplikuje od ďalšieho fakturačného obdobia."}}, {"@type": "Question", "name": "Pracovník platí za používanie Alogatora?", "acceptedAnswer": {"@type": "Answer", "text": "Nie. Aplikácia pre pracovníkov je úplne zdarma — registrácia, profil, vyhľadávanie ponúk, push notifikácie aj kontakt s firmami. Žiadne provízie z výplaty. V budúcnosti pripravujeme voliteľné PREMIUM členstvo s lepšou viditeľnosťou v listingoch."}}, {"@type": "Question", "name": "Sú ceny s DPH alebo bez?", "acceptedAnswer": {"@type": "Answer", "text": "Všetky ceny v cenníku sú uvádzané bez DPH. K cene sa pripočítava 23 % DPH (Slovensko) alebo prislúchajúca sadzba podľa krajiny vašej firmy. Pre firmy v EÚ s platným IČ DPH sa fakturácia robí cez reverse charge."}}, {"@type": "Question", "name": "Existuje zľava pri ročnej fakturácii?", "acceptedAnswer": {"@type": "Answer", "text": "Áno. Pri ročnej fakturácii vopred dostávate 20 % zľavu — CRM 79 €/mes (namiesto 99 €), Kapacity 159 €/mes (namiesto 199 €), Alogator 399 €/mes (namiesto 499 €). Enterprise sa fakturuje kvartálne a podmienky sa dohadujú individuálne."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Prečo modulárny cenník namiesto klasických 3 taríf?", "acceptedAnswer": {"@type": "Answer", "text": "Lebo každá firma má inú potrebu. Malá firma chce len pridávať inzeráty — to je zdarma. Stredná firma chce CRM na evidenciu vlastných ľudí — to je 99 €. Veľká firma chce vidieť aj cudzích pracovníkov v Alogator databáze — to je 499 €. Platíte len za to, čo skutočne používate."}}, {"@type": "Question", "name": "Aký je najväčší benefit \"Kapacity\" úrovne (199 €)?", "acceptedAnswer": {"@type": "Answer", "text": "Vidíte kalendár vlastných ľudí v real-time. Pracovníci sami aktualizujú svoju dostupnosť cez aplikáciu — vy už nemusíte volať a pýtať sa \"máš čas na nasledujúci projekt?\". Vidíte to priamo. Plus si plánujete projekty 6+ týždňov dopredu bez konfliktov a dvojitých rezervácií."}}, {"@type": "Question", "name": "Čo presne znamená \"Alogator\" úroveň za 499 €?", "acceptedAnswer": {"@type": "Answer", "text": "Máte plný prístup ku kalendárom všetkých pracovníkov v Alogator databáze — 4 000 + ľudí, ktorí nie sú vaši vlastní. Filtrujete podľa profesie, jazyka, sadzby, certifikátov. Vidíte ich reálnu dostupnosť a môžete kontaktovať na otvorenie projektu. Otvorenie samotného kontaktu je doplnková položka (cena na vyžiadanie)."}}, {"@type": "Question", "name": "Čo je Enterprise úroveň a aké sú \"hot leads\"?", "acceptedAnswer": {"@type": "Answer", "text": "Enterprise dáva prístup k pracovníkom, ktorí práve dokončili onboarding alebo nastavili novú dostupnosť. Inými slovami — vidíte ich ako prví, predtým, než sa dostanú do bežnej databázy pre ostatné firmy. Plus API integráciu, SSO, dedikovaného account managera a multi-country setup."}}, {"@type": "Question", "name": "Aký je rozdiel medzi vlastnými a Alogator kontaktmi?", "acceptedAnswer": {"@type": "Answer", "text": "Vlastné kontakty sú ľudia, ktorí už pre vás robili — vy ich importujete do Alogatora a získate ich kalendár dostupnosti. Berie ich prednostne. Alogator kontakty sú pracovníci, ktorých zatiaľ nepoznáte — ideálne keď vlastné kapacity nestačia. Otvorenie cudzieho kontaktu je samostatný poplatok."}}, {"@type": "Question", "name": "Môžem si vyskúšať platenú úroveň zdarma?", "acceptedAnswer": {"@type": "Answer", "text": "Áno. Každá platená úroveň (CRM, Kapacity, Alogator) má 30 dní zdarma bez kreditnej karty. Plný prístup ku všetkým funkciám. Na konci skúšobky vám pošleme upozornenie — buď pokračujete, alebo účet automaticky prejde do read-only módu. Žiadne skryté poplatky."}}, {"@type": "Question", "name": "Môžem zmeniť úroveň počas zmluvy?", "acceptedAnswer": {"@type": "Answer", "text": "Áno, kedykoľvek. Upgrade (napr. z CRM na Kapacity) sa aktivuje okamžite a fakturuje sa pro rata za zostávajúce dni. Downgrade sa aplikuje od ďalšieho fakturačného obdobia."}}, {"@type": "Question", "name": "Pracovník platí za používanie Alogatora?", "acceptedAnswer": {"@type": "Answer", "text": "Nie. Aplikácia pre pracovníkov je úplne zdarma — registrácia, profil, vyhľadávanie ponúk, push notifikácie aj kontakt s firmami. V budúcnosti pripravujeme voliteľné PREMIUM členstvo s lepšou viditeľnosťou v listingoch."}}, {"@type": "Question", "name": "Sú ceny s DPH alebo bez?", "acceptedAnswer": {"@type": "Answer", "text": "Všetky ceny v cenníku sú uvádzané bez DPH. K cene sa pripočítava 23 % DPH (Slovensko) alebo prislúchajúca sadzba podľa krajiny vašej firmy. Pre firmy v EÚ s platným IČ DPH sa fakturácia robí cez reverse charge."}}, {"@type": "Question", "name": "Existuje zľava pri ročnej fakturácii?", "acceptedAnswer": {"@type": "Answer", "text": "Áno. Pri ročnej fakturácii vopred dostávate 20 % zľavu — CRM 79 €/mes (namiesto 99 €), Kapacity 159 €/mes (namiesto 199 €), Alogator 399 €/mes (namiesto 499 €). Enterprise sa fakturuje kvartálne a podmienky sa dohadujú individuálne."}}]}</script>
 <!-- /alg-schema -->
 <link rel="stylesheet" href="/assets/mobile-nav.css">
 <script src="/assets/mobile-nav.js" defer></script>
@@ -437,45 +453,39 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 <section class="lp-hero">
   <div class="container">
     <span class="eyebrow">cenník</span>
-    <h1>Trh, kde sa stretáva <em>všetko</em>.</h1>
+    <h1>Ekosystém pre riadenie kapacít<br>a nábor <em>bez rizika.</em></h1>
     <p class="lead">
-      Alogator je marketplace pre stavebných a priemyselných pracovníkov.
-      Pracovníci, agentúry a koncové firmy sa stretávajú na jednom mieste —
-      platíte len za to, čo používate.
+      Jediné platforma v  Európe, ktorá kombinuje bezplatnú inzerciu, vlastnú CRM databázu, kalendár dostupnosti a B2B marketplace kapacít.
     </p>
 
     <div class="lp-hero-stats">
       <div>
-        <div class="lp-stat-num">3 047</div>
+        <div class="lp-stat-num">4 000 <em>+</em></div>
         <div class="lp-stat-lbl">pracovníkov</div>
       </div>
       <div>
-        <div class="lp-stat-num">642</div>
+        <div class="lp-stat-num">700 <em>+</em></div>
         <div class="lp-stat-lbl">firiem a agentúr</div>
       </div>
       <div>
-        <div class="lp-stat-num"><em>14 dní</em></div>
+        <div class="lp-stat-num"><em>30 dní</em></div>
         <div class="lp-stat-lbl">skúšobné obdobie zdarma</div>
       </div>
     </div>
 
     <!-- User type toggle -->
     <div class="user-type-toggle">
-      <button class="ut-btn active" onclick="toggleView(event,'worker')">
-        <span class="ut-icon">👷</span>Som pracovník
-      </button>
-      <button class="ut-btn" onclick="toggleView(event,'firma')">
-        <span class="ut-icon">🏗️</span>Sme firma
-      </button>
+      <button class="ut-btn active" onclick="toggleView(event,'firma')">Sme firma</button>
+      <button class="ut-btn" onclick="toggleView(event,'worker')">Som pracovník</button>
     </div>
   </div>
 </section>
 
 <!-- WORKER VIEW -->
-<section class="worker-sec active" id="view-worker">
+<section class="worker-sec" id="view-worker">
   <div class="container">
     <div class="worker-card">
-      <div class="worker-card-icon">👷</div>
+      
       <h3>Pracovník</h3>
       <p style="color:var(--graphite-700);max-width:480px;margin:0 auto">Pre SZČO zváračov, elektrikárov, montérov a všetkých remeselníkov hľadajúcich zákazky doma aj v zahraničí.</p>
 
@@ -492,9 +502,9 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 
       <div class="worker-feats">
         <div class="worker-feat"><span class="worker-feat-icon">✓</span><span><strong>Profil zdarma.</strong> Nastavíte sadzbu, dostupnosť, špecializáciu.</span></div>
-        <div class="worker-feat"><span class="worker-feat-icon">✓</span><span><strong>Ponuky od firiem aj agentúr.</strong> Vy si vyberáte.</span></div>
+        <div class="worker-feat"><span class="worker-feat-icon">✓</span><span>Stabilné projekty od medzinárodných firiem a agentúr. Vy si vyberáte.</span></div>
         <div class="worker-feat"><span class="worker-feat-icon">✓</span><span><strong>Dream Job notifikácia.</strong> Push pri novej zhode.</span></div>
-        <div class="worker-feat"><span class="worker-feat-icon">✓</span><span><strong>Recenzie firiem.</strong> Vidíte hodnotenia pred kontaktom.</span></div>
+        <div class="worker-feat"><span class="worker-feat-icon">✓</span><span>Hodnotenie firiem aj agentúr. Vopred vidíte ich spoľahlivosť a platobnú disciplínu.</span></div>
         <div class="worker-feat"><span class="worker-feat-icon">✓</span><span><strong>Volíte si úväzok.</strong> SZČO alebo HPP.</span></div>
         <div class="worker-feat"><span class="worker-feat-icon">✓</span><span><strong>Faktúry v aplikácii.</strong> Priamo vystavujete a archivujete.</span></div>
       </div>
@@ -503,12 +513,12 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 </section>
 
 <!-- FIRMA VIEW -->
-<section class="firma-sec hidden" id="view-firma">
+<section class="firma-sec boxed" id="view-firma">
   <div class="container">
     <div class="tier-intro">
-      <span class="eyebrow">• 5 úrovní pre firmu</span>
-      <h3>Platíte len za to, čo používate</h3>
-      <p>Začnete inzerátom zdarma. Postupne pridávate moduly — CRM, kalendár, prístup do databázy — podľa toho, ako rastie vaša potreba.</p>
+      <span class="eyebrow">• 4 úrovní pre firmu</span>
+      <h3>Rastiete? Alogator Vám pomôže byť rýchlekší a efektívnejší.</h3>
+      <p>Začnite inzerátom zdarma (Zero-Risk). Pre pokročilú správu vlastných ľudí a sledovanie trhu prejdite na vyšší balík s výhodnejšou cenou kreditov.</p>
     </div>
 
     <div class="tier-grid">
@@ -522,101 +532,82 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           <span class="tier-price">0 €</span>
           <span class="tier-unit">/ mes.</span>
         </div>
-        <div class="tier-billed">Bez záväzku</div>
+        <div class="tier-billed">Bez záväzku · 0 kreditov</div>
         <button class="tier-cta">Začať zdarma</button>
         <div class="tier-divider">• čo dostanete</div>
         <ul class="tier-feats">
-          <li><span class="tier-feat-icon">✓</span><span><strong>Inzeráty</strong> — pridávate pracovné ponuky</span></li>
+          <li><span class="tier-feat-icon">✓</span><span><strong>Max 3 inzeráty</strong> súčasne</span></li>
           <li><span class="tier-feat-icon">✓</span><span>Ľudia sa <strong>ozývajú sami</strong></span></li>
           <li><span class="tier-feat-icon">✓</span><span>Verejný profil firmy</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>1 admin</span></li>
+          <li><span class="tier-feat-icon">✓</span><span>1 seat</span></li>
         </ul>
       </div>
 
-      <!-- CRM -->
+      <!-- PREMIUM -->
       <div class="tier-card">
         <div class="tier-num">úroveň 02</div>
-        <h4>CRM</h4>
-        <p class="tier-desc">Spravujete svoje kontakty na jednom mieste.</p>
-        <div class="tier-price-row">
-          <span class="tier-price">99 €</span>
-          <span class="tier-unit">/ mes.</span>
-        </div>
-        <div class="tier-billed">+ DPH · mesačne</div>
-        <button class="tier-cta">Vyskúšať 14 dní</button>
-        <div class="tier-divider">• všetko z Free, plus</div>
-        <ul class="tier-feats">
-          <li><span class="tier-feat-icon">✓</span><span><strong>Vlastný CRM</strong> — kontakty, štítky, história</span></li>
-          <li><span class="tier-feat-icon">✓</span><span><strong>Import existujúcich kontaktov</strong> z Excel / CSV</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>Poznámky pri každom človeku</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>3 admini v tíme</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>Email support do 24h</span></li>
-        </ul>
-      </div>
-
-      <!-- KAPACITY -->
-      <div class="tier-card featured">
-        <div class="tier-badge">Najobľúbenejšia</div>
-        <div class="tier-num">úroveň 03</div>
-        <h4>Kapacity</h4>
-        <p class="tier-desc">Riadite kalendár vlastných ľudí v real-time.</p>
+        <h4>Premium</h4>
+        <p class="tier-desc">Správa vlastných ľudí a inzercia s výhodami.</p>
         <div class="tier-price-row">
           <span class="tier-price">199 €</span>
           <span class="tier-unit">/ mes.</span>
         </div>
-        <div class="tier-billed">+ DPH · mesačne</div>
-        <button class="tier-cta">Vyskúšať 14 dní</button>
-        <div class="tier-divider">• všetko z CRM, plus</div>
+        <div class="tier-billed">+ DPH · 200 kreditov/mes</div>
+        <button class="tier-cta">Vyskúšať 30 dní</button>
+        <div class="tier-divider">• všetko z Free, plus</div>
         <ul class="tier-feats">
-          <li><span class="tier-feat-icon">✓</span><span><strong>Kalendár vlastných ľudí</strong> — kto kedy voľný</span></li>
-          <li><span class="tier-feat-icon">✓</span><span><strong>Pracovníci aktualizujú dostupnosť sami</strong> cez appku</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>Plánovanie projektov 6+ týždňov dopredu</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>Konflikt detekcia (dvojité rezervácie)</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>5 adminov v tíme</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>Export reportov (CSV, PDF)</span></li>
+          <li><span class="tier-feat-icon">✓</span><span><strong>Max 10 inzerátov</strong> súčasne</span></li>
+          <li><span class="tier-feat-icon">✓</span><span><strong>Topovanie</strong> inzerátov (20 kreditov)</span></li>
+          <li><span class="tier-feat-icon">✓</span><span><strong>Import kontaktov</strong> z Excel / CSV</span></li>
+          <li><span class="tier-feat-icon">✓</span><span><strong>CRM databáza</strong> + správa tímu</span></li>
+          <li><span class="tier-feat-icon">✓</span><span><strong>Kalendár interných kapacít</strong></span></li>
+          <li><span class="tier-feat-icon">✓</span><span>Alogator databáza (bez dostupnosti)</span></li>
+          <li><span class="tier-feat-icon">✓</span><span>2 seats</span></li>
         </ul>
       </div>
 
-      <!-- ALOGATOR -->
-      <div class="tier-card">
-        <div class="tier-num">úroveň 04</div>
-        <h4>Alogator</h4>
-        <p class="tier-desc">Vidíte aj kalendáre <em>všetkých</em> v databáze.</p>
+      <!-- BUSINESS -->
+      <div class="tier-card featured">
+        <div class="tier-badge">Najobľúbenejšia</div>
+        <div class="tier-num">úroveň 03</div>
+        <h4>Business</h4>
+        <p class="tier-desc">Kalendár dostupnosti <em>celej</em> databázy — game changer.</p>
         <div class="tier-price-row">
           <span class="tier-price">499 €</span>
           <span class="tier-unit">/ mes.</span>
         </div>
-        <div class="tier-billed">+ DPH · mesačne</div>
-        <button class="tier-cta">Vyskúšať 14 dní</button>
-        <div class="tier-divider">• všetko z Kapacity, plus</div>
+        <div class="tier-billed">+ DPH · 500 kreditov/mes</div>
+        <button class="tier-cta">Vyskúšať 30 dní</button>
+        <div class="tier-divider">• všetko z Premium, plus</div>
         <ul class="tier-feats">
-          <li><span class="tier-feat-icon">✓</span><span><strong>Prístup ku všetkým kalendárom</strong> v Alogator databáze (3 047 pracovníkov)</span></li>
-          <li><span class="tier-feat-icon">✓</span><span><strong>Vyberáte si voľných ľudí</strong> na svoje projekty</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>AI vyhľadávanie podľa špecifikácie</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>Filter podľa jazyka, certifikátov, lokality</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>10 adminov v tíme</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>Priorita v podpore (do 4h)</span></li>
+          <li><span class="tier-feat-icon">✓</span><span><strong>Max 20 inzerátov</strong> súčasne</span></li>
+          <li><span class="tier-feat-icon">✓</span><span><strong>Push notifikácie</strong> pre pracovníkov (10 kr./100)</span></li>
+          <li><span class="tier-feat-icon">✓</span><span><strong>Kalendár dostupnosti všetkých</strong> v databáze</span></li>
+          <li><span class="tier-feat-icon">✓</span><span><strong>Odkrytie kontaktu</strong> (20 kreditov/kontakt)</span></li>
+          <li><span class="tier-feat-icon">✓</span><span><strong>AI nástroje</strong> — vyhľadávanie, zhoda, odporúčania</span></li>
+          <li><span class="tier-feat-icon">✓</span><span>3 seats</span></li>
         </ul>
       </div>
 
-      <!-- ENTERPRISE -->
+      <!-- BUSINESS+ -->
       <div class="tier-card">
-        <div class="tier-num">úroveň 05</div>
-        <h4>Enterprise</h4>
-        <p class="tier-desc">Hot leads od pracovníkov hneď po onboardingu.</p>
+        <div class="tier-num">úroveň 04</div>
+        <h4>Business+</h4>
+        <p class="tier-desc">Pre veľké tímy a náročné multi-projektové operácie.</p>
         <div class="tier-price-row">
-          <span class="tier-price">Custom</span>
+          <span class="tier-price">1 000 €</span>
+          <span class="tier-unit">/ mes.</span>
         </div>
-        <div class="tier-billed">Na mieru · ročná zmluva</div>
+        <div class="tier-billed">+ DPH · 2 000 kreditov/mes</div>
         <button class="tier-cta" onclick="location.href='/sk/kontakt'" style="cursor:pointer">Naplánovať demo</button>
-        <div class="tier-divider">• všetko z Alogator, plus</div>
+        <div class="tier-divider">• všetko z Business, plus</div>
         <ul class="tier-feats">
-          <li><span class="tier-feat-icon">✓</span><span><strong>Hot leads</strong> — pracovníci hneď po onboardingu / pri novej dostupnosti</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>Early access pred ostatnými firmami</span></li>
+          <li><span class="tier-feat-icon">✓</span><span><strong>Max 40 inzerátov</strong> súčasne</span></li>
+          <li><span class="tier-feat-icon">✓</span><span>5 seats</span></li>
           <li><span class="tier-feat-icon">✓</span><span>API prístup (HubSpot, SAP, vlastné CRM)</span></li>
           <li><span class="tier-feat-icon">✓</span><span>SSO + custom branding</span></li>
           <li><span class="tier-feat-icon">✓</span><span>Dedikovaný account manager</span></li>
-          <li><span class="tier-feat-icon">✓</span><span>Multi-country setup (SK + CZ + DE + AT + PL)</span></li>
+          <li><span class="tier-feat-icon">✓</span><span>Multi-country setup (SK · CZ · DE · AT · PL)</span></li>
         </ul>
       </div>
 
@@ -624,49 +615,39 @@ em{font-style:italic;color:var(--signal);font-weight:500}
   </div>
 </section>
 
-<!-- CONTACTS -->
-<section class="contacts-sec firma-block hidden" id="view-firma-contacts">
+<!-- CREDITS -->
+<section class="credits-sec firma-block boxed" id="view-firma-contacts">
   <div class="container">
-    <div class="contacts-head">
-      <span class="eyebrow">• doplnkové kontakty</span>
-      <h2>Kontakty kupujete <em>navyše</em></h2>
-      <p>Pri Alogator úrovni (od 499 €/mes) môžete kontaktovať pracovníkov v databáze. Otvorenie kontaktu je samostatný poplatok — buď zo svojich, alebo z Alogator zdrojov.</p>
+    <div class="credits-head">
+      <span class="eyebrow">• kreditový systém</span>
+      <h2>1 € = 1 kredit. <em>Platíte len za to, čo použijete.</em></h2>
+      <p>Kredity dostávate každý mesiac s predplatným. Použite ich na topovanie inzerátov, odkrytie kontaktov alebo push notifikácie pre pracovníkov.</p>
     </div>
 
-    <div class="contacts-grid">
+    <div class="credits-grid">
 
-      <div class="contact-card highlight">
-        <div class="contact-icon">👥</div>
-        <div class="contact-tag">odporúčané</div>
-        <h3>Vlastné kontakty</h3>
-        <p class="cdesc">Pracovníci, ktorých už poznáte. Importujete ich do Alogatora a vidíte ich kalendár — vždy ich máte ako prvých.</p>
-        <ul class="contact-bullets">
-          <li>Človek, ktorý už pre vás robil</li>
-          <li>Viete, čo môžete očakávať</li>
-          <li>Vidíte ich kalendár dostupnosti</li>
-          <li>Berie ich prednostne na svoje projekty</li>
-        </ul>
-        <div class="contact-price">
-          <span class="lbl">Cena za otvorenie</span>
-          <span class="val"><em>v cene</em> predplatného</span>
-        </div>
+      <div class="credit-card highlight">
+        
+        <h4>Odkrytie kontaktu</h4>
+        <p>Odomknete plný profil pracovníka — meno, číslo, e-mail. Dostupné od Business tarifu.</p>
+        <div class="credit-price">20 kreditov</div>
+        <div class="credit-rate">= 20 € / kontakt</div>
       </div>
 
-      <div class="contact-card">
-        <div class="contact-icon">🔍</div>
-        <div class="contact-tag">pre nových</div>
-        <h3>Alogator kontakty</h3>
-        <p class="cdesc">Pracovníci, ktorých zatiaľ nepoznáte. Ideálne keď vlastné kapacity nestačia a potrebujete obsadiť projekt.</p>
-        <ul class="contact-bullets">
-          <li>Prístup k 3 047+ pracovníkom v databáze</li>
-          <li>Filter podľa jazyka, certifikátov, sadzby</li>
-          <li>Vidíte hodnotenia od iných firiem</li>
-          <li>Reálny kalendár dostupnosti</li>
-        </ul>
-        <div class="contact-price">
-          <span class="lbl">Cena za otvorenie</span>
-          <span class="val">Na <em>vyžiadanie</em></span>
-        </div>
+      <div class="credit-card">
+        
+        <h4>Topovanie inzerátu</h4>
+        <p>Váš inzerát sa zobrazí na prvých miestach v listingu a dostane vizuálne zvýraznenie. Dostupné od Premium.</p>
+        <div class="credit-price">20 kreditov</div>
+        <div class="credit-rate">= 20 € / inzerát</div>
+      </div>
+
+      <div class="credit-card">
+        
+        <h4>Push notifikácia</h4>
+        <p>Oslovíte pracovníkov priamo cez push správu na ich mobile. Skvelé na okamžité obsadenie projektu. Dostupné od Business.</p>
+        <div class="credit-price">10 kreditov</div>
+        <div class="credit-rate">= 10 € / 100 doručení</div>
       </div>
 
     </div>
@@ -674,7 +655,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 </section>
 
 <!-- FLOW -->
-<section class="flow-sec firma-block hidden" id="view-firma-flow">
+<section class="flow-sec firma-block boxed" id="view-firma-flow">
   <div class="container">
     <div class="flow-head">
       <span class="eyebrow">• ako firma postupuje</span>
@@ -692,13 +673,13 @@ em{font-style:italic;color:var(--signal);font-weight:500}
       <div class="flow-step">
         <div class="flow-num">02</div>
         <h4>Alogator databáza</h4>
-        <p>Ak vlastní nestačia, otvoríte Alogator databázu — 3 047 ďalších pracovníkov, ktorých zatiaľ nepoznáte. Filtrujete podľa profesie, jazyka, dostupnosti.</p>
+        <p>Ak vlastní nestačia, otvoríte Alogator databázu — 4 000 + ďalších pracovníkov, ktorých zatiaľ nepoznáte. Filtrujete podľa profesie, jazyka, dostupnosti.</p>
         <span class="tag">Alogator úroveň</span>
       </div>
       <div class="flow-step">
         <div class="flow-num">03</div>
         <h4>Inzerát</h4>
-        <p>Alebo dáte verejný inzerát a pracovníci sa ozvú sami. Zadarmo, ale pasívnejší prístup — vy ste v pozícii čakania na ich odozvu.</p>
+        <p>Alebo dáte verejný inzerát a pracovníci sa ozvú sami. Zdarma, ale pasívnejší prístup — vy ste v pozícii čakania na ich odozvu.</p>
         <span class="tag">Free</span>
       </div>
     </div>
@@ -722,80 +703,58 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 </section>
 
 <!-- FAQ -->
-<section class="faq-sec">
+<section class="faq-sec boxed">
   <div class="container">
     <span class="eyebrow" style="display:block;text-align:center;margin-bottom:10px">• často kladené otázky</span>
     <h2>Otázky o cenníku</h2>
-    <div class="faq-list">
+    <div class="hiw-grid faq-grid-cards">
 
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Prečo modulárny cenník namiesto klasických 3 taríf?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          Lebo každá firma má inú potrebu. Malá firma chce len pridávať inzeráty — to je zadarmo. Stredná firma chce CRM na evidenciu vlastných ľudí — to je 99 €. Veľká firma chce vidieť aj cudzích pracovníkov v Alogator databáze — to je 499 €. Platíte len za to, čo skutočne používate.
-        </div></div>
+      <div class="hiw-card">
+        <div class="hiw-num">01</div>
+        <h4>Aký je rozdiel medzi Free a Premium?</h4>
+        <p>Free je základný vstup — max 3 inzeráty, 1 seat, žiadne kredity. Premium (199 €/mes) pridáva CRM, topovanie inzerátov, kalendár kapacít a 200 kreditov mesačne.</p>
       </div>
 
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Aký je najväčší benefit "Kapacity" úrovne (199 €)?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          Vidíte kalendár vlastných ľudí v real-time. Pracovníci sami aktualizujú svoju dostupnosť cez aplikáciu — vy už nemusíte volať a pýtať sa "máš čas na nasledujúci projekt?". Vidíte to priamo. Plus si plánujete projekty 6+ týždňov dopredu bez konfliktov a dvojitých rezervácií.
-        </div></div>
+      <div class="hiw-card">
+        <div class="hiw-num">02</div>
+        <h4>Prečo je Business tarifa "game changer"?</h4>
+        <p>Business (499 €/mes) dá prístup ku kalendáru dostupnosti celej Alogator databázy — nie len vašich ľudí. Vidíte v reálnom čase kto je voľný. Toto nikto iný na trhu neponúka.</p>
       </div>
 
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Čo presne znamená "Alogator" úroveň za 499 €?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          Máte plný prístup ku kalendárom všetkých pracovníkov v Alogator databáze — 3 047 ľudí, ktorí nie sú vaši vlastní. Filtrujete podľa profesie, jazyka, sadzby, certifikátov. Vidíte ich reálnu dostupnosť a môžete kontaktovať na otvorenie projektu. Otvorenie samotného kontaktu je doplnková položka (cena na vyžiadanie).
-        </div></div>
+      <div class="hiw-card">
+        <div class="hiw-num">03</div>
+        <h4>Čo sú kredity a ako fungujú?</h4>
+        <p>1 € = 1 kredit. Každý mesiac dostanete kredity podľa tarifu. Použijete ich na odkrytie kontaktu (20 kr.), topovanie inzerátu (20 kr.) alebo push na 100 pracovníkov (10 kr.).</p>
       </div>
 
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Čo je Enterprise úroveň a aké sú "hot leads"?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          Enterprise dáva prístup k pracovníkom, ktorí <strong>práve dokončili onboarding</strong> alebo <strong>nastavili novú dostupnosť</strong>. Inými slovami — vidíte ich ako prví, predtým, než sa dostanú do bežnej databázy pre ostatné firmy. Plus API integráciu, SSO, dedikovaného account managera a multi-country setup.
-        </div></div>
+      <div class="hiw-card">
+        <div class="hiw-num">04</div>
+        <h4>Môžem si vyskúšať platenú tarifu zdarma?</h4>
+        <p>Áno. Všetky platené tarify majú 30 dní zdarma bez kreditnej karty. Plný prístup ku všetkým funkciám. Na konci skúšobky účet automaticky prejde na Free.</p>
       </div>
 
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Aký je rozdiel medzi vlastnými a Alogator kontaktmi?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          <strong>Vlastné kontakty</strong> sú ľudia, ktorí už pre vás robili — vy ich importujete do Alogatora a získate ich kalendár dostupnosti. Berie ich prednostne. <strong>Alogator kontakty</strong> sú pracovníci, ktorých zatiaľ nepoznáte — ideálne keď vlastné kapacity nestačia. Otvorenie cudzieho kontaktu je samostatný poplatok.
-        </div></div>
+      <div class="hiw-card">
+        <div class="hiw-num">05</div>
+        <h4>Pre koho je Business+?</h4>
+        <p>Business+ (1 000 €/mes) je pre veľké tímy — 40 inzerátov, 5 seats, 2 000 kreditov, API prístup (HubSpot, SAP), SSO, custom branding a dedikovaný account manager.</p>
       </div>
 
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Môžem si vyskúšať platenú úroveň zdarma?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          Áno. Každá platená úroveň (CRM, Kapacity, Alogator) má 14 dní zdarma bez kreditnej karty. Plný prístup ku všetkým funkciám. Na konci skúšobky vám pošleme upozornenie — buď pokračujete, alebo účet automaticky prejde do read-only módu. Žiadne skryté poplatky.
-        </div></div>
+      <div class="hiw-card">
+        <div class="hiw-num">06</div>
+        <h4>Môžem zmeniť tarifu počas zmluvy?</h4>
+        <p>Áno, kedykoľvek. Upgrade sa aktivuje okamžite, pro rata fakturácia. Downgrade od ďalšieho obdobia. Nie ste viazaní ročnou zmluvou — platíte mesačne.</p>
       </div>
 
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Môžem zmeniť úroveň počas zmluvy?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          Áno, kedykoľvek. Upgrade (napr. z CRM na Kapacity) sa aktivuje okamžite a fakturuje sa pro rata za zostávajúce dni. Downgrade sa aplikuje od ďalšieho fakturačného obdobia.
-        </div></div>
+      <div class="hiw-card">
+        <div class="hiw-num">07</div>
+        <h4>Pracovník platí za používanie Alogatora?</h4>
+        <p>Nie. Aplikácia pre pracovníkov je úplne zdarma — registrácia, profil, vyhľadávanie ponúk, push notifikácie aj kontakt s firmami.</p>
       </div>
 
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Pracovník platí za používanie Alogatora?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          Nie. Aplikácia pre pracovníkov je úplne zdarma — registrácia, profil, vyhľadávanie ponúk, push notifikácie aj kontakt s firmami. Žiadne provízie z výplaty. V budúcnosti pripravujeme voliteľné PREMIUM členstvo s lepšou viditeľnosťou v listingoch.
-        </div></div>
-      </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Sú ceny s DPH alebo bez?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          Všetky ceny v cenníku sú uvádzané <strong>bez DPH</strong>. K cene sa pripočítava 23 % DPH (Slovensko) alebo prislúchajúca sadzba podľa krajiny vašej firmy. Pre firmy v EÚ s platným IČ DPH sa fakturácia robí cez reverse charge.
-        </div></div>
-      </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Existuje zľava pri ročnej fakturácii?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">
-          Áno. Pri ročnej fakturácii vopred dostávate 20 % zľavu — CRM 79 €/mes (namiesto 99 €), Kapacity 159 €/mes (namiesto 199 €), Alogator 399 €/mes (namiesto 499 €). Enterprise sa fakturuje kvartálne a podmienky sa dohadujú individuálne.
-        </div></div>
+      <div class="hiw-card">
+        <div class="hiw-num">08</div>
+        <h4>Sú ceny s DPH alebo bez?</h4>
+        <p>Všetky ceny sú bez DPH. Pripočítava sa 23 % DPH (Slovensko) alebo sadzba podľa krajiny. Pre EÚ firmy s IČ DPH sa fakturuje cez reverse charge.</p>
       </div>
 
     </div>
@@ -863,8 +822,8 @@ em{font-style:italic;color:var(--signal);font-weight:500}
       </div>
     </div>
     <div class="foot-bottom">
-      <div>© 2026 Alogator · Profi Steel Holding · Všetky práva vyhradené</div>
-      <div>Made in Slovakia · alogator.sk</div>
+      <div>© 2026 Alogator · Všetky práva vyhradené</div>
+      <div>www.alogator.com</div>
     </div>
   </div>
 </footer>

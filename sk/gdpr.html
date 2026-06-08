@@ -57,7 +57,13 @@ h1,h2,h3{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.02em;c
 .legal-toc li{margin-bottom:4px}
 .legal-toc a{color:var(--signal);text-decoration:none}
 
-.footer{background:var(--graphite);color:var(--porcelain);padding:32px 0 20px}
+.footer{background:var(--porcelain);padding:16px 32px 32px}
+.footer .container{background:var(--graphite);border-radius:24px;padding:48px 40px 28px;max-width:1280px;color:var(--porcelain)}
+.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}
+.foot-col h5{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.5);margin-bottom:16px}
+.foot-col h5::before{content:'\2022  ';color:var(--signal)}
+.foot-col a{display:block;color:rgba(249,243,237,.7);text-decoration:none;font-size:13.5px;padding:5px 0}
+.foot-col a:hover{color:var(--porcelain)}
 .foot-bottom{display:flex;justify-content:space-between;font-size:12px;color:rgba(249,243,237,.5)}
 @media(max-width:900px){
   .container,.legal-container{padding:0 16px}
@@ -67,7 +73,12 @@ h1,h2,h3{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.02em;c
   .legal-tabs-inner{gap:16px;overflow-x:auto}
   .legal-tab{font-size:13px;white-space:nowrap}
   .foot-top{grid-template-columns:1fr}
-  .foot-bottom{flex-direction:column;gap:8px}
+  .foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}
+.foot-col h5{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.5);margin-bottom:16px}
+.foot-col h5::before{content:'\2022  ';color:var(--signal)}
+.foot-col a{display:block;color:rgba(249,243,237,.7);text-decoration:none;font-size:13.5px;padding:5px 0}
+.foot-col a:hover{color:var(--porcelain)}
+.foot-bottom{flex-direction:column;gap:8px}
 }
 </style>
 <meta name="robots" content="index, follow">
@@ -192,13 +203,39 @@ h1,h2,h3{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.02em;c
 
 <footer class="footer">
   <div class="container">
-    <div class="foot-bottom">
-      <div>© 2026 Alogator · Profi Steel Holding · Všetky práva vyhradené</div>
-      <div>
-        <a href="/sk/vseobecne-obchodne-podmienky" style="color:rgba(249,243,237,.5);text-decoration:none;margin-right:16px">VOP</a>
-        <a href="/sk/gdpr" style="color:rgba(249,243,237,.5);text-decoration:none;margin-right:16px">GDPR</a>
-        <a href="/sk/cookies" style="color:rgba(249,243,237,.5);text-decoration:none">Cookies</a>
+    <div class="foot-top">
+      <div class="foot-col">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+          <div style="width:32px;height:32px;background:var(--signal);border-radius:9px;display:flex;align-items:center;justify-content:center;font-family:'Geist',sans-serif;font-weight:500;font-size:16px;color:var(--porcelain)">A</div>
+          <span style="font-family:'Geist',sans-serif;font-weight:500;font-size:20px;color:var(--porcelain)">Alogator</span>
+        </div>
+        <p style="font-size:13px;color:rgba(249,243,237,.6);line-height:1.5">Marketplace prepájajúci pracovníkov, agentúry a koncové firmy. SK · CZ · DE · AT · NL · BE</p>
       </div>
+      <div class="foot-col">
+        <h5>Pre firmy</h5>
+        <a href="/sk/kontakt">Naplánovať demo</a>
+        <a href="/sk/databaza-pracovnikov">Databáza pracovníkov</a>
+        <a href="/sk/cennik">Cenník</a>
+        <a href="/sk/ako-to-funguje">Ako to funguje</a>
+      </div>
+      <div class="foot-col">
+        <h5>Pre pracovníkov</h5>
+        <a href="/sk/ponuka-prace">Pracovné ponuky</a>
+        <a href="/sk/stiahnut-aplikaciu">Stiahnuť aplikáciu</a>
+        <a href="/sk/ako-to-funguje">Ako to funguje</a>
+        <a href="/sk/pre-pracovnikov">Pre pracovníkov</a>
+      </div>
+      <div class="foot-col">
+        <h5>Spoločnosť</h5>
+        <a href="/sk/o-nas">O nás</a>
+        <a href="/sk/kontakt">Kontakt</a>
+        <a href="/sk/vop">VOP</a>
+        <a href="/sk/gdpr">GDPR</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Alogator · Všetky práva vyhradené</div>
+      <div>www.alogator.com</div>
     </div>
   </div>
 </footer>

@@ -32,14 +32,6 @@ body{
 h1,h2,h3,h4{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.025em;line-height:1.1;color:var(--graphite)}
 em{font-style:italic;color:var(--signal);font-weight:500}
 
-/* Flags */
-.flag{width:18px;height:13px;border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 0 1px rgba(26,29,30,.08)}
-.flag-sk{background:linear-gradient(to bottom,#fff 33%,#0B4EA2 33% 66%,#EE1620 66%)}
-.flag-cz{background:linear-gradient(135deg,#fff 50%,#D7141A 50%);position:relative}
-.flag-cz::before{content:'';position:absolute;left:0;top:0;bottom:0;width:50%;background:#11457E;clip-path:polygon(0 0,100% 50%,0 100%)}
-.flag-de{background:linear-gradient(to bottom,#000 33%,#dd0000 33% 66%,#ffce00 66%)}
-.flag-at{background:linear-gradient(to bottom,#ED2939 50%,#fff 50%)}
-.flag-hu{background:linear-gradient(to bottom,#CD2A3E 33%,#fff 33% 66%,#436F4D 66%)}
 
 /* ============ NAVBAR ============ */
 .navbar{background:var(--graphite);color:var(--porcelain);padding:18px 0}
@@ -71,7 +63,8 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .breadcrumb .sep{margin:0 8px;color:var(--graphite-200)}
 
 /* ============ HEADER ============ */
-.prof-header{padding:32px 0 48px;background:var(--porcelain)}
+.prof-header{padding:16px 32px;background:var(--porcelain)}
+.prof-header .container{background:#fff;border:1.5px solid var(--porcelain-300);border-radius:24px;padding:32px 32px 48px}
 .prof-header-grid{
   display:grid;grid-template-columns:minmax(0,640px) 320px;gap:40px;align-items:flex-start;max-width:1020px;margin:0 auto;
 }
@@ -343,7 +336,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 /* Languages */
 .langs-list{display:flex;flex-direction:column;gap:14px}
 .lang-row{display:flex;align-items:center;gap:14px}
-.lang-flag{width:28px;height:20px;border-radius:3px;flex-shrink:0;box-shadow:0 0 0 1px rgba(26,29,30,.08)}
+/* lang-flag removed — using emoji flags */
 .lang-name{
   font-family:'Geist',sans-serif;font-weight:500;font-size:14px;
   color:var(--graphite);min-width:80px;
@@ -386,52 +379,57 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .similar-sec h2{font-size:clamp(24px,2.5vw,32px);margin-bottom:24px}
 .similar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 
-/* Worker card (reused from homepage) */
-.wcard{
-  background:var(--porcelain);border:1px solid var(--porcelain-300);
-  border-radius:20px;padding:18px;position:relative;cursor:pointer;
-  transition:transform .2s, border-color .2s, box-shadow .2s;
-}
+/* Worker card (canonical from databaza-pracovnikov) */
+.wcard{background:var(--porcelain);border:1px solid var(--porcelain-300);border-radius:20px;padding:18px;position:relative;cursor:pointer;transition:transform .2s,box-shadow .2s,border-color .2s;text-decoration:none;color:inherit;display:block}
 .wcard:hover{transform:translateY(-3px);border-color:var(--graphite-200);box-shadow:0 12px 30px -10px rgba(26,29,30,.12)}
-.wcard-badge-avail{
-  position:absolute;top:14px;right:14px;
-  font-size:9.5px;font-weight:600;padding:3px 8px;border-radius:999px;letter-spacing:0.05em;
-  display:inline-flex;align-items:center;gap:4px;background:var(--graphite);color:var(--porcelain);
-}
-.wcard-badge-avail::before{content:'';width:5px;height:5px;border-radius:50%;background:#7CC95C}
+.wcard-badge-avail{position:absolute;top:14px;right:14px;font-size:9.5px;font-weight:600;padding:3px 8px;border-radius:999px;display:inline-flex;align-items:center;gap:4px}
+.wcard-badge-avail.available{background:var(--graphite);color:var(--porcelain)}
+.wcard-badge-avail.available::before{content:'';width:5px;height:5px;border-radius:50%;background:#7CC95C}
+.wcard-badge-avail.unavailable{background:var(--porcelain-200);color:var(--graphite-500)}
+.wcard-badge-avail.unavailable::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--graphite-500)}
 .wcard-head{display:flex;align-items:flex-start;gap:11px;margin-bottom:10px}
-.wcard-avatar{
-  width:38px;height:38px;border-radius:50%;color:var(--porcelain);
-  display:flex;align-items:center;justify-content:center;flex-shrink:0;
-  font-family:'Geist',sans-serif;font-weight:500;font-size:14px;
-}
+.wcard-avatar-wrap{position:relative;flex-shrink:0;width:38px;height:38px}
+.wcard-avatar{width:38px;height:38px;border-radius:50%;background:var(--graphite);color:var(--porcelain);display:flex;align-items:center;justify-content:center;font-family:'Geist',sans-serif;font-weight:500;font-size:15px;flex-shrink:0}
 .wcard-avatar.a-signal{background:var(--signal)}
-.wcard-avatar.a-graphite{background:var(--graphite-700)}
+.wcard-avatar.a-graphite700{background:var(--graphite-700)}
 .wcard-avatar.a-yellow{background:var(--yellow);color:var(--graphite)}
+.act-dot{position:absolute;bottom:0;right:0;width:13px;height:13px;border-radius:50%;border:2.5px solid #fff}
+.act-dot.green{background:#22c55e}
+.act-dot.yellow{background:#f59e0b}
 .wcard-meta{flex:1;min-width:0}
-.wcard-name-row{display:flex;align-items:center;gap:6px}
-.wcard-origin-flag{width:14px;height:10px;border-radius:1.5px;box-shadow:0 0 0 1px rgba(26,29,30,.08)}
-.wcard-name{
-  font-family:'Geist',sans-serif;font-weight:500;font-size:14px;
-  letter-spacing:-0.01em;color:var(--graphite);
-  display:inline-flex;align-items:center;gap:4px;
-}
-.wcard-name::after{
-  content:'';width:10px;height:12px;
-  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236B7174' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='11' width='18' height='11' rx='2'/><path d='M7 11V7a5 5 0 0110 0v4'/></svg>") no-repeat center;
-  background-size:contain;
-}
-.wcard-prof{font-size:11.5px;color:var(--graphite-500);margin-top:2px}
+.wcard-name-row{display:flex;align-items:center;gap:7px}
+.wcard-emoji-flag{font-size:14px;line-height:1;flex-shrink:0}
+.wcard-name{font-family:'Geist',sans-serif;font-weight:500;font-size:16px;letter-spacing:-0.01em;line-height:1.15;color:var(--graphite)}
+.wcard-name.locked{display:inline-flex;align-items:center;gap:5px}
+.wcard-name.locked::after{content:'';width:11px;height:13px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236B7174' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='11' width='18' height='11' rx='2'/><path d='M7 11V7a5 5 0 0110 0v4'/></svg>") no-repeat center;background-size:contain}
+.wcard-profession{font-family:'Inter',sans-serif;font-size:11.5px;color:var(--graphite-500);margin-top:2px}
 .wcard-rate{display:flex;align-items:baseline;gap:4px;margin:8px 0}
-.wcard-rate-prefix{font-size:11.5px;color:var(--graphite-500)}
+.wcard-rate-prefix{font-family:'Inter',sans-serif;font-size:13px;color:var(--graphite-500);font-weight:400}
 .wcard-rate-prefix::after{content:':';margin-right:2px}
-.wcard-rate-num{font-family:'Geist',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.02em}
-.wcard-rate-unit{font-size:11px;color:var(--graphite-500)}
+.wcard-rate-num{font-family:'Geist',sans-serif;font-weight:500;font-size:26px;letter-spacing:-0.02em;color:var(--graphite)}
+.wcard-rate-unit{font-size:11.5px;color:var(--graphite-500)}
 .wcard-rating{margin-left:auto;font-size:11px;color:var(--graphite-500);display:inline-flex;align-items:center;gap:3px}
 .wcard-rating .star{color:var(--yellow);font-size:13px}
+.wcard-picto{display:flex;gap:8px;align-items:center;flex-wrap:nowrap;padding:10px 0;border-top:1px solid var(--porcelain-300);border-bottom:1px solid var(--porcelain-300);margin-bottom:11px;overflow:hidden}
+.wcard-picto-item{display:inline-flex;align-items:center;gap:5px;font-family:'Inter',sans-serif;font-size:10.5px;color:var(--graphite-700);min-width:0;flex:1}
+.wcard-picto-icon{width:22px;height:22px;border-radius:50%;background:var(--signal-soft);color:var(--signal);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.wcard-picto-icon svg{width:12px;height:12px}
+.wcard-picto-val{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--graphite);font-weight:500;min-width:0}
+.wcard-picto-item.pro .wcard-picto-icon{background:var(--yellow);color:var(--graphite)}
+.wcard-foot{display:flex;justify-content:space-between;align-items:center;padding-top:11px;border-top:1px solid var(--porcelain-300)}
+.wcard-tags{display:flex;gap:5px;flex-wrap:wrap}
+.wcard-tag{background:var(--porcelain-200);border:1px solid var(--porcelain-300);color:var(--graphite-700);font-family:'Inter',sans-serif;font-size:10px;font-weight:500;padding:3px 8px;border-radius:999px}
+.wcard-cta{background:var(--signal);color:var(--porcelain);border:0;padding:7px 16px;border-radius:999px;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;cursor:pointer;transition:background .15s;text-decoration:none}
+.wcard-cta:hover{background:var(--signal-dark)}
+.wcard-progress{margin-top:10px;padding-top:10px;border-top:1px solid var(--porcelain-300)}
+.wcard-progress-bar{height:3px;border-radius:999px;background:var(--porcelain-300);overflow:hidden}
+.wcard-progress-fill{height:100%;border-radius:999px}
+.wcard-progress-label{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;font:400 10px/1 'JetBrains Mono';color:var(--graphite-500);letter-spacing:.02em}
+.wcard-progress-label b{color:var(--graphite-700);font-weight:500}
 
 /* ============ FOOTER ============ */
-.footer{background:var(--graphite);color:var(--porcelain);padding:48px 0 24px}
+.footer{background:var(--porcelain);padding:16px 32px 32px}
+.footer .container{background:var(--graphite);border-radius:24px;padding:48px 40px 28px;max-width:1280px;color:var(--porcelain)}
 .foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}
 .foot-col h5{
   font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;
@@ -446,6 +444,8 @@ em{font-style:italic;color:var(--signal);font-weight:500}
   .prof-main{flex-direction:column;text-align:center;align-items:center}
   .certs-grid{grid-template-columns:1fr}
 }
+section.boxed{padding:16px 32px}
+section.boxed .container{background:#fff;border:1.5px solid var(--porcelain-300);border-radius:24px;padding:32px;max-width:1280px;margin:0 auto}
 </style>
 <meta name="robots" content="noindex, follow">
 <link rel="canonical" href="https://alogator.com/sk/pracovnik/marek-n">
@@ -515,7 +515,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
         </div>
         <div class="prof-info">
           <div class="prof-name-row">
-            <span class="flag flag-sk" title="Slovensko"></span>
+            🇸🇰
             <h1 class="prof-name locked">Marek N.</h1>
           </div>
           <div class="prof-prof"><strong>Elektrikár</strong> · 8 rokov praxe · VDE certifikát</div>
@@ -526,8 +526,8 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           </div>
 
           <div class="prof-meta-row">
-            <div class="prof-meta-item"><span class="flag flag-sk"></span>Slovensko</div>
-            <div class="prof-meta-item">🌐 <strong>DE · EN · HU</strong></div>
+            <div class="prof-meta-item">🇸🇰 Slovensko</div>
+            <div class="prof-meta-item"><strong>DE · EN · HU</strong></div>
           </div>
 
           <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:16px">
@@ -575,9 +575,9 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           <span><strong style="color:var(--porcelain)">Dostupný od 23. 5. 2026</strong></span>
         </div>
 
-        <button class="rate-cta">🔓 Otvoriť kontakt</button>
+        <button class="rate-cta">Otvoriť kontakt</button>
         <button class="rate-cta-secondary">Pridať do CRM</button>
-        <button class="rate-cta-secondary" style="margin-top:8px">⬇ Stiahnuť PDF profil</button>
+        <button class="rate-cta-secondary" style="margin-top:8px">Stiahnuť PDF profil</button>
 
         <div style="background:rgba(249,243,237,.06);border-radius:12px;padding:14px;margin-top:14px;margin-bottom:14px;display:flex;flex-direction:column;gap:8px">
           <div style="display:flex;justify-content:space-between;align-items:center">
@@ -681,7 +681,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
               </div>
               <div class="exp-content">
                 <h4>Elektrikár — priemyselný projekt</h4>
-                <div class="exp-company">Bilfinger Industrial Services · <span class="flag flag-de"></span> Emsland, DE</div>
+                <div class="exp-company">Bilfinger Industrial Services · 🇩🇪 Emsland, DE</div>
                 <p class="exp-desc">Inštalácia a údržba elektroinštalácie v chemickom závode. Práca s VN rozvádzačmi do 6kV, programovanie Siemens PLC, dokumentácia podľa nemeckých noriem.</p>
                 <div class="exp-tags">
                   <span class="exp-tag">VN do 6kV</span>
@@ -699,7 +699,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
               </div>
               <div class="exp-content">
                 <h4>Elektrikár — výrobná hala</h4>
-                <div class="exp-company">ANDRITZ AG · <span class="flag flag-at"></span> Linz, AT</div>
+                <div class="exp-company">ANDRITZ AG · 🇦🇹 Linz, AT</div>
                 <p class="exp-desc">Stavba a oživenie elektrickej časti výrobnej linky na papier. Práca na meraní a regulácii, kabeláž do rozvádzačov, oživenie cez PLC.</p>
                 <div class="exp-tags">
                   <span class="exp-tag">Meranie</span>
@@ -716,7 +716,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
               </div>
               <div class="exp-content">
                 <h4>Elektrikár — energetika</h4>
-                <div class="exp-company">SES Tlmače · <span class="flag flag-sk"></span> Tlmače, SK</div>
+                <div class="exp-company">SES Tlmače · 🇸🇰 Tlmače, SK</div>
                 <p class="exp-desc">Generálna oprava elektrickej časti turbíny v elektrárni. Práca v tíme 4 elektrikárov, koordinácia s mechanikami.</p>
                 <div class="exp-tags">
                   <span class="exp-tag">Energetika</span>
@@ -733,7 +733,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
               </div>
               <div class="exp-content">
                 <h4>Junior elektrikár</h4>
-                <div class="exp-company">Siemens Slovensko · <span class="flag flag-sk"></span> Bratislava, SK</div>
+                <div class="exp-company">Siemens Slovensko · 🇸🇰 Bratislava, SK</div>
                 <p class="exp-desc">Začiatok kariéry. Asistent senior elektrikárov pri inštalácii rozvádzačov, postupné získanie VDE certifikátu.</p>
                 <div class="exp-tags">
                   <span class="exp-tag">Junior</span>
@@ -807,25 +807,25 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           <h2 style="margin-top:8px;font-size:18px;margin-bottom:18px">Jazyková výbava</h2>
           <div class="langs-list">
             <div class="lang-row">
-              <span class="lang-flag flag-hu"></span>
+              🇭🇺
               <span class="lang-name">Maďarsky</span>
               <span class="lang-level">Rodný</span>
               <div class="lang-bar"><div class="lang-bar-fill" style="width:100%"></div></div>
             </div>
             <div class="lang-row">
-              <span class="lang-flag flag-sk"></span>
+              🇸🇰
               <span class="lang-name">Slovensky</span>
               <span class="lang-level">C2</span>
               <div class="lang-bar"><div class="lang-bar-fill" style="width:100%"></div></div>
             </div>
             <div class="lang-row">
-              <span class="lang-flag flag-de"></span>
+              🇩🇪
               <span class="lang-name">Nemecky</span>
               <span class="lang-level">B2</span>
               <div class="lang-bar"><div class="lang-bar-fill" style="width:75%"></div></div>
             </div>
             <div class="lang-row">
-              <span class="lang-flag" style="background:linear-gradient(to bottom,#00247D 33%,#fff 33% 66%,#CF142B 66%)"></span>
+              🇬🇧
               <span class="lang-name">Anglicky</span>
               <span class="lang-level">B1</span>
               <div class="lang-bar"><div class="lang-bar-fill" style="width:55%"></div></div>
@@ -839,7 +839,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           <h2 style="margin-top:8px;font-size:18px;margin-bottom:18px">5 aktívnych</h2>
           <div class="certs-grid" style="grid-template-columns:1fr">
             <div class="cert-item">
-              <div class="cert-icon">⚡</div>
+              <div class="cert-icon"></div>
               <div>
                 <div class="cert-name">VDE 0105-100</div>
                 <div class="cert-issued">VDE Verband · 2022</div>
@@ -847,12 +847,12 @@ em{font-style:italic;color:var(--signal);font-weight:500}
                 <div style="display:flex;gap:8px;margin-top:5px;align-items:center">
                   <span style="background:var(--porcelain-300);color:var(--graphite-500);font-family:'JetBrains Mono',monospace;font-size:9px;padding:2px 7px;border-radius:999px">Certifikát</span>
                   <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--signal-dark)">Platnosť do 2027</span>
-                  <span style="margin-left:auto;font-size:11px;cursor:pointer;color:var(--graphite-500)" title="Stiahnuť prílohu">📎 PDF</span>
+                  <span style="margin-left:auto;font-size:11px;cursor:pointer;color:var(--graphite-500)" title="Stiahnuť prílohu">PDF</span>
                 </div>
               </div>
             </div>
             <div class="cert-item">
-              <div class="cert-icon">🔧</div>
+              <div class="cert-icon"></div>
               <div>
                 <div class="cert-name">§ 22 Vyhláška 508/2009</div>
                 <div class="cert-issued">TI SR · 2021</div>
@@ -860,12 +860,12 @@ em{font-style:italic;color:var(--signal);font-weight:500}
                 <div style="display:flex;gap:8px;margin-top:5px;align-items:center">
                   <span style="background:var(--porcelain-300);color:var(--graphite-500);font-family:'JetBrains Mono',monospace;font-size:9px;padding:2px 7px;border-radius:999px">Certifikát</span>
                   <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--signal-dark)">Platnosť do 2026</span>
-                  <span style="margin-left:auto;font-size:11px;cursor:pointer;color:var(--graphite-500)" title="Stiahnuť prílohu">📎 PDF</span>
+                  <span style="margin-left:auto;font-size:11px;cursor:pointer;color:var(--graphite-500)" title="Stiahnuť prílohu">PDF</span>
                 </div>
               </div>
             </div>
             <div class="cert-item">
-              <div class="cert-icon">🛡️</div>
+              <div class="cert-icon"></div>
               <div>
                 <div class="cert-name">Bezpečnostné školenie BOZP</div>
                 <div class="cert-issued">BOZP · 2024</div>
@@ -873,12 +873,12 @@ em{font-style:italic;color:var(--signal);font-weight:500}
                 <div style="display:flex;gap:8px;margin-top:5px;align-items:center">
                   <span style="background:var(--porcelain-300);color:var(--graphite-500);font-family:'JetBrains Mono',monospace;font-size:9px;padding:2px 7px;border-radius:999px">Školenie</span>
                   <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--signal-dark)">Vyprší 09/2026</span>
-                  <span style="margin-left:auto;font-size:11px;cursor:pointer;color:var(--graphite-500)" title="Stiahnuť prílohu">📎 PDF</span>
+                  <span style="margin-left:auto;font-size:11px;cursor:pointer;color:var(--graphite-500)" title="Stiahnuť prílohu">PDF</span>
                 </div>
               </div>
             </div>
             <div class="cert-item">
-              <div class="cert-icon">🔥</div>
+              <div class="cert-icon"></div>
               <div>
                 <div class="cert-name">Ex zóna 1/21</div>
                 <div class="cert-issued">TÜV Süd · 2023</div>
@@ -886,12 +886,12 @@ em{font-style:italic;color:var(--signal);font-weight:500}
                 <div style="display:flex;gap:8px;margin-top:5px;align-items:center">
                   <span style="background:var(--porcelain-300);color:var(--graphite-500);font-family:'JetBrains Mono',monospace;font-size:9px;padding:2px 7px;border-radius:999px">Certifikát</span>
                   <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--graphite-500)">Platnosť do 2028</span>
-                  <span style="margin-left:auto;font-size:11px;cursor:pointer;color:var(--graphite-500)" title="Stiahnuť prílohu">📎 JPG</span>
+                  <span style="margin-left:auto;font-size:11px;cursor:pointer;color:var(--graphite-500)" title="Stiahnuť prílohu">JPG</span>
                 </div>
               </div>
             </div>
             <div class="cert-item">
-              <div class="cert-icon">🚗</div>
+              <div class="cert-icon"></div>
               <div>
                 <div class="cert-name">Vodičský preukaz skupiny B</div>
                 <div class="cert-issued">Polícia SR · 2010</div>
@@ -899,7 +899,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
                 <div style="display:flex;gap:8px;margin-top:5px;align-items:center">
                   <span style="background:var(--porcelain-300);color:var(--graphite-500);font-family:'JetBrains Mono',monospace;font-size:9px;padding:2px 7px;border-radius:999px">Iné</span>
                   <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--graphite-500)">Platnosť do 2030</span>
-                  <span style="margin-left:auto;font-size:11px;cursor:pointer;color:var(--graphite-500)" title="Stiahnuť prílohu">📎 PDF</span>
+                  <span style="margin-left:auto;font-size:11px;cursor:pointer;color:var(--graphite-500)" title="Stiahnuť prílohu">PDF</span>
                 </div>
               </div>
             </div>
@@ -980,22 +980,24 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 </section>
 
 <!-- SIMILAR WORKERS -->
-<section class="similar-sec">
+<section class="similar-sec boxed">
   <div class="container">
     <span class="eyebrow">• podobní pracovníci</span>
     <h2 style="margin-top:10px">Ďalší elektrikári v databáze</h2>
 
     <div class="similar-grid">
-      <div class="wcard">
-        <div class="wcard-badge-avail">Dostupný od 1.6.</div>
+
+      <!-- Filip P. -->
+      <a href="/sk/pracovnik/marek-n" class="wcard">
+        <div class="wcard-badge-avail available">Dostupný od 1.6.</div>
         <div class="wcard-head">
-          <div class="wcard-avatar a-yellow">F</div>
+          <div class="wcard-avatar-wrap"><div class="wcard-avatar a-yellow">F</div><span class="act-dot green"></span></div>
           <div class="wcard-meta">
             <div class="wcard-name-row">
-              <span class="wcard-origin-flag flag-cz"></span>
-              <span class="wcard-name">Filip P.</span>
+              <span class="wcard-emoji-flag">🇨🇿</span>
+              <div class="wcard-name locked">Filip P.</div>
             </div>
-            <div class="wcard-prof">Elektrikár · meranie · 6 r.</div>
+            <div class="wcard-profession">Elektrikár · meranie · 6 rokov</div>
           </div>
         </div>
         <div class="wcard-rate">
@@ -1004,18 +1006,48 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           <span class="wcard-rate-unit">/ hod</span>
           <span class="wcard-rating"><span class="star">★</span> 5.0 · 24 hodnotení</span>
         </div>
-      </div>
+        <div class="wcard-picto">
+          <div class="wcard-picto-item">
+            <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></span>
+            <span class="wcard-picto-val">CZ · DE</span>
+          </div>
+          <div class="wcard-picto-item">
+            <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></span>
+            <span class="wcard-picto-val">Verified</span>
+          </div>
+          <div class="wcard-picto-item">
+            <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+            <span class="wcard-picto-val">6 rokov</span>
+          </div>
+          <div class="wcard-picto-item pro">
+            <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+            <span class="wcard-picto-val">PRO</span>
+          </div>
+        </div>
+        <div class="wcard-foot">
+          <div class="wcard-tags">
+            <span class="wcard-tag">Meranie</span>
+            <span class="wcard-tag">NN/VN</span>
+          </div>
+          <span class="wcard-cta">Zobraziť profil</span>
+        </div>
+        <div class="wcard-progress">
+          <div class="wcard-progress-label"><span>PROFIL</span><b>88%</b></div>
+          <div class="wcard-progress-bar"><div class="wcard-progress-fill" style="width:88%;background:#22c55e"></div></div>
+        </div>
+      </a>
 
-      <div class="wcard">
-        <div class="wcard-badge-avail">Dostupný od 15.6.</div>
+      <!-- Daniel R. -->
+      <a href="/sk/pracovnik/marek-n" class="wcard">
+        <div class="wcard-badge-avail available">Dostupný od 15.6.</div>
         <div class="wcard-head">
-          <div class="wcard-avatar a-graphite">D</div>
+          <div class="wcard-avatar-wrap"><div class="wcard-avatar a-graphite700">D</div><span class="act-dot green"></span></div>
           <div class="wcard-meta">
             <div class="wcard-name-row">
-              <span class="wcard-origin-flag flag-cz"></span>
-              <span class="wcard-name">Daniel R.</span>
+              <span class="wcard-emoji-flag">🇨🇿</span>
+              <div class="wcard-name locked">Daniel R.</div>
             </div>
-            <div class="wcard-prof">Elektrikár · silnoprúd · 9 r.</div>
+            <div class="wcard-profession">Elektrikár · silnoprúd · 9 rokov</div>
           </div>
         </div>
         <div class="wcard-rate">
@@ -1024,18 +1056,48 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           <span class="wcard-rate-unit">/ hod</span>
           <span class="wcard-rating"><span class="star">★</span> 4.9 · 18 hodnotení</span>
         </div>
-      </div>
+        <div class="wcard-picto">
+          <div class="wcard-picto-item">
+            <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></span>
+            <span class="wcard-picto-val">CZ · DE · +1</span>
+          </div>
+          <div class="wcard-picto-item">
+            <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></span>
+            <span class="wcard-picto-val">Siemens</span>
+          </div>
+          <div class="wcard-picto-item">
+            <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+            <span class="wcard-picto-val">9 rokov</span>
+          </div>
+          <div class="wcard-picto-item pro">
+            <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+            <span class="wcard-picto-val">PRO</span>
+          </div>
+        </div>
+        <div class="wcard-foot">
+          <div class="wcard-tags">
+            <span class="wcard-tag">Silnoprúd</span>
+            <span class="wcard-tag">VDE</span>
+          </div>
+          <span class="wcard-cta">Zobraziť profil</span>
+        </div>
+        <div class="wcard-progress">
+          <div class="wcard-progress-label"><span>PROFIL</span><b>82%</b></div>
+          <div class="wcard-progress-bar"><div class="wcard-progress-fill" style="width:82%;background:#22c55e"></div></div>
+        </div>
+      </a>
 
-      <div class="wcard">
-        <div class="wcard-badge-avail">Dostupný ihneď</div>
+      <!-- Roman K. -->
+      <a href="/sk/pracovnik/marek-n" class="wcard">
+        <div class="wcard-badge-avail available">Dostupný ihneď</div>
         <div class="wcard-head">
-          <div class="wcard-avatar a-signal">R</div>
+          <div class="wcard-avatar-wrap"><div class="wcard-avatar a-signal">R</div><span class="act-dot green"></span></div>
           <div class="wcard-meta">
             <div class="wcard-name-row">
-              <span class="wcard-origin-flag flag-sk"></span>
-              <span class="wcard-name">Roman K.</span>
+              <span class="wcard-emoji-flag">🇸🇰</span>
+              <div class="wcard-name locked">Roman K.</div>
             </div>
-            <div class="wcard-prof">Elektrikár · NN · 11 r.</div>
+            <div class="wcard-profession">Elektrikár · NN · 11 rokov</div>
           </div>
         </div>
         <div class="wcard-rate">
@@ -1044,7 +1106,37 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           <span class="wcard-rate-unit">/ hod</span>
           <span class="wcard-rating"><span class="star">★</span> 4.7 · 15 hodnotení</span>
         </div>
-      </div>
+        <div class="wcard-picto">
+          <div class="wcard-picto-item">
+            <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></span>
+            <span class="wcard-picto-val">SK · DE</span>
+          </div>
+          <div class="wcard-picto-item">
+            <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></span>
+            <span class="wcard-picto-val">Verified</span>
+          </div>
+          <div class="wcard-picto-item">
+            <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+            <span class="wcard-picto-val">11 rokov</span>
+          </div>
+          <div class="wcard-picto-item" style="opacity:0.45">
+            <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+            <span class="wcard-picto-val">Kal. 🔒</span>
+          </div>
+        </div>
+        <div class="wcard-foot">
+          <div class="wcard-tags">
+            <span class="wcard-tag">NN</span>
+            <span class="wcard-tag">Revízie</span>
+          </div>
+          <span class="wcard-cta">Zobraziť profil</span>
+        </div>
+        <div class="wcard-progress">
+          <div class="wcard-progress-label"><span>PROFIL</span><b>67%</b></div>
+          <div class="wcard-progress-bar"><div class="wcard-progress-fill" style="width:67%;background:#f59e0b"></div></div>
+        </div>
+      </a>
+
     </div>
   </div>
 </section>

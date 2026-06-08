@@ -71,7 +71,8 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .breadcrumb .sep{margin:0 8px;color:var(--graphite-200)}
 
 /* ============ HEADER ============ */
-.prof-header{padding:32px 0 48px;background:var(--porcelain)}
+.prof-header{padding:16px 32px;background:var(--porcelain)}
+.prof-header .container{background:#fff;border:1.5px solid var(--porcelain-300);border-radius:24px;padding:32px 32px 48px}
 .prof-header-grid{
   display:grid;grid-template-columns:minmax(0,640px) 320px;gap:40px;align-items:flex-start;max-width:1020px;margin:0 auto;
 }
@@ -431,7 +432,8 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .wcard-rating .star{color:var(--yellow);font-size:13px}
 
 /* ============ FOOTER ============ */
-.footer{background:var(--graphite);color:var(--porcelain);padding:48px 0 24px}
+.footer{background:var(--porcelain);padding:16px 32px 32px}
+.footer .container{background:var(--graphite);border-radius:24px;padding:48px 40px 28px;max-width:1280px;color:var(--porcelain)}
 .foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}
 .foot-col h5{
   font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;
@@ -446,6 +448,8 @@ em{font-style:italic;color:var(--signal);font-weight:500}
   .prof-main{flex-direction:column;text-align:center;align-items:center}
   .certs-grid{grid-template-columns:1fr}
 }
+section.boxed{padding:16px 32px}
+section.boxed .container{background:#fff;border:1.5px solid var(--porcelain-300);border-radius:24px;padding:32px;max-width:1280px;margin:0 auto}
 </style>
 <meta name="robots" content="noindex, follow">
 <link rel="canonical" href="https://alogator.com/cz/pracovnik/marek-n">
@@ -515,7 +519,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
         </div>
         <div class="prof-info">
           <div class="prof-name-row">
-            <span class="flag flag-sk" title="Slovensko"></span>
+            ð¸ð°
             <h1 class="prof-name locked">Marek N.</h1>
           </div>
           <div class="prof-prof"><strong>Elektrikář</strong> · 8 let praxe · VDE certifikát</div>
@@ -526,8 +530,8 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           </div>
 
           <div class="prof-meta-row">
-            <div class="prof-meta-item"><span class="flag flag-sk"></span>Slovensko</div>
-            <div class="prof-meta-item">🌐 <strong>DE · EN · HU</strong></div>
+            <div class="prof-meta-item">ð¸ð°Slovensko</div>
+            <div class="prof-meta-item"><strong>DE · EN · HU</strong></div>
           </div>
 
           <div style="display:flex;flex-wrap:wrap;gap:7px;margin-top:16px">
@@ -575,7 +579,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           <span><strong style="color:var(--porcelain)">Dostupný od 23. 5. 2026</strong></span>
         </div>
 
-        <button class="rate-cta">🔓 Otevřít kontakt</button>
+        <button class="rate-cta">Otevřít kontakt</button>
         <button class="rate-cta-secondary">Přidat do CRM</button>
         <button class="rate-cta-secondary" style="margin-top:8px">⬇ Stáhnout PDF profil</button>
 
@@ -681,7 +685,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
               </div>
               <div class="exp-content">
                 <h4>Elektrikář — průmyslový projekt</h4>
-                <div class="exp-company">Bilfinger Industrial Services · <span class="flag flag-de"></span> Emsland, DE</div>
+                <div class="exp-company">Bilfinger Industrial Services · ð©ðª Emsland, DE</div>
                 <p class="exp-desc">Instalace a údržba elektroinstaláce v chemickém závodě. Práce s VN rozváděči do 6kV, programování Siemens PLC, dokumentace podle německých norem.</p>
                 <div class="exp-tags">
                   <span class="exp-tag">VN do 6kV</span>
@@ -699,7 +703,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
               </div>
               <div class="exp-content">
                 <h4>Elektrikář — výrobní hala</h4>
-                <div class="exp-company">ANDRITZ AG · <span class="flag flag-at"></span> Linz, AT</div>
+                <div class="exp-company">ANDRITZ AG · ð¦ð¹ Linz, AT</div>
                 <p class="exp-desc">Stavba a oživení elektrické části výrobní linky na papír. Práce na měření a regulaci, kabeláž do rozváděčů, oživení přes PLC.</p>
                 <div class="exp-tags">
                   <span class="exp-tag">Měření</span>
@@ -716,7 +720,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
               </div>
               <div class="exp-content">
                 <h4>Elektrikář — energetika</h4>
-                <div class="exp-company">SES Tlmače · <span class="flag flag-sk"></span> Tlmače, SK</div>
+                <div class="exp-company">SES Tlmače · ð¸ð° Tlmače, SK</div>
                 <p class="exp-desc">Generální oprava elektrické části turbíny v elektrárně. Práce v týmu 4 elektrikářů, koordinace s mechaniky.</p>
                 <div class="exp-tags">
                   <span class="exp-tag">Energetika</span>
@@ -733,7 +737,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
               </div>
               <div class="exp-content">
                 <h4>Junior elektrikář</h4>
-                <div class="exp-company">Siemens Slovensko · <span class="flag flag-sk"></span> Bratislava, SK</div>
+                <div class="exp-company">Siemens Slovensko · ð¸ð° Bratislava, SK</div>
                 <p class="exp-desc">Začátek kariéry. Asistent senior elektrikářů při instalaci rozváděčů, postupné získání VDE certifikátu.</p>
                 <div class="exp-tags">
                   <span class="exp-tag">Junior</span>
@@ -807,19 +811,19 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           <h2 style="margin-top:8px;font-size:18px;margin-bottom:18px">Jazyková výbava</h2>
           <div class="langs-list">
             <div class="lang-row">
-              <span class="lang-flag flag-hu"></span>
+              ð­ðº
               <span class="lang-name">Maďarsky</span>
               <span class="lang-level">Rodný</span>
               <div class="lang-bar"><div class="lang-bar-fill" style="width:100%"></div></div>
             </div>
             <div class="lang-row">
-              <span class="lang-flag flag-sk"></span>
+              ð¸ð°
               <span class="lang-name">Slovensky</span>
               <span class="lang-level">C2</span>
               <div class="lang-bar"><div class="lang-bar-fill" style="width:100%"></div></div>
             </div>
             <div class="lang-row">
-              <span class="lang-flag flag-de"></span>
+              ð©ðª
               <span class="lang-name">Německy</span>
               <span class="lang-level">B2</span>
               <div class="lang-bar"><div class="lang-bar-fill" style="width:75%"></div></div>
@@ -839,7 +843,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           <h2 style="margin-top:8px;font-size:18px;margin-bottom:18px">5 aktivních</h2>
           <div class="certs-grid" style="grid-template-columns:1fr">
             <div class="cert-item">
-              <div class="cert-icon">⚡</div>
+              <div class="cert-icon"></div>
               <div>
                 <div class="cert-name">VDE 0105-100</div>
                 <div class="cert-issued">VDE Verband · 2022</div>
@@ -847,12 +851,12 @@ em{font-style:italic;color:var(--signal);font-weight:500}
                 <div style="display:flex;gap:8px;margin-top:5px;align-items:center">
                   <span style="background:var(--porcelain-300);color:var(--graphite-500);font-family:'JetBrains Mono',monospace;font-size:9px;padding:2px 7px;border-radius:999px">Certifikát</span>
                   <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--signal-dark)">Platnost do 2027</span>
-                  <span style="margin-left:auto;font-size:11px;cursor:pointer;color:var(--graphite-500)" title="Stáhnout přílohu">📎 PDF</span>
+                  <span style="margin-left:auto;font-size:11px;cursor:pointer;color:var(--graphite-500)" title="Stáhnout přílohu">PDF</span>
                 </div>
               </div>
             </div>
             <div class="cert-item">
-              <div class="cert-icon">🔧</div>
+              <div class="cert-icon"></div>
               <div>
                 <div class="cert-name">§ 22 Vyhláška 508/2009</div>
                 <div class="cert-issued">TI SR · 2021</div>
@@ -860,12 +864,12 @@ em{font-style:italic;color:var(--signal);font-weight:500}
                 <div style="display:flex;gap:8px;margin-top:5px;align-items:center">
                   <span style="background:var(--porcelain-300);color:var(--graphite-500);font-family:'JetBrains Mono',monospace;font-size:9px;padding:2px 7px;border-radius:999px">Certifikát</span>
                   <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--signal-dark)">Platnost do 2026</span>
-                  <span style="margin-left:auto;font-size:11px;cursor:pointer;color:var(--graphite-500)" title="Stáhnout přílohu">📎 PDF</span>
+                  <span style="margin-left:auto;font-size:11px;cursor:pointer;color:var(--graphite-500)" title="Stáhnout přílohu">PDF</span>
                 </div>
               </div>
             </div>
             <div class="cert-item">
-              <div class="cert-icon">🛡️</div>
+              <div class="cert-icon"></div>
               <div>
                 <div class="cert-name">Bezpečnostní školení BOZP</div>
                 <div class="cert-issued">BOZP · 2024</div>
@@ -873,12 +877,12 @@ em{font-style:italic;color:var(--signal);font-weight:500}
                 <div style="display:flex;gap:8px;margin-top:5px;align-items:center">
                   <span style="background:var(--porcelain-300);color:var(--graphite-500);font-family:'JetBrains Mono',monospace;font-size:9px;padding:2px 7px;border-radius:999px">Školení</span>
                   <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--signal-dark)">Vyprší 09/2026</span>
-                  <span style="margin-left:auto;font-size:11px;cursor:pointer;color:var(--graphite-500)" title="Stáhnout přílohu">📎 PDF</span>
+                  <span style="margin-left:auto;font-size:11px;cursor:pointer;color:var(--graphite-500)" title="Stáhnout přílohu">PDF</span>
                 </div>
               </div>
             </div>
             <div class="cert-item">
-              <div class="cert-icon">🔥</div>
+              <div class="cert-icon"></div>
               <div>
                 <div class="cert-name">Ex zóna 1/21</div>
                 <div class="cert-issued">TÜV Süd · 2023</div>
@@ -886,7 +890,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
                 <div style="display:flex;gap:8px;margin-top:5px;align-items:center">
                   <span style="background:var(--porcelain-300);color:var(--graphite-500);font-family:'JetBrains Mono',monospace;font-size:9px;padding:2px 7px;border-radius:999px">Certifikát</span>
                   <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--graphite-500)">Platnost do 2028</span>
-                  <span style="margin-left:auto;font-size:11px;cursor:pointer;color:var(--graphite-500)" title="Stáhnout přílohu">📎 JPG</span>
+                  <span style="margin-left:auto;font-size:11px;cursor:pointer;color:var(--graphite-500)" title="Stáhnout přílohu">JPG</span>
                 </div>
               </div>
             </div>
@@ -899,7 +903,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
                 <div style="display:flex;gap:8px;margin-top:5px;align-items:center">
                   <span style="background:var(--porcelain-300);color:var(--graphite-500);font-family:'JetBrains Mono',monospace;font-size:9px;padding:2px 7px;border-radius:999px">Jiné</span>
                   <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--graphite-500)">Platnost do 2030</span>
-                  <span style="margin-left:auto;font-size:11px;cursor:pointer;color:var(--graphite-500)" title="Stáhnout přílohu">📎 PDF</span>
+                  <span style="margin-left:auto;font-size:11px;cursor:pointer;color:var(--graphite-500)" title="Stáhnout přílohu">PDF</span>
                 </div>
               </div>
             </div>
@@ -980,7 +984,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 </section>
 
 <!-- SIMILAR WORKERS -->
-<section class="similar-sec">
+<section class="similar-sec boxed">
   <div class="container">
     <span class="eyebrow">• podobní pracovníci</span>
     <h2 style="margin-top:10px">Další elektrikáři v databázi</h2>
@@ -992,7 +996,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           <div class="wcard-avatar a-yellow">F</div>
           <div class="wcard-meta">
             <div class="wcard-name-row">
-              <span class="wcard-origin-flag flag-cz"></span>
+              ð¨ð¿
               <span class="wcard-name">Filip P.</span>
             </div>
             <div class="wcard-prof">Elektrikář · měření · 6 let</div>
@@ -1012,7 +1016,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           <div class="wcard-avatar a-graphite">D</div>
           <div class="wcard-meta">
             <div class="wcard-name-row">
-              <span class="wcard-origin-flag flag-cz"></span>
+              ð¨ð¿
               <span class="wcard-name">Daniel R.</span>
             </div>
             <div class="wcard-prof">Elektrikář · silnoproud · 9 let</div>
@@ -1032,7 +1036,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           <div class="wcard-avatar a-signal">R</div>
           <div class="wcard-meta">
             <div class="wcard-name-row">
-              <span class="wcard-origin-flag flag-sk"></span>
+              ð¸ð°
               <span class="wcard-name">Roman K.</span>
             </div>
             <div class="wcard-prof">Elektrikář · NN · 11 let</div>

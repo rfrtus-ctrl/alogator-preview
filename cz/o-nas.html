@@ -39,7 +39,8 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .hero p.lead{font-size:18px;color:var(--graphite-700);max-width:600px;margin:18px auto 0;line-height:1.6}
 
 /* STATS */
-.stats-sec{padding:48px 0;background:var(--graphite)}
+.stats-sec{padding:16px 32px;background:var(--porcelain)}
+.stats-sec .container{background:var(--graphite);border-radius:24px;padding:48px 40px;max-width:1280px;margin:0 auto}
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
 .stat{text-align:center}
 .stat-num{font-family:'Geist',sans-serif;font-weight:500;font-size:48px;letter-spacing:-0.025em;color:var(--porcelain);line-height:1}
@@ -89,7 +90,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .holding-logo-sub{font-size:13px;color:rgba(249,243,237,.5)}
 
 /* CTA */
-.cta-sec{padding:64px 0;background:var(--porcelain)}
+.cta-sec{padding:16px 32px;background:var(--porcelain)}
 .cta-banner{background:var(--signal);border-radius:32px;padding:56px;text-align:center}
 .cta-banner h2{font-size:clamp(28px,3.5vw,44px);color:var(--porcelain);margin-bottom:14px}
 .cta-banner p{font-size:16px;color:rgba(249,243,237,.85);max-width:520px;margin:0 auto 28px;line-height:1.55}
@@ -98,13 +99,16 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .cta-btn.pri{background:var(--graphite);color:var(--porcelain);border:0}
 .cta-btn.out{background:transparent;color:var(--porcelain);border:2px solid rgba(249,243,237,.4)}
 
-.footer{background:var(--graphite);color:var(--porcelain);padding:48px 0 24px}
+.footer{background:var(--porcelain);padding:16px 32px 32px}
+.footer .container{background:var(--graphite);border-radius:24px;padding:48px 40px 28px;max-width:1280px;color:var(--porcelain)}
 .foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}
 .foot-col h5{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.5);margin-bottom:16px}
 .foot-col h5::before{content:'• ';color:var(--signal)}
 .foot-col a{display:block;color:rgba(249,243,237,.7);text-decoration:none;font-size:13.5px;padding:5px 0}
 .foot-col a:hover{color:var(--signal)}
 .foot-bottom{padding-top:24px;display:flex;justify-content:space-between;font-size:12px;color:rgba(249,243,237,.5)}
+section.boxed{padding:16px 32px}
+section.boxed .container{background:#fff;border:1.5px solid var(--porcelain-300);border-radius:24px;padding:32px;max-width:1280px;margin:0 auto}
 @media(max-width:900px){.stats-grid,.mission-grid,.values-grid,.team-grid,.holding-inner,.foot-top{grid-template-columns:1fr;gap:24px}h1{font-size:32px!important}h2{font-size:24px!important}}
 </style>
 <meta name="robots" content="index, follow">
@@ -150,7 +154,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 <section class="hero">
   <div class="container">
     <span class="eyebrow">o nás</span>
-    <h1>Stavíme most mezi <em>řemeslníky</em> a Evropou.</h1>
+    <h1>Stavíme most mezi odborníky,<br>agenturami a realizátory v rámci <em>celé Evropy.</em></h1>
     <p class="lead">Alogator vznikl z jednoduchého pozorování: tisíce skvělých řemeslníků ze Slovenska a Česka nevědí, jak se dostat k dobrým zakázkám v Německu a Rakousku — a firmy nevědí, jak je najít.</p>
   </div>
 </section>
@@ -158,21 +162,21 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 <section class="stats-sec">
   <div class="container">
     <div class="stats-grid">
-      <div class="stat"><div class="stat-num">3 <em>047</em></div><div class="stat-lbl">ověřených pracovníků v databázi</div></div>
+      <div class="stat"><div class="stat-num"><em>4000 +</em></div><div class="stat-lbl">pracovníků v databázi</div></div>
       <div class="stat"><div class="stat-num"><em>642</em></div><div class="stat-lbl">firem a agentur na platformě</div></div>
-      <div class="stat"><div class="stat-num">6</div><div class="stat-lbl">zemí — SK · CZ · DE · AT · NL · BE</div></div>
+      <div class="stat"><div class="stat-num">16</div><div class="stat-lbl">zemí v celé Evropě</div></div>
       <div class="stat"><div class="stat-num"><em>2026</em></div><div class="stat-lbl">rok spuštění · Made in Slovakia</div></div>
     </div>
   </div>
 </section>
 
-<section class="mission-sec">
+<section class="mission-sec boxed">
   <div class="container">
     <div class="mission-grid">
       <div class="mission-text">
         <span class="eyebrow">mise</span>
         <h2>Proč jsme <em>Alogator</em> postavili</h2>
-        <p>Slovenský a český řemeslný trh má <strong>obrovský nevyužitý potenciál</strong>. Kvalifikovaní svářeči, elektrikáři, montéři a zedníci zůstávají bez zakázek — ne proto, že by nebyli dobří, ale proto, že chybí infrastruktura, která by je propojila s projekty v DE, AT, NL, BE.</p>
+        <p>Alogator pomáhá firmám zrychlit a zefektivnit nábor v technických profesích. Jsme digitální platforma, která automatizuje proces náboru a řízení vašich kapacit, kde máte přímý přístup k odborníkům bez složitého administrativního procesu.</p>
         <p>Na druhé straně firmy v Německu a Rakousku <strong>zoufale hledají kvalifikované lidi</strong> na průmyslové projekty. Agentury sice existují, ale trh je nepřehledný — firmy nevědí, koho kontaktovat, jaká je reálná dostupnost, jaké jsou sazby.</p>
         <p>Alogator to <strong>řeší přímočaře</strong>: jeden marketplace, kde se setkává nabídka a poptávka. Pracovníci, agentury i koncové firmy — každý si najde to, co potřebuje. Transparentně.</p>
       </div>
@@ -190,38 +194,38 @@ em{font-style:italic;color:var(--signal);font-weight:500}
   </div>
 </section>
 
-<section class="values-sec">
+<section class="values-sec boxed">
   <div class="container">
     <span class="eyebrow" style="display:block;text-align:center;margin-bottom:10px">• hodnoty</span>
     <h2>Čím se <em>řídíme</em></h2>
     <div class="values-grid">
       <div class="value-card">
-        <div class="value-icon">🔍</div>
+        <div class="value-icon"></div>
         <h3>Transparentnost</h3>
         <p>Sazby jsou viditelné. Hodnocení jsou reálná. Firma ví, co kupuje, pracovník ví, co dostane. Žádné skryté poplatky, žádná překvapení.</p>
       </div>
       <div class="value-card">
-        <div class="value-icon">⚡</div>
+        <div class="value-icon"></div>
         <h3>Rychlost</h3>
         <p>Trh stavebnictví nečeká. Když firma potřebuje 5 svářečů na projekt za 2 týdny, nemůže čekat dny na odpověď agentury. Real-time kalendář to řeší.</p>
       </div>
       <div class="value-card">
-        <div class="value-icon">🤝</div>
+        <div class="value-icon"></div>
         <h3>Férovost</h3>
-        <p>Pracovník dostává reálnou sazbu, firma platí za přístup (ne za provizi z výplaty pracovníka). Obě strany vyhrávají. Tak má marketplace fungovat.</p>
+        <p>Pracovník dostává reálnou sazbu, firma platí za přístup k databázi. Obě strany vyhrávají. Tak má marketplace fungovat.</p>
       </div>
       <div class="value-card">
-        <div class="value-icon">🌍</div>
+        <div class="value-icon"></div>
         <h3>Evropský dosah</h3>
         <p>SK a CZ pracovníci mají přístup k zakázkám v celé EU. Firmy v DE, AT, NL, BE mají přístup k ověřenému týmu ze střední Evropy.</p>
       </div>
       <div class="value-card">
-        <div class="value-icon">🏗️</div>
+        <div class="value-icon"></div>
         <h3>Znalost odvětví</h3>
         <p>Nestaví to lidé, co nikdy neviděli svářeče. Za Alogátorem stojí Profi Steel Holding — roky zkušeností v průmyslových projektech v EU.</p>
       </div>
       <div class="value-card">
-        <div class="value-icon">📱</div>
+        <div class="value-icon"></div>
         <h3>Mobile-first</h3>
         <p>Řemeslník nečte e-maily na notebooku. Celá platforma je postavená pro mobil — pracovník nastaví dostupnost v aplikaci, firma dostane notifikaci.</p>
       </div>
@@ -229,7 +233,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
   </div>
 </section>
 
-<section class="team-sec">
+<section class="team-sec boxed">
   <div class="container">
     <span class="eyebrow" style="display:block;text-align:center;margin-bottom:10px">• tým</span>
     <h2>Lidé za <em>Alogátorem</em></h2>
@@ -238,36 +242,19 @@ em{font-style:italic;color:var(--signal);font-weight:500}
         <div class="team-avatar" style="background:var(--signal)">R</div>
         <h4>Rado Frtus</h4>
         <div class="role">Founder & CEO</div>
-        <p>Vizionář projektu. Zná trh průmyslových pracovníků z perspektivy Profi Steel Holding — roky zkušeností v dodávkách do DE/AT.</p>
+        <p>Tvůrce a držitel myšlenky. Reálné zkušenosti v odvětví.</p>
       </div>
       <div class="team-card">
         <div class="team-avatar" style="background:var(--graphite-700)">M</div>
         <h4>Michal Mocko</h4>
         <div class="role">CMO / CRO</div>
-        <p>Zodpovědný za marketing a konverze. Staví kampaňové landing pages, řídí uLab paid kampaně a růstový funnel.</p>
+        <p>Zodpovědný za marketing.</p>
       </div>
       <div class="team-card">
         <div class="team-avatar" style="background:var(--yellow);color:var(--graphite)">T</div>
         <h4>Tibor / Wisdom Factory</h4>
         <div class="role">Tech Lead</div>
-        <p>Staví Laravel API, mobilní aplikaci (iOS/Android) a webovou aplikaci. Základ technologické infrastruktury Alogátora.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="holding-sec">
-  <div class="container">
-    <div class="holding-inner">
-      <div class="holding-text">
-        <span class="eyebrow" style="color:rgba(249,243,237,.6)">• za námi stojí</span>
-        <h2>Profi Steel Holding</h2>
-        <p>Alogator není startup budovaný lidmi bez kontextu. Stojí za ním <strong>Profi Steel Holding</strong> — společnost s roky zkušeností v dodávkách průmyslových a stavebních pracovníků do DE, AT, NL, BE.</p>
-        <p>Tato průmyslová znalost je konkurenční výhoda, kterou čistě technologický startup nemůže zkopírovat. Víme, co firma v Německu potřebuje, protože jsme sami tou firmou byli.</p>
-      </div>
-      <div class="holding-logo">
-        <div class="holding-logo-name">Profi Steel Holding</div>
-        <div class="holding-logo-sub">Průmyslová a stavební řešení pro EU trh</div>
+        <p>Funkčnost a stabilitu aplikace.</p>
       </div>
     </div>
   </div>

@@ -26,8 +26,11 @@
 .summary-widget{background:var(--porcelain-200);border-radius:18px;padding:24px}.summary-row{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid var(--porcelain-300)}.summary-row:first-child{padding-top:0}.summary-row:last-child{border-bottom:0;padding-bottom:0}.summary-icon{width:32px;height:32px;border-radius:9px;background:var(--signal-soft);color:var(--signal);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px}.summary-content{flex:1;min-width:0}.summary-label{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--graphite-500);margin-bottom:2px}.summary-val{font-family:'Geist',sans-serif;font-weight:500;font-size:14px;color:var(--graphite);letter-spacing:-0.01em}.summary-sub{font-size:11.5px;color:var(--graphite-500);margin-top:2px}
 .similar-sec{padding:64px 0;background:var(--porcelain-200)}.similar-sec h2{font-size:clamp(24px,2.5vw,32px);margin-bottom:24px}.similar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .jcard{background:var(--porcelain);border:1px solid var(--porcelain-300);border-radius:20px;padding:20px;display:flex;flex-direction:column;gap:12px;cursor:pointer;transition:transform .2s,border-color .2s}.jcard:hover{transform:translateY(-3px);border-color:var(--graphite-200)}.jcard-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}.jcard-meta{flex:1;min-width:0}.jcard-loc{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--graphite-500);letter-spacing:0.05em;display:inline-flex;align-items:center;gap:6px;margin-bottom:6px}.jcard-title{font-family:'Geist',sans-serif;font-weight:500;font-size:16px;letter-spacing:-0.015em;color:var(--graphite);line-height:1.2}.jcard-company{font-size:12px;color:var(--graphite-500);margin-top:3px}.jcard-rate{display:flex;align-items:baseline;gap:4px;margin-top:8px;padding-top:12px;border-top:1px solid var(--porcelain-300)}.jcard-rate-num{font-family:'Geist',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.02em}.jcard-rate-unit{font-size:11px;color:var(--graphite-500)}.jcard-tags{display:flex;gap:5px;flex-wrap:wrap}.jcard-tag{background:var(--porcelain-200);color:var(--graphite-700);font-size:10.5px;padding:3px 9px;border-radius:999px}
-.footer{background:var(--graphite);color:var(--porcelain);padding:48px 0 24px}.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}.foot-col h5{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.5);margin-bottom:16px}.foot-col h5::before{content:'• ';color:var(--signal)}.foot-col a{display:block;color:rgba(249,243,237,.7);text-decoration:none;font-size:13.5px;padding:5px 0}.foot-bottom{padding-top:24px;display:flex;justify-content:space-between;font-size:12px;color:rgba(249,243,237,.5)}
+.footer{background:var(--porcelain);padding:16px 32px 32px}
+.footer .container{background:var(--graphite);border-radius:24px;padding:48px 40px 28px;max-width:1280px;color:var(--porcelain)}.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}.foot-col h5{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(249,243,237,.5);margin-bottom:16px}.foot-col h5::before{content:'• ';color:var(--signal)}.foot-col a{display:block;color:rgba(249,243,237,.7);text-decoration:none;font-size:13.5px;padding:5px 0}.foot-bottom{padding-top:24px;display:flex;justify-content:space-between;font-size:12px;color:rgba(249,243,237,.5)}
 @media (max-width:900px){.job-header-grid,.job-content-grid,.similar-grid,.foot-top{grid-template-columns:1fr;gap:24px}.job-main{flex-direction:column;text-align:center;align-items:center}}
+section.boxed{padding:16px 32px}
+section.boxed .container{background:#fff;border:1.5px solid var(--porcelain-300);border-radius:24px;padding:32px;max-width:1280px;margin:0 auto}
 </style>
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://alogator.com/cz/nabidka-prace/elektrikar">
@@ -81,9 +84,9 @@
             <h1 class="job-title">Práce pro profesi <em>elektrikář</em> v Česku</h1>
             <div style="color:var(--graphite-700);font-size:15px;line-height:1.5;margin-bottom:14px">Nabídky pro elektrikáře — průmysl i domovní instalace, v Česku i v zahraničí. Vytvořte si profil a firmy vás osloví.</div>
             <div class="job-meta-row">
-              <div class="job-meta-item">📋 <strong>52 nabídek</strong></div>
-              <div class="job-meta-item">💰 <strong>od 15 €/hod</strong></div>
-              <div class="job-meta-item"><span class="flag flag-de"></span><span class="flag flag-at"></span><span class="flag flag-nl"></span><span class="flag flag-cz"></span> <strong>DE · AT · NL · CZ</strong></div>
+              <div class="job-meta-item"><strong>52 nabídek</strong></div>
+              <div class="job-meta-item"><strong>od 15 €/hod</strong></div>
+              <div class="job-meta-item">ð©ðªð¦ð¹ð³ð±ð¨ð¿ <strong>DE · AT · NL · CZ</strong></div>
             </div>
           </div>
         </div>
@@ -132,34 +135,34 @@
           <h2 style="margin-top:8px">Nabídky pro <em>elektrikáře</em></h2>
           <div class="similar-grid" style="grid-template-columns:repeat(2,1fr)">
             <div class="jcard" onclick="location.href='/app'">
-              <div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc"><span class="flag flag-nl"></span> Rotterdam · Nizozemsko</div><div class="jcard-title">Elektrikář NN/VN · průmysl</div><div class="jcard-company">🔒 Firma · NL</div></div><span class="urgency-badge hot">Hot</span></div>
+              <div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc">ð³ð± Rotterdam · Nizozemsko</div><div class="jcard-title">Elektrikář NN/VN · průmysl</div><div class="jcard-company">🔒 Firma · NL</div></div><span class="urgency-badge hot">Hot</span></div>
               <div class="jcard-rate"><span class="jcard-rate-num">28 €</span><span class="jcard-rate-unit">/ hod + bonusy</span></div>
-              <div class="jcard-tags"><span class="jcard-tag">NN/VN</span><span class="jcard-tag">NEN</span><span class="jcard-tag">Ubytování</span></div>
+              <div class="jcard-tags"><span class="jcard-tag">NN/VN</span><span class="jcard-tag">NEN</span><span class="jcard-tag">Ubytování</span><span class="jcard-tag">Petrochemie</span><span class="jcard-tag">OSVČ</span><span class="jcard-tag">EN</span></div>
             </div>
             <div class="jcard" onclick="location.href='/app'">
-              <div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc"><span class="flag flag-de"></span> Mnichov · Německo</div><div class="jcard-title">Elektrikář · průmysl</div><div class="jcard-company">🔒 Firma · DE</div></div><span class="urgency-badge new">Nová</span></div>
+              <div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc">ð©ðª Mnichov · Německo</div><div class="jcard-title">Elektrikář · průmysl</div><div class="jcard-company">🔒 Firma · DE</div></div><span class="urgency-badge new">Nová</span></div>
               <div class="jcard-rate"><span class="jcard-rate-num">30 €</span><span class="jcard-rate-unit">/ hod</span></div>
-              <div class="jcard-tags"><span class="jcard-tag">VDE</span><span class="jcard-tag">Rozvaděče</span><span class="jcard-tag">40 h/tý</span></div>
+              <div class="jcard-tags"><span class="jcard-tag">VDE</span><span class="jcard-tag">Rozvaděče</span><span class="jcard-tag">40 h/tý</span><span class="jcard-tag">Energetika</span><span class="jcard-tag">Ubyt.: Placene</span><span class="jcard-tag">HPP</span><span class="jcard-tag">DE</span></div>
             </div>
             <div class="jcard" onclick="location.href='/app'">
-              <div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc"><span class="flag flag-at"></span> Linz · Rakousko</div><div class="jcard-title">Elektrikář MaR · automatizace</div><div class="jcard-company">🔒 Firma · AT</div></div></div>
+              <div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc">ð¦ð¹ Linz · Rakousko</div><div class="jcard-title">Elektrikář MaR · automatizace</div><div class="jcard-company">🔒 Firma · AT</div></div></div>
               <div class="jcard-rate"><span class="jcard-rate-num">29 €</span><span class="jcard-rate-unit">/ hod</span></div>
-              <div class="jcard-tags"><span class="jcard-tag">MaR</span><span class="jcard-tag">Měření</span><span class="jcard-tag">38 h/tý</span></div>
+              <div class="jcard-tags"><span class="jcard-tag">MaR</span><span class="jcard-tag">Měření</span><span class="jcard-tag">38 h/tý</span><span class="jcard-tag">Petrochemie</span><span class="jcard-tag">Ubyt.: V ceně</span><span class="jcard-tag">OSVČ</span><span class="jcard-tag">EN/DE</span></div>
             </div>
             <div class="jcard" onclick="location.href='/app'">
-              <div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc"><span class="flag flag-cz"></span> Brno · Česko</div><div class="jcard-title">Elektrikář · domovní instalace</div><div class="jcard-company">🔒 Firma · CZ</div></div></div>
+              <div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc">ð¨ð¿ Brno · Česko</div><div class="jcard-title">Elektrikář · domovní instalace</div><div class="jcard-company">🔒 Firma · CZ</div></div></div>
               <div class="jcard-rate"><span class="jcard-rate-num">17 €</span><span class="jcard-rate-unit">/ hod</span></div>
-              <div class="jcard-tags"><span class="jcard-tag">§6</span><span class="jcard-tag">Instalace</span><span class="jcard-tag">CZ</span></div>
+              <div class="jcard-tags"><span class="jcard-tag">§6</span><span class="jcard-tag">Instalace</span><span class="jcard-tag">CZ</span><span class="jcard-tag">Stavebnictví</span><span class="jcard-tag">40h/tyd</span><span class="jcard-tag">HPP</span></div>
             </div>
             <div class="jcard" onclick="location.href='/app'">
-              <div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc"><span class="flag flag-de"></span> Stuttgart · Německo</div><div class="jcard-title">Elektromontér · kabeláž</div><div class="jcard-company">🔒 Firma · DE</div></div><span class="urgency-badge hot">Hot</span></div>
+              <div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc">ð©ðª Stuttgart · Německo</div><div class="jcard-title">Elektromontér · kabeláž</div><div class="jcard-company">🔒 Firma · DE</div></div><span class="urgency-badge hot">Hot</span></div>
               <div class="jcard-rate"><span class="jcard-rate-num">27 €</span><span class="jcard-rate-unit">/ hod</span></div>
-              <div class="jcard-tags"><span class="jcard-tag">Kabeláž</span><span class="jcard-tag">Montáž</span><span class="jcard-tag">45 h/tý</span></div>
+              <div class="jcard-tags"><span class="jcard-tag">Kabeláž</span><span class="jcard-tag">Montáž</span><span class="jcard-tag">45 h/tý</span><span class="jcard-tag">Energetika</span><span class="jcard-tag">Ubyt.: Placene</span><span class="jcard-tag">OSVČ / HPP</span></div>
             </div>
             <div class="jcard" onclick="location.href='/app'">
-              <div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc"><span class="flag flag-at"></span> Vídeň · Rakousko</div><div class="jcard-title">Revizní technik</div><div class="jcard-company">🔒 Firma · AT</div></div><span class="urgency-badge new">Nová</span></div>
+              <div class="jcard-head"><div class="jcard-meta"><div class="jcard-loc">ð¦ð¹ Vídeň · Rakousko</div><div class="jcard-title">Revizní technik</div><div class="jcard-company">🔒 Firma · AT</div></div><span class="urgency-badge new">Nová</span></div>
               <div class="jcard-rate"><span class="jcard-rate-num">31 €</span><span class="jcard-rate-unit">/ hod</span></div>
-              <div class="jcard-tags"><span class="jcard-tag">§8</span><span class="jcard-tag">Revize</span><span class="jcard-tag">VN</span></div>
+              <div class="jcard-tags"><span class="jcard-tag">§8</span><span class="jcard-tag">Revize</span><span class="jcard-tag">VN</span><span class="jcard-tag">Energetika</span><span class="jcard-tag">50h/tyd</span><span class="jcard-tag">OSVČ</span><span class="jcard-tag">Fakt.: 30/30</span></div>
             </div>
           </div>
           <div style="margin-top:24px;text-align:center">
@@ -170,16 +173,23 @@
         <div class="sec-card">
           <span class="label">Časté otázky</span>
           <h2 style="margin-top:8px">Časté otázky <em>elektrikářů</em></h2>
-          <div class="desc-text">
-            <h3>Jaké oprávnění potřebuje elektrikář pro práci v zahraničí?</h3>
-            <p>V Česku se elektrotechnická způsobilost řídí <strong>vyhláškou č. 50/1978 Sb.</strong> (nejčastěji §6 nebo §7) a nověji zákonem <strong>250/2021 Sb.</strong> Firmy v Německu pracují podle norem <strong>VDE</strong>, v Nizozemsku podle <strong>NEN</strong> — ty poznáte v praxi rychle a často vás s nimi zaučí přímo zaměstnavatel. Některé projekty žádají i platnou lékařskou prohlídku a základní angličtinu nebo němčinu.</p>
-
-            <h3>Jaký je rozdíl mezi průmyslovým a domovním elektrikářem?</h3>
-            <p>Průmyslový elektrikář pracuje na halách, v energetice a na velkých stavbách — montuje rozvaděče, tahá silovou kabeláž a oživuje stroje, často i na <strong>vysokém napětí (VN)</strong>. Domovní elektrikář řeší instalace v bytech a rodinných domech — zásuvky, světla, hromosvody, převážně na <strong>nízkém napětí (NN)</strong>. Průmyslové nabídky bývají lépe placené, ale vyžadují více praxe a vyšší stupeň oprávnění.</p>
-
-            <h3>Dá se práce elektrikáře dělat na OSVČ?</h3>
-            <p>Ano. Velká část nabídek je na <strong>OSVČ (živnost)</strong> — fakturujete přímo a sami si platíte odvody. Mnohé firmy v zahraničí nabízejí i <strong>HPP</strong> přes místní společnost. Na Alogator u každé nabídky vidíte, zda jde o OSVČ nebo zaměstnanecký poměr, takže si vyberete to, co vám sedí.</p>
-          </div>
+          <div class="hiw-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">01</div>
+    <h4 style="font-size:13px">Jaké oprávnění potřebuje elektrikář pro práci v zahraničí?</h4>
+    <p style="font-size:12px">V Česku se elektrotechnická způsobilost řídí vyhláškou č. 50/1978 Sb. (nejčastěji §6 nebo §7) a nověji zákonem 250/2021 Sb. Firmy v Německu pracují podle norem VDE, v Nizozemsku podle NEN — ty poznáte v praxi rychle a často vás s nimi zaučí přímo zaměstnavatel. Některé projekty žádají i platnou lékařskou prohlídku a základní angličtinu nebo němčinu.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">02</div>
+    <h4 style="font-size:13px">Jaký je rozdíl mezi průmyslovým a domovním elektrikářem?</h4>
+    <p style="font-size:12px">Průmyslový elektrikář pracuje na halách, v energetice a na velkých stavbách — montuje rozvaděče, tahá silovou kabeláž a oživuje stroje, často i na vysokém napětí (VN). Domovní elektrikář řeší instalace v bytech a rodinných domech — zásuvky, světla, hromosvody, převážně na nízkém napětí (NN). Průmyslové nabídky bývají lépe placené, ale vyžadují více praxe a vyšší stupeň oprávnění.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">03</div>
+    <h4 style="font-size:13px">Dá se práce elektrikáře dělat na OSVČ?</h4>
+    <p style="font-size:12px">Ano. Velká část nabídek je na OSVČ (živnost) — fakturujete přímo a sami si platíte odvody. Mnohé firmy v zahraničí nabízejí i HPP přes místní společnost. Na Alogator u každé nabídky vidíte, zda jde o OSVČ nebo zaměstnanecký poměr, takže si vyberete to, co vám sedí.</p>
+  </div>
+</div>
         </div>
 
         <div class="sec-card">
@@ -210,11 +220,11 @@
           <span class="label">Stručně</span>
           <h2 style="margin-top:8px;font-size:18px;margin-bottom:16px">Elektrikář v 5 bodech</h2>
           <div class="summary-widget" style="background:transparent;padding:0">
-            <div class="summary-row"><span class="summary-icon">💰</span><div class="summary-content"><div class="summary-label">Sazby</div><div class="summary-val">CZ 15–19 €/hod</div><div class="summary-sub">Zahraničí 24–32 €/hod</div></div></div>
-            <div class="summary-row"><span class="summary-icon">📜</span><div class="summary-content"><div class="summary-label">Oprávnění</div><div class="summary-val">§6 / §7 vyhl. 50</div><div class="summary-sub">VDE/NEN v zahraničí</div></div></div>
-            <div class="summary-row"><span class="summary-icon">🏭</span><div class="summary-content"><div class="summary-label">Zaměření</div><div class="summary-val">Průmysl i domovní</div><div class="summary-sub">Silnoproud/slaboproud, rozvaděče, revize</div></div></div>
-            <div class="summary-row"><span class="summary-icon">🌍</span><div class="summary-content"><div class="summary-label">Země</div><div class="summary-val">DE · AT · NL · CZ</div><div class="summary-sub">Vybíráte si, kde chcete pracovat</div></div></div>
-            <div class="summary-row"><span class="summary-icon">📅</span><div class="summary-content"><div class="summary-label">Profil</div><div class="summary-val">Zdarma</div><div class="summary-sub">Kalendář dostupnosti → firmy osloví</div></div></div>
+            <div class="summary-row"><span class="summary-icon"></span><div class="summary-content"><div class="summary-label">Sazby</div><div class="summary-val">CZ 15–19 €/hod</div><div class="summary-sub">Zahraničí 24–32 €/hod</div></div></div>
+            <div class="summary-row"><span class="summary-icon"></span><div class="summary-content"><div class="summary-label">Oprávnění</div><div class="summary-val">§6 / §7 vyhl. 50</div><div class="summary-sub">VDE/NEN v zahraničí</div></div></div>
+            <div class="summary-row"><span class="summary-icon"></span><div class="summary-content"><div class="summary-label">Zaměření</div><div class="summary-val">Průmysl i domovní</div><div class="summary-sub">Silnoproud/slaboproud, rozvaděče, revize</div></div></div>
+            <div class="summary-row"><span class="summary-icon"></span><div class="summary-content"><div class="summary-label">Země</div><div class="summary-val">DE · AT · NL · CZ</div><div class="summary-sub">Vybíráte si, kde chcete pracovat</div></div></div>
+            <div class="summary-row"><span class="summary-icon"></span><div class="summary-content"><div class="summary-label">Profil</div><div class="summary-val">Zdarma</div><div class="summary-sub">Kalendář dostupnosti → firmy osloví</div></div></div>
           </div>
           <button class="rate-cta" style="margin-top:18px" onclick="location.href='/app'">Vytvořit profil zdarma</button>
         </div>
@@ -223,7 +233,7 @@
   </div>
 </section>
 
-<section class="similar-sec">
+<section class="similar-sec boxed">
   <div class="container">
     <span class="eyebrow">související profese</span>
     <h2 style="margin-top:10px">Hledáte jinou profesi?</h2>

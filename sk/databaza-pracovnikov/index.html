@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Databáza pracovníkov — 3 047 overených remeselníkov · Alogator</title>
-<meta name="description" content="Databáza 3 047 overených stavbárov a remeselníkov. Zvárači, elektrikári, montéri, potrubári. Dostupnosť v reálnom čase. Filtrujte podľa profesie, krajiny, jazyka.">
+<title>Databáza pracovníkov — 4 000 + overených remeselníkov · Alogator</title>
+<meta name="description" content="Databáza 4 000 + overených stavbárov a remeselníkov. Zvárači, elektrikári, montéri, potrubári. Dostupnosť v reálnom čase. Filtrujte podľa profesie, krajiny, jazyka.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -144,7 +144,7 @@ body {
 }
 .search-label {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 9.5px; font-weight: 500;
+  font-size: 16px; font-weight: 500;
   letter-spacing: 0.15em; text-transform: uppercase;
   color: var(--signal); margin-bottom: 8px;
   display: flex; align-items: center; gap: 6px;
@@ -238,164 +238,59 @@ body {
 }
 
 /* WORKER GRID */
-.worker-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-bottom: 32px;
-}
-
-/* WORKER CARD */
-.worker-card {
-  background: #fff;
-  border: 1px solid var(--porcelain-300);
-  border-radius: 20px;
-  padding: 20px;
-  cursor: pointer;
-  transition: all 0.15s;
-  position: relative;
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-.worker-card:hover {
-  border-color: var(--graphite-200);
-  box-shadow: 0 4px 16px rgba(26,29,30,0.08);
-  transform: translateY(-1px);
-}
-.card-top {
-  display: flex; align-items: flex-start;
-  justify-content: space-between; margin-bottom: 14px;
-}
-.card-avatar-wrap { display: flex; align-items: center; gap: 12px; }
-.card-avatar {
-  width: 44px; height: 44px; border-radius: 12px;
-  background: var(--graphite); color: var(--porcelain);
-  display: grid; place-items: center;
-  font: 600 18px 'Geist'; flex-shrink: 0;
-  position: relative;
-}
-.card-avatar.blur-avatar { filter: blur(6px); user-select: none; }
-.card-avatar-flag {
-  position: absolute; bottom: -4px; right: -4px;
-  width: 18px; height: 13px; border-radius: 3px;
-  font-size: 12px; line-height: 1; border: 1.5px solid #fff;
-}
-.card-name {
-  font: 600 15px 'Geist'; letter-spacing: -0.01em;
-  color: var(--graphite);
-}
-.card-name.blurred {
-  filter: blur(4px); user-select: none;
-  background: var(--graphite-200); border-radius: 4px;
-  color: transparent; min-width: 80px;
-}
-.card-profession {
-  font: 400 12.5px 'Inter'; color: var(--graphite-500);
-  margin-top: 1px;
-}
-.card-badges { display: flex; gap: 5px; align-items: center; }
-.badge-pro {
-  background: var(--yellow); color: var(--graphite);
-  font: 700 9px 'JetBrains Mono'; letter-spacing: 0.08em;
-  padding: 2px 7px; border-radius: var(--r-pill);
-}
-.badge-free {
-  background: var(--porcelain-200); color: var(--graphite-500);
-  font: 700 9px 'JetBrains Mono'; letter-spacing: 0.08em;
-  padding: 2px 7px; border-radius: var(--r-pill);
-}
-.badge-avail {
-  font: 500 11px 'Inter'; color: var(--green);
-  background: var(--green-soft);
-  padding: 2px 8px; border-radius: var(--r-pill);
-}
-.badge-avail.soon {
-  color: var(--signal); background: var(--signal-soft);
-}
-
-/* RATE */
-.card-rate {
-  display: flex; align-items: baseline; gap: 4px;
-  margin-bottom: 12px;
-}
-.card-rate-num {
-  font: 500 26px 'Geist'; letter-spacing: -0.025em;
-  color: var(--graphite);
-}
-.card-rate-unit {
-  font: 400 12px 'Inter'; color: var(--graphite-500);
-}
-.card-rate-prefix {
-  font: 400 12px 'Inter'; color: var(--graphite-500);
-}
-
-/* CARD PICTOGRAMS */
-.card-picts {
-  display: flex; gap: 8px; flex-wrap: wrap;
-  margin-bottom: 14px;
-}
-.card-pict {
-  display: flex; align-items: center; gap: 5px;
-  font: 400 11.5px 'Inter'; color: var(--graphite-500);
-  background: var(--porcelain-200);
-  padding: 4px 9px; border-radius: var(--r-pill);
-}
-.card-pict svg { flex-shrink: 0; }
-
-/* LOCK OVERLAY */
-.card-lock-row {
-  display: flex; align-items: center; justify-content: space-between;
-  padding-top: 12px; border-top: 1px solid var(--porcelain-300);
-}
-.lock-info {
-  display: flex; align-items: center; gap: 6px;
-  font: 400 11.5px 'Inter'; color: var(--graphite-500);
-}
-.lock-icon { font-size: 13px; }
-.card-cta {
-  background: var(--signal); color: var(--porcelain);
-  border: 0; padding: 7px 15px; border-radius: var(--r-pill);
-  font: 500 12px 'Geist'; cursor: pointer;
-  text-decoration: none; transition: background 0.15s;
-}
-.card-cta:hover { background: var(--signal-dark); }
-.card-cta.locked {
-  background: var(--porcelain-200); color: var(--graphite-500);
-  border: 1px solid var(--graphite-200);
-}
-
-/* ALOGATOR REGISTERED ICON */
-.card-alogator-icon {
-  position: absolute; top: -3px; left: -3px;
-  width: 14px; height: 14px;
-  background: var(--signal); border: 2px solid #fff;
-  border-radius: 4px;
-  display: flex; align-items: center; justify-content: center;
-}
-.card-alogator-icon svg { display: block; }
-
-/* SKILL TAGS */
-.card-skill-tags {
-  display: flex; gap: 5px; flex-wrap: wrap;
-  margin-bottom: 12px;
-}
-.card-skill-tag {
-  background: var(--signal-soft); color: var(--signal-dark);
-  font: 500 10px 'JetBrains Mono'; letter-spacing: 0.03em;
-  padding: 2px 8px; border-radius: var(--r-pill);
-}
-
-/* LOCKED CARD OVERLAY */
-.worker-card.locked-card {
-  position: relative; overflow: hidden;
-}
-.locked-card::after {
-  content: '';
-  position: absolute; inset: 0;
-  background: linear-gradient(to bottom, transparent 40%, rgba(249,243,237,0.85) 100%);
-  border-radius: 20px; pointer-events: none;
-}
+.worker-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
+.wcard{background:var(--porcelain);border:1px solid var(--porcelain-300);border-radius:20px;padding:18px;position:relative;cursor:pointer;transition:transform .2s,box-shadow .2s,border-color .2s;text-decoration:none;color:inherit;display:block}
+.wcard:hover{transform:translateY(-3px);border-color:var(--graphite-200);box-shadow:0 12px 30px -10px rgba(26,29,30,.12)}
+.wcard-badge-avail{position:absolute;top:14px;right:14px;font-size:9.5px;font-weight:600;padding:3px 8px;border-radius:999px;display:inline-flex;align-items:center;gap:4px}
+.wcard-badge-avail.available{background:var(--graphite);color:var(--porcelain)}
+.wcard-badge-avail.available::before{content:'';width:5px;height:5px;border-radius:50%;background:#7CC95C}
+.wcard-badge-avail.unavailable{background:var(--porcelain-200);color:var(--graphite-500)}
+.wcard-badge-avail.unavailable::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--graphite-500)}
+.wcard-head{display:flex;align-items:flex-start;gap:11px;margin-bottom:10px}
+.wcard-avatar-wrap{position:relative;flex-shrink:0;width:38px;height:38px}
+.wcard-avatar{width:38px;height:38px;border-radius:50%;background:var(--graphite);color:var(--porcelain);display:flex;align-items:center;justify-content:center;font-family:'Geist',sans-serif;font-weight:500;font-size:15px;flex-shrink:0}
+.wcard-avatar.a-signal{background:var(--signal)}
+.wcard-avatar.a-graphite700{background:var(--graphite-700)}
+.wcard-avatar.a-yellow{background:var(--yellow);color:var(--graphite)}
+.wcard-avatar.blur-avatar{filter:blur(6px);user-select:none}
+.act-dot{position:absolute;bottom:0;right:0;width:13px;height:13px;border-radius:50%;border:2.5px solid #fff}
+.act-dot.green{background:#22c55e}
+.act-dot.yellow{background:#f59e0b}
+.wcard-meta{flex:1;min-width:0}
+.wcard-name-row{display:flex;align-items:center;gap:7px}
+.wcard-emoji-flag{font-size:14px;line-height:1;flex-shrink:0}
+.wcard-name{font-family:'Geist',sans-serif;font-weight:500;font-size:16px;letter-spacing:-0.01em;line-height:1.15;color:var(--graphite)}
+.wcard-name.locked{display:inline-flex;align-items:center;gap:5px}
+.wcard-name.locked::after{content:'';width:11px;height:13px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236B7174' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='11' width='18' height='11' rx='2'/><path d='M7 11V7a5 5 0 0110 0v4'/></svg>") no-repeat center;background-size:contain}
+.wcard-name.blurred{filter:blur(4px);user-select:none;background:var(--graphite-200);border-radius:4px;color:transparent;min-width:80px}
+.wcard-profession{font-family:'Inter',sans-serif;font-size:11.5px;color:var(--graphite-500);margin-top:2px}
+.wcard-rate{display:flex;align-items:baseline;gap:4px;margin:8px 0}
+.wcard-rate-prefix{font-family:'Inter',sans-serif;font-size:13px;color:var(--graphite-500);font-weight:400}
+.wcard-rate-prefix::after{content:':';margin-right:2px}
+.wcard-rate-num{font-family:'Geist',sans-serif;font-weight:500;font-size:26px;letter-spacing:-0.02em;color:var(--graphite)}
+.wcard-rate-unit{font-size:11.5px;color:var(--graphite-500)}
+.wcard-rating{margin-left:auto;font-size:11px;color:var(--graphite-500);display:inline-flex;align-items:center;gap:3px}
+.wcard-rating .star{color:var(--yellow);font-size:13px}
+.wcard-picto{display:flex;gap:8px;align-items:center;flex-wrap:nowrap;padding:10px 0;border-top:1px solid var(--porcelain-300);border-bottom:1px solid var(--porcelain-300);margin-bottom:11px;overflow:hidden}
+.wcard-picto-item{display:inline-flex;align-items:center;gap:5px;font-family:'Inter',sans-serif;font-size:10.5px;color:var(--graphite-700);min-width:0;flex:1}
+.wcard-picto-icon{width:22px;height:22px;border-radius:50%;background:var(--signal-soft);color:var(--signal);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.wcard-picto-icon svg{width:12px;height:12px}
+.wcard-picto-val{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--graphite);font-weight:500;min-width:0}
+.wcard-picto-item.pro .wcard-picto-icon{background:var(--yellow);color:var(--graphite)}
+.wcard-foot{display:flex;justify-content:space-between;align-items:center;padding-top:11px;border-top:1px solid var(--porcelain-300)}
+.wcard-tags{display:flex;gap:5px;flex-wrap:wrap}
+.wcard-tag{background:var(--porcelain-200);border:1px solid var(--porcelain-300);color:var(--graphite-700);font-family:'Inter',sans-serif;font-size:10px;font-weight:500;padding:3px 8px;border-radius:999px}
+.wcard-cta{background:var(--signal);color:var(--porcelain);border:0;padding:7px 16px;border-radius:999px;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;cursor:pointer;transition:background .15s;text-decoration:none}
+.wcard-cta:hover{background:var(--signal-dark)}
+.wcard-cta.locked{background:var(--graphite)}
+.wcard-cta.locked:hover{background:#000}
+.wcard-progress{margin-top:10px;padding-top:10px;border-top:1px solid var(--porcelain-300)}
+.wcard-progress-bar{height:3px;border-radius:999px;background:var(--porcelain-300);overflow:hidden}
+.wcard-progress-fill{height:100%;border-radius:999px}
+.wcard-progress-label{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;font:400 10px/1 'JetBrains Mono';color:var(--graphite-500);letter-spacing:.02em}
+.wcard-progress-label b{color:var(--graphite-700);font-weight:500}
+.wcard.locked-card{position:relative;overflow:hidden}
+.wcard.locked-card::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(249,243,237,0.85) 100%);border-radius:20px;pointer-events:none}
 
 /* UPSELL CARD */
 .upsell-card {
@@ -433,8 +328,12 @@ body {
 
 /* FOOTER */
 .footer {
-  background: var(--graphite); color: var(--porcelain);
-  padding: 48px 0 24px;
+  background: var(--porcelain);
+  padding: 16px 32px 32px;
+}
+.footer .container {
+  background: var(--graphite); border-radius: 24px;
+  padding: 48px 40px 28px; max-width: 1280px; color: var(--porcelain);
 }
 .foot-grid {
   display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -481,12 +380,12 @@ body {
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Alogator">
 <meta property="og:locale" content="sk_SK">
-<meta property="og:title" content="Databáza pracovníkov — 3 047 overených remeselníkov · Alogator">
-<meta property="og:description" content="Databáza 3 047 overených stavbárov a remeselníkov. Zvárači, elektrikári, montéri, potrubári. Dostupnosť v reálnom čase. Filtrujte podľa profesie, krajiny, jazyka.">
+<meta property="og:title" content="Databáza pracovníkov — 4 000 + overených remeselníkov · Alogator">
+<meta property="og:description" content="Databáza 4 000 + overených stavbárov a remeselníkov. Zvárači, elektrikári, montéri, potrubári. Dostupnosť v reálnom čase. Filtrujte podľa profesie, krajiny, jazyka.">
 <meta property="og:url" content="https://alogator.com/sk/databaza-pracovnikov">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Databáza pracovníkov — 3 047 overených remeselníkov · Alogator">
-<meta name="twitter:description" content="Databáza 3 047 overených stavbárov a remeselníkov. Zvárači, elektrikári, montéri, potrubári. Dostupnosť v reálnom čase. Filtrujte podľa profesie, krajiny, jazyka.">
+<meta name="twitter:title" content="Databáza pracovníkov — 4 000 + overených remeselníkov · Alogator">
+<meta name="twitter:description" content="Databáza 4 000 + overených stavbárov a remeselníkov. Zvárači, elektrikári, montéri, potrubári. Dostupnosť v reálnom čase. Filtrujte podľa profesie, krajiny, jazyka.">
 <!-- alg-schema -->
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Domov", "item": "https://alogator.com/sk"}, {"@type": "ListItem", "position": 2, "name": "Databáza pracovníkov", "item": "https://alogator.com/sk/databaza-pracovnikov"}]}</script>
 <!-- /alg-schema -->
@@ -519,23 +418,23 @@ body {
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <div class="eyebrow">Databáza pracovníkov</div>
-    <h1>3 047 pracovníkov<br>po <em>celej EÚ</em></h1>
-    <p class="hero-sub">Stavbárske remeslá overené v reálnom čase. Filtrujte podľa profesie, lokality, praxe, jazyka alebo certifikátu.</p>
+    <div class="eyebrow" data-c="databaza.eyebrow">Databáza pracovníkov</div>
+    <h1 data-c="databaza.h1">4 000 + pracovníkov<br>po <em>celej EÚ</em></h1>
+    <p class="hero-sub" data-c="databaza.sub">Stavbárske remeslá overené v reálnom čase. Filtrujte podľa profesie, lokality, praxe, jazyka alebo certifikátu.</p>
     <div class="hero-stats">
       <div class="hero-stat">
-        <strong>3 047</strong>
-        PRACOVNÍKOV
+        <strong data-c="databaza.stat1_num">4 000 +</strong>
+        <span data-c="databaza.stat1_label">PRACOVNÍKOV</span>
       </div>
       <div class="hero-stat-divider"></div>
       <div class="hero-stat">
-        <strong>380</strong>
-        AGENTÚR
+        <strong data-c="databaza.stat2_num">380</strong>
+        <span data-c="databaza.stat2_label">AGENTÚR</span>
       </div>
       <div class="hero-stat-divider"></div>
       <div class="hero-stat">
-        <strong>284</strong>
-        DOSTUPNÝCH IHNEĎ
+        <strong data-c="databaza.stat3_num">284</strong>
+        <span data-c="databaza.stat3_label">DOSTUPNÝCH IHNEĎ</span>
       </div>
       <div class="hero-stat-divider"></div>
       <span class="live-badge">
@@ -551,16 +450,16 @@ body {
   <div class="container">
     <div class="search-box">
       <div class="search-label">
-        <span>✦</span> AI vyhľadávanie · opíšte koho hľadáte
+        <span></span> <span data-c="databaza.search_label">AI vyhľadávanie · opíšte koho hľadáte</span>
       </div>
       <div class="search-input-row">
-        <input class="search-input" type="text" placeholder="Napríklad: Hľadám zvárača MIG/MAG do Bavorska, dostupný od júna, hovorí nemecky, vlastné auto...">
+        <input class="search-input" type="text" data-c-placeholder="databaza.search_placeholder" placeholder="Napríklad: Hľadám zvárača MIG/MAG do Bavorska, dostupný od júna, hovorí nemecky, vlastné auto...">
         <button class="search-btn">→</button>
       </div>
       <div class="search-chips">
-        <span class="search-chip">⚡ Elektrikár · Nemecko</span>
-        <span class="search-chip">⚡ Tím 5 montérov · DE/AT</span>
-        <span class="search-chip">⚡ Zvárač · NUC certifikát</span>
+        <span class="search-chip">Elektrikár · Nemecko</span>
+        <span class="search-chip">Tím 5 montérov · DE/AT</span>
+        <span class="search-chip">Zvárač · NUC certifikát</span>
       </div>
     </div>
 
@@ -569,15 +468,15 @@ body {
       <!-- PROFESIA -->
       <div class="filter-row">
         <span class="filter-row-label">Profesia</span>
-        <button class="fchip active">Všetci <span class="fcnt">3 047</span></button>
-        <button class="fchip">🔥 Zvárač <span class="fcnt">297</span></button>
-        <button class="fchip">⚡ Elektrikár <span class="fcnt">142</span></button>
-        <button class="fchip">🔧 Montér <span class="fcnt">186</span></button>
-        <button class="fchip">🔩 Potrubár <span class="fcnt">98</span></button>
+        <button class="fchip active">Všetci <span class="fcnt">4 000 +</span></button>
+        <button class="fchip">Zvárač <span class="fcnt">297</span></button>
+        <button class="fchip">Elektrikár <span class="fcnt">142</span></button>
+        <button class="fchip">Montér <span class="fcnt">186</span></button>
+        <button class="fchip">Potrubár <span class="fcnt">98</span></button>
         <button class="fchip">🔗 Zámočník <span class="fcnt">74</span></button>
-        <button class="fchip">🧱 Murár <span class="fcnt">62</span></button>
-        <button class="fchip">🪵 Tesár <span class="fcnt">48</span></button>
-        <button class="fchip">🚜 Bagrista <span class="fcnt">38</span></button>
+        <button class="fchip">Murár <span class="fcnt">62</span></button>
+        <button class="fchip">Tesár <span class="fcnt">48</span></button>
+        <button class="fchip">Bagrista <span class="fcnt">38</span></button>
       </div>
 
       <!-- KRAJINA -->
@@ -607,7 +506,7 @@ body {
 
     <!-- FILTER META -->
     <div class="filter-meta">
-      <span><strong>284</strong> z 3 047 · zoradiť</span>
+      <span><strong>284</strong> z 4 000 + · zoradiť</span>
       <span style="display:flex;align-items:center;gap:12px">
         <span class="filter-reset">Resetovať filtre</span>
         <select class="filter-sort">
@@ -625,253 +524,220 @@ body {
 <div class="container">
   <div class="worker-grid">
 
-    <!-- KARTA 1 — Marek N. — odomknutá (PRO, dostupný) -->
-    <a href="/sk/pracovnik/marek-n" class="worker-card">
-      <div class="card-top">
-        <div class="card-avatar-wrap">
-          <div class="card-avatar" style="background:#2A6496;">
-            M
-            <span class="card-avatar-flag">🇸🇰</span>
-            <span class="card-alogator-icon"><svg width="8" height="8" viewBox="0 0 10 10" fill="white"><polygon points="5,0 9.33,2.5 9.33,7.5 5,10 0.67,7.5 0.67,2.5"/></svg></span>
+    <!-- KARTA 1 — Marek N. — odomknutá, dostupný -->
+    <a href="/sk/pracovnik/marek-n" class="wcard">
+      <div class="wcard-badge-avail available">Dostupný od 23.5.</div>
+      <div class="wcard-head">
+        <div class="wcard-avatar-wrap"><div class="wcard-avatar a-signal">M</div><span class="act-dot green"></span></div>
+        <div class="wcard-meta">
+          <div class="wcard-name-row">
+            <span class="wcard-emoji-flag">🇸🇰</span>
+            <div class="wcard-name locked">Marek N.</div>
           </div>
-          <div>
-            <div class="card-name">Marek N.</div>
-            <div class="card-profession">Elektrikár · úroveň ●●●●○</div>
-          </div>
-        </div>
-        <div class="card-badges">
-          <span class="badge-pro">PRO</span>
-          <span class="badge-avail">Dostupný od 23.5.</span>
+          <div class="wcard-profession">Elektrikár · 8 rokov praxe</div>
         </div>
       </div>
-      <div class="card-rate">
-        <span class="card-rate-prefix">od:</span>
-        <span class="card-rate-num">30 €</span>
-        <span class="card-rate-unit">/ hod</span>
+      <div class="wcard-rate">
+        <span class="wcard-rate-prefix">od</span>
+        <span class="wcard-rate-num">30 €</span>
+        <span class="wcard-rate-unit">/ hod</span>
+        <span class="wcard-rating"><span class="star">★</span> 5.0 · 12 hodnotení</span>
       </div>
-      <div class="card-picts">
-        <span class="card-pict">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          Nemčina · Angličtina
-        </span>
-        <span class="card-pict">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-          Bilfinger · DE
-        </span>
-        <span class="card-pict">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-          3 cert.
-        </span>
-        <span class="card-pict">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          od 23.5.2026
-        </span>
-      </div>
-      <div class="card-skill-tags">
-        <span class="card-skill-tag">MNS</span>
-        <span class="card-skill-tag">NN/VN</span>
-        <span class="card-skill-tag">Revízie</span>
-      </div>
-      <div class="card-lock-row">
-        <div class="lock-info">
-          <span>★ 5.0</span>
-          <span style="color:var(--graphite-200)">·</span>
-          <span>12 hodnotení</span>
+      <div class="wcard-picto">
+        <div class="wcard-picto-item">
+          <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></span>
+          <span class="wcard-picto-val">DE · EN</span>
         </div>
-        <span class="card-cta">Zobraziť profil</span>
+        <div class="wcard-picto-item">
+          <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></span>
+          <span class="wcard-picto-val">Bilfinger</span>
+        </div>
+        <div class="wcard-picto-item">
+          <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+          <span class="wcard-picto-val">8 rokov</span>
+        </div>
+        <div class="wcard-picto-item pro">
+          <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+          <span class="wcard-picto-val">PRO</span>
+        </div>
+      </div>
+      <div class="wcard-foot">
+        <div class="wcard-tags">
+          <span class="wcard-tag">MNS</span>
+          <span class="wcard-tag">NN/VN</span>
+          <span class="wcard-tag">Revízie</span>
+        </div>
+        <span class="wcard-cta">Zobraziť profil</span>
+      </div>
+      <div class="wcard-progress">
+        <div class="wcard-progress-label"><span>PROFIL</span><b>92%</b></div>
+        <div class="wcard-progress-bar"><div class="wcard-progress-fill" style="width:92%;background:#22c55e"></div></div>
       </div>
     </a>
 
-    <!-- KARTA 2 — Daniel R. — odomknutá (PRO, dostupný od) -->
-    <a href="/sk/pracovnik/marek-n" class="worker-card">
-      <div class="card-top">
-        <div class="card-avatar-wrap">
-          <div class="card-avatar" style="background:#1A1D1E;">
-            D
-            <span class="card-avatar-flag">🇨🇿</span>
-            <span class="card-alogator-icon"><svg width="8" height="8" viewBox="0 0 10 10" fill="white"><polygon points="5,0 9.33,2.5 9.33,7.5 5,10 0.67,7.5 0.67,2.5"/></svg></span>
+    <!-- KARTA 2 — Daniel R. -->
+    <a href="/sk/pracovnik/marek-n" class="wcard">
+      <div class="wcard-badge-avail available">Dostupný od 15.6.</div>
+      <div class="wcard-head">
+        <div class="wcard-avatar-wrap"><div class="wcard-avatar a-graphite700">D</div><span class="act-dot green"></span></div>
+        <div class="wcard-meta">
+          <div class="wcard-name-row">
+            <span class="wcard-emoji-flag">🇨🇿</span>
+            <div class="wcard-name locked">Daniel R.</div>
           </div>
-          <div>
-            <div class="card-name">Daniel R.</div>
-            <div class="card-profession">Zvárač MIG/MAG · úroveň ●●●●●</div>
-          </div>
-        </div>
-        <div class="card-badges">
-          <span class="badge-pro">PRO</span>
-          <span class="badge-avail soon">Od 15.6.</span>
+          <div class="wcard-profession">Zvárač MIG/MAG · TIG · 12 rokov</div>
         </div>
       </div>
-      <div class="card-rate">
-        <span class="card-rate-prefix">od:</span>
-        <span class="card-rate-num">28 €</span>
-        <span class="card-rate-unit">/ hod</span>
+      <div class="wcard-rate">
+        <span class="wcard-rate-prefix">od</span>
+        <span class="wcard-rate-num">28 €</span>
+        <span class="wcard-rate-unit">/ hod</span>
+        <span class="wcard-rating"><span class="star">★</span> 4.9 · 18 hodnotení</span>
       </div>
-      <div class="card-picts">
-        <span class="card-pict">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          Čeština · Nemčina · +1
-        </span>
-        <span class="card-pict">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-          Siemens · DE
-        </span>
-        <span class="card-pict">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-          5 cert.
-        </span>
-        <span class="card-pict">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          od 15.6.2026
-        </span>
-      </div>
-      <div class="card-skill-tags">
-        <span class="card-skill-tag">MIG/MAG</span>
-        <span class="card-skill-tag">TIG 141</span>
-        <span class="card-skill-tag">WPS certif.</span>
-      </div>
-      <div class="card-lock-row">
-        <div class="lock-info">
-          <span>★ 4.9</span>
-          <span style="color:var(--graphite-200)">·</span>
-          <span>18 hodnotení</span>
+      <div class="wcard-picto">
+        <div class="wcard-picto-item">
+          <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></span>
+          <span class="wcard-picto-val">CZ · DE · +1</span>
         </div>
-        <span class="card-cta">Zobraziť profil</span>
+        <div class="wcard-picto-item">
+          <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></span>
+          <span class="wcard-picto-val">Siemens · +3</span>
+        </div>
+        <div class="wcard-picto-item">
+          <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+          <span class="wcard-picto-val">12 rokov</span>
+        </div>
+        <div class="wcard-picto-item pro">
+          <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+          <span class="wcard-picto-val">PRO</span>
+        </div>
+      </div>
+      <div class="wcard-foot">
+        <div class="wcard-tags">
+          <span class="wcard-tag">MIG/MAG</span>
+          <span class="wcard-tag">TIG 141</span>
+          <span class="wcard-tag">WPS certif.</span>
+        </div>
+        <span class="wcard-cta">Zobraziť profil</span>
+      </div>
+      <div class="wcard-progress">
+        <div class="wcard-progress-label"><span>PROFIL</span><b>85%</b></div>
+        <div class="wcard-progress-bar"><div class="wcard-progress-fill" style="width:85%;background:#22c55e"></div></div>
       </div>
     </a>
 
-    <!-- KARTA 3 — Jakub H. — odomknutá (Free, dostupný) -->
-    <a href="/sk/pracovnik/marek-n" class="worker-card">
-      <div class="card-top">
-        <div class="card-avatar-wrap">
-          <div class="card-avatar" style="background:#E66748;">
-            J
-            <span class="card-avatar-flag">🇨🇿</span>
+    <!-- KARTA 3 — Jakub H. -->
+    <a href="/sk/pracovnik/marek-n" class="wcard">
+      <div class="wcard-badge-avail available">Dostupný ihneď</div>
+      <div class="wcard-head">
+        <div class="wcard-avatar-wrap"><div class="wcard-avatar a-signal">J</div><span class="act-dot green"></span></div>
+        <div class="wcard-meta">
+          <div class="wcard-name-row">
+            <span class="wcard-emoji-flag">🇨🇿</span>
+            <div class="wcard-name locked">Jakub H.</div>
           </div>
-          <div>
-            <div class="card-name">Jakub H.</div>
-            <div class="card-profession">Bagrista · Montér · úroveň ●●●○○</div>
-          </div>
-        </div>
-        <div class="card-badges">
-          <span class="badge-free">Free</span>
-          <span class="badge-avail">Dostupný ihneď</span>
+          <div class="wcard-profession">Bagrista · Montér · 5 rokov</div>
         </div>
       </div>
-      <div class="card-rate">
-        <span class="card-rate-prefix">od:</span>
-        <span class="card-rate-num">26 €</span>
-        <span class="card-rate-unit">/ hod</span>
+      <div class="wcard-rate">
+        <span class="wcard-rate-prefix">od</span>
+        <span class="wcard-rate-num">26 €</span>
+        <span class="wcard-rate-unit">/ hod</span>
+        <span class="wcard-rating"><span class="star">★</span> 4.7 · 8 hodnotení</span>
       </div>
-      <div class="card-picts">
-        <span class="card-pict">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          Poľština · Angličtina · +2
-        </span>
-        <span class="card-pict">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-          Strabag · AT
-        </span>
-        <span class="card-pict">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-          1 cert.
-        </span>
-        <span class="card-pict" style="opacity:0.45">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          Kal. 🔒
-        </span>
-      </div>
-      <div class="card-skill-tags">
-        <span class="card-skill-tag">Excavator</span>
-        <span class="card-skill-tag">IPAF</span>
-      </div>
-      <div class="card-lock-row">
-        <div class="lock-info">
-          <span>★ 4.7</span>
-          <span style="color:var(--graphite-200)">·</span>
-          <span>8 hodnotení</span>
+      <div class="wcard-picto">
+        <div class="wcard-picto-item">
+          <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></span>
+          <span class="wcard-picto-val">PL · EN</span>
         </div>
-        <span class="card-cta">Zobraziť profil</span>
+        <div class="wcard-picto-item">
+          <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></span>
+          <span class="wcard-picto-val">Strabag · AT</span>
+        </div>
+        <div class="wcard-picto-item">
+          <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+          <span class="wcard-picto-val">5 rokov</span>
+        </div>
+        <div class="wcard-picto-item" style="opacity:0.45">
+          <span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+          <span class="wcard-picto-val">Kal. 🔒</span>
+        </div>
+      </div>
+      <div class="wcard-foot">
+        <div class="wcard-tags">
+          <span class="wcard-tag">Excavator</span>
+          <span class="wcard-tag">IPAF</span>
+        </div>
+        <span class="wcard-cta">Zobraziť profil</span>
+      </div>
+      <div class="wcard-progress">
+        <div class="wcard-progress-label"><span>PROFIL</span><b>44%</b></div>
+        <div class="wcard-progress-bar"><div class="wcard-progress-fill" style="width:44%;background:#f59e0b"></div></div>
       </div>
     </a>
 
-    <!-- KARTA 4 — Locked (anonymná) -->
-    <div class="worker-card locked-card">
-      <div class="card-top">
-        <div class="card-avatar-wrap">
-          <div class="card-avatar blur-avatar" style="background:#6B7174;">
-            F
-            <span class="card-avatar-flag">🇸🇰</span>
+    <!-- KARTA 4 — Locked -->
+    <div class="wcard locked-card">
+      <div class="wcard-badge-avail available">Dostupný ihneď</div>
+      <div class="wcard-head">
+        <div class="wcard-avatar-wrap"><div class="wcard-avatar blur-avatar" style="background:#6B7174;">F</div></div>
+        <div class="wcard-meta">
+          <div class="wcard-name-row">
+            <span class="wcard-emoji-flag">🇸🇰</span>
+            <div class="wcard-name blurred">Filip P.</div>
           </div>
-          <div>
-            <div class="card-name blurred">Filip P.</div>
-            <div class="card-profession">Elektrikár · meranie · 6 rokov</div>
-          </div>
-        </div>
-        <div class="card-badges">
-          <span class="badge-pro">PRO</span>
-          <span class="badge-avail">Dostupný ihneď</span>
+          <div class="wcard-profession">Elektrikár · meranie · 6 rokov</div>
         </div>
       </div>
-      <div class="card-rate">
-        <span class="card-rate-prefix">od:</span>
-        <span class="card-rate-num">32 €</span>
-        <span class="card-rate-unit">/ hod</span>
+      <div class="wcard-rate">
+        <span class="wcard-rate-prefix">od</span>
+        <span class="wcard-rate-num">32 €</span>
+        <span class="wcard-rate-unit">/ hod</span>
       </div>
-      <div class="card-picts">
-        <span class="card-pict">CZ · DE</span>
-        <span class="card-pict">6 rokov</span>
-        <span class="card-pict" style="opacity:0.5">Kal. 🔒</span>
+      <div class="wcard-picto">
+        <div class="wcard-picto-item"><span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></span><span class="wcard-picto-val">CZ · DE</span></div>
+        <div class="wcard-picto-item"><span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span><span class="wcard-picto-val">6 rokov</span></div>
+        <div class="wcard-picto-item" style="opacity:0.5"><span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><span class="wcard-picto-val">Kal. 🔒</span></div>
       </div>
-      <div class="card-lock-row">
-        <div class="lock-info">
-          <span class="lock-icon">🔒</span>
-          <span>Prístup od Premium+</span>
-        </div>
-        <a href="/sk/cennik" class="card-cta locked">Odomknúť →</a>
+      <div class="wcard-foot">
+        <span style="font-size:11.5px;color:var(--graphite-500)">🔒 Prístup od Premium+</span>
+        <a href="/sk/cennik" class="wcard-cta locked">Odomknúť →</a>
       </div>
     </div>
 
     <!-- KARTA 5 — Locked -->
-    <div class="worker-card locked-card">
-      <div class="card-top">
-        <div class="card-avatar-wrap">
-          <div class="card-avatar blur-avatar" style="background:#3F4445;">
-            R
-            <span class="card-avatar-flag">🇨🇿</span>
+    <div class="wcard locked-card">
+      <div class="wcard-badge-avail unavailable">Od 1.7.</div>
+      <div class="wcard-head">
+        <div class="wcard-avatar-wrap"><div class="wcard-avatar blur-avatar" style="background:#3F4445;">R</div></div>
+        <div class="wcard-meta">
+          <div class="wcard-name-row">
+            <span class="wcard-emoji-flag">🇨🇿</span>
+            <div class="wcard-name blurred">Roman S.</div>
           </div>
-          <div>
-            <div class="card-name blurred">Roman S.</div>
-            <div class="card-profession">Zámočník · Zvárač · 7 rokov</div>
-          </div>
-        </div>
-        <div class="card-badges">
-          <span class="badge-pro">PRO</span>
-          <span class="badge-avail soon">Od 1.7.</span>
+          <div class="wcard-profession">Zámočník · Zvárač · 7 rokov</div>
         </div>
       </div>
-      <div class="card-rate">
-        <span class="card-rate-prefix">od:</span>
-        <span class="card-rate-num">25 €</span>
-        <span class="card-rate-unit">/ hod</span>
+      <div class="wcard-rate">
+        <span class="wcard-rate-prefix">od</span>
+        <span class="wcard-rate-num">25 €</span>
+        <span class="wcard-rate-unit">/ hod</span>
       </div>
-      <div class="card-picts">
-        <span class="card-pict">CZ · DE</span>
-        <span class="card-pict">7 rokov</span>
-        <span class="card-pict" style="opacity:0.5">Kal. 🔒</span>
+      <div class="wcard-picto">
+        <div class="wcard-picto-item"><span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></span><span class="wcard-picto-val">CZ · DE</span></div>
+        <div class="wcard-picto-item"><span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span><span class="wcard-picto-val">7 rokov</span></div>
+        <div class="wcard-picto-item" style="opacity:0.5"><span class="wcard-picto-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><span class="wcard-picto-val">Kal. 🔒</span></div>
       </div>
-      <div class="card-lock-row">
-        <div class="lock-info">
-          <span class="lock-icon">🔒</span>
-          <span>Prístup od Premium+</span>
-        </div>
-        <a href="/sk/cennik" class="card-cta locked">Odomknúť →</a>
+      <div class="wcard-foot">
+        <span style="font-size:11.5px;color:var(--graphite-500)">🔒 Prístup od Premium+</span>
+        <a href="/sk/cennik" class="wcard-cta locked">Odomknúť →</a>
       </div>
     </div>
 
     <!-- UPSELL CARD -->
     <div class="upsell-card">
       <div class="eyebrow">Alogator tier</div>
-      <h3>Vidíte len 3 z 3 047</h3>
+      <h3>Vidíte len 3 z 4 000 +</h3>
       <p>Databáza je dostupná od plánu Premium+. Získajte prístup ku všetkým profilom vrátane kalendára dostupnosti.</p>
       <a href="/sk/cennik" class="btn-primary">Pozrieť plány →</a>
     </div>
@@ -879,8 +745,8 @@ body {
   </div>
 
   <div class="load-more">
-    <button class="btn-outline">Načítať ďalších 24 pracovníkov →</button>
-    <div class="load-sub">Zobrazené 5 z 284 dostupných · <a href="#" style="color:var(--graphite-500);text-decoration:underline">resetovať filter</a></div>
+    <button class="btn-outline" data-c="databaza.load_btn">Načítať ďalších 24 pracovníkov →</button>
+    <div class="load-sub"><span data-c="databaza.load_sub">Zobrazené 5 z 284 dostupných</span> · <a href="#" style="color:var(--graphite-500);text-decoration:underline">resetovať filter</a></div>
   </div>
 </div>
 
@@ -926,5 +792,7 @@ body {
 </footer>
 
   <script src="/assets/consent.js" defer></script>
+  <script src="/assets/content.js"></script>
+  <script src="/assets/content-apply.js" defer></script>
 </body>
 </html>

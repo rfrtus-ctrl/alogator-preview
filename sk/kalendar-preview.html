@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalendár — 3 varianty</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --signal: #E66748;
+  --signal-dark: #D4573A;
+  --graphite: #1A1D1E;
+  --graphite-700: #3F4445;
+  --graphite-500: #6B7174;
+  --graphite-200: #D9D9D6;
+  --porcelain: #F9F3ED;
+  --porcelain-300: #E8DFD1;
+  --yellow: #F5D547;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: #eee;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+h1 { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #666; margin-bottom: 16px; }
+
+/* ===== SHARED CARD ===== */
+.cal-section {
+  border-radius: 28px;
+  padding: 40px 32px;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+}
+.cal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+.cal-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.cal-title {
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+.cal-title em { font-style: italic; }
+.cal-sub {
+  font-size: 13.5px;
+  line-height: 1.5;
+  max-width: 440px;
+  margin-top: 8px;
+}
+.cal-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 22px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.cal-week-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.cal-week-num {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+}
+.cal-week-num small {
+  font-size: 10.5px;
+  font-weight: 400;
+  display: block;
+  margin-top: 2px;
+  letter-spacing: 0;
+  font-family: 'Inter', sans-serif;
+}
+.cal-week-count {
+  border-radius: 999px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  font-weight: 500;
+  padding: 3px 9px;
+  flex-shrink: 0;
+}
+.cal-week { border-radius: 16px; padding: 14px; }
+
+/* Canonical wcard structure (compact for calendar) */
+.wcard{border-radius:12px;padding:10px 11px;margin-bottom:8px;display:flex;flex-direction:column;gap:6px;position:relative;cursor:pointer;text-decoration:none;color:inherit}
+.wcard:last-child{margin-bottom:0}
+.wcard-head{display:flex;align-items:center;gap:8px}
+.wcard-avatar-wrap{position:relative;flex-shrink:0;width:30px;height:30px}
+.wcard-avatar{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Inter',sans-serif;font-weight:500;font-size:12px;flex-shrink:0}
+.wcard-avatar.a-signal{background:var(--signal);color:#fff}
+.wcard-avatar.a-graphite700{background:var(--graphite-700);color:var(--porcelain)}
+.wcard-avatar.a-yellow{background:var(--yellow);color:var(--graphite)}
+.act-dot{position:absolute;bottom:0;right:0;width:10px;height:10px;border-radius:50%;border:2px solid #fff}
+.act-dot.green{background:#22c55e}
+.wcard-meta{flex:1;min-width:0}
+.wcard-name-row{display:flex;align-items:center;gap:5px}
+.wcard-emoji-flag{font-size:12px;line-height:1;flex-shrink:0}
+.wcard-name{font-size:12px;font-weight:500}
+.wcard-profession{font-size:10.5px}
+.wcard-rating{margin-left:auto;font-size:10px;font-weight:500}
+.wcard-rating .star{font-size:11px}
+.wcard-rate{display:flex;align-items:baseline;gap:3px}
+.wcard-rate-prefix{font-size:10px;font-weight:400}
+.wcard-rate-prefix::after{content:':';margin-right:2px}
+.wcard-rate-num{font-size:13px;font-weight:600}
+.wcard-rate-unit{font-size:10px;font-weight:400}
+.wcard-tags{display:flex;gap:4px;flex-wrap:wrap}
+.wcard-tag{font-size:9.5px;padding:2px 7px;border-radius:999px;font-family:'JetBrains Mono',monospace}
+
+
+/* ===================================================
+   VARIANTA A — Signal Orange (ako H1)
+   =================================================== */
+.var-a {
+  background: var(--signal);
+}
+.var-a .cal-eyebrow { color: rgba(249,243,237,.65); }
+.var-a .cal-title { color: var(--porcelain); }
+.var-a .cal-title em { color: var(--yellow); }
+.var-a .cal-sub { color: rgba(249,243,237,.75); }
+.var-a .cal-btn { background: var(--graphite); color: var(--porcelain); }
+.var-a .cal-week {
+  background: rgba(0,0,0,.15);
+  border: 1px solid rgba(249,243,237,.1);
+}
+.var-a .cal-week-head {
+  border-bottom: 1px solid rgba(249,243,237,.12);
+}
+.var-a .cal-week-num { color: var(--porcelain); }
+.var-a .cal-week-num small { color: rgba(249,243,237,.5); }
+.var-a .cal-week-count { background: rgba(249,243,237,.15); color: var(--porcelain); }
+.var-a .wcard { background: rgba(249,243,237,.1); }
+.var-a .wcard-avatar.a-signal { background: rgba(249,243,237,.25); color: var(--porcelain); }
+.var-a .wcard-avatar.a-yellow { background: var(--yellow); color: var(--graphite); }
+.var-a .wcard-avatar.a-graphite700 { background: rgba(249,243,237,.15); color: var(--porcelain); }
+.var-a .wcard-name { color: var(--porcelain); }
+.var-a .wcard-profession { color: rgba(249,243,237,.6); }
+.var-a .wcard-rating { color: rgba(249,243,237,.7); }
+.var-a .wcard-rate { color: var(--porcelain); }
+.var-a .wcard-rate span { color: rgba(249,243,237,.55); }
+.var-a .wcard-tag { background: rgba(249,243,237,.12); color: rgba(249,243,237,.8); }
+.var-a .wcard-tag.pro { background: var(--yellow); color: var(--graphite); }
+
+
+/* ===================================================
+   VARIANTA B — Graphite Dark + Signal akcenty
+   =================================================== */
+.var-b {
+  background: var(--graphite);
+}
+.var-b .cal-eyebrow { color: var(--signal); }
+.var-b .cal-title { color: var(--porcelain); }
+.var-b .cal-title em { color: var(--signal); }
+.var-b .cal-sub { color: rgba(249,243,237,.55); }
+.var-b .cal-btn { background: var(--signal); color: var(--porcelain); }
+.var-b .cal-week {
+  background: rgba(249,243,237,.04);
+  border: 1px solid rgba(249,243,237,.08);
+}
+.var-b .cal-week-head {
+  border-bottom: 1px solid rgba(249,243,237,.08);
+}
+.var-b .cal-week-num { color: var(--signal); font-weight: 600; }
+.var-b .cal-week-num small { color: rgba(249,243,237,.35); }
+.var-b .cal-week-count { background: var(--signal); color: #fff; }
+.var-b .wcard { background: rgba(249,243,237,.04); border: 1px solid rgba(249,243,237,.06); }
+.var-b .wcard-avatar.a-signal { background: var(--signal); color: #fff; }
+.var-b .wcard-avatar.a-yellow { background: var(--yellow); color: var(--graphite); }
+.var-b .wcard-avatar.a-graphite700 { background: var(--graphite-700); color: var(--porcelain); }
+.var-b .wcard-name { color: var(--porcelain); }
+.var-b .wcard-profession { color: rgba(249,243,237,.5); }
+.var-b .wcard-rating { color: var(--yellow); }
+.var-b .wcard-rate { color: var(--porcelain); }
+.var-b .wcard-rate span { color: rgba(249,243,237,.4); }
+.var-b .wcard-tag { background: rgba(249,243,237,.08); color: rgba(249,243,237,.65); }
+.var-b .wcard-tag.pro { background: var(--signal); color: #fff; }
+
+
+/* ===================================================
+   VARIANTA C — Porcelain Light
+   =================================================== */
+.var-c {
+  background: var(--porcelain);
+}
+.var-c .cal-eyebrow { color: var(--signal); }
+.var-c .cal-title { color: var(--graphite); }
+.var-c .cal-title em { color: var(--signal); }
+.var-c .cal-sub { color: var(--graphite-500); }
+.var-c .cal-btn { background: var(--graphite); color: var(--porcelain); }
+.var-c .cal-week {
+  background: #fff;
+  border: 1px solid var(--porcelain-300);
+  box-shadow: 0 2px 8px rgba(26,29,30,.06);
+}
+.var-c .cal-week-head {
+  border-bottom: 1px solid var(--porcelain-300);
+}
+.var-c .cal-week-num { color: var(--graphite); font-weight: 600; }
+.var-c .cal-week-num small { color: var(--graphite-500); }
+.var-c .cal-week-count { background: var(--signal); color: #fff; }
+.var-c .wcard { background: var(--porcelain); border: 1px solid var(--porcelain-300); }
+.var-c .wcard-avatar.a-signal { background: var(--signal); color: #fff; }
+.var-c .wcard-avatar.a-yellow { background: var(--yellow); color: var(--graphite); }
+.var-c .wcard-avatar.a-graphite700 { background: var(--graphite-700); color: #fff; }
+.var-c .wcard-name { color: var(--graphite); }
+.var-c .wcard-profession { color: var(--graphite-500); }
+.var-c .wcard-rating { color: var(--graphite-500); }
+.var-c .wcard-rate { color: var(--graphite); }
+.var-c .wcard-rate span { color: var(--graphite-500); }
+.var-c .wcard-tag { background: var(--porcelain-300); color: var(--graphite-700); }
+.var-c .wcard-tag.pro { background: var(--graphite); color: #fff; }
+</style>
+</head>
+<body>
+
+<!-- VARIANTA A -->
+<div>
+<h1>Varianta A — Signal Orange (ako H1)</h1>
+<section class="cal-section var-a">
+  <div class="cal-header">
+    <div>
+      <div class="cal-eyebrow">• Kalendár dostupnosti</div>
+      <div class="cal-title">Kto je <em>voľný</em> tento týždeň?</div>
+      <div class="cal-sub">Plánujte projekty s istotou. Kalendár dostupnosti aktualizovaný pracovníkmi v reálnom čase — vidíte presne, kto, kedy a kde.</div>
+    </div>
+    <button class="cal-btn">Otvoriť kalendár →</button>
+  </div>
+  <div class="cal-grid">
+
+    <div class="cal-week">
+      <div class="cal-week-head">
+        <div class="cal-week-num">21. týždeň<small>18. – 24. 5. 2026</small></div>
+        <div class="cal-week-count">28</div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-signal">M</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Marek N.</span></div><div class="wcard-profession">Elektrikár · 8 r.</div></div><div class="wcard-rating"><span class="star">★</span> 5.0</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">30 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">DE · EN</span><span class="wcard-tag">8 r.</span><span class="wcard-tag pro">PRO</span></div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-yellow">J</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇨🇿</span><span class="wcard-name">Jakub H.</span></div><div class="wcard-profession">Bagrista · Montér</div></div><div class="wcard-rating"><span class="star">★</span> 4.7</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">26 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">PL · EN</span><span class="wcard-tag">5 r.</span><span class="wcard-tag">Free</span></div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-graphite700">P</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Peter K.</span></div><div class="wcard-profession">Zvárač MIG · MAG</div></div><div class="wcard-rating"><span class="star">★</span> 4.8</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">27 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">SK · DE</span><span class="wcard-tag">10 r.</span><span class="wcard-tag pro">PRO</span></div>
+      </div>
+    </div>
+
+    <div class="cal-week">
+      <div class="cal-week-head">
+        <div class="cal-week-num">22. týždeň<small>25. – 31. 5. 2026</small></div>
+        <div class="cal-week-count">34</div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-graphite700">D</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇨🇿</span><span class="wcard-name">Daniel R.</span></div><div class="wcard-profession">Zvárač MIG/MAG · TIG</div></div><div class="wcard-rating"><span class="star">★</span> 4.9</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">28 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">CZ · DE</span><span class="wcard-tag">12 r.</span><span class="wcard-tag pro">PRO</span></div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-signal">M</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Marek N.</span></div><div class="wcard-profession">Elektrikár · 8 r.</div></div><div class="wcard-rating"><span class="star">★</span> 5.0</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">30 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">DE · EN</span><span class="wcard-tag">8 r.</span><span class="wcard-tag pro">PRO</span></div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-yellow">A</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Adam B.</span></div><div class="wcard-profession">Murár · Obkladač</div></div><div class="wcard-rating"><span class="star">★</span> 4.3</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">22 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">SK · DE</span><span class="wcard-tag">4 r.</span><span class="wcard-tag">Free</span></div>
+      </div>
+    </div>
+
+    <div class="cal-week">
+      <div class="cal-week-head">
+        <div class="cal-week-num">23. týždeň<small>1. – 7. 6. 2026</small></div>
+        <div class="cal-week-count">22</div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-graphite700">F</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇨🇿</span><span class="wcard-name">Filip P.</span></div><div class="wcard-profession">Elektrikár · meranie</div></div><div class="wcard-rating"><span class="star">★</span> 5.0</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">32 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">CZ · DE</span><span class="wcard-tag">6 r.</span><span class="wcard-tag pro">PRO</span></div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-signal">R</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇨🇿</span><span class="wcard-name">Roman S.</span></div><div class="wcard-profession">Zámočník · Zvárač</div></div><div class="wcard-rating"><span class="star">★</span> 4.6</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">25 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">CZ · DE</span><span class="wcard-tag">7 r.</span><span class="wcard-tag pro">PRO</span></div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-yellow">M</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Martin K.</span></div><div class="wcard-profession">Zvárač TIG · Nerez</div></div><div class="wcard-rating"><span class="star">★</span> 4.6</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">30 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">SK · DE</span><span class="wcard-tag">13 r.</span><span class="wcard-tag pro">PRO</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<!-- VARIANTA B -->
+<div>
+<h1>Varianta B — Graphite Dark + Signal akcenty</h1>
+<section class="cal-section var-b">
+  <div class="cal-header">
+    <div>
+      <div class="cal-eyebrow">• Kalendár dostupnosti</div>
+      <div class="cal-title">Kto je <em>voľný</em> tento týždeň?</div>
+      <div class="cal-sub">Plánujte projekty s istotou. Kalendár dostupnosti aktualizovaný pracovníkmi v reálnom čase — vidíte presne, kto, kedy a kde.</div>
+    </div>
+    <button class="cal-btn">Otvoriť kalendár →</button>
+  </div>
+  <div class="cal-grid">
+
+    <div class="cal-week">
+      <div class="cal-week-head">
+        <div class="cal-week-num">21. týždeň<small>18. – 24. 5. 2026</small></div>
+        <div class="cal-week-count">28</div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-signal">M</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Marek N.</span></div><div class="wcard-profession">Elektrikár · 8 r.</div></div><div class="wcard-rating"><span class="star">★</span> 5.0</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">30 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">DE · EN</span><span class="wcard-tag">8 r.</span><span class="wcard-tag pro">PRO</span></div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-yellow">J</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇨🇿</span><span class="wcard-name">Jakub H.</span></div><div class="wcard-profession">Bagrista · Montér</div></div><div class="wcard-rating"><span class="star">★</span> 4.7</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">26 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">PL · EN</span><span class="wcard-tag">5 r.</span><span class="wcard-tag">Free</span></div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-graphite700">P</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Peter K.</span></div><div class="wcard-profession">Zvárač MIG · MAG</div></div><div class="wcard-rating"><span class="star">★</span> 4.8</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">27 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">SK · DE</span><span class="wcard-tag">10 r.</span><span class="wcard-tag pro">PRO</span></div>
+      </div>
+    </div>
+
+    <div class="cal-week">
+      <div class="cal-week-head">
+        <div class="cal-week-num">22. týždeň<small>25. – 31. 5. 2026</small></div>
+        <div class="cal-week-count">34</div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-graphite700">D</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇨🇿</span><span class="wcard-name">Daniel R.</span></div><div class="wcard-profession">Zvárač MIG/MAG · TIG</div></div><div class="wcard-rating"><span class="star">★</span> 4.9</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">28 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">CZ · DE</span><span class="wcard-tag">12 r.</span><span class="wcard-tag pro">PRO</span></div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-signal">M</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Marek N.</span></div><div class="wcard-profession">Elektrikár · 8 r.</div></div><div class="wcard-rating"><span class="star">★</span> 5.0</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">30 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">DE · EN</span><span class="wcard-tag">8 r.</span><span class="wcard-tag pro">PRO</span></div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-yellow">A</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Adam B.</span></div><div class="wcard-profession">Murár · Obkladač</div></div><div class="wcard-rating"><span class="star">★</span> 4.3</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">22 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">SK · DE</span><span class="wcard-tag">4 r.</span><span class="wcard-tag">Free</span></div>
+      </div>
+    </div>
+
+    <div class="cal-week">
+      <div class="cal-week-head">
+        <div class="cal-week-num">23. týždeň<small>1. – 7. 6. 2026</small></div>
+        <div class="cal-week-count">22</div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-graphite700">F</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇨🇿</span><span class="wcard-name">Filip P.</span></div><div class="wcard-profession">Elektrikár · meranie</div></div><div class="wcard-rating"><span class="star">★</span> 5.0</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">32 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">CZ · DE</span><span class="wcard-tag">6 r.</span><span class="wcard-tag pro">PRO</span></div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-signal">R</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇨🇿</span><span class="wcard-name">Roman S.</span></div><div class="wcard-profession">Zámočník · Zvárač</div></div><div class="wcard-rating"><span class="star">★</span> 4.6</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">25 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">CZ · DE</span><span class="wcard-tag">7 r.</span><span class="wcard-tag pro">PRO</span></div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-yellow">M</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Martin K.</span></div><div class="wcard-profession">Zvárač TIG · Nerez</div></div><div class="wcard-rating"><span class="star">★</span> 4.6</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">30 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">SK · DE</span><span class="wcard-tag">13 r.</span><span class="wcard-tag pro">PRO</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<!-- VARIANTA C -->
+<div>
+<h1>Varianta C — Porcelain Light</h1>
+<section class="cal-section var-c">
+  <div class="cal-header">
+    <div>
+      <div class="cal-eyebrow">• Kalendár dostupnosti</div>
+      <div class="cal-title">Kto je <em>voľný</em> tento týždeň?</div>
+      <div class="cal-sub">Plánujte projekty s istotou. Kalendár dostupnosti aktualizovaný pracovníkmi v reálnom čase — vidíte presne, kto, kedy a kde.</div>
+    </div>
+    <button class="cal-btn">Otvoriť kalendár →</button>
+  </div>
+  <div class="cal-grid">
+
+    <div class="cal-week">
+      <div class="cal-week-head">
+        <div class="cal-week-num">21. týždeň<small>18. – 24. 5. 2026</small></div>
+        <div class="cal-week-count">28</div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-signal">M</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Marek N.</span></div><div class="wcard-profession">Elektrikár · 8 r.</div></div><div class="wcard-rating"><span class="star">★</span> 5.0</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">30 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">DE · EN</span><span class="wcard-tag">8 r.</span><span class="wcard-tag pro">PRO</span></div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-yellow">J</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇨🇿</span><span class="wcard-name">Jakub H.</span></div><div class="wcard-profession">Bagrista · Montér</div></div><div class="wcard-rating"><span class="star">★</span> 4.7</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">26 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">PL · EN</span><span class="wcard-tag">5 r.</span><span class="wcard-tag">Free</span></div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-graphite700">P</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Peter K.</span></div><div class="wcard-profession">Zvárač MIG · MAG</div></div><div class="wcard-rating"><span class="star">★</span> 4.8</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">27 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">SK · DE</span><span class="wcard-tag">10 r.</span><span class="wcard-tag pro">PRO</span></div>
+      </div>
+    </div>
+
+    <div class="cal-week">
+      <div class="cal-week-head">
+        <div class="cal-week-num">22. týždeň<small>25. – 31. 5. 2026</small></div>
+        <div class="cal-week-count">34</div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-graphite700">D</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇨🇿</span><span class="wcard-name">Daniel R.</span></div><div class="wcard-profession">Zvárač MIG/MAG · TIG</div></div><div class="wcard-rating"><span class="star">★</span> 4.9</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">28 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">CZ · DE</span><span class="wcard-tag">12 r.</span><span class="wcard-tag pro">PRO</span></div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-signal">M</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Marek N.</span></div><div class="wcard-profession">Elektrikár · 8 r.</div></div><div class="wcard-rating"><span class="star">★</span> 5.0</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">30 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">DE · EN</span><span class="wcard-tag">8 r.</span><span class="wcard-tag pro">PRO</span></div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-yellow">A</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Adam B.</span></div><div class="wcard-profession">Murár · Obkladač</div></div><div class="wcard-rating"><span class="star">★</span> 4.3</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">22 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">SK · DE</span><span class="wcard-tag">4 r.</span><span class="wcard-tag">Free</span></div>
+      </div>
+    </div>
+
+    <div class="cal-week">
+      <div class="cal-week-head">
+        <div class="cal-week-num">23. týždeň<small>1. – 7. 6. 2026</small></div>
+        <div class="cal-week-count">22</div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-graphite700">F</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇨🇿</span><span class="wcard-name">Filip P.</span></div><div class="wcard-profession">Elektrikár · meranie</div></div><div class="wcard-rating"><span class="star">★</span> 5.0</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">32 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">CZ · DE</span><span class="wcard-tag">6 r.</span><span class="wcard-tag pro">PRO</span></div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-signal">R</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇨🇿</span><span class="wcard-name">Roman S.</span></div><div class="wcard-profession">Zámočník · Zvárač</div></div><div class="wcard-rating"><span class="star">★</span> 4.6</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">25 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">CZ · DE</span><span class="wcard-tag">7 r.</span><span class="wcard-tag pro">PRO</span></div>
+      </div>
+      <div class="wcard">
+        <div class="wcard-head"><div class="wcard-avatar-wrap"><div class="wcard-avatar a-yellow">M</div></div><div class="wcard-meta"><div class="wcard-name-row"><span class="wcard-emoji-flag">🇸🇰</span><span class="wcard-name">Martin K.</span></div><div class="wcard-profession">Zvárač TIG · Nerez</div></div><div class="wcard-rating"><span class="star">★</span> 4.6</div></div>
+        <div class="wcard-rate"><span class="wcard-rate-prefix">od</span><span class="wcard-rate-num">30 €</span><span class="wcard-rate-unit">/ hod</span></div>
+        <div class="wcard-tags"><span class="wcard-tag">SK · DE</span><span class="wcard-tag">13 r.</span><span class="wcard-tag pro">PRO</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+</body>
+</html>

@@ -32,14 +32,14 @@ h1,h2,h3,h4{font-family:'Geist',sans-serif;font-weight:500;letter-spacing:-0.025
 em{font-style:italic;color:var(--signal);font-weight:500}
 
 /* Flags */
-.flag{width:18px;height:13px;border-radius:2px;display:inline-block;vertical-align:middle;box-shadow:0 0 0 1px rgba(26,29,30,.08)}
-.flag-sk{background:linear-gradient(to bottom,#fff 33%,#0B4EA2 33% 66%,#EE1620 66%)}
-.flag-cz{background:linear-gradient(135deg,#fff 50%,#D7141A 50%);position:relative}
-.flag-cz::before{content:'';position:absolute;left:0;top:0;bottom:0;width:50%;background:#11457E;clip-path:polygon(0 0,100% 50%,0 100%)}
-.flag-de{background:linear-gradient(to bottom,#000 33%,#dd0000 33% 66%,#ffce00 66%)}
-.flag-at{background:linear-gradient(to bottom,#ED2939 50%,#fff 50%)}
-.flag-nl{background:linear-gradient(to bottom,#AE1C28 33%,#fff 33% 66%,#21468B 66%)}
-.flag-be{background:linear-gradient(to right,#000 33%,#FAE042 33% 66%,#ED2939 66%)}
+
+
+
+
+
+
+
+
 
 /* ============ NAVBAR ============ */
 .navbar{background:var(--graphite);color:var(--porcelain);padding:18px 0}
@@ -78,16 +78,10 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 
 /* URGENCY BADGE */
 .urgency-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
-.urgency-badge{
-  display:inline-flex;align-items:center;gap:6px;
-  background:var(--signal-soft);color:var(--signal-dark);
-  padding:5px 11px;border-radius:999px;
-  font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:600;
-  letter-spacing:0.05em;text-transform:uppercase;
-}
-.urgency-badge.hot{background:var(--signal);color:var(--porcelain)}
-.urgency-badge.new{background:var(--yellow);color:var(--graphite)}
-.urgency-badge .dot{width:6px;height:6px;border-radius:50%;background:currentColor;animation:pulse 1.5s ease-in-out infinite}
+
+
+
+
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 
 .job-main{display:flex;gap:20px;align-items:flex-start}
@@ -354,39 +348,22 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 .similar-sec h2{font-size:clamp(24px,2.5vw,32px);margin-bottom:24px}
 .similar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 
-.jcard{
-  background:var(--porcelain);border:1px solid var(--porcelain-300);
-  border-radius:20px;padding:20px;
-  display:flex;flex-direction:column;gap:12px;
-  cursor:pointer;transition:transform .2s,border-color .2s;
-}
-.jcard:hover{transform:translateY(-3px);border-color:var(--graphite-200)}
-.jcard-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
-.jcard-meta{flex:1;min-width:0}
-.jcard-loc{
-  font-family:'JetBrains Mono',monospace;font-size:10.5px;
-  color:var(--graphite-500);letter-spacing:0.05em;
-  display:inline-flex;align-items:center;gap:6px;margin-bottom:6px;
-}
-.jcard-title{
-  font-family:'Geist',sans-serif;font-weight:500;font-size:16px;
-  letter-spacing:-0.015em;color:var(--graphite);line-height:1.2;
-}
-.jcard-company{font-size:12px;color:var(--graphite-500);margin-top:3px}
-.jcard-rate{
-  display:flex;align-items:baseline;gap:4px;margin-top:8px;
-  padding-top:12px;border-top:1px solid var(--porcelain-300);
-}
-.jcard-rate-num{font-family:'Geist',sans-serif;font-weight:500;font-size:22px;letter-spacing:-0.02em}
-.jcard-rate-unit{font-size:11px;color:var(--graphite-500)}
-.jcard-tags{display:flex;gap:5px;flex-wrap:wrap}
-.jcard-tag{
-  background:var(--porcelain-200);color:var(--graphite-700);
-  font-size:10.5px;padding:3px 9px;border-radius:999px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ============ FOOTER ============ */
-.footer{background:var(--graphite);color:var(--porcelain);padding:48px 0 24px}
+.footer{background:var(--porcelain);padding:16px 32px 32px}
+.footer .container{background:var(--graphite);border-radius:24px;padding:48px 40px 28px;max-width:1280px;color:var(--porcelain)}
 .foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:32px;border-bottom:1px solid rgba(249,243,237,.08)}
 .foot-col h5{
   font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;
@@ -402,6 +379,118 @@ em{font-style:italic;color:var(--signal);font-weight:500}
   .req-grid{grid-template-columns:1fr}
   .cond-row{grid-template-columns:1fr;gap:6px}
 }
+
+.jcard{
+  background:var(--porcelain);
+  border:1px solid var(--porcelain-300);
+  border-radius:20px;padding:18px;
+  position:relative;cursor:pointer;
+  transition:transform .2s, box-shadow .2s, border-color .2s;
+}
+.jcard:hover{
+  transform:translateY(-3px);
+  border-color:var(--graphite-200);
+  box-shadow:0 12px 30px -10px rgba(26,29,30,.12);
+}
+.jcard-badge{
+  position:absolute;top:14px;right:14px;
+  font-family:'Inter',sans-serif;font-size:9.5px;font-weight:600;
+  padding:3px 8px;border-radius:999px;letter-spacing:0.05em;
+  display:inline-flex;align-items:center;gap:4px;
+}
+.jcard-badge.b-top{background:var(--yellow);color:var(--graphite)}
+.jcard-badge.b-now{background:var(--graphite);color:var(--porcelain)}
+.jcard-badge.b-now::before{content:'';width:5px;height:5px;border-radius:50%;background:#7CC95C;display:inline-block}
+.jcard-badge.b-new{background:var(--signal-soft);color:#993C1D}
+.jcard-head{display:flex;align-items:flex-start;gap:11px;margin-bottom:10px}
+.jcard-logo{
+  width:38px;height:38px;border-radius:9px;
+  background:var(--graphite);color:var(--porcelain);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Geist',sans-serif;font-weight:500;font-size:15px;
+  flex-shrink:0;
+}
+.jcard-logo.lock{
+  background:linear-gradient(135deg,var(--graphite-200) 0%,var(--graphite-500) 100%);
+  color:var(--porcelain);
+  position:relative;
+}
+.jcard-logo.lock::after{
+  content:'🔒';
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  font-size:14px;
+  filter:grayscale(1);
+}
+.jcard-logo.lock span{visibility:hidden}
+.jcard-meta{flex:1;min-width:0}
+.jcard-title{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:16px;
+  letter-spacing:-0.01em;line-height:1.15;color:var(--graphite);
+}
+.jcard-company{
+  font-family:'Inter',sans-serif;font-size:11.5px;
+  color:var(--graphite-500);margin-top:2px;
+}
+.jcard-company.locked{
+  color:var(--graphite-500);
+  font-style:italic;
+  display:inline-flex;align-items:center;gap:5px;
+}
+.jcard-company.locked::after{
+  content:'';
+  width:11px;height:13px;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236B7174' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'><rect x='3' y='11' width='18' height='11' rx='2'/><path d='M7 11V7a5 5 0 0110 0v4'/></svg>") no-repeat center;
+  background-size:contain;
+}
+.jcard-salary{
+  display:flex;align-items:baseline;gap:5px;margin:8px 0;
+}
+.jcard-salary-num{
+  font-family:'Geist',sans-serif;font-weight:500;font-size:26px;
+  letter-spacing:-0.02em;color:var(--graphite);
+}
+.jcard-salary-unit{font-size:11.5px;color:var(--graphite-500)}
+.jcard-bonus{
+  margin-left:auto;padding:3px 9px;border-radius:999px;
+  font-size:10.5px;font-weight:500;
+}
+.jcard-bonus.bonus-housing{background:var(--signal-soft);color:#993C1D}
+.jcard-bonus.bonus-slots{background:var(--signal-soft);color:#993C1D}
+.jcard-bonus.bonus-business{background:var(--porcelain-200);color:var(--graphite-700)}
+.jcard-info{
+  display:flex;gap:8px;flex-wrap:wrap;align-items:center;
+  font-size:11.5px;color:var(--graphite-700);margin-bottom:11px;
+}
+.jcard-info .sep{color:var(--graphite-200)}
+.jcard-info .date-pill{
+  color:var(--graphite);font-weight:500;
+}
+.jcard-foot{
+  display:flex;justify-content:space-between;align-items:center;
+  padding-top:11px;border-top:1px solid var(--porcelain-300);
+}
+.jcard-tags{display:flex;gap:5px;flex-wrap:wrap}
+.jcard-tag{
+  background:var(--porcelain-200);
+  border:1px solid var(--porcelain-300);
+  color:var(--graphite-700);
+  font-family:'Inter',sans-serif;font-size:10px;font-weight:500;
+  padding:3px 8px;border-radius:999px;
+}
+.jcard-cta{
+  background:var(--signal);color:var(--porcelain);
+  border:0;padding:7px 16px;border-radius:999px;
+  font-family:'Inter',sans-serif;font-size:12px;font-weight:500;
+  cursor:pointer;
+  transition:background .15s;
+}
+.jcard-cta:hover{background:var(--signal-dark)}
+.jcard-cta.locked{
+  background:var(--graphite);color:var(--porcelain);
+}
+.jcard-cta.locked:hover{background:#000}
+section.boxed{padding:16px 32px}
+section.boxed .container{background:#fff;border:1.5px solid var(--porcelain-300);border-radius:24px;padding:32px;max-width:1280px;margin:0 auto}
 </style>
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://alogator.com/sk/ponuka-prace/instalater">
@@ -476,9 +565,9 @@ em{font-style:italic;color:var(--signal);font-weight:500}
             </p>
 
             <div class="job-meta-row">
-              <div class="job-meta-item">📋 <strong>~38 ponúk</strong> pre inštalatérov</div>
-              <div class="job-meta-item">💰 od <strong>17 €/hod</strong></div>
-              <div class="job-meta-item">🌍 <strong>DE · AT · NL · BE · SK</strong></div>
+              <div class="job-meta-item"><strong>~38 ponúk</strong> pre inštalatérov</div>
+              <div class="job-meta-item">od <strong>17 €/hod</strong></div>
+              <div class="job-meta-item"><strong>DE · AT · NL · BE · SK</strong></div>
             </div>
           </div>
         </div>
@@ -491,7 +580,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           <span class="rate-num">0 €</span>
           <span class="rate-unit">registrácia</span>
         </div>
-        <div class="rate-note">Pre pracovníkov vždy zadarmo</div>
+        <div class="rate-note">Pre pracovníkov vždy zdarma</div>
 
         <div class="rate-bonuses">
           <div class="bonus-row"><span class="bonus-icon">✓</span><span><strong>Kalendár dostupnosti</strong> — kedy a kam môžete</span></div>
@@ -500,7 +589,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           <div class="bonus-row"><span class="bonus-icon">✓</span><span><strong>Na živnosť aj turnusy</strong></span></div>
         </div>
 
-        <button class="rate-cta" onclick="location.href='/app'" style="cursor:pointer">Vytvoriť profil zadarmo</button>
+        <button class="rate-cta" onclick="location.href='/app'" style="cursor:pointer">Vytvoriť profil zdarma</button>
         <button class="rate-cta-secondary" onclick="location.href='/sk/stiahnut-aplikaciu'" style="cursor:pointer">Stiahnuť aplikáciu</button>
 
         <div class="rate-applicants">
@@ -549,123 +638,202 @@ em{font-style:italic;color:var(--signal);font-weight:500}
           <div class="similar-grid" style="margin-top:6px">
 
             <div class="jcard" onclick="location.href='/app'">
-              <div class="jcard-head">
-                <div class="jcard-meta">
-                  <div class="jcard-loc"><span class="flag flag-de"></span> München · Nemecko</div>
-                  <div class="jcard-title">Inštalatér · kúrenie a voda</div>
-                  <div class="jcard-company">🔒 Firma · DE</div>
-                </div>
-                <span class="urgency-badge hot"><span class="dot"></span>Hot</span>
+            <div class="jcard-badge b-top">TOP</div>
+            <div class="jcard-head">
+              <div class="jcard-logo lock"><span>I</span></div>
+              <div class="jcard-meta">
+                <div class="jcard-title">Inštalatér · kúrenie a voda</div>
+                <div class="jcard-company locked">🇩🇪 Firma</div>
               </div>
-              <div class="jcard-rate">
-                <span class="jcard-rate-num">28 €</span>
-                <span class="jcard-rate-unit">/ hod + ubytovanie</span>
-              </div>
+            </div>
+            <div class="jcard-salary">
+              <span class="jcard-salary-num">28 €</span>
+              <span class="jcard-salary-unit">/ hod + ubytovanie</span>
+              <span class="jcard-bonus bonus-housing">+ ubytovanie</span>
+            </div>
+            <div class="jcard-info">
+              <span>🇩🇪 München, DE</span>
+            <span class="sep">·</span>
+            <span>50h / týždeň</span>
+            </div>
+            <div class="jcard-foot">
               <div class="jcard-tags">
                 <span class="jcard-tag">Kúrenie</span>
-                <span class="jcard-tag">Meď</span>
-                <span class="jcard-tag">Turnusy</span>
+              <span class="jcard-tag">Meď</span>
+              <span class="jcard-tag">Turnusy</span>
+              <span class="jcard-tag">Stavebníctvo</span>
+              <span class="jcard-tag">Ubyt.: Platené</span>
+              <span class="jcard-tag">50h/týž</span>
+              <span class="jcard-tag">Živnosť</span>
               </div>
+              <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
             </div>
+          </div>
 
             <div class="jcard" onclick="location.href='/app'">
-              <div class="jcard-head">
-                <div class="jcard-meta">
-                  <div class="jcard-loc"><span class="flag flag-at"></span> Viedeň · Rakúsko</div>
-                  <div class="jcard-title">Vodoinštalatér · novostavby</div>
-                  <div class="jcard-company">🔒 Firma · AT</div>
-                </div>
-                <span class="urgency-badge new">Nová</span>
+            <div class="jcard-badge b-new">NOVÉ</div>
+            <div class="jcard-head">
+              <div class="jcard-logo lock"><span>V</span></div>
+              <div class="jcard-meta">
+                <div class="jcard-title">Vodoinštalatér · novostavby</div>
+                <div class="jcard-company locked">🇦🇹 Firma</div>
               </div>
-              <div class="jcard-rate">
-                <span class="jcard-rate-num">25 €</span>
-                <span class="jcard-rate-unit">/ hod</span>
-              </div>
+            </div>
+            <div class="jcard-salary">
+              <span class="jcard-salary-num">25 €</span>
+              <span class="jcard-salary-unit">/ hod</span>
+              <span class="jcard-bonus bonus-housing">+ ubytovanie</span>
+            </div>
+            <div class="jcard-info">
+              <span>🇦🇹 Viedeň, AT</span>
+            <span class="sep">·</span>
+            <span>45h / týždeň</span>
+            </div>
+            <div class="jcard-foot">
               <div class="jcard-tags">
                 <span class="jcard-tag">PPR</span>
-                <span class="jcard-tag">Sanita</span>
-                <span class="jcard-tag">Živnosť</span>
+              <span class="jcard-tag">Sanita</span>
+              <span class="jcard-tag">Živnosť</span>
+              <span class="jcard-tag">Stavebníctvo</span>
+              <span class="jcard-tag">Ubyt.: V cene</span>
+              <span class="jcard-tag">45h/týž</span>
+              <span class="jcard-tag">DE</span>
               </div>
+              <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
             </div>
+          </div>
 
             <div class="jcard" onclick="location.href='/app'">
-              <div class="jcard-head">
-                <div class="jcard-meta">
-                  <div class="jcard-loc"><span class="flag flag-nl"></span> Amsterdam · Holandsko</div>
-                  <div class="jcard-title">Inštalatér · podlahové kúrenie</div>
-                  <div class="jcard-company">🔒 Firma · NL</div>
-                </div>
-                <span class="urgency-badge hot"><span class="dot"></span>Top sadzba</span>
+            <div class="jcard-badge b-top">TOP</div>
+            <div class="jcard-head">
+              <div class="jcard-logo lock"><span>I</span></div>
+              <div class="jcard-meta">
+                <div class="jcard-title">Inštalatér · podlahové kúrenie</div>
+                <div class="jcard-company locked">🇳🇱 Firma</div>
               </div>
-              <div class="jcard-rate">
-                <span class="jcard-rate-num">30 €</span>
-                <span class="jcard-rate-unit">/ hod</span>
-              </div>
+            </div>
+            <div class="jcard-salary">
+              <span class="jcard-salary-num">30 €</span>
+              <span class="jcard-salary-unit">/ hod</span>
+              <span class="jcard-bonus bonus-housing">+ ubytovanie</span>
+            </div>
+            <div class="jcard-info">
+              <span>🇳🇱 Amsterdam, NL</span>
+            <span class="sep">·</span>
+            <span>50h / týždeň</span>
+            </div>
+            <div class="jcard-foot">
               <div class="jcard-tags">
                 <span class="jcard-tag">Podlahové</span>
-                <span class="jcard-tag">PE</span>
-                <span class="jcard-tag">50 h/tý</span>
+              <span class="jcard-tag">PE</span>
+              <span class="jcard-tag">50 h/tý</span>
+              <span class="jcard-tag">Stavebníctvo</span>
+              <span class="jcard-tag">Ubyt.: Platené</span>
+              <span class="jcard-tag">Živnosť / HPP</span>
               </div>
+              <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
             </div>
+          </div>
 
             <div class="jcard" onclick="location.href='/app'">
-              <div class="jcard-head">
-                <div class="jcard-meta">
-                  <div class="jcard-loc"><span class="flag flag-sk"></span> Košice · Slovensko</div>
-                  <div class="jcard-title">Kúrenár · montáž kotlov</div>
-                  <div class="jcard-company">🔒 Firma · SK</div>
-                </div>
+            
+            <div class="jcard-head">
+              <div class="jcard-logo lock"><span>K</span></div>
+              <div class="jcard-meta">
+                <div class="jcard-title">Kúrenár · montáž kotlov</div>
+                <div class="jcard-company locked">🇸🇰 Firma</div>
               </div>
-              <div class="jcard-rate">
-                <span class="jcard-rate-num">15 €</span>
-                <span class="jcard-rate-unit">/ hod</span>
-              </div>
+            </div>
+            <div class="jcard-salary">
+              <span class="jcard-salary-num">15 €</span>
+              <span class="jcard-salary-unit">/ hod</span>
+              
+            </div>
+            <div class="jcard-info">
+              <span>🇸🇰 Košice, SK</span>
+            <span class="sep">·</span>
+            <span>40h / týždeň</span>
+            </div>
+            <div class="jcard-foot">
               <div class="jcard-tags">
                 <span class="jcard-tag">Kotly</span>
-                <span class="jcard-tag">Regulácia</span>
-                <span class="jcard-tag">Denné</span>
+              <span class="jcard-tag">Regulácia</span>
+              <span class="jcard-tag">Denné</span>
+              <span class="jcard-tag">Energetika</span>
+              <span class="jcard-tag">40h/týž</span>
+              <span class="jcard-tag">HPP</span>
               </div>
+              <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
             </div>
+          </div>
 
             <div class="jcard" onclick="location.href='/app'">
-              <div class="jcard-head">
-                <div class="jcard-meta">
-                  <div class="jcard-loc"><span class="flag flag-be"></span> Antverpy · Belgicko</div>
-                  <div class="jcard-title">Inštalatér · TZB rozvody</div>
-                  <div class="jcard-company">🔒 Firma · BE</div>
-                </div>
-                <span class="urgency-badge new">Nová</span>
+            <div class="jcard-badge b-new">NOVÉ</div>
+            <div class="jcard-head">
+              <div class="jcard-logo lock"><span>I</span></div>
+              <div class="jcard-meta">
+                <div class="jcard-title">Inštalatér · TZB rozvody</div>
+                <div class="jcard-company locked">🇧🇪 Firma</div>
               </div>
-              <div class="jcard-rate">
-                <span class="jcard-rate-num">27 €</span>
-                <span class="jcard-rate-unit">/ hod</span>
-              </div>
+            </div>
+            <div class="jcard-salary">
+              <span class="jcard-salary-num">27 €</span>
+              <span class="jcard-salary-unit">/ hod</span>
+              <span class="jcard-bonus bonus-housing">+ ubytovanie</span>
+            </div>
+            <div class="jcard-info">
+              <span>🇧🇪 Antverpy, BE</span>
+            <span class="sep">·</span>
+            <span>55h / týždeň</span>
+            </div>
+            <div class="jcard-foot">
               <div class="jcard-tags">
                 <span class="jcard-tag">TZB</span>
-                <span class="jcard-tag">Priemysel</span>
-                <span class="jcard-tag">Týždenné</span>
+              <span class="jcard-tag">Priemysel</span>
+              <span class="jcard-tag">Týždenné</span>
+              <span class="jcard-tag">Petrochémia</span>
+              <span class="jcard-tag">Ubyt.: V cene</span>
+              <span class="jcard-tag">55h/týž</span>
+              <span class="jcard-tag">Živnosť</span>
+              <span class="jcard-tag">EN</span>
               </div>
+              <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
             </div>
+          </div>
 
             <div class="jcard" onclick="location.href='/app'">
-              <div class="jcard-head">
-                <div class="jcard-meta">
-                  <div class="jcard-loc"><span class="flag flag-de"></span> Stuttgart · Nemecko</div>
-                  <div class="jcard-title">Inštalatér · tepelné čerpadlá</div>
-                  <div class="jcard-company">🔒 Firma · DE</div>
-                </div>
-                <span class="urgency-badge hot"><span class="dot"></span>Hot</span>
-              </div>
-              <div class="jcard-rate">
-                <span class="jcard-rate-num">29 €</span>
-                <span class="jcard-rate-unit">/ hod</span>
-              </div>
-              <div class="jcard-tags">
-                <span class="jcard-tag">Tepl. čerp.</span>
-                <span class="jcard-tag">Regulácia</span>
-                <span class="jcard-tag">Turnusy</span>
+            <div class="jcard-badge b-top">TOP</div>
+            <div class="jcard-head">
+              <div class="jcard-logo lock"><span>I</span></div>
+              <div class="jcard-meta">
+                <div class="jcard-title">Inštalatér · tepelné čerpadlá</div>
+                <div class="jcard-company locked">🇩🇪 Firma</div>
               </div>
             </div>
+            <div class="jcard-salary">
+              <span class="jcard-salary-num">29 €</span>
+              <span class="jcard-salary-unit">/ hod</span>
+              <span class="jcard-bonus bonus-housing">+ ubytovanie</span>
+            </div>
+            <div class="jcard-info">
+              <span>🇩🇪 Stuttgart, DE</span>
+            <span class="sep">·</span>
+            <span>45h / týždeň</span>
+            </div>
+            <div class="jcard-foot">
+              <div class="jcard-tags">
+                <span class="jcard-tag">Tepl. čerp.</span>
+              <span class="jcard-tag">Regulácia</span>
+              <span class="jcard-tag">Turnusy</span>
+              <span class="jcard-tag">Energetika</span>
+              <span class="jcard-tag">Ubyt.: Platené</span>
+              <span class="jcard-tag">45h/týž</span>
+              <span class="jcard-tag">Živnosť</span>
+              <span class="jcard-tag">Fakt.: 14/14</span>
+              </div>
+              <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
+            </div>
+          </div>
 
           </div>
 
@@ -678,15 +846,22 @@ em{font-style:italic;color:var(--signal);font-weight:500}
         <div class="sec-card">
           <span class="label">Časté otázky</span>
           <h2 style="margin-top:8px">Na čo sa inštalatérov <em>najčastejšie pýtame</em></h2>
-          <div class="desc-text">
-            <h3>Čo robí inštalatér v zahraničí?</h3>
-            <p>Inštalatér v zahraničí robí rovnaké práce ako doma — vodoinštalácie, kúrenie, sanitu a TZB rozvody — ale na väčších projektoch (bytové komplexy, priemyselné haly, nemocnice). Firmy v Nemecku a Rakúsku hľadajú ľudí na montáž kotlov, podlahové kúrenie, spájkovanie medi a PE/PPR zváranie. Sadzby sú <strong>22–30 €/hod</strong>, často s ubytovaním v cene.</p>
-
-            <h3>Potrebujem nemecký preukaz?</h3>
-            <p>Špeciálny nemecký preukaz na inštalatérske práce nepotrebujete. Stačí slovenský výučný list alebo preukaz o odbornej spôsobilosti. Firmy si overujú skúsenosti cez referencie a skúšobnú dobu. Ak robíte na plynových zariadeniach, niektoré firmy vyžadujú osvedčenie podľa miestnych predpisov — to si ale zvyčajne zabezpečí zamestnávateľ.</p>
-
-            <h3>Aký je dopyt po inštalatéroch?</h3>
-            <p>Dopyt po inštalatéroch je vysoký a stabilne rastie — najmä v <strong>Nemecku, Rakúsku, Holandsku a Belgicku</strong>. Dôvodom je výstavba nových bytov, renovácie a prechod na tepelné čerpadlá a podlahové kúrenie. Inštalatér, ktorý zvláda aj reguláciu a montáž moderných systémov, dostane prácu takmer okamžite.</p>
+          <div class="hiw-grid faq-grid-cards" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px">
+            <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:20px;background:var(--porcelain-200);display:flex;flex-direction:column">
+              <div class="hiw-num" style="font-size:28px">01</div>
+              <h4 style="font-size:13px;font-weight:600;margin:0">Čo robí inštalatér v zahraničí?</h4>
+              <p style="font-size:12px;color:var(--graphite-700);line-height:1.5;margin:0">Inštalatér v zahraničí robí rovnaké práce ako doma — vodoinštalácie, kúrenie, sanitu a TZB rozvody — ale na väčších projektoch (bytové komplexy, priemyselné haly, nemocnice). Firmy v Nemecku a Rakúsku hľadajú ľudí na montáž kotlov, podlahové kúrenie, spájkovanie medi a PE/PPR zváranie. Sadzby sú <strong>22–30 €/hod</strong>, často s ubytovaním v cene.</p>
+            </div>
+            <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:20px;background:var(--porcelain-200);display:flex;flex-direction:column">
+              <div class="hiw-num" style="font-size:28px">02</div>
+              <h4 style="font-size:13px;font-weight:600;margin:0">Potrebujem nemecký preukaz?</h4>
+              <p style="font-size:12px;color:var(--graphite-700);line-height:1.5;margin:0">Špeciálny nemecký preukaz na inštalatérske práce nepotrebujete. Stačí slovenský výučný list alebo preukaz o odbornej spôsobilosti. Firmy si overujú skúsenosti cez referencie a skúšobnú dobu. Ak robíte na plynových zariadeniach, niektoré firmy vyžadujú osvedčenie podľa miestnych predpisov — to si ale zvyčajne zabezpečí zamestnávateľ.</p>
+            </div>
+            <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:20px;background:var(--porcelain-200);display:flex;flex-direction:column">
+              <div class="hiw-num" style="font-size:28px">03</div>
+              <h4 style="font-size:13px;font-weight:600;margin:0">Aký je dopyt po inštalatéroch?</h4>
+              <p style="font-size:12px;color:var(--graphite-700);line-height:1.5;margin:0">Dopyt po inštalatéroch je vysoký a stabilne rastie — najmä v <strong>Nemecku, Rakúsku, Holandsku a Belgicku</strong>. Dôvodom je výstavba nových bytov, renovácie a prechod na tepelné čerpadlá a podlahové kúrenie. Inštalatér, ktorý zvláda aj reguláciu a montáž moderných systémov, dostane prácu takmer okamžite.</p>
+            </div>
           </div>
         </div>
 
@@ -724,7 +899,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 
           <div class="summary-widget" style="background:transparent;padding:0">
             <div class="summary-row">
-              <span class="summary-icon">📋</span>
+              <span class="summary-icon"></span>
               <div class="summary-content">
                 <div class="summary-label">Ponuky</div>
                 <div class="summary-val">~38 pre inštalatérov</div>
@@ -732,7 +907,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
               </div>
             </div>
             <div class="summary-row">
-              <span class="summary-icon">💰</span>
+              <span class="summary-icon"></span>
               <div class="summary-content">
                 <div class="summary-label">Sadzby</div>
                 <div class="summary-val">od 17 €/hod</div>
@@ -740,7 +915,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
               </div>
             </div>
             <div class="summary-row">
-              <span class="summary-icon">🔧</span>
+              <span class="summary-icon"></span>
               <div class="summary-content">
                 <div class="summary-label">Zručnosti</div>
                 <div class="summary-val">Meď · PPR · kotly</div>
@@ -748,7 +923,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
               </div>
             </div>
             <div class="summary-row">
-              <span class="summary-icon">📜</span>
+              <span class="summary-icon"></span>
               <div class="summary-content">
                 <div class="summary-label">Certifikát</div>
                 <div class="summary-val">Výučný list / OZ</div>
@@ -756,7 +931,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
               </div>
             </div>
             <div class="summary-row">
-              <span class="summary-icon">📅</span>
+              <span class="summary-icon"></span>
               <div class="summary-content">
                 <div class="summary-label">Forma</div>
                 <div class="summary-val">Živnosť aj turnusy</div>
@@ -764,7 +939,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
               </div>
             </div>
             <div class="summary-row">
-              <span class="summary-icon">✋</span>
+              <span class="summary-icon"></span>
               <div class="summary-content">
                 <div class="summary-label">Ako to ide</div>
                 <div class="summary-val">Firmy oslovujú vás</div>
@@ -773,7 +948,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
             </div>
           </div>
 
-          <button class="rate-cta" style="margin-top:18px" onclick="location.href='/app'">Vytvoriť profil zadarmo</button>
+          <button class="rate-cta" style="margin-top:18px" onclick="location.href='/app'">Vytvoriť profil zdarma</button>
         </div>
 
         <!-- Tip box -->
@@ -784,7 +959,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
             <p>Inštalatérov, ktorí v profile uvedú skúsenosti s tepelnými čerpadlami, podlahovým kúrením a reguláciou, firmy oslovujú výrazne častejšie. Doplňte si do profilu všetky technológie, s ktorými máte skúsenosti.</p>
           </div>
           <div style="background:var(--signal-soft);color:var(--signal-dark);padding:10px 12px;border-radius:10px;font-size:12px;line-height:1.5;margin-top:6px">
-            <strong style="display:block;margin-bottom:2px">📅 Doplňte kalendár</strong>
+            <strong style="display:block;margin-bottom:2px">Doplňte kalendár</strong>
             Profil s vyplnenou dostupnosťou vidia firmy ako prvý.
           </div>
         </div>
@@ -795,7 +970,7 @@ em{font-style:italic;color:var(--signal);font-weight:500}
 </section>
 
 <!-- SIMILAR / DALSIE PROFESIE -->
-<section class="similar-sec">
+<section class="similar-sec boxed">
   <div class="container">
     <span class="eyebrow">ďalšie profesie</span>
     <h2 style="margin-top:10px">Hľadáte inú profesiu?</h2>
@@ -803,76 +978,91 @@ em{font-style:italic;color:var(--signal);font-weight:500}
     <div class="similar-grid">
       <div class="jcard" onclick="location.href='/sk/ponuka-prace/zvarac'">
         <div class="jcard-head">
+          <div class="jcard-logo lock"><span>Z</span></div>
           <div class="jcard-meta">
-            <div class="jcard-loc">PROFESIA</div>
             <div class="jcard-title">Práca pre zváračov</div>
             <div class="jcard-company">DE · AT · NL · SK</div>
           </div>
         </div>
-        <div class="jcard-tags">
-          <span class="jcard-tag">TIG</span>
-          <span class="jcard-tag">CO2</span>
-          <span class="jcard-tag">Turnusy</span>
+        <div class="jcard-foot" style="border-top:0;padding-top:6px">
+          <div class="jcard-tags">
+            <span class="jcard-tag">TIG</span>
+              <span class="jcard-tag">CO2</span>
+              <span class="jcard-tag">Turnusy</span>
+          </div>
+          <button class="jcard-cta" onclick="location.href='/sk/ponuka-prace/zvarac'" style="cursor:pointer">Zobraziť</button>
         </div>
       </div>
 
       <div class="jcard" onclick="location.href='/sk/ponuka-prace/zamocnik'">
         <div class="jcard-head">
+          <div class="jcard-logo lock"><span>Z</span></div>
           <div class="jcard-meta">
-            <div class="jcard-loc">PROFESIA</div>
             <div class="jcard-title">Práca pre zámočníkov</div>
             <div class="jcard-company">DE · AT · NL · SK</div>
           </div>
         </div>
-        <div class="jcard-tags">
-          <span class="jcard-tag">Konštrukcie</span>
-          <span class="jcard-tag">Montáž</span>
-          <span class="jcard-tag">Živnosť</span>
+        <div class="jcard-foot" style="border-top:0;padding-top:6px">
+          <div class="jcard-tags">
+            <span class="jcard-tag">Konštrukcie</span>
+              <span class="jcard-tag">Montáž</span>
+              <span class="jcard-tag">Živnosť</span>
+          </div>
+          <button class="jcard-cta" onclick="location.href='/sk/ponuka-prace/zamocnik'" style="cursor:pointer">Zobraziť</button>
         </div>
       </div>
 
       <div class="jcard" onclick="location.href='/sk/ponuka-prace/elektrikar'">
         <div class="jcard-head">
+          <div class="jcard-logo lock"><span>E</span></div>
           <div class="jcard-meta">
-            <div class="jcard-loc">PROFESIA</div>
             <div class="jcard-title">Práca pre elektrikárov</div>
             <div class="jcard-company">DE · AT · NL · SK</div>
           </div>
         </div>
-        <div class="jcard-tags">
-          <span class="jcard-tag">Priemysel</span>
-          <span class="jcard-tag">Stavby</span>
-          <span class="jcard-tag">Živnosť</span>
+        <div class="jcard-foot" style="border-top:0;padding-top:6px">
+          <div class="jcard-tags">
+            <span class="jcard-tag">Priemysel</span>
+              <span class="jcard-tag">Stavby</span>
+              <span class="jcard-tag">Živnosť</span>
+          </div>
+          <button class="jcard-cta" onclick="location.href='/sk/ponuka-prace/elektrikar'" style="cursor:pointer">Zobraziť</button>
         </div>
       </div>
 
       <div class="jcard" onclick="location.href='/sk/ponuka-prace/tesar'">
         <div class="jcard-head">
+          <div class="jcard-logo lock"><span>T</span></div>
           <div class="jcard-meta">
-            <div class="jcard-loc">PROFESIA</div>
             <div class="jcard-title">Práca pre tesárov</div>
             <div class="jcard-company">DE · AT · NL · SK</div>
           </div>
         </div>
-        <div class="jcard-tags">
-          <span class="jcard-tag">Krovy</span>
-          <span class="jcard-tag">Debnenie</span>
-          <span class="jcard-tag">Turnusy</span>
+        <div class="jcard-foot" style="border-top:0;padding-top:6px">
+          <div class="jcard-tags">
+            <span class="jcard-tag">Krovy</span>
+              <span class="jcard-tag">Debnenie</span>
+              <span class="jcard-tag">Turnusy</span>
+          </div>
+          <button class="jcard-cta" onclick="location.href='/sk/ponuka-prace/tesar'" style="cursor:pointer">Zobraziť</button>
         </div>
       </div>
 
       <div class="jcard" onclick="location.href='/sk/ponuka-prace/murar'">
         <div class="jcard-head">
+          <div class="jcard-logo lock"><span>M</span></div>
           <div class="jcard-meta">
-            <div class="jcard-loc">PROFESIA</div>
             <div class="jcard-title">Práca pre murárov</div>
             <div class="jcard-company">DE · AT · NL · SK</div>
           </div>
         </div>
-        <div class="jcard-tags">
-          <span class="jcard-tag">Stavby</span>
-          <span class="jcard-tag">Omietky</span>
-          <span class="jcard-tag">Živnosť</span>
+        <div class="jcard-foot" style="border-top:0;padding-top:6px">
+          <div class="jcard-tags">
+            <span class="jcard-tag">Stavby</span>
+              <span class="jcard-tag">Omietky</span>
+              <span class="jcard-tag">Živnosť</span>
+          </div>
+          <button class="jcard-cta" onclick="location.href='/sk/ponuka-prace/murar'" style="cursor:pointer">Zobraziť</button>
         </div>
       </div>
     </div>

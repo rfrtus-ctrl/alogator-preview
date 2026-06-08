@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alogator — Marketplace pro pracovníky, agentury a firmy</title>
-<meta name="description" content="Marketplace stavebních a průmyslových pracovníků. 3 047 pracovníků, 642 firem a agentur. Spravujte vlastní kapacity, hledejte zakázky nebo doplňujte tým v SK, CZ, DE, AT, NL, BE.">
+<meta name="description" content="Marketplace stavebních a průmyslových pracovníků. 4 000 + pracovníků, 642 firem a agentur. Spravujte vlastní kapacity, hledejte zakázky nebo doplňujte tým v SK, CZ, DE, AT, NL, BE.">
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -953,6 +953,10 @@ section{padding:96px 0}
   font-style:italic;
   display:inline-flex;align-items:center;gap:5px;
 }
+.jcard-company .co-flag{
+  width:14px;height:10px;border-radius:2px;
+  display:inline-block;flex-shrink:0;
+}
 .jcard-company.locked::after{
   content:'';
   width:11px;height:13px;
@@ -1573,7 +1577,8 @@ section{padding:96px 0}
 }
 
 /* ============ FOOTER ============ */
-.footer{background:var(--graphite);color:var(--porcelain);padding:64px 0 32px}
+.footer{background:var(--porcelain);padding:16px 32px 32px}
+.footer .container{background:var(--graphite);border-radius:24px;padding:48px 40px 28px;max-width:1280px;color:var(--porcelain)}
 .foot-top{
   display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;
   padding-bottom:40px;border-bottom:1px solid rgba(249,243,237,.08);
@@ -1657,11 +1662,11 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
 <meta property="og:site_name" content="Alogator">
 <meta property="og:locale" content="cs_CZ">
 <meta property="og:title" content="Alogator — Marketplace pro pracovníky, agentury a firmy">
-<meta property="og:description" content="Marketplace stavebních a průmyslových pracovníků. 3 047 pracovníků, 642 firem a agentur. Spravujte vlastní kapacity, hledejte zakázky nebo doplňujte tým v SK, CZ, DE, AT, NL, BE.">
+<meta property="og:description" content="Marketplace stavebních a průmyslových pracovníků. 4 000 + pracovníků, 642 firem a agentur. Spravujte vlastní kapacity, hledejte zakázky nebo doplňujte tým v SK, CZ, DE, AT, NL, BE.">
 <meta property="og:url" content="https://alogator.com/cz">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Alogator — Marketplace pro pracovníky, agentury a firmy">
-<meta name="twitter:description" content="Marketplace stavebních a průmyslových pracovníků. 3 047 pracovníků, 642 firem a agentur. Spravujte vlastní kapacity, hledejte zakázky nebo doplňujte tým v SK, CZ, DE, AT, NL, BE.">
+<meta name="twitter:description" content="Marketplace stavebních a průmyslových pracovníků. 4 000 + pracovníků, 642 firem a agentur. Spravujte vlastní kapacity, hledejte zakázky nebo doplňujte tým v SK, CZ, DE, AT, NL, BE.">
 <!-- alg-schema -->
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Platí se za používání aplikace něco?", "acceptedAnswer": {"@type": "Answer", "text": "Aplikace pro pracovníky je zcela zdarma — registrace, profil, vyhledávání nabídek, push notifikace i kontakt s firmami. Připravujeme volitelné PREMIUM členství s lepší viditelností v listingech (lepší pozice, prioritní zobrazení)."}}, {"@type": "Question", "name": "Potřebuji umět cizí jazyk, pokud chci jet na projekt do zahraničí?", "acceptedAnswer": {"@type": "Answer", "text": "Ne vždy. U part často stačí, když jeden člen týmu disponuje jazykem (obvykle němčina). Jazykové požadavky jsou vždy transparentně uvedeny v detailu nabídky — vidíte předem, zda se hodíte. Pro individuální pracovníky je doporučena alespoň základní úroveň jazyka země."}}, {"@type": "Question", "name": "Mám jistotu, že dostanu za práci zaplaceno?", "acceptedAnswer": {"@type": "Answer", "text": "Alogator spolupracuje pouze s ověřenými firmami. Před kontaktem vidíte hodnocení od jiných pracovníků, kteří s firmou již spolupracovali. Při problémech máte k dispozici náš support tým. Faktury a smlouvy si můžete archivovat přímo v aplikaci."}}, {"@type": "Question", "name": "Jak rychle může firma kontaktovat můj profil?", "acceptedAnswer": {"@type": "Answer", "text": "Hned jak vyplníte profil, jste viditelní pro firmy. Průměrný čas do první nabídky je 3–7 dní pro dostupné pracovníky. Top profese (svářeč, elektrikář, montér) dostávají první oslovení už do 24 hodin."}}, {"@type": "Question", "name": "Dá se pracovat přes Alogator na živnost?", "acceptedAnswer": {"@type": "Answer", "text": "Ano, Alogator je primárně určen pro OSVČ. V profilu si nastavíte typ úvazku (živnost / HPP) a vidíte jen nabídky, které sedí. Faktury pro firmy si můžete vystavovat přímo přes aplikaci."}}, {"@type": "Question", "name": "Je ubytování zahrnuté v nabídkách v zahraničí?", "acceptedAnswer": {"@type": "Answer", "text": "Často ano. V detailu každé nabídky vidíte, zda firma poskytuje ubytování zdarma, částečně přispívá nebo si ho pracovník hradí sám. Filtr \"Ubytování zdarma\" je k dispozici ve vyhledávání."}}, {"@type": "Question", "name": "Kolik stojí Alogator pro firmu?", "acceptedAnswer": {"@type": "Answer", "text": "Máme modulární ceník v 5 úrovních — Free (0 €, jen inzeráty), CRM (99 €, vlastní kontakty), Kapacity (199 €, kalendář vlastních lidí), Alogator (499 €, přístup k celé databázi) a Enterprise (na míru). Platíte jen za to, co používáte."}}, {"@type": "Question", "name": "Jak rychle najdu prvního pracovníka?", "acceptedAnswer": {"@type": "Answer", "text": "Průměrný čas od registrace po první kontakt je 24 hodin. Top profese (svářeč, elektrikář, montér) jsou v databázi stovkami — okamžitý přístup, žádné čekání na životopisy."}}, {"@type": "Question", "name": "Jsou pracovníci ověření?", "acceptedAnswer": {"@type": "Answer", "text": "Ano. Každý profil prochází kontrolou — ověřujeme identitu, certifikáty, předchozí zkušenosti. Premium pracovníci mají navíc video prezentaci a hodnocení od jiných firem."}}, {"@type": "Question", "name": "Funguje Alogator i v zahraničí?", "acceptedAnswer": {"@type": "Answer", "text": "Ano. Aktuálně má Alogator pracovníky dostupné pro Česko, Slovensko, Německo, Rakousko, Belgii, Holandsko, Švýcarsko a další EU země. Firma v DE/AT může okamžitě kontaktovat SK/CZ řemeslníky."}}, {"@type": "Question", "name": "Jak funguje kalendář dostupnosti?", "acceptedAnswer": {"@type": "Answer", "text": "Každý pracovník si v aplikaci nastavuje svou dostupnost po týdnech. Vidíte v real-time, kdo je volný kdy a můžete plánovat projekty týdny dopředu. Žádné dvojité rezervace — systém upozorní při konfliktu."}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Alogator", "url": "https://alogator.com/cz", "description": "Marketplace propojující stavební pracovníky a firmy v SK, CZ, DE, AT, NL a BE.", "areaServed": ["SK", "CZ", "DE", "AT", "NL", "BE"]}</script>
@@ -1690,7 +1695,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
       <a href="/cz/o-nas" class="">O nás</a>
     </div>
     <div class="nav-cta">
-      <div class="lang"><span class="flag-sk"></span>SK <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg></div>
+      <div class="lang">🇸🇰 SK <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6l4 4 4-4"/></svg></div>
       <button class="btn btn-ghost" onclick="location.href='/app'" style="cursor:pointer">Přihlášení</button>
       <button class="btn btn-solid mode-b" onclick="location.href='/cz/kontakt'" style="cursor:pointer">Naplánovat demo</button>
       <button class="btn btn-solid mode-c" onclick="location.href='/app'" style="cursor:pointer">Registrace</button>
@@ -1760,12 +1765,12 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
         </div>
 
         <p class="hero-lead mode-b">
-          3 047 pracovníků a 380 agentur dostupných v reálném čase.
+          4 000 + pracovníků a 380 agentur dostupných v reálném čase.
           Popište, koho hledáte vlastními slovy — Alogator najde shodu.
         </p>
 
         <!-- B2C headline -->
-        <h1 class="mode-c">100+ nabídek práce<br>v <em>celé EU</em>.</h1>
+        <h1 class="mode-c">1000 + pracovních nabídek<br>od <em>top firem v Evropě</em></h1>
 
         <!-- B2C profession chips (color-coded) -->
         <div class="hero-chips mode-c">
@@ -1857,7 +1862,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="hero-meta-item">
             <span class="live-dot"></span>
             <span class="mode-b inline"><strong>147</strong>&nbsp;pracovníků dostupných tento týden</span>
-            <span class="mode-c inline"><strong>730</strong>&nbsp;aktivních nabídek právě teď</span>
+            <span class="mode-c inline"><strong>1000 +</strong>&nbsp;aktivních nabídek právě teď</span>
           </div>
           <div class="hero-meta-item mode-c inline">
             <svg class="icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="12" height="9" rx="1"/><path d="M5 6V4a3 3 0 016 0v2"/></svg>
@@ -1874,7 +1879,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="fc-avatar">M</div>
             <div class="fc-info">
               <div class="fc-name">Marek N.</div>
-              <div class="fc-meta"><span class="flag-sk"></span>Česko · 32 r.</div>
+              <div class="fc-meta">🇸🇰 Česko · 32 r.</div>
             </div>
             <div class="fc-rating">4/5 ★</div>
           </div>
@@ -1914,7 +1919,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="fc-avatar">D</div>
             <div class="fc-info">
               <div class="fc-name">Daniel R.</div>
-              <div class="fc-meta"><span class="flag-cz"></span>ČR · 41 r.</div>
+              <div class="fc-meta">🇨🇿 ČR · 41 r.</div>
             </div>
             <div class="fc-rating">5/5 ★</div>
           </div>
@@ -1954,7 +1959,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="fc-avatar">J</div>
             <div class="fc-info">
               <div class="fc-name">Jakub H.</div>
-              <div class="fc-meta"><span class="flag-cz"></span>ČR · 29 r.</div>
+              <div class="fc-meta">🇨🇿 ČR · 29 r.</div>
             </div>
             <div class="fc-rating">4/5 ★</div>
           </div>
@@ -2176,13 +2181,13 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
   <div class="container">
     <div class="counters-grid">
       <div class="counter">
-        <div class="counter-num">3&nbsp;<em>047</em></div>
+        <div class="counter-num">4000 <em>+</em></div>
         <div class="counter-lbl">Aktivních profilů pracovníků</div>
         <div class="counter-trend">↑ 124 tento měsíc</div>
       </div>
       <div class="counter">
-        <div class="counter-num"><em>730</em></div>
-        <div class="counter-lbl">Otevřených pracovních nabídek</div>
+        <div class="counter-num"><em>3000 +</em></div>
+        <div class="counter-lbl">Otevřených inzerátů denně</div>
         <div class="counter-trend">↑ 38 tento týden</div>
       </div>
       <div class="counter">
@@ -2221,7 +2226,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
     <div class="sec-head">
       <div>
         <span class="eyebrow">• databáze pracovníků</span>
-        <h2 style="margin-top:14px">3 047 pracovníků<br>po <em>celé EU</em></h2>
+        <h2 style="margin-top:14px">4 000 + pracovníků<br>po <em>celé EU</em></h2>
         <p class="sec-sub">Stavební řemesla ověřená v reálném čase. Filtrujte podle profese, lokality, praxe, jazyka nebo certifikátu.</p>
       </div>
       <div class="sec-cta">
@@ -2238,9 +2243,9 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
       <textarea class="sec-search-input" rows="2" placeholder="Například: Hledám svářeče MIG/MAG do Bavorska, dostupný od června, mluví německy, vlastní auto, s NUC certifikátem…"></textarea>
       <div class="sec-search-bottom">
         <div class="sec-search-pills">
-          <span class="sec-search-pill">⚡ Elektrikář · Německo</span>
-          <span class="sec-search-pill">⚡ Tým 5 montérů · DE/AT</span>
-          <span class="sec-search-pill">⚡ Svářeč · NUC certifikát</span>
+          <span class="sec-search-pill">Elektrikář · Německo</span>
+          <span class="sec-search-pill">Tým 5 montérů · DE/AT</span>
+          <span class="sec-search-pill">Svářeč · NUC certifikát</span>
         </div>
         <button class="sec-search-submit" aria-label="Vyhledat">→</button>
       </div>
@@ -2250,7 +2255,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
     <div class="filter-rows">
       <div class="filter-row scroll">
         <span class="filter-row-label">Profesia</span>
-        <button class="fchip active">Všetci <span class="fcnt">3 047</span></button>
+        <button class="fchip active">Všetci <span class="fcnt">4 000 +</span></button>
         <button class="fchip">Svářeč <span class="fcnt">297</span></button>
         <button class="fchip">Elektrikář <span class="fcnt">142</span></button>
         <button class="fchip">Montér <span class="fcnt">186</span></button>
@@ -2293,7 +2298,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
       </div>
     </div>
     <div class="filter-meta">
-      <span><strong>284</strong> z 3 047 · zoradiť</span>
+      <span><strong>284</strong> z 4 000 + · zoradiť</span>
       <span class="filter-meta-r">
         <span class="filter-reset">Resetovať filtre</span>
         <select class="filter-sort">
@@ -2314,7 +2319,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="wcard-avatar a-signal">M</div>
           <div class="wcard-meta">
             <div class="wcard-name-row">
-              <span class="wcard-origin-flag flag-sk" title="Česko"></span>
+              <span class="wcard-emoji-flag">🇸🇰</span>
               <div class="wcard-name locked">Marek N.</div>
             </div>
             <div class="wcard-profession">Elektrikář · 8 let praxe</div>
@@ -2363,7 +2368,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="wcard-avatar a-graphite700">D</div>
           <div class="wcard-meta">
             <div class="wcard-name-row">
-              <span class="wcard-origin-flag flag-cz" title="Česko"></span>
+              <span class="wcard-emoji-flag">🇨🇿</span>
               <div class="wcard-name locked">Daniel R.</div>
             </div>
             <div class="wcard-profession">Svářeč MIG/MAG · TIG · 12 let</div>
@@ -2413,7 +2418,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="wcard-avatar">J</div>
           <div class="wcard-meta">
             <div class="wcard-name-row">
-              <span class="wcard-origin-flag flag-cz" title="Česko"></span>
+              <span class="wcard-emoji-flag">🇨🇿</span>
               <div class="wcard-name locked">Jakub H.</div>
             </div>
             <div class="wcard-profession">Bagrista · Montér · 5 let</div>
@@ -2462,7 +2467,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="wcard-avatar a-yellow">F</div>
           <div class="wcard-meta">
             <div class="wcard-name-row">
-              <span class="wcard-origin-flag flag-cz" title="Česko"></span>
+              <span class="wcard-emoji-flag">🇨🇿</span>
               <div class="wcard-name locked">Filip P.</div>
             </div>
             <div class="wcard-profession">Elektrikář · měření · 6 let</div>
@@ -2511,7 +2516,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="wcard-avatar a-signal">Z</div>
           <div class="wcard-meta">
             <div class="wcard-name-row">
-              <span class="wcard-origin-flag flag-sk" title="Česko"></span>
+              <span class="wcard-emoji-flag">🇸🇰</span>
               <div class="wcard-name locked">Zoltán S.</div>
             </div>
             <div class="wcard-profession">Pokrývač · Klampiar · 9 rokov</div>
@@ -2560,7 +2565,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="wcard-avatar a-graphite700">R</div>
           <div class="wcard-meta">
             <div class="wcard-name-row">
-              <span class="wcard-origin-flag flag-cz" title="Česko"></span>
+              <span class="wcard-emoji-flag">🇨🇿</span>
               <div class="wcard-name locked">Roman S.</div>
             </div>
             <div class="wcard-profession">Zámečník · Svářeč · 7 rokov</div>
@@ -2633,9 +2638,9 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
       <textarea class="sec-search-input" rows="2" placeholder="Například: Jsem svářeč MIG/MAG, hledám práci v Bavorsku od června, mluvím německy, vlastní auto, chci alespoň 30€/hod a ubytování zdarma…"></textarea>
       <div class="sec-search-bottom">
         <div class="sec-search-pills">
-          <span class="sec-search-pill">⚡ Svářeč · Německo</span>
-          <span class="sec-search-pill">⚡ Elektrikář · ihned</span>
-          <span class="sec-search-pill">⚡ 30€+ / hod</span>
+          <span class="sec-search-pill">Svářeč · Německo</span>
+          <span class="sec-search-pill">Elektrikář · ihned</span>
+          <span class="sec-search-pill">30€+ / hod</span>
         </div>
         <button class="sec-search-submit" aria-label="Vyhledat">→</button>
       </div>
@@ -2709,7 +2714,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-logo lock"><span>P</span></div>
           <div class="jcard-meta">
             <div class="jcard-title">Svářeč MIG/MAG</div>
-            <div class="jcard-company locked">Firma z DE</div>
+            <div class="jcard-company locked">🇩🇪 Firma</div>
           </div>
         </div>
         <div class="jcard-salary">
@@ -2718,7 +2723,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <span class="jcard-bonus bonus-housing">+ ubytování</span>
         </div>
         <div class="jcard-info">
-          <span><span class="country-flag flag-de"></span>Emsland, DE</span>
+          <span>ð©ðªEmsland, DE</span>
           <span class="sep">·</span>
           <span>45h / týden</span>
           <span class="sep">·</span>
@@ -2728,6 +2733,9 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-tags">
             <span class="jcard-tag">MIG/MAG</span>
             <span class="jcard-tag">DE B1</span>
+            <span class="jcard-tag">Energetika</span>
+            <span class="jcard-tag">OSVČ</span>
+            <span class="jcard-tag">Fakt.: 30/30</span>
           </div>
           <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
         </div>
@@ -2740,7 +2748,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-logo lock"><span>R</span></div>
           <div class="jcard-meta">
             <div class="jcard-title">Elektrikář — silnoprúd</div>
-            <div class="jcard-company locked">Firma z DE</div>
+            <div class="jcard-company locked">🇩🇪 Firma</div>
           </div>
         </div>
         <div class="jcard-salary">
@@ -2749,7 +2757,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <span class="jcard-bonus bonus-slots">2 místa</span>
         </div>
         <div class="jcard-info">
-          <span><span class="country-flag flag-de"></span>Stuttgart, DE</span>
+          <span>ð©ðªStuttgart, DE</span>
           <span class="sep">·</span>
           <span>45h / týden</span>
           <span class="sep">·</span>
@@ -2759,6 +2767,8 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-tags">
             <span class="jcard-tag">VDE</span>
             <span class="jcard-tag">SCC</span>
+            <span class="jcard-tag">Petrochemie</span>
+            <span class="jcard-tag">HPP</span>
           </div>
           <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
         </div>
@@ -2771,7 +2781,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-logo lock"><span>K</span></div>
           <div class="jcard-meta">
             <div class="jcard-title">Svářeč TIG</div>
-            <div class="jcard-company locked">Firma z DE</div>
+            <div class="jcard-company locked">🇩🇪 Firma</div>
           </div>
         </div>
         <div class="jcard-salary">
@@ -2780,7 +2790,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <span class="jcard-bonus bonus-business">Živnost</span>
         </div>
         <div class="jcard-info">
-          <span><span class="country-flag flag-de"></span>Budenheim, DE</span>
+          <span>ð©ðªBudenheim, DE</span>
           <span class="sep">·</span>
           <span>55h / týden</span>
           <span class="sep">·</span>
@@ -2790,6 +2800,9 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-tags">
             <span class="jcard-tag">TIG</span>
             <span class="jcard-tag">141</span>
+            <span class="jcard-tag">Petrochemie</span>
+            <span class="jcard-tag">OSVČ</span>
+            <span class="jcard-tag">Fakt.: 30/30</span>
           </div>
           <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
         </div>
@@ -2801,7 +2814,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-logo lock"><span>S</span></div>
           <div class="jcard-meta">
             <div class="jcard-title">Sadrokartonista</div>
-            <div class="jcard-company locked">Firma z DE</div>
+            <div class="jcard-company locked">🇩🇪 Firma</div>
           </div>
         </div>
         <div class="jcard-salary">
@@ -2810,7 +2823,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <span class="jcard-bonus bonus-housing">+ ubytování</span>
         </div>
         <div class="jcard-info">
-          <span><span class="country-flag flag-de"></span>Stuttgart, DE</span>
+          <span>ð©ðªStuttgart, DE</span>
           <span class="sep">·</span>
           <span>50h / týden</span>
           <span class="sep">·</span>
@@ -2820,6 +2833,8 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-tags">
             <span class="jcard-tag">Knauf</span>
             <span class="jcard-tag">Stropy</span>
+            <span class="jcard-tag">Stavebnictví</span>
+            <span class="jcard-tag">HPP</span>
           </div>
           <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
         </div>
@@ -2832,7 +2847,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-logo lock"><span>P</span></div>
           <div class="jcard-meta">
             <div class="jcard-title">Pokrývač</div>
-            <div class="jcard-company locked">Firma zo CH</div>
+            <div class="jcard-company locked">🇨🇭 Firma</div>
           </div>
         </div>
         <div class="jcard-salary">
@@ -2841,7 +2856,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <span class="jcard-bonus bonus-housing">+ ubytování</span>
         </div>
         <div class="jcard-info">
-          <span><span class="country-flag flag-ch"></span>Zürich, CH</span>
+          <span>ð¨ð­Zürich, CH</span>
           <span class="sep">·</span>
           <span>50h / týden</span>
           <span class="sep">·</span>
@@ -2851,6 +2866,8 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-tags">
             <span class="jcard-tag">Šikmé strechy</span>
             <span class="jcard-tag">DE B1</span>
+            <span class="jcard-tag">Stavebnictví</span>
+            <span class="jcard-tag">OSVČ / HPP</span>
           </div>
           <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
         </div>
@@ -2863,7 +2880,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-logo lock"><span>M</span></div>
           <div class="jcard-meta">
             <div class="jcard-title">Montér</div>
-            <div class="jcard-company locked">Firma z BE</div>
+            <div class="jcard-company locked">🇧🇪 Firma</div>
           </div>
         </div>
         <div class="jcard-salary">
@@ -2872,7 +2889,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <span class="jcard-bonus bonus-slots">5 míst</span>
         </div>
         <div class="jcard-info">
-          <span><span class="country-flag flag-be"></span>Antverpy, BE</span>
+          <span>ð§ðªAntverpy, BE</span>
           <span class="sep">·</span>
           <span>50h / týden</span>
           <span class="sep">·</span>
@@ -2882,6 +2899,9 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-tags">
             <span class="jcard-tag">Priemyselné</span>
             <span class="jcard-tag">EN A2</span>
+            <span class="jcard-tag">Stavebnictví</span>
+            <span class="jcard-tag">OSVČ</span>
+            <span class="jcard-tag">Fakt.: 14/14</span>
           </div>
           <button class="jcard-cta locked" onclick="location.href='/app'" style="cursor:pointer">Registrovať</button>
         </div>
@@ -2917,7 +2937,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-logo lock"><span>A</span></div>
           <div class="jcard-meta">
             <div class="jcard-title">Svářeč MIG/MAG – Emsland</div>
-            <div class="jcard-company locked">Firma z DE</div>
+            <div class="jcard-company locked">🇩🇪 Firma</div>
           </div>
         </div>
         <div class="jcard-salary">
@@ -2926,7 +2946,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <span class="jcard-bonus bonus-housing">+ ubytování</span>
         </div>
         <div class="jcard-info">
-          <span><span class="country-flag flag-de"></span>Emsland, DE</span>
+          <span>ð©ðªEmsland, DE</span>
           <span class="sep">·</span>
           <span>45h / týden</span>
           <span class="sep">·</span>
@@ -2936,6 +2956,8 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-tags">
             <span class="jcard-tag">MIG/MAG</span>
             <span class="jcard-tag">DE B1</span>
+            <span class="jcard-tag">Energetika</span>
+            <span class="jcard-tag">OSVČ</span>
           </div>
           <span class="jcard-cta locked">Detail →</span>
         </div>
@@ -2948,7 +2970,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-logo lock"><span>B</span></div>
           <div class="jcard-meta">
             <div class="jcard-title">Elektrikář NN/VN – Rotterdam</div>
-            <div class="jcard-company locked">Firma z NL</div>
+            <div class="jcard-company locked">🇳🇱 Firma</div>
           </div>
         </div>
         <div class="jcard-salary">
@@ -2957,7 +2979,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <span class="jcard-bonus bonus-housing">+ ubytování</span>
         </div>
         <div class="jcard-info">
-          <span><span class="country-flag flag-nl"></span>Rotterdam, NL</span>
+          <span>ð³ð±Rotterdam, NL</span>
           <span class="sep">·</span>
           <span>40h / týden</span>
           <span class="sep">·</span>
@@ -2967,6 +2989,8 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-tags">
             <span class="jcard-tag">NN/VN</span>
             <span class="jcard-tag">EN</span>
+            <span class="jcard-tag">Petrochemie</span>
+            <span class="jcard-tag">OSVČ / HPP</span>
           </div>
           <span class="jcard-cta locked">Detail →</span>
         </div>
@@ -2979,7 +3003,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-logo lock"><span>C</span></div>
           <div class="jcard-meta">
             <div class="jcard-title">Montér oceľových konštrukcií – Linz</div>
-            <div class="jcard-company locked">Firma z AT</div>
+            <div class="jcard-company locked">🇦🇹 Firma</div>
           </div>
         </div>
         <div class="jcard-salary">
@@ -2988,7 +3012,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <span class="jcard-bonus bonus-business">OSVČ možné</span>
         </div>
         <div class="jcard-info">
-          <span><span class="country-flag flag-at"></span>Linz, AT</span>
+          <span>ð¦ð¹Linz, AT</span>
           <span class="sep">·</span>
           <span>48h / týden</span>
           <span class="sep">·</span>
@@ -2998,6 +3022,9 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
           <div class="jcard-tags">
             <span class="jcard-tag">Oceľ</span>
             <span class="jcard-tag">Výškové práce</span>
+            <span class="jcard-tag">Stavebnictví</span>
+            <span class="jcard-tag">HPP</span>
+            <span class="jcard-tag">Fakt.: 14/14</span>
           </div>
           <span class="jcard-cta locked">Detail →</span>
         </div>
@@ -3012,8 +3039,8 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
     <div class="sec-head">
       <div>
         <span class="eyebrow">• kalendář dostupnosti</span>
-        <h2 style="margin-top:14px">Kdo je <em>volný</em> tento týden?</h2>
-        <p class="sec-sub">Plánujte projekty s jistotou. Kalendář dostupnosti aktualizovaný pracovníky v reálném čase — vidíte přesně, kdo, kdy a kde.</p>
+        <h2 style="margin-top:14px">Plánujte si projekty na<br><em>týdny dopředu.</em></h2>
+        <p class="sec-sub">Plánujte si projekty na týdny dopředu. Inteligentní kalendář vám okamžitě ukáže volné kapacity na trhu.</p>
       </div>
       <div class="sec-cta">
         <button class="btn btn-solid btn-lg" onclick="location.href='/app'" style="cursor:pointer">Otevřít kalendář →</button>
@@ -3032,7 +3059,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="cal-wcard-avatar a-signal">M</div>
             <div class="cal-wcard-meta">
               <div class="cal-wcard-name-row">
-                <span class="cal-wcard-flag flag-sk"></span>
+                ð¸ð°
                 <span class="cal-wcard-name">Marek N.</span>
               </div>
               <div class="cal-wcard-prof">Elektrikář · 8 r.</div>
@@ -3064,7 +3091,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="cal-wcard-avatar a-yellow">J</div>
             <div class="cal-wcard-meta">
               <div class="cal-wcard-name-row">
-                <span class="cal-wcard-flag flag-cz"></span>
+                ð¨ð¿
                 <span class="cal-wcard-name">Jakub H.</span>
               </div>
               <div class="cal-wcard-prof">Bagrista · Montér</div>
@@ -3103,7 +3130,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="cal-wcard-avatar a-graphite">D</div>
             <div class="cal-wcard-meta">
               <div class="cal-wcard-name-row">
-                <span class="cal-wcard-flag flag-cz"></span>
+                ð¨ð¿
                 <span class="cal-wcard-name">Daniel R.</span>
               </div>
               <div class="cal-wcard-prof">Svářeč MIG/MAG · TIG</div>
@@ -3135,7 +3162,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="cal-wcard-avatar a-signal">M</div>
             <div class="cal-wcard-meta">
               <div class="cal-wcard-name-row">
-                <span class="cal-wcard-flag flag-sk"></span>
+                ð¸ð°
                 <span class="cal-wcard-name">Marek N.</span>
               </div>
               <div class="cal-wcard-prof">Elektrikář · 8 r.</div>
@@ -3174,7 +3201,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="cal-wcard-avatar a-yellow">F</div>
             <div class="cal-wcard-meta">
               <div class="cal-wcard-name-row">
-                <span class="cal-wcard-flag flag-cz"></span>
+                ð¨ð¿
                 <span class="cal-wcard-name">Filip P.</span>
               </div>
               <div class="cal-wcard-prof">Elektrikář · měření</div>
@@ -3206,7 +3233,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="cal-wcard-avatar a-signal">R</div>
             <div class="cal-wcard-meta">
               <div class="cal-wcard-name-row">
-                <span class="cal-wcard-flag flag-cz"></span>
+                ð¨ð¿
                 <span class="cal-wcard-name">Roman S.</span>
               </div>
               <div class="cal-wcard-prof">Zámečník · Svářeč</div>
@@ -3245,7 +3272,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="cal-wcard-avatar a-graphite">Z</div>
             <div class="cal-wcard-meta">
               <div class="cal-wcard-name-row">
-                <span class="cal-wcard-flag flag-sk"></span>
+                ð¸ð°
                 <span class="cal-wcard-name">Zoltán S.</span>
               </div>
               <div class="cal-wcard-prof">Pokrývač · Klampiar</div>
@@ -3277,7 +3304,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div class="cal-wcard-avatar a-graphite">D</div>
             <div class="cal-wcard-meta">
               <div class="cal-wcard-name-row">
-                <span class="cal-wcard-flag flag-cz"></span>
+                ð¨ð¿
                 <span class="cal-wcard-name">Daniel R.</span>
               </div>
               <div class="cal-wcard-prof">Svářeč MIG/MAG · TIG</div>
@@ -3360,7 +3387,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
       <div class="step">
         <div class="step-num">02</div>
         <h4>Prohlížejte nabídky</h4>
-        <p>730+ aktuálních pozic. Filtrujte podle země, platu, ubytování.</p>
+        <p>1000 + aktuálních pozic. Filtrujte podle země, platu, ubytování.</p>
       </div>
       <div class="step">
         <div class="step-num">03</div>
@@ -3407,7 +3434,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
             <div style="font-size:10px;color:rgba(249,243,237,.5)">3 nové</div>
           </div>
           <div class="dj-row">
-            <div class="dj-icon">⚡</div>
+            <div class="dj-icon"></div>
             <div class="dj-row-content">
               <div class="dj-row-title">Svářeč MIG/MAG · Stuttgart, DE</div>
               <div class="dj-row-meta">32 €/hod · 50h/týden · Nástup 1.6.</div>
@@ -3442,7 +3469,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
     <div class="feature-grid">
       <div class="feature-text">
         <span class="eyebrow">• databáze · b2b</span>
-        <h2>3 047 pracovníků, <em>okamžitý přístup</em>.</h2>
+        <h2>4 000 + pracovníků, <em>okamžitý přístup</em>.</h2>
         <p class="sec-sub">Bez pohovorů, bez headhunterů, bez čekání týdny. Otevřete databázi, vyfiltrujete profese a kontaktujete pracovníky přímo přes aplikaci.</p>
         <div class="feature-bullets">
           <div class="feature-bullet">
@@ -3505,68 +3532,67 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
 </section>
 
 <!-- ============ FAQ ============ -->
-<section class="faq-sec">
-  <div class="container">
-    <div class="faq-head">
-      <span class="eyebrow">• často kladené otázky</span>
-      <h2>Otázky, které <em>nejčastěji slýcháme</em>.</h2>
-      <div class="faq-tabs">
-        <button class="faq-tab active" onclick="document.querySelectorAll('.faq-tab').forEach(t=>t.classList.remove('active'));this.classList.add('active');document.querySelectorAll('.faq-list-c').forEach(l=>l.style.display='none');document.getElementById('faq-list-workers').style.display='block'">Jsem pracovník</button>
-        <button class="faq-tab" onclick="document.querySelectorAll('.faq-tab').forEach(t=>t.classList.remove('active'));this.classList.add('active');document.querySelectorAll('.faq-list-c').forEach(l=>l.style.display='none');document.getElementById('faq-list-companies').style.display='block'">Jsme firma</button>
-    </div>
-    </div>
-
-    <!-- FAQ pre pracovníků -->
-    <div class="faq-list faq-list-c" id="faq-list-workers">
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Platí se za používání aplikace něco?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Aplikace pro pracovníky je zcela zdarma — registrace, profil, vyhledávání nabídek, push notifikace i kontakt s firmami. Připravujeme volitelné PREMIUM členství s lepší viditelností v listingech (lepší pozice, prioritní zobrazení).</div></div>
-      </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Potřebuji umět cizí jazyk, pokud chci jet na projekt do zahraničí?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Ne vždy. U part často stačí, když jeden člen týmu disponuje jazykem (obvykle němčina). Jazykové požadavky jsou vždy transparentně uvedeny v detailu nabídky — vidíte předem, zda se hodíte. Pro individuální pracovníky je doporučena alespoň základní úroveň jazyka země.</div></div>
-      </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Mám jistotu, že dostanu za práci zaplaceno?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Alogator spolupracuje pouze s ověřenými firmami. Před kontaktem vidíte hodnocení od jiných pracovníků, kteří s firmou již spolupracovali. Při problémech máte k dispozici náš support tým. Faktury a smlouvy si můžete archivovat přímo v aplikaci.</div></div>
-      </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Jak rychle může firma kontaktovat můj profil?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Hned jak vyplníte profil, jste viditelní pro firmy. Průměrný čas do první nabídky je 3–7 dní pro dostupné pracovníky. Top profese (svářeč, elektrikář, montér) dostávají první oslovení už do 24 hodin.</div></div>
-      </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Dá se pracovat přes Alogator na živnost?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Ano, Alogator je primárně určen pro OSVČ. V profilu si nastavíte typ úvazku (živnost / HPP) a vidíte jen nabídky, které sedí. Faktury pro firmy si můžete vystavovat přímo přes aplikaci.</div></div>
-      </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Je ubytování zahrnuté v nabídkách v zahraničí?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Často ano. V detailu každé nabídky vidíte, zda firma poskytuje ubytování zdarma, částečně přispívá nebo si ho pracovník hradí sám. Filtr "Ubytování zdarma" je k dispozici ve vyhledávání.</div></div>
-      </div>
-    </div>
-
-    <!-- FAQ pre firmy -->
-    <div class="faq-list faq-list-c" id="faq-list-companies" style="display:none">
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Kolik stojí Alogator pro firmu?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Máme modulární ceník v 5 úrovních — Free (0 €, jen inzeráty), CRM (99 €, vlastní kontakty), Kapacity (199 €, kalendář vlastních lidí), Alogator (499 €, přístup k celé databázi) a Enterprise (na míru). Platíte jen za to, co používáte.</div></div>
-      </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Jak rychle najdu prvního pracovníka?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Průměrný čas od registrace po první kontakt je 24 hodin. Top profese (svářeč, elektrikář, montér) jsou v databázi stovkami — okamžitý přístup, žádné čekání na životopisy.</div></div>
-      </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Jsou pracovníci ověření?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Ano. Každý profil prochází kontrolou — ověřujeme identitu, certifikáty, předchozí zkušenosti. Premium pracovníci mají navíc video prezentaci a hodnocení od jiných firem.</div></div>
-      </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Funguje Alogator i v zahraničí?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Ano. Aktuálně má Alogator pracovníky dostupné pro Česko, Slovensko, Německo, Rakousko, Belgii, Holandsko, Švýcarsko a další EU země. Firma v DE/AT může okamžitě kontaktovat SK/CZ řemeslníky.</div></div>
-      </div>
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-q">Jak funguje kalendář dostupnosti?<span class="faq-q-icon">+</span></div>
-        <div class="faq-a"><div class="faq-a-inner">Každý pracovník si v aplikaci nastavuje svou dostupnost po týdnech. Vidíte v real-time, kdo je volný kdy a můžete plánovat projekty týdny dopředu. Žádné dvojité rezervace — systém upozorní při konfliktu.</div></div>
-      </div>
-    </div>
+<section class="faq-sec" style="padding:80px 0;background:var(--porcelain-200)">
+  <div class="container" style="max-width:1280px;margin:0 auto;padding:0 24px">
+    <div class="eyebrow">FAQ</div>
+    <h2 style="font:500 clamp(28px,3vw,40px)/1.1 'Geist';letter-spacing:-0.025em;margin:14px 0 48px">Otázky, které <em>nejčastěji slýcháme</em>.</h2>
+    <div class="hiw-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">01</div>
+    <h4 style="font-size:13px">Platí se za používání aplikace něco?</h4>
+    <p style="font-size:12px">Aplikace pro pracovníky je zcela zdarma — registrace, profil, vyhledávání nabídek, push notifikace i kontakt s firmami. Připravujeme volitelné PREMIUM členství s lepší viditelností v listingech (lepší pozice, prioritní zobrazení).</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">02</div>
+    <h4 style="font-size:13px">Potřebuji umět cizí jazyk, pokud chci jet na projekt do zahraničí?</h4>
+    <p style="font-size:12px">Ne vždy. U part často stačí, když jeden člen týmu disponuje jazykem (obvykle němčina). Jazykové požadavky jsou vždy transparentně uvedeny v detailu nabídky — vidíte předem, zda se hodíte. Pro individuální pracovníky je doporučena alespoň základní úroveň jazyka země.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">03</div>
+    <h4 style="font-size:13px">Mám jistotu, že dostanu za práci zaplaceno?</h4>
+    <p style="font-size:12px">Alogator spolupracuje pouze s ověřenými firmami. Před kontaktem vidíte hodnocení od jiných pracovníků, kteří s firmou již spolupracovali. Při problémech máte k dispozici náš support tým. Faktury a smlouvy si můžete archivovat přímo v aplikaci.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">04</div>
+    <h4 style="font-size:13px">Jak rychle může firma kontaktovat můj profil?</h4>
+    <p style="font-size:12px">Hned jak vyplníte profil, jste viditelní pro firmy. Průměrný čas do první nabídky je 3–7 dní pro dostupné pracovníky. Top profese (svářeč, elektrikář, montér) dostávají první oslovení už do 24 hodin.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">05</div>
+    <h4 style="font-size:13px">Dá se pracovat přes Alogator na živnost?</h4>
+    <p style="font-size:12px">Ano, Alogator je primárně určen pro OSVČ. V profilu si nastavíte typ úvazku (živnost / HPP) a vidíte jen nabídky, které sedí. Faktury pro firmy si můžete vystavovat přímo přes aplikaci.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">06</div>
+    <h4 style="font-size:13px">Je ubytování zahrnuté v nabídkách v zahraničí?</h4>
+    <p style="font-size:12px">Často ano. V detailu každé nabídky vidíte, zda firma poskytuje ubytování zdarma, částečně přispívá nebo si ho pracovník hradí sám. Filtr "Ubytování zdarma" je k dispozici ve vyhledávání.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">07</div>
+    <h4 style="font-size:13px">Kolik stojí Alogator pro firmu?</h4>
+    <p style="font-size:12px">Máme modulární ceník v 5 úrovních — Free (0 €, jen inzeráty), CRM (99 €, vlastní kontakty), Kapacity (199 €, kalendář vlastních lidí), Alogator (499 €, přístup k celé databázi) a Enterprise (na míru). Platíte jen za to, co používáte.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">08</div>
+    <h4 style="font-size:13px">Jak rychle najdu prvního pracovníka?</h4>
+    <p style="font-size:12px">Průměrný čas od registrace po první kontakt je 24 hodin. Top profese (svářeč, elektrikář, montér) jsou v databázi stovkami — okamžitý přístup, žádné čekání na životopisy.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">09</div>
+    <h4 style="font-size:13px">Jsou pracovníci ověření?</h4>
+    <p style="font-size:12px">Ano. Každý profil prochází kontrolou — ověřujeme identitu, certifikáty, předchozí zkušenosti. Premium pracovníci mají navíc video prezentaci a hodnocení od jiných firem.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">10</div>
+    <h4 style="font-size:13px">Funguje Alogator i v zahraničí?</h4>
+    <p style="font-size:12px">Ano. Aktuálně má Alogator pracovníky dostupné pro Česko, Slovensko, Německo, Rakousko, Belgii, Holandsko, Švýcarsko a další EU země. Firma v DE/AT může okamžitě kontaktovat SK/CZ řemeslníky.</p>
+  </div>
+  <div class="hiw-card" style="padding:18px 16px;gap:8px;border:1px solid var(--porcelain-300);border-radius:var(--r-md)">
+    <div class="hiw-num" style="font-size:28px">11</div>
+    <h4 style="font-size:13px">Jak funguje kalendář dostupnosti?</h4>
+    <p style="font-size:12px">Každý pracovník si v aplikaci nastavuje svou dostupnost po týdnech. Vidíte v real-time, kdo je volný kdy a můžete plánovat projekty týdny dopředu. Žádné dvojité rezervace — systém upozorní při konfliktu.</p>
+  </div>
+</div>
   </div>
 </section>
 
@@ -3578,7 +3604,7 @@ body.mode-b2b .hero-chips.mode-b{display:flex}
         <span class="eyebrow" style="color:var(--porcelain)">• začněte dnes</span>
         <h2 style="margin-top:14px" class="mode-b">První kandidát<br>do <em>24 hodin</em>.</h2>
         <h2 style="margin-top:14px" class="mode-c">První nabídka<br>do <em>týdne</em>.</h2>
-        <p class="mode-b">Zkušební měsíc zdarma. Žádná kreditní karta. Žádné závazky. Vidíte celou databázi, kontaktujete kandidáty, sledujete jak platforma řeší váš nábor.</p>
+        <p class="mode-b">Zaplatíte až za odkrytí kontaktu konkrétního odborníka v případě, že vyhovuje vašim požadavkům.</p>
         <p class="mode-c">Bezplatná registrace. Aplikace zcela zdarma. Vyplníte profil a začnete dostávat nabídky přímo od firem i agentur.</p>
       </div>
       <div class="cta-actions">
